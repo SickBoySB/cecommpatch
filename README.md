@@ -9,11 +9,8 @@ The "v1" branch contains all current changes and can be applied to the game, but
 
 To restore the original files of an edited game, simply "verify integrity of cache" in Steam and the originals will be redownloaded.
 
-
 Official forum thread: https://community.gaslampgames.com/threads/community-patch-anyone-interested.20992/
 
 Steam group: http://steamcommunity.com/groups/cecommpatch
-
-
 
 All code, design, etc. (c) Gaslamp Games, no violation intended.
