@@ -1407,7 +1407,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="generic_workbench_icon"
 				standing_order_display_name="Standing Order for Workbenches"
-				product_name="Boxed Assembly Workbench">
+				product_name="Assembly Workbench">
 				<visible>
 					<require_commodity_geq name="logs" amount="2" failure_reason="2x Logs needed." is_cost="1" />
 				</visible>
@@ -1422,7 +1422,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="workbench_decor"
 				standing_order_display_name="Standing Order for Decor Workbenches"
-				product_name="Boxed Decor Workbench">
+				product_name="Decor Workbench">
 				<visible>
 					<require_commodity_geq name="planks" amount="2" failure_reason="2x Planks needed." is_cost="1" />
 				</visible>
@@ -1437,7 +1437,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="ceramics_workbench_icon"
 				standing_order_display_name="Standing Order for Ceramics Workbenches"
-				product_name="Boxed Ceramics Workbench">
+				product_name="Ceramics Workbench">
 				<visible>
 					<require_commodity_geq name="planks" amount="3" failure_reason="3x Planks needed." is_cost="1" />
 				</visible>
@@ -1452,7 +1452,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="chemistry_workbench_icon"
 				standing_order_display_name="Standing Order for Chemistry Workbenches"
-				product_name="Boxed Chemistry Workbench">
+				product_name="Chemistry Workbench">
 				<visible>
 					<require_commodity_geq name="planks" amount="2" failure_reason="2x Planks needed." is_cost="1" />
 					<require_commodity_geq name="crate_of_glass_bottles" amount="1" failure_reason="1x Glass Bottle needed." is_cost="2" />
@@ -1470,7 +1470,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="workbench_advanced"
 				standing_order_display_name="Standing Order for Advanced Workbenches"
-				product_name="Boxed Advanced Workbench"
+				product_name="Advanced Workbench"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="advanced_modules_unlocked"
@@ -1497,7 +1497,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="power_saw_icon"
 				standing_order_display_name="Standing Order for Power Saws"
-				product_name="Boxed Power Saw"
+				product_name="Power Saw"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="steelworking_carpentry_unlocked"
@@ -1545,7 +1545,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="mc_bed_icon"
 				standing_order_display_name="Standing Order for Practical beds"
-				product_name="Boxed Practical Bed">
+				product_name="Practical Bed">
 				<visible>
 					<require_commodity_geq name="planks" amount="5" failure_reason="5x Planks needed." is_cost="1" />
 				</visible>
@@ -1560,7 +1560,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="uc_bed_icon"
 				standing_order_display_name="Standing Order for Ornate Beds"
-				product_name="Boxed Ornate Bed">
+				product_name="Ornate Bed">
 				<visible>
 					<require_commodity_geq name="planks" amount="8" failure_reason="8x Planks needed." is_cost="1" />
 					<require_commodity_geq name="lacquered_planks" amount="4" failure_reason="4x Lacquered Planks needed." is_cost="2" />
@@ -1581,7 +1581,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="simple_mixing_vat"
 				standing_order_display_name="Standing Order for Wooden Brewing Vats"
-				product_name="Boxed Brewing Vat">
+				product_name="Brewing Vat">
                     <visible>
 					<require_commodity_geq name="planks" amount="3" failure_reason="3x Planks needed." is_cost="1" />
 				</visible>
@@ -1596,7 +1596,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="icon_boozevat"
 				standing_order_display_name="Standing Order for Booze Vats"
-				product_name="Boxed Booze Vat">
+				product_name="Booze Vat">
 				<visible>
 					<require_commodity_geq name="planks" amount="4" failure_reason="4x Planks needed." is_cost="1" />
 				</visible>
@@ -1611,7 +1611,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="mineshaft_image"
 				standing_order_display_name="Standing Order for Mineshaft Modules"
-				product_name="Boxed Mineshaft Module">
+				product_name="Mineshaft Module">
 				<visible>
 					<require_commodity_geq name="planks" amount="3" failure_reason="3x Planks needed." is_cost="1" />
 				</visible>
@@ -1645,7 +1645,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="standing_desk_icon"
 				standing_order_display_name="Standing Order for Standing Desks"
-				product_name="Boxed Standing Desk">
+				product_name="Standing Desk">
 				<visible>
 					<require_commodity_geq name="planks" amount="2" failure_reason="2x Planks needed." is_cost="1" />
 				</visible>
@@ -1660,7 +1660,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="bureaucrat_desk_icon"
 				standing_order_display_name="Standing Order for Bureaucrat's Desk"
-				product_name="Boxed Bureaucrat's Desk"
+				product_name="Bureaucrat's Desk"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="advanced_bureaucracy_unlocked"
@@ -1684,7 +1684,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="chalkboard"
 				standing_order_display_name="Standing Order for Chalkboards"
-				product_name="Boxed Chalkboard">
+				product_name="Chalkboard">
 				<visible>
 					<require_commodity_geq name="planks" amount="2" failure_reason="2x Planks needed." is_cost="1" />
 				</visible>
@@ -1699,7 +1699,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="spice_rack"
 				standing_order_display_name="Standing Order for Spice Racks"
-				product_name="Boxed Spice Rack">
+				product_name="Spice Rack">
 				<visible>
 					<require_commodity_geq name="planks" amount="1" failure_reason="1x Plank needed." is_cost="1" />
 				</visible>
@@ -1714,7 +1714,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="chapel_altar_wood"
 				standing_order_display_name="Standing Order for Wooden Altars"
-				product_name="Boxed Wooden Altar">
+				product_name="Wooden Altar">
 				<visible>
 					<require_commodity_geq name="lacquered_planks" amount="4" failure_reason="4x Lacquered Planks needed." is_cost="1" />
 				</visible>
@@ -1730,7 +1730,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="icon_bookshelf_mc"
 				standing_order_display_name="Standing Order for Bookshelves"
-				product_name="Boxed Bookshelf">
+				product_name="Bookshelf">
 				<visible>
 					<require_commodity_geq name="planks" amount="4" failure_reason="4x Planks needed." is_cost="1" />
 				</visible>
@@ -1745,7 +1745,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="icon_bookshelf_uc"
 				standing_order_display_name="Standing Order for Fancy Bookshelves"
-				product_name="Boxed Fancy Bookshelf>"
+				product_name="Fancy Bookshelf>"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="advanced_learning_unlocked"
@@ -1772,7 +1772,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="icon_loadingbaywood"
 				standing_order_display_name="Standing Order for Loading Bay Doors"
-				product_name="Boxed Loading Bay Door">
+				product_name="Loading Bay Door">
 				<visible>
 					<require_commodity_geq name="planks" amount="3" failure_reason="3x Planks needed." is_cost="1" />
 				</visible>
@@ -1787,7 +1787,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="lc_chair_icon"
 				standing_order_display_name="Standing Order for Simple Chairs"
-				product_name="Boxed Simple Chair">
+				product_name="Simple Chair">
 				<visible>
 					<require_commodity_geq name="planks" amount="1" failure_reason="1x Plank needed." is_cost="1" />
 				</visible>
@@ -1802,7 +1802,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="lc_table_icon"
 				standing_order_display_name="Standing Order for Simple Table and Chair Sets"
-				product_name="Boxed Simple Table and Chair Set">
+				product_name="Simple Table and Chair Set">
 				<visible>
 					<require_commodity_geq name="planks" amount="3" failure_reason="3x Planks needed." is_cost="1" />
 				</visible>
@@ -1817,7 +1817,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="mc_chair_icon"
 				standing_order_display_name="Standing Order for Practical Chairs"
-				product_name="Boxed Practical Chair">
+				product_name="Practical Chair">
 				<visible>
 					<require_commodity_geq name="planks" amount="2" failure_reason="2x Planks needed." is_cost="1" />
 				</visible>
@@ -1832,7 +1832,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="mc_table_icon"
 				standing_order_display_name="Standing Order for Practical Table and Chair Sets"
-				product_name="Boxed Practical Table and Chair Set">
+				product_name="Practical Table and Chair Set">
 				<visible>
 					<require_commodity_geq name="planks" amount="4" failure_reason="4x Planks needed." is_cost="1" />
 					<require_commodity_geq name="glass_panes" amount="1" failure_reason="1x Glass Pane needed." is_cost="2" />
@@ -1850,7 +1850,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="uc_chair_icon"
 				standing_order_display_name="Standing Order for Ornate Chairs"
-				product_name="Boxed Ornate Chair">
+				product_name="Ornate Chair">
 				<visible>
 					<require_commodity_geq name="planks" amount="2" failure_reason="2x Planks needed." is_cost="1" />
 					<require_commodity_geq name="lacquered_planks" amount="1" failure_reason="1x Lacquered Plank needed." is_cost="2" />
@@ -1868,7 +1868,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="uc_table_icon"
 				standing_order_display_name="Standing Order for Ornate Table and Chair Sets"
-				product_name="Boxed Ornate Table and Chair Set">
+				product_name="Ornate Table and Chair Set">
 				<visible>
 					<require_commodity_geq name="planks" amount="4" failure_reason="4x Planks needed." is_cost="1" />
 					<require_commodity_geq name="lacquered_planks" amount="2" failure_reason="2x Lacquered Planks needed." is_cost="2" />
@@ -1947,7 +1947,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="ceramics_press_icon"
 				standing_order_display_name="Standing Order for Ceramics Pressessesses."
-				product_name="Boxed Ceramics Press"
+				product_name="Ceramics Press"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="steelworking_ceramics_unlocked"
@@ -1980,7 +1980,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="dewatering_pump"
 				standing_order_display_name="Standing Order for Dewatering Pumps"
-				product_name="Boxed Dewatering Pump">
+				product_name="Dewatering Pump">
 				<visible>
 					<require_commodity_geq name="planks" amount="3" failure_reason="3x Planks needed." is_cost="1" />
 					<require_commodity_geq name="bricks" amount="3" failure_reason="3x Bricks needed." is_cost="2" />
@@ -2206,7 +2206,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="hanging_pots"
 				standing_order_display_name="Standing Order for Hanging Pots"
-				product_name="Boxed Hanging Pots">
+				product_name="Hanging Pots">
 				<visible>
 					<require_commodity_geq name="iron_ingots" amount="1" failure_reason="1x Iron Ingot needed." is_cost="1" />
 				</visible>
@@ -2221,7 +2221,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="small_oven_icon"
 				standing_order_display_name="Standing Order for Small Iron Ovens"
-				product_name="Boxed Small Iron Oven">
+				product_name="Small Iron Oven">
 				<visible>
 					<require_commodity_geq name="iron_plates" amount="1" failure_reason="1x Iron Plate needed." is_cost="1" />
 					<require_commodity_geq name="iron_pipes" amount="1" failure_reason="1x Iron Pipe needed." is_cost="2" />
@@ -2242,7 +2242,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="kiln_ceramics_iron"
 				standing_order_display_name="Standing Order for Iron Ceramics Kiln"
-				product_name="Boxed Iron Ceramics Kiln">
+				product_name="Iron Ceramics Kiln">
 				<visible>
 					<require_commodity_geq name="iron_plates" amount="2" failure_reason="2x Iron Plates needed." is_cost="1" />
 					<require_commodity_geq name="iron_pipes" amount="2" failure_reason="2x Iron Pipes needed." is_cost="2" />
@@ -2263,7 +2263,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="iron_charcoal_kiln"
 				standing_order_display_name="Standing Order for Iron Charcoal Kiln"
-				product_name="Boxed Iron Charcoal Kiln">
+				product_name="Iron Charcoal Kiln">
 				<visible>
 					<require_commodity_geq name="iron_plates" amount="1" failure_reason="1x Iron Plate needed." is_cost="1" />
 					<require_commodity_geq name="iron_pipes" amount="1" failure_reason="1x Iron Pipe needed." is_cost="2" />
@@ -2284,7 +2284,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="crucible_icon"
 				standing_order_display_name="Standing Order for Iron Smelting Crucible"
-				product_name="Boxed Iron Smelting Crucible">
+				product_name="Iron Smelting Crucible">
 				<visible>
 					<require_commodity_geq name="iron_plates" amount="2" failure_reason="2x Iron Plates needed." is_cost="1" />
 					<require_commodity_geq name="iron_pipes" amount="2" failure_reason="2x Iron Pipes needed." is_cost="2" />
@@ -2308,7 +2308,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="smithing_forge_icon"
 				standing_order_display_name="Standing Order for Smithing Forges"
-				product_name="Boxed Smithing Forge">
+				product_name="Smithing Forge">
 				<visible>
 					<require_commodity_geq name="iron_ingots" amount="2" failure_reason="2x Iron Ingots needed." is_cost="1" />
 					<require_commodity_geq name="bricks" amount="3" failure_reason="3x Bricks needed." is_cost="2" />
@@ -2326,7 +2326,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="mining_ventilation_icon"
 				standing_order_display_name="Standing Order for Ventilation Unit"
-				product_name="Boxed Ventilation Unit">
+				product_name="Ventilation Unit">
 				<visible>
 					<require_commodity_geq name="iron_plates" amount="2" failure_reason="2x Iron Plates needed." is_cost="1" />
 					<require_commodity_geq name="copper_pipes" amount="2" failure_reason="2x Copper Pipes needed." is_cost="2" />
@@ -2344,7 +2344,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="industrial_kiln_icon"
 				standing_order_display_name="Standing Order for Industrial Kilns."
-				product_name="Boxed Industrial Kilns">
+				product_name="Industrial Kilns">
 				<visible>
 					<require_commodity_geq name="bricks" amount="6" failure_reason="6x Bricks needed." is_cost="1" />
 					<require_commodity_geq name="copper_plates" amount="4" failure_reason="4x Copper Plates needed." is_cost="2" />
@@ -2368,7 +2368,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="powerstamper_icon"
 				standing_order_display_name="Standing Order for Power Stampers."
-				product_name="Boxed Power Stamper"
+				product_name="Power Stamper"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="steelworking_metalworking_unlocked"
@@ -2398,7 +2398,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="power_lathe"
 				standing_order_display_name="Standing Order for Power Lathes."
-				product_name="Boxed Power Lathe"
+				product_name="Power Lathe"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="steelworking_metalworking_unlocked"
@@ -2431,7 +2431,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="grinder"
 				standing_order_display_name="Standing Order for Grinders."
-				product_name="Boxed Grinder"
+				product_name="Grinder"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="steelworking_grinder_unlocked"
@@ -2461,7 +2461,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="mixing_tank_icon"
 				standing_order_display_name="Standing Order for Mechanical Brewing Vats"
-				product_name="Boxed Mechanical Brewing Vat">
+				product_name="Mechanical Brewing Vat">
 				<visible>
 					<require_commodity_geq name="iron_plates" amount="1" failure_reason="1x Iron Plate needed." is_cost="1" />
 					<require_commodity_geq name="planks" amount="2" failure_reason="2x Planks needed." is_cost="2" />
@@ -2482,7 +2482,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="still_icon"
 				standing_order_display_name="Standing Order for Stills"
-				product_name="Boxed Still"
+				product_name="Still"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="still_unlocked"
@@ -2512,7 +2512,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="steam_oven"
 				standing_order_display_name="Standing Order for Steam Ovens"
-				product_name="Boxed Steam Oven"
+				product_name="Steam Oven"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="steelworking_cooking_unlocked"
@@ -2545,7 +2545,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="steam_distributor"
 				standing_order_display_name="Standing Order for Steam Distributors"
-				product_name="Boxed Steam Distributor"
+				product_name="Steam Distributor"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="steelworking_mining_unlocked"
@@ -2578,7 +2578,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="macroscope"
 				standing_order_display_name="Standing Order for Macroscopes"
-				product_name="Boxed Macroscope"
+				product_name="Macroscope"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="advanced_science_unlocked"
@@ -2608,7 +2608,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="vacuum_chamber"
 				standing_order_display_name="Standing Order for Vacuum Chambers"
-				product_name="Boxed Vacuum Chamber"
+				product_name="Vacuum Chamber"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="steelworking_science_unlocked"
@@ -3056,7 +3056,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="icon_lc_cabinet"
 				standing_order_display_name="Standing Order for Simple Cabinets"
-				product_name="Boxed Simple Cabinet">
+				product_name="Simple Cabinet">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="1" failure_reason="1x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -3071,7 +3071,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="icon_mc_cabinet"
 				standing_order_display_name="Standing Order for Practical Cabinets"
-				product_name="Boxed Practical Cabinet">
+				product_name="Practical Cabinet">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="1" failure_reason="1x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -3086,7 +3086,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="icon_uc_cabinet"
 				standing_order_display_name="Standing Order for Ornate Cabinets"
-				product_name="Boxed Ornate Cabinet">
+				product_name="Ornate Cabinet">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="1" failure_reason="1x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -3101,7 +3101,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="wall_shrine_lc"
 				standing_order_display_name="Standing Order for Simple Wall Shrines"
-				product_name="Boxed Simple Wall Shrine">
+				product_name="Simple Wall Shrine">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="1" failure_reason="1x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -3116,7 +3116,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="wall_shrine_uc"
 				standing_order_display_name="Standing Order for Ornate Wall Shrines"
-				product_name="Boxed Ornate Wall Shrine">
+				product_name="Ornate Wall Shrine">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="1" failure_reason="1x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -3131,7 +3131,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="barbershop_image"
 				standing_order_display_name="Standing Order for Barbershop Poles"
-				product_name="Boxed Barbershop Pole">
+				product_name="Barbershop Pole">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="1" failure_reason="1x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -3146,7 +3146,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="clothesline_short"
 				standing_order_display_name="Standing Order for Small Clothes Lines"
-				product_name="Boxed Small Clothes Line">
+				product_name="Small Clothes Line">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="1" failure_reason="1x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -3161,7 +3161,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="clothesline_long"
 				standing_order_display_name="Standing Order for Long Clothes Lines"
-				product_name="Boxed Long Clothes Line">
+				product_name="Long Clothes Line">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="2" failure_reason="2x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -3179,7 +3179,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="plinth_wood"
 				standing_order_display_name="Standing Order for Wood Plinths"
-				product_name="Boxed Wood Plinth">
+				product_name="Wood Plinth">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="1" failure_reason="1x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -3194,7 +3194,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="chapel_banner"
 				standing_order_display_name="Standing Order for Church Banners"
-				product_name="Boxed Church Banner">
+				product_name="Church Banner">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="1" failure_reason="1x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -3209,7 +3209,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="mc_carpet"
 				standing_order_display_name="Standing Order for Carpets"
-				product_name="Boxed Carpet"
+				product_name="Carpet"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="improved_decor_unlocked"
@@ -3233,7 +3233,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="lc_rug"
 				standing_order_display_name="Standing Order for Rugs"
-				product_name="Boxed Rug"
+				product_name="Rug"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="improved_decor_unlocked"
@@ -3305,7 +3305,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="steam_radiator"
 				standing_order_display_name="Standing Order for Steam Radiators"
-				product_name="Boxed Steam Radiator">
+				product_name="Steam Radiator">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="1" failure_reason="1x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -3320,7 +3320,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="chapel_candelabra"
 				standing_order_display_name="Standing Order for Candelabras"
-				product_name="Boxed Candelabra">
+				product_name="Candelabra">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="1" failure_reason="1x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -3335,7 +3335,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="icon_lamp00"
 				standing_order_display_name="Standing Order for Wall Lamps"
-				product_name="Boxed Wall Lamp"
+				product_name="Wall Lamp"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="outdoor_decor_unlocked"
@@ -3359,7 +3359,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="pipe_and_valve"
 				standing_order_display_name="Standing Order for Large Pipe and Valves"
-				product_name="Boxed Large Pipe and Valve"
+				product_name="Large Pipe and Valve"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="outdoor_decor_unlocked"
@@ -3383,7 +3383,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="barometer"
 				standing_order_display_name="Standing Order for Barometer"
-				product_name="Boxed Barometer"
+				product_name="Barometer"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="outdoor_decor_unlocked"
@@ -3407,7 +3407,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="vent"
 				standing_order_display_name="Standing Order for Vent"
-				product_name="Boxed Vent"
+				product_name="Vent"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="outdoor_decor_unlocked"
@@ -3431,7 +3431,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons2.xml"
 				icon="pipe_cluster"
 				standing_order_display_name="Standing Order for Pipe Cluster"
-				product_name="Boxed Pipe Cluster"
+				product_name="Pipe Cluster"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="outdoor_decor_unlocked"
@@ -3854,7 +3854,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="ceramics_press_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Ceramics Pressessesses."
-				product_name="Boxed Ceramics Press"
+				product_name="Ceramics Press"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="steelworking_ceramics_unlocked"
@@ -3911,7 +3911,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="dewatering_pump"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Dewatering Pumps"
-				product_name="Boxed Dewatering Pump">
+				product_name="Dewatering Pump">
 				<visible>
 					<require_commodity_geq name="planks" amount="15" failure_reason="10x Planks needed." is_cost="1" />
 					<require_commodity_geq name="bricks" amount="15" failure_reason="15x Bricks needed." is_cost="2" />
@@ -4155,7 +4155,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="mc_bed_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Practical beds"
-				product_name="Boxed Practical Bed">
+				product_name="Practical Bed">
 				<visible>
 					<require_commodity_geq name="planks" amount="25" failure_reason="25x Planks needed." is_cost="1" />
 				</visible>
@@ -4171,7 +4171,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="uc_bed_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Ornate Beds"
-				product_name="Boxed Ornate Bed">
+				product_name="Ornate Bed">
 				<visible>
 					<require_commodity_geq name="planks" amount="40" failure_reason="40x Planks needed." is_cost="1" />
 					<require_commodity_geq name="lacquered_planks" amount="20" failure_reason="20x Lacquered Planks needed." is_cost="2" />
@@ -4193,7 +4193,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="generic_workbench_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Workbenches"
-				product_name="Boxed Assembly Workbench">
+				product_name="Assembly Workbench">
 				<visible>
 					<require_commodity_geq name="logs" amount="10" failure_reason="10x Logs needed." is_cost="1" />
 				</visible>
@@ -4209,7 +4209,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				multiplier="5"
 				icon="workbench_decor"
 				standing_order_display_name="Standing Order for Decor Workbenches"
-				product_name="Boxed Decor Workbench">
+				product_name="Decor Workbench">
 				<visible>
 					<require_commodity_geq name="planks" amount="10" failure_reason="10x Planks needed." is_cost="1" />
 				</visible>
@@ -4225,7 +4225,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="ceramics_workbench_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Ceramics Workbenches"
-				product_name="Boxed Ceramics Workbench">
+				product_name="Ceramics Workbench">
 				<visible>
 					<require_commodity_geq name="planks" amount="15" failure_reason="15x Planks needed." is_cost="1" />
 				</visible>
@@ -4241,7 +4241,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="chemistry_workbench_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Chemistry Workbenches"
-				product_name="Boxed Chemistry Workbench">
+				product_name="Chemistry Workbench">
 				<visible>
 					<require_commodity_geq name="planks" amount="10" failure_reason="10x Planks needed." is_cost="1" />
 					<require_commodity_geq name="crate_of_glass_bottles" amount="5" failure_reason="5x Glass Bottles needed." is_cost="2" />
@@ -4260,7 +4260,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="workbench_advanced"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Advanced Workbenches"
-				product_name="Boxed Advanced Workbench"
+				product_name="Advanced Workbench"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="advanced_modules_unlocked"
@@ -4288,7 +4288,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="power_saw_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Power Saws"
-				product_name="Boxed Power Saw"
+				product_name="Power Saw"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="steelworking_carpentry_unlocked"
@@ -4322,7 +4322,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="simple_mixing_vat"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Wooden Brewing Vats"
-				product_name="Boxed Brewing Vat">
+				product_name="Brewing Vat">
 				<visible>
 					<require_commodity_geq name="planks" amount="15" failure_reason="15x Planks needed." is_cost="1" />
 				</visible>
@@ -4338,7 +4338,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="icon_boozevat"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Booze Vats"
-				product_name="Boxed Booze Vat">
+				product_name="Booze Vat">
 				<visible>
 					<require_commodity_geq name="planks" amount="20" failure_reason="20x Planks needed." is_cost="1" />
 				</visible>
@@ -4354,7 +4354,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="mineshaft_image"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Mineshaft Modules"
-				product_name="Boxed Mineshaft Module">
+				product_name="Mineshaft Module">
 				<visible>
 					<require_commodity_geq name="planks" amount="15" failure_reason="15x Planks needed." is_cost="1" />
 				</visible>
@@ -4390,7 +4390,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="standing_desk_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Standing Desks"
-				product_name="Boxed Standing Desk">
+				product_name="Standing Desk">
 				<visible>
 					<require_commodity_geq name="planks" amount="5" failure_reason="5x Planks needed." is_cost="1" />
 				</visible>
@@ -4406,7 +4406,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="bureaucrat_desk_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Bureaucrat's Desk"
-				product_name="Boxed Bureaucrat's Desk"
+				product_name="Bureaucrat's Desk"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="advanced_bureaucracy_unlocked"
@@ -4431,7 +4431,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="chalkboard"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Chalkboards"
-				product_name="Boxed Chalkboard">
+				product_name="Chalkboard">
 				<visible>
 					<require_commodity_geq name="planks" amount="10" failure_reason="10x Planks needed." is_cost="1" />
 				</visible>
@@ -4447,7 +4447,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="spice_rack"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Spice Racks"
-				product_name="Boxed Spice Rack">
+				product_name="Spice Rack">
 				<visible>
 					<require_commodity_geq name="planks" amount="5" failure_reason="5x Planks needed." is_cost="1" />
 				</visible>
@@ -4463,7 +4463,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="chapel_altar_wood"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Wooden Altars"
-				product_name="Boxed Wooden Altar">
+				product_name="Wooden Altar">
 				<visible>
 					<require_commodity_geq name="lacquered_planks" amount="20" failure_reason="20x Lacquered Planks needed." is_cost="1" />
 				</visible>
@@ -4480,7 +4480,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="icon_loadingbaywood"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Loading Bay Doors"
-				product_name="Boxed Loading Bay Door">
+				product_name="Loading Bay Door">
 				<visible>
 					<require_commodity_geq name="planks" amount="15" failure_reason="15x Planks needed." is_cost="1" />
 				</visible>
@@ -4496,7 +4496,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="lc_chair_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Simple Chairs"
-				product_name="Boxed Simple Chair">
+				product_name="Simple Chair">
 				<visible>
 					<require_commodity_geq name="planks" amount="5" failure_reason="5x Planks needed." is_cost="1" />
 				</visible>
@@ -4512,7 +4512,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="lc_table_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Simple Table and Chair Sets"
-				product_name="Boxed Simple Table and Chair Set">
+				product_name="Simple Table and Chair Set">
 				<visible>
 					<require_commodity_geq name="planks" amount="15" failure_reason="15x Planks needed." is_cost="1" />
 				</visible>
@@ -4528,7 +4528,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="mc_chair_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Practical Chairs"
-				product_name="Boxed Practical Chair">
+				product_name="Practical Chair">
 				<visible>
 					<require_commodity_geq name="planks" amount="10" failure_reason="10x Planks needed." is_cost="1" />
 				</visible>
@@ -4544,7 +4544,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="mc_table_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Practical Table and Chair Sets"
-				product_name="Boxed Practical Table and Chair Set">
+				product_name="Practical Table and Chair Set">
 				<visible>
 					<require_commodity_geq name="planks" amount="20" failure_reason="20x Planks needed." is_cost="1" />
 					<require_commodity_geq name="glass_panes" amount="5" failure_reason="5x Glass Panes needed." is_cost="2" />
@@ -4563,7 +4563,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="uc_chair_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Ornate Chairs"
-				product_name="Boxed Ornate Chair">
+				product_name="Ornate Chair">
 				<visible>
 					<require_commodity_geq name="planks" amount="10" failure_reason="10x Planks needed." is_cost="1" />
 					<require_commodity_geq name="lacquered_planks" amount="5" failure_reason="5x Lacquered Planks needed." is_cost="2" />
@@ -4582,7 +4582,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="uc_table_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Ornate Table and Chair Sets"
-				product_name="Boxed Ornate Table and Chair Set">
+				product_name="Ornate Table and Chair Set">
 				<visible>
 					<require_commodity_geq name="planks" amount="20" failure_reason="20x Planks needed." is_cost="1" />
 					<require_commodity_geq name="lacquered_planks" amount="10" failure_reason="10x Lacquered Planks needed." is_cost="2" />
@@ -4604,7 +4604,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="icon_bookshelf_mc"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Bookshelves"
-				product_name="Boxed Bookshelf">
+				product_name="Bookshelf">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="10" failure_reason="10x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -4620,7 +4620,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="icon_bookshelf_uc"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Fancy Bookshelves"
-				product_name="Boxed Fancy Bookshelf"
+				product_name="Fancy Bookshelf"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="advanced_learning_unlocked"
@@ -4662,7 +4662,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="icon_lc_cabinet"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Simple Cabinets"
-				product_name="Boxed Simple Cabinet">
+				product_name="Simple Cabinet">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="5" failure_reason="5x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -4678,7 +4678,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="icon_mc_cabinet"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Practical Cabinets"
-				product_name="Boxed Practical Cabinet">
+				product_name="Practical Cabinet">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="5" failure_reason="5x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -4694,7 +4694,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="icon_uc_cabinet"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Ornate Cabinets"
-				product_name="Boxed Ornate Cabinet">
+				product_name="Ornate Cabinet">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="5" failure_reason="5x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -4710,7 +4710,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="wall_shrine_lc"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Simple Wall Shrines"
-				product_name="Boxed Simple Wall Shrine">
+				product_name="Simple Wall Shrine">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="5" failure_reason="5x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -4726,7 +4726,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="wall_shrine_uc"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Ornate Wall Shrines"
-				product_name="Boxed Ornate Wall Shrine">
+				product_name="Ornate Wall Shrine">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="5" failure_reason="5x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -4742,7 +4742,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="barbershop_image"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Barbershop Poles"
-				product_name="Boxed Barbershop Pole">
+				product_name="Barbershop Pole">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="5" failure_reason="5x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -4758,7 +4758,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="clothesline_short"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Small Clothes Lines"
-				product_name="Boxed Small Clothes Line">
+				product_name="Small Clothes Line">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="5" failure_reason="5x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -4774,7 +4774,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="clothesline_long"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Long Clothes Lines"
-				product_name="Boxed Long Clothes Line">
+				product_name="Long Clothes Line">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="10" failure_reason="10x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -4792,7 +4792,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="plinth_wood"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Wood Plinths"
-				product_name="Boxed Wood Plinth">
+				product_name="Wood Plinth">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="5" failure_reason="5x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -4808,7 +4808,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="chapel_banner"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Church Banners"
-				product_name="Boxed Church Banner">
+				product_name="Church Banner">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="5" failure_reason="5x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -4824,7 +4824,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="mc_carpet"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Carpets"
-				product_name="Boxed Carpet"
+				product_name="Carpet"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="improved_decor_unlocked"
@@ -4849,7 +4849,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="lc_rug"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Rugs"
-				product_name="Boxed Rug"
+				product_name="Rug"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="improved_decor_unlocked"
@@ -5125,7 +5125,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="hanging_pots"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Hanging Pots"
-				product_name="Boxed Hanging Pots">
+				product_name="Hanging Pots">
 				<visible>
 					<require_commodity_geq name="iron_ingots" amount="5" failure_reason="5x Iron Ingots needed." is_cost="1" />
 				</visible>
@@ -5141,7 +5141,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="small_oven_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Small Iron Ovens"
-				product_name="Boxed Small Iron Oven">
+				product_name="Small Iron Oven">
 				<visible>
 					<require_commodity_geq name="iron_plates" amount="5" failure_reason="5x Iron Plates needed." is_cost="1" />
 					<require_commodity_geq name="iron_pipes" amount="5" failure_reason="5x Iron Pipes needed." is_cost="2" />
@@ -5163,7 +5163,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="kiln_ceramics_iron"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Iron Ceramics Kiln"
-				product_name="Boxed Iron Ceramics Kiln">
+				product_name="Iron Ceramics Kiln">
 				<visible>
 					<require_commodity_geq name="iron_plates" amount="10" failure_reason="10x Iron Plates needed." is_cost="1" />
 					<require_commodity_geq name="iron_pipes" amount="10" failure_reason="10x Iron Pipes needed." is_cost="2" />
@@ -5185,7 +5185,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="iron_charcoal_kiln"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Iron Charcoal Kiln"
-				product_name="Boxed Iron Charcoal Kiln">
+				product_name="Iron Charcoal Kiln">
 				<visible>
 					<require_commodity_geq name="iron_plates" amount="5" failure_reason="5x Iron Plates needed." is_cost="1" />
 					<require_commodity_geq name="iron_pipes" amount="5" failure_reason="5x Iron Pipes needed." is_cost="2" />
@@ -5207,7 +5207,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="crucible_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Iron Smelting Crucible"
-				product_name="Boxed Iron Smelting Crucible">
+				product_name="Iron Smelting Crucible">
 				<visible>
 					<require_commodity_geq name="iron_plates" amount="10" failure_reason="10x Iron Plates needed." is_cost="1" />
 					<require_commodity_geq name="iron_pipes" amount="10" failure_reason="10x Iron Pipes needed." is_cost="2" />
@@ -5232,7 +5232,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="smithing_forge_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Smithing Forges"
-				product_name="Boxed Smithing Forge">
+				product_name="Smithing Forge">
 				<visible>
 					<require_commodity_geq name="iron_ingots" amount="10" failure_reason="10x Iron Ingots needed." is_cost="1" />
 					<require_commodity_geq name="bricks" amount="15" failure_reason="15x Bricks needed." is_cost="2" />
@@ -5251,7 +5251,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="mining_ventilation_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Ventilation Unit"
-				product_name="Boxed Ventilation Unit">
+				product_name="Ventilation Unit">
 				<visible>
 					<require_commodity_geq name="iron_plates" amount="10" failure_reason="10x Iron Plates needed." is_cost="1" />
 					<require_commodity_geq name="copper_pipes" amount="10" failure_reason="10x Copper Pipes needed." is_cost="2" />
@@ -5270,7 +5270,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="industrial_kiln_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Industrial Kilns."
-				product_name="Boxed Industrial Kilns">
+				product_name="Industrial Kilns">
 				<visible>
 					<require_commodity_geq name="bricks" amount="30" failure_reason="30x Bricks needed." is_cost="1" />
 					<require_commodity_geq name="copper_plates" amount="20" failure_reason="20x Copper Plates needed." is_cost="2" />
@@ -5295,7 +5295,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="powerstamper_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Power Stampers."
-				product_name="Boxed Power Stamper"
+				product_name="Power Stamper"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="steelworking_metalworking_unlocked"
@@ -5326,7 +5326,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="power_lathe"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Power Lathes."
-				product_name="Boxed Power Lathe"
+				product_name="Power Lathe"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="steelworking_metalworking_unlocked"
@@ -5360,7 +5360,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="grinder"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Grinders."
-				product_name="Boxed Grinder"
+				product_name="Grinder"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="steelworking_grinder_unlocked"
@@ -5391,7 +5391,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="mixing_tank_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Mechanical Brewing Vats"
-				product_name="Boxed Mechanical Brewing Vat">
+				product_name="Mechanical Brewing Vat">
 				<visible>
 					<require_commodity_geq name="iron_plates" amount="5" failure_reason="5x Iron Plates needed." is_cost="1" />
 					<require_commodity_geq name="planks" amount="10" failure_reason="10x Planks needed." is_cost="2" />
@@ -5413,7 +5413,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="still_icon"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Stills"
-				product_name="Boxed Still"
+				product_name="Still"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="still_unlocked"
@@ -5444,7 +5444,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="steam_oven"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Steam Ovens"
-				product_name="Boxed Steam Oven"
+				product_name="Steam Oven"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="steelworking_cooking_unlocked"
@@ -5478,7 +5478,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="steam_distributor"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Steam Distributors"
-				product_name="Boxed Steam Oven"
+				product_name="Steam Oven"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="steelworking_mining_unlocked"
@@ -5512,7 +5512,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="macroscope"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Macroscopes"
-				product_name="Boxed Macroscope"
+				product_name="Macroscope"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="advanced_science_unlocked"
@@ -5543,7 +5543,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="vacuum_chamber"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Vacuum Chambers"
-				product_name="Boxed Vacuum Chamber"
+				product_name="Vacuum Chamber"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="steelworking_science_unlocked"
@@ -5919,7 +5919,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="steam_radiator"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Steam Radiators"
-				product_name="Boxed Steam Radiator">
+				product_name="Steam Radiator">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="5" failure_reason="5x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -5935,7 +5935,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="chapel_candelabra"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Candelabras"
-				product_name="Boxed Candelabra">
+				product_name="Candelabra">
 				<visible>
 					<require_commodity_geq name="bricabrac" amount="5" failure_reason="5x Bric-a-brac needed." is_cost="1" />
 				</visible>
@@ -5951,7 +5951,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="icon_lamp00"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Wall Lamps"
-				product_name="Boxed Wall Lamp"
+				product_name="Wall Lamp"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="outdoor_decor_unlocked"
@@ -5976,7 +5976,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="pipe_and_valve"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Large Pipe and Valves"
-				product_name="Boxed Large Pipe and Valve"
+				product_name="Large Pipe and Valve"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="outdoor_decor_unlocked"
@@ -6001,7 +6001,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="barometer"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Barometer"
-				product_name="Boxed Barometer"
+				product_name="Barometer"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="outdoor_decor_unlocked"
@@ -6026,7 +6026,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="vent"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Vent"
-				product_name="Boxed Vent"
+				product_name="Vent"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="outdoor_decor_unlocked"
@@ -6051,7 +6051,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="pipe_cluster"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Pipe Cluster"
-				product_name="Boxed Pipe Cluster"
+				product_name="Pipe Cluster"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="outdoor_decor_unlocked"
@@ -7839,7 +7839,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon_skin="ui\orderIcons.xml"
 				icon="generic_workbench_icon"
 				standing_order_display_name="Standing Order for Workbenches"
-				product_name="Boxed Assembly Workbench">
+				product_name="Assembly Workbench">
 				<visible>
 					<require_commodity_geq name="logs" amount="2" failure_reason="2x Logs needed." is_cost="1" />
 				</visible>
