@@ -19,7 +19,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="mk1_steam_knight" display_name="MK1 Steam Knight" filter="other">
+	<commodity name="mk1_steam_knight" display_name="MK-1 Steam Knight" filter="other">
 		<display skin="ui\orderIcons.xml" icon="icon_steamknight"/>
 		<description text="The MK-1 Steam Knight is a truly complete battle weapon, and a massive step up from the PR-0; Armored and armed with a deadly repeating gun, this masterpeice is sure to keep your colony safe." />
 		<gameplay_description text="Steam Knights automatically defend your colony and are extremely powerful." />
@@ -74,7 +74,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="lacquer" display_name="Bucket of Lacquer" filter="raw">
+	<commodity name="lacquer" display_name="Lacquer" filter="raw">
 		<display skin="ui\commodityIcons.xml" icon="lacquer_bucket"/>
 		<description text="This sharp-smelling substance is extracted from plants and beetles and may be used to treat timber for aesthetic and practical improvement." />
 		<gameplay_description text="Used to produce lacquered wood." />
@@ -143,7 +143,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="hematite" display_name="Hematite" filter="metalworking">
+	<commodity name="hematite" display_name="Hematite Ore" filter="metalworking">
 		<display skin="ui\commodityIcons.xml" icon="hematite_icon"/>
 		<description text="A rueful ore of iron brooding heavily 'til it meets the Smelter." />
 		<gameplay_description text="Smelted into iron ingots at a Metalworks." />
@@ -155,7 +155,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="malachite" display_name="Malachite" filter="metalworking">
+	<commodity name="malachite" display_name="Malachite Ore" filter="metalworking">
 		<display skin="ui\commodityIcons.xml" icon="malachite_icon"/>
 		<description text="A copper ore of characteristic greenish hue." />
 		<gameplay_description text="Smelted into copper ingots at a Metalworks." />
@@ -167,7 +167,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="sphalerite" display_name="Sphalerite" filter="metalworking">
+	<commodity name="sphalerite" display_name="Sphalerite Ore" filter="metalworking">
 		<display skin="ui\commodityIcons.xml" icon="sphalerite_icon"/>
 		<description text="A most curious ore of zinc, named for the Stahlmarkian city of Bad Zinkenburg." />
 		<gameplay_description text="Smelted into zinc ingots at a Metalworks." />
@@ -179,7 +179,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="native_gold" display_name="Native Gold" filter="metalworking">
+	<commodity name="native_gold" display_name="Gold Ore" filter="metalworking">
 		<display skin="ui\commodityIcons.xml" icon="native_gold_icon"/>
 		<description text="Precious gold is favoured by aristocrats and those who otherwise desire such ostentation." />
 		<gameplay_description text="Smelted into gold ingots ingots at a Metalworks." />
@@ -414,7 +414,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="cube_of_clay" display_name="Cube of Clay" filter="raw">
+	<commodity name="cube_of_clay" display_name="Clay" filter="raw">
 		<display skin="ui\commodityIcons.xml" icon="clay_icon"/>
 		<description text="Foundation of civilization itself, this ruddy Earth is unfit for farming but perfect to bake into useful products." />
 		<gameplay_description text="Clay can be transformed into bricks or stoneware jars at a Ceramics Workshop." />
@@ -424,7 +424,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_sand" display_name="Bushel of Sand" filter="raw">
+	<commodity name="bushel_of_sand" display_name="Sand" filter="raw">
 		<display skin="ui\commodityIcons.xml" icon="sand_bushel_icon"/>
 		<description text="The correct sand necessary to produce pure Empire-grade glass is less common than one might imagine." />
 		<gameplay_description text="Can be used to create glass - a vital material for fine goods - at a Ceramics Workshop." />
@@ -448,7 +448,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="rough_stone_block" display_name="Rough Stone Block" filter="raw">
+	<commodity name="rough_stone_block" display_name="Stone" filter="raw">
 		<display skin="ui\commodityIcons.xml" icon="rough_stone_block_icon"/>
 		<description text="Bones of the Earth, useful for simple foundations and certain crude products." />
 		<gameplay_description text="Used to construct solid foundations for frontier structures." />
@@ -461,7 +461,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_bone_meal" display_name="Bushel of Bone Meal" filter="raw">
+	<commodity name="bushel_of_bone_meal" display_name="Bone Meal" filter="raw">
 		<display skin="ui\commodityIcons.xml" icon="icon_bushelbonemeal"/>
 		<description text="Crushed bone, very small and powdery." />
 		<gameplay_description text="Gross! Why are you putting bones in a basket like that?" />
@@ -471,7 +471,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_bones" display_name="Bushel of Bones" filter="raw">
+	<commodity name="bushel_of_bones" display_name="Bones" filter="raw">
 		<display skin="ui\commodityIcons.xml" icon="icon_bushelbones"/>
 		<description text="Assorted bones in a range of sizes and shapes." />
 		<gameplay_description text="Gross! Why are you putting bones in a basket like that?" />
@@ -481,7 +481,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="cement_sack" display_name="Sack of Cement" filter="processed">
+	<commodity name="cement_sack" display_name="Cement" filter="processed">
 		<display skin="ui\commodityIcons.xml" icon="cement_sack"/>
 		<description text="'Instant stone - add water and wait!' it says." />
 		<gameplay_description text="Used for making roads." />
@@ -491,7 +491,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="crate_of_stoneware_jars" display_name="Crate of Stoneware Jars" filter="processed">
+	<commodity name="crate_of_stoneware_jars" display_name="Stoneware Jars" filter="processed">
 		<display skin="ui\commodityIcons.xml" icon="crate_of_stoneware_empty"/>
 		<description text="Ceramic jars made for brewed beverages." />
 		<gameplay_description text="Traditionally used to hold beer." />
@@ -501,7 +501,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="crate_of_glass_bottles" display_name="Crate of Glass Bottles" filter="processed">
+	<commodity name="crate_of_glass_bottles" display_name="Glass Bottles" filter="processed">
 		<display skin="ui\commodityIcons.xml" icon="crate_of_bottles_empty_icon"/>
 		<description text="Shiny glass bottles, useful for preserves, liqueurs, and whatever other interesting fluids one might fancy." />
 		<gameplay_description text="Used to hold distilled liquor and medicinal fluids." />
@@ -525,7 +525,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="keg_of_black_powder" display_name="Keg of Gunpowder" filter="processed">
+	<commodity name="keg_of_black_powder" display_name="Gunpowder" filter="processed">
 		<display skin="ui\commodityIcons.xml" icon="gunpowder_barrel"/>
 		<description text="A highly volatile keg of explosive powder. Keep away from open flames, please." />
 		<gameplay_description text="Used in a Ceramics Workshop or Metalworks to create landminds and ammo." />
@@ -589,7 +589,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="ammo3" display_name="Full Metal Jacket Ammunition" filter="finished">
+	<commodity name="ammo3" display_name="FMJ Ammunition" filter="finished">
 		<display skin="ui\commodityIcons.xml" icon="ammo_box2"/>
 		<description text="A crate of full metal jacket minie-style ammunition suitable for rifled firearms. This ammunition is of fine quality. It is used by Soldiers in powerful weapons like the Jezail Rifle, and Carbine." />
 		<gameplay_description text="Supplies powerful weapons (Revolver, Jezail Rifle, Carbine) in Barracks." />
@@ -602,7 +602,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="crate_of_grenades" display_name="Crate of Grenades" filter="finished">
+	<commodity name="crate_of_grenades" display_name="Grenades" filter="finished">
 		<display skin="ui\commodityIcons.xml" icon="grenades_crate"/>
 		<description text="A crate of highly dangerous and fairly experimental explosive munitions. These are not for hand-use (far too many accidents, you see) but via the Grenade Launcher device." />
 		<gameplay_description text="" />
@@ -640,7 +640,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bolt_of_cloth" display_name="Bolt of Cloth" filter="processed">
+	<commodity name="bolt_of_cloth" display_name="Cloth" filter="processed">
 		<display skin="ui\commodityIcons.xml" icon="icon_clothbolt"/>
 		<description text="Bolts of thick cloth woven from flax." />
 		<gameplay_description text="A useful trade good." />
@@ -666,7 +666,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_bluestar_cap_fungus" display_name="Bushel of Bluestar Cap Fungus" filter="raw">
+	<commodity name="bushel_of_bluestar_cap_fungus" display_name="Bluestar Cap Fungus" filter="raw">
 		<display skin="ui\commodityIcons.xml" icon="placeholder"/>
 		<description text="A bushel of Bluestar Cap Fungus." />
 		<gameplay_description text="Can be cooked or preserved in a Kitchen." />
@@ -677,7 +677,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_cream_cap_fungus" display_name="Bushel of Cream Cap Fungus" filter="raw">
+	<commodity name="bushel_of_cream_cap_fungus" display_name="Cream Cap Fungus" filter="raw">
 		<display skin="ui\commodityIcons.xml" icon="placeholder"/>
 		<description text="A bushel of Cream Cap Fungus." />
 		<gameplay_description text="Can be cooked or preserved in a Kitchen." />
@@ -688,7 +688,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_redspeckle_cap_fungus" display_name="Bushel of Redspeckle Cap Fungus" filter="raw">
+	<commodity name="bushel_of_redspeckle_cap_fungus" display_name="Redspeckle Cap Fungus" filter="raw">
 		<display skin="ui\commodityIcons.xml" icon="placeholder"/>
 		<description text="A bushel of Redspeckle Cap Fungus." />
 		<gameplay_description text="Can be cooked or preserved in a Kitchen." />
@@ -699,7 +699,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_banded_disc_fungus" display_name="Bushel of Banded Disc Fungus" filter="raw">
+	<commodity name="bushel_of_banded_disc_fungus" display_name="Banded Disc Fungus" filter="raw">
 		<display skin="ui\commodityIcons.xml" icon="placeholder"/>
 		<description text="A bushel of Banded Disc Fungus." />
 		<gameplay_description text="Can be cooked or preserved in a Kitchen." />
@@ -710,7 +710,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_white_disc_fungus" display_name="Bushel of White Disc Fungus" filter="raw">
+	<commodity name="bushel_of_white_disc_fungus" display_name="White Disc Fungus" filter="raw">
 		<display skin="ui\commodityIcons.xml" icon="placeholder"/>
 		<description text="A bushel of White Disc Fungus." />
 		<gameplay_description text="Can be cooked or preserved in a Kitchen." />
@@ -721,7 +721,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_green_puffball_fungus" display_name="Bushel of Green Puffball Fungus" filter="raw">
+	<commodity name="bushel_of_green_puffball_fungus" display_name="Green Puffball Fungus" filter="raw">
 		<display skin="ui\commodityIcons.xml" icon="placeholder"/>
 		<description text="A bushel of Green Puffball Fungus." />
 		<gameplay_description text="Can be cooked or preserved in a Kitchen." />
@@ -732,7 +732,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_white_puffball_fungus" display_name="Bushel of White Puffball Fungus" filter="raw">
+	<commodity name="bushel_of_white_puffball_fungus" display_name="White Puffball Fungus" filter="raw">
 		<display skin="ui\commodityIcons.xml" icon="placeholder"/>
 		<description text="A bushel of White Puffball Fungus." />
 		<gameplay_description text="Can be cooked or preserved in a Kitchen." />
@@ -743,7 +743,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_orange_puffball_fungus" display_name="Bushel of Orange Puffball Fungus" filter="raw">
+	<commodity name="bushel_of_orange_puffball_fungus" display_name="Orange Puffball Fungus" filter="raw">
 		<display skin="ui\commodityIcons.xml" icon="placeholder"/>
 		<description text="A bushel of Orange Puffball Fungus." />
 		<gameplay_description text="Can be cooked or preserved in a Kitchen." />
@@ -754,7 +754,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_scrap_iron" display_name="Bushel of Scrap Iron" filter="metalworking">
+	<commodity name="bushel_of_scrap_iron" display_name="Scrap Iron" filter="metalworking">
 		<display skin="ui\commodityIcons.xml" icon="bushel_scrap_iron"/>
 		<description text="A bushel of twisted scrap iron which can be smelted back into iron ingots." />
 		<gameplay_description text="Smelt this into iron ingots at a Metalworks." />
@@ -909,7 +909,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="fishperson_organs" display_name="Bushel of Fishperson Organs" filter="other">
+	<commodity name="fishperson_organs" display_name="Fishperson Organs" filter="other">
 		<display skin="ui\commodityIcons.xml" icon="bushel_organs"/>
 		<description text="A putrid basket of fishy-looking organs." />
 		<gameplay_description text="Gross." />
@@ -960,7 +960,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bricabrac" display_name="Box of Bric-a-brac" filter="finished">
+	<commodity name="bricabrac" display_name="Bric-a-brac" filter="finished">
 		<display skin="ui\commodityIcons.xml" icon="bricabrac_icon"/>
 		<description text="A box of assorted odds and ends, used for crafting decor modules." />
 		<gameplay_description text="Used to construct modules at a Decor Workbench." />
@@ -972,7 +972,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_brick_ceramics_kiln" display_name="Boxed Brick Ceramics Kiln" filter="finished">
+	<commodity name="boxed_brick_ceramics_kiln" display_name="Brick Ceramics Kiln" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="kiln_ceramics_brick"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces bricks, glass, and glass products." />
@@ -984,7 +984,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_iron_ceramics_kiln" display_name="Boxed Iron Ceramics Kiln" filter="finished">
+	<commodity name="boxed_iron_ceramics_kiln" display_name="Iron Ceramics Kiln" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="kiln_ceramics_iron"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces bricks, glass, and glass products in bulk." />
@@ -996,7 +996,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_stone_charcoal_kiln" display_name="Boxed Stone Charcoal Kiln" filter="finished">
+	<commodity name="boxed_stone_charcoal_kiln" display_name="Stone Charcoal Kiln" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="stone_kiln"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that " />
@@ -1008,7 +1008,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_brick_charcoal_kiln" display_name="Boxed Brick Charcoal Kiln" filter="finished">
+	<commodity name="boxed_brick_charcoal_kiln" display_name="Brick Charcoal Kiln" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="brick_charcoal_kiln"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces charcoal from wood." />
@@ -1020,7 +1020,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_iron_charcoal_kiln" display_name="Boxed Iron Charcoal Kiln" filter="finished">
+	<commodity name="boxed_iron_charcoal_kiln" display_name="Iron Charcoal Kiln" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="iron_charcoal_kiln"/>
 		<description text="A boxed Iron Charcoal Kiln, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces charcoal from wood." />
@@ -1032,7 +1032,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_small_iron_oven" display_name="Boxed Small Iron Oven" filter="finished">
+	<commodity name="boxed_small_iron_oven" display_name="Small Iron Oven" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="small_oven_icon"/>
 		<description text="A boxed iron oven module, ready for setting up in an appropriate workshop." />
 		<gameplay_description text="Module that produces cooked food." />
@@ -1044,7 +1044,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_power_lathe" display_name="Boxed Power Lathe" filter="finished">
+	<commodity name="boxed_power_lathe" display_name="Power Lathe" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="power_lathe"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces metal pipes in bulk." />
@@ -1056,7 +1056,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_stone_smelting_crucible" display_name="Boxed Stone Smelting Crucible" filter="finished">
+	<commodity name="boxed_stone_smelting_crucible" display_name="Stone Smelting Crucible" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="stone_crucible"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that refines metals from ores." />
@@ -1068,7 +1068,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_iron_smelting_crucible" display_name="Boxed Iron Smelting Crucible" filter="finished">
+	<commodity name="boxed_iron_smelting_crucible" display_name="Iron Smelting Crucible" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="crucible_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces metal from ore." />
@@ -1080,7 +1080,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_power_saw" display_name="Boxed Power Saw" filter="finished">
+	<commodity name="boxed_power_saw" display_name="Power Saw" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="power_saw_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces planks very efficiently." />
@@ -1092,7 +1092,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_ceramics_press" display_name="Boxed Ceramics Press" filter="finished">
+	<commodity name="boxed_ceramics_press" display_name="Ceramics Press" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="ceramics_press_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces bricks, glass, and glass products in massive bulk." />
@@ -1104,7 +1104,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_industrial_kiln" display_name="Boxed Industrial Kiln" filter="finished">
+	<commodity name="boxed_industrial_kiln" display_name="Industrial Kiln" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="industrial_kiln_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces charcoal very efficiently." />
@@ -1116,7 +1116,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_grinder" display_name="Boxed Grinder" filter="finished">
+	<commodity name="boxed_grinder" display_name="Grinder" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="grinder"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces simple goods from unwanted raw materials." />
@@ -1128,7 +1128,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_power_stamper" display_name="Boxed Power Stamper" filter="finished">
+	<commodity name="boxed_power_stamper" display_name="Power Stamper" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="powerstamper_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces metal plates in bulk." />
@@ -1140,7 +1140,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_steam_oven" display_name="Boxed Steam Oven" filter="finished">
+	<commodity name="boxed_steam_oven" display_name="Steam Oven" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="steam_oven"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces cooked food in massive bulk." />
@@ -1152,7 +1152,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_mixing_tank" display_name="Boxed Mechanical Brewing Vat" filter="finished">
+	<commodity name="boxed_mixing_tank" display_name="Mechanical Brewing Vat" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="mixing_tank_icon"/>
 		<description text="A boxed Mechanical Brewing Vat, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces basic brewed drinks in bulk." />
@@ -1164,7 +1164,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_brewing_vat" display_name="Boxed Brewing Vat" filter="finished">
+	<commodity name="boxed_brewing_vat" display_name="Brewing Vat" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="simple_mixing_vat"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces basic brewed drinks." />
@@ -1176,7 +1176,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_still" display_name="Boxed Still" filter="finished">
+	<commodity name="boxed_still" display_name="Still" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="still_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces strong spirits from less concentrated alcohol." />
@@ -1188,7 +1188,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_ceramics_workbench" display_name="Boxed Ceramics Workbench" filter="finished">
+	<commodity name="boxed_ceramics_workbench" display_name="Ceramics Workbench" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="ceramics_workbench_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces basic ceramic products." />
@@ -1200,7 +1200,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_workbench" display_name="Boxed Assembly Workbench" filter="finished">
+	<commodity name="boxed_workbench" display_name="Assembly Workbench" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="generic_workbench_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces modules and trade products." />
@@ -1212,7 +1212,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_decor_workbench" display_name="Boxed Decor Workbench" filter="finished">
+	<commodity name="boxed_decor_workbench" display_name="Decor Workbench" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="workbench_decor"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that is used to craft Bricabrac and Decor modules." />
@@ -1224,7 +1224,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_advanced_workbench" display_name="Boxed Advanced Workbench" filter="finished">
+	<commodity name="boxed_advanced_workbench" display_name="Advanced Workbench" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="workbench_advanced"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that combines function of all other workbenches, produces items in bulk." />
@@ -1236,7 +1236,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_chemistry_workbench" display_name="Boxed Chemistry Workbench" filter="finished">
+	<commodity name="boxed_chemistry_workbench" display_name="Chemistry Workbench" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="chemistry_workbench_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces chemically-derived products." />
@@ -1248,7 +1248,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_smithing_forge" display_name="Boxed Smithing Forge" filter="finished">
+	<commodity name="boxed_smithing_forge" display_name="Smithing Forge" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="smithing_forge_icon"/>
 		<description text="A boxed Smithing Forge, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces metal materials, tools, and weapons." />
@@ -1260,7 +1260,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_booze_vat" display_name="Boxed Booze Vat" filter="finished">
+	<commodity name="boxed_booze_vat" display_name="Booze Vat" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="icon_boozevat"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that is used to store alcohol for your colonists to drink from in a pub." />
@@ -1272,7 +1272,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_spinning_mule" display_name="Boxed Spinning Mule" filter="finished">
+	<commodity name="boxed_spinning_mule" display_name="Spinning Mule" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="placeholder"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that isn't in this game." />
@@ -1284,7 +1284,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_wooden_altar" display_name="Boxed Wooden Altar" filter="finished">
+	<commodity name="boxed_wooden_altar" display_name="Wooden Altar" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="chapel_altar_wood"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that is used to conduct sermons." />
@@ -1296,7 +1296,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_stone_altar" display_name="Boxed Stone Altar" filter="finished">
+	<commodity name="boxed_stone_altar" display_name="Stone Altar" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="chapel_altar_stone"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that is used to conduct sermons." />
@@ -1308,7 +1308,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_large_stone_altar" display_name="Boxed Large Stone Altar" filter="finished">
+	<commodity name="boxed_large_stone_altar" display_name="Large Stone Altar" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="chapel_altar_stone_large"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that is used to conduct sermons." />
@@ -1320,7 +1320,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_macroscope" display_name="Boxed Macroscope" filter="finished">
+	<commodity name="boxed_macroscope" display_name="Macroscope" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="macroscope"/>
 		<description text="A boxed Macroscope, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that is used for performing Science." />
@@ -1332,7 +1332,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_candelabra" display_name="Boxed Candelabra" filter="finished">
+	<commodity name="boxed_candelabra" display_name="Candelabra" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="chapel_candelabra"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1344,7 +1344,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_church_banner" display_name="Boxed Church Banner" filter="finished">
+	<commodity name="boxed_church_banner" display_name="Church Banner" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="chapel_banner"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1356,7 +1356,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_church_pews" display_name="Boxed Church Pews" filter="finished">
+	<commodity name="boxed_church_pews" display_name="Church Pews" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="pews"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that isn't in this game." />
@@ -1368,7 +1368,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_cot" display_name="Boxed Cot" filter="finished">
+	<commodity name="boxed_cot" display_name="Cot" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="cot_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module for sleeping on. Colonists prefer beds to the floor." />
@@ -1380,7 +1380,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_lower_class_bed" display_name="Boxed Barebones Bed" filter="finished">
+	<commodity name="boxed_lower_class_bed" display_name="Barebones Bed" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="lc_bed_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module for sleeping on. Colonists prefer beds to the floor." />
@@ -1392,7 +1392,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_middle_class_single_bed" display_name="Boxed Practical Bed" filter="finished">
+	<commodity name="boxed_middle_class_single_bed" display_name="Practical Bed" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="mc_bed_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module for sleeping on. Colonists prefer beds to the floor." />
@@ -1404,7 +1404,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_middle_class_bed" display_name="Boxed Practical Bed" filter="finished">
+	<commodity name="boxed_middle_class_bed" display_name="Practical Bed" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="mc_bed_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that " />
@@ -1416,7 +1416,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_upper_class_bed" display_name="Boxed Ornate Bed" filter="finished">
+	<commodity name="boxed_upper_class_bed" display_name="Ornate Bed" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="uc_bed_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module for sleeping on. Colonists prefer beds to the floor." />
@@ -1428,7 +1428,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_upper_class_chair" display_name="Boxed Ornate Chair" filter="finished">
+	<commodity name="boxed_upper_class_chair" display_name="Ornate Chair" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="uc_chair_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that is used in Chapels, Barbershops and Pubs for drinking/receiving medical attention/etc." />
@@ -1440,7 +1440,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_clothes_line_short" display_name="Boxed Short Clothes Line" filter="finished">
+	<commodity name="boxed_clothes_line_short" display_name="Short Clothes Line" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="clothesline_short"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1452,7 +1452,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_clothes_line_long" display_name="Boxed Long Clothes Line" filter="finished">
+	<commodity name="boxed_clothes_line_long" display_name="Long Clothes Line" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="clothesline_long"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1464,7 +1464,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_upper_class_table" display_name="Boxed Ornate Table and Chair Set" filter="finished">
+	<commodity name="boxed_upper_class_table" display_name="Ornate Table and Chair Set" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="uc_table_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that acts as a chair." />
@@ -1476,7 +1476,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_fancy_bookshelf" display_name="Boxed Fancy Bookshelf" filter="finished">
+	<commodity name="boxed_fancy_bookshelf" display_name="Fancy Bookshelf" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="icon_bookshelf_uc"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Used in a Training Academy to learn all sorts of things. Trains faster than a normal Bookshelf." />
@@ -1488,7 +1488,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_bookshelf" display_name="Boxed Bookshelf" filter="finished">
+	<commodity name="boxed_bookshelf" display_name="Bookshelf" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="icon_bookshelf_mc"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Used in a Training Academy to learn all sorts of things." />
@@ -1500,7 +1500,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_lc_cabinet" display_name="Boxed Simple Cabinet" filter="finished">
+	<commodity name="boxed_lc_cabinet" display_name="Simple Cabinet" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="icon_lc_cabinet"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1512,7 +1512,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_mc_cabinet" display_name="Boxed Practical Cabinet" filter="finished">
+	<commodity name="boxed_mc_cabinet" display_name="Practical Cabinet" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="icon_mc_cabinet"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1524,7 +1524,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_uc_cabinet" display_name="Boxed Ornate Cabinet" filter="finished">
+	<commodity name="boxed_uc_cabinet" display_name="Ornate Cabinet" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="icon_uc_cabinet"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1536,7 +1536,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_bureaucrats_cabinet" display_name="Boxed Bureaucrat's Cabinet" filter="finished">
+	<commodity name="boxed_bureaucrats_cabinet" display_name="Bureaucrat's Cabinet" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="bureaucrat_cabinet_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that isn't in this game." />
@@ -1548,7 +1548,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_bureaucrats_desk" display_name="Boxed Bureaucrat's Desk" filter="finished">
+	<commodity name="boxed_bureaucrats_desk" display_name="Bureaucrat's Desk" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="bureaucrat_desk_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that attains superior diplomacy results over a standing desk." />
@@ -1560,7 +1560,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_standing_desk" display_name="Boxed Standing Desk" filter="finished">
+	<commodity name="boxed_standing_desk" display_name="Standing Desk" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="standing_desk_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module used for conducting diplomacy in a Foreign Office, or Mineral Surveys in a Naturalist's Office." />
@@ -1572,7 +1572,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_mineshaft_module" display_name="Boxed Mineshaft Module" filter="finished">
+	<commodity name="boxed_mineshaft_module" display_name="Mineshaft Module" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="mineshaft_image"/>
 		<description text="A boxed Mineshaft Module, ready for setting up in an appropriate building." />
 		<gameplay_description text="A Module used for mining." />
@@ -1584,7 +1584,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_dewatering_pump" display_name="Boxed Dewatering Pump" filter="finished">
+	<commodity name="boxed_dewatering_pump" display_name="Dewatering Pump" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="dewatering_pump"/>
 		<description text="A boxed Dewatering Pump, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that allows deeper mining." />
@@ -1596,7 +1596,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_ventilation_unit" display_name="Boxed Ventilation Unit" filter="finished">
+	<commodity name="boxed_ventilation_unit" display_name="Ventilation Unit" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="mining_ventilation_icon"/>
 		<description text="A boxed Ventilation Unit, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that allows deeper mining." />
@@ -1608,7 +1608,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_steam_distributor" display_name="Boxed Steam Distributor" filter="finished">
+	<commodity name="boxed_steam_distributor" display_name="Steam Distributor" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="steam_distributor"/>
 		<description text="A boxed Steam Distributor, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that allows deeper mining." />
@@ -1620,7 +1620,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_chalkboard" display_name="Boxed Chalkboard" filter="finished">
+	<commodity name="boxed_chalkboard" display_name="Chalkboard" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="chalkboard"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module used for scientific research." />
@@ -1632,7 +1632,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_vacuum_chamber" display_name="Boxed Vacuum Chamber" filter="finished">
+	<commodity name="boxed_vacuum_chamber" display_name="Vacuum Chamber" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="vacuum_chamber"/>
 		<description text="A boxed vacuum chamber, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module used for scientific research." />
@@ -1644,7 +1644,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_painting_uc" display_name="Boxed Upper-Class Painting" filter="finished">
+	<commodity name="boxed_painting_uc" display_name="Upper-Class Painting" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="decor_uc_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module used for scientific research." />
@@ -1656,7 +1656,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_painting_mc" display_name="Boxed Middle-Class Painting" filter="finished">
+	<commodity name="boxed_painting_mc" display_name="Middle-Class Painting" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="decor_mc_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that isn't in this game." />
@@ -1668,7 +1668,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_painting_lc" display_name="Boxed Lower-Class Painting" filter="finished">
+	<commodity name="boxed_painting_lc" display_name="Lower-Class Painting" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="decor_lc_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that isn't in this game." />
@@ -1680,7 +1680,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_loading_bay_door" display_name="Boxed Loading Bay Door" filter="finished">
+	<commodity name="boxed_loading_bay_door" display_name="Loading Bay Door" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="icon_loadingbaywood"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that acts as a larger door." />
@@ -1692,7 +1692,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_lower_class_window" display_name="Boxed Lower Class Window" filter="finished">
+	<commodity name="boxed_lower_class_window" display_name="Lower Class Window" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="lc_window_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Why does this even have a boxed module, we don't make you box windows." />
@@ -1704,7 +1704,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_middle_class_window" display_name="Boxed Middle Class Window" filter="finished">
+	<commodity name="boxed_middle_class_window" display_name="Middle Class Window" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="mc_window_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Why does this even have a boxed module, we don't make you box windows." />
@@ -1716,7 +1716,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_stained_glass_window" display_name="Boxed Stained Glass Window" filter="finished">
+	<commodity name="boxed_stained_glass_window" display_name="Stained Glass Window" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="window_stained_glass"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1728,7 +1728,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_wood_plinth" display_name="Boxed Wood Plinth" filter="finished">
+	<commodity name="boxed_wood_plinth" display_name="Wood Plinth" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="plinth_wood"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1740,7 +1740,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_stone_plinth" display_name="Boxed Stone Plinth" filter="finished">
+	<commodity name="boxed_stone_plinth" display_name="Stone Plinth" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="plinth_marble"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1752,7 +1752,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_lower_class_table" display_name="Boxed Simple Table and Chair Set" filter="finished">
+	<commodity name="boxed_lower_class_table" display_name="Simple Table and Chair Set" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="lc_table_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Acts as a chair." />
@@ -1764,7 +1764,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_middle_class_table" display_name="Boxed Practical Table and Chair Set" filter="finished">
+	<commodity name="boxed_middle_class_table" display_name="Practical Table and Chair Set" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="mc_table_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Acts as a chair." />
@@ -1776,7 +1776,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_steam_radiator" display_name="Boxed Steam Radiator" filter="finished">
+	<commodity name="boxed_steam_radiator" display_name="Steam Radiator" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="steam_radiator"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1788,7 +1788,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_lower_class_chair" display_name="Boxed Simple Chair" filter="finished">
+	<commodity name="boxed_lower_class_chair" display_name="Simple Chair" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="lc_chair_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Used in Chapels, Barbershops and Pubs for drinking/receiving medical attention/etc." />
@@ -1800,7 +1800,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_middle_class_chair" display_name="Boxed Practical Chair" filter="finished">
+	<commodity name="boxed_middle_class_chair" display_name="Practical Chair" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="mc_chair_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Used in Chapels, Barbershops and Pubs for drinking/receiving medical attention/etc." />
@@ -1812,7 +1812,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_spice_rack" display_name="Boxed Spice Rack" filter="finished">
+	<commodity name="boxed_spice_rack" display_name="Spice Rack" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="spice_rack"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1824,7 +1824,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_hanging_pots" display_name="Boxed Hanging Pots" filter="finished">
+	<commodity name="boxed_hanging_pots" display_name="Hanging Pots" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="hanging_pots"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1836,7 +1836,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_lower_class_picture_frame_cluster" display_name="Boxed Lower Class Picture Frame Cluster" filter="finished">
+	<commodity name="boxed_lower_class_picture_frame_cluster" display_name="Lower Class Picture Frame Cluster" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="lc_frame_cluster"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that isn't in this game." />
@@ -1848,7 +1848,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_middle_class_picture_frame_cluster" display_name="Boxed Middle Class Picture Frame Cluster" filter="finished">
+	<commodity name="boxed_middle_class_picture_frame_cluster" display_name="Middle Class Picture Frame Cluster" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="mc_frame_cluster"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that isn't in this game." />
@@ -1860,7 +1860,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_clay_pot" display_name="Boxed Clay Pot" filter="finished">
+	<commodity name="boxed_clay_pot" display_name="Clay Pot" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="ceramic_pot"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1872,7 +1872,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_science_wall_plaque" display_name="Boxed Science Wall Plaque" filter="finished">
+	<commodity name="boxed_science_wall_plaque" display_name="Science Wall Plaque" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="wall_plaque00"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1884,7 +1884,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_military_wall_plaque" display_name="Boxed Military Wall Plaque" filter="finished">
+	<commodity name="boxed_military_wall_plaque" display_name="Military Wall Plaque" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="wall_plaque01"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1896,7 +1896,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_royal_wall_plaque" display_name="Boxed Royal Wall Plaque" filter="finished">
+	<commodity name="boxed_royal_wall_plaque" display_name="Royal Wall Plaque" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="wall_plaque02"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1908,7 +1908,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_lower_class_certificate" display_name="Boxed Lower Class Certificate" filter="finished">
+	<commodity name="boxed_lower_class_certificate" display_name="Lower Class Certificate" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="decor_lc_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1920,7 +1920,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_carpet" display_name="Boxed Carpet" filter="finished">
+	<commodity name="boxed_carpet" display_name="Carpet" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="uc_carpet"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1932,7 +1932,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_rug" display_name="Boxed Rug" filter="finished">
+	<commodity name="boxed_rug" display_name="Rug" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="lc_rug"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1944,7 +1944,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_lower_class_wall_shrine" display_name="Boxed Simple Wall Shrine" filter="finished">
+	<commodity name="boxed_lower_class_wall_shrine" display_name="Simple Wall Shrine" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="wall_shrine_lc"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1956,7 +1956,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_upper_class_wall_shrine" display_name="Boxed Ornate Wall Shrine" filter="finished">
+	<commodity name="boxed_upper_class_wall_shrine" display_name="Ornate Wall Shrine" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="wall_shrine_uc"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1968,7 +1968,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_lamp" display_name="Boxed Lamp" filter="finished">
+	<commodity name="boxed_lamp" display_name="Lamp" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="icon_lamp00"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1980,7 +1980,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_barometer" display_name="Boxed Barometer" filter="finished">
+	<commodity name="boxed_barometer" display_name="Barometer" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="barometer"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -1992,7 +1992,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_large_pipe_and_valve" display_name="Boxed Large Pipe and Valve" filter="finished">
+	<commodity name="boxed_large_pipe_and_valve" display_name="Large Pipe and Valve" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="pipe_and_valve"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -2004,7 +2004,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_vent" display_name="Boxed Vent" filter="finished">
+	<commodity name="boxed_vent" display_name="Vent" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="vent"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -2016,7 +2016,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_pipe_cluster" display_name="Boxed Pipe Cluster" filter="finished">
+	<commodity name="boxed_pipe_cluster" display_name="Pipe Cluster" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="pipe_cluster"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -2028,7 +2028,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_sign_board_small" display_name="Boxed Small Sign Board" filter="finished">
+	<commodity name="boxed_sign_board_small" display_name="Small Sign Board" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="signboard"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="No." />
@@ -2040,7 +2040,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_sign_hanger_metal_00" display_name="Boxed Metal Sign Hanger" filter="finished">
+	<commodity name="boxed_sign_hanger_metal_00" display_name="Metal Sign Hanger" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="metal_sign_hanger"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="No." />
@@ -2052,7 +2052,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_sign_hanger_wood_00" display_name="Boxed Wood Sign Hanger" filter="finished">
+	<commodity name="boxed_sign_hanger_wood_00" display_name="Wood Sign Hanger" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="wood_sign_hanger"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="No." />
@@ -2064,7 +2064,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_barbershop_pole" display_name="Boxed Barbershop Pole" filter="finished">
+	<commodity name="boxed_barbershop_pole" display_name="Barbershop Pole" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="barbershop_image"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -2076,7 +2076,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_wall-mounted_aurochs_head" display_name="Boxed Wall-Mounted Aurochs Head" filter="finished">
+	<commodity name="boxed_wall-mounted_aurochs_head" display_name="Wall-Mounted Aurochs Head" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="mounted_head_aurochs"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -2089,7 +2089,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_wall-mounted_beetle_head" display_name="Boxed Wall-Mounted Beetle Head" filter="finished">
+	<commodity name="boxed_wall-mounted_beetle_head" display_name="Wall-Mounted Beetle Head" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="mounted_head_beetle"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Decor module; increases building quality." />
@@ -2102,7 +2102,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_musket_locker" display_name="Boxed Musket Locker" filter="finished">
+	<commodity name="boxed_musket_locker" display_name="Musket Locker" filter="finished">
 		<display skin="ui\commodityIcons.xml" icon="icon_musket"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module used to supply a barracks with improvised muskets, or allows a Naturalist's Office to hunt animals. " />
@@ -2115,7 +2115,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_carbine_locker" display_name="Boxed Carbine Locker" filter="finished">
+	<commodity name="boxed_carbine_locker" display_name="Carbine Locker" filter="finished">
 		<display skin="ui\commodityIcons.xml" icon="icon_carbine"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module used to supply a barracks with carbines." />
@@ -2128,7 +2128,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_blunderbuss_locker" display_name="Boxed Blunderbuss Locker" filter="finished">
+	<commodity name="boxed_blunderbuss_locker" display_name="Blunderbuss Locker" filter="finished">
 		<display skin="ui\commodityIcons.xml" icon="icon_blunderbuss"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module used to supply a barracks with blunderbusses." />
@@ -2141,7 +2141,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_jezail_rifle_locker" display_name="Boxed Jezail Rifle Locker" filter="finished">
+	<commodity name="boxed_jezail_rifle_locker" display_name="Jezail Rifle Locker" filter="finished">
 		<display skin="ui\commodityIcons.xml" icon="icon_jezail"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module used to supply a barracks with Jezail rifles." />
@@ -2154,7 +2154,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_tripistol_locker" display_name="Boxed Tripistol Locker" filter="finished">
+	<commodity name="boxed_tripistol_locker" display_name="Tripistol Locker" filter="finished">
 		<display skin="ui\commodityIcons.xml" icon="icon_tripistol"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module used to supply a barracks with Ceramic Tripistols." />
@@ -2167,7 +2167,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_revolver_locker" display_name="Boxed Revolver Locker" filter="finished">
+	<commodity name="boxed_revolver_locker" display_name="Revolver Locker" filter="finished">
 		<display skin="ui\commodityIcons.xml" icon="icon_revolver"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module used to supply a barracks with revolvers." />
@@ -2180,7 +2180,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_grenade_launcher_locker" display_name="Boxed Grenade Launcher Locker" filter="finished">
+	<commodity name="boxed_grenade_launcher_locker" display_name="Grenade Launcher Locker" filter="finished">
 		<display skin="ui\commodityIcons.xml" icon="icon_grenadelauncher"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module used to supply a barracks with grenade launchers." />
@@ -2193,7 +2193,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_leyden_pistol_locker" display_name="Boxed Leyden Pistol Locker" filter="finished">
+	<commodity name="boxed_leyden_pistol_locker" display_name="Leyden Pistol Locker" filter="finished">
 		<display skin="ui\commodityIcons.xml" icon="icon_leydenpistol"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module used to supply a barracks with Leyden pistols." />
@@ -2206,7 +2206,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_leyden_rifle_locker" display_name="Boxed Leyden Rifle Locker" filter="finished">
+	<commodity name="boxed_leyden_rifle_locker" display_name="Leyden Rifle Locker" filter="finished">
 		<display skin="ui\commodityIcons.xml" icon="icon_leydenrifle"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module used to supply a barracks with Leyden rifles." />
@@ -2219,7 +2219,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_rare_painting" display_name="Boxed Rare Painting" filter="finished">
+	<commodity name="boxed_rare_painting" display_name="Rare Painting" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="decor_uc_icon"/>
 		<description text="An ostentatious painting by a certain famous artist - you've probably heard of them. Place this astonishing rarity in a house to increase your population capacity." />
 		<gameplay_description text="Place in a house to increase population cap." />
@@ -2233,7 +2233,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_power_core_dynamo" display_name="Boxed Power Core Dynamo" filter="finished">
+	<commodity name="boxed_power_core_dynamo" display_name="Power Core Dynamo" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="turbine_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that crafts Steam Knight Power Cores." />
@@ -2245,7 +2245,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_steam_knight_forge" display_name="Boxed Steam Knight Forge" filter="finished">
+	<commodity name="boxed_steam_knight_forge" display_name="Steam Knight Forge" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="boiler_icon"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that creates Steam Knights out of various components." />
@@ -2290,7 +2290,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="mk1_steam_knight_chassis" display_name="MK1 Steam Knight Chassis" filter="processed">
+	<commodity name="mk1_steam_knight_chassis" display_name="MK-1 Steam Knight Chassis" filter="processed">
 		<display skin="ui\commodityIcons.xml" icon="sk_torso_mk2"/>
 		<description text="This metal shell forms the base around which the rest of the Steam Knight will be formed. The MK1 model is made of hardened steel and highly durable." />
 		<gameplay_description text="The Steam Knight Manufactory uses this in constructing the Steam Knight MK1." />
@@ -2312,7 +2312,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="mk1_steam_knight_oculars" display_name="MK1 Steam Knight Oculars" filter="processed">
+	<commodity name="mk1_steam_knight_oculars" display_name="MK-1 Steam Knight Oculars" filter="processed">
 		<display skin="ui\commodityIcons.xml" icon="sk_head_mk2"/>
 		<description text="This metal shaping houses a complex array of lenses and gears, forming the 'Head' of the Steam Knight. The MK1 model is made of hardened steel and highly durable." />
 		<gameplay_description text="The Steam Knight Manufactory uses this in constructing the Steam Knight MK1." />
@@ -2323,9 +2323,9 @@
 		</tags>
 	</commodity>
 
-	<commodity name="mk1_machine_gun" display_name="MK1 Machine Gun" filter="processed">
+	<commodity name="mk1_machine_gun" display_name="MK-1 Machine Gun" filter="processed">
 		<display skin="ui\commodityIcons.xml" icon="sk_packedgun"/>
-		<description text="A big Knight needs a big Gun - this deadly peice is a recent invention by Dutchesss Miriam Minum and is known coloquially as the 'Minum Gun'. It's far too large for a regular person to use, however." />
+		<description text="A big Knight needs a big Gun - this deadly piece is a recent invention by Dutchesss Miriam Minum and is known coloquially as the 'Minum Gun'. It's far too large for a regular person to use, however." />
 		<gameplay_description text="The Steam Knight Manufactory uses this in constructing the Steam Knight MK1." />
 		<tags>
 			<tag name="commodity"/>
@@ -2357,7 +2357,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="stack_of_paper" display_name="Stack of Paper" filter="processed">
+	<commodity name="stack_of_paper" display_name="Paper" filter="processed">
 		<display skin="ui\commodityIcons.xml" icon="paperBundle"/>
 		<description text="A large stack of paper - vital instrument of Bureaucracy and the lifeblood of buildings like the Foreign Office, Naturalist's Office, and Training Academy." />
 		<gameplay_description text="The Foreign Office, Naturalist's Office, and Training academy need this to operate." />
@@ -2368,7 +2368,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bucket_of_ink" display_name="Bucket of Ink" filter="processed">
+	<commodity name="bucket_of_ink" display_name="Ink" filter="processed">
 		<display skin="ui\commodityIcons.xml" icon="bucketInk"/>
 		<description text="A bucket of cheap ink created from coal. Having proper writing supplies assist your diplomats and trainees significantly." />
 		<gameplay_description text="The Foreign Office and Training Academy are more effective when supplied with ink." />
@@ -2438,7 +2438,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="medical_bag" display_name="Bag of Medical Supplies" filter="processed">
+	<commodity name="medical_bag" display_name="Medical Supplies" filter="processed">
 		<display skin="ui\commodityIcons.xml" icon="medical_bag"/>
 		<description text="A bag of crude splints and other supplies required for Frontier Doctoring." />
 		<gameplay_description text="These are required to heal people in your Barbershop." />
@@ -2507,7 +2507,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bottle_of_laudanum" display_name="Bottle of Laudanum" filter="fooddrink">
+	<commodity name="bottle_of_laudanum" display_name="Laudanum" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="laudanum_bottle"/>
 		<description text="Laudanum is a curative tonic that helps to stave off despair." />
 		<gameplay_description text="Serve this to your colonists at a pub to keep them happy. Or sane." />
@@ -2533,7 +2533,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bottle_of_sulphur_tonic" display_name="Bottle of Sulphur Tonic" filter="fooddrink">
+	<commodity name="bottle_of_sulphur_tonic" display_name="Sulphur Tonic" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="sulphur_tonic_bottle"/>
 		<description text="A curative tonic made with sulphur." />
 		<gameplay_description text="Supply these to your Barbershop to heal colonists much faster!" />
@@ -2640,7 +2640,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="cup_of_tea" display_name="Cup of Tea" filter="fooddrink">
+	<commodity name="cup_of_tea" display_name="Tea" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="food_and_drink_category"/>
 		<description text="Fancied by all" />
 		<tags>
@@ -2832,7 +2832,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="loaf_of_bread" display_name="Loaf of Bread" filter="fooddrink">
+	<commodity name="loaf_of_bread" display_name="Bread" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="bread"/>
 		<description text="A dense loaf of bread, staple of the Lower Classes." />
 		<gameplay_description text="Labourers prefer this basic, cooked meal." />
@@ -2845,7 +2845,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_cabbage" display_name="Bushel of Cabbage" filter="fooddrink">
+	<commodity name="bushel_of_cabbage" display_name="Cabbage" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="cabbage_bushel"/>
 		<description text="A bushel of tasty cabbage just asking to be boiled into stew." />
 		<gameplay_description text="This can be cooked into a meal at a kitchen." />
@@ -2859,7 +2859,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_chillies" display_name="Bushel of Chillies" filter="fooddrink">
+	<commodity name="bushel_of_chillies" display_name="Chillies" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="chillies_bushel"/>
 		<description text="A bushel of tasty chillies to garnish bland boiled dishes." />
 		<gameplay_description text="This can be cooked into a meal at a kitchen." />
@@ -2876,7 +2876,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_black_cup_fungus" display_name="Bushel of Black Cup Fungus" filter="fooddrink">
+	<commodity name="bushel_of_black_cup_fungus" display_name="Black Cup Fungus" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="icon_bushel_blackcupfungus"/>
 		<description text="This basket is overflowing with shining black fungus." />
 		<gameplay_description text="This can be cooked into a meal at a kitchen." />
@@ -2891,7 +2891,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_orange_cup_fungus" display_name="Bushel of Orange Cup Fungus" filter="fooddrink">
+	<commodity name="bushel_of_orange_cup_fungus" display_name="Orange Cup Fungus" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="orangecup_fungus_bushel"/>
 		<description text="This basket is overflowing with bright orange fungus." />
 		<gameplay_description text="This can be cooked into a meal at a kitchen." />
@@ -2905,7 +2905,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_exotic_caviar" display_name="Bushel of Exotic Caviar" filter="fooddrink">
+	<commodity name="bushel_of_exotic_caviar" display_name="Exotic Caviar" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="icon_bushel_exotic_caviar"/>
 		<description text="A bushel of large fishy eggs." />
 		<gameplay_description text="This can be cooked into a meal at a kitchen... assuming you think that's wise." />
@@ -2933,7 +2933,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bucket_of_raw_opium" display_name="Bucket of Raw Opium" filter="fooddrink">
+	<commodity name="bucket_of_raw_opium" display_name="Opium" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="raw_opium_bucket"/>
 		<description text="Raw opium - ready to be turned into healthful medicinal liqueur." />
 		<gameplay_description text="Turn this into Laudanum at a Chemical Works." />
@@ -2946,7 +2946,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bucket_of_molasses" display_name="Bucket of Molasses" filter="fooddrink">
+	<commodity name="bucket_of_molasses" display_name="Molasses" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="molasses_bucket"/>
 		<description text="Raw Molasses ready to be cooked into syrup or treacle." />
 		<gameplay_description text="Can be used in some food recipes, or sold." />
@@ -2959,7 +2959,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bucket_of_agave_syrup" display_name="Bucket of Agave Syrup" filter="fooddrink">
+	<commodity name="bucket_of_agave_syrup" display_name="Agave Syrup" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="agave_syrup_bucket"/>
 		<description text="Raw Agave Syrup ready to be processed into alcohol." />
 		<gameplay_description text="Turn this into alcohol at a Kitchen." />
@@ -2974,7 +2974,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="cut_sugarcane" display_name="Cut Sugarcane" filter="fooddrink">
+	<commodity name="cut_sugarcane" display_name="Sugarcane" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="sugarcane_raw"/>
 		<description text="Raw harvested sugarcane can be processed into molasses and sugarloaf." />
 		<gameplay_description text="Turn this into molasses and sugarloaf at a Kitchen." />
@@ -3004,7 +3004,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bag_of_wheat_flour" display_name="Bag of Wheat Flour" filter="fooddrink">
+	<commodity name="bag_of_wheat_flour" display_name="Wheat Flour" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="grain_sack"/>
 		<description text="Abundant staple of the Home Counties, wheat can be baked, brewed, and stewed to the delight of any upstanding Clockworkian." />
 		<gameplay_description text="Can be made into bread at a Kitchen or beer at a Distillery." />
@@ -3028,7 +3028,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_maize" display_name="Bushel of Maize" filter="fooddrink">
+	<commodity name="bushel_of_maize" display_name="Maize" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="maize_bushel"/>
 		<description text="Discovered on the Frontier, this food is some kind of monstrous, juicy grain." />
 		<gameplay_description text="This can be cooked into a meal or brewed into beer at a kitchen" />
@@ -3044,7 +3044,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_grapes" display_name="Bushel of Grapes" filter="fooddrink">
+	<commodity name="bushel_of_grapes" display_name="Grapes" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="grapes_bushel"/>
 		<description text="A bushel of plump, purple grapes. Perfect for preserves or wine." />
 		<gameplay_description text="Can be cooked into a meal or brewed into wine at a kitchen." />
@@ -3060,7 +3060,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_prickly_pear" display_name="Bushel of Prickly Pear" filter="fooddrink">
+	<commodity name="bushel_of_prickly_pear" display_name="Prickly Pear" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="prickly_pear_fruit"/>
 		<description text="It's some sort of large, spiny fruit." />
 		<gameplay_description text="This can be cooked into a meal at a kitchen" />
@@ -3074,7 +3074,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_tea_leaf" display_name="Bushel of Tea Leaf" filter="fooddrink">
+	<commodity name="bushel_of_tea_leaf" display_name="Tea Leaf" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="tea_leaves_bushel"/>
 		<description text="Fine tea leaves, staple of Clockworkian civilization." />
 		<gameplay_description text="This can be sold for a good price at a trade depot." />
@@ -3083,7 +3083,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_saskatoonberries" display_name="Bushel of Saskatoonberries" filter="fooddrink">
+	<commodity name="bushel_of_saskatoonberries" display_name="Saskatoonberries" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="saskatoonberries_bushel"/>
 		<description text="Plump blue berries which may be boiled into fine preserves or baked into pie." />
 		<gameplay_description text="This can be cooked into a meal at a kitchen." />
@@ -3099,7 +3099,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_lingonberries" display_name="Bushel of Lingonberries" filter="fooddrink">
+	<commodity name="bushel_of_lingonberries" display_name="Lingonberries" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="lingonberries_bushel"/>
 		<description text="Lively red berries which may be boiled into fine preserves or baked into pie." />
 		<gameplay_description text="This can be cooked into a meal at a kitchen." />
@@ -3115,7 +3115,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_joshua_fruit" display_name="Bushel of Joshua Fruit" filter="fooddrink">
+	<commodity name="bushel_of_joshua_fruit" display_name="Joshua Fruit" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="joshua_fruit"/>
 		<description text="Capsule shaped fruit pods; fleshy with a candy-like flavor." />
 		<gameplay_description text="This can be cooked into a meal at a kitchen." />
@@ -3226,7 +3226,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="long_pork" display_name="Long Pork" filter="fooddrink">
+	<commodity name="long_pork" display_name="Raw Long Pork" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="icon_rawlongpork"/>
 		<description text="Does this taste funny?" />
 		<gameplay_description text="This can be cooked into a meal at a kitchen... assuming you think that's a good idea." />
@@ -3282,7 +3282,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_sausages" display_name="Bushel of Sausages" filter="fooddrink">
+	<commodity name="bushel_of_sausages" display_name="Sausages" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="sausages_bushel"/>
 		<description text="As the Ministry puts it 'The tasty treat made from mystery meat'." />
 		<gameplay_description text="Overseers prefer this mildly-fancy food." />
@@ -3294,7 +3294,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_tobacco_leaf" display_name="Bushel of Tobacco Leaf" filter="fooddrink">
+	<commodity name="bushel_of_tobacco_leaf" display_name="Tobacco Leaves" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="tobacco_leaves_bushel"/>
 		<description text="Though perhaps not as prestigious as tea and coffee, tobacco is a widely-grown cash crop." />
 		<gameplay_description text="This can be sold at a trade depot for an excellent price." />
@@ -3305,7 +3305,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_coffee_fruit" display_name="Bushel of Coffee Fruit" filter="fooddrink">
+	<commodity name="bushel_of_coffee_fruit" display_name="Coffee Fruit" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="coffee_fruit_bushel"/>
 		<description text="The fruit of the Coffee Plant is not valuable in and of itself, but the beans are worth quite a bit once processed." />
 		<gameplay_description text="Once roasted into coffee beans in a Kitchen, this can be sold at a trade depot for an excellent price." />
@@ -3318,7 +3318,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="crate_of_coffee_beans" display_name="Crate of Coffee Beans" filter="fooddrink">
+	<commodity name="crate_of_coffee_beans" display_name="Coffee Beans" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="coffee_crate"/>
 		<description text="The prized product of the coffee plant, this curious bean promotes Industry." />
 		<gameplay_description text="This can be sold at a trade depot for an excellent price." />
@@ -3330,7 +3330,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="crate_of_tea_leaves" display_name="Crate of Tea Leaves" filter="fooddrink">
+	<commodity name="crate_of_tea_leaves" display_name="Tea Leaves" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="tea_leaves_bushel"/>
 		<description text="Tea leaves are important indeed for any Clockworkian - their production and import is a lucrative trade." />
 		<gameplay_description text="This can be sold at a trade depot for a good price." />
@@ -3342,7 +3342,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="crate_of_coconuts" display_name="Crate of Coconuts" filter="fooddrink">
+	<commodity name="crate_of_coconuts" display_name="Coconuts" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="coconut_crate"/>
 		<description text="Fine tropical coconuts straight from the tree." />
 		<gameplay_description text="This can be cooked into a meal at a kitchen." />
@@ -3392,7 +3392,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="crate_of_pickled_chillies" display_name="Crate of Pickled Chillies" filter="fooddrink">
+	<commodity name="crate_of_pickled_chillies" display_name="Pickled Chillies" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="chillies_jarcrate"/>
 		<description text="A crate of spicy pickled chillies." />
 		<gameplay_description text="Unlike regular food, Trade Foods are preserved and can be sold at a Trade Office." />
@@ -3405,7 +3405,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_white_cup_fungus" display_name="Bushel of White Cup Fungus" filter="fooddrink">
+	<commodity name="bushel_of_white_cup_fungus" display_name="White Cup Fungus" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="whitecup_fungus_bushel"/>
 		<description text="This basket is overflowing with dull white fungus. It seems to leave spores behind whenever it is moved." />
 		<gameplay_description text="This can be cooked into a meal at a kitchen." />
@@ -3421,7 +3421,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_yellow_disc_fungus" display_name="Bushel of Yellow Disc Fungus" filter="fooddrink">
+	<commodity name="bushel_of_yellow_disc_fungus" display_name="Yellow Disc Fungus" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="bushel_yellow_disc_fungus"/>
 		<description text="A bushel of Yellow Disc Fungus. It glistens dankly." />
 		<tags>
@@ -3436,7 +3436,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="crate_of_pickled_orange_cup_fungus" display_name="Crate of Pickled Orange Cup Fungus" filter="fooddrink">
+	<commodity name="crate_of_pickled_orange_cup_fungus" display_name="Pickled Orange Cup Fungus" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="orangecup_fungus_jarcrate"/>
 		<description text="A crate of tasty orange fungus - noted for its lightly floral flavours." />
 		<gameplay_description text="Unlike regular food, Trade Foods are preserved and can be sold at a Trade Office." />
@@ -3449,7 +3449,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="crate_of_pickled_white_cup_fungus" display_name="Crate of Pickled White Cup Fungus" filter="fooddrink">
+	<commodity name="crate_of_pickled_white_cup_fungus" display_name="Pickled White Cup Fungus" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="whitecup_fungus_jarcrate"/>
 		<description text="A crate of tasty white fungus - notable for its piquant flavours." />
 		<gameplay_description text="Unlike regular food, Trade Foods are preserved and can be sold at a Trade Office." />
@@ -3462,7 +3462,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="crate_of_pickled_black_cup_fungus" display_name="Crate of Pickled Black Cup Fungus" filter="fooddrink">
+	<commodity name="crate_of_pickled_black_cup_fungus" display_name="Pickled Black Cup Fungus" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="blackcupfungus_jar_crate"/>
 		<description text="A crate of black fungus - notable for its earthy flavours." />
 		<gameplay_description text="Unlike regular food, Trade Foods are preserved and can be sold at a Trade Office." />
@@ -3474,7 +3474,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="crate_of_lingonberry_preserves" display_name="Crate of Lingonberry Preserves" filter="fooddrink">
+	<commodity name="crate_of_lingonberry_preserves" display_name="Lingonberry Preserves" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="lingonberries_jar_crate"/>
 		<description text="A crate of delicious Lingonberry preserves." />
 		<gameplay_description text="Unlike regular food, Trade Foods are preserved and can be sold at a Trade Office." />
@@ -3485,7 +3485,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="crate_of_saskatoonberry_preserves" display_name="Crate of Saskatoonberry Preserves" filter="fooddrink">
+	<commodity name="crate_of_saskatoonberry_preserves" display_name="Saskatoonberry Preserves" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="saskatoonberries_jar_crate"/>
 		<description text="A crate of delicious Saskatoonberry preserves." />
 		<gameplay_description text="Unlike regular food, Trade Foods are preserved and can be sold at a Trade Office." />
