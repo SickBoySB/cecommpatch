@@ -6416,12 +6416,12 @@ are already contained within other buildings. Consider those a placeholder for l
 						failure_reason="Requires researching Coffee at laboratory."/>
 				</grayed>
                     <visible>
-					<require_gameobject tag="bushel_of_coffee_fruit" amount="20" failure_reason="20x Coffee Beans needed." is_cost="1" />
+					<require_gameobject tag="bushel_of_coffee_fruit" amount="20" failure_reason="20x Coffee Fruit needed." is_cost="1" />
                          <require_session_bool name="coffee_technology_unlocked"
 						value="1"
 						failure_reason="Requires researching Coffee at laboratory."/>
                     </visible>
-				<cost name="coffee_fruit_bushel" display_name="Coffee Beans"
+				<cost name="coffee_fruit_bushel" display_name="Coffee Fruit"
 					amount="20"/><!-- only used for tooltip cost icon-->
 				<out product="crate_of_coffee_beans"
 					amount="10"/> <!-- used for passing product to job-->
@@ -8743,9 +8743,9 @@ are already contained within other buildings. Consider those a placeholder for l
 						failure_reason="Requires researching Coffee at laboratory."/>
 				</grayed>
                     <visible>
-					<require_gameobject tag="bushel_of_coffee_fruit" amount="2" failure_reason="10x Coffee Beans needed." is_cost="1" />
+					<require_gameobject tag="bushel_of_coffee_fruit" amount="2" failure_reason="10x Coffee Fruit needed." is_cost="1" />
                     </visible>
-				<cost name="coffee_fruit_bushel" display_name="Coffee Beans"
+				<cost name="coffee_fruit_bushel" display_name="Coffee Fruit"
 					amount="2"/><!-- only used for tooltip cost icon-->
 				<out product="crate_of_coffee_beans"
 					amount="1"/> <!-- used for passing product to job-->
@@ -9159,9 +9159,9 @@ are already contained within other buildings. Consider those a placeholder for l
 						failure_reason="Requires researching Coffee at laboratory."/>
 				</grayed>
                     <visible>
-					<require_gameobject tag="bushel_of_coffee_fruit" amount="10" failure_reason="10x Coffee Beans needed." is_cost="1" />
+					<require_gameobject tag="bushel_of_coffee_fruit" amount="10" failure_reason="10x Coffee Fruit needed." is_cost="1" />
                     </visible>
-				<cost name="coffee_fruit_bushel" display_name="Coffee Beans"
+				<cost name="coffee_fruit_bushel" display_name="Coffee Fruit"
 					amount="10"/><!-- only used for tooltip cost icon-->
 				<out product="crate_of_coffee_beans"
 					amount="5"/> <!-- used for passing product to job-->
