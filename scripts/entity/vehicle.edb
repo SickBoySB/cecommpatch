@@ -1,0 +1,132 @@
+Entity {
+	name = "Minum Turret",
+	type = "vehicle",
+	model = "models/modules/turretMinumGun.upm",
+	animationSet = "minum_turret",
+	
+	walkTicks = 8,
+	job_classes = { "minum_turret" }
+}
+Entity {
+	name = "Prototype Steam Knight",
+	type = "vehicle",
+	model = "models/vehicles/steamKnight.upm",
+	colours = {"gray"},
+	models = {
+		gray = { 	body = { "models/vehicles/steamKnight.upm", },
+				head = { "models/vehicles/steamKnightHead00.upm"}, },
+	},
+	model_head = "models/vehicles/steamKnightHead00.upm",
+	animationSet = "steamknight_nogun",
+	walkTicks = 6,
+	runTicks = 6,
+	health = {
+		healthMax = 80,
+		healthTimer = -1,
+		healthTimerSeconds = -1,
+	},
+	job_classes = { "steamknight" },
+	tags = { "steamknight", "fire_immune", "armoured", "combat_target_for_enemy" },
+	melee_weapons = {"default",},
+}
+
+Entity {
+	name = "SK-1 Steam Knight",
+	type = "vehicle",
+	model = "models/vehicles/steamKnight.upm",
+	colours = {"usual"},
+	models = {
+		usual = { body = { "models/vehicles/steamKnightRedWhite.upm", },
+				head = { "models/vehicles/steamKnightHeadRedWhite00.upm"}, },
+	},
+	model_head = "models/vehicles/steamKnightHead00.upm",
+	animationSet = "steamknight",
+	walkTicks = 6,
+	runTicks = 6,
+	health = {
+		healthMax = 140,
+		healthTimer = -1,
+		healthTimerSeconds = -1,
+	},
+	job_classes = { "steamknight" },
+	tags = { "steamknight", "fire_immune", "armoured", "combat_target_for_enemy" },
+	melee_weapons = {"default",},
+	ranged_weapons = {"steam_knight_minum_gun"}, 
+}
+
+Entity {
+	name = "Steam Knight",
+	type = "vehicle",
+	model = "models/vehicles/steamKnight.upm",
+	colours = {"gray", "white", "redwhite","black","blue"},
+	--[[models = { "models/vehicles/steamKnight.upm",
+			"models/vehicles/steamKnightWhite.upm",
+			"models/vehicles/steamKnightRedWhite.upm",
+			"models/vehicles/steamKnightBlack.upm",
+			"models/vehicles/steamKnightBlue.upm",},]]
+	models = {
+		gray = { 	body = { "models/vehicles/steamKnight.upm", },
+				head = { "models/vehicles/steamKnightHead00.upm"}, },
+		white = { body = { "models/vehicles/steamKnightWhite.upm", },
+				head = { "models/vehicles/steamKnightHeadWhite.upm"}, },
+		redwhite = { 	body = { 	"models/vehicles/steamKnightRedWhite.upm", },
+					head = { 	"models/vehicles/steamKnightHeadRedWhite00.upm",
+							"models/vehicles/steamKnightHeadRedWhite01.upm" }, },
+		black = { body = { "models/vehicles/steamKnightBlack.upm", },
+				head = { 	"models/vehicles/steamKnightHeadBlack.upm"}, },
+		blue = { 	body = { 	"models/vehicles/steamKnightBlue.upm", },
+				head = { 	"models/vehicles/steamKnightHead00.upm",
+						"models/vehicles/steamKnightHeadWhite.upm",
+						"models/vehicles/steamKnightHeadBlack.upm"}, },
+	},
+	--model_unloaded = "models/vehicles/steamKnightLoader.upm",
+	model_head = "models/vehicles/steamKnightHead00.upm",
+	animationSet = "steamknight",
+	--animationSet_unloaded = "steamknight_unloaded",
+	walkTicks = 6,
+	runTicks = 6,
+	health = {
+		healthMax = 80,
+		healthTimer = -1,
+		healthTimerSeconds = -1,
+	},
+	job_classes = { "steamknight" },
+	tags = { "steamknight", "fire_immune", "armoured", "combat_target_for_enemy" },
+		--"steamknight_vehicle", 
+		 --  "unoccupied_vehicle", "combat_target_for_enemy",
+		--   , "military_and_vehicles" },
+	melee_weapons = {"default",},
+	ranged_weapons = {"steam_knight_minum_gun",
+				   "steam_knight_grenade_launcher",
+				   "steam_knight_hand_cannon"},
+}
+
+Entity {
+	name = "Landing Craft",
+	type = "vehicle",
+	model = "models/vehicles/landingCraft.upm",
+	animationSet = "landingcraft",
+	walkTicks = 8,
+	job_classes = { "landing craft" },
+
+	seats = { 
+		{ "SeatFL", 3, -1 },
+		{ "SeatFR", 3, 1 },
+		{ "SeatML", 2, -1 },
+		{ "SeatMR", 2, 1},
+		{ "SeatBL", 1, -1 },
+		{ "SeatBR", 1, 1 }
+	},
+
+	cargos = {
+		{ "BFarLeftCrate", -2, 2 },
+		{ "BLeftCrate", -2, 1 },
+		{ "BRightCrate", -2, -0 },
+		{ "BFarRightCrate", -2, -1 },
+		{ "FFarLeftCrate", -1, 2 },
+		{ "FLeftCrate", -1, 1 },
+		{ "FRightCrate", -1, 0 },
+		{ "FFarRightCrate", -1, -1 }
+	}
+}
+
