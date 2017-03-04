@@ -302,7 +302,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				amount="8"/>
 			<cost name="copper_plate_icon" display_name="Copper Plates"
 				amount="8"/>
-			<cost name="cog_bucket" display_name="Bucket of Cogs"
+			<cost name="cog_bucket" display_name="Bucket of Brass Cogs"
 				amount="5"/>
 			<cost name="steamball" display_name="Steam Compressors"
 				amount="4"/>
@@ -2869,17 +2869,17 @@ are already contained within other buildings. Consider those a placeholder for l
 				<visible>
 					<require_commodity_geq name="steel_ingots" amount="5" failure_reason="5x Steel Ingots needed" is_cost="1" />
 					<require_commodity_geq name="iron_plates" amount="10" failure_reason="10x Iron Plates needed" is_cost="2" />
-					<require_commodity_geq name="brass_cogs" amount="5" failure_reason="5x Glass Panes needed" is_cost="3" />
-					<require_commodity_geq name="bricks" amount="5" failure_reason="5x Planks needed" is_cost="4" />
+					<require_commodity_geq name="brass_cogs" amount="5" failure_reason="5x Brass Cogs needed" is_cost="3" />
+					<require_commodity_geq name="bricks" amount="5" failure_reason="5x Bricks needed" is_cost="4" />
 					<require_session_bool name="discovery_steelworking_steamknight"
                                    value="1"
                                    failure_reason="Requires researching Steam Knight Tech at laboratory."/>
 				</visible>
 				<cost name="steel_ingots_icon" display_name="Steel Ingots"
 					amount="5"/>
-				<cost name="iron_plate_icon" display_name="Copper Plates"
+				<cost name="iron_plate_icon" display_name="Iron Plates"
 					amount="10"/>
-				<cost name="cog_bucket" display_name="Bucket of Cogs"
+				<cost name="cog_bucket" display_name="Bucket of Brass Cogs"
 					amount="5"/>
 				<cost name="bricks_pallet_icon" display_name="Bricks"
 					amount="5"/>
@@ -2901,9 +2901,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				</grayed>
 				<visible>
 					<require_commodity_geq name="steel_ingots" amount="2" failure_reason="2x Steel Ingots needed" is_cost="1" />
-					<require_commodity_geq name="iron_pipes" amount="8" failure_reason="8x Iron Plates needed" is_cost="2" />
-					<require_commodity_geq name="copper_pipes" amount="8" failure_reason="8x Glass Panes needed" is_cost="3" />
-					<require_commodity_geq name="bricks" amount="10" failure_reason="10x Planks needed" is_cost="4" />
+					<require_commodity_geq name="iron_pipes" amount="8" failure_reason="8x Iron Pipes needed" is_cost="2" />
+					<require_commodity_geq name="copper_pipes" amount="8" failure_reason="8x Copper Pipes needed" is_cost="3" />
+					<require_commodity_geq name="bricks" amount="10" failure_reason="10x Bricks needed" is_cost="4" />
 					<require_session_bool name="discovery_steelworking_steamknight"
                                    value="1"
                                    failure_reason="Requires researching Steam Knight Tech at laboratory."/>
@@ -8143,7 +8143,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				<visible>
 					<require_commodity_geq name="steel_plates" amount="1" failure_reason="1x steel plates needed" is_cost="1" />
 					<require_commodity_geq name="iron_plates" amount="20" failure_reason="20x Iron Plates needed" is_cost="2" />
-					<require_commodity_geq name="brass_cogs" amount="5" failure_reason="5x Iron Plates needed" is_cost="3" />
+					<require_commodity_geq name="brass_cogs" amount="5" failure_reason="5x Brass Cogs needed" is_cost="3" />
 					<require_session_bool name="discovery_steelworking_steamknight"
                                    value="1"
                                    failure_reason="Requires researching Steam Knight Tech at laboratory."/>
@@ -8191,14 +8191,14 @@ are already contained within other buildings. Consider those a placeholder for l
 				<visible>
 					<require_commodity_geq name="prototype_steam_knight_chassis" amount="1" failure_reason="1x Prototype SK Chassis needed" is_cost="1" />
 					<require_commodity_geq name="steel_plates" amount="5" failure_reason="5x Steel Plates needed" is_cost="2" />
-					<require_commodity_geq name="bucket_of_ink" amount="10" failure_reason="10x Ink Buckets needed" is_cost="3" />
+					<require_commodity_geq name="brass_cogs" amount="10" failure_reason="10x Brass Cogs needed" is_cost="3" />
 					<require_commodity_geq name="mk1_machine_gun" amount="1" failure_reason="1x MK1 Machine Gun needed" is_cost="4" />
 				</visible>
 				<cost name="sk_torso" display_name="Prototype SK Chassis"
 					amount="1"/>
 				<cost name="steel_plate_icon" display_name="Iron Plates"
 					amount="5"/>
-				<cost name="bucketInk" display_name="Bucket of Brass Cogs"
+				<cost name="cog_bucket" display_name="Bucket of Brass Cogs"
 					amount="10"/>
 				<cost name="sk_packedgun" display_name="MK1 Machine Gun" 
 					amount="1"/> 

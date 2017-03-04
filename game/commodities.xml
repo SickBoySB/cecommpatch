@@ -2291,7 +2291,7 @@
 	</commodity>
 
 	<commodity name="mk1_steam_knight_chassis" display_name="MK1 Steam Knight Chassis" filter="processed">
-		<display skin="ui\commodityIcons.xml" icon="sk_torso"/>
+		<display skin="ui\commodityIcons.xml" icon="sk_torso_mk2"/>
 		<description text="This metal shell forms the base around which the rest of the Steam Knight will be formed. The MK1 model is made of hardened steel and highly durable." />
 		<gameplay_description text="The Steam Knight Manufactory uses this in constructing the Steam Knight MK1." />
 		<tags>
@@ -2313,7 +2313,7 @@
 	</commodity>
 
 	<commodity name="mk1_steam_knight_oculars" display_name="MK1 Steam Knight Oculars" filter="processed">
-		<display skin="ui\commodityIcons.xml" icon="sk_head"/>
+		<display skin="ui\commodityIcons.xml" icon="sk_head_mk2"/>
 		<description text="This metal shaping houses a complex array of lenses and gears, forming the 'Head' of the Steam Knight. The MK1 model is made of hardened steel and highly durable." />
 		<gameplay_description text="The Steam Knight Manufactory uses this in constructing the Steam Knight MK1." />
 		<tags>
@@ -2324,7 +2324,7 @@
 	</commodity>
 
 	<commodity name="mk1_machine_gun" display_name="MK1 Machine Gun" filter="processed">
-		<display skin="ui\commodityIcons.xml" icon="sk_head"/>
+		<display skin="ui\commodityIcons.xml" icon="sk_packedgun"/>
 		<description text="A big Knight needs a big Gun - this deadly peice is a recent invention by Dutchesss Miriam Minum and is known coloquially as the 'Minum Gun'. It's far too large for a regular person to use, however." />
 		<gameplay_description text="The Steam Knight Manufactory uses this in constructing the Steam Knight MK1." />
 		<tags>
@@ -2335,7 +2335,7 @@
 	</commodity>
 
 	<commodity name="ammo_autoloader" display_name="Ammo Autoloader" filter="processed">
-		<display skin="ui\commodityIcons.xml" icon="sk_head"/>
+		<display skin="ui\commodityIcons.xml" icon="sk_ammofeeder"/>
 		<description text="It was deemed too inefficient to disable the Steam Knight in order to resupply ammunition, and as such the Autoloader Backpack was developed. This device holds all the ammunition a Knight will ever need!" />
 		<gameplay_description text="The Steam Knight Manufactory uses this in constructing the Steam Knight MK1." />
 		<tags>

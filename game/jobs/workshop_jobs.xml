@@ -2630,7 +2630,7 @@
 	
 	<require_character_on_shift/>
 	<require_empty_hands failure_reason="Character required to have empty hands."/>
-	<require_multiple_gameobjects input="ammo2" amount="30" use_multiplier="1" range="100" tag="ammo2" failure_reason="Requires available iron ingot." closest="1" require_owned="1"/>
+	<require_multiple_gameobjects input="ammo3" amount="30" use_multiplier="1" range="100" tag="ammo3" failure_reason="Requires available FMJ ammunition." closest="1" require_owned="1"/>
 	<require_multiple_gameobjects input="iron_plates" amount="10" use_multiplier="1" range="100" tag="iron_plates" failure_reason="Requires available iron ingot." closest="1" require_owned="1"/>
 	<require_multiple_gameobjects input="brass_cogs" amount="10" use_multiplier="1" range="100" tag="brass_cogs" failure_reason="Requires available iron ingot." closest="1" require_owned="1"/>
 
@@ -2796,7 +2796,7 @@
 	<require_empty_hands failure_reason="Character required to have empty hands."/>
 	<require_multiple_gameobjects input="steam_knight_chassis" amount="1" use_multiplier="1" range="100" tag="steam_knight_chassis" failure_reason="Requires available steel plates." closest="1" require_owned="1"/>
 	<require_multiple_gameobjects input="steel_plates" amount="5" use_multiplier="1" range="100" tag="steel_plates" failure_reason="Requires available steel plates." closest="1" require_owned="1"/>
-	<require_multiple_gameobjects input="ink_bucket" amount="10" use_multiplier="1" range="100" tag="ink_bucket" failure_reason="Requires available iron plates." closest="1" require_owned="1"/>
+	<require_multiple_gameobjects input="brass_cogs" amount="10" use_multiplier="1" range="100" tag="brass_cogs" failure_reason="Requires available brass cogs." closest="1" require_owned="1"/>
 	<require_multiple_gameobjects input="steam_knight_mg" amount="1" use_multiplier="1" range="100" tag="steam_knight_mg" failure_reason="Requires available brass cogs." closest="1" require_owned="1"/>
 	
   	<require_work_party_filter name="workshop"/>
@@ -2815,7 +2815,7 @@
 		<walk_to_module input="workshop_module"/>
 		<building_cache_item input="workshop"/>
 		
-		<walk_to_adjacent_position_and_pickup_things input="ink_bucket"/>
+		<walk_to_adjacent_position_and_pickup_things input="brass_cogs"/>
 		<walk_to_module input="workshop_module"/>
 		<building_cache_item input="workshop"/>
 		
