@@ -7796,7 +7796,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Planks"
 				product_name="Planks">
 			<visible>
-			  <require_commodity_geq name="logs" amount="1" failure_reason="1x Logs minimum (harvested using the 'Chop Trees' command)." is_cost="1" />
+			  <require_commodity_geq name="logs" amount="1" failure_reason="1x Logs needed." is_cost="1" />
 			</visible>
 			<cost name="logs" display_name="Logs"
 				amount="1"/> <!-- only used for tooltip cost icon-->
@@ -7811,7 +7811,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Paper Stacks"
 				product_name="Stack of Paper">
 				<visible>
-					<require_commodity_geq name="planks" amount="5" failure_reason="5x Planks minimum (Crafted using the above command)." is_cost="1" />
+					<require_commodity_geq name="planks" amount="5" failure_reason="5x Planks needed." is_cost="1" />
 				</visible>
 			<cost name="planks_icon" display_name="Planks"
 				amount="5"/> <!-- only used for tooltip cost icon-->
@@ -11482,7 +11482,7 @@ are already contained within other buildings. Consider those a placeholder for l
 					perimeterCost="1" perimeterPerCost="8" />
 		
 		<upgrade_block tier="1">
-		<require_commodity_geq name="planks" amount="2" failure_reason="2x planks minimum (crafted at the Carpentry Workshop)."/>
+		<require_commodity_geq name="planks" amount="2" failure_reason="2x Planks needed."/>
 	   </upgrade_block>
 	</building>
 	
@@ -11591,7 +11591,7 @@ are already contained within other buildings. Consider those a placeholder for l
                              areaCost="1" areaPerCost="12"
                              perimeterCost="1" perimeterPerCost="12" />
 			<upgrade_block tier="1">
-		 <require_commodity_geq name="planks" amount="2" failure_reason="2x Planks minimum (crafted at the Carpentry Workshop)."/>
+		 <require_commodity_geq name="planks" amount="2" failure_reason="2x Planks needed."/>
 	    </upgrade_block>
 	</building>
 
@@ -11823,7 +11823,7 @@ are already contained within other buildings. Consider those a placeholder for l
 					areaCost="1" areaPerCost="8"
 					perimeterCost="1" perimeterPerCost="8" />
 	<upgrade_block tier="1">
-      <require_commodity_geq name="planks" amount="2" failure_reason="2x Planks minimum (crafted at the Carpentry Workshop)."/>
+      <require_commodity_geq name="planks" amount="2" failure_reason="2x Planks needed."/>
     </upgrade_block>
 	</building>
   
@@ -11925,7 +11925,7 @@ are already contained within other buildings. Consider those a placeholder for l
                              areaCost="1" areaPerCost="12"
                              perimeterCost="1" perimeterPerCost="15" />
 		<upgrade_block tier="1">
-      <require_commodity_geq name="planks" amount="2" failure_reason="2x Planks minimum (crafted at the Carpentry Workshop)."/>
+      <require_commodity_geq name="planks" amount="2" failure_reason="2x Planks needed."/>
     </upgrade_block>
 	</building>
 
@@ -12015,7 +12015,7 @@ are already contained within other buildings. Consider those a placeholder for l
                              areaCost="1" areaPerCost="12"
                              perimeterCost="1" perimeterPerCost="15" />
           <upgrade_block tier="1">
-      <require_commodity_geq name="planks" amount="2" failure_reason="2x Planks minimum (crafted at the Carpentry Workshop)."/>
+      <require_commodity_geq name="planks" amount="2" failure_reason="2x Planks needed."/>
     </upgrade_block>
 	</building>
 
@@ -12062,7 +12062,7 @@ are already contained within other buildings. Consider those a placeholder for l
 						    areaCost="1" areaPerCost="9"
 						    perimeterCost="1" perimeterPerCost="12" />
 			<upgrade_block tier="1">
-      <require_commodity_geq name="planks" amount="2" failure_reason="2x Planks minimum (crafted at the Carpentry Workshop)."/>
+      <require_commodity_geq name="planks" amount="2" failure_reason="2x Planks needed."/>
     </upgrade_block>
 	</building>
 	
@@ -12113,7 +12113,7 @@ are already contained within other buildings. Consider those a placeholder for l
 						areaCost="1" areaPerCost="8"
 						perimeterCost="1" perimeterPerCost="8" />
 			<upgrade_block tier="1">
-      <require_commodity_geq name="planks" amount="2" failure_reason="2x Planks minimum (crafted at the Carpentry Workshop)."/>
+      <require_commodity_geq name="planks" amount="2" failure_reason="2x Planks needed."/>
     </upgrade_block>
 	</building>
 
@@ -12253,7 +12253,7 @@ are already contained within other buildings. Consider those a placeholder for l
                              areaCost="1" areaPerCost="12"
                              perimeterCost="1" perimeterPerCost="15" />  
 		<upgrade_block tier="1">
-      <require_commodity_geq name="planks" amount="2" failure_reason="2x Planks minimum (crafted at the Carpentry Workshop)."/>
+      <require_commodity_geq name="planks" amount="2" failure_reason="2x Planks needed."/>
     </upgrade_block>
 	</building>
 	
