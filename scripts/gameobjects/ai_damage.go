@@ -708,10 +708,37 @@ gameobject "ai_damage"
 		end
 	>>
 	
+	-- CECOMMPATCH feature. Invisible fire for general use, or for entities that crash when the particles are attached
+	receive invisFire()
+	<<
+		if SELF.tags["burning"] ~= true and
+			not SELF.tags.dead and not
+			SELF.tags.fire_immune then
+			
+			printl("CECOMMPATCH - invisible fire... oooOOooOooo spooktacular")
+			
+			-- game looks for a burning tag...
+			SELF.tags["burning"] = true
+			SELF.tags["burning_128"] = true
+			
+			send("rendCommandManager",
+				"odinRendererCreateParticleSystemMessage",
+				"SmallSplosion",
+				state.AI.position.x,
+				state.AI.position.y)
+			
+			send("rendInteractiveObjectClassHandler",
+				"odinRendererPlaySFXOnInteractive",
+				state.renderHandle,
+				"Fire Whoosh")
+		end
+	>>
+	
 	receive IgniteMessage()
 	<<		
 		-- CECOMMPATCH bugfix. Spores that die while on fire cause a crash, so do nothing if ignite attempted
 		if SELF.tags["selenian_spore"] then
+			send(SELF,"invisFire")
 			return
 		end
 		
