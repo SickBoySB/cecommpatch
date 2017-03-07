@@ -1,0 +1,400 @@
+<transwindow name="Main Gameplay Area" >
+  
+	<container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="0" vertical_padding="0" >
+		<container type="horizbox" hsp="expand" vsp="minimum" horizontal_padding="0" vertical_padding="0" >
+				
+			<!--<staticbutton name="cancelbutton" image="cancel_exact" sfx="click00"/> -->
+			<!--<staticbutton name="Menu" text="Menu"  sfx="click00" skin="ui//styles//commandsFancy.xml" image="menu_exact"/> -->
+				
+				
+			<!--<staticbutton name="WorkCrewsButton" text="Work Crews" sfx="ledger01" skin="ui//styles//commandsFancy.xml" image="workcrews_exact">
+				<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+						<label name="buttonTooltipLabel" text="Open overseer management view" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</staticbutton>-->
+			
+			<!--<button name="WorkCrewsButton" text="Work Crews" hsp="minimum" vsp="minimum" sfx="ledger01" state="mainMenuButtonSpecial">
+				<tooltip width="300" height="1" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox"
+							hsp="fixed" fixed_width="300"
+							horizontal_padding="5" vertical_padding="5"
+							solidfill="1" solidfillname="glassBrassBorderDark" >
+						
+						<label name="buttonTooltipLabel" text="Open the Work Crew management view" vsp="center" state="tooltip_text"/>
+						--><!--<paragraph text="Faction relations can be manipulated and special missions performed through the Foreign Office." state="tooltip_small"/>--><!--
+							
+					</container>
+				</tooltip>
+			</button>-->
+			
+			<staticbutton name="WorkCrewsButton" text="Overseers" sfx="ledger01" skin="ui//styles//commandsFancy.xml" image="workcrews_text_exact">
+				<tooltip width="300" height="1" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox"
+							hsp="fixed" fixed_width="300"
+							horizontal_padding="5" vertical_padding="5"
+							solidfill="1" solidfillname="glassBrassBorderDark" >
+						
+						<label name="buttonTooltipLabel" text="Open the Overseer management view" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</staticbutton>
+			
+			
+			<staticbutton name="OfficesButton" text="Offices" sfx="ledger01" skin="ui//styles//commandsFancy.xml" image="offices_exact">
+				<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+						<label name="buttonTooltipLabel" text="No offices constructed" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</staticbutton>
+			<staticbutton name="WorkshopsButton" text="Workshops" sfx="ledger01" skin="ui//styles//commandsFancy.xml" image="workshops_exact">
+				<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+						<label name="buttonTooltipLabel" text="No workshops constructed" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</staticbutton>
+			<staticbutton name="HousingButton" text="Housing" sfx="ledger01" skin="ui//styles//commandsFancy.xml" image="houses_exact">
+				<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+						<label name="buttonTooltipLabel" text="No housing constructed" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</staticbutton>
+      <!--
+			<button name="ColonyButton" text="Colony" hsp="minimum" vsp="minimum" sfx="ledger01" state="mainMenuButton">
+				<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+						<label name="buttonTooltipLabel" text="Open colony management view" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</button>
+      -->
+	   
+	   
+			<staticbutton name="ResourcesButton" text="Commodities"
+					    sfx="ledger01"
+					    skin="ui//styles//commandsFancy.xml" image="commodities_exact">
+				
+				<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+						<label name="buttonTooltipLabel" text="Show the commodities of the colony" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</staticbutton>
+			
+			<!--<button name="JobsButton"  text="Jobs" hsp="minimum" vsp="minimum" sfx="ledger01" state="mainMenuButton">
+				<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" >
+						<label name="buttonTooltipLabel" text="Show faction relations" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</button>-->
+			
+			<imagebutton name="JobsButton" text="Jobs"
+					sfx="ledger00"
+					hsp="minimum" vsp="minimum" imgPctX="50" imgPctY="50" imgMarginX="6" imgMarginY="6"
+					skin="ui/styles/default.xml"
+					state="buttonGlass"
+					imageSkin="ui/orderIcons.xml" image="labourers_icon">
+				
+				<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+						<label name="buttonTooltipLabel" text="Show all job assignments" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</imagebutton>
+			
+			<!--
+			<staticbutton name="JobsButton" text="Jobs"
+					    sfx="ledger01"
+					    skin="ui//styles//commandsFancy.xml" image="jobs_exact">
+				
+				<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+						<label name="buttonTooltipLabel" text="Show the commodities of the colony" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</staticbutton>-->
+			
+			<imagebutton name="FactionsButton" text="Factions"
+					sfx="ledger00"
+					hsp="minimum" vsp="minimum" imgPctX="50" imgPctY="50" imgMarginX="6" imgMarginY="6"
+					skin="ui/styles/default.xml"
+					state="buttonGlass"
+					imageSkin="ui/thoughtIcons.xml" image="factions">
+				
+				<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+						<label name="buttonTooltipLabel" text="Show Faction Relations" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>
+				
+			</imagebutton>
+			<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_padding="3" vertical_padding="3" name="colonistsWorkplacesContainer">
+				<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+					<container name="populationCounterTooltipVB" type="vertbox" hsp="expand" vsp="minimum" horizontal_padding="4" vertical_padding="4" vertical_gutter="3" solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" />
+				</tooltip>
+				<containerbutton name="ColonistsButton" hsp="minimum" vsp="minimum" state="buttonGlass">
+					<container type="horizbox" hsp="minimum" vsp="minimum" 
+							skin="ui/styles/default.xml"
+							name="populationContainer" >
+
+						<container type="horizbox"
+								 hsp="minimum" vsp="minimum" vap="center"
+								 name="populationCounterContainer"
+								 horizontal_padding="8"
+								 horizontal_gutter="2"
+								 vertical_padding="2"
+								  skin="ui/styles/default.xml">
+					
+							<image name="carpentryIcon" hsp="minimum" vap="center" image="population_icon" skin="ui/orderIcons.xml" scale="50" />
+							<label name="populationcounter" vap="center" text="0" state="tooltip_small"/>
+							<label name="populationslash" text="/" vap="center" state="tooltip_small" />
+							<label name="populationcap" vap="center" text="150" state="tooltip_small" />
+					
+						</container>
+					</container>
+
+
+
+			</containerbutton>
+				<container type="horizbox"
+						hsp="minimum" vsp="minimum" vap="top"
+							name="workplaceCounterContainer"
+							 horizontal_padding="8"
+							 horizontal_gutter="2"
+							vertical_padding="2"
+							skin="ui/styles/default.xml"
+							solidfill="1" solidfillname="glassLighterweight">
+					<image name="workplacesIcon" hsp="minimum" vap="center" image="workplaces" skin="ui/orderIcons.xml" scale="50" />
+
+					<label name="workplacecounter" vap="center" text="0" state="tooltip_small"/>
+					<label name="workplaceslash" text="/" vap="center" state="tooltip_small"/>
+					<label name="workplacecap" vap="center" text="150" state="tooltip_small"/>
+
+				</container>
+			</container>
+
+
+
+
+
+			<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_padding="0" skin="ui/styles/default.xml" >
+				
+				<container name="disturbanceContainer"
+					type="horizbox"
+						 hsp="minimum" vsp="minimum"
+						 horizontal_padding="4" horizontal_margin="2"
+						 vertical_padding="4" vertical_margin="2"
+						 solidfill="1" solidfillname="glassLighterweight" skin="ui/styles/default.xml">
+					
+					<tooltip width="250" height="100" mouseRestDelay="0" followCursor="1">
+						
+						<container type="vertbox"
+									hsp="minimum" vsp="minimum"
+									horizontal_padding="6" vertical_padding="6"
+									solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
+
+							<!--<container name="disturbanceTooltipVB" type="vertbox" hsp="expand" vsp="minimum" horizontal_padding="4" vertical_padding="4" vertical_gutter="3"/>-->
+							
+							<label text="Disturbance Points" state="tooltip_text" hap="center"/>
+							<paragraph text="The amount your colony has disturbed its local area, perhaps awakening That Which Is Best Left Undisturbed. Disturbance is increased by building more structures." state="tooltip_small"/>
+						</container>
+					</tooltip>
+
+					<label name="disturbanceCounter" vap="center" text="Disturbance:   " state="tooltip_small" />
+					
+				</container>
+
+				<container name="provisionsContainer"
+						 type="horizbox"
+						 hsp="minimum" vsp="minimum"
+						 horizontal_padding="4" horizontal_margin="2"
+						 vertical_padding="4" vertical_margin="2"
+						 solidfill="1" solidfillname="glassLighterweight" skin="ui/styles/default.xml">
+					<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+						<container type="vertbox"
+									hsp="minimum" vsp="minimum"
+									horizontal_padding="6" vertical_padding="6"
+									solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
+							
+							<container name="provisionsTooltipVB" type="vertbox" hsp="expand" vsp="minimum" horizontal_padding="4" vertical_padding="4" vertical_gutter="3"/>
+							
+						</container>
+					</tooltip>
+					
+					<label name="provisionsCounterLabel" vap="center" text="Provisions:" state="tooltip_small" />
+					<label name="provisionsCounter" vap="center" text="0" state="tooltip_small" />
+					
+				</container>
+			
+			</container>
+				
+				
+			<container type="horizbox" hsp="minimum" vsp="expand" hap="right" horizontal_padding="0" skin="ui/styles/default.xml" >			
+  
+      <container name="dayNightImageContainer" type="horizbox" hsp="minimum" vsp="minimum" state="buttonGlass" solidfill="1" vertical_padding="6" horizontal_padding="6" solidfillname="glassBrassBorder" skin="ui/styles/default.xml">
+					<image name="DayNightImage" text="Day 1" hsp="minimum" vsp="minimum" hap="center" vap="center" scale="50" skin="ui/styles/default.xml" state="glassBrassBorder" imageSkin="ui\\thoughtIcons2.xml" image="time_sunrise"/>
+				</container>
+
+				<imagebutton name="BuildingViewButton" text="Building View" sfx="click01" hsp="minimum" vsp="minimum" imgPctX="50" imgPctY="50" imgMarginX="6" imgMarginY="6" skin="ui/styles/default.xml" state="buttonGlass" imageSkin="ui/orderIcons.xml" image="show_interior_hover">
+					<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+						<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+							<label name="buttonTooltipLabel" text="Toggle Building View" vsp="center" state="tooltip_text"/>
+						</container>
+					</tooltip>
+				</imagebutton>
+
+        <staticbutton name="2xButton" text="2xButton" sfx="click00" skin="ui//styles//commandsFancy.xml" image="2x_exact">
+          <tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+            <container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+              <label name="buttonTooltipLabel" text="Increase Game Speed 2x" vsp="center" state="tooltip_text"/>
+            </container>
+          </tooltip>
+        </staticbutton>
+
+          <imagebutton name="PauseUnpauseButton" text="Pause/Unpause Game" sfx="switch_toggle" hsp="minimum" vsp="minimum" imgPctX="50" imgPctY="50" imgMarginX="6" imgMarginY="6" skin="ui/styles/default.xml" state="buttonGlass" imageSkin="ui/orderIcons.xml" image="pocketwatch">
+					<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+						<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+							<label name="buttonTooltipLabel" text="Pause Game" vsp="center" state="tooltip_text"/>
+						</container>
+					</tooltip>
+				</imagebutton>
+				
+				
+				<staticbutton name="Help" text="Help"  sfx="click" skin="ui//styles//commandsFancy.xml" image="help_exact">
+					<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+						<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+							<label name="buttonTooltipLabel" text="Help Handbook" vsp="center" state="tooltip_text"/>
+						</container>
+					</tooltip>
+				</staticbutton>
+
+        <!--
+					<button name="ArtToolsButton" text="ArtToolsButton" hsp="minimum" vsp="minimum" sfx="click" state="mainMenuButton"/>
+          -->
+					
+				<staticbutton name="Menu" text="Menu"  sfx="click00" skin="ui//styles//commandsFancy.xml" image="menu_exact">
+					<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+						<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+							<label name="buttonTooltipLabel" text="Options and Save/Quit" vsp="center" state="tooltip_text"/>
+						</container>
+					</tooltip>
+				</staticbutton>
+				
+				
+				<container type="vertbox" hsp="minimum" vsp="expand" hap="right" horizontal_padding="0" vertical_padding="0" >
+					
+					<container type="vertbox" hsp="fixed" vsp="fixed" fixed_width="260" fixed_height="260" horizontal_margin="1" horizontal_padding="8" vertical_padding="2" vertical_margin="6" solidfill="1" solidfillname="miniPaper" skin="ui/styles/default.xml">
+						<canvas name="minimap_canvas" hsp="fixed" vsp="fixed" fixed_width="256" fixed_height="256"/>
+						<!-- <picture file="ui\\minimap_filler.png" hsp="minimum" vsp="minimum"/> -->
+					</container>
+					
+					<!-- CECOMMPATCH - Fixes the UI being pushed off the screen at lower resolutions and/or when there are a lot of alerts -->
+					<container type="scrollablevertbox" hsp="expand" vsp="fixed" fixed_height="200" horizontal_padding="0" vertical_padding="0" skin="ui/default.xml">
+						<container name="AlertsHolder" type="vertbox" hsp="fixed" fixed_width="205" vsp="expand" vap="top" hap="right" vertical_gutter="3" skin="ui/styles/styleAlerts.xml" />
+					</container>
+				</container>
+			</container>
+		</container>
+
+
+		<container type="horizbox" hsp="expand" vsp="minimum" vap="bottom">
+      
+			<container name="commandsOuterContainer" type="horizbox" hsp="minimum" vsp="minimum" vap="bottom" horizontal_gutter="15">
+				<container name="commandsMainCategoryContainer" type="horizbox" hsp="minimum" vsp="expand" vap="bottom">
+					<container name="CommandCategoryHolder" type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="0" vertical_padding="0" vap="bottom" />
+					<container name="CommandCategoryHolder2" type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="0" vertical_padding="0" vap="bottom" />
+					<container name="CommandCategoryHolder3" type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="0" vertical_padding="0" vap="bottom" />
+				</container>
+				<container name="commandsSubCategoryContainer" type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="0" vertical_padding="0" vap="bottom" />
+			</container>
+
+			<container name="commandsActivitiesHolderOuter" 
+					 type="horizbox" 
+					 hsp="minimum" 
+					 vsp="minimum" 
+					 hap="center" 
+					 vap="bottom" 
+					 vertical_margin="15"
+					 vertical_padding="5" 
+					 horizontal_padding="5"
+					 horizontal_gutter="15" 
+					 skin="ui/styles/styleAlerts.xml"
+					solidfill="1"
+					solidfillname="emptyBrassBorder">
+
+				<container name="commandsActivitiesHolder" type="horizbox" hsp="minimum" vsp="minimum" horizontal_gutter="15" skin="ui/styles/styleAlerts.xml">
+
+				</container>
+				<containerbutton name="AssignmentsButton" 
+							  hsp="minimum" 
+							  vsp="minimum" 
+							  vap="center"
+							  state="buttonGlass">
+
+					<container name="assignmentsContainer"
+							type="horizbox"
+								hsp="minimum" vsp="minimum"
+								horizontal_padding="4"
+								horizontal_margin="2"
+								vertical_padding="4"
+								vertical_margin="2"
+								solidfill="1"
+								solidfillname="glassLighterweight"
+								skin="ui/styles/default.xml">
+						<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+							<container type="vertbox"
+									hsp="minimum" 
+									vsp="minimum"
+									horizontal_padding="6" 
+									vertical_padding="6"
+									solidfill="1" 
+									solidfillname="glassBrassBorderDarkMoreOpaque" >
+
+								<container name="assignmentsTooltipVB" type="vertbox" hsp="fixed" fixed_width="345" vsp="minimum" horizontal_padding="4" vertical_padding="4" vertical_gutter="3"/>
+
+							</container>
+						</tooltip>
+
+						<label name="assignmentsCounter" vap="center" text="Assignments:         " state="tooltip_small" />
+
+					</container>
+
+				</containerbutton>
+
+			</container>      
+			<!--<container type="vertbox" hsp="expand" vsp="expand" vap="bottom">
+      
+				<decor name="screenBottomRepeater" hsp="expand" vap="bottom" element="screenBottomRepeater_normal" skin="ui/styles/styleGameplay.xml" />
+			</container>
+      
+			<container type="vertbox" hsp="minimum" vsp="expand" hap="right" vap="bottom">
+				<decor hsp="minimum" vsp="minimum" vap="bottom" element="screenBottomRightConcaveBracket_normal" skin="ui/styles/styleGameplay.xml" />
+			</container>
+
+			<container type="vertbox" hsp="percent" pctX="50" hap="right" vsp="expand">
+				<container type="horizbox" hsp="expand" vsp="minimum">
+					<decor name="screenBottomRepeater" hsp="minimum" vsp="minimum" vap="bottom" hap="right" element="bottomRightConcaveBracket_normal" skin="ui/styles/styleGameplay.xml" />
+				</container>
+          
+				<container type="horizbox" hsp="expand" vsp="minimum">
+					<decor name="screenBottomRepeater3" hsp="minimum" vsp="minimum" vap="bottom" element="gameLogTopLeft_normal" skin="ui/styles/styleGameplay.xml" />
+					<decor name="screenBottomRepeater4" hsp="expand" vsp="minimum" vap="bottom" element="gameLogTopMiddle_normal" skin="ui/styles/styleGameplay.xml" />
+					-->
+			<!--<decor name="screenBottomRepeater5" hsp="minimum" vsp="minimum" element="gameLogTopRight_normal" skin="ui/styles/styleGameplay.xml" />--><!--
+				</container>
+				<container type="horizbox" hsp="expand" vsp="minimum" vap="bottom">
+					<decor name="screenBottomRepeater3" hsp="minimum" vsp="minimum" vap="bottom" element="gameLogBottomLeft_normal" skin="ui/styles/styleGameplay.xml" />
+					<decor name="screenBottomRepeater4" hsp="expand" vsp="minimum" vap="bottom" element="gameLogBottomMiddle_normal" skin="ui/styles/styleGameplay.xml" />
+					<decor name="screenBottomRepeater5" hsp="minimum" vsp="minimum" vap="bottom" element="gameLogBottomRight_normal" skin="ui/styles/styleGameplay.xml" />
+				</container>
+			</container>-->
+			<container name="tooltipAnchorDummyContainer" type="horizbox" hsp="minimum" vsp="minimum" hap="right" vap="bottom" />        
+		</container>
+    
+	</container>
+</transwindow>
