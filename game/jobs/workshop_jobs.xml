@@ -826,7 +826,7 @@
 	<require_empty_hands failure_reason="Character required to not be carrying stuff."/>
 	<require_multiple_gameobjects input="planks" amount="4" use_multiplier="1" range="100" tag="planks" failure_reason="Requires available planks." closest="1" require_owned="1"/>
 	<require_multiple_gameobjects input="lplanks" amount="2" use_multiplier="1" range="100" tag="lacquered_planks" failure_reason="Requires available lacquered planks." closest="1" require_owned="1"/>
-	<require_multiple_gameobjects input="glass" amount="1" use_multiplier="1" range="100" tag="glass_panes" failure_reason="Requires available glass panes." closest="1" require_owned="1"/>
+	<require_multiple_gameobjects input="glass" amount="2" use_multiplier="1" range="100" tag="glass_panes" failure_reason="Requires available glass panes." closest="1" require_owned="1"/>
 	<require_work_party_filter name="workshop"/>
 	<require_item_drop_location input="drop_location"/>
 	
@@ -1716,7 +1716,7 @@
 	
      <require_empty_hands failure_reason="Character required to have empty hands."/>
 	<require_multiple_gameobjects input="planks" amount="2" use_multiplier="1" range="100" tag="planks" failure_reason="Requires available glass." closest="1" require_owned="1"/>
-	<require_multiple_gameobjects input="bricks" amount="4" use_multiplier="1" range="100" tag="masonry" failure_reason="Requires available glass." closest="1" require_owned="1"/>
+	<require_multiple_gameobjects input="bricks" amount="2" use_multiplier="1" range="100" tag="masonry" failure_reason="Requires available glass." closest="1" require_owned="1"/>
 	
 	<require_item_drop_location input="drop_location"/>
   	<require_work_party_filter name="workshop"/>
@@ -1751,7 +1751,7 @@
      <require_empty_hands failure_reason="Character required to have empty hands."/>
 	<require_multiple_gameobjects input="iron_pipes" amount="3" use_multiplier="1" range="100" tag="iron_pipes" failure_reason="Requires available iron pipes." closest="1" require_owned="1"/>
 	<require_multiple_gameobjects input="iron_plates" amount="2" use_multiplier="1" range="100" tag="iron_plates" failure_reason="Requires available iron plates." closest="1" require_owned="1"/>
-	<require_multiple_gameobjects input="brass_cogs" amount="4" use_multiplier="1" range="100" tag="brass_cogs" failure_reason="Requires available brass cogs" closest="1" require_owned="1"/>
+	<require_multiple_gameobjects input="brass_cogs" amount="1" use_multiplier="1" range="100" tag="brass_cogs" failure_reason="Requires available brass cogs" closest="1" require_owned="1"/>
 	<require_multiple_gameobjects input="ingot_of_steel" amount="4" use_multiplier="1" range="100" tag="ingot_of_steel" failure_reason="Requires available steel ingots." closest="1" require_owned="1"/>
 	
 	<require_item_drop_location input="drop_location"/>
@@ -1949,7 +1949,7 @@
 	
      <require_empty_hands failure_reason="Character required to have empty hands."/>
 	<require_multiple_gameobjects input="gold" amount="1" use_multiplier="1" range="100" tag="ingot_of_gold" failure_reason="Requires available gold." closest="1" require_owned="1"/>
-	<require_multiple_gameobjects input="stone" amount="3" use_multiplier="1" range="100" tag="rough_stone_block" failure_reason="Requires available stone." closest="1" require_owned="1"/> 
+	<require_multiple_gameobjects input="stone" amount="4" use_multiplier="1" range="100" tag="rough_stone_block" failure_reason="Requires available stone." closest="1" require_owned="1"/> 
 	<require_item_drop_location input="drop_location"/>
   	<require_work_party_filter name="workshop"/>
  	<require_character_on_shift/>
@@ -2642,7 +2642,7 @@
 	</utility>
 	
 	<fsm>
-		<walk_to_adjacent_position_and_pickup_things input="ammo2"/>
+		<walk_to_adjacent_position_and_pickup_things input="ammo3"/>
 		<walk_to_module input="workshop_module"/>
 		<building_cache_item input="workshop"/>
 		
@@ -4423,8 +4423,9 @@
 	
 	<require_character_on_shift/>
 	<require_empty_hands failure_reason="Character required to not be carrying stuff."/>
-	<require_multiple_gameobjects input="planks" amount="4" use_multiplier="1" range="100" tag="planks" failure_reason="Requires available planks." closest="1" require_owned="1"/> 
+	<require_multiple_gameobjects input="planks" amount="8" use_multiplier="1" range="100" tag="planks" failure_reason="Requires available planks." closest="1" require_owned="1"/> 
 	<require_multiple_gameobjects input="lplanks" amount="4" use_multiplier="1" range="100" tag="lacquered_planks" failure_reason="Requires available lacquered planks." closest="1" require_owned="1"/> 
+	<require_multiple_gameobjects input="gold" amount="1" use_multiplier="1" range="100" tag="ingot_of_gold" failure_reason="Requires available gold." closest="1" require_owned="1"/>
 	<require_work_party_filter name="workshop"/>
 	<require_item_drop_location input="drop_location"/>
 	
@@ -4438,6 +4439,10 @@
 		<building_cache_item input="workshop"/>
 		
 		<walk_to_adjacent_position_and_pickup_things input="lplanks"/>
+		<walk_to_module input="workshop_module"/>
+		<building_cache_item input="workshop"/>
+		
+		<walk_to_adjacent_position_and_pickup_things input="gold"/>
 		<walk_to_module input="workshop_module"/>
 		<building_transform_item input="workshop_module" name="Assemble Module"/>
 		
