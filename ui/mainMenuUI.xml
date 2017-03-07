@@ -1,0 +1,67 @@
+<transwindow name="Main Menu Area" skin="ui/styles/default.xml" >
+
+	<container type="vertbox" hsp="expand" vsp="expand">
+	    
+	   <!-- <layout x="0.5" y="0" w="1024" h="512" anchor="top"
+			    absoluteX="0" absoluteY="0" absoluteW="1" absoluteH="1" />
+		 -->
+		<container type="horizbox" hsp="expand" vsp="minimum" >
+			
+			<image name="CElogo"
+				  hsp="minimum" vsp="minimum"
+				  scale="100"
+					horizontal_margin="64"
+				  skin="ui/clockworktitle.xml" image="ce title"
+				  vertical_margin="0"/>
+	  <!--
+			  <image name="Crest"
+				    hsp="minimum" vsp="minimum"
+				    scale="100"
+				    hap="center" vap="top"
+				    skin="ui/clockworkcrest.xml" image="ce crest"
+				    vertical_margin="0"/>-->
+	  
+			
+		</container>
+	
+		<container type="horizbox" hsp="expand" vsp="expand" hap="center">
+			
+			<spacer hsp="expand"/>
+			<!-- hsp="fixed" fixed_width="240" vsp="fixed" fixed_height="360" -->
+					<container name="mainvertbox2"
+							 type="vertbox"
+							  hsp="expand" vsp="minimum" hap="top"
+							 vertical_margin="0"
+							 vertical_padding="0" horizontal_padding="180">
+							<!-- solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque"> -->
+							 <!--solidfillname="emptyBrassBorder" solidfill="1">-->
+
+						<!-- Static buttons: these crash when enabled.-->
+						<staticbutton name="NewGameButton" sfx="click00" skin="ui//hugeUIButtons.xml" image="main_newgame" hap="center"/>
+						<staticbutton name="LoadGameButton" sfx="click00" skin="ui//hugeUIButtons.xml" image="main_loadgame" hap="center"/>
+<!--						<button name="LoadReplayButton" text="Load Replay" hsp="minimum" vsp="minimum" hap="center" sfx="click00" state="mainMenuButton" />-->
+						<staticbutton name="CreateWorldButton" sfx="click00" skin="ui//hugeUIButtons.xml" image="main_newworld" hap="center"/>
+						<staticbutton name="ConfigurationButton" sfx="click00" skin="ui//hugeUIButtons.xml" image="main_config" hap="center"/>
+						<staticbutton name="CreditsButton" sfx="click00" skin="ui//hugeUIButtons.xml" image="main_credits" hap="center"/>
+						<staticbutton name="ExitButton" sfx="click00" skin="ui//hugeUIButtons.xml" image="main_exit" hap="center"/>
+						
+				<!--
+						<button name="NewGameButton" text="New Game" vsp="minimum" hsp="expand" sfx="click00" state="mainMenuButton" />
+						<button name="CreateWorldButton" text="Create New World" vsp="minimum" hsp="expand" sfx="click00" state="mainMenuButton" />
+						<button name="LoadGameButton" text="Load Game" hsp="expand" vsp="minimum" sfx="click00" state="mainMenuButton" />-->
+      
+				<!--	<button name="ConfigurationButton" text="Configuration" hsp="expand" vsp="minimum" sfx="miniThunk" state="mainMenuButton" />
+						<button name="CreditsButton" text="Credits" hsp="expand" vsp="minimum" sfx="click00" state="mainMenuButton" />
+						<button name="ExitButton" text="Exit Game" hsp="expand" vsp="minimum" sfx="click00" state="mainMenuButton" />-->
+						
+						<label text="    clockworkempires.com" skin="ui/styles/label02.xml" vertical_padding="6" />
+		
+					</container>
+			<spacer hsp="expand"/>
+			<spacer hsp="expand"/>
+			<spacer hsp="expand"/>	
+			<spacer hsp="expand"/>
+		</container>
+	</container>
+</transwindow>
+
