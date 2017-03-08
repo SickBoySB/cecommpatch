@@ -168,7 +168,7 @@
 	
 	<require_character_on_shift/>
 	<require_work_party_filter name="workshop" failure_reason="Requires 'workshop' filter"/>
-	<require_multiple_gameobjects input="rough_stone_block" amount="6" use_multiplier="1" range="100" tag="rough_stone_block" tag_to_workshop_cost="logs" failure_reason="Requires available logs." closest="1" require_owned="1"/>
+	<require_multiple_gameobjects input="rough_stone_block" amount="5" use_multiplier="1" range="100" tag="rough_stone_block" tag_to_workshop_cost="logs" failure_reason="Requires available logs." closest="1" require_owned="1"/>
 	<require_item_drop_location input="drop_location"/>
 	
      <utility>
@@ -3250,51 +3250,6 @@
 	</fsm>
 </job>
 
-<job name="Make Steam Oven" display_name="Make Steam Oven"
-	mandatory_eval="0"
-	icon_skin="ui\orderIcons.xml" icon="crucible_icon"
-	must_lock_owner="0"
-	filter="workshop">
-	
-	<require_character_on_shift/>
-	<require_empty_hands failure_reason="Character required to not be carrying stuff."/>
-	<require_multiple_gameobjects input="bricks" amount="6" use_multiplier="1" range="100" tag="bricks" failure_reason="Requires available iron plates." closest="1" require_owned="1"/>
-	<require_multiple_gameobjects input="copper_plates" amount="4" use_multiplier="1" range="100" tag="copper_plates" failure_reason="Requires available iron pipes." closest="1" require_owned="1"/>
-	<require_multiple_gameobjects input="copper_pipes" amount="4" use_multiplier="1" range="100" tag="copper_pipes" failure_reason="Requires available iron pipes." closest="1" require_owned="1"/>
-	<require_multiple_gameobjects input="ingot_of_steel" amount="2" use_multiplier="1" range="100" tag="ingot_of_steel" failure_reason="Requires available brass cogs." closest="1" require_owned="1"/>
-	
-	<require_work_party_filter name="workshop"/>
-	<require_item_drop_location input="drop_location"/>
-  
-	<utility>
-		<base_job_utility weight="1000"/>
-	</utility>
-	
-	<fsm>
-		<walk_to_adjacent_position_and_pickup_things input="bricks"/>
-		<walk_to_module input="workshop_module"/>
-		<building_cache_item input="workshop"/>
-		
-		<walk_to_adjacent_position_and_pickup_things input="copper_plates"/>
-		<walk_to_module input="workshop_module"/>
-		<building_cache_item input="workshop"/>
-		
-		<walk_to_adjacent_position_and_pickup_things input="copper_pipes"/>
-		<walk_to_module input="workshop_module"/>
-		<building_cache_item input="workshop"/>
-		
-		<walk_to_adjacent_position_and_pickup_things input="ingot_of_steel"/>
-		<walk_to_module input="workshop_module"/>
-		<building_transform_item input="workshop_module" name="Assemble Module"/>
-		
-		<complete_workshop_order input="workshop"/>            
-		<increment_character_skill name="smithing"/>
-		<fill_input_for_held_item name="drop_location"/>
-		<walk_to_adjacent_position_for_item_drop input="drop_location" />
-		<place_item_behaviour input="drop_location" />      
-	</fsm>
-</job>
-
 <job name="Make Smithing Forge" display_name="Make Smithing Forge"
 	mandatory_eval="0"
 	icon_skin="ui\orderIcons.xml" icon="smithing_forge_icon"
@@ -5249,33 +5204,6 @@
 	</utility>
 	<fsm>
 		<walk_to_adjacent_position_and_pickup_things input="fungus"/>
-		<walk_to_module input="workshop_module"/>
-		<building_transform_item input="workshop_module" />
-		
-		<complete_workshop_order input="workshop"/>
-		<increment_character_skill name ="cooking"/>
-		<fill_input_for_held_item name="drop_location"/>
-		<walk_to_adjacent_position_for_item_drop input="drop_location" />
-		<place_item_behaviour input="drop_location" />
-	</fsm>
-</job>
-
-<job name="Make Maize Chowder" display_name="Make Maize Chowder"
-	mandatory_eval="0"
-	icon_skin="ui\orderIcons.xml" icon="icon_kitchen"
-	must_lock_owner="0"
-	filter="workshop">
-	
-	<require_character_on_shift/>
-	<require_empty_hands failure_reason="Character required to have empty hands."/>
-	<require_multiple_gameobjects input="maize" amount="1" use_multiplier="1" range="100" tag="raw,maize" failure_reason="Requires available raw maize."  closest="1" require_owned="1"/>  
-  	<require_work_party_filter name="workshop"/>
-	<require_item_drop_location input="drop_location"/>
-	<utility>
-		<base_job_utility weight="1000"/> 
-	</utility>
-	<fsm>
-		<walk_to_adjacent_position_and_pickup_things input="maize"/>
 		<walk_to_module input="workshop_module"/>
 		<building_transform_item input="workshop_module" />
 		

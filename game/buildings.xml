@@ -3937,7 +3937,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				product_name="Stone Altar">
 				<visible>
 					<require_commodity_geq name="rough_stone_block" amount="20" failure_reason="20x Stone needed." is_cost="1" />
-					<require_commodity_geq name="gold_ingots" amount="5" failure_reason="5x Gold Ingots needed." is_cost="3" />
+					<require_commodity_geq name="gold_ingots" amount="5" failure_reason="5x Gold Ingots needed." is_cost="2" />
 				</visible>
 				<cost name="rough_stone_block_icon" display_name="Stone"
 					amount="20"/>
@@ -3956,7 +3956,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				product_name="Large Stone Altar">
 				<visible>
 					<require_commodity_geq name="rough_stone_block" amount="30" failure_reason="30x Stone needed." is_cost="1" />
-					<require_commodity_geq name="gold_ingots" amount="10" failure_reason="10x Gold Ingots needed." is_cost="3" />
+					<require_commodity_geq name="gold_ingots" amount="10" failure_reason="10x Gold Ingots needed." is_cost="2" />
 				</visible>
 				<cost name="rough_stone_block_icon" display_name="Stone"
 					amount="30"/>
@@ -6731,7 +6731,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				multiplier="15"
 				product_name="Charcoal">
 				<visible>
-					<require_commodity_geq name="logs" amount="45" failure_reason="15x Logs needed." is_cost="1" />
+					<require_commodity_geq name="logs" amount="45" failure_reason="45x Logs needed." is_cost="1" />
 				</visible>
 				<cost name="logs" display_name="Logs"
 					amount="45"/><!-- only used for tooltip cost icon-->
@@ -7913,7 +7913,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Iron Pipes"
 				product_name="Iron Pipes">
 				<visible>
-					<require_commodity_geq name="iron_ingots" amount="2" failure_reason="2x Iron Ingots needed." is_cost="2" />
+					<require_commodity_geq name="iron_ingots" amount="2" failure_reason="2x Iron Ingots needed." is_cost="1" />
 				</visible>
 				<cost name="iron_ingots_icon" display_name="Iron Ingots"
 					amount="2"/><!-- only used for tooltip cost icon-->
@@ -7928,7 +7928,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Copper Pipes"
 				product_name="Copper Pipes">
 				<visible>
-					<require_commodity_geq name="copper_ingots" amount="2" failure_reason="2x Copper Ingots needed." is_cost="2" />
+					<require_commodity_geq name="copper_ingots" amount="2" failure_reason="2x Copper Ingots needed." is_cost="1" />
 				</visible>
 				<cost name="copper_ingots_icon" display_name="Copper Ingots"
 					amount="2"/><!-- only used for tooltip cost icon-->
@@ -7943,7 +7943,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Iron Plates"
 				product_name="Iron Plates">
 				<visible>
-					<require_commodity_geq name="iron_ingots" amount="2" failure_reason="2x Iron Ingots needed." is_cost="2" />
+					<require_commodity_geq name="iron_ingots" amount="2" failure_reason="2x Iron Ingots needed." is_cost="1" />
 				</visible>
 				<cost name="iron_ingots_icon" display_name="Iron Ingots"
 					amount="2"/><!-- only used for tooltip cost icon-->
@@ -7958,7 +7958,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Copper Plates"
 				product_name="Copper Plates">
 				<visible>
-					<require_commodity_geq name="copper_ingots" amount="2" failure_reason="2x Copper Ingots needed." is_cost="2" />
+					<require_commodity_geq name="copper_ingots" amount="2" failure_reason="2x Copper Ingots needed." is_cost="1" />
 				</visible>
 				<cost name="copper_ingots_icon" display_name="Copper Ingots"
 					amount="2"/><!-- only used for tooltip cost icon-->
@@ -7997,7 +7997,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Iron Cogs"
 				product_name="Iron Cogs">
 				<visible>
-					<require_commodity_geq name="iron_ingots" amount="2" failure_reason="2x Iron Ingots needed." is_cost="2" />
+					<require_commodity_geq name="iron_ingots" amount="2" failure_reason="2x Iron Ingots needed." is_cost="1" />
 				</visible>
 				<cost name="iron_ingots_icon" display_name="Iron Ingots"
 					amount="2"/>
@@ -8013,7 +8013,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Brass Cogs"
 				product_name="Brass Cogs">
 				<visible>
-					<require_commodity_geq name="brass_ingots" amount="1" failure_reason="1x Brass Ingots needed." is_cost="2" />
+					<require_commodity_geq name="brass_ingots" amount="1" failure_reason="1x Brass Ingots needed." is_cost="1" />
 				</visible>
 				<cost name="brass_ingots_icon" display_name="Brass Ingots"
 					amount="1"/>
@@ -8662,9 +8662,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Fruit Medley"
 				product_name="Fruit Medley">
 				<visible>
-					<require_gameobject tag="fruit" amount="2" failure_reason="2x Fruit needed." is_cost="1" />
+					<require_gameobject tag="fruit" amount="2" failure_reason="2x Any Fruit needed." is_cost="1" />
 				</visible>
-				<cost name="raw_berries_category" display_name="Fruit"
+				<cost name="raw_berries_category" display_name="Any Fruit"
 					amount="2"/><!-- only used for tooltip cost icon-->
 				<out product="fruit_medley_stew"
 					amount="2"/> <!-- used for passing product to job-->
@@ -9022,8 +9022,8 @@ are already contained within other buildings. Consider those a placeholder for l
 						failure_reason="Refined Food requires an unlock."/>
 				</grayed>
 				<visible>
-					<require_gameobject tag="basic_cookable" amount="10" failure_reason="10x Any Raw Food needed." is_cost="1" />
-					<require_gameobject tag="booze" amount="10" failure_reason="10x Any Brewed Alcohol needed." is_cost="2" />
+					<require_gameobject tag="basic_cookable" amount="5" failure_reason="5x Any Raw Food needed." is_cost="1" />
+					<require_gameobject tag="booze" amount="5" failure_reason="5x Any Brewed Alcohol needed." is_cost="2" />
                          <require_session_bool name="AllowRefinedFood"
 						value="1"
 						failure_reason="Refined Food requires an unlock."/>
@@ -9453,7 +9453,7 @@ are already contained within other buildings. Consider those a placeholder for l
 					amount="1"/>
 				<cost name="glass_panes_pallet_icon" display_name="Glass Panes"
 					amount="20"/>
-				<cost name="steel_plate_icon" display_name="Iron Plates"
+				<cost name="steel_plate_icon" display_name="Steel Plates"
 					amount="3"/>
 				<cost name="sulphur_fertiliser" display_name="Reactive Catalysts"
 					amount="10"/>
