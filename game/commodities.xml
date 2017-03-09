@@ -21,7 +21,7 @@
 
 	<commodity name="mk1_steam_knight" display_name="MK-1 Steam Knight" filter="other">
 		<display skin="ui\orderIcons.xml" icon="icon_steamknight"/>
-		<description text="The MK-1 Steam Knight is a truly complete battle weapon, and a massive step up from the PR-0; Armored and armed with a deadly repeating gun, this masterpeice is sure to keep your colony safe." />
+		<description text="The MK-1 Steam Knight is a truly complete battle weapon, and a massive step up from the PR-0; Armored and armed with a deadly repeating gun, this masterpiece is sure to keep your colony safe." />
 		<gameplay_description text="Steam Knights automatically defend your colony and are extremely powerful." />
 		<tags>
 			<tag name="commodity"/>
@@ -45,7 +45,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bamboo_poles" display_name="Bamboo Poles" filter="raw">
+	<commodity name="bamboo_poles" display_name="Bamboo" filter="raw">
 		<display skin="ui\commodityIcons.xml" icon="bamboo_poles"/>
 		<description text="Raw harvested bamboo may be used like logs for any wood-working application." />
 		<gameplay_description text="Used for basic buildings and making planks at the carpentry workshop" />
@@ -563,7 +563,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="ammo1" display_name="Stone Pellet Ammunition" filter="finished">
+	<commodity name="ammo1" display_name="Stone Pellet Ammo" filter="finished">
 		<display skin="ui\commodityIcons.xml" icon="ammo_stone"/>
 		<description text="A crate of stone pellet cartridges. This ammunition is cheap, weak, and easy to produce. It is used in simple Muskets and TriPistols by soldiers, and is used by Naturalists for hunting." />
 		<gameplay_description text="Supplies lowest level weapons (Musket, TriPistol) in Barracks. Supplies a Naturalist for hunting jobs." />
@@ -576,7 +576,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="ammo2" display_name="Ball Cartridge Ammunition" filter="finished">
+	<commodity name="ammo2" display_name="Ball Cartridge Ammo" filter="finished">
 		<display skin="ui\commodityIcons.xml" icon="ammo_box"/>
 		<description text="A crate of simple bullet cartridges. This ammunition is practical and economical. It is used by soldiers in Tripistols, Blunderbusses, and Revolvers." />
 		<gameplay_description text="Supplies mid-level weapons (Blunderbuss, Resolver) in the Barracks." />
@@ -589,7 +589,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="ammo3" display_name="FMJ Ammunition" filter="finished">
+	<commodity name="ammo3" display_name="FMJ Ammo" filter="finished">
 		<display skin="ui\commodityIcons.xml" icon="ammo_box2"/>
 		<description text="A crate of full metal jacket minie-style ammunition suitable for rifled firearms. This ammunition is of fine quality. It is used by Soldiers in powerful weapons like the Jezail Rifle, and Carbine." />
 		<gameplay_description text="Supplies powerful weapons (Revolver, Jezail Rifle, Carbine) in Barracks." />
@@ -1164,7 +1164,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_brewing_vat" display_name="Brewing Vat" filter="finished">
+	<commodity name="boxed_brewing_vat" display_name="Wooden Brewing Vat" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="simple_mixing_vat"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module that produces basic brewed drinks." />
@@ -2102,7 +2102,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_musket_locker" display_name="Musket Locker" filter="finished">
+	<commodity name="boxed_musket_locker" display_name="Improvised Musket Locker" filter="finished">
 		<display skin="ui\commodityIcons.xml" icon="icon_musket"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module used to supply a barracks with improvised muskets, or allows a Naturalist's Office to hunt animals. " />
@@ -2154,7 +2154,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_tripistol_locker" display_name="Tripistol Locker" filter="finished">
+	<commodity name="boxed_tripistol_locker" display_name="Ceramic Tripistol Locker" filter="finished">
 		<display skin="ui\commodityIcons.xml" icon="icon_tripistol"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
 		<gameplay_description text="Module used to supply a barracks with Ceramic Tripistols." />
@@ -2292,8 +2292,8 @@
 
 	<commodity name="mk1_steam_knight_chassis" display_name="MK-1 Steam Knight Chassis" filter="processed">
 		<display skin="ui\commodityIcons.xml" icon="sk_torso_mk2"/>
-		<description text="This metal shell forms the base around which the rest of the Steam Knight will be formed. The MK1 model is made of hardened steel and highly durable." />
-		<gameplay_description text="The Steam Knight Manufactory uses this in constructing the Steam Knight MK1." />
+		<description text="This metal shell forms the base around which the rest of the Steam Knight will be formed. The MK-1 model is made of hardened steel and highly durable." />
+		<gameplay_description text="The Steam Knight Manufactory uses this in constructing the MK-1 Steam Knight." />
 		<tags>
 			<tag name="commodity"/>
 			<tag name="steam_knight_chassis_mk1"/>
@@ -2314,8 +2314,8 @@
 
 	<commodity name="mk1_steam_knight_oculars" display_name="MK-1 Steam Knight Oculars" filter="processed">
 		<display skin="ui\commodityIcons.xml" icon="sk_head_mk2"/>
-		<description text="This metal shaping houses a complex array of lenses and gears, forming the 'Head' of the Steam Knight. The MK1 model is made of hardened steel and highly durable." />
-		<gameplay_description text="The Steam Knight Manufactory uses this in constructing the Steam Knight MK1." />
+		<description text="This metal shaping houses a complex array of lenses and gears, forming the 'Head' of the Steam Knight. The MK-1 model is made of hardened steel and highly durable." />
+		<gameplay_description text="The Steam Knight Manufactory uses this in constructing the MK-1 Steam Knight." />
 		<tags>
 			<tag name="commodity"/>
 			<tag name="steam_knight_oculars_mk1"/>
@@ -2326,7 +2326,7 @@
 	<commodity name="mk1_machine_gun" display_name="MK-1 Machine Gun" filter="processed">
 		<display skin="ui\commodityIcons.xml" icon="sk_packedgun"/>
 		<description text="A big Knight needs a big Gun - this deadly piece is a recent invention by Dutchesss Miriam Minum and is known coloquially as the 'Minum Gun'. It's far too large for a regular person to use, however." />
-		<gameplay_description text="The Steam Knight Manufactory uses this in constructing the Steam Knight MK1." />
+		<gameplay_description text="The Steam Knight Manufactory uses this in constructing the MK-1 Steam Knight." />
 		<tags>
 			<tag name="commodity"/>
 			<tag name="steam_knight_mg"/>
@@ -2337,7 +2337,7 @@
 	<commodity name="ammo_autoloader" display_name="Ammo Autoloader" filter="processed">
 		<display skin="ui\commodityIcons.xml" icon="sk_ammofeeder"/>
 		<description text="It was deemed too inefficient to disable the Steam Knight in order to resupply ammunition, and as such the Autoloader Backpack was developed. This device holds all the ammunition a Knight will ever need!" />
-		<gameplay_description text="The Steam Knight Manufactory uses this in constructing the Steam Knight MK1." />
+		<gameplay_description text="The Steam Knight Manufactory uses this in constructing the MK-1 Steam Knight." />
 		<tags>
 			<tag name="commodity"/>
 			<tag name="steam_knight_feeder"/>
@@ -2449,7 +2449,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="basic_food" display_name="Basic Food" filter="fooddrink">
+	<commodity name="basic_food" display_name="Cooked Meat" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="basic_cooked_food_category"/>
 		<description text="Put anything in an oven and you'll get a cooked meal out of it!" />
 		<tags>
@@ -2467,7 +2467,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="generic_pie" display_name="Generic Pie" filter="fooddrink">
+	<commodity name="generic_pie" display_name="Pie" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="lingonberry_pie"/>
 		<description text="Mm, pie. What kind of pie you get out depends on what gets put into it!." />
 		<gameplay_description text="Colonists love premium food like pies." />
@@ -2521,7 +2521,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="tin_of_meat" display_name="Tin of Meat" filter="fooddrink">
+	<commodity name="tin_of_meat" display_name="Tinned Meat" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="tinned_corned_beef"/>
 		<description text="A tin of meat." />
 		<gameplay_description text="Unlike regular food, Trade Foods are preserved and can be sold at a Trade Office." />
@@ -2567,7 +2567,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="fruit_medley_stew" display_name="Fruit Medley Stew" filter="fooddrink">
+	<commodity name="fruit_medley_stew" display_name="Fruit Medley" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="icon_stew_pumpkin"/>
 		<description text="A tasty mixed-fruit treat." />
 		<gameplay_description text="Overseers prefer this mildly-fancy food." />
@@ -2918,7 +2918,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="tin_of_exotic_caviar" display_name="Tin of Exotic Caviar" filter="fooddrink">
+	<commodity name="tin_of_exotic_caviar" display_name="Tinned Exotic Caviar" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="tinned_exotic_caviar"/>
 		<description text="A tin of large fishy eggs. An upper class delicacy!" />
 		<gameplay_description text="Overseers prefer this mildly-fancy food. It's also tradeable!" />
@@ -2991,7 +2991,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="sugar_loaf" display_name="Sugar Loaf" filter="fooddrink">
+	<commodity name="sugar_loaf" display_name="Sugarloaf" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="sugarloaf"/>
 		<description text="A cone of sweet, sweet sugar." />
 		<gameplay_description text="Can be used in some cooking recipes, or sold." />
@@ -3004,12 +3004,17 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bag_of_wheat_flour" display_name="Wheat Flour" filter="fooddrink">
+	<commodity name="bag_of_wheat_flour" display_name="Wheat" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="grain_sack"/>
 		<description text="Abundant staple of the Home Counties, wheat can be baked, brewed, and stewed to the delight of any upstanding Clockworkian." />
 		<gameplay_description text="Can be made into bread at a Kitchen or beer at a Distillery." />
 		<tags>
 			<tag name="grain"/>
+			<tag name="herbivore_food"/>
+			<tag name="wheat"/>
+			<tag name="raw"/>
+			<tag name="inedible"/>
+			<tag name="ignite_64"/>
 		</tags>
 	</commodity>
 
@@ -3074,7 +3079,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="bushel_of_tea_leaf" display_name="Tea Leaf" filter="fooddrink">
+	<commodity name="bushel_of_tea_leaf" display_name="Tea Leaves" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="tea_leaves_bushel"/>
 		<description text="Fine tea leaves, staple of Clockworkian civilization." />
 		<gameplay_description text="This can be sold for a good price at a trade depot." />
@@ -3330,7 +3335,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="crate_of_tea_leaves" display_name="Tea Leaves" filter="fooddrink">
+	<commodity name="crate_of_tea_leaves" display_name="Crate of Tea Leaves" filter="fooddrink">
 		<display skin="ui\commodityIcons.xml" icon="tea_leaves_bushel"/>
 		<description text="Tea leaves are important indeed for any Clockworkian - their production and import is a lucrative trade." />
 		<gameplay_description text="This can be sold at a trade depot for a good price." />

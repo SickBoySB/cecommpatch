@@ -343,11 +343,11 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Ammo Autoloaders"
 				product_name="Ammo Autoloader">
 				<visible>
-					<require_commodity_geq name="ammo3" amount="30" failure_reason="30x FMJ Ammunition needed." is_cost="1" />
+					<require_commodity_geq name="ammo3" amount="30" failure_reason="30x FMJ Ammo needed." is_cost="1" />
 					<require_commodity_geq name="iron_plates" amount="10" failure_reason="10x Iron Plates needed." is_cost="2" />
 					<require_commodity_geq name="brass_cogs" amount="10" failure_reason="10x Brass Cogs needed." is_cost="3" />
 				</visible>
-			<cost name="ammo_box2" display_name="FMJ Ammunition"
+			<cost name="ammo_box2" display_name="FMJ Ammo"
 				amount="30"/>
 			<cost name="iron_plate_icon" display_name="Iron Plates"
 				amount="10"/>
@@ -610,7 +610,7 @@ are already contained within other buildings. Consider those a placeholder for l
 		<module_jobs_for name="Ceramics Workshop">
 			
 			<module_job name="Make Bricks"
-				display_name="Bricks (5)"
+				display_name="Bricks"
 				icon_skin="ui\commodityIcons.xml"
 				icon="bricks_pallet"
 				standing_order_display_name="Standing Order for Bricks"
@@ -957,9 +957,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Charcoal"
 				product_name="Charcoal">
 				<visible>
-					<require_commodity_geq name="logs" amount="3" failure_reason="1x Log needed." is_cost="1" />
+					<require_commodity_geq name="logs" amount="3" failure_reason="3x Log needed." is_cost="1" />
 				</visible>
-				<cost name="logs" display_name="Log"
+				<cost name="logs" display_name="Logs"
 					amount="3"/><!-- only used for tooltip cost icon-->
 				<out product="charcoal"
 					amount="1"/> <!-- used for passing product to job-->
@@ -1231,7 +1231,7 @@ are already contained within other buildings. Consider those a placeholder for l
 			</module_job>
 			-->
 			<module_job name="Make Bottle of Sulphur Tonic"
-				display_name="Bottle of Sulphur Tonic"
+				display_name="Sulphur Tonic"
 				icon_skin="ui\commodityIcons.xml"
 				icon="sulphur_tonic_bottle"
 				standing_order_display_name="Standing Order for Bottle of Sulphur Tonic"
@@ -1255,7 +1255,7 @@ are already contained within other buildings. Consider those a placeholder for l
 			</module_job>
 			
 			<module_job name="Make Bottle of Laudanum"
-				display_name="Bottle of Laudanum"
+				display_name="Laudanum"
 				icon_skin="ui\commodityIcons.xml"
 				icon="laudanum_bottle"
 				standing_order_display_name="Standing Order for Bottle of Laudanum"
@@ -1273,7 +1273,7 @@ are already contained within other buildings. Consider those a placeholder for l
 			</module_job>
 			
 			<module_job name="Make Bucket of Lacquer"
-				display_name="Bucket of Lacquer"
+				display_name="Lacquer"
 				icon_skin="ui\commodityIcons.xml"
 				icon="lacquer_bucket"
 				standing_order_display_name="Standing Order for Buckets of Lacquer"
@@ -1636,7 +1636,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				<cost name="rough_stone_block_icon" display_name="Stone"
 					amount="2"/>
 				<!-- only used for tooltip cost icon-->
-				<out product="boxed_musket_locker" display_name="Musket Locker"
+				<out product="boxed_musket_locker" display_name="Improvised Musket Locker"
 					amount="1"/> <!-- used for passing product to job-->
 			</module_job>
 			
@@ -2014,7 +2014,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				<cost name="clay_icon" display_name="Clay"
 					amount="6"/>
 				<!-- only used for tooltip cost icon-->
-				<out product="boxed_tripistol_locker" display_name="Tripistol"
+				<out product="boxed_tripistol_locker" display_name="Ceramic Tripistol Locker"
 					amount="1"/> <!-- used for passing product to job-->
 			</module_job>
 			
@@ -2138,7 +2138,7 @@ are already contained within other buildings. Consider those a placeholder for l
 			</module_job>
 		
 			<module_job name="Make Bucket of Molasses"
-				display_name="Bucket of Molasses"
+				display_name="Molasses"
 				icon_skin="ui\commodityIcons.xml"
 				icon="molasses_bucket"
 				standing_order_display_name="Standing Order for Buckets of Molasses"
@@ -2180,7 +2180,7 @@ are already contained within other buildings. Consider those a placeholder for l
 			</module_job>
 			
 			<module_job name="Make Tin Exotic Caviar"
-				display_name="Tin Exotic Caviar"
+				display_name="Tinned Exotic Caviar"
 				icon_skin="ui\commodityIcons.xml"
 				icon="tinned_exotic_caviar"
 				standing_order_display_name="Standing Order for Tin Exotic Caviar"
@@ -2650,7 +2650,7 @@ are already contained within other buildings. Consider those a placeholder for l
                     <cost name="iron_ingots_icon" display_name="Iron Ingots"
 					amount="2"/>
 				<!-- only used for tooltip cost icon-->
-				<out product="boxed_blunderbuss_locker"
+				<out product="boxed_blunderbuss_locker" display_name="Blunderbuss Locker"
 					amount="1"/> <!-- used for passing product to job-->
 			</module_job>
 			
@@ -2681,7 +2681,7 @@ are already contained within other buildings. Consider those a placeholder for l
                     <cost name="iron_pipe_icon" display_name="Iron Pipe"
 					amount="1"/>
 				<!-- only used for tooltip cost icon-->
-				<out product="boxed_revolver_locker" display_name="Revolver"
+				<out product="boxed_revolver_locker" display_name="Revolver Locker"
 					amount="1"/> <!-- used for passing product to job-->
 			</module_job>
 			
@@ -2715,7 +2715,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				<cost name="cog_bucket" display_name="Brass Cog"
 					amount="1"/>
 				<!-- only used for tooltip cost icon-->
-				<out product="boxed_jezail_rifle_locker" display_name="Jezail Rifle"
+				<out product="boxed_jezail_rifle_locker" display_name="Jezail Rifle Locker"
 					amount="1"/> <!-- used for passing product to job-->
 			</module_job>
 			
@@ -2749,7 +2749,7 @@ are already contained within other buildings. Consider those a placeholder for l
                     <cost name="steel_ingots_icon" display_name="Steel Ingots"
 					amount="2"/>
 				<!-- only used for tooltip cost icon-->
-				<out product="boxed_carbine_locker" display_name="Carbine"
+				<out product="boxed_carbine_locker" display_name="Carbine Locker"
 					amount="1"/> <!-- used for passing product to job-->
 			</module_job>
 			
@@ -2783,7 +2783,7 @@ are already contained within other buildings. Consider those a placeholder for l
                     <cost name="steel_ingots_icon" display_name="Steel Ingots"
 					amount="6"/>
 				<!-- only used for tooltip cost icon-->
-				<out product="boxed_grenade_launcher_locker" display_name="Grenade Launcher"
+				<out product="boxed_grenade_launcher_locker" display_name="Grenade Launcher Locker"
 					amount="1"/> <!-- used for passing product to job-->
 			</module_job>
 			
@@ -2817,7 +2817,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				<cost name="planks_icon" display_name="Plank"
 					amount="1"/>
 				<!-- only used for tooltip cost icon-->
-				<out product="boxed_leyden_pistol_locker" display_name="Leyden Pistol"
+				<out product="boxed_leyden_pistol_locker" display_name="Leyden Pistol Locker"
 					amount="1"/> <!-- used for passing product to job-->
 			</module_job>
 			
@@ -3557,14 +3557,23 @@ are already contained within other buildings. Consider those a placeholder for l
 			</module_job>
 			-->
 			<module_job name="Make Bottle of Sulphur Tonic"
-				display_name="Bottle of Sulphur Tonic"
+				display_name="Sulphur Tonic"
 				icon_skin="ui\commodityIcons.xml"
 				icon="sulphur_tonic_bottle"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Bottle of Sulphur Tonic"
-				product_name="Sulphur Tonic">
+				product_name="Sulphur Tonic"
+                    default_state="hidden">
+                    <grayed>
+					<require_session_bool name="military_healing_unlocked"
+                                   value="1"
+                                   failure_reason="Requires researching Tonic Healing at laboratory."/>
+				</grayed>
 				<visible>
 					<require_commodity_geq name="sulphur" amount="5" failure_reason="5x Sulphur needed." is_cost="1" />
+                         <require_session_bool name="military_healing_unlocked"
+                                   value="1"
+                                   failure_reason="Requires researching Tonic Healing at laboratory."/>
 				</visible>
 				<cost name="sulphur_lump" display_name="Sulphur"
 					amount="5"/><!-- only used for tooltip cost icon-->
@@ -3573,7 +3582,7 @@ are already contained within other buildings. Consider those a placeholder for l
 			</module_job>
 			
 			<module_job name="Make Bottle of Laudanum"
-				display_name="Bottle of Laudanum"
+				display_name="Laudanum"
 				icon_skin="ui\commodityIcons.xml"
 				icon="laudanum_bottle"
 				multiplier="5"
@@ -3592,7 +3601,7 @@ are already contained within other buildings. Consider those a placeholder for l
 			</module_job>
 			
 			<module_job name="Make Bucket of Lacquer"
-				display_name="Bucket of Lacquer"
+				display_name="Lacquer"
 				icon_skin="ui\commodityIcons.xml"
 				icon="lacquer_bucket"
 				multiplier="5"
@@ -3690,7 +3699,7 @@ are already contained within other buildings. Consider those a placeholder for l
 			</module_job>
 			
 			<module_job name="Make Bucket of Ink"
-				display_name="Bucket of Ink"
+				display_name="Ink"
 				icon_skin="ui\commodityIcons.xml"
 				icon="bucketInk"
 				multiplier="5"
@@ -3759,11 +3768,11 @@ are already contained within other buildings. Consider those a placeholder for l
 			</module_job>
 			
 			<module_job name="Make SK-MK1 Oculars"
-				display_name="SK-MK1 Oculars"
+				display_name="MK-1 SK Oculars"
 				icon_skin="ui\commodityIcons.xml"
 				icon="sk_head_mk2"
 				multiplier="5"
-				standing_order_display_name="Standing Order for SK-MK1 Oculars"
+				standing_order_display_name="Standing Order for MK-1 SK Oculars"
 				product_name="SK-MK1 Oculars"
 				default_state="hidden">
                     <grayed>
@@ -4078,7 +4087,7 @@ are already contained within other buildings. Consider those a placeholder for l
 			</module_job>
 			
 			<module_job name="Make Stack of Paper"
-				display_name="Paper Stacks"
+				display_name="Paper"
 				icon_skin="ui\commodityIcons.xml"
 				icon="paperBundle"
 				multiplier="5"
@@ -4110,7 +4119,7 @@ are already contained within other buildings. Consider those a placeholder for l
 			</module_job>
 			
 			<module_job name="Make Construction Frame"
-				display_name="SK Construction Frame"
+				display_name="Construction Frame"
 				icon_skin="ui\commodityIcons.xml"
 				icon="sk_frame"
 				multiplier="5"
@@ -4381,7 +4390,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				<cost name="rough_stone_block_icon" display_name="Stone"
 					amount="10"/>
 				<!-- only used for tooltip cost icon-->
-				<out product="boxed_musket_locker" display_name="Musket Locker"
+				<out product="boxed_musket_locker" display_name="Improvised Musket Locker"
 					amount="5"/> <!-- used for passing product to job-->
 			</module_job>
 			
@@ -4952,12 +4961,18 @@ are already contained within other buildings. Consider those a placeholder for l
 			</module_job>
 		
 			<module_job name="Make Bucket of Molasses"
-				display_name="Bucket of Molasses"
+				display_name="Molasses"
 				icon_skin="ui\commodityIcons.xml"
 				icon="molasses_bucket"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Buckets of Molasses"
-				product_name="Bucket of Molasses">
+				product_name="Bucket of Molasses"
+				default_state="hidden">
+				<grayed>
+					<require_session_bool name="biomeTropical,biomeDesert"
+						value="1"
+						failure_reason="Sugarcane only grows in certain biomes."/>
+				</grayed>
 				<visible>
 					<require_commodity_geq name="cut_sugarcane" amount="5" failure_reason="5x Sugarcane needed." is_cost="1" />
 				</visible>
@@ -4984,7 +4999,7 @@ are already contained within other buildings. Consider those a placeholder for l
 			</module_job>
 			
 			<module_job name="Make Tin Exotic Caviar"
-				display_name="Tin Exotic Caviar"
+				display_name="Tinned Exotic Caviar"
 				icon_skin="ui\commodityIcons.xml"
 				icon="tinned_exotic_caviar"
 				multiplier="5"
@@ -5482,7 +5497,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				icon="steam_distributor"
 				multiplier="5"
 				standing_order_display_name="Standing Order for Steam Distributors"
-				product_name="Steam Oven"
+				product_name="Steam Distributor"
                     default_state="hidden">
                     <grayed>
 					<require_session_bool name="steelworking_mining_unlocked"
@@ -5589,7 +5604,7 @@ are already contained within other buildings. Consider those a placeholder for l
                     <cost name="iron_ingots_icon" display_name="Iron Ingots"
 					amount="10"/>
 				<!-- only used for tooltip cost icon-->
-				<out product="boxed_blunderbuss_locker"
+				<out product="boxed_blunderbuss_locker" display_name="Blunderbuss Locker"
 					amount="5"/> <!-- used for passing product to job-->
 			</module_job>
 			
@@ -5621,7 +5636,7 @@ are already contained within other buildings. Consider those a placeholder for l
                     <cost name="iron_pipe_icon" display_name="Iron Pipes"
 					amount="5"/>
 				<!-- only used for tooltip cost icon-->
-				<out product="boxed_revolver_locker" display_name="Revolver"
+				<out product="boxed_revolver_locker" display_name="Revolver Locker"
 					amount="5"/> <!-- used for passing product to job-->
 			</module_job>
 			
@@ -5656,7 +5671,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				<cost name="cog_bucket" display_name="Brass Cogs"
 					amount="5"/>
 				<!-- only used for tooltip cost icon-->
-				<out product="boxed_jezail_rifle_locker" display_name="Jezail Rifle"
+				<out product="boxed_jezail_rifle_locker" display_name="Jezail Rifle Locker"
 					amount="5"/> <!-- used for passing product to job-->
 			</module_job>
 			
@@ -5691,7 +5706,7 @@ are already contained within other buildings. Consider those a placeholder for l
                     <cost name="steel_ingots_icon" display_name="Steel Ingots"
 					amount="10"/>
 				<!-- only used for tooltip cost icon-->
-				<out product="boxed_carbine_locker" display_name="Carbine"
+				<out product="boxed_carbine_locker" display_name="Carbine Locker"
 					amount="5"/> <!-- used for passing product to job-->
 			</module_job>
 			
@@ -5726,7 +5741,7 @@ are already contained within other buildings. Consider those a placeholder for l
                     <cost name="steel_ingots_icon" display_name="Steel Ingots"
 					amount="30"/>
 				<!-- only used for tooltip cost icon-->
-				<out product="boxed_grenade_launcher_locker" display_name="Grenade Launcher"
+				<out product="boxed_grenade_launcher_locker" display_name="Grenade Launcher Locker"
 					amount="5"/> <!-- used for passing product to job-->
 			</module_job>
 			
@@ -5761,7 +5776,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				<cost name="planks_icon" display_name="Planks"
 					amount="5"/>
 				<!-- only used for tooltip cost icon-->
-				<out product="boxed_leyden_pistol_locker" display_name="Leyden Pistol"
+				<out product="boxed_leyden_pistol_locker" display_name="Leyden Pistol Locker"
 					amount="5"/> <!-- used for passing product to job-->
 			</module_job>
 			
@@ -7810,7 +7825,7 @@ are already contained within other buildings. Consider those a placeholder for l
 			</module_job>
 			
 			<module_job name="Make Stack of Paper"
-				display_name="Paper Stacks"
+				display_name="Paper"
 				icon_skin="ui\commodityIcons.xml"
 				icon="paperBundle"
 				standing_order_display_name="Standing Order for Paper Stacks"
@@ -7855,7 +7870,7 @@ are already contained within other buildings. Consider those a placeholder for l
 			</module_job>
 			
                <module_job name="Make Construction Frame"
-				display_name="SK Construction Frame"
+				display_name="Construction Frame"
 				icon_skin="ui\commodityIcons.xml"
 				icon="sk_frame" 
 				standing_order_display_name="Standing Order for SK Construction Frames"
@@ -8120,7 +8135,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				</grayed>
 				<visible>
 					<require_commodity_geq name="keg_of_black_powder" amount="1" failure_reason="1x Gunpowder needed." is_cost="1" />
-					<require_commodity_geq name="iron_plates" amount="1" failure_reason="2x Iron Plates needed." is_cost="2" />
+					<require_commodity_geq name="iron_plates" amount="1" failure_reason="1x Iron Plates needed." is_cost="2" />
                          <require_session_bool name="military_weapons1_unlocked"
                                    value="1"
                                    failure_reason="Requires researching Advanced Weaponry at laboratory."/>
@@ -8164,15 +8179,15 @@ are already contained within other buildings. Consider those a placeholder for l
 			</module_job>
 			
 			<module_job name="Make MK1 Machine Gun"
-				display_name="MK1 Machine Gun"
+				display_name="MK-1 Machine Gun"
 				icon_skin="ui\commodityIcons.xml"
 				icon="sk_packedgun"
-				standing_order_display_name="Standing Order for MK1 Machine Guns"
+				standing_order_display_name="Standing Order for MK-1 Machine Guns"
 				product_name="MK1 Machine Gun"> 
 				<visible>
 					<require_commodity_geq name="iron_pipes" amount="20" failure_reason="20x Iron Pipes needed." is_cost="1" />
 					<require_commodity_geq name="planks" amount="10" failure_reason="10x Planks needed." is_cost="2" />
-					<require_commodity_geq name="iron_plates" amount="10" failure_reason="5x Iron Plates needed." is_cost="3" />
+					<require_commodity_geq name="iron_plates" amount="10" failure_reason="10x Iron Plates needed." is_cost="3" />
 					<require_commodity_geq name="ammo_autoloader" amount="1" failure_reason="1x Ammo Autoloader needed." is_cost="4" />
 				</visible>
 				<cost name="iron_pipe_icon" display_name="Iron Pipes"
@@ -8188,10 +8203,10 @@ are already contained within other buildings. Consider those a placeholder for l
 			</module_job>
 
 			<module_job name="Make SK-MK1 Chassis"
-				display_name="SK-MK1 Chassis"
+				display_name="MK-1 SK Chassis"
 				icon_skin="ui\commodityIcons.xml"
 				icon="sk_torso_mk2"
-				standing_order_display_name="Standing Order for SK-MK1 Chassies"
+				standing_order_display_name="Standing Order for MK-1 SK Chassies"
 				product_name="SK-MK1 Chassis"> 
 				<visible>
 					<require_commodity_geq name="prototype_steam_knight_chassis" amount="1" failure_reason="1x Prototype SK Chassis needed." is_cost="1" />
@@ -8748,7 +8763,7 @@ are already contained within other buildings. Consider those a placeholder for l
 						failure_reason="Requires researching Coffee at laboratory."/>
 				</grayed>
                     <visible>
-					<require_gameobject tag="bushel_of_coffee_fruit" amount="2" failure_reason="10x Coffee Fruit needed." is_cost="1" />
+					<require_gameobject tag="bushel_of_coffee_fruit" amount="2" failure_reason="2x Coffee Fruit needed." is_cost="1" />
                     </visible>
 				<cost name="coffee_fruit_bushel" display_name="Coffee Fruit"
 					amount="2"/><!-- only used for tooltip cost icon-->
@@ -9363,7 +9378,7 @@ are already contained within other buildings. Consider those a placeholder for l
 			</module_job>
 			
 			<module_job name="Make Bucket of Ink"
-				display_name="Bucket of Ink"
+				display_name="Ink"
 				icon_skin="ui\commodityIcons.xml"
 				icon="bucketInk"
 				standing_order_display_name="Standing Order for Buckets of Ink"
@@ -9648,7 +9663,7 @@ are already contained within other buildings. Consider those a placeholder for l
 						failure_reason="Wheat can only be grown in certain climates."/>
 				</grayed>
 				<visible>
-					<require_commodity_geq name="bag_of_wheat_flour" amount="1" failure_reason="5x Wheat needed." is_cost="1" />
+					<require_commodity_geq name="bag_of_wheat_flour" amount="1" failure_reason="1x Wheat needed." is_cost="1" />
 				</visible>
 				<cost name="grain_sack" display_name="Wheat"
 					amount="1"/><!-- only used for tooltip cost icon-->
