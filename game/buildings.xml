@@ -769,11 +769,11 @@ are already contained within other buildings. Consider those a placeholder for l
 				product_name="Iron Ingots">
 				<visible>
 					<require_gameobject tag="iron,ore" amount="3" failure_reason="3x Hematite Ore needed." is_cost="1" />
-					<require_gameobject tag="fuel" amount="1" failure_reason="1x Coal or Charcoal needed." is_cost="2" />
+					<require_gameobject tag="fuel" amount="1" failure_reason="1x Any Fuel needed." is_cost="2" />
 				</visible>
 				<cost name="hematite_icon" display_name="Hematite Ore"
 					amount="3"/>
-				<cost name="coal_chunk" display_name="Coal or Charcoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="1"/><!-- only used for tooltip cost icon-->
 				<out product="iron_ingots"
 					amount="1"/> <!-- used for passing product to job-->
@@ -787,11 +787,11 @@ are already contained within other buildings. Consider those a placeholder for l
 				product_name="Copper Ingots">
 				<visible>
 					<require_commodity_geq name="malachite" amount="3" failure_reason="3x Malachite Ore needed." is_cost="1" />
-					<require_gameobject tag="fuel" amount="1" failure_reason="1x Coal or Charcoal needed." is_cost="2" />
+					<require_gameobject tag="fuel" amount="1" failure_reason="1x Any Fuel needed." is_cost="2" />
 				</visible>
 				<cost name="malachite_icon" display_name="Malachite Ore"
 					amount="3"/>
-				<cost name="coal_chunk" display_name="Coal or Charcoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="1"/><!-- only used for tooltip cost icon-->
 				<out product="copper_ingots" 
 					amount="1"/> <!-- used for passing product to job-->
@@ -805,11 +805,11 @@ are already contained within other buildings. Consider those a placeholder for l
 				product_name="Zinc Ingots">
 				<visible>
 					<require_commodity_geq name="sphalerite" amount="3" failure_reason="3x Sphalerite Ore needed." is_cost="1" />
-					<require_gameobject tag="fuel" amount="1" failure_reason="1x Coal or Charcoal needed." is_cost="2" />
+					<require_gameobject tag="fuel" amount="1" failure_reason="1x Any Fuel needed." is_cost="2" />
 				</visible>
 				<cost name="sphalerite_icon" display_name="Sphalerite Ore"
 					amount="3"/>
-				<cost name="coal_chunk" display_name="Coal or Charcoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="1"/><!-- only used for tooltip cost icon-->
 				<out product="zinc_ingots"
 					amount="1"/> <!-- used for passing product to job-->
@@ -823,11 +823,11 @@ are already contained within other buildings. Consider those a placeholder for l
 				product_name="Gold Ingots">
 				<visible>
 					<require_commodity_geq name="native_gold" amount="3" failure_reason="3x Gold Ore needed." is_cost="1" />
-					<require_gameobject tag="fuel" amount="1" failure_reason="1x Coal or Charcoal needed." is_cost="2" />
+					<require_gameobject tag="fuel" amount="1" failure_reason="1x Any Fuel needed." is_cost="2" />
 				</visible>
 				<cost name="native_gold_icon" display_name="Gold Ore"
 					amount="3"/>
-				<cost name="coal_chunk" display_name="Coal or Charcoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="1"/><!-- only used for tooltip cost icon-->
 				<out product="gold_ingots"
 					amount="1"/> <!-- used for passing product to job-->
@@ -842,13 +842,13 @@ are already contained within other buildings. Consider those a placeholder for l
 				<visible>
 					<require_commodity_geq name="copper_ingots" amount="1" failure_reason="1x Copper Ingot needed." is_cost="1" />
 					<require_commodity_geq name="zinc_ingots" amount="1" failure_reason="1x Zinc Ingot needed." is_cost="2" />
-					<require_gameobject tag="fuel" amount="1" failure_reason="1x Coal or Charcoal needed." is_cost="3" />
+					<require_gameobject tag="fuel" amount="1" failure_reason="1x Any Fuel needed." is_cost="3" />
 				</visible>
 				<cost name="copper_ingots_icon" display_name="Copper Ingot"
 					amount="1"/>
 				<cost name="zinc_ingots_icon" display_name="Zinc Ingot"
 					amount="1"/>
-				<cost name="coal_chunk" display_name="Coal or Charcoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="1"/><!-- only used for tooltip cost icon-->
 				<out product="brass_ingots"
 					amount="1"/> <!-- used for passing product to job-->
@@ -869,7 +869,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				<visible>
 					<require_commodity_geq name="iron_ingots" amount="1" failure_reason="1x Iron Ingot needed." is_cost="1" />
 					<require_gameobject tag="flux" amount="1" failure_reason="1x Chalk needed." is_cost="2" />
-					<require_gameobject tag="fuel" amount="1" failure_reason="1x Coal or Charcoal needed." is_cost="3" />
+					<require_gameobject tag="fuel" amount="1" failure_reason="1x Any Fuel needed." is_cost="3" />
                          <require_session_bool name="steelworking_research_unlocked"
 						value="1"
 						failure_reason="Requires researching Steelworking at laboratory."/>
@@ -878,7 +878,7 @@ are already contained within other buildings. Consider those a placeholder for l
 					amount="1"/>
 				<cost name="chalk_icon" display_name="Chalk"
 					amount="1"/>
-				<cost name="coal_chunk" display_name="Coal or Charcoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="1"/><!-- only used for tooltip cost icon-->
 				<out product="steel_ingots"
 					amount="1"/> <!-- used for passing product to job-->
@@ -898,11 +898,11 @@ are already contained within other buildings. Consider those a placeholder for l
 				</grayed>
 				<visible>
 					<require_commodity_geq name="pitchblende" amount="1" failure_reason="1x Pitchblende needed." is_cost="1" />
-					<require_gameobject tag="fuel" amount="1" failure_reason="1x Coal or Charcoal needed." is_cost="2" />
+					<require_gameobject tag="fuel" amount="1" failure_reason="1x Any Fuel needed." is_cost="2" />
 				</visible>
 				<cost name="pitchblende" display_name="Pitchblende"
 					amount="1"/>
-				<cost name="coal_chunk" display_name="Coal or Charcoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="1"/><!-- only used for tooltip cost icon-->
 				<out product="uranium_ingots"
 					amount="1"/> <!-- used for passing product to job-->
@@ -957,9 +957,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Charcoal"
 				product_name="Charcoal">
 				<visible>
-					<require_commodity_geq name="logs" amount="3" failure_reason="3x Log needed." is_cost="1" />
+					<require_commodity_geq name="logs" amount="3" failure_reason="3x Any Timber needed." is_cost="1" />
 				</visible>
-				<cost name="logs" display_name="Logs"
+				<cost name="logs" display_name="Any Timber"
 					amount="3"/><!-- only used for tooltip cost icon-->
 				<out product="charcoal"
 					amount="1"/> <!-- used for passing product to job-->
@@ -1002,9 +1002,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				multiplier="5"
 				product_name="Charcoal">
 				<visible>
-					<require_commodity_geq name="logs" amount="15" failure_reason="15x Logs needed." is_cost="1" />
+					<require_commodity_geq name="logs" amount="15" failure_reason="15x Any Timber needed." is_cost="1" />
 				</visible>
-				<cost name="logs" display_name="Logs"
+				<cost name="logs" display_name="Any Timber"
 					amount="15"/><!-- only used for tooltip cost icon-->
 				<out product="charcoal"
 					amount="5"/> <!-- only used for tooltip cost icon -->
@@ -1189,11 +1189,11 @@ are already contained within other buildings. Consider those a placeholder for l
 				product_name="Gunpowder">
 				<visible>
 					<require_commodity_geq name="sulphur" amount="1" failure_reason="1x Sulphur needed." is_cost="1" />
-					<require_gameobject tag="fuel" amount="1" failure_reason="1x Coal or Charcoal needed." is_cost="2" />
+					<require_gameobject tag="fuel" amount="1" failure_reason="1x Any Fuel needed." is_cost="2" />
 				</visible>
 				<cost name="sulphur_lump" display_name="Sulphur"
 					amount="1"/>
-				<cost name="charcoal_bushel_icon" display_name="Coal or Charcoal"
+				<cost name="charcoal_bushel_icon" display_name="Any Fuel"
 					amount="1"/><!-- only used for tooltip cost icon-->
 				<out product="keg_of_black_powder"
 					amount="2"/> <!-- used for passing product to job-->
@@ -1286,14 +1286,14 @@ are already contained within other buildings. Consider those a placeholder for l
 				</grayed>
 				<visible>
 					<require_commodity_geq name="sulphur" amount="3" failure_reason="3x Sulphur needed." is_cost="1" />
-					<require_gameobject tag="fuel" amount="3" failure_reason="3x Coal or Charcoal needed." is_cost="2" />
+					<require_gameobject tag="fuel" amount="3" failure_reason="3x Any Fuel needed." is_cost="2" />
 					<require_session_bool name="lacquer_synthesis_unlocked"
                                    value="1"
                                    failure_reason="Requires researching Lacquer Synthesis at laboratory."/>
 				</visible>
 				<cost name="sulphur_lump" display_name="Sulphur"
 					amount="3"/>
-				<cost name="coal_chunk" display_name="Coal or Charcoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="3"/><!-- only used for tooltip cost icon-->
 				<out product="lacquer"
 					amount="1"/> <!-- used for passing product to job-->
@@ -1314,7 +1314,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				<visible>
 					<require_commodity_geq name="sulphur" amount="5" failure_reason="5x Sulphur needed." is_cost="1" />
 					<require_commodity_geq name="keg_of_black_powder" amount="5" failure_reason="5x Gunpowder needed." is_cost="2" />
-					<require_gameobject tag="fuel" amount="5" failure_reason="5x Coal or Charcoal needed." is_cost="3" />
+					<require_gameobject tag="fuel" amount="5" failure_reason="5x Any Fuel needed." is_cost="3" />
 					<require_session_bool name="discovery_steelworking_steamknight"
                                    value="1"
                                    failure_reason="Requires researching Steam Knight Tech at laboratory."/>
@@ -1323,7 +1323,7 @@ are already contained within other buildings. Consider those a placeholder for l
 					amount="5"/>
 				<cost name="gunpowder_barrel" display_name="Gunpowder"
 					amount="5"/>
-				<cost name="coal_chunk" display_name="Coal or Charcoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="5"/>
 				<out product="reactive_catalyst"
 					amount="1"/>
@@ -1409,9 +1409,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Workbenches"
 				product_name="Assembly Workbench">
 				<visible>
-					<require_commodity_geq name="logs" amount="2" failure_reason="2x Logs needed." is_cost="1" />
+					<require_commodity_geq name="logs" amount="2" failure_reason="2x Any Timber needed." is_cost="1" />
 				</visible>
-			<cost name="logs" display_name="Logs"
+			<cost name="logs" display_name="Any Timber"
 				amount="2"/><!-- only used for tooltip cost icon-->
 			<out product="boxed_workbench"
 				amount="1"/> <!-- used for tooltip cost icon and passing product to job-->
@@ -2065,10 +2065,10 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Tinned Meat"
 				product_name="Tinned Meat">
 				<visible>
-					<require_gameobject tag="meat,raw" amount="1" failure_reason="1x Raw Meat needed." is_cost="1" />
+					<require_gameobject tag="meat,raw" amount="1" failure_reason="1x Any Raw Meat needed." is_cost="1" />
 					<require_commodity_geq name="iron_ingots" amount="1" failure_reason="1x Iron Ingot needed." is_cost="2" />
 				</visible>
-				<cost name="raw_meat_category" display_name="Raw Meat"
+				<cost name="raw_meat_category" display_name="Any Raw Meat"
 					amount="1"/>
 				<cost name="iron_ingots_icon" display_name="Iron Ingot"
 					amount="1"/><!-- only used for tooltip cost icon-->
@@ -3503,11 +3503,11 @@ are already contained within other buildings. Consider those a placeholder for l
 				product_name="Gunpowder">
 				<visible>
 					<require_commodity_geq name="sulphur" amount="5" failure_reason="5x Sulphur needed." is_cost="1" />
-					<require_gameobject tag="fuel" amount="5" failure_reason="5x Coal or Charcoal needed." is_cost="2" />
+					<require_gameobject tag="fuel" amount="5" failure_reason="5x Any Fuel needed." is_cost="2" />
 				</visible>
 				<cost name="sulphur_lump" display_name="Sulphur"
 					amount="5"/>
-				<cost name="charcoal_bushel_icon" display_name="Coal or Charcoal"
+				<cost name="charcoal_bushel_icon" display_name="Any Fuel"
 					amount="5"/><!-- only used for tooltip cost icon-->
 				<out product="keg_of_black_powder"
 					amount="10"/> <!-- used for passing product to job-->
@@ -3615,14 +3615,14 @@ are already contained within other buildings. Consider those a placeholder for l
 				</grayed>
 				<visible>
 					<require_commodity_geq name="sulphur" amount="15" failure_reason="15x Sulphur needed." is_cost="1" />
-					<require_gameobject tag="fuel" amount="15" failure_reason="15x Coal or Charcoal needed." is_cost="2" />
+					<require_gameobject tag="fuel" amount="15" failure_reason="15x Any Fuel needed." is_cost="2" />
 					<require_session_bool name="lacquer_synthesis_unlocked"
                                    value="1"
                                    failure_reason="Requires researching Lacquer Synthesis at laboratory."/>
 				</visible>
 				<cost name="sulphur_lump" display_name="Sulphur"
 					amount="15"/>
-				<cost name="coal_chunk" display_name="Coal or Charoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="15"/><!-- only used for tooltip cost icon-->
 				<out product="lacquer"
 					amount="5"/> <!-- used for passing product to job-->
@@ -3644,7 +3644,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				<visible>
 					<require_commodity_geq name="sulphur" amount="25" failure_reason="25x Sulphur needed." is_cost="1" />
 					<require_commodity_geq name="keg_of_black_powder" amount="25" failure_reason="25x Gunpowder needed." is_cost="1" />
-					<require_gameobject tag="fuel" amount="25" failure_reason="25x Coal or Charcoal needed." is_cost="2" />
+					<require_gameobject tag="fuel" amount="25" failure_reason="25x Any Fuel needed." is_cost="2" />
 					<require_session_bool name="discovery_steelworking_steamknight"
                                    value="1"
                                    failure_reason="Requires researching Steam Knight Tech at laboratory."/>
@@ -3653,7 +3653,7 @@ are already contained within other buildings. Consider those a placeholder for l
 					amount="25"/>
 				<cost name="gunpowder_barrel" display_name="Gunpowder"
 					amount="25"/>
-				<cost name="coal_chunk" display_name="Coal or Charcoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="25"/>
 				<out product="reactive_catalyst"
 					amount="5"/>
@@ -3706,9 +3706,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Buckets of Ink"
 				product_name="Bucket of Ink">
 				<visible>
-					<require_gameobject tag="fuel" amount="50" failure_reason="50x Coal or Charcoal needed." is_cost="1" />
+					<require_gameobject tag="fuel" amount="50" failure_reason="50x Any Fuel needed." is_cost="1" />
 				</visible>
-				<cost name="coal_chunk" display_name="Coal or Charcoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="50"/><!-- only used for tooltip cost icon-->
 				<out product="bucket_of_ink"
 					amount="5"/> <!-- used for passing product to job-->
@@ -4078,9 +4078,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Planks"
 				product_name="Planks">
 				<visible>
-					<require_commodity_geq name="logs" amount="5" failure_reason="5x Logs needed." is_cost="1" />
+					<require_commodity_geq name="logs" amount="5" failure_reason="5x Any Timber needed." is_cost="1" />
 				</visible>
-			<cost name="logs" display_name="Logs"
+			<cost name="logs" display_name="Any Timber"
 				amount="5"/> <!-- only used for tooltip cost icon-->
 			<out product="planks" 
 				amount="10"/> <!-- used for tooltip cost icon and passing product to job-->
@@ -4205,9 +4205,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Workbenches"
 				product_name="Assembly Workbench">
 				<visible>
-					<require_commodity_geq name="logs" amount="10" failure_reason="10x Logs needed." is_cost="1" />
+					<require_commodity_geq name="logs" amount="10" failure_reason="10x Any Timber needed." is_cost="1" />
 				</visible>
-			<cost name="logs" display_name="Logs"
+			<cost name="logs" display_name="Any Timber"
 				amount="10"/><!-- only used for tooltip cost icon-->
 			<out product="boxed_workbench"
 				amount="5"/> <!-- used for tooltip cost icon and passing product to job-->
@@ -4892,10 +4892,10 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Tinned Meat"
 				product_name="Tinned Meat">
 				<visible>
-					<require_gameobject tag="meat,raw" amount="5" failure_reason="5x Raw Meat needed." is_cost="1" />
+					<require_gameobject tag="meat,raw" amount="5" failure_reason="5x Any Raw Meat needed." is_cost="1" />
 					<require_commodity_geq name="iron_ingots" amount="5" failure_reason="5x Iron Ingots needed." is_cost="2" />
 				</visible>
-				<cost name="raw_meat_category" display_name="Raw Meat"
+				<cost name="raw_meat_category" display_name="Any Raw Meat"
 					amount="5"/>
 				<cost name="iron_ingots_icon" display_name="Iron Ingots"
 					amount="5"/><!-- only used for tooltip cost icon-->
@@ -6266,9 +6266,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				multiplier="10"
 				product_name="Cooked Meat">
 				<visible>
-					<require_gameobject tag="meat,raw" amount="10" failure_reason="10x Raw Meat needed." is_cost="1" />
+					<require_gameobject tag="meat,raw" amount="10" failure_reason="10x Any Raw Meat needed." is_cost="1" />
 				</visible>
-				<cost name="raw_meat_category" display_name="Raw Meat"
+				<cost name="raw_meat_category" display_name="Any Raw Meat"
 					amount="10"/>
 				<out product="basic_food"
 					amount="40"/>
@@ -6310,9 +6310,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				multiplier="10"
 				product_name="Sausages">
 				<visible>
-					<require_gameobject tag="meat,raw" amount="20" failure_reason="20x Raw Meat needed." is_cost="1" />
+					<require_gameobject tag="meat,raw" amount="20" failure_reason="20x Any Raw Meat needed." is_cost="1" />
 				</visible>
-				<cost name="raw_meat_category" display_name="Raw Meat"
+				<cost name="raw_meat_category" display_name="Any Raw Meat"
 					amount="20"/><!-- only used for tooltip cost icon-->
 				<out product="bushel_of_sausages"
 					amount="20"/> <!-- used for passing product to job-->
@@ -6327,9 +6327,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				multiplier="10"
 				product_name="Farmers' Stew">
 				<visible>
-					<require_gameobject tag="vegetable" amount="20" failure_reason="20x Any Vegetables needed." is_cost="1" />
+					<require_gameobject tag="vegetable" amount="20" failure_reason="20x Any Vegetable needed." is_cost="1" />
 				</visible>
-				<cost name="raw_vegetables_category" display_name="Any Vegetables"
+				<cost name="raw_vegetables_category" display_name="Any Vegetable"
 					amount="20"/><!-- only used for tooltip cost icon-->
 				<out product="farmers_stew"
 					amount="20"/> <!-- used for passing product to job-->
@@ -6604,9 +6604,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				multiplier="10"
 				product_name="Planks">
 				<visible>
-					<require_commodity_geq name="logs" amount="10" failure_reason="10x Logs needed." is_cost="1" />
+					<require_commodity_geq name="logs" amount="10" failure_reason="10x Any Timber needed." is_cost="1" />
 				</visible>
-				<cost name="logs" display_name="Logs"
+				<cost name="logs" display_name="Any Timber"
 					amount="10"/> <!-- only used for tooltip cost icon-->
 				<out product="planks"
 					amount="20"/> <!-- used for tooltip cost icon and passing product to job-->
@@ -6746,9 +6746,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				multiplier="15"
 				product_name="Charcoal">
 				<visible>
-					<require_commodity_geq name="logs" amount="45" failure_reason="45x Logs needed." is_cost="1" />
+					<require_commodity_geq name="logs" amount="45" failure_reason="45x Any Timber needed." is_cost="1" />
 				</visible>
-				<cost name="logs" display_name="Logs"
+				<cost name="logs" display_name="Any Timber"
 					amount="45"/><!-- only used for tooltip cost icon-->
 				<out product="charcoal"
 					amount="15"/> <!-- used for passing product to job-->
@@ -6809,9 +6809,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Sausages"
 				product_name="Sausages">
 				<visible>
-					<require_gameobject tag="meat,raw" amount="2" failure_reason="2x Raw Meat needed." is_cost="1" />
+					<require_gameobject tag="meat,raw" amount="2" failure_reason="2x Any Raw Meat needed." is_cost="1" />
 				</visible>
-				<cost name="raw_meat_category" display_name="Raw Meat"
+				<cost name="raw_meat_category" display_name="Any Raw Meat"
 					amount="2"/><!-- only used for tooltip cost icon-->
 				<out product="bushel_of_sausages" display_name="Bushel of Sausages"
 					amount="2"/> <!-- used for passing product to job-->
@@ -7816,9 +7816,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Planks"
 				product_name="Planks">
 			<visible>
-			  <require_commodity_geq name="logs" amount="1" failure_reason="1x Logs needed." is_cost="1" />
+			  <require_commodity_geq name="logs" amount="1" failure_reason="1x Any Timber needed." is_cost="1" />
 			</visible>
-			<cost name="logs" display_name="Logs"
+			<cost name="logs" display_name="Any Timber"
 				amount="1"/> <!-- only used for tooltip cost icon-->
 			<out product="planks" 
 				amount="2"/> <!-- used for tooltip cost icon and passing product to job-->
@@ -7861,9 +7861,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Workbenches"
 				product_name="Assembly Workbench">
 				<visible>
-					<require_commodity_geq name="logs" amount="2" failure_reason="2x Logs needed." is_cost="1" />
+					<require_commodity_geq name="logs" amount="2" failure_reason="2x Any Timber needed." is_cost="1" />
 				</visible>
-			<cost name="logs" display_name="Logs"
+			<cost name="logs" display_name="Any Timber"
 				amount="2"/><!-- only used for tooltip cost icon-->
 			<out product="boxed_workbench"
 				amount="1"/> <!-- used for tooltip cost icon and passing product to job-->
@@ -8322,11 +8322,11 @@ are already contained within other buildings. Consider those a placeholder for l
 				product_name="Iron Ingots">
 				<visible>
 					<require_gameobject tag="iron,ore" amount="15" failure_reason="15x Hematite Ore needed." is_cost="1" />
-					<require_gameobject tag="fuel" amount="5" failure_reason="5x Coal or Charcoal needed." is_cost="2" />
+					<require_gameobject tag="fuel" amount="5" failure_reason="5x Any Fuel needed." is_cost="2" />
 				</visible>
 				<cost name="hematite_icon" display_name="Hematite Ore"
 					amount="15"/>
-				<cost name="coal_chunk" display_name="Coal or Charcoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="5"/><!-- only used for tooltip cost icon-->
 				<out product="iron_ingots"
 					amount="5"/> <!-- used for passing product to job-->
@@ -8341,11 +8341,11 @@ are already contained within other buildings. Consider those a placeholder for l
 				product_name="Copper Ingots">
 				<visible>
 					<require_commodity_geq name="malachite" amount="15" failure_reason="15x Malachite Ore needed." is_cost="1" />
-					<require_gameobject tag="fuel" amount="5" failure_reason="5x Coal or Charcoal needed." is_cost="2" />
+					<require_gameobject tag="fuel" amount="5" failure_reason="5x Any Fuel needed." is_cost="2" />
 				</visible>
 				<cost name="malachite_icon" display_name="Malachite Ore"
 					amount="15"/>
-				<cost name="coal_chunk" display_name="Coal or Charcoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="5"/><!-- only used for tooltip cost icon-->
 				<out product="copper_ingots"
 					amount="5"/> <!-- used for passing product to job-->
@@ -8360,11 +8360,11 @@ are already contained within other buildings. Consider those a placeholder for l
 				product_name="Zinc Ingots">
 				<visible>
 					<require_commodity_geq name="sphalerite" amount="15" failure_reason="15x Sphalerite Ore needed." is_cost="1" />
-					<require_gameobject tag="fuel" amount="5" failure_reason="5x Coal or Charcoal needed." is_cost="2" />
+					<require_gameobject tag="fuel" amount="5" failure_reason="5x Any Fuel needed." is_cost="2" />
 				</visible>
 				<cost name="sphalerite_icon" display_name="Sphalerite"
 					amount="15"/>
-				<cost name="coal_chunk" display_name="Coal or Charcoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="5"/><!-- only used for tooltip cost icon-->
 				<out product="zinc_ingots" 
 					amount="5"/> <!-- used for passing product to job-->
@@ -8379,11 +8379,11 @@ are already contained within other buildings. Consider those a placeholder for l
 				product_name="Gold Ingots">
 				<visible>
 					<require_commodity_geq name="native_gold" amount="15" failure_reason="15x Gold Ore needed." is_cost="1" />
-					<require_gameobject tag="fuel" amount="5" failure_reason="5x Coal or Charcoal needed." is_cost="2" />
+					<require_gameobject tag="fuel" amount="5" failure_reason="5x Any Fuel needed." is_cost="2" />
 				</visible>
 				<cost name="native_gold_icon" display_name="Gold Ore"
 					amount="15"/>
-				<cost name="coal_chunk" display_name="Coal or Charcoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="5"/><!-- only used for tooltip cost icon-->
 				<out product="gold_ingots"
 					amount="5"/> <!-- used for passing product to job-->
@@ -8399,13 +8399,13 @@ are already contained within other buildings. Consider those a placeholder for l
 				<visible>
 					<require_commodity_geq name="copper_ingots" amount="5" failure_reason="5x Copper Ingots needed." is_cost="1" />
 					<require_commodity_geq name="zinc_ingots" amount="5" failure_reason="5x Zinc Ingots needed." is_cost="2" />
-					<require_gameobject tag="fuel" amount="5" failure_reason="5x Coal or Charcoal" is_cost="3" />
+					<require_gameobject tag="fuel" amount="5" failure_reason="5x Any Fuel" is_cost="3" />
 				</visible>
 				<cost name="copper_ingots_icon" display_name="Copper Ingots"
 					amount="5"/>
 				<cost name="zinc_ingots_icon" display_name="Zinc Ingots"
 					amount="5"/>
-				<cost name="coal_chunk" display_name="Coal or Charcoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="5"/><!-- only used for tooltip cost icon-->
 				<out product="brass_ingots"
 					amount="5"/> <!-- used for passing product to job-->
@@ -8427,7 +8427,7 @@ are already contained within other buildings. Consider those a placeholder for l
 				<visible>
 					<require_commodity_geq name="iron_ingots" amount="5" failure_reason="5x Iron Ingots needed." is_cost="1" />
 					<require_gameobject tag="flux" amount="5" failure_reason="5x Chalk needed." is_cost="2" />
-					<require_gameobject tag="fuel" amount="5" failure_reason="5x Coal or Charcoal needed." is_cost="3" />
+					<require_gameobject tag="fuel" amount="5" failure_reason="5x Any Fuel needed." is_cost="3" />
                          <require_session_bool name="steelworking_research_unlocked"
 						value="1"
 						failure_reason="Requires researching Steelworking at laboratory."/>
@@ -8436,7 +8436,7 @@ are already contained within other buildings. Consider those a placeholder for l
 					amount="5"/>
 				<cost name="chalk_icon" display_name="Chalk"
 					amount="5"/>
-				<cost name="coal_chunk" display_name="Coal or Charcoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="5"/><!-- only used for tooltip cost icon-->
 				<out product="steel_ingots"
 					amount="5"/> <!-- used for passing product to job-->
@@ -8457,11 +8457,11 @@ are already contained within other buildings. Consider those a placeholder for l
 				</grayed>
 				<visible>
 					<require_commodity_geq name="pitchblende" amount="5" failure_reason="5x Pitchblende needed." is_cost="1" />
-					<require_gameobject tag="fuel" amount="5" failure_reason="5x Coal or Charcoal needed." is_cost="2" />
+					<require_gameobject tag="fuel" amount="5" failure_reason="5x Any Fuel needed." is_cost="2" />
 				</visible>
 				<cost name="pitchblende" display_name="Pitchblende"
 					amount="5"/>
-				<cost name="coal_chunk" display_name="Coal or Charcoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="5"/><!-- only used for tooltip cost icon-->
 				<out product="uranium_ingots" 
 					amount="5"/> <!-- used for passing product to job-->
@@ -8604,9 +8604,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Basic Food"
 				product_name="Cooked Meat">
 				<visible>
-					<require_gameobject tag="meat,raw" amount="1" failure_reason="1x Raw Meat needed." is_cost="1" />
+					<require_gameobject tag="meat,raw" amount="1" failure_reason="1x Any Raw Meat needed." is_cost="1" />
 				</visible>
-				<cost name="raw_meat_category" display_name="Raw Meat"
+				<cost name="raw_meat_category" display_name="Any Raw Meat"
 					amount="1"/>
 				<out product="basic_food"
 					amount="4"/>
@@ -8646,10 +8646,10 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Sausages"
 				product_name="Sausages">
 				<visible>
-					<require_gameobject tag="meat,raw" amount="2" failure_reason="2x Raw Meat needed." is_cost="1" />
+					<require_gameobject tag="meat,raw" amount="2" failure_reason="2x Any Raw Meat needed." is_cost="1" />
 				</visible>
 				
-				<cost name="raw_meat_category" display_name="Raw Meat"
+				<cost name="raw_meat_category" display_name="Any Raw Meat"
 					amount="2"/><!-- only used for tooltip cost icon-->
 				<out product="bushel_of_sausages"
 					amount="2"/> <!-- used for passing product to job-->
@@ -8662,9 +8662,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Farmers' Stew"
 				product_name="Farmers' Stew">
 				<visible>
-					<require_gameobject tag="vegetable" amount="2" failure_reason="2x Any Vegetables needed." is_cost="1" />
+					<require_gameobject tag="vegetable" amount="2" failure_reason="2x Any Vegetable needed." is_cost="1" />
 				</visible>
-				<cost name="raw_vegetables_category" display_name="Vegetables"
+				<cost name="raw_vegetables_category" display_name="Any Vegetable"
 					amount="2"/><!-- only used for tooltip cost icon-->
 				<out product="farmers_stew"
 					amount="2"/> <!-- used for passing product to job-->
@@ -9015,9 +9015,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				multiplier="5"
 				product_name="Cooked Meat">
 				<visible>
-					<require_gameobject tag="meat,raw" amount="5" failure_reason="5x Raw Meat needed." is_cost="1" />
+					<require_gameobject tag="meat,raw" amount="5" failure_reason="5x Any Raw Meat needed." is_cost="1" />
 				</visible>
-				<cost name="raw_meat_category" display_name="Raw Meat"
+				<cost name="raw_meat_category" display_name="Any Raw Meat"
 					amount="5"/>
 				<out product="basic_food"
 					amount="20"/>
@@ -9059,9 +9059,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				multiplier="5"
 				product_name="Sausages">
 				<visible>
-					<require_gameobject tag="meat,raw" amount="10" failure_reason="10x Raw Meat needed." is_cost="1" />
+					<require_gameobject tag="meat,raw" amount="10" failure_reason="10x Any Raw Meat needed." is_cost="1" />
 				</visible>
-				<cost name="raw_meat_category" display_name="Raw Meat"
+				<cost name="raw_meat_category" display_name="Any Raw Meat"
 					amount="10"/><!-- only used for tooltip cost icon-->
 				<out product="bushel_of_sausages"
 					amount="10"/> <!-- used for passing product to job-->
@@ -9075,9 +9075,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				multiplier="5"
 				product_name="Farmers' Stew">
 				<visible>
-					<require_gameobject tag="vegetable" amount="10" failure_reason="10x Any Vegetables needed." is_cost="1" />
+					<require_gameobject tag="vegetable" amount="10" failure_reason="10x Any Vegetable needed." is_cost="1" />
 				</visible>
-				<cost name="raw_vegetables_category" display_name="Vegetables"
+				<cost name="raw_vegetables_category" display_name="Any Vegetable"
 					amount="10"/><!-- only used for tooltip cost icon-->
 				<out product="farmers_stew"
 					amount="10"/> <!-- used for passing product to job-->
@@ -9091,9 +9091,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				multiplier="5"
 				product_name="Fruit Medley">
 				<visible>
-					<require_gameobject tag="fruit" amount="10" failure_reason="10x Fruit needed." is_cost="1" />
+					<require_gameobject tag="fruit" amount="10" failure_reason="10x Any Fruit needed." is_cost="1" />
 				</visible>
-				<cost name="raw_berries_category" display_name="Fruit"
+				<cost name="raw_berries_category" display_name="Any Fruit"
 					amount="10"/><!-- only used for tooltip cost icon-->
 				<out product="fruit_medley_stew"
 					amount="10"/> <!-- used for passing product to job-->
@@ -9384,9 +9384,9 @@ are already contained within other buildings. Consider those a placeholder for l
 				standing_order_display_name="Standing Order for Buckets of Ink"
 				product_name="Bucket of Ink">
 				<visible>
-					<require_gameobject tag="fuel" amount="10" failure_reason="10x Coal or Charcoal needed." is_cost="1" />
+					<require_gameobject tag="fuel" amount="10" failure_reason="10x Any Fuel needed." is_cost="1" />
 				</visible>
-				<cost name="coal_chunk" display_name="Coal or Charcoal"
+				<cost name="coal_chunk" display_name="Any Fuel"
 					amount="10"/><!-- only used for tooltip cost icon-->
 				<out product="bucket_of_ink"
 					amount="1"/> <!-- used for passing product to job-->
