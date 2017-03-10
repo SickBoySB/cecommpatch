@@ -490,7 +490,7 @@ event "empire_times_ending"
 					if (columnBuildingCount > 0) then
 						numSubjects = numSubjects + 1
 						break2 = "\n\n"
-						local pickBuilding = rand (1,columnPersonCount)
+						local pickBuilding = rand (1,columnBuildingCount)
 						local randMiddleTable = {
 							"soon found my way to the ",
 							"quickly spotted the ",
@@ -583,7 +583,7 @@ event "empire_times_ending"
 							table.insert(transitionDesc, "was a clear indicator of ")
 							table.insert(transitionDesc, "unquestionably was a fine example of ")
 						end
-						Subject3 = randMiddleTable[rand(1,#randMiddleTable)] .. columnObjects[pickObject] .. randMiddleTable2[rand(1,#randMiddleTable2)] .. transitionDesc[rand(1,#transitionDesc)] .. columnNames.columnType[rand(1,#columnNames[columnType])] .. "."
+						Subject3 = randMiddleTable[rand(1,#randMiddleTable)] .. columnObjects[pickObject] .. randMiddleTable2[rand(1,#randMiddleTable2)] .. transitionDesc[rand(1,#transitionDesc)] .. columnNames[columnType][rand(1,#columnNames[columnType])] .. "."
 					elseif numSubjects < 2 then --Make something up!
 						positivity = positivity - 1
 						local randExcuseTable = {
