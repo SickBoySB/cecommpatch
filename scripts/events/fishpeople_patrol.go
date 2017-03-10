@@ -31,7 +31,8 @@ event "fishpeople_patrol"
 			end
 			
 			-- Let's add some mystery.
-			if rand(1,2) == 1 then
+			-- EXPERIMENTAL: adding more randomness and mystery
+			--if rand(1,2) == 1 then
 				local s = "an unidentified patrol"
 				local icon = "mysterious_figures"
 				local t = "Unidentified"
@@ -68,7 +69,7 @@ event "fishpeople_patrol"
 					45 * 1000, -- duration in ms
 					0, -- "snooze" time if triggered multiple times in rapid succession
 					nullHandle)
-            end
+           -- end
 			
                local fish_group = query( "scriptManager",
 								"scriptCreateGameObjectRequest",

@@ -22,7 +22,8 @@ event "fishpeople_caravan"
 			end
 			
 			-- Let's add some mystery.
-			if rand(1,2) == 1 then
+			-- EXPERIMENTAL: adding more randomness and mystery
+			--if rand(1,2) == 1 then
 				local s = "an unidentified convoy"
 				local icon = "mysterious_figures"
 				local fishSeen = query("gameSession", "getSessionBool", "fishpeopleFirstContact")[1]
@@ -53,7 +54,7 @@ event "fishpeople_caravan"
                          "odinRendererPlaySoundMessage",
                          "alertNeutral")
 				
-			end
+			--end
 			
 			local spawnTable = { legacyString = "Fishy Patrol Group" }
 			if rand(1,2) == 1 then
