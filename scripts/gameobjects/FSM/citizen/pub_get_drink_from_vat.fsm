@@ -19,6 +19,7 @@ pub_get_drink_from_vat = {
 				local num = query("gameSession","getSessionInt","drinks_served")[1]
 				if not query("gameSession","getSessionBool","bottomsUp")[1] and num >= 50 then
 					send("gameSession", "setSessionBool", "bottomsUp", true)
+					send("gameSession", "setSteamAchievement", "bottomsUp")
 				end
 				send("gameSession", "incSteamStat", "stat_bottomsUp", 1)
 			end
