@@ -39,9 +39,9 @@ event "creepy_night_start"
 					for k,v in pairs(citizens[1]) do
 						local tags = query(v,"getTags")[1]
 						if not tags.dead then
-							for k,v in pairs(citizens[1]) do
+							--for k,v in pairs(citizens[1]) do
 								send(v,"makeMemory","Unnerved by Howling in the Night",nil, nil, nil, nil)
-							end
+							--end
 						end
 					end
 				end
