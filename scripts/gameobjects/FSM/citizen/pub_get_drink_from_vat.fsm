@@ -1,0 +1,52 @@
+pub_get_drink_from_vat = {
+	["start"] = function(state,tag,name) 
+		
+		local drinkModel = false
+		
+		if name == "laudanum" then
+			local entityName = query(tag.target, "removeBoozeItem", name)[1]
+			if entityName then 
+				drinkModel =  EntityDB[ entityName ].prop_model
+			end
+		else
+			name = query(tag.target, "getPubDrinkType")[1]
+			local entityName = query(tag.target, "removeBoozeItem", name )[1]
+			if entityName then 
+				drinkModel = EntityDB[ entityName ].prop_model
+			end
+			
+			if name == "brew" or name == "spirits" then
+				local num = query("gameSession","getSessionInt","drinks_served")[1]
+				if not query("gameSession","getSessionBool","bottomsUp")[1] and num >= 50 then
+					send("gameSession", "setSessionBool", "bottomsUp", true)
+				end
+				send("gameSession", "incSteamStat", "stat_bottomsUp", 1)
+			end
+		end
+		
+		--	getPubDrinkType
+		--local name = query(tag.target, "removeBoozeItem")[1]
+		if not drinkModel then -- name or name == false then
+			-- abort job!
+			send(SELF,"AICancelJob", "couldn't find booze in vat to serve to patron")
+			return "abort"
+		end
+
+		--local drinkModel = EntityDB[name].prop_model
+		
+		send("rendOdinCharacterClassHandler",
+			"odinRendererCharacterWieldTemporaryToolMessage",
+			state.renderHandle,
+			drinkModel)
+		
+		return "final"
+	end,
+
+	["final"] = function(state,tag,name)
+		return
+	end,
+
+	["abort"] = function(state,tag,name)
+		return
+	end
+}
