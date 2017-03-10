@@ -130,6 +130,19 @@ pub_drink_in_chair = {
 			end
 			
 			if drinktype then
+			
+				-- CECOMMPATCH - fix for Bottoms Up achievement
+				if drinktype ~= "laudanum" then
+					send("gameSession","incSessionInt","bottomsUp", 1)
+					local num = query("gameSession","getSessionInt","bottomsUp")[1]
+					if not query("gameSession","getSessionBool","bottomsUp")[1] and num >= 500 then
+						send("gameSession", "setSessionBool", "bottomsUp", true)
+						send("gameSession", "setSteamAchievement", "bottomsUp")
+					end
+					-- There is no way to find out what the necessary steam stat variable is
+					-- send("gameSession", "incSteamStat", "stat_bottomsUp", 1)
+				end
+				
 				if drinktype == "spirits" then
 					if SELF.tags.despair_state then
 						send(SELF,"makeMemory","Drank Spirits In Despair",nil,nil,nil,nil)
