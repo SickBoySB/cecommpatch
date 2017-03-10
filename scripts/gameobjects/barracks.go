@@ -3,6 +3,10 @@ gameobject "barracks" inherit "office"
 	local 
 	<<
 		function barracks_reset_supply_text()
+			-- CECOMMPATCH - premature "No Door" alert fix
+			if not state.completed then
+				return
+			end
 			
 			local supply_warning = ""
 			local status = ""
