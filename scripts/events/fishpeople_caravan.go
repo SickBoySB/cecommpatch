@@ -23,12 +23,15 @@ event "fishpeople_caravan"
 			
 			-- Let's add some mystery.
 			if rand(1,2) == 1 then
-				local s = "an unidentified group"
+				local s = "an unidentified convoy"
 				local icon = "mysterious_figures"
 				local fishSeen = query("gameSession", "getSessionBool", "fishpeopleFirstContact")[1]
 				if fishSeen then
-					s = "a group of Fishpeople"
-					icon = "fishperson"
+					-- even more mystery
+					if rand(1,2) == 1 then
+						s = "a convoy of Fishpeople"
+						icon = "fishperson"
+					end
 				end
 				
 				send("rendCommandManager",

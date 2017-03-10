@@ -18,10 +18,16 @@ event "fishpeople_nesting"
 			if rand(1,2) == 1 then
 				local s = "an unidentified group"
 				local icon = "mysterious_figures"
+				local t = "Unidentified"
+				
 				local fishSeen = query("gameSession", "getSessionBool", "fishpeopleFirstContact")[1]
 				if fishSeen then
-					s = "a group of Fishpeople"
-					icon = "fishperson"
+					-- even more mystery
+					if rand(1,2) == 1 then
+						s = "a group of Fishpeople"
+						icon = "fishperson"
+						t = "Fishpeople"
+					end
 				end
 				
 				send("rendCommandManager", "odinRendererTickerMessage",
@@ -31,6 +37,21 @@ event "fishpeople_nesting"
                     send("rendCommandManager",
                          "odinRendererPlaySoundMessage",
                          "alertNeutral")
+						 
+				send("rendCommandManager",
+					"odinRendererStubMessage",
+					"ui\\thoughtIcons.xml", -- iconskin
+					icon, -- icon
+					"" .. t .. " Gathering", -- header text
+					"The Imperial Airship Corps reports that " .. s .. " has been spotted.", -- text description
+					"Right-click to dismiss.", -- action string
+					"fishperson_noninteractive", -- alert type (for stacking)
+					"", -- imagename for bg
+					"low", -- importance: low / high / critical
+					nil, -- object ID
+					45 * 1000, -- duration in ms
+					0, -- "snooze" time if triggered multiple times in rapid succession
+					nullHandle)
 			end
 
 			local spawnTable = { legacyString = "Fishy Patrol Group" }

@@ -15,35 +15,48 @@ event "fishpeople_collect_eggs"
 			local targetEggs = tags["fishpeople_eggs"].target
 			local targetPos = query(targetEggs,"gridGetPosition")[1]
 		
-			settimer("Fishpeople Event Timer", 0)				
-               
-			local s = "an unidentified group"
-			local icon = "mysterious_figures"
-			local fishSeen = query("gameSession", "getSessionBool", "fishpeopleFirstContact")[1]
-			if fishSeen then
-				s = "a group of Fishpeople"
-				icon = "fishperson"
-			end
+			settimer("Fishpeople Event Timer", 0)
 			
-			send("rendCommandManager", "odinRendererTickerMessage",
-				"The Imperial Airship Corps reports that " .. s .. " has been spotted.",
-                    icon,
-                    "ui\\thoughtIcons.xml")
-			
-			send("rendCommandManager",
-				"odinRendererStubMessage",
+			-- Let's add some mystery.
+			if rand(1,2) == 1 then
+				local s = "unidentified figures"
+				local icon = "mysterious_figures"
+				local t = "Figures"
+				local b = ""
+				local fishSeen = query("gameSession", "getSessionBool", "fishpeopleFirstContact")[1]
+				if fishSeen then
+					-- even more mystery
+					if rand(1,2) == 1 then
+						s = "Fishpeople"
+						icon = "fishperson"
+						t = "Fishpeople"
+						b = "ui//eventart//fishPeople.png"
+					end
+				end
+				
+				send("rendCommandManager", "odinRendererTickerMessage",
+					"The Imperial Airship Corps reports that " .. s .. " have been spotted.",
+					icon,
+					"ui\\thoughtIcons.xml")
+					send("rendCommandManager",
+						 "odinRendererPlaySoundMessage",
+						 "alertNeutral")
+				
+				send("rendCommandManager",
+					"odinRendererStubMessage",
 					"ui\\thoughtIcons.xml", -- iconskin
-					"fishperson", -- icon
-					"Fishpeople Spotted", -- header text
-					"The Imperial Airship Corps reports that " .. s .. " has been spotted.", -- text description
+					icon, -- icon
+					"" .. t .. " Spotted", -- header text
+					"The Imperial Airship Corps reports that " .. s .. " have been spotted.", -- text description
 					"Right-click to dismiss.", -- action string
 					"fishpeople_eggs", -- alert type (for stacking)
-					"ui//eventart//fishPeople.png", -- imagename for bg
+					b, -- imagename for bg
 					"low", -- importance: low / high / critical
 					nil, -- object ID
 					45 * 1000, -- duration in ms
 					0, -- "snooze" time if triggered multiple times in rapid succession
 					nullHandle)
+			end
 			
 			local spawnTable = { legacyString = "Fishy Patrol Group" }
                local fish_group = query("scriptManager",
