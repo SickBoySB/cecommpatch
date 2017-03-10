@@ -1,0 +1,284 @@
+mine = {
+	["start"] = function(state,tag,name)
+		
+		-- check if building has supplies at all; abort if not. Consume if yes.
+		local building = query(tag.target,"getParentBuilding")[1]
+		local building_tags = false
+		if building then
+			building_tags = query(building,"getTags")[1]
+			if building_tags.no_supplies1 == true then
+				printl("ai_agent", "WARNING 2: " .. state.AI.name .. " attempted to do mine but office was out of supplies")
+				return "abort", true
+			else
+				send(building,"consumeSupplies",1,1) -- tier / count
+			end
+		else
+			printl("ai_agent", "WARNING 2: " .. state.AI.name .. " attempted to do mine but could not find mine building")
+			return "abort", true
+		end
+		
+		local module_tags = query(tag.target,"getTags")[1]
+		--[[for k,v in pairs(module_tags) do
+			printl("DAVID", "k/v = " .. tostring(k) .. " - " .. tostring(v) )
+		end]]
+		
+		-- check if building is occupied.
+		if module_tags.occupied then
+			--printl("DAVID", state.AI.name .. " aborting mine.fsm due to mine being occupied")
+			return "abort", true
+		end
+		
+		state.AI.bools["canBeSocial"] = false
+		incMusic(3,5)
+		
+		-- hide model
+		send("rendOdinCharacterClassHandler",
+			"odinRendererHideCharacterMessage",
+			state.renderHandle,
+			true)
+		
+		-- get us off the map
+		send("gameSpatialDictionary", "gridRemoveObject", SELF)
+		
+		-- OKAY we're hidden, carry on:
+		send("rendInteractiveObjectClassHandler",
+			"odinRendererPlaySFXOnInteractive",
+			state.renderHandle,
+			"mine")
+		
+		-- BEGIN SKILL BASED TIMER CODE
+		local jobInfo = EntityDB["Mine In Mineshaft"]
+		local skillName = jobInfo.skill
+		
+		local totalAnimLength = jobInfo.time
+		local effectiveSkill = query(SELF,"getEffectiveSkillLevel",skillName)[1]
+		
+		totalAnimLength = jobInfo.skill_times[ effectiveSkill ]
+		
+		send("rendOdinCharacterClassHandler",
+				"odinRendererEnableCharacterProgressBar",
+				SELF,
+				effectiveSkill)
+
+		-- add mine depth
+		local depth = query(tag.target, "requestHarvestTime")[1] --from 0-6, depending on strata picked
+		
+		totalAnimLength = totalAnimLength + (depth * 10) --about 1 second per strata.
+		
+		if query("gameSession", "getSessionBool", "digging1_unlocked")[1] == true then
+			totalAnimLength = math.floor(totalAnimLength * 0.6) --if you have mining tech, your depth penalty is lower.
+		end
+		
+		state.AI.animationTickCount = math.floor( totalAnimLength * query("gameSession", "getSessionInt", "miningTechModifier")[1] * 0.01 )
+		
+		-- 53B maintenance_fail time multiplier.
+		--[[local building = query(tag.target,"getParentBuilding")[1]
+		if building then
+			building_tags = query(building,"getTags")[1]
+			if building_tags.maintenance_fail then
+				state.AI.animationTickCount = state.AI.animationTickCount * EntityDB.WorldStats.maintanence_fail_time_mult
+			end
+		end]]
+	
+		state.AI.progressBarLength = state.AI.animationTickCount
+		
+		send("rendOdinCharacterClassHandler",
+			"odinRendererSetCharacterProgressBarQuality",
+			SELF,
+			state.AI.progressBarLength - state.AI.animationTickCount,
+			state.AI.progressBarLength)
+
+		-- END SKILL BASED TIMER CODE
+		
+		send("rendMachineClassHandler", --Let's see if we can't make the mine emit some particles. 
+				"odinRendererSetMachineAnimation",
+				tag.target.id,
+				"idleOn",
+				false)
+		
+		SELF.tags.mining_in_mineshaft = true
+		send(tag.target,"addTag","occupied")
+		return "mining"
+	end,
+
+	["mining"] = function(state,tag,name)
+		
+		send("rendOdinCharacterClassHandler",
+			"odinRendererSetCharacterProgressBarQuality",
+			SELF,
+			state.AI.progressBarLength - state.AI.animationTickCount,
+			state.AI.progressBarLength)
+		
+		if state.AI.animationTickCount % 14 == 0 then
+			send("rendInteractiveObjectClassHandler",
+				"odinRendererPlaySFXOnInteractive",
+				state.renderHandle,
+				"mine")
+		end
+
+		if state.AI.animationTickCount == 0 then
+			local count = 1
+			
+			local oreName = query(tag.target, "requestCommodityOutput")[1]
+			if oreName == "none" then --You're just mining for depth, no need for a commodity.
+				return "final"
+			end
+			
+			local entityData = EntityDB[oreName]
+			local tech1 = query("gameSession", "getSessionBool", "oreGains1_unlocked")[1]
+			local tech2 = query("gameSession", "getSessionBool", "stoneGains1_unlocked")[1]
+			local tech3 = query("gameSession", "getSessionBool", "stoneGains2_unlocked")[1]
+			local tech4 = query("gameSession", "getSessionBool", "stoneGains3_unlocked")[1]
+			
+			for k,v in pairs(entityData.tags) do
+				if (v == "ore") and (tech1 == true) then
+					count = 2
+					break
+				end
+				if (v == "stone") and (tech2 == true) then
+					count = 2
+					break
+				end
+				if (v == "sulphur") and (tech3 == true) then
+					count = 2
+					break
+				end
+				if (v == "sand") and (tech4 == true) then
+					count = 2
+					break
+				end
+			end
+			
+			local tier = -1
+			if entityData.tier then
+				tier = entityData.tier
+				if tier ~= -1 then
+					local tiername = "tier" .. tier .. "produced"
+					send("gameSession", "incSessionInt", tiername, count)
+				end
+			end
+
+			local resultObjects = {}
+			
+			local resultObject = false
+			for i=1,count do
+				resultObject = query("scriptManager",
+								 "scriptCreateGameObjectRequest",
+								 "item",
+								 {legacyString = oreName})
+				
+				send(resultObject[1],"ClaimItem")
+				resultObjects[#resultObjects+1] = resultObject[1]
+				
+			end
+			
+			if #resultObjects > 1 then
+				-- create container, put everything into container
+				local entityDBName = oreName
+				local initTable = {legacyString = "crate", container_parent = entityDBName }
+				local container = query("scriptManager",
+								"scriptCreateGameObjectRequest",
+								"container",
+								initTable )
+				
+				local handle = container[1]
+				
+				send(handle,"ClaimItem")
+				send(handle, "ContainerSetStackMode", entityDBName);
+				for k,v in pairs(resultObjects) do
+					send(handle, "ContainerAddItem", v)
+				end
+				resultObject = handle
+			else
+				resultObject = resultObjects[1]
+			end
+				
+			local resultROH = query(resultObject, "ROHQueryRequest" )
+			local name = query( resultObject, "HandModelQueryRequest" )
+	
+			state.AI.possessedObjects["curPickedUpItem"] = resultObject
+			send(resultObject, "itemPickedUpMessage", state.AI.curJobInstance)
+			
+			send("rendOdinCharacterClassHandler", 
+				"odinRendererCharacterPickupItemMessage",
+				state.renderHandle,
+				resultROH[1],
+				"R_ItemAttach",
+				name[1],
+				"")
+			
+			state.AI.animationTickCount =  state.AI.numPickupTicks
+
+			send(tag.target,"HarvestMessage",SELF, state.AI.curJobInstance)
+
+			return "pickingup"
+		end
+		
+		state.AI.animationTickCount = state.AI.animationTickCount - 1
+
+		return "mining"
+	end,
+
+	["pickingup"] = function(state,tag,name)
+		state.AI.animationTickCount = state.AI.animationTickCount - 1
+		if state.AI.animationTickCount == 0 then
+			return "final"
+		end
+		return "pickingup"
+	end,
+
+	["final"] = function(state,tag,name)
+		send("rendOdinCharacterClassHandler",
+			"odinRendererDisableCharacterProgressBar",
+			SELF)
+		
+		send("rendMachineClassHandler", --Let's see if we can't make the mine emit some particles. 
+				"odinRendererSetMachineAnimation",
+				tag.target.id,
+				"idle",
+				false)
+		
+		-- put us back on map & un-hide model
+		send("gameSpatialDictionary",
+				"gridAddObjectTo",
+				SELF,
+				state.AI.position)
+
+		send("rendOdinCharacterClassHandler",
+				"odinRendererHideCharacterMessage",
+				state.renderHandle,
+				false)
+		
+		state.AI.bools["canBeSocial"] = true
+		send("rendOdinCharacterClassHandler",
+		     "odinRendererIdleCharacterMessage",
+		     state.renderHandle)
+		
+		send(tag.target,"removeTag","occupied")
+		SELF.tags.mining_in_mineshaft = nil
+	end,
+
+	["abort"] = function(state, tag)
+		if SELF.tags.mining_in_mineshaft then
+			SELF.tags.mining_in_mineshaft = nil
+			send(tag.target,"removeTag","occupied")
+		end
+		send("rendOdinCharacterClassHandler",
+			"odinRendererDisableCharacterProgressBar",
+			SELF)
+		
+		-- be sure to unhide & re-add to map
+		send("gameSpatialDictionary",
+			"gridAddObjectTo",
+			SELF,
+			state.AI.position)
+
+		send("rendOdinCharacterClassHandler",
+				"odinRendererHideCharacterMessage",
+				state.renderHandle,
+				false)
+		
+		state.AI.bools["canBeSocial"] = true
+		return
+	end
+}
