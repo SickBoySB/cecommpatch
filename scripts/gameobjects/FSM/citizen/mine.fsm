@@ -1,6 +1,17 @@
 mine = {
 	["start"] = function(state,tag,name)
 		
+		local module_tags = query(tag.target,"getTags")[1]
+		--[[for k,v in pairs(module_tags) do
+			printl("DAVID", "k/v = " .. tostring(k) .. " - " .. tostring(v) )
+		end]]
+		
+		-- check if building is occupied.
+		if module_tags.occupied then
+			--printl("DAVID", state.AI.name .. " aborting mine.fsm due to mine being occupied")
+			return "abort", true
+		end
+		
 		-- check if building has supplies at all; abort if not. Consume if yes.
 		local building = query(tag.target,"getParentBuilding")[1]
 		local building_tags = false
@@ -14,17 +25,6 @@ mine = {
 			end
 		else
 			printl("ai_agent", "WARNING 2: " .. state.AI.name .. " attempted to do mine but could not find mine building")
-			return "abort", true
-		end
-		
-		local module_tags = query(tag.target,"getTags")[1]
-		--[[for k,v in pairs(module_tags) do
-			printl("DAVID", "k/v = " .. tostring(k) .. " - " .. tostring(v) )
-		end]]
-		
-		-- check if building is occupied.
-		if module_tags.occupied then
-			--printl("DAVID", state.AI.name .. " aborting mine.fsm due to mine being occupied")
 			return "abort", true
 		end
 		
