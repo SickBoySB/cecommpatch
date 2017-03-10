@@ -80,6 +80,28 @@ event "eerie_spectres_ending"
 				end
 			end
 			
+			-- CECOMMPATCH - "Who You Gonna Call" achievement fix
+			if ending == "success" then
+				local specnum = 1
+				
+				if numSpectres then
+					if numSpectres > 1 then
+						specnum = numSpectres
+					end
+				end
+				
+				send("gameSession","incSessionInt","spectresBanished", specnum)
+					
+				local num = query("gameSession","getSessionInt","spectresBanished")[1]
+				if not query("gameSession","getSessionBool","whoYouGonnaCall")[1] and num >= 50 then
+					send("gameSession", "setSessionBool", "whoYouGonnaCall", true)
+					send("gameSession", "setSteamAchievement", "whoYouGonnaCall")
+				end
+				
+				-- There is no way to find out what the necessary steam stat variable is
+				-- send("gameSession", "incSteamStat", "stat_whoYouGonnaCall", specnum)
+			end
+			
 			return "final"
 		end,
 		

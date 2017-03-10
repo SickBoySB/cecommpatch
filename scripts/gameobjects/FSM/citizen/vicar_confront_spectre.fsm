@@ -84,6 +84,19 @@ vicar_confront_spectre = {
                     state.AI.name .. " banished a haunting spectre!",
                     "spectre",
                     "ui\\thoughtIcons.xml")
+					
+			-- CECOMMPATCH - "Who You Gonna Call" achievement fix
+				
+			send("gameSession","incSessionInt","spectresBanished", 1)
+				
+			local num = query("gameSession","getSessionInt","spectresBanished")[1]
+			if not query("gameSession","getSessionBool","whoYouGonnaCall")[1] and num >= 50 then
+				send("gameSession", "setSessionBool", "whoYouGonnaCall", true)
+				send("gameSession", "setSteamAchievement", "whoYouGonnaCall")
+			end
+			
+			-- There is no way to find out what the necessary steam stat variable is
+			-- send("gameSession", "incSteamStat", "stat_whoYouGonnaCall", specnum)			
 			
 			return "animating2"
 		end
@@ -110,15 +123,6 @@ vicar_confront_spectre = {
 		send("rendOdinCharacterClassHandler",
 		     "odinRendererIdleCharacterMessage",
 		     tag.target.id)
-			
-			
-		send("gameSession","incSessionInt","spectresBanished", count)
-			
-		local num = query("gameSession","getSessionInt","spectresBanished")[1]
-		if not query("gameSession","getSessionBool","whoYouGonnaCall")[1] and num >= 50 then
-			send("gameSession", "setSessionBool", "whoYouGonnaCall", true)
-		end
-		send("gameSession", "incSteamStat", "stat_whoYouGonnaCall", 1)
 			
 		state.AI.bools["canBeSocial"] = true
 		send(tag.target, "thinkLockMessage", SELF, false)
