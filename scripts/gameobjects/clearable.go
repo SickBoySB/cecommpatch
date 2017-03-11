@@ -454,12 +454,13 @@ gameobject "clearable" inherit "object_damage"
 		
 		if SELF.tags.grass then
 			send("gameSession","incSessionInt","grassClearedCount",1)
-			if query("gameSession","getSessionInt","grassClearedCount")[1] > 50 and
+			local grasscount = query("gameSession","getSessionInt","grassClearedCount")[1]
+			if grasscount >= 50 and
 				not query("gameSession","getSessionBool","clearedLotsOfGrass")[1] then
 				
 				send("gameSession","setSessionBool","clearedLotsOfGrass", true)
 			end
-			send("gameSession", "incSteamStat", "grass_cleared_count", 1)
+			send("gameSession", "incSteamStat", "stat_grass_cleared_count", 1)
 		end
 		
 		-- Finaeely, destroy myself.
