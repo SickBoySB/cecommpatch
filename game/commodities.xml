@@ -42,6 +42,10 @@
 			<tag name="timber"/>
 			<tag name="ignite_64"/>
 			<tag name="flammable"/>
+			<tag name="cecomm_chopped"/>
+			<tag name="cecomm_building_mat"/>
+			<tag name="cecomm_timber"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -55,6 +59,10 @@
 			<tag name="timber"/>
 			<tag name="ignite_128"/>
 			<tag name="flammable"/>
+			<tag name="cecomm_chopped"/>
+			<tag name="cecomm_building_mat"/>
+			<tag name="cecomm_timber"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -71,6 +79,8 @@
 			<tag name="ignite_128"/>
 			<tag name="flammable"/>
 			<tag name="craft"/>
+			<tag name="cecomm_building_mat"/>
+			<tag name="cecomm_ign_128"/>
 		</tags>
 	</commodity>
 
@@ -81,6 +91,7 @@
 		<tags>
 			<tag name="commodity"/>
 			<tag name="lacquer"/>
+			<tag name="cecomm_foraged"/>
 		</tags>
 	</commodity>
 
@@ -98,6 +109,8 @@
 			<tag name="ignite_256"/>
 			<tag name="flammable"/>
 			<tag name="craft"/>
+			<tag name="cecomm_building_mat"/>
+			<tag name="cecomm_ign_256"/>
 		</tags>
 	</commodity>
 
@@ -112,6 +125,9 @@
 			<tag name="coal"/>
 			<tag name="ignite_64"/>
 			<tag name="flammable"/>
+			<tag name="cecomm_mined"/>
+			<tag name="cecomm_fuel"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -126,6 +142,8 @@
 			<tag name="charcoal"/>
 			<tag name="ignite_64"/>
 			<tag name="flammable"/>
+			<tag name="cecomm_fuel"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -140,6 +158,9 @@
 			<tag name="peat"/>
 			<tag name="ignite_64"/>
 			<tag name="flammable"/>
+			<tag name="cecomm_mined"/>
+			<tag name="cecomm_fuel"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -152,6 +173,8 @@
 			<tag name="iron"/>
 			<tag name="ore"/>
 			<tag name="ore_of_iron"/>
+			<tag name="cecomm_mined"/>
+			<tag name="cecomm_raw_ore"/>
 		</tags>
 	</commodity>
 
@@ -164,6 +187,8 @@
 			<tag name="ore_of_copper"/>
 			<tag name="copper"/>
 			<tag name="ore"/>
+			<tag name="cecomm_mined"/>
+			<tag name="cecomm_raw_ore"/>
 		</tags>
 	</commodity>
 
@@ -176,6 +201,8 @@
 			<tag name="ore_of_zinc"/>
 			<tag name="zinc"/>
 			<tag name="ore"/>
+			<tag name="cecomm_mined"/>
+			<tag name="cecomm_raw_ore"/>
 		</tags>
 	</commodity>
 
@@ -188,6 +215,8 @@
 			<tag name="ore_of_gold"/>
 			<tag name="gold"/>
 			<tag name="ore"/>
+			<tag name="cecomm_mined"/>
+			<tag name="cecomm_raw_ore"/>
 		</tags>
 	</commodity>
 
@@ -199,6 +228,7 @@
 			<tag name="commodity"/>
 			<tag name="chalk"/>
 			<tag name="flux"/>
+			<tag name="cecomm_mined"/>
 		</tags>
 	</commodity>
 
@@ -212,6 +242,8 @@
 			<tag name="raw_sulphur"/>
 			<tag name="ignite_64"/>
 			<tag name="flammable"/>
+			<tag name="cecomm_mined"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -226,6 +258,7 @@
 			<tag name="ingot_of_iron"/>
 			<tag name="armoured"/>
 			<tag name="craft"/>
+			<tag name="cecomm_smelted"/>
 		</tags>
 	</commodity>
 
@@ -239,6 +272,7 @@
 			<tag name="ingot"/>
 			<tag name="ingot_of_copper"/>
 			<tag name="craft"/>
+			<tag name="cecomm_smelted"/>
 		</tags>
 	</commodity>
 
@@ -252,6 +286,7 @@
 			<tag name="ingot"/>
 			<tag name="ingot_of_zinc"/>
 			<tag name="craft"/>
+			<tag name="cecomm_smelted"/>
 		</tags>
 	</commodity>
 
@@ -265,6 +300,7 @@
 			<tag name="ingot"/>
 			<tag name="ingot_of_brass"/>
 			<tag name="craft"/>
+			<tag name="cecomm_smelted"/>
 		</tags>
 	</commodity>
 
@@ -278,6 +314,7 @@
 			<tag name="ingot"/>
 			<tag name="ingot_of_gold"/>
 			<tag name="craft"/>
+			<tag name="cecomm_smelted"/>
 		</tags>
 	</commodity>
 
@@ -292,6 +329,7 @@
 			<tag name="ingot_of_steel"/>
 			<tag name="armoured"/>
 			<tag name="craft"/>
+			<tag name="cecomm_smelted"/>
 		</tags>
 	</commodity>
 
@@ -305,6 +343,7 @@
 			<tag name="iron"/>
 			<tag name="iron_pipes"/>
 			<tag name="craft"/>
+			<tag name="cecomm_building_mat"/>
 		</tags>
 	</commodity>
 
@@ -347,6 +386,7 @@
 			<tag name="copper"/>
 			<tag name="copper_plates"/>
 			<tag name="craft"/>
+			<tag name="cecomm_building_mat"/>
 		</tags>
 	</commodity>
 
@@ -376,6 +416,7 @@
 			<tag name="brass"/>
 			<tag name="brass_cogs"/>
 			<tag name="craft"/>
+			<tag name="cecomm_chapel"/>
 		</tags>
 	</commodity>
 
@@ -398,6 +439,7 @@
 			<tag name="commodity"/>
 			<tag name="pitchblende"/>
 			<tag name="ore"/>
+			<tag name="cecomm_mined"/>
 		</tags>
 	</commodity>
 
@@ -411,6 +453,7 @@
 			<tag name="ingot"/>
 			<tag name="ingot_of_uranium"/>
 			<tag name="craft"/>
+			<tag name="cecomm_smelted"/>
 		</tags>
 	</commodity>
 
@@ -421,6 +464,7 @@
 		<tags>
 			<tag name="commodity"/>
 			<tag name="clay"/>
+			<tag name="cecomm_mined"/>
 		</tags>
 	</commodity>
 
@@ -431,6 +475,8 @@
 		<tags>
 			<tag name="commodity"/>
 			<tag name="sand"/>
+			<tag name="cecomm_mined"/>
+			<tag name="cecomm_foraged"/>
 		</tags>
 	</commodity>
 
@@ -445,6 +491,7 @@
 			<tag name="brick_masonry"/>
 			<tag name="armoured"/>
 			<tag name="craft"/>
+			<tag name="cecomm_building_mat"/>
 		</tags>
 	</commodity>
 
@@ -458,6 +505,8 @@
 			<tag name="rough_stone_block"/>
 			<tag name="stone_masonry"/>
 			<tag name="armoured"/>
+			<tag name="cecomm_mined"/>
+			<tag name="cecomm_building_mat"/>
 		</tags>
 	</commodity>
 
@@ -478,6 +527,7 @@
 		<tags>
 			<tag name="commodity"/>
 			<tag name="fertiliser"/>
+			<tag name="cecomm_foraged"/>
 		</tags>
 	</commodity>
 
@@ -522,6 +572,7 @@
 			<tag name="glass"/>
 			<tag name="glass_panes"/>
 			<tag name="craft"/>
+			<tag name="cecomm_building_mat"/>
 		</tags>
 	</commodity>
 
@@ -535,6 +586,8 @@
 			<tag name="explosive"/>
 			<tag name="ignite_32"/>
 			<tag name="dramatic"/>
+			<tag name="cecomm_ign_32"/>
+			<tag name="cecomm_explosive"/>
 		</tags>
 	</commodity>
 
@@ -560,6 +613,7 @@
 			<tag name="fertiliser"/>
 			<tag name="ignite_64"/>
 			<tag name="flammable"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -573,6 +627,11 @@
 			<tag name="explosive"/>
 			<tag name="ignite_64"/>
 			<tag name="dramatic"/>
+			<tag name="cecomm_ammo"/>
+			<tag name="cecomm_barracks"/>
+			<tag name="cecomm_naturalist"/>
+			<tag name="cecomm_ign_64"/>
+			<tag name="cecomm_explosive"/>
 		</tags>
 	</commodity>
 
@@ -586,6 +645,10 @@
 			<tag name="explosive"/>
 			<tag name="ignite_64"/>
 			<tag name="dramatic"/>
+			<tag name="cecomm_ammo"/>
+			<tag name="cecomm_barracks"/>
+			<tag name="cecomm_ign_64"/>
+			<tag name="cecomm_explosive"/>
 		</tags>
 	</commodity>
 
@@ -599,6 +662,10 @@
 			<tag name="explosive"/>
 			<tag name="ignite_64"/>
 			<tag name="dramatic"/>
+			<tag name="cecomm_ammo"/>
+			<tag name="cecomm_barracks"/>
+			<tag name="cecomm_ign_64"/>
+			<tag name="cecomm_explosive"/>
 		</tags>
 	</commodity>
 
@@ -610,9 +677,12 @@
 			<tag name="commodity"/>
 			<tag name="ammo4"/>
 			<tag name="explosive"/>
-			<tag name="explosive"/>
 			<tag name="ignite_32"/>
 			<tag name="dramatic"/>
+			<tag name="cecomm_ammo"/>
+			<tag name="cecomm_barracks"/>
+			<tag name="cecomm_ign_32"/>
+			<tag name="cecomm_explosive"/>
 		</tags>
 	</commodity>
 
@@ -626,6 +696,8 @@
 			<tag name="landmine"/>
 			<tag name="ignite_64"/>
 			<tag name="dramatic"/>
+			<tag name="cecomm_ign_64"/>
+			<tag name="cecomm_explosive"/>
 		</tags>
 	</commodity>
 
@@ -637,6 +709,8 @@
 			<tag name="commodity"/>
 			<tag name="fibre_source"/>
 			<tag name="cash_crop"/>
+			<tag name="cecomm_grown"/>
+			<tag name="cecomm_trade"/>
 		</tags>
 	</commodity>
 
@@ -651,6 +725,8 @@
 			<tag name="ignite_128"/>
 			<tag name="flammable"/>
 			<tag name="bolt_of_cloth"/>
+			<tag name="cecomm_trade"/>
+			<tag name="cecomm_ign_128"/>
 		</tags>
 	</commodity>
 
@@ -674,6 +750,8 @@
 			<tag name="commodity"/>
 			<tag name="mushroom"/>
 			<tag name="fungus"/>
+			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_raw_fungus"/>
 		</tags>
 	</commodity>
 
@@ -685,6 +763,8 @@
 			<tag name="commodity"/>
 			<tag name="mushroom"/>
 			<tag name="fungus"/>
+			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_raw_fungus"/>
 		</tags>
 	</commodity>
 
@@ -696,6 +776,8 @@
 			<tag name="commodity"/>
 			<tag name="mushroom"/>
 			<tag name="fungus"/>
+			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_raw_fungus"/>
 		</tags>
 	</commodity>
 
@@ -707,6 +789,8 @@
 			<tag name="commodity"/>
 			<tag name="mushroom"/>
 			<tag name="fungus"/>
+			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_raw_fungus"/>
 		</tags>
 	</commodity>
 
@@ -718,6 +802,8 @@
 			<tag name="commodity"/>
 			<tag name="mushroom"/>
 			<tag name="fungus"/>
+			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_raw_fungus"/>
 		</tags>
 	</commodity>
 
@@ -729,6 +815,8 @@
 			<tag name="commodity"/>
 			<tag name="mushroom"/>
 			<tag name="fungus"/>
+			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_raw_fungus"/>
 		</tags>
 	</commodity>
 
@@ -740,6 +828,8 @@
 			<tag name="commodity"/>
 			<tag name="mushroom"/>
 			<tag name="fungus"/>
+			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_raw_fungus"/>
 		</tags>
 	</commodity>
 
@@ -751,6 +841,8 @@
 			<tag name="commodity"/>
 			<tag name="mushroom"/>
 			<tag name="fungus"/>
+			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_raw_fungus"/>
 		</tags>
 	</commodity>
 
@@ -763,6 +855,7 @@
 			<tag name="iron"/>
 			<tag name="scrap_iron"/>
 			<tag name="ore"/>
+			<tag name="cecomm_raw_ore"/>
 		</tags>
 	</commodity>
 
@@ -776,6 +869,7 @@
 			<tag name="ignite_128"/>
 			<tag name="flammable"/>
 			<tag name="dramatic"/>
+			<tag name="cecomm_ign_128"/>
 		</tags>
 	</commodity>
 
@@ -834,9 +928,9 @@
 		<tags>
 			<tag name="commodity"/>
 			<tag name="idol"/>
-			<tag name="artifact"/>
 			<tag name="obeliskian_artifact"/>
 			<tag name="quaggaroth_artifact"/>
+			<tag name="artifact"/>
 			<tag name="dramatic"/>
 		</tags>
 	</commodity>
@@ -849,8 +943,8 @@
 			<tag name="commodity"/>
 			<tag name="idol"/>
 			<tag name="fishperson_artifact"/>
-			<tag name="artifact"/>
 			<tag name="fishy_idol"/>
+			<tag name="artifact"/>
 			<tag name="dramatic"/>
 		</tags>
 	</commodity>
@@ -890,8 +984,8 @@
 		<tags>
 			<tag name="commodity"/>
 			<tag name="idol"/>
-			<tag name="artifact"/>
 			<tag name="geometer_artifact"/>
+			<tag name="artifact"/>
 			<tag name="dramatic"/>
 		</tags>
 	</commodity>
@@ -903,8 +997,8 @@
 		<tags>
 			<tag name="commodity"/>
 			<tag name="idol"/>
-			<tag name="artifact"/>
 			<tag name="obeliskian_artifact"/>
+			<tag name="artifact"/>
 			<tag name="dramatic"/>
 		</tags>
 	</commodity>
@@ -928,8 +1022,8 @@
 		<gameplay_description text="How odd. What could this do?" />
 		<tags>
 			<tag name="commodity"/>
-			<tag name="artifact"/>
 			<tag name="black_magic_artifact"/>
+			<tag name="artifact"/>
 			<tag name="dramatic"/>
 		</tags>
 	</commodity>
@@ -940,9 +1034,9 @@
 		<gameplay_description text="How odd. What could this do?" />
 		<tags>
 			<tag name="commodity"/>
-			<tag name="artifact"/>
 			<tag name="obeliskian_artifact"/>
 			<tag name="obeliskian_stone"/>
+			<tag name="artifact"/>
 			<tag name="dramatic"/>
 		</tags>
 	</commodity>
@@ -953,9 +1047,9 @@
 		<gameplay_description text="How odd. What could this do?" />
 		<tags>
 			<tag name="commodity"/>
-			<tag name="artifact"/>
 			<tag name="obeliskian_artifact"/>
 			<tag name="obeliskian_bricks"/>
+			<tag name="artifact"/>
 			<tag name="dramatic"/>
 		</tags>
 	</commodity>
@@ -969,6 +1063,8 @@
 			<tag name="bricabrac"/>
 			<tag name="ignite_128"/>
 			<tag name="flammable"/>
+			<tag name="cecomm_raw_decor"/>
+			<tag name="cecomm_ign_128"/>
 		</tags>
 	</commodity>
 
@@ -981,6 +1077,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_brick_ceramics_kiln"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_ceramics"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -993,6 +1092,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_iron_ceramics_kiln"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_ceramics"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1005,6 +1107,9 @@
 			<tag name="boxed"/>
 			<tag name="crate"/>
 			<tag name="boxed_stone_charcoal_kiln"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_metalwork"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1017,6 +1122,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_brick_charcoal_kiln"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_metalwork"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1029,6 +1137,9 @@
 			<tag name="boxed"/>
 			<tag name="crate"/>
 			<tag name="boxed_iron_charcoal_kiln"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_metalwork"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1041,6 +1152,9 @@
 			<tag name="boxed"/>
 			<tag name="crate"/>
 			<tag name="boxed_small_iron_oven"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_kitchen"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1053,6 +1167,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_power_lathe"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_metalwork"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1065,6 +1182,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_stone_smelting_crucible"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_metalwork"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1077,6 +1197,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_iron_smelting_crucible"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_metalwork"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1089,6 +1212,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_power_saw"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_carpentry"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1101,6 +1227,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_ceramics_press"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_ceramics"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1113,6 +1242,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_industrial_kiln"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_metalwork"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1125,6 +1257,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_grinder"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_metalwork"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1137,6 +1272,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_power_stamper"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_metalwork"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1149,6 +1287,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_steam_oven"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_kitchen"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1161,6 +1302,9 @@
 			<tag name="boxed"/>
 			<tag name="crate"/>
 			<tag name="boxed_mixing_tank"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_kitchen"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1173,6 +1317,9 @@
 			<tag name="boxed"/>
 			<tag name="crate"/>
 			<tag name="boxed_brewing_vat"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_kitchen"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1185,6 +1332,9 @@
 			<tag name="boxed"/>
 			<tag name="crate"/>
 			<tag name="boxed_still"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_kitchen"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1197,6 +1347,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_ceramics_workbench"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_ceramics"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1209,6 +1362,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_workbench"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_miscws"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1221,6 +1377,11 @@
 			<tag name="boxed"/>
 			<tag name="boxed_decor_workbench"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_metalwork"/>
+			<tag name="cecomm_ceramics"/>
+			<tag name="cecomm_carpentry"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1233,6 +1394,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_advanced_workbench"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_miscws"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1245,6 +1409,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_chemistry_workbench"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_chemical"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1257,6 +1424,9 @@
 			<tag name="boxed"/>
 			<tag name="crate"/>
 			<tag name="boxed_smithing_forge"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_metalwork"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1269,6 +1439,9 @@
 			<tag name="boxed"/>
 			<tag name="crate"/>
 			<tag name="boxed_booze_vat"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_pub"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1281,6 +1454,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_spinning_mule"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1293,6 +1468,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_wooden_altar"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_chapel"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1305,6 +1483,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_stone_altar"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_chapel"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1317,6 +1498,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_large_stone_altar"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_chapel"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1329,6 +1513,9 @@
 			<tag name="boxed"/>
 			<tag name="crate"/>
 			<tag name="boxed_macroscope"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_lab"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1341,6 +1528,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_candelabra"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1353,6 +1542,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_church_banner"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1377,6 +1568,10 @@
 			<tag name="boxed"/>
 			<tag name="boxed_cot"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_lc_house"/>
+			<tag name="cecomm_lc_pref"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1401,6 +1596,10 @@
 			<tag name="boxed"/>
 			<tag name="boxed_middle_class_single_bed"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_mc_house"/>
+			<tag name="cecomm_mc_pref"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1425,6 +1624,10 @@
 			<tag name="boxed"/>
 			<tag name="boxed_upper_class_bed"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_uc_house"/>
+			<tag name="cecomm_uc_pref"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1437,6 +1640,12 @@
 			<tag name="boxed"/>
 			<tag name="boxed_upper_class_chair"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_uc_house"/>
+			<tag name="cecomm_pub"/>
+			<tag name="cecomm_chapel"/>
+			<tag name="cecomm_barber"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1449,6 +1658,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_clothes_line_short"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1461,6 +1672,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_clothes_line_long"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1473,6 +1686,12 @@
 			<tag name="boxed"/>
 			<tag name="boxed_upper_class_table"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_uc_house"/>
+			<tag name="cecomm_pub"/>
+			<tag name="cecomm_chapel"/>
+			<tag name="cecomm_barber"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1485,6 +1704,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_fancy_bookshelf"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_academy"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1497,6 +1719,10 @@
 			<tag name="boxed"/>
 			<tag name="boxed_bookshelf"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_trade_office"/>
+			<tag name="cecomm_academy"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1509,6 +1735,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_lc_cabinet"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1521,6 +1749,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_mc_cabinet"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1533,6 +1763,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_uc_cabinet"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1557,6 +1789,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_bureaucrats_desk"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_foreign"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1569,6 +1804,10 @@
 			<tag name="boxed"/>
 			<tag name="boxed_standing_desk"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_foreign"/>
+			<tag name="cecomm_naturalist"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1581,6 +1820,9 @@
 			<tag name="boxed"/>
 			<tag name="crate"/>
 			<tag name="boxed_mineshaft_module"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_mine"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1593,6 +1835,9 @@
 			<tag name="boxed"/>
 			<tag name="crate"/>
 			<tag name="boxed_dewatering_pump"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_mine"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1605,6 +1850,9 @@
 			<tag name="boxed"/>
 			<tag name="crate"/>
 			<tag name="boxed_ventilation_unit"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_mine"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1617,6 +1865,9 @@
 			<tag name="boxed"/>
 			<tag name="crate"/>
 			<tag name="boxed_steam_distributor"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_mine"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1629,6 +1880,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_chalkboard"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_lab"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1641,6 +1895,9 @@
 			<tag name="boxed"/>
 			<tag name="crate"/>
 			<tag name="boxed_vacuum_chamber"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_lab"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1689,6 +1946,7 @@
 			<tag name="boxed"/>
 			<tag name="boxed_loading_bay_door"/>
 			<tag name="crate"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1725,6 +1983,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_stained_glass_window"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1737,6 +1997,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_wood_plinth"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1749,6 +2011,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_stone_plinth"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1761,6 +2025,12 @@
 			<tag name="boxed"/>
 			<tag name="boxed_lower_class_table"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_lc_house"/>
+			<tag name="cecomm_pub"/>
+			<tag name="cecomm_chapel"/>
+			<tag name="cecomm_barber"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1773,6 +2043,12 @@
 			<tag name="boxed"/>
 			<tag name="boxed_middle_class_table"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_mc_house"/>
+			<tag name="cecomm_pub"/>
+			<tag name="cecomm_chapel"/>
+			<tag name="cecomm_barber"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1785,6 +2061,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_steam_radiator"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1797,6 +2075,12 @@
 			<tag name="boxed"/>
 			<tag name="boxed_lower_class_chair"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_lc_house"/>
+			<tag name="cecomm_pub"/>
+			<tag name="cecomm_chapel"/>
+			<tag name="cecomm_barber"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1809,6 +2093,12 @@
 			<tag name="boxed"/>
 			<tag name="boxed_middle_class_chair"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_mc_house"/>
+			<tag name="cecomm_pub"/>
+			<tag name="cecomm_chapel"/>
+			<tag name="cecomm_barber"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1821,6 +2111,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_spice_rack"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1833,6 +2125,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_hanging_pots"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1869,6 +2163,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_clay_pot"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1881,6 +2177,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_science_wall_plaque"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1893,6 +2191,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_military_wall_plaque"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1905,6 +2205,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_royal_wall_plaque"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1917,6 +2219,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_lower_class_certificate"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1929,6 +2233,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_carpet"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1941,6 +2247,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_rug"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1953,6 +2261,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_lower_class_wall_shrine"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1965,6 +2275,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_upper_class_wall_shrine"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1977,6 +2289,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_lamp"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -1989,6 +2303,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_barometer"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -2001,6 +2317,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_large_pipe_and_valve"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -2013,6 +2331,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_vent"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -2025,6 +2345,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_pipe_cluster"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -2073,6 +2395,8 @@
 			<tag name="boxed"/>
 			<tag name="boxed_barbershop_pole"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -2086,6 +2410,8 @@
 			<tag name="boxed_wall"/>
 			<tag name="mounted_aurochs_head"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -2099,6 +2425,8 @@
 			<tag name="boxed_wall"/>
 			<tag name="mounted_beetle_head"/>
 			<tag name="crate"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -2112,6 +2440,10 @@
 			<tag name="boxed_musket_locker"/>
 			<tag name="crate"/>
 			<tag name="dramatic"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_barracks"/>
+			<tag name="cecomm_naturalist"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -2125,6 +2457,9 @@
 			<tag name="boxed_carbine_locker"/>
 			<tag name="crate"/>
 			<tag name="dramatic"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_barracks"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -2138,6 +2473,9 @@
 			<tag name="boxed_blunderbuss_locker"/>
 			<tag name="crate"/>
 			<tag name="dramatic"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_barracks"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -2151,6 +2489,9 @@
 			<tag name="boxed_jezail_rifle_locker"/>
 			<tag name="crate"/>
 			<tag name="dramatic"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_barracks"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -2164,6 +2505,9 @@
 			<tag name="boxed_tripistol_locker"/>
 			<tag name="crate"/>
 			<tag name="dramatic"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_barracks"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -2177,6 +2521,9 @@
 			<tag name="boxed_revolver_locker"/>
 			<tag name="crate"/>
 			<tag name="dramatic"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_barracks"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -2190,6 +2537,9 @@
 			<tag name="boxed_grenade_launcher_locker"/>
 			<tag name="crate"/>
 			<tag name="dramatic"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_barracks"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -2203,6 +2553,9 @@
 			<tag name="boxed_leyden_pistol_locker"/>
 			<tag name="crate"/>
 			<tag name="dramatic"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_barracks"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -2216,6 +2569,9 @@
 			<tag name="boxed_leyden_rifle_locker"/>
 			<tag name="crate"/>
 			<tag name="dramatic"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_barracks"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -2230,6 +2586,8 @@
 			<tag name="boxed_rare_painting"/>
 			<tag name="crate"/>
 			<tag name="dramatic"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -2242,6 +2600,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_power_core_dynamo"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_skmanu"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -2254,6 +2615,9 @@
 			<tag name="boxed"/>
 			<tag name="boxed_steam_knight_forge"/>
 			<tag name="crate"/>
+			<tag name="cecomm_workmod"/>
+			<tag name="cecomm_skmanu"/>
+			<tag name="cecomm_boxed"/>
 		</tags>
 	</commodity>
 
@@ -2265,6 +2629,7 @@
 			<tag name="commodity"/>
 			<tag name="construction_frame"/>
 			<tag name="ignite_32"/>
+			<tag name="cecomm_ign_32"/>
 		</tags>
 	</commodity>
 
@@ -2354,6 +2719,7 @@
 			<tag name="reactive_catalyst"/>
 			<tag name="ignite_64"/>
 			<tag name="flammable"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -2365,6 +2731,10 @@
 			<tag name="commodity"/>
 			<tag name="paper_stack"/>
 			<tag name="ignite_32"/>
+			<tag name="cecomm_foreign"/>
+			<tag name="cecomm_naturalist"/>
+			<tag name="cecomm_academy"/>
+			<tag name="cecomm_ign_32"/>
 		</tags>
 	</commodity>
 
@@ -2376,6 +2746,9 @@
 			<tag name="commodity"/>
 			<tag name="ink_bucket"/>
 			<tag name="ignite_32"/>
+			<tag name="cecomm_foreign"/>
+			<tag name="cecomm_academy"/>
+			<tag name="cecomm_ign_32"/>
 		</tags>
 	</commodity>
 
@@ -2388,6 +2761,8 @@
 			<tag name="mine_shoring"/>
 			<tag name="ignite_64"/>
 			<tag name="wood"/>
+			<tag name="cecomm_mine"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -2399,6 +2774,8 @@
 			<tag name="commodity"/>
 			<tag name="lab_goods1"/>
 			<tag name="ignite_128"/>
+			<tag name="cecomm_lab"/>
+			<tag name="cecomm_ign_128"/>
 		</tags>
 	</commodity>
 
@@ -2435,6 +2812,7 @@
 			<tag name="commodity"/>
 			<tag name="iron_cogs"/>
 			<tag name="iron"/>
+			<tag name="cecomm_chapel"/>
 		</tags>
 	</commodity>
 
@@ -2446,6 +2824,7 @@
 			<tag name="commodity"/>
 			<tag name="medical_bag"/>
 			<tag name="dramatic"/>
+			<tag name="cecomm_barber"/>
 		</tags>
 	</commodity>
 
@@ -2454,6 +2833,7 @@
 		<description text="Put anything in an oven and you'll get a cooked meal out of it!" />
 		<tags>
 			<tag name="food"/>
+			<tag name="cecomm_cooked"/>
 		</tags>
 	</commodity>
 
@@ -2464,6 +2844,8 @@
 		<tags>
 			<tag name="food"/>
 			<tag name="quality_food"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_mc_pref"/>
 		</tags>
 	</commodity>
 
@@ -2474,6 +2856,8 @@
 		<tags>
 			<tag name="food"/>
 			<tag name="premium_food"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_uc_pref"/>
 		</tags>
 	</commodity>
 
@@ -2490,6 +2874,9 @@
 			<tag name="beetle"/>
 			<tag name="basic_cookable"/>
 			<tag name="ignite_128"/>
+			<tag name="cecomm_raw_meat"/>
+			<tag name="cecomm_raw_food"/>
+			<tag name="cecomm_ign_128"/>
 		</tags>
 	</commodity>
 
@@ -2504,6 +2891,8 @@
 			<tag name="meat"/>
 			<tag name="likeable"/>
 			<tag name="ignite_128"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_ign_128"/>
 		</tags>
 	</commodity>
 
@@ -2518,6 +2907,8 @@
 			<tag name="despair_relief"/>
 			<tag name="laudanum"/>
 			<tag name="likeable"/>
+			<tag name="cecomm_medicinal"/>
+			<tag name="cecomm_pub"/>
 		</tags>
 	</commodity>
 
@@ -2530,6 +2921,8 @@
 			<tag name="trade_food"/>
 			<tag name="meat"/>
 			<tag name="likeable"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_trade"/>
 		</tags>
 	</commodity>
 
@@ -2542,6 +2935,8 @@
 			<tag name="drink"/>
 			<tag name="sulphur_tonic"/>
 			<tag name="likeable"/>
+			<tag name="cecomm_medicinal"/>
+			<tag name="cecomm_barber"/>
 		</tags>
 	</commodity>
 
@@ -2553,6 +2948,8 @@
 			<tag name="trade_food"/>
 			<tag name="meat"/>
 			<tag name="likeable"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_trade"/>
 		</tags>
 	</commodity>
 
@@ -2564,6 +2961,8 @@
 			<tag name="cooked"/>
 			<tag name="basic_food"/>
 			<tag name="likeable"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_lc_pref"/>
 		</tags>
 	</commodity>
 
@@ -2576,6 +2975,8 @@
 			<tag name="cooked"/>
 			<tag name="quality_food"/>
 			<tag name="likeable"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_mc_pref"/>
 		</tags>
 	</commodity>
 
@@ -2589,6 +2990,8 @@
 			<tag name="basic_food"/>
 			<tag name="likeable"/>
 			<tag name="maize"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_lc_pref"/>
 		</tags>
 	</commodity>
 
@@ -2601,6 +3004,8 @@
 			<tag name="cooked"/>
 			<tag name="likeable"/>
 			<tag name="quality_food"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_mc_pref"/>
 		</tags>
 	</commodity>
 
@@ -2613,6 +3018,8 @@
 			<tag name="cooked"/>
 			<tag name="likeable"/>
 			<tag name="basic_food"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_lc_pref"/>
 		</tags>
 	</commodity>
 
@@ -2625,6 +3032,8 @@
 			<tag name="cooked"/>
 			<tag name="basic_food"/>
 			<tag name="likeable"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_lc_pref"/>
 		</tags>
 	</commodity>
 
@@ -2637,6 +3046,8 @@
 			<tag name="cooked"/>
 			<tag name="basic_food"/>
 			<tag name="likeable"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_lc_pref"/>
 		</tags>
 	</commodity>
 
@@ -2661,6 +3072,8 @@
 			<tag name="beer"/>
 			<tag name="brewed"/>
 			<tag name="alcohol"/>
+			<tag name="cecomm_brewed_alcohol"/>
+			<tag name="cecomm_pub"/>
 		</tags>
 	</commodity>
 
@@ -2674,6 +3087,8 @@
 			<tag name="likeable"/>
 			<tag name="beer"/>
 			<tag name="brewed"/>
+			<tag name="cecomm_brewed_alcohol"/>
+			<tag name="cecomm_pub"/>
 		</tags>
 	</commodity>
 
@@ -2688,6 +3103,8 @@
 			<tag name="beer"/>
 			<tag name="brewed"/>
 			<tag name="guarapo"/>
+			<tag name="cecomm_brewed_alcohol"/>
+			<tag name="cecomm_pub"/>
 		</tags>
 	</commodity>
 
@@ -2700,6 +3117,10 @@
 			<tag name="booze"/>
 			<tag name="spirits"/>
 			<tag name="caninha"/>
+			<tag name="ignite_64"/>
+			<tag name="cecomm_distilled_spirit"/>
+			<tag name="cecomm_pub"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -2712,6 +3133,9 @@
 			<tag name="booze"/>
 			<tag name="spirits"/>
 			<tag name="ignite_64"/>
+			<tag name="cecomm_distilled_spirit"/>
+			<tag name="cecomm_pub"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -2724,6 +3148,9 @@
 			<tag name="booze"/>
 			<tag name="spirits"/>
 			<tag name="ignite_64"/>
+			<tag name="cecomm_distilled_spirit"/>
+			<tag name="cecomm_pub"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -2736,6 +3163,9 @@
 			<tag name="booze"/>
 			<tag name="spirits"/>
 			<tag name="ignite_64"/>
+			<tag name="cecomm_distilled_spirit"/>
+			<tag name="cecomm_pub"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -2790,6 +3220,8 @@
 			<tag name="maize"/>
 			<tag name="jar_of_chicha"/>
 			<tag name="brewed"/>
+			<tag name="cecomm_brewed_alcohol"/>
+			<tag name="cecomm_pub"/>
 		</tags>
 	</commodity>
 
@@ -2803,6 +3235,8 @@
 			<tag name="beer"/>
 			<tag name="brewed"/>
 			<tag name="pulque"/>
+			<tag name="cecomm_brewed_alcohol"/>
+			<tag name="cecomm_pub"/>
 		</tags>
 	</commodity>
 
@@ -2816,6 +3250,9 @@
 			<tag name="bottle_of_moonshine"/>
 			<tag name="spirits"/>
 			<tag name="ignite_64"/>
+			<tag name="cecomm_distilled_spirit"/>
+			<tag name="cecomm_pub"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -2829,6 +3266,9 @@
 			<tag name="bottle_of_mezcal"/>
 			<tag name="spirits"/>
 			<tag name="ignite_64"/>
+			<tag name="cecomm_distilled_spirit"/>
+			<tag name="cecomm_pub"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -2842,6 +3282,9 @@
 			<tag name="basic_food"/>
 			<tag name="starch"/>
 			<tag name="ignite_64"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_lc_pref"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -2856,6 +3299,9 @@
 			<tag name="herbivore_food"/>
 			<tag name="cabbage"/>
 			<tag name="basic_cookable"/>
+			<tag name="cecomm_grown"/>
+			<tag name="cecomm_raw_vegetable"/>
+			<tag name="cecomm_raw_food"/>
 		</tags>
 	</commodity>
 
@@ -2873,6 +3319,10 @@
 			<tag name="raw"/>
 			<tag name="basic_cookable"/>
 			<tag name="ignite_64"/>
+			<tag name="cecomm_grown"/>
+			<tag name="cecomm_raw_vegetable"/>
+			<tag name="cecomm_raw_food"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -2888,6 +3338,9 @@
 			<tag name="black_fungus"/>
 			<tag name="raw"/>
 			<tag name="basic_cookable"/>
+			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_raw_fungus"/>
+			<tag name="cecomm_raw_food"/>
 		</tags>
 	</commodity>
 
@@ -2902,6 +3355,10 @@
 			<tag name="raw"/>
 			<tag name="basic_cookable"/>
 			<tag name="ignite_64"/>
+			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_raw_fungus"/>
+			<tag name="cecomm_raw_food"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -2915,6 +3372,9 @@
 			<tag name="raw_caviar"/>
 			<tag name="raw"/>
 			<tag name="ignite_64"/>
+			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_raw_food"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -2930,6 +3390,9 @@
 			<tag name="quality_food"/>
 			<tag name="cooked"/>
 			<tag name="tinned_exotic_caviar"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_trade"/>
+			<tag name="cecomm_mc_pref"/>
 		</tags>
 	</commodity>
 
@@ -2943,6 +3406,9 @@
 			<tag name="raw_opium"/>
 			<tag name="inedible"/>
 			<tag name="ignite_64"/>
+			<tag name="cecomm_trade"/>
+			<tag name="cecomm_brewing_ingredient"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -2956,6 +3422,7 @@
 			<tag name="raw_molasses_bucket"/>
 			<tag name="molasses"/>
 			<tag name="inedible"/>
+			<tag name="cecomm_trade"/>
 		</tags>
 	</commodity>
 
@@ -2971,6 +3438,9 @@
 			<tag name="basic_brewable"/>
 			<tag name="inedible"/>
 			<tag name="ignite_64"/>
+			<tag name="cecomm_trade"/>
+			<tag name="cecomm_brewing_ingredient"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -2988,6 +3458,10 @@
 			<tag name="basic_cookable"/>
 			<tag name="basic_brewable"/>
 			<tag name="ignite_64"/>
+			<tag name="cecomm_grown"/>
+			<tag name="cecomm_trade"/>
+			<tag name="cecomm_brewing_ingredient"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -3001,6 +3475,7 @@
 			<tag name="herbivore_food"/>
 			<tag name="sugarloaf"/>
 			<tag name="ignite_64"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -3015,6 +3490,9 @@
 			<tag name="raw"/>
 			<tag name="inedible"/>
 			<tag name="ignite_64"/>
+			<tag name="cecomm_grown"/>
+			<tag name="cecomm_brewing_ingredient"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -3030,6 +3508,9 @@
 			<tag name="pie_food"/>
 			<tag name="pumpkin"/>
 			<tag name="basic_cookable"/>
+			<tag name="cecomm_grown"/>
+			<tag name="cecomm_raw_vegetable"/>
+			<tag name="cecomm_raw_food"/>
 		</tags>
 	</commodity>
 
@@ -3046,6 +3527,11 @@
 			<tag name="vegetable"/>
 			<tag name="basic_cookable"/>
 			<tag name="ignite_64"/>
+			<tag name="cecomm_grown"/>
+			<tag name="cecomm_raw_vegetable"/>
+			<tag name="cecomm_raw_food"/>
+			<tag name="cecomm_brewing_ingredient"/>
+			<tag name="cecomm_ign_64"/>
 		</tags>
 	</commodity>
 
@@ -3062,6 +3548,11 @@
 			<tag name="ignite_128"/>
 			<tag name="basic_cookable"/>
 			<tag name="basic_brewable"/>
+			<tag name="cecomm_grown"/>
+			<tag name="cecomm_raw_fruit"/>
+			<tag name="cecomm_raw_food"/>
+			<tag name="cecomm_brewing_ingredient"/>
+			<tag name="cecomm_ign_128"/>
 		</tags>
 	</commodity>
 
@@ -3076,6 +3567,9 @@
 			<tag name="fruit"/>
 			<tag name="basic_cookable"/>
 			<tag name="prickly_pears"/>
+			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_raw_fruit"/>
+			<tag name="cecomm_raw_food"/>
 		</tags>
 	</commodity>
 
@@ -3085,6 +3579,8 @@
 		<gameplay_description text="This can be sold for a good price at a trade depot." />
 		<tags>
 			<tag name="cash_crop"/>
+			<tag name="cecomm_grown"/>
+			<tag name="cecomm_trade"/>
 		</tags>
 	</commodity>
 
@@ -3101,6 +3597,9 @@
 			<tag name="pie_food"/>
 			<tag name="raw"/>
 			<tag name="basic_cookable"/>
+			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_raw_fruit"/>
+			<tag name="cecomm_raw_food"/>
 		</tags>
 	</commodity>
 
@@ -3117,6 +3616,9 @@
 			<tag name="pie_food"/>
 			<tag name="raw"/>
 			<tag name="basic_cookable"/>
+			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_raw_fruit"/>
+			<tag name="cecomm_raw_food"/>
 		</tags>
 	</commodity>
 
@@ -3130,6 +3632,9 @@
 			<tag name="herbivore_food"/>
 			<tag name="joshua_fruit"/>
 			<tag name="raw"/>
+			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_raw_fruit"/>
+			<tag name="cecomm_raw_food"/>
 		</tags>
 	</commodity>
 
@@ -3142,6 +3647,7 @@
 			<tag name="meat"/>
 			<tag name="charred"/>
 			<tag name="charred_meat"/>
+			<tag name="cecomm_cooked"/>
 		</tags>
 	</commodity>
 
@@ -3156,6 +3662,8 @@
 			<tag name="pie_food"/>
 			<tag name="steak"/>
 			<tag name="basic_cookable"/>
+			<tag name="cecomm_raw_meat"/>
+			<tag name="cecomm_raw_food"/>
 		</tags>
 	</commodity>
 
@@ -3172,6 +3680,8 @@
 			<tag name="raw"/>
 			<tag name="steak"/>
 			<tag name="basic_cookable"/>
+			<tag name="cecomm_raw_meat"/>
+			<tag name="cecomm_raw_food"/>
 		</tags>
 	</commodity>
 
@@ -3185,6 +3695,8 @@
 			<tag name="basic_food"/>
 			<tag name="steak"/>
 			<tag name="meat"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_lc_pref"/>
 		</tags>
 	</commodity>
 
@@ -3200,6 +3712,8 @@
 			<tag name="fish"/>
 			<tag name="raw"/>
 			<tag name="fishperson_meat"/>
+			<tag name="cecomm_raw_meat"/>
+			<tag name="cecomm_raw_food"/>
 		</tags>
 	</commodity>
 
@@ -3213,8 +3727,9 @@
 			<tag name="meat"/>
 			<tag name="exotic"/>
 			<tag name="quality_food"/>
-			<tag name="cooked"/>
 			<tag name="fishperson"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_mc_pref"/>
 		</tags>
 	</commodity>
 
@@ -3228,6 +3743,8 @@
 			<tag name="pie_food"/>
 			<tag name="raw"/>
 			<tag name="fish"/>
+			<tag name="cecomm_raw_meat"/>
+			<tag name="cecomm_raw_food"/>
 		</tags>
 	</commodity>
 
@@ -3242,6 +3759,8 @@
 			<tag name="exotic"/>
 			<tag name="human"/>
 			<tag name="long_pork"/>
+			<tag name="cecomm_raw_meat"/>
+			<tag name="cecomm_raw_food"/>
 		</tags>
 	</commodity>
 
@@ -3256,7 +3775,8 @@
 			<tag name="quality_food"/>
 			<tag name="exotic"/>
 			<tag name="human"/>
-			<tag name="cooked"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_mc_pref"/>
 		</tags>
 	</commodity>
 
@@ -3271,6 +3791,8 @@
 			<tag name="poultry"/>
 			<tag name="raw"/>
 			<tag name="basic_cookable"/>
+			<tag name="cecomm_raw_meat"/>
+			<tag name="cecomm_raw_food"/>
 		</tags>
 	</commodity>
 
@@ -3284,6 +3806,8 @@
 			<tag name="basic_food"/>
 			<tag name="meat"/>
 			<tag name="poultry"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_lc_pref"/>
 		</tags>
 	</commodity>
 
@@ -3296,6 +3820,8 @@
 			<tag name="meat"/>
 			<tag name="cooked"/>
 			<tag name="quality_food"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_mc_pref"/>
 		</tags>
 	</commodity>
 
@@ -3307,6 +3833,8 @@
 			<tag name="cash_crop"/>
 			<tag name="raw"/>
 			<tag name="inedible"/>
+			<tag name="cecomm_grown"/>
+			<tag name="cecomm_trade"/>
 		</tags>
 	</commodity>
 
@@ -3320,6 +3848,8 @@
 			<tag name="inedible"/>
 			<tag name="coffee_fruit"/>
 			<tag name="tropical"/>
+			<tag name="cecomm_grown"/>
+			<tag name="cecomm_trade"/>
 		</tags>
 	</commodity>
 
@@ -3332,6 +3862,7 @@
 			<tag name="coffee_beans"/>
 			<tag name="tropical"/>
 			<tag name="cash_crop"/>
+			<tag name="cecomm_trade"/>
 		</tags>
 	</commodity>
 
@@ -3344,6 +3875,7 @@
 			<tag name="tea_leaves"/>
 			<tag name="tropical"/>
 			<tag name="cash_crop"/>
+			<tag name="cecomm_trade"/>
 		</tags>
 	</commodity>
 
@@ -3357,6 +3889,8 @@
 			<tag name="tropical"/>
 			<tag name="raw"/>
 			<tag name="basic_cookable"/>
+			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_raw_food"/>
 		</tags>
 	</commodity>
 
@@ -3369,6 +3903,8 @@
 			<tag name="cooked"/>
 			<tag name="tropical"/>
 			<tag name="basic_food"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_lc_pref"/>
 		</tags>
 	</commodity>
 
@@ -3382,6 +3918,8 @@
 			<tag name="premium_food"/>
 			<tag name="coconut"/>
 			<tag name="tropical"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_uc_pref"/>
 		</tags>
 	</commodity>
 
@@ -3394,6 +3932,8 @@
 			<tag name="cooked"/>
 			<tag name="fungus"/>
 			<tag name="basic_food"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_lc_pref"/>
 		</tags>
 	</commodity>
 
@@ -3407,6 +3947,8 @@
 			<tag name="chillies"/>
 			<tag name="spicy"/>
 			<tag name="tropical"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_trade"/>
 		</tags>
 	</commodity>
 
@@ -3423,6 +3965,9 @@
 			<tag name="tropical"/>
 			<tag name="raw"/>
 			<tag name="basic_cookable"/>
+			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_raw_fungus"/>
+			<tag name="cecomm_raw_food"/>
 		</tags>
 	</commodity>
 
@@ -3438,6 +3983,9 @@
 			<tag name="tropical"/>
 			<tag name="raw"/>
 			<tag name="basic_cookable"/>
+			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_raw_fungus"/>
+			<tag name="cecomm_raw_food"/>
 		</tags>
 	</commodity>
 
@@ -3451,6 +3999,8 @@
 			<tag name="cooked"/>
 			<tag name="fungus"/>
 			<tag name="tropical"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_trade"/>
 		</tags>
 	</commodity>
 
@@ -3464,6 +4014,8 @@
 			<tag name="cooked"/>
 			<tag name="fungus"/>
 			<tag name="tropical"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_trade"/>
 		</tags>
 	</commodity>
 
@@ -3476,6 +4028,8 @@
 			<tag name="trade_food"/>
 			<tag name="cooked"/>
 			<tag name="fungus"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_trade"/>
 		</tags>
 	</commodity>
 
@@ -3487,6 +4041,8 @@
 			<tag name="food"/>
 			<tag name="trade_food"/>
 			<tag name="cooked"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_trade"/>
 		</tags>
 	</commodity>
 
@@ -3498,6 +4054,8 @@
 			<tag name="food"/>
 			<tag name="trade_food"/>
 			<tag name="cooked"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_trade"/>
 		</tags>
 	</commodity>
 
@@ -3510,6 +4068,8 @@
 			<tag name="food"/>
 			<tag name="premium_food"/>
 			<tag name="cooked"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_uc_pref"/>
 		</tags>
 	</commodity>
 
@@ -3522,6 +4082,8 @@
 			<tag name="food"/>
 			<tag name="premium_food"/>
 			<tag name="cooked"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_uc_pref"/>
 		</tags>
 	</commodity>
 
@@ -3535,6 +4097,8 @@
 			<tag name="food"/>
 			<tag name="premium_food"/>
 			<tag name="cooked"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_uc_pref"/>
 		</tags>
 	</commodity>
 
@@ -3548,6 +4112,8 @@
 			<tag name="food"/>
 			<tag name="premium_food"/>
 			<tag name="cooked"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_uc_pref"/>
 		</tags>
 	</commodity>
 
@@ -3563,6 +4129,8 @@
 			<tag name="premium_food"/>
 			<tag name="cooked"/>
 			<tag name="human"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_uc_pref"/>
 		</tags>
 	</commodity>
 
@@ -3577,6 +4145,8 @@
 			<tag name="exotic"/>
 			<tag name="premium_food"/>
 			<tag name="cooked"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_uc_pref"/>
 		</tags>
 	</commodity>
 
@@ -3589,6 +4159,8 @@
 			<tag name="food"/>
 			<tag name="premium_food"/>
 			<tag name="cooked"/>
+			<tag name="cecomm_cooked"/>
+			<tag name="cecomm_uc_pref"/>
 		</tags>
 	</commodity>
 

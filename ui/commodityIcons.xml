@@ -56,7 +56,7 @@
     
      <state name="gunpowder_barrel" x="0" y="192" w="64" h="64" />
      <state name="grenades_crate" x="64" y="192" w="64" h="64" />
-     <state name="parcel_generic" x="192" y="128" w="64" h="64" />
+     <state name="parcel_generic" x="128" y="192" w="64" h="64" />
      <state name="crate_generic" x="192" y="192" w="64" h="64" />
      <state name="burlap_sack_generic" x="256" y="192" w="64" h="64" />
  
@@ -166,6 +166,7 @@
      <state name="pumpkin_pie" x="768" y="576" w="64" h="64" />
      
       <state name="charredmeat" x="896" y="576" w="64" h="64" />
+      <state name="ore_cat" x="960" y="576" w="64" h="64" />
     
      <state name="planks_lacquered" x="0" y="640" w="64" h="64" />
      <state name="lacquer_bucket" x="64" y="640" w="64" h="64" />

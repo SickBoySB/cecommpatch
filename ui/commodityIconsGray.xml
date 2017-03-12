@@ -166,6 +166,7 @@
      <state name="pumpkin_pie" x="768" y="576" w="64" h="64" />
      
       <state name="charredmeat" x="896" y="576" w="64" h="64" />
+      <state name="ore_cat" x="960" y="576" w="64" h="64" />
     
      <state name="planks_lacquered" x="0" y="640" w="64" h="64" />
      <state name="lacquer_bucket" x="64" y="640" w="64" h="64" />
