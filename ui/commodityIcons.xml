@@ -282,6 +282,8 @@
      <state name="basic_raw_brew_category" x="576" y="960" w="64" h="64" />
      <state name="basic_brew_category" x="640" y="960" w="64" h="64" />
      
+     <state name="fuel_category" x="620" y="640" w="64" h="64" />
+	<state name="timber_category" x="576" y="896" w="64" h="64" />
 	<state name="distilled_spirits_category" x="640" y="896" w="64" h="64" />
      <state name="leaf_fossil" x="704" y="896" w="64" h="64" />
      <state name="obeliskian_block" x="768" y="896" w="64" h="64" />

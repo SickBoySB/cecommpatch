@@ -174,15 +174,22 @@
      <state name="iron_plate_icon" x="192" y="640" w="64" h="64" />
      <state name="copper_plate_icon" x="256" y="640" w="64" h="64" />
     
+	<state name="mine_shoring" x="384" y="640" w="64" h="64" />
      <state name="upkeepTrunk1" x="448" y="640" w="64" h="64" />
      <state name="upkeepTrunk2" x="512" y="640" w="64" h="64" />
      <state name="upkeepTrunk3" x="576" y="640" w="64" h="64" />
      <state name="upkeepTrunk4" x="640" y="640" w="64" h="64" />
      <state name="bone_fertiliser" x="704" y="640" w="64" h="64" />
-	<state name="sk_head" w="64" h="64" y="320" x="768" />
-	<state name="sk_torso" w="64" h="64" y="320" x="832" />
-	<state name="sk_frame" w="64" h="64" y="320" x="896" />
+	<state name="sk_head" w="64" h="64" y="640" x="768" />
+	<state name="sk_torso" w="64" h="64" y="640" x="832" />
+	<state name="sk_frame" w="64" h="64" y="640" x="896" />
+	<state name="sk_torso_mk2" w="64" h="64" y="640" x="960" />
+	<state name="sk_head_mk2" w="64" h="64" y="768" x="960" />
 	
+	<state name="sk_packedgun" w="64" h="64" y="704" x="896" />
+	<state name="sk_ammofeeder" w="64" h="64" y="704" x="960" />
+	
+		
      <state name="icon_stew" x="640" y="320" w="64" h="64" />
      <state name="icon_stew_cabbage" x="704" y="320" w="64" h="64" />
      <state name="icon_stew_pumpkin" x="768" y="320" w="64" h="64" />
@@ -275,7 +282,10 @@
      <state name="basic_raw_brew_category" x="576" y="960" w="64" h="64" />
      <state name="basic_brew_category" x="640" y="960" w="64" h="64" />
      
-     
+     <state name="fuel_category" x="620" y="640" w="64" h="64" />
+	<state name="timber_category" x="576" y="896" w="64" h="64" />
+	<state name="distilled_spirits_category" x="640" y="896" w="64" h="64" />
+     <state name="leaf_fossil" x="704" y="896" w="64" h="64" />
      <state name="obeliskian_block" x="768" y="896" w="64" h="64" />
      <state name="obeliskian_bricks" x="832" y="896" w="64" h="64" />
      <state name="grimoire" x="896" y="896" w="64" h="64" />
