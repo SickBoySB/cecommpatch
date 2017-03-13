@@ -30,8 +30,8 @@ Entity {
 	description="The MK-1 Steam Knight is a truly complete battle weapon, and a massive step up from the PR-0; Armored and armed with a deadly repeating gun, this masterpiece is sure to keep your colony safe.",
 	gameplay_description="Steam Knights automatically defend your colony and are extremely powerful.",
 	trade_good = true,
-	icon_name = "icon_steamknight",--FIXME ICON
-	icon_skin="orderIcons.xml",
+	icon_name = "sk_mk2",
+	icon_skin="orderIcons2.xml",
 	filter="other",
 	tags = {"commodity", "steam_knight", "armoured", "steel_make", "mk1_steam_knight" },
 	tier = 0,
