@@ -20,7 +20,7 @@
 	</commodity>
 
 	<commodity name="mk1_steam_knight" display_name="MK-1 Steam Knight" filter="other">
-		<display skin="ui\orderIcons.xml" icon="icon_steamknight"/>
+		<display skin="ui\orderIcons2.xml" icon="sk_mk2"/>
 		<description text="The MK-1 Steam Knight is a truly complete battle weapon, and a massive step up from the PR-0; Armored and armed with a deadly repeating gun, this masterpiece is sure to keep your colony safe." />
 		<gameplay_description text="Steam Knights automatically defend your colony and are extremely powerful." />
 		<tags>
@@ -60,6 +60,7 @@
 			<tag name="ignite_128"/>
 			<tag name="flammable"/>
 			<tag name="cecomm_chopped"/>
+			<tag name="cecomm_grown"/>
 			<tag name="cecomm_building_mat"/>
 			<tag name="cecomm_timber"/>
 			<tag name="cecomm_ign_64"/>
@@ -92,6 +93,7 @@
 			<tag name="commodity"/>
 			<tag name="lacquer"/>
 			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_grown"/>
 		</tags>
 	</commodity>
 

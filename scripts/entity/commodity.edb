@@ -30,8 +30,8 @@ Entity {
 	description="The MK-1 Steam Knight is a truly complete battle weapon, and a massive step up from the PR-0; Armored and armed with a deadly repeating gun, this masterpiece is sure to keep your colony safe.",
 	gameplay_description="Steam Knights automatically defend your colony and are extremely powerful.",
 	trade_good = true,
-	icon_name = "icon_steamknight",--FIXME ICON
-	icon_skin="orderIcons.xml",
+	icon_name = "sk_mk2",
+	icon_skin="orderIcons2.xml",
 	filter="other",
 	tags = {"commodity", "steam_knight", "armoured", "steel_make", "mk1_steam_knight" },
 	tier = 0,
@@ -70,7 +70,7 @@ Entity {
 	description="Raw harvested bamboo may be used like logs for any wood-working application.",
 	gameplay_description="Used for basic buildings and making planks at the carpentry workshop",
 	filter="raw",
-	tags = {"commodity", "wood", "timber", "ignite_128", "flammable", "cecomm_chopped", "cecomm_building_mat", "cecomm_timber", "cecomm_ign_64"},
+	tags = {"commodity", "wood", "timber", "ignite_128", "flammable", "cecomm_chopped", "cecomm_grown", "cecomm_building_mat", "cecomm_timber", "cecomm_ign_64"},
 	tier = 0,
 	trade_good = true,
 }
@@ -106,7 +106,7 @@ Entity {
      filter="raw",
      description="This sharp-smelling substance is extracted from plants and beetles and may be used to treat timber for aesthetic and practical improvement.",
 	gameplay_description="Used to produce lacquered wood.",
-	tags = {"commodity", "lacquer", "cecomm_foraged"},
+	tags = {"commodity", "lacquer", "cecomm_foraged", "cecomm_grown"},
 	tier = 0,
 	trade_good = true,
 }

@@ -1,8 +1,8 @@
 <tag_icons>
 
 <!-- REQUIRED FOR BLUEPRINT UI!!!!! Use visibility="0" to hide elsewhere -->
-	<tag		icon_name="timber_category"        
-			display_name="Any Timber"
+	<tag		icon_name="logs"        
+			display_name="Timber"
 			visibility="0"
 			tags="timber"
 			icon_skin="commodityIcons.xml" />
@@ -627,11 +627,11 @@ cecomm_boxed
 			tags="cecomm_barber"
 			icon_skin="orderIcons.xml" />
 	
-	<tag		icon_name="house"        
+	<tag		icon_name="workshops_category"        
 			display_name="Used by Workshops"
 			visibility="1"
 			tags="cecomm_miscws"
-			icon_skin="thoughtIcons.xml" />
+			icon_skin="orderIcons.xml" />
 	
 	<tag		icon_name="academy_image"        
 			display_name="Used by Training Academy"
