@@ -1914,7 +1914,94 @@ gameobject "citizen" inherit "ai_agent"
 		end
 		
 		state.models = models
-		
+
+		-- CECOMMPATCH - HATS!
+			local hatsel = {
+				"hatCapotainHatBlack", --1 PILGRIM - ALL
+				"hatCapotainHatBrown", --2 PILGRIM - ALL
+				
+				"vicarHat", --3 l
+				"strawSunHatPointed", --4 l
+				"strawSunHatRound", --5 l
+				"hatSailor02", --6 l
+				
+				"boater", --7 l/m
+				"bossOfThePlains", --8 l/m
+				"bowler", --9 l/m
+				"deerstalker", --10 l/m
+				"flatCap", --11 l/m
+				
+				"hatSailor01", --12 m
+				"hatBergstromHat", --13 m
+				"hatAlpineGreen00", --14 m
+				"hatAlpineGreen01", --15 m
+				"pithHelmet", --16 m
+				"fez", --17 m 
+				
+				"tophat", --18 u
+				"merchantHat", --19 u
+				"peakedcap" --20 u
+				
+				--"phrygiancap", -- silly?
+				--"ushankaBrown", -- silly?
+				--"ushankaGrey", -- silly?
+				
+				--"wushaCap" -- silly
+				--"prisonerHat", -- silly
+				--"chefHat", -- silly
+				--"bearSkinHat", -- silly
+				
+				--"bicornhat", -- military
+				--"tricornBrown", -- military
+				--"tricornNavy", -- military
+				--"stahlmarkianShako", -- military
+				--"morionHelmet00", -- military
+				--"occultInspectorHC", -- military
+				--"occultInspectorLC", -- military
+				--"kepi", -- military
+				--"kepiSlouch", -- military
+				--"shako", -- military
+				--"pickelhaubel", -- military
+				
+				--"pufferHelm", -- fishpeople
+				--"selenianHeadBlob", -- fishpeople
+				--"selenianHeadStalk", -- firshpeople
+				--"whelkGalea", -- fishpeople
+				
+				--"gogglesWornOnFace", -- floats above head
+			}
+			
+			-- male-only because 1) to prevent a lot of bald females, and 2) because females already have hats attached to head models.
+			if state.AI.strs["gender"] == "male" then
+				-- chance to have a hat at all
+				if rand(1,100) <= 40 then
+					-- artistocrats wouldn't be caught dead in headwear below their class
+					if entityName == "Aristocrat" then
+						hatchoice = rand(18,20)
+					else
+						-- should we split by social class, or use the pilgrim hat?
+						if rand(1,100) <= 10 then
+							if entityName == "Overseer" then
+								hatchoice = rand(7,17)
+							else
+								hatchoice = rand(3,11)
+							end
+						else
+							-- default to pilgrim hat, just because it's awesome
+							hatchoice = rand(1,2) -- 2 versions of it
+						end
+					end
+					
+					-- create the model string from our convoluted randomization
+					hatmodel = "models/hats/" .. hatsel[hatchoice] .. ".upm"
+					hairmodel = "" -- gotta hide the hair to prevent clipping
+					printl("CECOMMPATCH - HAT: " .. hatsel[hatchoice])
+					
+					-- TO DO: manually review which hair/hat combos actually clip to prevent tons of bald folks, as well as give females a chance to be habbidashered
+				end
+			end
+		-- /CECOMMPATCH
+
 		send("rendOdinCharacterClassHandler",
 			"odinRendererCreateCitizen", 
 			SELF, 
