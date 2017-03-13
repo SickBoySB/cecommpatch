@@ -60,6 +60,7 @@
 			<tag name="ignite_128"/>
 			<tag name="flammable"/>
 			<tag name="cecomm_chopped"/>
+			<tag name="cecomm_grown"/>
 			<tag name="cecomm_building_mat"/>
 			<tag name="cecomm_timber"/>
 			<tag name="cecomm_ign_64"/>
@@ -92,6 +93,7 @@
 			<tag name="commodity"/>
 			<tag name="lacquer"/>
 			<tag name="cecomm_foraged"/>
+			<tag name="cecomm_grown"/>
 		</tags>
 	</commodity>
 
