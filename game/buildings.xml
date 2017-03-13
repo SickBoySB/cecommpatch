@@ -11777,7 +11777,7 @@ are already contained within other buildings. Consider those a placeholder for l
 	<addition type="module" name="Upper Class Door 00" required="1"/>
 	<addition type="module" name="Upper Class Bed" required="1"/>
 	<addition type="module" name="Upper Class Window" required="0"/>
-	<addition type="module" name="Upper Class Table" required="0"/>
+	<addition type="module" name="Upper Class Table and Chair Set" required="0"/>
 	<addition type="module" name="Upper Class Chair" required="0"/>
 	<addition type="module" name="UC Cabinet" required="0"/>
 	<addition type="module" name="Upper Class Wall Shrine" required="0"/>
@@ -11796,6 +11796,152 @@ are already contained within other buildings. Consider those a placeholder for l
                              perimeterCost="1" perimeterPerCost="12" />
 	</building>
 
+	<!-- CECOMMPATCH - Hacky way to re-add the "all modules" filter -->
+	<building name="Show All Modules" display_name="All Modules"
+			description="Useful modules for workshops. Probably."
+			icon="modules_category"
+			order_string="96">
+	<addition type="module" name="Advanced Workbench" required="0" />
+	<addition type="module" name="Blunderbuss Locker" required="0"/>
+	<addition type="module" name="Bookshelf" required="0"/>
+	<addition type="module" name="Booze Vat" required="0"/>
+	<addition type="module" name="Brewing Vat" required="0"/>
+	<addition type="module" name="Brick Ceramics Kiln" required="0" />
+	<addition type="module" name="Brick Charcoal Kiln" required="0" />
+	<addition type="module" name="Bureaucrat's Desk" required="0"/>
+	<addition type="module" name="Carbine Locker" required="0"/>
+	<addition type="module" name="Carpentry Workbench" required="0" />
+	<addition type="module" name="Ceramics Press" required="0" />
+	<addition type="module" name="Ceramics Workbench" required="0" />
+	<addition type="module" name="Chalkboard" required="0"/>
+	<addition type="module" name="Chemistry Workbench" required="0"/>
+	<addition type="module" name="Decor Workbench" required="0" />
+	<addition type="module" name="Dewatering Pump" required="0" />
+	<addition type="module" name="Fancy Bookshelf" required="0"/>
+	<addition type="module" name="Grenade Launcher Locker" required="0"/>
+	<addition type="module" name="Grinder" required="0" /> 
+	<addition type="module" name="Industrial Kiln" required="0" />
+	<addition type="module" name="Iron Ceramics Kiln" required="0" />
+	<addition type="module" name="Iron Charcoal Kiln" required="0" />
+	<addition type="module" name="Iron Smelting Crucible" required="0" />
+	<addition type="module" name="Jezail Rifle Locker" required="0"/>
+	<addition type="module" name="Large Stone Altar" required="0"/>
+	<addition type="module" name="Leyden Pistol Locker" required="0"/>
+	<addition type="module" name="Leyden Rifle Locker" required="0"/>
+	<addition type="module" name="Macroscope" required="0"/>
+	<addition type="module" name="Mineshaft Module" required="0"/>
+	<addition type="module" name="Mixing Tank" required="0"/>
+	<addition type="module" name="Musket Locker" required="0"/>
+	<addition type="module" name="Power Core Dynamo" required="0"/>
+	<addition type="module" name="Power Lathe" required="0" />
+	<addition type="module" name="Power Saw" required="0" />
+	<addition type="module" name="Power Stamper" required="0" /> 
+	<addition type="module" name="Revolver Locker" required="0"/>
+	<addition type="module" name="Small Iron Oven" required="0"/>
+	<addition type="module" name="Small Stone Oven" required="0"/>
+	<addition type="module" name="Smithing Forge" required="0" />
+	<addition type="module" name="Standing Desk" required="0"/>
+	<addition type="module" name="Steam Distributor" required="0" />
+	<addition type="module" name="Steam Knight Forge" required="0"/>
+	<addition type="module" name="Steam Oven" required="0" />
+	<addition type="module" name="Steam Radiator" required="0"/>
+	<addition type="module" name="Still" required="0"/>
+	<addition type="module" name="Stone Altar" required="0"/>
+	<addition type="module" name="Stone Ceramics Kiln" required="0" />
+	<addition type="module" name="Stone Smelting Crucible" required="0" />
+	<addition type="module" name="Tripistol Locker" required="0"/>
+	<addition type="module" name="Vacuum Chamber" required="0"/>
+	<addition type="module" name="Ventilation Unit" required="0" />
+	<addition type="module" name="Wooden Altar" required="0"/>
+	<addition type="module" name="Workbench" required="0" />
+	</building>
+
+	<!-- CECOMMPATCH - Hacky way to re-add the "all decor" filter -->
+	<building name="Show All Decor" display_name="All Decor"
+			description="Pointless adornments to help pretend Everything Is Okay."
+			icon="decor_category"
+			order_string="95">
+	<addition type="module" name="Barbershop Pole" required="0"/>
+	<addition type="module" name="Barometer" required="0"/>
+	<addition type="module" name="Candelabra" required="0"/>
+	<addition type="module" name="Carpet00" required="0"/>
+	<addition type="module" name="Carpet01" required="0"/>
+	<addition type="module" name="Church Banner" required="0"/>
+	<addition type="module" name="Clothes Line 01" required="0"/>
+	<addition type="module" name="Clothes Line 05" required="0"/>
+	<addition type="module" name="Hanging Pots" required="0" />
+	<addition type="module" name="Lamp 00" required="0"/>
+	<addition type="module" name="Lamp 01" required="0"/>
+	<addition type="module" name="Lamp 02" required="0"/>
+	<addition type="module" name="Lamp 03" required="0"/>
+	<addition type="module" name="Lamp 04" required="0"/>
+	<addition type="module" name="Lamp02" required="0"/>
+	<addition type="module" name="Lamp03" required="0"/>
+	<addition type="module" name="Lamp04" required="0"/>
+	<addition type="module" name="Large Pipe and Valve" required="0"/>
+	<addition type="module" name="LC Cabinet" required="0"/>
+	<addition type="module" name="Lower Class Rug 00" required="0"/>
+	<addition type="module" name="Lower Class Wall Shrine" required="0"/>
+	<addition type="module" name="MC Cabinet" required="0"/>
+	<addition type="module" name="Middle Class Rug 00" required="0"/>
+	<addition type="module" name="Middle Class Rug 01" required="0"/>
+	<addition type="module" name="Pipe Cluster" required="0"/>
+	<addition type="module" name="Pot Amphora 00" required="0"/>
+	<addition type="module" name="Pot Amphora 01" required="0"/>
+	<addition type="module" name="Pot Bell Krater" required="0"/>
+	<addition type="module" name="Pot Calyx Krater" required="0"/>
+	<addition type="module" name="Rare Painting" required="0"/>
+	<addition type="module" name="Spice Rack" required="0" />
+	<addition type="module" name="Stone Plinth" required="0"/>
+	<addition type="module" name="UC Cabinet" required="0"/>
+	<addition type="module" name="Upper Class Rug 00" required="0"/>
+	<addition type="module" name="Upper Class Wall Shrine" required="0"/>
+	<addition type="module" name="Vent" required="0"/>
+	<addition type="module" name="Wall-Mounted Aurochs Head" required="0"/>
+	<addition type="module" name="Wall-Mounted Beetle Head" required="0"/>
+	<addition type="module" name="Wood Plinth" required="0"/>
+	<addition type="module" name="Stained Glass Window 00" required="0"/>
+	<addition type="module" name="Stained Glass Window 01" required="0"/>
+	</building>
+	
+	<!-- CECOMMPATCH - Hacky way to add the "all doors/windows" filter -->
+	<building name="Show All Doors Windows" display_name="All Doors/Windows"
+			description="Doors and windows for houses and workshops alike. Holes in walls don't discriminate."
+			icon="lower_class_door_icon"
+			order_string="93">
+	<addition type="module" name="Loading Bay Door" required="0"/>
+	<addition type="module" name="Lower Class Door 00" required="0"/>
+	<addition type="module" name="Lower Class Window 00" required="0"/>
+	<addition type="module" name="Lower Class Window 01" required="0"/>
+	<addition type="module" name="Middle Class Door 00" required="0"/>
+	<addition type="module" name="Middle Class Window 00" required="0"/>
+	<addition type="module" name="Stained Glass Window 00" required="0"/>
+	<addition type="module" name="Stained Glass Window 01" required="0"/>
+	<addition type="module" name="Upper Class Door 00" required="0"/>
+	<addition type="module" name="Upper Class Window" required="0"/>
+	</building>
+		
+	<!-- CECOMMPATCH - Hacky way to add the "all furniture" filter -->
+	<building name="Show All Furniture" display_name="All Furniture"
+			description="Oh look, things we can rub our bodies on! Mmm.. soft..."
+			icon="furniture_category"
+			order_string="94">
+	<addition type="module" name="Cot" required="0"/>
+	<addition type="module" name="Lower Class Chair" required="0"/>
+	<addition type="module" name="Lower Class Table and Chair Set" required="0"/>
+	<addition type="module" name="Lower Class Table" required="0"/>
+	<addition type="module" name="LC Cabinet" required="0"/>
+	<addition type="module" name="Middle Class Bed" required="0"/>
+	<addition type="module" name="Middle Class Chair" required="0"/>
+	<addition type="module" name="Middle Class Table and Chair Set" required="0"/>
+	<addition type="module" name="Middle Class Table" required="0"/>
+	<addition type="module" name="MC Cabinet" required="0"/>
+	<addition type="module" name="Upper Class Bed" required="0"/>
+	<addition type="module" name="Upper Class Chair" required="0"/>
+	<addition type="module" name="Upper Class Table and Chair Set" required="0"/>
+	<addition type="module" name="UC Cabinet" required="0"/>
+	</building>
+	
 	<building name="Chapel" script="chapel" display_name="Chapel"
 		description="A place of worship for members of the Church of Divine Mechanics; fights malign influence and improves colonists' moods."
 		icon="chapel"
