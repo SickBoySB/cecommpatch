@@ -1,8 +1,8 @@
 <tag_icons>
 
 <!-- REQUIRED FOR BLUEPRINT UI!!!!! Use visibility="0" to hide elsewhere -->
-	<tag		icon_name="timber_category"        
-			display_name="Any Timber"
+	<tag		icon_name="logs"        
+			display_name="Timber"
 			visibility="0"
 			tags="timber"
 			icon_skin="commodityIcons.xml" />
