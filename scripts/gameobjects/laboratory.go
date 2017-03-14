@@ -230,7 +230,7 @@ gameobject "laboratory" inherit "office"
 							send("rendUIManager", "SetOfficeInt", SELF, "researchPoints" .. programName, state.researchPoints[programName])
 							send(SELF, "generateProjects", programName, nil)
 	
-							updateOfficeVars( state.currentProjectGroup )
+							updateOfficeVars( programName )
 							break
 						end
 					end
@@ -260,9 +260,10 @@ gameobject "laboratory" inherit "office"
 				send("rendUIManager", "SetOfficeInt", SELF,
 					"researchPoints" .. oldProgramName, state.researchPoints[oldProgramName])
 				
-				for i=1,3 do
-					state.availableProjects[oldProgramName][i].enabled = false
-				end
+				-- CECOMMPATCH - Not sure why this was being triggered... removing fixes "project completed" bug
+				--for i=1,3 do
+					--state.availableProjects[oldProgramName][i].enabled = false
+				--end
 				
 				local count = 1
 				for k,v in pairs( state.availableProjects[oldProgramName] ) do
