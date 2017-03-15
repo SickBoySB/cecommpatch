@@ -65,6 +65,19 @@
     </element>  
   -->
 
+	<element name="cecommProv" scale="border" border="7" pad="0">
+	<state name="default"    w="22" h="16" x="75" y="218" />
+	<state name="active"    w="22" h="16" x="75" y="218" />
+	<state name="normal"    w="22" h="16" x="75" y="218" />
+	</element>
+	<element name="cecommPop" scale="border" border="7" pad="0">
+		<state name="highlight" w="22" h="16" x="148" y="202" />
+		<state name="active" w="22" h="16" x="148" y="202" />
+		<state name="default" w="22" h="16" x="75" y="218" />
+		<state name="down" w="22" h="16" x="75" y="218" />
+		<state name="up" w="22" h="16" x="75" y="218" />
+	</element>
+	
 	<element name="assignment_beacon_bg" scale="exact">
 		<state name="highlight" x="944" y="648" w="80" h="80" />
 		<state name="active" x="944" y="568" w="80" h="80" />

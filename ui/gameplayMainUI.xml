@@ -156,7 +156,7 @@
 				</tooltip>		
 					
 				
-				<containerbutton name="ColonistsButton" hsp="minimum" vsp="minimum" state="buttonGlass">
+				<containerbutton name="ColonistsButton" hsp="minimum" vsp="minimum" state="cecommPop">
 					<container type="horizbox" hsp="minimum" vsp="minimum" 
 							skin="ui/styles/default.xml"
 							name="populationContainer" >
@@ -183,6 +183,65 @@
 					</container>
 				</containerbutton>
 			</container>
+
+			
+			<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_padding="0" vertical_padding="5" name="distprovcontainer">
+				<container type="horizbox" hsp="minimum" vsp="minimum" 
+						skin="ui/styles/default.xml"
+						name="distprovfancy" 
+						solidfill="1"
+						solidfillname="cecommProv">
+
+					<container type="horizbox"
+							 hsp="minimum" vsp="minimum" vap="center"
+							 name="provisionsContainer"
+							 horizontal_padding="8"
+							 horizontal_gutter="0"
+							 vertical_padding="0"
+							  skin="ui/styles/default.xml">
+						<image name="workplacesIcon" hsp="minimum" vap="center" image="food_and_drink_category" skin="ui/commodityIcons.xml" scale="55" />
+						<label name="provisionsCounter" vap="center" text="    " state="tooltip_small" />
+						
+						<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+							<container type="vertbox"
+										hsp="minimum" vsp="minimum"
+										horizontal_padding="6" vertical_padding="6"
+										solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
+								
+								<container name="provisionsTooltipVB" type="vertbox" hsp="expand" vsp="minimum" horizontal_padding="4" vertical_padding="4" vertical_gutter="3"/>
+								
+							</container>
+						</tooltip>
+					</container>
+					
+					<container type="horizbox"
+							 hsp="minimum" vsp="minimum" vap="center"
+							 name="disturbanceContainer"
+							 horizontal_padding="8"
+							 horizontal_gutter="0"
+							 vertical_padding="0"
+							  skin="ui/styles/default.xml">
+						<image name="carpentryIcon" hsp="minimum" vap="center" image="eldritch" skin="ui/thoughtIcons.xml" scale="55" />
+						<label name="disturbanceCounter" vap="center" text="Disturbance:    " state="tooltip_small" />
+
+						<tooltip width="250" height="100" mouseRestDelay="0" followCursor="1">
+							
+							<container type="vertbox"
+										hsp="minimum" vsp="minimum"
+										horizontal_padding="6" vertical_padding="6"
+										solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
+
+								<!--<container name="disturbanceTooltipVB" type="vertbox" hsp="expand" vsp="minimum" horizontal_padding="4" vertical_padding="4" vertical_gutter="3"/>-->
+								
+								<label text="Disturbance Points" state="tooltip_text" hap="center"/>
+								<paragraph text="The amount your colony has disturbed its local area, perhaps awakening That Which Is Best Left Undisturbed. Disturbance is increased by building more structures." state="tooltip_small"/>
+							</container>
+						</tooltip>
+					</container>
+					
+				</container>
+			</container>
+			
 			
 			<!--<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_padding="3" vertical_padding="3" name="colonistsWorkplacesContainer">
 				<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
@@ -230,7 +289,7 @@
 			</container>-->
 
 
-			<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_padding="0" skin="ui/styles/default.xml" >
+			<!--<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_padding="0" skin="ui/styles/default.xml" >
 				
 				<container name="disturbanceContainer"
 					type="horizbox"
@@ -245,8 +304,6 @@
 									hsp="minimum" vsp="minimum"
 									horizontal_padding="6" vertical_padding="6"
 									solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
-
-							<!--<container name="disturbanceTooltipVB" type="vertbox" hsp="expand" vsp="minimum" horizontal_padding="4" vertical_padding="4" vertical_gutter="3"/>-->
 							
 							<label text="Disturbance Points" state="tooltip_text" hap="center"/>
 							<paragraph text="The amount your colony has disturbed its local area, perhaps awakening That Which Is Best Left Undisturbed. Disturbance is increased by building more structures." state="tooltip_small"/>
@@ -279,7 +336,7 @@
 					
 				</container>
 			
-			</container>
+			</container>-->
 				
 				
 			<container type="horizbox" hsp="minimum" vsp="expand" hap="right" horizontal_padding="0" skin="ui/styles/default.xml" >			
