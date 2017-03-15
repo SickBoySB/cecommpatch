@@ -155,20 +155,20 @@
 	<element name="colonists_exact" scale="exact">
 		<state name="up" 			x="576" y="611" w="40" h="41" />
 		<state name="highlight"		x="576" y="666" w="40" h="41" />
-		<state name="down" 		     x="576" y="693" w="40" h="41" />
-		<state name="disabled"        x="576" y="734" w="40" h="41" />
+		<state name="down" 		     x="576" y="721" w="40" h="41" />
+		<state name="disabled"        x="576" y="777" w="40" h="41" />
 	</element>
 	<element name="factions_exact" scale="exact">
 		<state name="up" 			x="536" y="611" w="40" h="41" />
 		<state name="highlight"		x="536" y="666" w="40" h="41" />
-		<state name="down" 		     x="536" y="693" w="40" h="41" />
-		<state name="disabled"        x="536" y="734" w="40" h="41" />
+		<state name="down" 		     x="536" y="721" w="40" h="41" />
+		<state name="disabled"        x="536" y="777" w="40" h="41" />
 	</element>
 	<element name="jobs_exact" scale="exact">
 		<state name="up" 			x="496" y="611" w="40" h="41" />
 		<state name="highlight"		x="496" y="666" w="40" h="41" />
-		<state name="down" 		     x="496" y="693" w="40" h="41" />
-		<state name="disabled"        x="496" y="734" w="40" h="41" />
+		<state name="down" 		     x="496" y="721" w="40" h="41" />
+		<state name="disabled"        x="496" y="777" w="40" h="41" />
 	</element>
 	
 	
