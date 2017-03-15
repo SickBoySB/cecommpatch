@@ -140,7 +140,7 @@
 						<label name="buttonTooltipLabel" text="Show all job assignments" vsp="center" state="tooltip_text"/>
 					</container>
 				</tooltip>
-			</staticbutton>
+			</staticbutton>			
 
 			<staticbutton name="FactionsButton" text="Factions" sfx="ledger01" skin="ui//styles//commandsFancy.xml" image="factions_exact">
 				<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
@@ -148,9 +148,43 @@
 						<label name="buttonTooltipLabel" text="Show Faction Relations" vsp="center" state="tooltip_text"/>
 					</container>
 				</tooltip>
-			</staticbutton>			
+			</staticbutton>		
 			
-			<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_padding="3" vertical_padding="3" name="colonistsWorkplacesContainer">
+			<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_padding="0" vertical_padding="5" name="colonistsWorkplacesContainer">
+				<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+					<container name="populationCounterTooltipVB" type="vertbox" hsp="expand" vsp="minimum" horizontal_padding="4" vertical_padding="4" vertical_gutter="3" solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" />
+				</tooltip>		
+					
+				
+				<containerbutton name="ColonistsButton" hsp="minimum" vsp="minimum" state="buttonGlass">
+					<container type="horizbox" hsp="minimum" vsp="minimum" 
+							skin="ui/styles/default.xml"
+							name="populationContainer" >
+
+						<container type="horizbox"
+								 hsp="minimum" vsp="minimum" vap="center"
+								 name="populationCounterContainer"
+								 horizontal_padding="8"
+								 horizontal_gutter="0"
+								 vertical_padding="0"
+								  skin="ui/styles/default.xml">
+							<image name="carpentryIcon" hsp="minimum" vap="center" image="population_icon" skin="ui/orderIcons.xml" scale="55" />
+							<label name="populationcounter" vap="center" text="   " state="tooltip_small"/>
+							<label name="populationslash" text="/" vap="center" state="tooltip_small" />
+							<label name="populationcap" vap="center" text="   " state="tooltip_small" />
+					
+						</container>
+						<image name="workplacesIcon" hsp="minimum" vap="center" image="workplaces" skin="ui/orderIcons.xml" scale="55" />
+
+						<label name="workplacecounter" vap="center" text="   " state="tooltip_small"/>
+						<label name="workplaceslash" text="/" vap="center" state="tooltip_small"/>
+						<label name="workplacecap" vap="center" text="   " state="tooltip_small"/>
+						<label name="wpspacer" vap="center" text="  " state="tooltip_small"/>
+					</container>
+				</containerbutton>
+			</container>
+			
+			<!--<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_padding="3" vertical_padding="3" name="colonistsWorkplacesContainer">
 				<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
 					<container name="populationCounterTooltipVB" type="vertbox" hsp="expand" vsp="minimum" horizontal_padding="4" vertical_padding="4" vertical_gutter="3" solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" />
 				</tooltip>
@@ -193,10 +227,7 @@
 					<label name="workplacecap" vap="center" text="150" state="tooltip_small"/>
 
 				</container>
-			</container>
-
-
-
+			</container>-->
 
 
 			<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_padding="0" skin="ui/styles/default.xml" >
