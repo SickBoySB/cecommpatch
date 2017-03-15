@@ -150,9 +150,9 @@
 				</tooltip>
 			</staticbutton>		
 			
-			<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_padding="0" vertical_padding="5" name="colonistsWorkplacesContainer">
+			<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_padding="0" vertical_padding="2" name="colonistsWorkplacesContainer">
 				<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
-					<container name="populationCounterTooltipVB" type="vertbox" hsp="expand" vsp="minimum" horizontal_padding="4" vertical_padding="4" vertical_gutter="3" solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" />
+					<container name="populationCounterTooltipVB" type="vertbox" hsp="expand" vsp="minimum" horizontal_padding="4" vertical_padding="1" vertical_gutter="2" solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" />
 				</tooltip>		
 					
 				
@@ -168,24 +168,27 @@
 								 horizontal_gutter="0"
 								 vertical_padding="0"
 								  skin="ui/styles/default.xml">
-							<image name="carpentryIcon" hsp="minimum" vap="center" image="population_icon" skin="ui/orderIcons.xml" scale="55" />
+							<image name="carpentryIcon" hsp="minimum" vap="center" image="population_icon" skin="ui/orderIcons.xml" scale="60" />
 							<label name="populationcounter" vap="center" text="   " state="tooltip_small"/>
 							<label name="populationslash" text="/" vap="center" state="tooltip_small" />
 							<label name="populationcap" vap="center" text="   " state="tooltip_small" />
 					
 						</container>
-						<image name="workplacesIcon" hsp="minimum" vap="center" image="workplaces" skin="ui/orderIcons.xml" scale="55" />
+						<image name="workplacesIcon" hsp="minimum" vap="center" image="workplaces" skin="ui/orderIcons.xml" scale="60" />
 
 						<label name="workplacecounter" vap="center" text="   " state="tooltip_small"/>
 						<label name="workplaceslash" text="/" vap="center" state="tooltip_small"/>
 						<label name="workplacecap" vap="center" text="   " state="tooltip_small"/>
 						<label name="wpspacer" vap="center" text="  " state="tooltip_small"/>
-					</container>
+					</container>	
 				</containerbutton>
 			</container>
-
 			
-			<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_padding="0" vertical_padding="5" name="distprovcontainer">
+			<container name="dayNightImageContainer" type="horizbox" hsp="minimum" vsp="minimum" vertical_padding="5" horizontal_padding="6" skin="ui/styles/default.xml">
+				<image name="DayNightImage" text="Day 1" hsp="minimum" vsp="minimum" hap="center" vap="center" scale="55" skin="ui/styles/default.xml" imageSkin="ui\\thoughtIcons2.xml" image="time_sunrise"/>
+			</container>
+			
+			<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_padding="0" vertical_padding="2" name="distprovcontainer">
 				<container type="horizbox" hsp="minimum" vsp="minimum" 
 						skin="ui/styles/default.xml"
 						name="distprovfancy" 
@@ -199,7 +202,7 @@
 							 horizontal_gutter="0"
 							 vertical_padding="0"
 							  skin="ui/styles/default.xml">
-						<image name="workplacesIcon" hsp="minimum" vap="center" image="food_and_drink_category" skin="ui/commodityIcons.xml" scale="55" />
+						<image name="workplacesIcon" hsp="minimum" vap="center" image="food_and_drink_category" skin="ui/commodityIcons.xml" scale="60" />
 						<label name="provisionsCounter" vap="center" text="    " state="tooltip_small" />
 						
 						<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
@@ -221,7 +224,7 @@
 							 horizontal_gutter="0"
 							 vertical_padding="0"
 							  skin="ui/styles/default.xml">
-						<image name="carpentryIcon" hsp="minimum" vap="center" image="eldritch" skin="ui/thoughtIcons.xml" scale="55" />
+						<image name="carpentryIcon" hsp="minimum" vap="center" image="eldritch" skin="ui/thoughtIcons.xml" scale="60" />
 						<label name="disturbanceCounter" vap="center" text="Disturbance:    " state="tooltip_small" />
 
 						<tooltip width="250" height="100" mouseRestDelay="0" followCursor="1">
@@ -237,11 +240,10 @@
 								<paragraph text="The amount your colony has disturbed its local area, perhaps awakening That Which Is Best Left Undisturbed. Disturbance is increased by building more structures." state="tooltip_small"/>
 							</container>
 						</tooltip>
-					</container>
+					</container>				
 					
 				</container>
 			</container>
-			
 			
 			<!--<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_padding="3" vertical_padding="3" name="colonistsWorkplacesContainer">
 				<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
@@ -341,9 +343,9 @@
 				
 			<container type="horizbox" hsp="minimum" vsp="expand" hap="right" horizontal_padding="0" skin="ui/styles/default.xml" >			
   
-      <container name="dayNightImageContainer" type="horizbox" hsp="minimum" vsp="minimum" state="buttonGlass" solidfill="1" vertical_padding="6" horizontal_padding="6" solidfillname="glassBrassBorder" skin="ui/styles/default.xml">
+     <!-- <container name="dayNightImageContainer" type="horizbox" hsp="minimum" vsp="minimum" state="buttonGlass" solidfill="1" vertical_padding="6" horizontal_padding="6" solidfillname="glassBrassBorder" skin="ui/styles/default.xml">
 					<image name="DayNightImage" text="Day 1" hsp="minimum" vsp="minimum" hap="center" vap="center" scale="50" skin="ui/styles/default.xml" state="glassBrassBorder" imageSkin="ui\\thoughtIcons2.xml" image="time_sunrise"/>
-				</container>
+				</container>-->
 
 				<imagebutton name="BuildingViewButton" text="Building View" sfx="click01" hsp="minimum" vsp="minimum" imgPctX="50" imgPctY="50" imgMarginX="6" imgMarginY="6" skin="ui/styles/default.xml" state="buttonGlass" imageSkin="ui/orderIcons.xml" image="show_interior_hover">
 					<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
