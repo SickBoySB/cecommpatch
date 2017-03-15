@@ -1,0 +1,246 @@
+<skin name="Fancy Commands For Fancy People" texture="ui/ui_sheet01.png">
+	
+	<element name="commandButtonDecorModule" scale="exact" >
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="down" x="0" y="320" w="74" h="74"/>    
+		<state name="up" x="0" y="320" w="74" h="74"/>    
+		<state name="highlight" x="74" y="320" w="74" h="74"/>
+	</element>
+	
+	<element name="commandButtonWorkshopModule" scale="exact" >
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="down" x="0" y="394" w="74" h="74"/>    
+		<state name="up" x="0" y="394" w="74" h="74"/>    
+		<state name="highlight" x="74" y="394" w="74" h="74"/>
+	</element>
+	
+	<element name="workshopButtonStandard" scale="exact">
+		<state name="up" x="0" y="468" w="218" h="36"  />
+		<state name="highlight" x="0" y="504" w="218" h="36" />
+		<state name="down" x="0" y="540" w="218 " h="36" />
+		<state name="disabled" x="0" y="576" w="218" h="36" />
+	</element>
+	
+	<element name="workshopButtonMetal" scale="exact">
+		<state name="up" x="219" y="468" w="218" h="36"  />
+		<state name="highlight" x="219" y="504" w="218" h="36" />
+		<state name="down" x="219" y="540" w="218 " h="36" />
+		<state name="disabled" x="219" y="576" w="218" h="36" />
+	</element>
+	
+	<element name="workshopButtonDecor" scale="exact">
+		<state name="up" x="438" y="468" w="218" h="36"  />
+		<state name="highlight" x="438" y="504" w="218" h="36" />
+		<state name="down" x="438" y="540" w="218 " h="36" />
+		<state name="disabled" x="438" y="576" w="218" h="36" />
+	</element>
+	
+	<element name="workshopButtonSpecial" scale="exact">
+		<state name="up" x="657" y="468" w="218" h="36"  />
+		<state name="highlight" x="657" y="504" w="218" h="36" />
+		<state name="down" x="657" y="540" w="218 " h="36" />
+		<state name="disabled" x="657" y="576" w="218" h="36" />
+	</element>
+	
+	<element name="zoom_to_location" scale="exact">
+		<state name="up" 			x="0" y="667" w="128" h="32" />
+		<state name="highlight"		x="0" y="699" w="128" h="32" />
+		<state name="down" 		     x="0" y="731" w="128" h="32" />
+		<state name="disabled"        x="0" y="763" w="128" h="32" />
+	</element>
+	<element name="dismiss_alert" scale="exact">
+		<state name="up" 			x="128" y="667" w="112" h="32" />
+		<state name="highlight"		x="128" y="699" w="112" h="32" />
+		<state name="down" 		     x="128" y="731" w="112" h="32" />
+		<state name="disabled"        x="128" y="763" w="112" h="32" />
+	</element>
+	<element name="menu_exact" scale="exact">
+		<state name="up" 			x="240" y="611" w="56" h="41" />
+		<state name="highlight"		x="240" y="652" w="56" h="41" />
+		<state name="down" 		     x="240" y="693" w="56" h="41" />
+		<state name="disabled"        x="240" y="611" w="56" h="41" />
+	</element>
+	
+	
+	<element name="workcrews_text_exact" scale="exact">
+		<state name="up" 			x="896" y="611" w="96" h="55" />
+		<state name="highlight"		x="896" y="666" w="96" h="55" />
+		<state name="down" 		     x="896" y="721" w="96" h="55" />
+		<state name="disabled"        x="896" y="611" w="96" h="55" />
+	</element>
+	<element name="workcrews_text_exact_active" scale="exact">
+		<state name="up" 			x="896" y="777" w="96" h="55" />
+		<state name="highlight"		x="896" y="832" w="96" h="55" />
+		<state name="down" 		     x="896" y="887" w="96" h="55" />
+		<state name="disabled"        x="896" y="777" w="96" h="55" />
+	</element>
+	
+	
+	<element name="offices_exact" scale="exact">
+		<state name="up" 			x="296" y="611" w="40" h="55" />
+		<state name="highlight"		x="296" y="666" w="40" h="55" />
+		<state name="down" 		     x="296" y="721" w="40" h="55" />
+		<state name="disabled"        x="296" y="777" w="40" h="55" />
+	</element>
+	<element name="offices_exact_active" scale="exact">
+		<state name="up" 			x="696" y="611" w="40" h="55" />
+		<state name="highlight"		x="696" y="666" w="40" h="55" />
+		<state name="down" 		     x="696" y="721" w="40" h="55" />
+		<state name="disabled"        x="696" y="777" w="40" h="55" />
+	</element>
+	
+	<element name="workshops_exact" scale="exact">
+		<state name="up" 			x="336" y="611" w="40" h="55" />
+		<state name="highlight"		x="336" y="666" w="40" h="55" />
+		<state name="down" 		     x="336" y="721" w="40" h="55" />
+		<state name="disabled"        x="336" y="777" w="40" h="55" />
+	</element>
+	<element name="workshops_exact_active" scale="exact">
+		<state name="up" 			x="736" y="611" w="40" h="55" />
+		<state name="highlight"		x="736" y="666" w="40" h="55" />
+		<state name="down" 		     x="736" y="721" w="40" h="55" />
+		<state name="disabled"        x="736" y="777" w="40" h="55" />
+	</element>
+	
+	
+	<element name="houses_exact" scale="exact">
+		<state name="up" 			x="376" y="611" w="40" h="55" />
+		<state name="highlight"		x="376" y="666" w="40" h="55" />
+		<state name="down" 		     x="376" y="721" w="40" h="55" />
+		<state name="disabled"        x="376" y="777" w="40" h="55" />
+	</element>
+	<element name="houses_exact_active" scale="exact">
+		<state name="up" 			x="776" y="611" w="40" h="55" />
+		<state name="highlight"		x="776" y="666" w="40" h="55" />
+		<state name="down" 		     x="776" y="721" w="40" h="55" />
+		<state name="disabled"        x="776" y="777" w="40" h="55" />
+	</element>
+	
+
+	<element name="commodities_exact" scale="exact">
+		<state name="up" 			x="456" y="611" w="40" h="55" />
+		<state name="highlight"		x="456" y="666" w="40" h="55" />
+		<state name="down" 		     x="456" y="721" w="40" h="55" />
+		<state name="disabled"        x="456" y="777" w="40" h="55" />
+	</element>
+	<element name="commodities_exact_active" scale="exact">
+		<state name="up" 			x="856" y="611" w="40" h="55" />
+		<state name="highlight"		x="856" y="666" w="40" h="55" />
+		<state name="down" 		     x="856" y="721" w="40" h="55" />
+		<state name="disabled"        x="856" y="777" w="40" h="55" />
+	</element>
+	
+
+	
+	<!-- doesn't need drop-down connection -->
+	<element name="2x_exact" scale="exact">
+		<state name="up" 			x="616" y="611" w="40" h="41" />
+		<state name="highlight"		x="616" y="652" w="40" h="41" />
+		<state name="down" 		     x="616" y="693" w="40" h="41" />
+		<state name="disabled"        x="616" y="734" w="40" h="41" />
+	</element>
+	<element name="2x_exact_active" scale="exact">
+		<state name="up" 			x="656" y="611" w="40" h="41" />
+		<state name="highlight"		x="656" y="652" w="40" h="41" />
+		<state name="down" 		     x="656" y="693" w="40" h="41" />
+		<state name="disabled"        x="656" y="734" w="40" h="41" />
+	</element>
+	
+	
+	<!-- unused -->
+	<element name="colonists_exact" scale="exact">
+		<state name="up" 			x="576" y="611" w="40" h="41" />
+		<state name="highlight"		x="576" y="666" w="40" h="41" />
+		<state name="down" 		     x="576" y="693" w="40" h="41" />
+		<state name="disabled"        x="576" y="734" w="40" h="41" />
+	</element>
+	<element name="factions_exact" scale="exact">
+		<state name="up" 			x="536" y="611" w="40" h="41" />
+		<state name="highlight"		x="536" y="666" w="40" h="41" />
+		<state name="down" 		     x="536" y="693" w="40" h="41" />
+		<state name="disabled"        x="536" y="734" w="40" h="41" />
+	</element>
+	<element name="jobs_exact" scale="exact">
+		<state name="up" 			x="496" y="611" w="40" h="41" />
+		<state name="highlight"		x="496" y="666" w="40" h="41" />
+		<state name="down" 		     x="496" y="693" w="40" h="41" />
+		<state name="disabled"        x="496" y="734" w="40" h="41" />
+	</element>
+	
+	
+	
+	
+	
+	<element name="help_exact" scale="exact">
+		<state name="up" 			x="552" y="848" w="40" h="41" />
+		<state name="highlight"		x="552" y="889" w="40" h="41" />
+		<state name="down" 		     x="552" y="930" w="40" h="41" />
+		<state name="disabled"        x="552" y="971" w="40" h="41" />
+	</element>
+	
+	
+	<!-- climate embark buttons-->
+	<element name="embark_cold" scale="exact">
+		<state name="up" 			x="832" y="0"   w="48" h="48" />
+		<state name="highlight"		x="832" y="48"  w="48" h="48" />
+		<state name="down" 		     x="832" y="96"  w="48" h="48" />
+		<state name="disabled"        x="832" y="144" w="48" h="48" />
+	</element>
+	<element name="embark_desert" scale="exact">
+		<state name="up" 			x="880" y="0"   w="48" h="48" />
+		<state name="highlight"		x="880" y="48"  w="48" h="48" />
+		<state name="down" 		     x="880" y="96"  w="48" h="48" />
+		<state name="disabled"        x="880" y="144" w="48" h="48" />
+	</element>
+	<element name="embark_tropical" scale="exact">
+		<state name="up" 			x="928" y="0"   w="48" h="48" />
+		<state name="highlight"		x="928" y="48"  w="48" h="48" />
+		<state name="down" 		     x="928" y="96"  w="48" h="48" />
+		<state name="disabled"        x="928" y="144" w="48" h="48" />
+	</element>
+	<element name="embark_temperate" scale="exact">
+		<state name="up" 			x="976" y="0"   w="48" h="48" />
+		<state name="highlight"		x="976" y="48"  w="48" h="48" />
+		<state name="down" 		     x="976" y="96"  w="48" h="48" />
+		<state name="disabled"        x="976" y="144" w="48" h="48" />
+	</element>
+	
+	<element name="embark_cold_selected" scale="exact">
+		<state name="up" 			x="832" y="192"   w="48" h="48" />
+		<state name="highlight"		x="832" y="240"  w="48" h="48" />
+		<state name="down" 		     x="832" y="288"  w="48" h="48" />
+		<state name="disabled"        x="832" y="332" w="48" h="48" />
+	</element>
+	<element name="embark_desert_selected" scale="exact">
+		<state name="up" 			x="880" y="192"   w="48" h="48" />
+		<state name="highlight"		x="880" y="240"  w="48" h="48" />
+		<state name="down" 		     x="880" y="288"  w="48" h="48" />
+		<state name="disabled"        x="880" y="332" w="48" h="48" />
+	</element>
+	<element name="embark_tropical_selected" scale="exact">
+		<state name="up" 			x="928" y="192"   w="48" h="48" />
+		<state name="highlight"		x="928" y="240"  w="48" h="48" />
+		<state name="down" 		     x="928" y="288"  w="48" h="48" />
+		<state name="disabled"        x="928" y="332" w="48" h="48" />
+	</element>
+	<element name="embark_temperate_selected" scale="exact">
+		<state name="up" 			x="976" y="192"   w="48" h="48" />
+		<state name="highlight"		x="976" y="240"  w="48" h="48" />
+		<state name="down" 		     x="976" y="288"  w="48" h="48" />
+		<state name="disabled"        x="976" y="332" w="48" h="48" />
+	</element>
+	<!-- unused
+	<element name="embark_empty" scale="exact">
+		<state name="up" 			x="832" y="384"   w="48" h="48" />
+		<state name="highlight"		x="832" y="384"  w="48" h="48" />
+		<state name="down" 		     x="880" y="384"  w="48" h="48" />
+		<state name="disabled"        x="832" y="384" w="48" h="48" />
+	</element>
+	-->
+	
+	
+</skin>
