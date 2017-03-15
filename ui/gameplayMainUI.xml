@@ -345,7 +345,7 @@
   
      <!-- <container name="dayNightImageContainer" type="horizbox" hsp="minimum" vsp="minimum" state="buttonGlass" solidfill="1" vertical_padding="6" horizontal_padding="6" solidfillname="glassBrassBorder" skin="ui/styles/default.xml">
 					<image name="DayNightImage" text="Day 1" hsp="minimum" vsp="minimum" hap="center" vap="center" scale="50" skin="ui/styles/default.xml" state="glassBrassBorder" imageSkin="ui\\thoughtIcons2.xml" image="time_sunrise"/>
-				</container>-->
+				</container>
 
 				<imagebutton name="BuildingViewButton" text="Building View" sfx="click01" hsp="minimum" vsp="minimum" imgPctX="50" imgPctY="50" imgMarginX="6" imgMarginY="6" skin="ui/styles/default.xml" state="buttonGlass" imageSkin="ui/orderIcons.xml" image="show_interior_hover">
 					<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
@@ -353,8 +353,16 @@
 							<label name="buttonTooltipLabel" text="Toggle Building View" vsp="center" state="tooltip_text"/>
 						</container>
 					</tooltip>
-				</imagebutton>
+				</imagebutton>-->
 
+				<imagebutton name="BuildingViewButton" text="Building View" sfx="click01" hsp="minimum" vsp="minimum" scale="100" imgMarginX="0" imgMarginY="0" skin="ui/styles/default.xml" imageSkin="ui/orderIcons.xml" image="show_interior_hover" state="button_invisible">
+					<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+						<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+							<label name="buttonTooltipLabel" text="Toggle Building View" vsp="center" state="tooltip_text"/>
+						</container>
+					</tooltip>
+				</imagebutton>
+				
         <staticbutton name="2xButton" text="2xButton" sfx="click00" skin="ui//styles//commandsFancy.xml" image="2x_exact">
           <tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
             <container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
@@ -363,13 +371,21 @@
           </tooltip>
         </staticbutton>
 
-          <imagebutton name="PauseUnpauseButton" text="Pause/Unpause Game" sfx="switch_toggle" hsp="minimum" vsp="minimum" imgPctX="50" imgPctY="50" imgMarginX="6" imgMarginY="6" skin="ui/styles/default.xml" state="buttonGlass" imageSkin="ui/orderIcons.xml" image="pocketwatch">
+				<imagebutton name="PauseUnpauseButton" text="Pause/Unpause Game" sfx="switch_toggle" hsp="minimum" vsp="minimum" scale="100" imgMarginX="0" imgMarginY="0" skin="ui/styles/default.xml" imageSkin="ui/orderIcons.xml" image="pocketwatch" state="button_invisible">
 					<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
 						<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
 							<label name="buttonTooltipLabel" text="Pause Game" vsp="center" state="tooltip_text"/>
 						</container>
 					</tooltip>
 				</imagebutton>
+		
+         <!-- <imagebutton name="PauseUnpauseButton" text="Pause/Unpause Game" sfx="switch_toggle" hsp="minimum" vsp="minimum" imgPctX="50" imgPctY="50" imgMarginX="6" imgMarginY="6" skin="ui/styles/default.xml" state="buttonGlass" imageSkin="ui/orderIcons.xml" image="pocketwatch">
+					<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+						<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+							<label name="buttonTooltipLabel" text="Pause Game" vsp="center" state="tooltip_text"/>
+						</container>
+					</tooltip>
+				</imagebutton>-->
 				
 				
 				<staticbutton name="Help" text="Help"  sfx="click" skin="ui//styles//commandsFancy.xml" image="help_exact">

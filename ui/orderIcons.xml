@@ -68,7 +68,7 @@
 	
 <!-- row 8, y="448" -->
 
-	<state name="pocketwatch" x="960" y="448" w="64" h="64" />
+	<state name="pocketwatch" x="972" y="459" w="40" h="41" />
 	
 <!-- row 9, y="512" -->
 	
@@ -347,11 +347,11 @@
   <state name="icon_bookshelf_uc" w="64" h="64" x="0"  y="704" />
   <state name="icon_bookshelf_mc" w="64" h="64" x="64" y="704" />
   
-  <state name="show_exteriors_only" w="64" h="64" x="832" y="896" />
-  <state name="show_interior_hover" w="64" h="64" x="896" y="896" />
-  <state name="show_all_interiors" w="64" h="64" x="960" y="896" />
+  <state name="show_exteriors_only" w="40" h="41" x="844" y="908" />
+  <state name="show_interior_hover" w="40" h="41" x="908" y="908" />
+  <state name="show_all_interiors" w="40" h="41" x="972" y="908" />
   
-	<state name="walls_down" w="64" h="64" x="960" y="704" />
+	<state name="walls_down" w="40" h="41" x="972" y="715" />
 	<state name="walls_down_glow" w="64" h="64" x="960" y="768" />
 	
   <state name="promote_to_overseer" x="576" y="384" w="64" h="64"/>

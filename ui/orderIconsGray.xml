@@ -68,7 +68,7 @@
 	
 <!-- row 8, y="448" -->
 
-	<state name="pocketwatch" x="960" y="448" w="64" h="64" />
+	<state name="pocketwatch" x="972" y="459" w="40" h="41" />
 	
 <!-- row 9, y="512" -->
 	
@@ -85,6 +85,8 @@
 	
 	<state name="factory_icon" x="0" y="128" w="64" h="64" />
 	<state name="workshops_category" x="0" y="128" w="64" h="64" />
+	
+	<state name="academy_image" x="768" y="640" w="64" h="64" />
 	
 	<state name="refinery_image" x="64" y="128" w="64" h="64" />
 	<state name="forge_image" x="128" y="128" w="64" h="64" />
@@ -118,6 +120,9 @@
     <state name="remove_stockpile" x="640" y="192" w="64" h="64" />
     <state name="cement_factory" x="704" y="192" w="64" h="64" />
     <state name="foreign_office" x="768" y="192" w="64" h="64" />
+    
+    <state name="big_stockpile" x="640" y="256" w="64" h="64" />
+    <state name="small_stockpile" x="704" y="256" w="64" h="64" />
     
     <state name="plant_grass" x="832" y="192" w="64" h="64" />
     <state name="plant_shrubbery" x="832" y="256" w="64" h="64" />
@@ -224,15 +229,14 @@
 	<state name="military_training" x="448" y="576" w="64" h="64"/>
 	<state name="military_assault" x="512" y="576" w="64" h="64"/>
     
-    <state name="frontier_justice" x="768" y="704" w="64" h="64"/>
-    <state name="redx_image" x="576" y="576" w="64" h="64"/>
-    <state name="greenarrow_image" x="640" y="576" w="64" h="64"/>
-    <state name="cycle_image" x="704" y="576" w="64" h="64"/>
-    <state name="orangesquare_image" x="768" y="576" w="64" h="64"/>
-    <state name="retreat_image" x="832" y="576" w="64" h="64"/>
-    <state name="guns_image" x="896" y="576" w="64" h="64"/>
+	<state name="frontier_justice" x="768" y="704" w="64" h="64"/>
+	<state name="redx_image" x="576" y="576" w="64" h="64"/>
+	<state name="greenarrow_image" x="640" y="576" w="64" h="64"/>
+	<state name="cycle_image" x="704" y="576" w="64" h="64"/>
+	<state name="remove_construction" x="768" y="576" w="64" h="64"/>
+	<state name="retreat_image" x="832" y="576" w="64" h="64"/>
+	<state name="guns_image" x="896" y="576" w="64" h="64"/>
 	<state name="ellipsis" x="960" y="576" w="64" h="64"/>
-
    
 	<!-- UI arrow things --> 
 	<state name="arrowdown_yellow_icon" x="576" y="640" w="64" h="64" />
@@ -343,11 +347,11 @@
   <state name="icon_bookshelf_uc" w="64" h="64" x="0"  y="704" />
   <state name="icon_bookshelf_mc" w="64" h="64" x="64" y="704" />
   
-  <state name="show_exteriors_only" w="64" h="64" x="832" y="896" />
-  <state name="show_interior_hover" w="64" h="64" x="896" y="896" />
-  <state name="show_all_interiors" w="64" h="64" x="960" y="896" />
+  <state name="show_exteriors_only" w="40" h="41" x="844" y="908" />
+  <state name="show_interior_hover" w="40" h="41" x="908" y="908" />
+  <state name="show_all_interiors" w="40" h="41" x="972" y="908" />
   
-	<state name="walls_down" w="64" h="64" x="960" y="704" />
+	<state name="walls_down" w="40" h="41" x="972" y="715" />
 	<state name="walls_down_glow" w="64" h="64" x="960" y="768" />
 	
   <state name="promote_to_overseer" x="576" y="384" w="64" h="64"/>
