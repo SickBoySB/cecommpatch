@@ -1,0 +1,1728 @@
+<skin name="Odin Gameplay UI" texture="ui/ui_sheet00.png">
+<!-- Because damnit. -->
+
+  <!-- fonts -->
+
+	<font name="clarendonCn" file="fonts/ClarendonCn.ttf" size="18"/>
+	<font name="clarendonTitle" file="fonts/ClarendonCn.ttf" size="22"/>
+	<font name="small" file="fonts/Austin.ttf" size="12"/>
+	<font name="default" file="fonts/Austin.ttf" size="14"/>
+	<font name="medium" file="fonts/Austin.ttf" size="16"/>
+	<font name="large" file="fonts/Austin.ttf" size="18"/>
+	<font name="titleButtonFont" file="fonts/ClarendonCn.ttf" size="24"/>
+	<font name="header" file="fonts/Clarendon.ttf" size="48"/>
+	<font name="subheader" file="fonts/Clarendon.ttf" size="36"/>
+	<font name="mainMenuButtonFont" file="fonts/ClarendonCN.ttf" size="18"/>
+	<font name="topBarButtonFont" file="fonts/ClarendonCN.ttf" size="24" />
+	<font name="tooltip_default" file="fonts/Austin.ttf" size="14"/>
+	<font name="smallcaps" file="fonts/AustinSmallCaps.ttf" size="22"/>
+		
+	<!-- colours -->
+	
+	<color name="white" red="255" green="255" blue="255"/>
+	<color name="cream_light" red="250" green="245" blue="235"/>
+	<color name="bone" red="200" green="190" blue="170"/>
+	<color name="black" red="0" green="0" blue="0"/>
+	<color name="black_faded" red="100" green="90" blue="80"/>
+	
+	<color name="amber" red="255" green="240" blue="150"/>
+	<color name="orange_light" red="255" green="205" blue="125"/>
+	<color name="orange_dark" red="240" green="135" blue="15"/>
+	<color name="occult" red="130" green="80" blue="255" />
+	
+	<color name="offwhite" red="255" green="250" blue="245"/>
+	<color name="cream" red="235" green="230" blue="210"/>
+	<color name="bone" red="200" green="190" blue="170"/>
+	<color name="red" red="255" green="0" blue="0"/>
+	<color name="green" red="130" green="210" blue="110" />
+
+	<color name="burlap" red="170" green="140" blue="120"/>
+
+
+	<color name="gold" red="235" green="200" blue="160" />
+	<color name="dull_warm" red="160" green="150" blue="130" />
+	<color name="bronze" red="230" green="190" blue="160" />
+	<color name="bronze_dark" red="110" green="80" blue="45" />
+	<color name="gold_dark" red="110" green="80" blue="45" />
+	<color name="default" red="0" green="0" blue="0"/>
+	<color name="inactive" red="128" green="128" blue="128"/>
+	<color name="inactive_lighter" red="150" green="140" blue="130"/>
+	
+	<color name="windowtext" red="255" green="255" blue="255"/>
+	<color name="quickmenu off" red="170" green="205" blue="215"/>
+	<color name="quickmenu on" red="240" green="240" blue="220"/>
+	<color name="active" red="255" green="255" blue="255"/>
+	
+	<color name="titleButton" red="60" green="40" blue="40"/>
+	<color name="titleButtonActive" red="120" green="50" blue="0"/>
+
+	<color name="buttonDefault" red="60" green="40" blue="40"/>
+	<color name="buttonOver" red="120" green="50" blue="0"/>
+  
+  <!-- from Spectre default 
+    <element name="slider" scale="exact">
+      <state name="active" x1="1" y1="113" x2="6" y2="127"/>
+    </element>  
+  -->
+
+	<element name="assignment_beacon_bg" scale="exact">
+		<state name="highlight" x="944" y="648" w="80" h="80" />
+		<state name="active" x="944" y="568" w="80" h="80" />
+		<state name="default" x="944" y="488" w="80" h="80" />
+		<state name="down" x="944" y="648" w="80" h="80" />
+		<state name="up" x="944" y="568" w="80" h="80" />
+	</element>
+	
+	<element name="assignment_beacon_bg_half" scale="exact">
+		<state name="default"    x="895" y="577" w="50" h="50" />
+		<state name="active" 	x="895" y="627" w="50" h="50" />
+		<state name="up"		x="895" y="627" w="50" h="50" />
+		<state name="highlight"  x="895" y="677" w="50" h="50" />
+		<state name="down"       x="895" y="677" w="50" h="50" />
+	</element>
+	
+	<element name="assignment_beacon_bg_half_disabled" scale="exact">
+		<state name="default"    x="845" y="578" w="50" h="50" />
+		<state name="active" 	x="845" y="578" w="50" h="50" />
+		<state name="up"		x="845" y="578" w="50" h="50" />
+		<state name="over"  	x="845" y="628" w="50" h="50" />
+		<state name="highlight"  x="845" y="628" w="50" h="50" />
+		<state name="down"       x="845" y="628" w="50" h="50" />
+	</element>
+	
+	<element name="assignment_beacon_bg_half_highlight" scale="exact">
+		<state name="default"    x="895" y="427" w="50" h="50" />
+		<state name="active" 	x="895" y="427" w="50" h="50" />
+		<state name="up"		x="895" y="427" w="50" h="50" />
+		<state name="over"  	x="895" y="477" w="50" h="50" />
+		<state name="highlight"  x="895" y="477" w="50" h="50" />
+		<state name="down"       x="895" y="527" w="50" h="50" />
+	</element>
+	
+	<element name="done_exact" scale="exact">
+		<state name="up" 			x="192" y="736" w="60" h="28" />
+		<state name="highlight"		x="252" y="736" w="60" h="28" />
+		<state name="down" 		     x="312" y="736" w="60" h="28" />
+		<state name="disabled"        x="372" y="736" w="60" h="28" />
+	</element>
+	<element name="cancel_exact" scale="exact">
+		<state name="up" 			x="192" y="764" w="60" h="28" />
+		<state name="highlight"		x="252" y="764" w="60" h="28" />
+		<state name="down" 		     x="312" y="764" w="60" h="28" />
+		<state name="disabled"        x="372" y="764" w="60" h="28" />
+	</element>
+  
+	<element name="tab" scale="border" border="6" pad="0">
+		<!--<state name="active" x="590" y="970" w="36" h="36" />
+		<state name="inactive" x="552" y="970" w="36" h="36" /> -->
+    
+		<state name="active" 	w="16" h="16" x="0" y="0" />
+		<state name="inactive"  	w="16" h="16" x="18" y="0" />
+		
+		<!-- states not used; copy of metal button
+		<state name="down" 		w="16" h="16" x="36" y="0" />
+		<state name="disabled"   w="16" h="16" x="54" y="0" />
+		-->		
+		<!-- from Spectre default 
+		<state name="back" x1="224" y1="13" x2="248" y2="32"/>
+		--> 
+		
+		<font name="text" font="default" color="default" />
+		<font name="selected" font="default" color="active" />
+	</element>
+  
+	<element name="buttonMetal" scale="border" border="6" pad="0">
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="up" 		w="16" h="16" x="0" y="0" />
+		<state name="highlight"  w="16" h="16" x="18" y="0" />  
+		<state name="down" 		w="16" h="16" x="36" y="0" />
+		<state name="disabled"   w="16" h="16" x="54" y="0" />  
+	</element>
+ 
+
+  <element name="list" scale="border" border="10" pad="2">
+    <!--    <state name="active" x1="128" y1="32" x2="148" y2="52"/> -->
+	<state name="active" x1="928" y1="976" x2="972" y2="1020"/> <!-- bloody lower right thing + scrollbar -->
+		<font name="text" font="small" color="default" />
+		<font name="selected" font="small" color="active" />
+	</element>
+  
+	<!-- element unique to styleWorkCrew.xml -->
+	<element name="scrollablelist" scale="border" border="4" pad="2">
+		<state name="active" x="994" y="954" w="20" h="20" />
+		<font name="text" font="default" color="default" />
+		<font name="selected" font="default" color="active" />
+	</element>
+  
+	<!-- this one is really small -->
+	<element name="lightweight_list" scale="border"  border="4" pad="2">
+		<state name="active" x1="928" y1="954" x2="948" y2="974"/>
+		<font name="text" font="default" color="default" />
+		<font name="selected" font="default" color="active" />
+	</element>
+  
+	<!-- and in black -->
+	<element name="lightweight_list_black" scale="border"  border="4" pad="2">
+		<state name="active" x1="956" y1="954" x2="976" y2="974"/>
+		<font name="text" font="default" color="default" />
+		<font name="selected" font="default" color="active" />
+	</element>
+
+	<element name="label">
+		<!--<font name="text" font="medium" color="default" />--> <!-- This is harded to be used for tooltips. die die die. -->
+		<font name="small" font="default" color="default" />
+		<font name="text_small" font="small" color="black" />
+		<font name="text_small_red" font="small" color="red" />
+		<font name="text_small_faded" font="small" color="black_faded" />
+		<font name="text" font="medium" color="black" />
+		
+		<font name="text_occult" font="medium" color="occult" />
+		<font name="text_faded" font="medium" color="black_faded" />
+		<font name="text_large" font="large" color="black" />
+		<font name="text_large_white" font="large" color="white" />
+		
+		<font name="medium_white" font="medium" color="white" />
+		<font name="small_white" font="small" color="white" />
+		<!-- TODO: actually, this style is used rather inconsistently; sometimes on light bgs, sometimes on dark. Needs sorting out.-->
+		<!-- made a style file for tooltips, see build/ui/styles/styleTooltip.xml -->
+		
+		<font name="tooltip_title" font="clarendonTitle" color="black" />
+		
+		<font name="tooltip_text" font="medium" color="cream" /> <!-- regular text? -->
+		<font name="tooltip_text_dark" font="medium" color="bone" />
+
+		<font name="tooltip_small" font="default" color="bone" /> <!-- extra info text -->
+		
+		<font name="tooltip_warning_text" font="default" color="red" />
+		
+		<font name="tooltip_hostile_text" font="medium" color="red" />
+		<font name="tooltip_neutral_text" font="medium" color="bone" />
+		<font name="tooltip_friendly_text" font="medium" color="green" />
+		<font name="tooltip_occult_text" font="medium" color="occult" />
+	</element>
+
+	<element name="label_background_grayer" scale="border" border="4" pad="2">
+		<state name="active" x="702" y="980" w="20" h="20"/>
+		<state name="normal" x="702" y="980" w="20" h="20"/>
+	</element>
+
+	<!-- Dropdown box things -->
+	<element name="dropdown_selected_container" scale="border" border="4" pad="0">
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="up" 		w="16" h="16" x="0" y="528" />
+		<state name="highlight"  w="16" h="16" x="16" y="528" />  
+		<state name="down" 		w="16" h="16" x="32" y="528" />
+		<state name="disabled"   w="16" h="16" x="48" y="528" />  
+	</element>
+	
+	<element name="dropdown_downarrow" scale="exact">
+		<state name="up" 		x="0" y="560" w="28" h="18" />
+		<state name="highlight"  x="0" y="578" w="28" h="18" />
+		<state name="down" 		x="0" y="596" w="28" h="18" />
+		<state name="disabled"   x="0" y="614" w="28" h="18" />
+	</element>
+	
+	<element name="dropdown_downarrow_32x16" scale="exact">
+		<state name="up" 		x="32" y="560" w="32" h="16" />
+		<state name="highlight"  x="32" y="576" w="32" h="16" />
+		<state name="down" 		x="32" y="592" w="32" h="16" />
+		<state name="disabled"   x="32" y="608" w="32" h="16" />
+	</element>
+	
+	<element name="dropdown_choices_container" scale="border" border="10" pad="2">
+		<state name="normal" x="0" y="544" w="16" h="16" /> 
+	</element>
+	
+	<element name="dropdown_choice_highlighted_item" scale="border" border="10" pad="2">
+		<state name="normal" x="16" y="544" w="16" h="16" /> 
+	</element>
+	
+
+  <element name="paragraph">
+	<font name="text" font="default" color="default" />
+	
+	<font name="small" font="default" color="default" />
+	<font name="text_large" font="large" color="black" />
+	<font name="medium_white" font="medium" color="white" />
+	<font name="small_white" font="small" color="white" />
+	<font name="tooltip_text" font="medium" color="cream" /> <!-- regular text? -->
+	<font name="tooltip_small" font="default" color="bone" /> <!-- extra info text -->
+	<font name="tooltip_warning_text" font="default" color="red" />
+	<font name="tooltip_hostile_text" font="medium" color="red" />
+	<font name="tooltip_neutral_text" font="medium" color="bone" />
+	<font name="tooltip_friendly_text" font="medium" color="green" />
+  </element>
+  
+  <element name="combobox_drop" scale="border" border="10" pad="2">
+    <state name="active" x1="928" y1="976" x2="972" y2="1020"/>
+	  <font name="text" font="default" color="default"/>
+  </element>
+  
+  <element name="combobox_tag" scale="exact">
+    <state name="active" x1="0" y1="282" x2="19" y2="299"/>
+  </element>
+
+  <element name="radiobutton" scale="exact">
+    <state name="active" x1="1" y1="209" x2="15" y2="223"/>
+    <state name="inactive" x1="17" y1="209" x2="31" y2="223"/>
+    <state name="disabled" x1="17" y1="209" x2="31" y2="223"/>	
+
+	<font name="text" font="default" color="default" />
+  </element>
+
+	<element name="cameo_off" scale="exact">
+		<state name="up"		x="152" y="168" w="32" h="32" />
+		<state name="highlight"	x="152" y="168" w="32" h="32" />
+		<state name="down" 		x="152" y="168" w="32" h="32" />
+		<state name="disabled"   x="152" y="168" w="32" h="32" />
+	</element>
+	
+		
+	<element name="cameo_off_plus" scale="exact">
+		<state name="up"		x="152" y="168" w="32" h="32" />
+		<state name="highlight"	x="152" y="134" w="32" h="32" />
+		<state name="down" 		x="152" y="168" w="32" h="32" />
+		<state name="disabled"   x="152" y="168" w="32" h="32" />
+	</element>
+	
+	<element name="cameo_minus_char_idle" scale="exact">
+		<state name="up"		x="220" y="168" w="32" h="32" />
+		<state name="highlight"	x="220" y="168" w="32" h="32" />
+		<state name="down_left"	x="220" y="168" w="32" h="32" />
+		<state name="down_right"	x="220" y="134" w="32" h="32" /> 
+		<state name="disabled"   x="220" y="134" w="32" h="32" /> 
+	</element>
+	<element name="cameo_minus_char_active" scale="exact">
+		<state name="up"		x="186" y="168" w="32" h="32" />
+		<state name="highlight"	x="186" y="168" w="32" h="32" />
+		<state name="down_right" x="186" y="134" w="32" h="32" /> 
+		<state name="down_left"	x="186" y="168" w="32" h="32" />
+		<state name="disabled"   x="220" y="134" w="32" h="32" /> 
+	</element>
+	
+	<element name="cameo_skull" scale="exact">
+		<state name="up"		x="220" y="202" w="32" h="32" />
+		<state name="highlight"	x="220" y="202" w="32" h="32" />
+		<state name="down" 		x="220" y="202" w="32" h="32" />
+		<state name="disabled"   x="220" y="202" w="32" h="32" />
+	</element>
+	
+	<element name="button_collapse" scale="exact">
+		<state name="up"		x="0" y="88" w="16" h="16" />
+		<state name="highlight"	x="16" y="88" w="16" h="16" />
+		<state name="down"		x="32" y="88" w="16" h="16" />
+		<state name="disabled"   x="48" y="88" w="16" h="16" /> 
+	</element>
+	<element name="button_expand" scale="exact">
+		<state name="up"		x="0" y="104" w="16" h="16" />
+		<state name="highlight"	x="16" y="104" w="16" h="16" />
+		<state name="down"		x="32" y="104" w="16" h="16" />
+		<state name="disabled"   x="48" y="104" w="16" h="16" /> 
+	</element>
+	
+	<element name="button_collapse_all" scale="exact">
+		<state name="up"		x="136" y="72" w="22" h="22" />
+		<state name="highlight"	x="158" y="72" w="22" h="22" />
+		<state name="down"		x="180" y="72" w="22" h="22" />
+		<state name="disabled"   x="202" y="72" w="22" h="22" /> 
+	</element>
+	<element name="button_expand_all" scale="exact">
+		<state name="up"		x="136" y="94" w="22" h="22" />
+		<state name="highlight"	x="158" y="94" w="22" h="22" />
+		<state name="down"		x="180" y="94" w="22" h="22" />
+		<state name="disabled"   x="202" y="94" w="22" h="22" /> 
+	</element>
+	
+	<element name="button_ticker_toggle" scale="exact">
+		<state name="up"		x="224" y="72" w="20" h="20" />
+		<state name="highlight"	x="244" y="72" w="20" h="20" />
+		<state name="down"		x="264" y="72" w="20" h="20" />
+		<state name="disabled"   x="284" y="72" w="20" h="20" /> 
+	</element>
+	
+	<element name="button_close_alerts" scale="exact">
+		<state name="up"		x="224" y="92" w="20" h="20" />
+		<state name="highlight"	x="244" y="92" w="20" h="20" />
+		<state name="down"		x="264" y="92" w="20" h="20" />
+		<state name="disabled"   x="284" y="92" w="20" h="20" /> 
+	</element>
+		
+	<element name="button_history" scale="exact">
+		<state name="up"		x="224" y="112" w="20" h="20" />
+		<state name="highlight"	x="244" y="112" w="20" h="20" />
+		<state name="down"		x="264" y="112" w="20" h="20" />
+		<state name="disabled"   x="284" y="112" w="20" h="20" /> 
+	</element>
+		
+		
+	<element name="image" scale="exact">
+		<state name="dot" w="16" h="16" x="32" y="544" />
+		
+		<state name="orange_arrow64_left" w="64" h="64" x="896" y="0" />
+		<state name="orange_arrow64_right" w="64" h="64" x="960" y="0" />
+		<state name="orange_arrow32_left" w="32" h="32" x="832" y="0" />
+		<state name="orange_arrow32_right" w="32" h="32" x="864" y="0" />
+		
+		<state name="blank" w="0" h="0" x="1" y="1" />
+		<state name="mood_arrow_up" w="11" h="6" x="202" y="316" />
+		<state name="mood_arrow_down" w="11" h="6" x="218" y="316" />
+		<state name="mood_bar" w="13" h="4" x="234" y="318" />
+		
+		<state name="mood_happiness_arrow_up"  w="20" h="7" x="247" y="314" />
+		<state name="mood_happiness_bar" 		 w="20" h="6" x="247" y="322" />
+		<state name="mood_happiness_arrow_down" w="20" h="7" x="247" y="329" />
+		
+		<state name="mood_anger_arrow_up"  w="20" h="7" x="267" y="314" />
+		<state name="mood_anger_bar" 		 w="20" h="6" x="267" y="322" />
+		<state name="mood_anger_arrow_down" w="20" h="7" x="267" y="329" />
+		
+		<state name="mood_fear_arrow_up"  w="20" h="7" x="287" y="314" />
+		<state name="mood_fear_bar" 		 w="20" h="6" x="287" y="322" />
+		<state name="mood_fear_arrow_down" w="20" h="7" x="287" y="329" />
+		
+		<state name="mood_despair_arrow_up"  w="20" h="7" x="307" y="314" />
+		<state name="mood_despair_bar" 		 w="20" h="6" x="307" y="322" />
+		<state name="mood_despair_arrow_down" w="20" h="7" x="307" y="329" />
+		
+		<state name="mood_madness_arrow_up"  	w="20" h="7" x="327" y="314" />
+		<state name="mood_madness_bar" 		 w="20" h="6" x="327" y="322" />
+		<state name="mood_madness_arrow_down" w="20" h="7" x="327" y="329" />
+		
+		<state name="cameo_off" x="152" y="168" w="32" h="32" />
+		<state name="cameo_on" x="186" y="168" w="32" h="32" />
+		<state name="cameo_idle" x="220" y="168" w="32" h="32" />
+		<state name="cameo_off_plus" x="152" y="134" w="32" h="32" />
+		<state name="cameo_revolt" x="254" y="134" w="32" h="32" />
+		
+		<state name="test" x1="911" y1="144" x2="943" y2="176"/>
+		<state name="large gear reticle" x1="0" x2="144" y1="736" y2="880" />
+		<state name="small gear reticle" x1="60" x2="140" y1="881" y2="959" />
+		<state name="20x arrow up" x1="0" x2="20" y1="880" y2="900" />
+		<state name="20x arrow down" x1="0" x2="20" y1="900" y2="920" />
+		<state name="20x arrow up bent" x1="140" x2="160" y1="880" y2="900" />
+		<state name="20x arrow down bent" x1="140" x2="160" y1="900" y2="920" />
+		<state name="20x bullet gear" x1="0" x2="20" y1="920" y2="940" />
+		<state name="20x bullet round" x1="0" x2="20" y1="940" y2="960" />
+		
+		<state name="standing_indicator" w="14" h="28" x="416" y="464" />
+		<state name="standing_bar" w="224" h="20" x="192" y="468" />
+		
+		<state name="standing_bar_empire" w="224" h="20" x="192" y="403" />
+		<state name="standing_bar_hostile" w="224" h="20" x="192" y="424" />
+		<state name="standing_bar_friendly" w="224" h="20" x="192" y="446" />
+		
+		<state name="standing_bar_3state_hostile" w="224" h="20" x="192" y="336" /> 
+		<state name="standing_bar_3state_neutral" w="224" h="20" x="192" y="358" />
+		<state name="standing_bar_3state_friendly" w="224" h="20" x="192" y="380" />
+		
+		<state name="machine_thought_holder_small_normal" w="50" h="66" x="923" y="273" />
+		<state name="machine_thought_holder_small_angry" w="50" h="66" x="973" y="273" />
+		
+		<state name="floating_icon_holder_64" w="82" h="110" x="1" y="415" />
+		<state name="floating_icon_holder_64_alarmed" w="82" h="110" x="1" y="415" />
+		
+		<state name="x_to_close" w="16" h="16" x="0" y="40" />
+		<state name="question_mark" w="16" h="16" x="16" y="40" />
+		
+		<state name="compass1" w="32" h="24" x="320" y="0" />
+		<state name="compass2" w="32" h="24" x="352" y="0" />
+		<state name="compass3" w="32" h="24" x="384" y="0" />
+		<state name="compass4" w="32" h="24" x="416" y="0" />
+
+		<state name="embark_site_selected"   	x="272" y="936" w="24" h="24" />
+		<state name="embark_site_not_selected"    x="248" y="936" w="24" h="24" />
+	
+		<state name="mood_arrow_up_green" w="16" h="12" x="0" y="328" />
+		<state name="mood_arrow_up_red"   w="16" h="12" x="16" y="328" />
+		<state name="mood_arrow_down_red" w="16" h="12" x="0" y="340" />
+		<state name="mood_arrow_down_green" w="16" h="12" x="16" y="340" />
+		
+		
+		
+		<state name="shift1_rounded_on_normal" w="32" h="16" x="588" y="626"/>
+		<state name="shift2_rounded_on_normal" w="32" h="16" x="620" y="626"/>
+		<state name="shift3_rounded_on_normal" w="32" h="16" x="652" y="626"/>
+		<state name="shift4_rounded_on_normal" w="32" h="16" x="684" y="626"/>
+		<state name="shift5_rounded_on_normal" w="32" h="16" x="716" y="626"/>
+		<state name="shift6_rounded_on_normal" w="32" h="16" x="748" y="626"/>
+		<state name="shift7_rounded_on_normal" w="32" h="16" x="780" y="626"/>
+		<state name="shift8_rounded_on_normal" w="32" h="16" x="812" y="626"/>
+
+		<state name="shift1_rounded_off_normal" w="32" h="16" x="588" y="642"/>
+		<state name="shift2_rounded_off_normal" w="32" h="16" x="620" y="642"/>
+		<state name="shift3_rounded_off_normal" w="32" h="16" x="652" y="642"/>
+		<state name="shift4_rounded_off_normal" w="32" h="16" x="684" y="642"/>
+		<state name="shift5_rounded_off_normal" w="32" h="16" x="716" y="642"/>
+		<state name="shift6_rounded_off_normal" w="32" h="16" x="748" y="642"/>
+		<state name="shift7_rounded_off_normal" w="32" h="16" x="780" y="642"/>
+		<state name="shift8_rounded_off_normal" w="32" h="16" x="812" y="642"/>
+		
+		<state name="shift1_rounded_on_happy_normal" w="32" h="16" x="588" y="514"/>
+		<state name="shift2_rounded_on_happy_normal" w="32" h="16" x="620" y="514"/>
+		<state name="shift3_rounded_on_happy_normal" w="32" h="16" x="652" y="514"/>
+		<state name="shift4_rounded_on_happy_normal" w="32" h="16" x="684" y="514"/>
+		<state name="shift5_rounded_on_happy_normal" w="32" h="16" x="716" y="514"/>
+		<state name="shift6_rounded_on_happy_normal" w="32" h="16" x="748" y="514"/>
+		<state name="shift7_rounded_on_happy_normal" w="32" h="16" x="780" y="514"/>
+		<state name="shift8_rounded_on_happy_normal" w="32" h="16" x="812" y="514"/>
+		
+		<state name="shift1_rounded_off_happy_normal" w="32" h="16" x="588" y="498"/>
+		<state name="shift2_rounded_off_happy_normal" w="32" h="16" x="620" y="498"/>
+		<state name="shift3_rounded_off_happy_normal" w="32" h="16" x="652" y="498"/>
+		<state name="shift4_rounded_off_happy_normal" w="32" h="16" x="684" y="498"/>
+		<state name="shift5_rounded_off_happy_normal" w="32" h="16" x="716" y="498"/>
+		<state name="shift6_rounded_off_happy_normal" w="32" h="16" x="748" y="498"/>
+		<state name="shift7_rounded_off_happy_normal" w="32" h="16" x="780" y="498"/>
+		<state name="shift8_rounded_off_happy_normal" w="32" h="16" x="812" y="498"/>
+		
+		<state name="dropdown_downarrow_32x16" x="32" y="560" w="32" h="16" />
+	</element>
+
+	<element name="checkbox" scale="exact">
+	<!--<state name="active" x="529" y="1009" w="14" h="14" />
+	<state name="inactive" x="513" y="1009" w="14" h="14" />
+	<state name="disabled" x="545" y="1009" w="14" h="14" /> -->
+	
+	<state name="active" x="344" y="960" w="16" h="16" />
+	<state name="inactive" x="344" y="976" w="16" h="16" />
+	<state name="disabled" x="344" y="992" w="16" h="16" />
+	</element>
+	
+	<element name="embark_dot" scale="exact">
+		<state name="up" x="248" y="936" w="24" h="24" />
+		<state name="highlight" x="296" y="936" w="24" h="24" />
+		<state name="down" x="272" y="936" w="24" h="24" />
+		<state name="disabled" x="248" y="936" w="24" h="24" />
+	</element>
+
+  <element name="work_button_up" scale="exact">
+    <state name="up" w="32" h="16" x="248" y="960" />
+    <state name="over" w="32" h="16" x="280" y="960" />
+    <state name="down" w="32" h="16" x="312" y="960" />
+    <state name="disabled" w="32" h="16" x="312" y="960" />
+  </element>
+
+	<element name="work_button_down" scale="exact">
+	<state name="up" w="32" h="16" x="248" y="976" />
+	<state name="over" w="32" h="16" x="280" y="976" />
+	<state name="down" w="32" h="16" x="312" y="976" />
+	<state name="disabled" w="32" h="16" x="312" y="976" />
+	</element>
+
+
+  <!-- Scrollbars  -->
+
+	<element name="scroll_vert_track_top" scale="exact">
+		<state name="active" w="20" h="4" x="202" y="240" />
+		<state name="disabled" w="20" h="4" x="222" y="240" />
+	</element>
+	<element name="scroll_vert_track_middle" scale="repeat">
+		<state name="active" w="20" h="20" x="202" y="244" />
+		<state name="disabled" w="20" h="20" x="222" y="244" />
+	</element>
+	<element name="scroll_vert_track_bottom" scale="exact">
+		<state name="active" w="20" h="4" x="202" y="264" />
+		<state name="disabled" w="20" h="4" x="222" y="264" />
+	</element>
+	
+	<element name="scroll_vert_thumb_top" scale="exact">
+		<state name="active" w="20" h="4" x="202" y="270" />
+		<state name="disabled" w="20" h="4" x="224" y="270"/>
+	</element>
+	<element name="scroll_vert_thumb_middle" scale="repeat">
+		<state name="active" w="20" h="12" x="202" y="274" />
+		<state name="disabled" w="20" h="12" x="224" y="274"/>
+	</element>
+	<element name="scroll_vert_thumb_bottom" scale="exact">
+		<state name="active" w="20" h="4" x="202" y="286" />
+		<state name="disabled" w="20" h="4" x="224" y="286"/>
+	</element>
+	
+	<element name="scroll_horz_track_left" scale="exact">
+		<state name="active" w="4" h="20" x="246" y="240" />
+		<state name="disabled" w="4" h="20" x="246" y="262" />
+	</element>
+	<element name="scroll_horz_track_middle" scale="repeat">
+		<state name="active" w="20" h="20" x="250" y="240" />
+		<state name="disabled" w="20" h="20" x="250" y="262" />
+	</element>
+	<element name="scroll_horz_track_right" scale="exact">
+		<state name="active" w="4" h="20" x="270" y="240" />
+		<state name="disabled" w="4" h="20" x="270" y="262" />
+	</element>
+	
+	<element name="scroll_horz_thumb_left" scale="exact">
+		<state name="active" w="4" h="20" x="276" y="240" />
+		<state name="disabled" w="4" h="20" x="276" y="262"/>
+	</element>
+	<element name="scroll_horz_thumb_middle" scale="repeat">
+		<state name="active" w="12" h="20" x="280" y="240" />
+		<state name="disabled" w="12" h="20" x="280" y="262"/>
+	</element>
+	<element name="scroll_horz_thumb_right" scale="exact">
+		<state name="active" w="4" h="20" x="292" y="240" />
+		<state name="disabled" w="4" h="20" x="292" y="262"/>
+	</element>
+	
+	
+	<!-- old scrollbar stuff which should be deleted -->
+
+	<element name="scrollup" scale="exact">
+		<state name="active" x="0" y="240" w="20" h="20" />
+		<state name="disabled" x="100" y="240" w="20" h="20" />
+	</element>
+	<element name="scrolltrack_vert" scale="exact">
+		<state name="active" x="0" y="260" w="20" h="20" />
+		<state name="disabled" x="100" y="260" w="20" h="20" /> 
+	</element>
+		<element name="scrolltrack_vert_slider" scale="exact">
+		<state name="active" x="20" y="260" w="20" h="20" />
+		<state name="disabled" x="120" y="260" w="20" h="20" /> 
+	</element>
+	<element name="scrolldown" scale="exact">
+		<state name="active" x="0" y="280" w="20" h="20" />
+		<state name="disabled" x="100" y="280" w="20" h="20" />
+	</element>
+	
+	
+	<element name="scrollleft" scale="exact">
+		<state name="active" x="40" y="240" w="20" h="20" />
+		<state name="disabled" x="140" y="240" w="20" h="20" />
+	</element>
+	<element name="scrolltrack_horz" scale="exact">
+		<state name="active" x="60" y="240" w="20" h="20" />
+		<state name="disabled" x="160" y="240" w="20" h="20" /> 
+	</element>
+		<element name="scrolltrack_horz_slider" scale="exact">
+		<state name="active" x="60" y="260" w="20" h="20" />
+		<state name="disabled" x="160" y="260" w="20" h="20" /> 
+	</element>
+	<element name="scrollright" scale="exact">
+		<state name="active" x="80" y="240" w="20" h="20" />
+		<state name="disabled" x="140" y="240" w="20" h="20" />
+	</element>
+  
+  
+<!-- emotion vert bars -->
+	
+	<element name="happiness_bar_v_top" scale="exact">
+		<state name="active" w="20" h="6" x="247" y="286" />
+	</element>
+	<element name="happiness_bar_v_middle" scale="repeat">
+		<state name="active" w="20" h="16" x="247" y="292" />
+	</element>
+	<element name="happiness_bar_v_bottom" scale="exact">
+		<state name="active" w="20" h="6" x="247" y="308" />
+	</element>
+	
+	<element name="happiness_bar_bg_v_top" scale="exact">
+		<state name="active" w="20" h="6" x="347" y="286" />
+	</element>
+	<element name="happiness_bar_bg_v_middle" scale="repeat">
+		<state name="active" w="20" h="16" x="347" y="292" />
+	</element>
+	<element name="happiness_bar_bg_v_bottom" scale="exact">
+		<state name="active" w="20" h="6" x="347" y="308" />
+	</element>
+	
+	
+	<element name="anger_bar_v_top" scale="exact">
+		<state name="active" w="20" h="6" x="267" y="286" />
+	</element>
+	<element name="anger_bar_v_middle" scale="repeat">
+		<state name="active" w="20" h="16" x="267" y="292" />
+	</element>
+	<element name="anger_bar_v_bottom" scale="exact">
+		<state name="active" w="20" h="6" x="267" y="308" />
+	</element>
+	
+	<element name="anger_bar_bg_v_top" scale="exact">
+		<state name="active" w="20" h="6" x="367" y="286" />
+	</element>
+	<element name="anger_bar_bg_v_middle" scale="repeat">
+		<state name="active" w="20" h="16" x="367" y="292" />
+	</element>
+	<element name="anger_bar_bg_v_bottom" scale="exact">
+		<state name="active" w="20" h="6" x="367" y="308" />
+	</element>
+	
+  
+	<element name="fear_bar_v_top" scale="exact">
+		<state name="active" w="20" h="6" x="287" y="286" />
+	</element>
+	<element name="fear_bar_v_middle" scale="repeat">
+		<state name="active" w="20" h="16" x="287" y="292" />
+	</element>
+	<element name="fear_bar_v_bottom" scale="exact">
+		<state name="active" w="20" h="6" x="287" y="308" />
+	</element>
+	
+	<element name="fear_bar_bg_v_top" scale="exact">
+		<state name="active" w="20" h="6" x="387" y="286" />
+	</element>
+	<element name="fear_bar_bg_v_middle" scale="repeat">
+		<state name="active" w="20" h="16" x="387" y="292" />
+	</element>
+	<element name="fear_bar_bg_v_bottom" scale="exact">
+		<state name="active" w="20" h="6" x="387" y="308" />
+	</element>
+	
+	
+	<element name="despair_bar_v_top" scale="exact">
+		<state name="active" w="20" h="6" x="307" y="286" />
+	</element>
+	<element name="despair_bar_v_middle" scale="repeat">
+		<state name="active" w="20" h="16" x="307" y="292" />
+	</element>
+	<element name="despair_bar_v_bottom" scale="exact">
+		<state name="active" w="20" h="6" x="307" y="308" />
+	</element>
+	
+	<element name="despair_bar_bg_v_top" scale="exact">
+		<state name="active" w="20" h="6" x="407" y="286" />
+	</element>
+	<element name="despair_bar_bg_v_middle" scale="repeat">
+		<state name="active" w="20" h="16" x="407" y="292" />
+	</element>
+	<element name="despair_bar_bg_v_bottom" scale="exact">
+		<state name="active" w="20" h="6" x="407" y="308" />
+	</element>
+	
+	
+	<element name="madness_bar_v_top" scale="exact">
+		<state name="active" w="20" h="6" x="327" y="286" />
+	</element>
+	<element name="madness_bar_v_middle" scale="repeat">
+		<state name="active" w="20" h="16" x="327" y="292" />
+	</element>
+	<element name="madness_bar_v_bottom" scale="exact">
+		<state name="active" w="20" h="6" x="327" y="308" />
+	</element>
+  
+	<element name="madness_bar_bg_v_top" scale="exact">
+		<state name="active" w="20" h="6" x="427" y="286" />
+	</element>
+	<element name="madness_bar_bg_v_middle" scale="repeat">
+		<state name="active" w="20" h="16" x="427" y="292" />
+	</element>
+	<element name="madness_bar_bg_v_bottom" scale="exact">
+		<state name="active" w="20" h="6" x="427" y="308" />
+	</element>
+  
+  <!-- from old Spectre UI; not used 
+  <element name="minimin" scale="exact">
+    <state name="active" x1="0" y1="64" x2="8" y2="72"/>
+  </element>
+  <element name="miniminmax" scale="exact">
+    <state name="active" x1="0" y1="72" x2="8" y2="80"/>
+  </element>
+  <element name="miniclose" scale="exact">
+    <state name="active" x1="0" y1="80" x2="8" y2="88"/>
+  </element> -->
+
+  <!-- from old Spectre UI; not used 
+  <element name="menubar" scale="stretch">
+    <state name="default" x1="0" y1="0" x2="6" y2="19"/>
+    <state name="divider" x1="7" y1="0" x2="9" y2="19"/>
+    <state name="horizdivider" scale="clamp" x1="18" y1="116" x2="24" y2="117"/>
+	  <font name="text" font="default" color="default" />
+  </element> -->
+
+<!-- from old Spectre UI; not used 
+  <element name="frame" scale="border" border="2">
+    <state name="active" x1="128" y1="32" x2="148" y2="52"/>
+    <font name="text" font="default" color="default" />
+  </element> -->
+  
+  
+	<element name="tooltip" scale="border" border="2" pad="0">
+		<font name="default" font="tooltip_default" color="cream" /> <!-- Is this used? -->
+		<!--<state name="normal" x="64" y="64" w="8" h="8" /> --><!-- hax: simple 40% black  -->
+	</element>
+    
+	<element name="window" scale="border" border="4" pad="0"> <!-- Now where is this used? -->
+		<font name="title" font="clarendonTitle" />
+		<state name="active" x="973" y="937" w="16" h="16" />
+		<state name="highlight" w="40" h="40" x="984" y="728" />  <!-- from styleWorkCrew.xml -->
+		<state name="transparent" x="1007" y="954" w="16" h="16" />
+	</element>
+
+	<element name="label_background_fancypants" scale="border" border="16" pad="2">
+		<state name="active" x="768" y="1002" w="20" h="20"/>
+		<state name="normal" x="768" y="1002" w="20" h="20"/>
+		<!--<state name="normal" x1="658" y1="898" x2="726" y2="966"/>-->
+	</element>
+
+	<element name="inputbox" scale="border" border="4" pad="2">
+		<state name="active" x="768" y="1002" w="20" h="20"/>
+		<state name="normal" x="768" y="1002" w="20" h="20"/>
+		<font name="text" font="default" color="default" />
+	</element>
+
+  <element name="treeview" scale="border" border="2">
+    <state name="normal" x1="96" y1="32" x2="128" y2="64"/>
+    <state name="plus" scale="exact" x1="48" y1="161" x2="62" y2="175"/>
+    <state name="minus" scale="exact" x1="63" y1="161" x2="77" y2="175"/>
+
+	 <font name="text" font="default" color="default" />
+ 	 <font name="selected" font="default" color="active" />
+   </element>
+
+  <element name="lightsquare" scale="stretch">
+    <state name="active" x="896" y="768" w="31" h="31"/>
+  </element>
+  <element name="darksquare" scale="stretch">
+    <state name="active" x="896" y="800" w="31" h="31"/>
+  </element>
+  
+  <element name="lightsquare2" scale="stretch">
+    <state name="active" x="928" y="768" w="31" h="31"/>
+  </element>
+  <element name="darksquare2" scale="stretch">
+    <state name="active" x="928" y="800" w="31" h="31"/>
+  </element>
+  
+  
+  <element name="windowtop_label" scale="border" border="4" pad="2">
+   <!-- <state name="normal" x1="658" y1="898" x2="726" y2="966"/> -->
+    <state name="normal" x="746" y="1002" w="20" h="20" baseline_shift="-2"/>
+  </element>
+
+	<element name="windowtop" scale="border" border="8" pad="0" >
+		<font name="text" font="clarendonTitle" color="black" />
+		<state name="default" x="461" y="91" w="32" h="32" />
+	</element>
+
+<!-- buttons for real -->
+	<element name="button" scale="border" border="6" pad="0">
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="up" 		w="16" h="16" x="72" y="0" />
+		<state name="highlight"  w="16" h="16" x="90" y="0" />  
+		<state name="down" 		w="16" h="16" x="108" y="0" />
+		<state name="disabled"   w="16" h="16" x="126" y="0" />  
+	</element>
+	<element name="buttonRed" scale="border" border="6" pad="0">
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="up" 		w="16" h="16" x="272" y="40" />
+		<state name="highlight"  w="16" h="16" x="288" y="40" />  
+		<state name="down" 		w="16" h="16" x="304" y="40" />
+		<state name="disabled"   w="16" h="16" x="320" y="40" />  
+	</element>
+	<element name="buttonSpecial" scale="border" border="6" pad="0">
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="up" 		w="16" h="16" x="72" y="18" />
+		<state name="highlight"  w="16" h="16" x="90" y="18" />  
+		<state name="down" 		w="16" h="16" x="108" y="18" />
+		<state name="disabled"   w="16" h="16" x="126" y="18" />  
+	</element>
+	
+	<element name="buttonMetal" scale="border" border="6" pad="0">
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="up" 		w="16" h="16" x="0" y="0" />
+		<state name="highlight"  w="16" h="16" x="18" y="0" />  
+		<state name="down" 		w="16" h="16" x="36" y="0" />
+		<state name="disabled"   w="16" h="16" x="54" y="0" />  
+	</element>
+	<element name="buttonMetalSpecial" scale="border" border="6" pad="0">
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="up" 		w="16" h="16" x="0" y="18" />
+		<state name="highlight"  w="16" h="16" x="18" y="18" />  
+		<state name="down" 		w="16" h="16" x="36" y="18" />
+		<state name="disabled"   w="16" h="16" x="54" y="18" />  
+	</element>
+	
+	<element name="buttonOverseerOffDuty" scale="border" border="6" pad="0">
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="up" 		w="16" h="16" x="0" y="120" />
+		<state name="highlight"  w="16" h="16" x="16" y="120" />  
+		<state name="down" 		w="16" h="16" x="32" y="120" />
+		<state name="disabled"   w="16" h="16" x="48" y="120" />  
+	</element>
+	<element name="buttonOverseerOnDuty" scale="border" border="6" pad="0">
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="up" 		w="16" h="16" x="0" y="136" />
+		<state name="highlight"  w="16" h="16" x="16" y="136" />  
+		<state name="down" 		w="16" h="16" x="32" y="136" />
+		<state name="disabled"   w="16" h="16" x="48" y="136" />  
+	</element>
+	
+	<element name="buttonGlassBorderless" scale="border" border="7" pad="0">
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="up"		 w="16" h="16" x="272" y="56" />
+		<state name="highlight"   w="16" h="16" x="288" y="56" />
+		<state name="down"		 w="16" h="16" x="304" y="56" />
+		<state name="disabled"    w="16" h="16" x="320" y="56" />
+	</element>
+	
+	<element name="buttonGlass" scale="border" border="7" pad="0">
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<!--<state name="up" 		w="16" h="16" x="144" y="0" />
+		<state name="highlight"  w="16" h="16" x="162" y="0" />  
+		<state name="down" 		w="16" h="16" x="180" y="0" />
+		<state name="disabled"   w="16" h="16" x="198" y="0" /> -->
+		
+		
+		<state name="up"		 w="18" h="18" x="135" y="36" />
+		<state name="highlight"   w="18" h="18" x="153" y="36" />
+		<state name="down"		 w="18" h="18" x="171" y="36" />
+		<state name="disabled"    w="18" h="18" x="189" y="36" />
+	</element>
+	
+	<element name="buttonGlassSpecial" scale="border" border="7" pad="0">
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="up"		 w="18" h="18" x="135" y="54" />
+		<state name="highlight"   w="18" h="18" x="153" y="54" />
+		<state name="down"		 w="18" h="18" x="171" y="54" />
+		<state name="disabled"    w="18" h="18" x="189" y="54" />
+		
+		<!--
+		<state name="up" 		w="16" h="16" x="144" y="16" />
+		<state name="highlight"  w="16" h="16" x="162" y="16" />  
+		<state name="down" 		w="16" h="16" x="180" y="16" />
+		<state name="disabled"   w="16" h="16" x="198" y="16" /> -->
+	</element>
+
+	<element name="buttonUltralight" scale="border" border="6" pad="0">
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="up" 		w="16" h="16" x="216" y="0" />
+		<state name="highlight"  w="16" h="16" x="232" y="0" />  
+		<state name="down" 		w="16" h="16" x="248" y="0" />
+		<state name="disabled"   w="16" h="16" x="264" y="0" />
+	</element>
+	
+	<!-- very light style buttons -->
+	<element name="buttonUltralightTiny" scale="border" border="2" pad="0">
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="up" 		w="8" h="16" x="216" y="18" />
+		<state name="highlight"  w="8" h="16" x="226" y="18" />  
+		<state name="down" 		w="8" h="16" x="236" y="18" />
+		<state name="disabled"   w="8" h="16" x="246" y="18" />  
+	</element>
+	<element name="buttonTiny" scale="border" border="2" pad="0">
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="up" 		w="8" h="8" x="216" y="18" />
+		<state name="highlight"  w="8" h="8" x="226" y="18" />  
+		<state name="down" 		w="8" h="8" x="236" y="18" />
+		<state name="disabled"   w="8" h="8" x="246" y="18" />  
+	</element>
+	
+	<element name="button_invisible" scale="border" border="7" pad="0">
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="up" 		 w="16" h="16" x="68"  y="132"/>
+		<state name="highlight"   w="16" h="16" x="68"  y="132"/>
+		<state name="down"		 w="16" h="16" x="68"  y="132"/>
+		<state name="disabled"    w="16" h="16" x="68"  y="132"/>
+	</element>
+	
+	<!-- title menu buttons -->
+	<element name="mainMenuButton" scale="border" border="8" pad="10">
+		<font name="text" font="mainMenuButtonFont" color="titleButton" vkern="0" />
+		<font name="selected" font="mainMenuButtonFont" color="titleButtonActive" vkern="0"/>
+	
+		<state name="up"        x="890" y="834" w="36" h="36" />
+		<state name="highlight" x="890" y="872" w="36" h="36" />
+		<state name="down"      x="890" y="910" w="36" h="36" />
+	</element>
+	
+	<element name="mainMenuButtonSpecial" scale="border" border="8" pad="10">
+		<font name="text" font="mainMenuButtonFont" color="titleButton" vkern="0" />
+		<font name="selected" font="mainMenuButtonFont" color="titleButtonActive" vkern="0"/>
+	
+		<state name="up"        x="97" y="35" w="36" h="36" />
+		<state name="highlight" x="97" y="73" w="36" h="36" />
+		<state name="down"      x="97" y="112" w="36" h="36" />
+	</element>
+	
+	<!-- topbar buttons in gameplay view--> <!-- TODO: cut this style, use commandButton instead. -->
+	<element name="topBarMenuButton" scale="border" border="8" pad="10">
+		<font name="text" font="topBarButtonFont" color="titleButton" vkern="-2" />
+		<font name="selected" font="topBarButtonFont" color="titleButtonActive" vkern="-2"/>
+	
+		<state name="up"        x="890" y="834" w="36" h="36" />
+		<state name="highlight" x="890" y="872" w="36" h="36" />
+		<state name="down"      x="890" y="910" w="36" h="36" />
+	</element> 
+	
+	<element name="topBarMenuButtonGlowing" scale="border" border="8" pad="10">
+		<font name="text" font="topBarButtonFont" color="titleButton" vkern="-2" />
+		<font name="selected" font="topBarButtonFont" color="titleButtonActive" vkern="-2"/>
+	
+		<state name="up"        x="890" y="834" w="36" h="36" />
+		<state name="highlight" x="890" y="872" w="36" h="36" />
+		<state name="down"      x="890" y="910" w="36" h="36" />
+	</element>
+	
+	<element name="miniPaperButton" scale="border" border="7" pad="0">
+		<font name="text" font="medium" color="default" />
+		<font name="selected" font="medium" color="active" />
+		
+		<state name="up" 		w="16" h="16" x="304" y="72" />
+		<state name="highlight"  w="16" h="16" x="320" y="72" />  
+		<state name="down" 		w="16" h="16" x="336" y="72" />
+		<state name="disabled"   w="16" h="16" x="352" y="72" />  
+	</element>
+	<element name="miniPaperLighterButton" scale="border" border="7" pad="0">
+		<font name="text" font="medium" color="default" />
+		<font name="selected" font="medium" color="active" />
+		
+		<state name="up" 		w="16" h="16" x="304" y="88" />
+		<state name="highlight"  w="16" h="16" x="320" y="88" />  
+		<state name="down" 		w="16" h="16" x="336" y="88" />
+		<state name="disabled"   w="16" h="16" x="352" y="88" />  
+	</element>
+	
+<!-- These two elements need to die. -->
+  <element name="lightButton" scale="border" border="8" pad="0">
+	<font name="text" font="large" color="default" />
+    <font name="selected" font="large" color="active" />
+    
+    <state name="up" w="40" h="40" x="984" y="728" />
+    <state name="down" w="40" h="40" x="984" y="728" />  
+  </element>
+
+  <element name="disabledButton" scale="border" border="10" pad="2">
+	  <font name="text" font="large" color="inactive" />
+	  <font name="selected" font="large" color="inactive" />
+	  
+    <state name="up" w="40" h="40" x="858" y="728"/>
+    <state name="down" w="40" h="40" x="858" y="728"/>
+  </element>
+
+	<element name="button_special" scale="border" border="4" pad="0">
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="up" 		 w="16" h="16" x="296"  y="186"/>
+		<state name="highlight"   w="16" h="16" x="314"  y="186"/>
+		<state name="down"		 w="16" h="16" x="332"  y="186"/>
+		<state name="disabled"    w="16" h="16" x="296"  y="186"/>
+	</element>
+	
+	
+	<element name="image_button" scale="border" border="4" pad="0">
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="up" 		 w="16" h="16" x="278"  y="168"/>
+		<state name="highlight"   w="16" h="16" x="296"  y="168"/>
+		<state name="down"		 w="16" h="16" x="314"  y="168"/>
+		<state name="disabled"    w="16" h="16" x="328"  y="168"/> <!-- is this ever used? currently placeholder. -->
+	</element>
+	<element name="image_button_special" scale="border" border="4" pad="0">
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		<state name="up" 		 w="16" h="16" x="278"  y="186"/>
+		<state name="highlight"   w="16" h="16" x="296"  y="186"/>
+		<state name="down"		 w="16" h="16" x="314"  y="186"/>
+		<state name="disabled"    w="16" h="16" x="328"  y="186"/> <!-- is this ever used? currently placeholder. -->
+	</element> 
+	<!-- Image buttons. -->
+	<element name="imagebutton" scale="border" border="6" pad="0" >
+		<font name="text" font="default" color="buttonDefault" />
+		<font name="selected" font="default" color="buttonOver" />
+		
+		<state name="up"   		x="0" y="0" w="16" h="16" />
+		<state name="default"    x="0" y="0" w="16" h="16" />
+		<state name="over" 		x="18" y="0" w="16" h="16" />
+		<state name="highlight"  x="18" y="0" w="16" h="16" />
+		<state name="down" 		x="36" y="0" w="16" h="16" />
+		<state name="disabled"   x="54" y="0" w="16" h="16" />
+	</element>
+
+	<element name="disabled_imagebutton" scale="border" border="6" pad="0" >
+		<font name="text" font="default" color="buttonDefault" />
+		<font name="selected" font="default" color="buttonOver" />
+		
+		<state name="up"   x="54" y="0" w="16" h="16" />
+		<state name="over" x="54" y="0" w="16" h="16" />
+		<state name="down" x="54" y="0" w="16" h="16" />
+		
+	</element>
+
+	<element name="highlighted_imagebutton" scale="border" border="6" pad="0" >
+		<font name="text" font="default" color="buttonDefault" />
+		<font name="selected" font="default" color="buttonOver" />
+		
+		<state name="up"   		x="0" y="18" w="16" h="16" />
+		<state name="default"    x="0" y="18" w="16" h="16" />
+		<state name="over" 		x="18" y="18" w="16" h="16" />
+		<state name="highlight"  x="18" y="18" w="16" h="16" />
+		<state name="down" 		x="36" y="18" w="16" h="16" />
+		<state name="disabled"   x="54" y="18" w="16" h="16" />
+	</element>
+  
+  
+<!-- Window control button things -->
+  
+	<element name="closeButton" scale="exact">
+	<state name="active"    x="228" y="960"   w="20" h="20" />
+	<state name="highlight" x="228" y="980"   w="20" h="20" />
+	<state name="pressed "  x="228" y="1000"  w="20" h="20" />
+	<state name="disabled"  x="228" y="940"   w="20" h="20" />
+	</element>
+
+  <element name="minmaxButton" scale="exact">
+    <state name="active"    x="64" y="960"  w="16" h="16" />
+    <state name="highlight" x="64" y="976"  w="16" h="16" />
+    <state name="disabled"  x="64" y="976"  w="16" h="16" />
+  </element>
+
+  <element name="minimizeButton" scale="exact">
+    <state name="active"    x="48" y="960"  w="16" h="16" />
+    <state name="highlight" x="48" y="976"  w="16" h="16" />
+    <state name="disabled"  x="48" y="976"  w="16" h="16" />
+  </element>
+  
+<!-- other doodads 
+
+name="40x arrow up" x1="20" x2="60" y1="880" y2="920"
+name="40x arrow down" x1="20" x2=60"" y1="920" y2="960"
+
+name="40x arrow up bent" x1="160" x2="200" y1="880" y2="920"
+name="40x arrow down bent" x1="160" x2="200" y1="920" y2="960"
+
+
+name="slider top" x1="0" x2="20" y1="516" y2="536"
+name="slider track" x1="0" x2="20" y1="536" y2="556"
+name="slider bottom" x1="0" x2="20" y1="556" y2="576"
+
+name="slider top" x1="20" x2="40" y1="516" y2="536"
+name="slider thumb" x1="20" x2="40" y1="536" y2="556"
+name="slider bottom" x1="20" x2="40" y1="556" y2="576"
+
+  -->
+<!-- alert icons
+
+column 1
+
+name="factory" x1="0" y1="576" x2="40" y2="616"
+name="factory_glow" x1="40" y1="576" x2="80" y2="616"
+
+name="gears" x1="0" y1="616" x2="40" y2="656"
+name="gears_glow" x1="40" y1="616" x2="80" y2="656"
+
+name="blank1" x1="0" y1="656" x2="40" y2="696"
+name="blank1_glow" x1="40" y1="656" x2="80" y2="696"
+
+name="blank2" x1="0" y1="696" x2="40" y2="736"
+name="blank2_glow" x1="40" y1="696" x2="80" y2="736"
+
+column 1
+
+name="factory" x1="80" y1="576" x2="120" y2="616"
+name="factory_glow" x1="120" y1="576" x2="160" y2="616"
+
+name="gears" x1="80" y1="616" x2="120" y2="656"
+name="gears_glow" x1="120" y1="616" x2="160" y2="656"
+
+name="blank1" x1="80" y1="656" x2="120" y2="696"
+name="blank1_glow" x1="120" y1="656" x2="160" y2="696"
+
+name="blank2" x1="80" y1="696" x2="120" y2="736"
+name="blank2_glow" x1="120" y1="696" x2="160" y2="736"
+
+  -->
+  
+	<element name="glassBrassBorderRound" scale="border" border="4" pad="0">
+		<state name="default" x="409" y="90" w="12" h="12" />
+		<state name="active" x="422" y="90" w="12" h="12" /> <!-- active? -->
+		
+		<state name="up" x="409" y="90" w="12" h="12" />
+		<state name="down" x="435" y="90" w="12" h="12" />
+		<state name="highlight" x="422" y="90" w="12" h="12" />
+		<!-- active? -->
+	</element>
+  
+	<element name="glassLighterweight" scale="border" border="4" pad="0">
+		<state name="default" x="296" y="0" w="16" h="16" />
+		<state name="active"  x="296" y="0" w="16" h="16" />
+	</element>
+  
+	<element name="glassLighterweightDarker" scale="border" border="4" pad="0">
+		<state name="default" x="256" y="16" w="16" h="16" />
+		<state name="active"  x="256" y="16" w="16" h="16" />
+	</element>
+	
+	<element name="glassLighterweightBright" scale="border" border="4" pad="0">
+		<state name="default" x="272" y="16" w="16" h="16" />
+		<state name="active"  x="272" y="16" w="16" h="16" />
+	</element>
+	
+	<element name="glassLightweight" scale="border" border="4" pad="0">
+		<state name="default" x="280" y="0" w="16" h="16" />
+		<state name="active"  x="280" y="0" w="16" h="16" />
+	</element>
+	
+	<element name="glassBrassBorderDark" scale="border" border="7" pad="0">
+	<state name="default" x="469" y="0" w="18" h="18" />
+	<state name="active" x="469" y="0" w="18" h="18" />
+	</element>
+	
+	<element name="glassBrassBorderDarkMoreOpaque" scale="border" border="7" pad="0">
+	<state name="default" x="374" y="24" w="18" h="18" />
+	<state name="active" x="374" y="24" w="18" h="18" />
+	</element>
+	
+		<element name="glassBrassBorder" scale="border" border="7" pad="0">
+	<!-- border ="4" -->
+	<state name="default" x="451" y="0" w="18" h="18" />
+	<state name="active" x="451" y="0" w="18" h="18" />
+    
+    <!--<state name="default" x="425" y="44" w="12" h="12" />
+    <state name="active" x="425" y="44" w="12" h="12" />  active? -->
+	</element>
+  
+  <element name="emptyBrassBorder" scale="border" border="4" pad="0">
+    <state name="active" x="438" y="44" w="12" h="12" />
+  </element>
+  
+		<element name="miniPaperRoundLighter" scale="border" border="4" pad="0">
+		<state name="active" x="380" y="43" w="12" h="12" /> 
+		<state name="normal" x="380" y="43" w="12" h="12" /> 
+		</element>
+		
+		<element name="miniPaperRoundLight" scale="border" border="4" pad="0">
+		<state name="active" x="380" y="56" w="12" h="12" /> 
+		<state name="normal" x="380" y="56" w="12" h="12" /> 
+		</element>
+		
+		<element name="miniPaperRound" scale="border" border="4" pad="0">
+		<state name="active" x="380" y="69" w="12" h="12" /> 
+		<state name="normal" x="380" y="69" w="12" h="12" /> 
+		</element>
+	
+  
+	<element name="miniPaper" scale="border" border="4" pad="0">
+	<state name="active" x="451" y="44" w="12" h="12" /> 
+	<state name="normal" x="451" y="44" w="12" h="12" /> 
+	</element>
+	
+	<element name="miniPaperGreen" scale="border" border="4" pad="0">
+	<state name="active" x="464" y="18" w="12" h="12" /> 
+	<state name="normal" x="464" y="18" w="12" h="12" /> 
+	</element>
+	
+	<element name="miniPaperRed" scale="border" border="4" pad="0">
+	<state name="active" x="464" y="31" w="12" h="12" /> 
+	<state name="normal" x="464" y="31" w="12" h="12" /> 
+	</element>
+	
+	<element name="miniPaperEldritch" scale="border" border="4" pad="0">
+	<state name="active" x="448" y="90" w="12" h="12" /> 
+	<state name="normal" x="448" y="90" w="12" h="12" /> 
+	</element>
+	
+	<element name="miniPaperGlow" scale="border" border="4" pad="0">
+	<state name="active" x="451" y="18" w="12" h="12" /> 
+	<state name="normal" x="451" y="18" w="12" h="12" /> 
+	</element>
+  
+	<element name="miniPaperLight" scale="border" border="4" pad="0">
+	<state name="active" x="451" y="31" w="12" h="12" /> 
+	<state name="normal" x="451" y="31" w="12" h="12" /> 
+	</element>
+	
+	<element name="miniPaperLighter" scale="border" border="4" pad="0">
+	<state name="active" x="477" y="18" w="12" h="12" /> 
+	<state name="normal" x="477" y="18" w="12" h="12" /> 
+	</element>
+  
+  <element name="miniPaperBrassLight" scale="border" border="4" pad="0">
+    <state name="default" x="464" y="44" w="12" h="12" />
+    <state name="active" x="464" y="44" w="12" h="12" /> <!-- active? -->
+    <state name="normal" x="464" y="44" w="12" h="12" /> <!-- active? -->
+  </element>
+  
+  <element name="miniPaperBrassDark" scale="border" border="4" pad="0">
+    <state name="active" x="477" y="44" w="12" h="12" />
+    <state name="default" x="477" y="44" w="12" h="12" />
+    <state name="normal" x="477" y="44" w="12" h="12" />
+  </element>
+  
+  <element name="miniPaperBrassDarker" scale="border" border="4" pad="0">
+    <state name="default" x="477" y="31" w="12" h="12" />
+    <state name="active" x="477" y="31" w="12" h="12" /> <!-- active? -->
+  </element>
+  
+	<element name="miniPaperBrassDarkest" scale="border" border="4" pad="0">
+	<state name="default" x="322" y="26" w="12" h="12" />
+	<state name="active" x="322" y="26" w="12" h="12" /> <!-- active? -->
+	</element>
+	  
+	<element name="ucTrim" scale="border" border="7" pad="0">
+		<state name="active" x="393" y="125" w="30" h="30" />
+	</element>
+	
+	<element name="mcTrim" scale="border" border="7" pad="0">
+	<state name="active" x="468" y="157" w="30" h="30" /> 
+		<!--<state name="active" x="436" y="157" w="30" h="30" />-->
+		
+		<!-- I made them buttons in the work crew panel so this is a hack.
+		<state name="down" x="436" y="157" w="30" h="30" />   
+		<state name="up" x="436" y="157" w="30" h="30" />   
+		<state name="highlight" x="436" y="157" w="30" h="30" />-->
+		
+		<state name="down" x="468" y="157" w="30" h="30" />   
+		<state name="up" x="468" y="157" w="30" h="30" />   
+		<state name="highlight" x="468" y="157" w="30" h="30" />
+		
+	</element>
+	
+		<element name="mcTrim_glow" scale="border" border="7" pad="0">
+	<!--<state name="active" x="468" y="157" w="30" h="30" /> -->
+		<state name="active" x="434" y="221" w="30" h="30" />
+
+		<!-- I made them buttons in the work crew panel so this is a hack.
+		<state name="down" x="434" y="221" w="30" h="30" />
+		<state name="up" x="434" y="221" w="30" h="30" />
+		<state name="highlight" x="434" y="221" w="30" h="30" />-->
+		
+		<state name="down" x="434" y="253" w="30" h="30" />
+		<state name="up" x="434" y="253" w="30" h="30" />
+		<state name="highlight" x="434" y="253" w="30" h="30" />
+		
+	</element>
+	
+	<element name="mcTrimTemp" scale="border" border="7" pad="0">
+		<state name="active" x="404" y="187" w="30" h="30" />
+	</element>
+		
+	<!--<element name="lcTrim" scale="border" border="7" pad="0">
+		<state name="active" x="468" y="189" w="30" h="30" />
+	</element>-->
+	
+	<element name="lcTrim" scale="border" border="3" pad="0">
+		<state name="active" x="381" y="189" w="22" h="22" />
+	</element>
+			
+	<element name="ornateTrim" scale="border" border="7" pad="0">
+		<state name="active" x="393" y="25" w="30" h="30" />
+	</element>
+
+   <element name="silverTrim" scale="border" border="7" pad="0">
+    <state name="active" x="468" y="157" w="30" h="30" />
+   </element>
+
+  <element name="panelBodyLightGlass" scale="border" border="4" pad="0">
+    <state name="active" x="500" y="128" w="136" h="136" />
+  </element>
+  
+  <element name="hangingGlassPanel" scale="border" border="3" pad="0">
+    <state name="active" x="393" y="90" w="15" h="15" />
+  </element>
+
+  <element name="label_background" scale="border" border="4" pad="2">
+    <state name="active" x="768" y="1002" w="20" h="20"/>
+    <state name="normal" x="768" y="1002" w="20" h="20"/>
+  </element>
+  
+	<element name="memory_border_gold" scale="border" border="4" pad="0">
+	<state name="active" x="200" y="296" w="12" h="12" />
+	<state name="normal" x="200" y="296" w="12" h="12" />
+	</element>
+	
+	<element name="memory_border_silver" scale="border" border="4" pad="0">
+	<state name="active" x="214" y="296" w="12" h="12" />
+	<state name="normal" x="214" y="296" w="12" h="12" />
+	</element>
+	
+	<element name="memory_border_copper" scale="border" border="4" pad="0">
+	<state name="active" x="228" y="296" w="12" h="12" />
+	<state name="normal" x="228" y="296" w="12" h="12" />
+	</element>
+	
+	<element name="emotion_bar_box_normal" scale="border" border="6" pad="0">
+		<state name="active" x="176" y="204" w="16" h="16" />
+		<state name="normal" x="176" y="204" w="16" h="16" />
+	</element>
+	
+	<element name="emotion_bar_box_highlighted" scale="border" border="6" pad="0">
+		<state name="active" x="176" y="222" w="16" h="16" />
+		<state name="normal" x="176" y="222" w="16" h="16" />
+	</element>
+
+	<element name="thin_border_gold" scale="border" border="2" pad="0">
+		<state name="active" x="1" y="57" w="14" h="14" />
+		<state name="normal" x="1" y="57" w="14" h="14" />
+	</element>
+	<element name="thin_border_gold_dark" scale="border" border="2" pad="0">
+		<state name="active" x="1" y="73" w="14" h="14" />
+		<state name="normal" x="1" y="73" w="14" h="14" />
+	</element>
+	
+	<element name="gold_tooltip_leftarrow" scale="exact">
+		<state name="active" w="16" h="32" x="16" y="56" />
+	</element>
+	
+	<!-- horizontal data bar for Daniel -->
+	
+	<element name="daniel_bar_h_left" scale="exact">
+		<state name="active" w="6" h="20" x="384" y="244" />
+	</element>
+	<element name="daniel_bar_h_middle" scale="repeat">
+		<state name="active" w="16" h="20" x="390" y="244" />
+	</element>
+	<element name="daniel_bar_h_right" scale="exact">
+		<state name="active" w="6" h="20" x="406" y="244" />
+	</element>
+  
+	<element name="daniel_bar_bg_h_left" scale="exact">
+		<state name="active" w="6" h="20" x="384" y="264" />
+	</element>
+	<element name="daniel_bar_bg_h_middle" scale="repeat">
+		<state name="active" w="16" h="20" x="408" y="264" />
+	</element>
+	<element name="daniel_bar_bg_h_right" scale="exact">
+		<state name="active" w="6" h="20" x="406" y="264" />
+	</element>
+
+
+	<!-- Refugees from styleGameplay.xml -->
+	
+  <!-- game event log -->
+  <element name="gameLog" scale="border" border="32" pad="0">
+    <state name="default" x="768" y="224" w="128" h="128" />
+    <state name="active" x="768" y="224" w="128" h="128" /> <!-- active? -->
+  </element>
+  
+  <!-- game event log top decor -->
+  <element name="gameLogTopMiddle" scale="repeat">
+    <state name="normal" x="848" y="117" w="64" h="3"/>
+  </element>
+
+  <element name="gameLogTopLeft" scale="exact">
+    <state name="normal" x="828" y="117" w="16" h="3"/>
+  </element>
+  
+  <element name="bottomRightConcaveBracket" scale="exact">
+    <state name="normal" x="844" y="76" w="36" h="36"/>
+  </element>
+  
+  <element name="prestigeStar" scale="exact">
+    <state name="normal" x="32" y="352" w="32" h="32"/>
+  </element>
+
+  <!-- game event log bottom decor -->
+  <!-- Awaiting z-levels
+  <element name="gameLogBottomLeft" scale="exact">
+    <state name="normal" x="780" y="200" w="32" h="8"/>
+  </element>
+  
+  <element name="gameLogBottomMiddle" scale="repeat">
+    <state name="normal" x="814" y="200" w="64" h="8"/>
+  </element>
+  
+  <element name="gameLogBottomRight" scale="exact">
+    <state name="normal" x="880" y="200" w="32" h="8"/>
+  </element> -->
+  
+	<!-- placeholder 'til z-levels -->
+	<element name="gameLogBottomLeft" scale="exact">
+	<state name="normal" x="780" y="210" w="32" h="4"/>
+	</element>
+	
+	<element name="gameLogBottomMiddle" scale="repeat">
+	<state name="normal" x="814" y="210" w="64" h="4"/>
+	</element>
+	
+	<element name="gameLogBottomRight" scale="exact">
+	<state name="normal" x="880" y="210" w="32" h="4"/>
+	</element>
+  
+	<!-- screen bottom decor -->
+	
+		<element name="screenBottomRightConcaveBracket" scale="exact">
+		<state name="normal" x="720" y="304" w="14" h="38"/>
+		</element>
+		
+		<element name="screenBottomRepeater" scale="repeat">
+		<state name="normal" x="606" y="338" w="114" h="4"/>
+		</element>
+
+  <!-- command buttons -->
+  
+	<element name="commandButton" scale="exact" >
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="down" x="679" y="123" w="74" h="74"/>    
+		<state name="up" x="679" y="123" w="74" h="74"/>    
+		<state name="highlight" x="753" y="123" w="74" h="74"/>
+		
+		<state name="disabled" x="679" y="197" w="74" h="74"/>
+		<state name="construction" x="944" y="64" w="74" h="74"/>
+	</element>
+  
+	<element name="commandButtonSpecial" scale="exact" >
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="down" x="672" y="362" w="74" h="74"/>    
+		<state name="up" x="672" y="362" w="74" h="74"/>    
+		<state name="highlight" x="746" y="362" w="74" h="74"/>
+	</element>
+	<element name="commandButtonDarkBrass" scale="exact" >
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="down" x="192" y="512" w="74" h="74"/>    
+		<state name="up" x="266" y="512" w="74" h="74"/>    
+		<state name="highlight" x="340" y="512" w="74" h="74"/>
+	</element>
+	<element name="commandButtonIron" scale="exact" >
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="down" x="192" y="586" w="74" h="74"/>    
+		<state name="up" x="266" y="586" w="74" h="74"/>    
+		<state name="highlight" x="340" y="586" w="74" h="74"/>
+	</element>
+	<element name="commandButtonCopper" scale="exact" >
+		<font name="text" font="large" color="default" />
+		<font name="selected" font="large" color="active" />
+		
+		<state name="down" x="192" y="660" w="74" h="74"/>    
+		<state name="up" x="266" y="660" w="74" h="74"/>    
+		<state name="highlight" x="340" y="660" w="74" h="74"/>
+	</element>
+
+	<!-- used in topbar prestige counter. Which has been cut, actually. 
+	<element name="prestigeStar" scale="exact">
+		<state name="normal" x="32" y="352" w="32" h="32"/>
+	</element>-->
+	
+<!-- from styleWorkCrew.xml -->
+	<color name="textDefault" red="50" green="30" blue="30"/>
+
+	<element name="leader_bg" scale="border" border="16" pad="2">
+	<state name="active" x="722" y="828" w="68" h="68"/>
+	<state name="normal" x="722" y="828" w="68" h="68"/>
+	</element>
+	
+	<element name="worksite_bg" scale="border" border="4" pad="2">
+	<state name="active" x="856" y="980" w="20" h="20"/>
+	<state name="normal" x="856" y="980" w="20" h="20"/>
+	</element>
+	
+	<element name="workcrew_title_bg" scale="border" border="10" pad="2">
+	<state name="active" x="792" y="854" w="40" h="40"/>
+	<state name="normal" x="792" y="854" w="40" h="40"/>
+	</element>
+	
+	<element name="equipment_bg" scale="border" border="16" pad="2">
+	<state name="active" x="722" y="688" w="68" h="68"/>
+	<state name="normal" x="722" y="688" w="68" h="68"/>
+	</element>
+	
+	<element name="workers_bg" scale="border" border="16" pad="2">
+	<state name="active" x="722" y="758" w="68" h="68"/>
+	<state name="normal" x="722" y="758" w="68" h="68"/>
+	</element>
+  
+	<!-- cog menu -->
+	<element name="quickmenu">
+	   <font name="text" font="smallcaps" color="quickmenu off" />
+	   <font name="selected" font="smallcaps" color="quickmenu on" />
+	</element>
+	
+	<!-- Workshift icons -->
+	
+	<element name="shift1_rounded_on">
+		<state name="normal" w="32" h="16" x="588" y="626"/>
+		<state name="highlight" w="32" h="16" x="588" y="594"/>
+		<state name="pressed" w="32" h="16" x="588" y="562"/>
+		<state name="angry" w="32" h="16" x="588" y="546"/>
+		<state name="rest" w="32" h="16" x="588" y="530"/>
+		<state name="happy" w="32" h="16" x="588" y="514"/>
+	</element>
+	<element name="shift1_rounded_off">
+		<state name="normal" w="32" h="16" x="588" y="642 "/>
+		<state name="highlight" w="32" h="16" x="588" y="610"/>
+		<state name="pressed" w="32" h="16" x="588" y="578"/>
+		<state name="angry" w="32" h="16" x="588" y="546"/>
+		<state name="rest" w="32" h="16" x="588" y="530"/>
+		<state name="happy" w="32" h="16" x="588" y="498"/>
+	</element>
+
+	<element name="shift2_rounded_on">
+		<state name="normal" w="32" h="16" x="620" y="626 "/>
+		<state name="highlight" w="32" h="16" x="620" y="594"/>
+		<state name="pressed" w="32" h="16" x="620" y="562"/>
+		<state name="angry" w="32" h="16" x="620" y="546"/>
+		<state name="rest" w="32" h="16" x="620" y="530"/>
+		<state name="happy" w="32" h="16" x="620" y="514"/>
+	</element>
+	<element name="shift2_rounded_off">
+		<state name="normal" w="32" h="16" x="620" y="642 "/>
+		<state name="highlight" w="32" h="16" x="620" y="610"/>
+		<state name="pressed" w="32" h="16" x="620" y="578"/>
+		<state name="angry" w="32" h="16" x="620" y="546"/>
+		<state name="rest" w="32" h="16" x="620" y="530"/>
+		<state name="happy" w="32" h="16" x="620" y="498"/>
+	</element>
+	
+	<element name="shift3_rounded_on">
+		<state name="normal" w="32" h="16" x="652" y="626 "/>
+		<state name="highlight" w="32" h="16" x="652" y="594"/>
+		<state name="pressed" w="32" h="16" x="652" y="562"/>
+		<state name="angry" w="32" h="16" x="652" y="546"/>
+		<state name="rest" w="32" h="16" x="652" y="530"/>
+		<state name="happy" w="32" h="16" x="652" y="514"/>
+	</element>
+	<element name="shift3_rounded_off">
+		<state name="normal" w="32" h="16" x="652" y="642 "/>
+		<state name="highlight" w="32" h="16" x="652" y="610"/>
+		<state name="pressed" w="32" h="16" x="652" y="578"/>
+		<state name="angry" w="32" h="16" x="652" y="546"/>
+		<state name="rest" w="32" h="16" x="652" y="530"/>
+		<state name="happy" w="32" h="16" x="652" y="498"/>
+	</element>
+
+	<element name="shift4_rounded_on">
+		<state name="normal" w="32" h="16" x="684" y="626 "/>
+		<state name="highlight" w="32" h="16" x="684" y="594"/>
+		<state name="pressed" w="32" h="16" x="684" y="562"/>
+		<state name="angry" w="32" h="16" x="684" y="546"/>
+		<state name="rest" w="32" h="16" x="684" y="530"/>
+		<state name="happy" w="32" h="16" x="684" y="514"/>
+	</element>
+	<element name="shift4_rounded_off">
+		<state name="normal" w="32" h="16" x="684" y="642 "/>
+		<state name="highlight" w="32" h="16" x="684" y="610"/>
+		<state name="pressed" w="32" h="16" x="684" y="578"/>
+		<state name="angry" w="32" h="16" x="684" y="546"/>
+		<state name="rest" w="32" h="16" x="684" y="530"/>
+		<state name="happy" w="32" h="16" x="684" y="498"/>
+	</element>
+
+	<element name="shift5_rounded_on">
+		<state name="normal" w="32" h="16" x="716" y="626 "/>
+		<state name="highlight" w="32" h="16" x="716" y="594"/>
+		<state name="pressed" w="32" h="16" x="716" y="562"/>
+		<state name="angry" w="32" h="16" x="716" y="546"/>
+		<state name="rest" w="32" h="16" x="716" y="530"/>
+		<state name="happy" w="32" h="16" x="716" y="514"/>
+	</element>
+	<element name="shift5_rounded_off">
+		<state name="normal" w="32" h="16" x="716" y="642 "/>
+		<state name="highlight" w="32" h="16" x="716" y="610"/>
+		<state name="pressed" w="32" h="16" x="716" y="578"/>
+		<state name="angry" w="32" h="16" x="716" y="546"/>
+		<state name="rest" w="32" h="16" x="716" y="530"/>
+		<state name="happy" w="32" h="16" x="716" y="498"/>
+	</element>
+
+	<element name="shift6_rounded_on">
+		<state name="normal" w="32" h="16" x="748" y="626 "/>
+		<state name="highlight" w="32" h="16" x="748" y="594"/>
+		<state name="pressed" w="32" h="16" x="748" y="562"/>
+		<state name="angry" w="32" h="16" x="748" y="546"/>
+		<state name="rest" w="32" h="16" x="748" y="530"/>
+		<state name="happy" w="32" h="16" x="748" y="514"/>
+	</element>
+	<element name="shift6_rounded_off">
+		<state name="normal" w="32" h="16" x="748" y="642 "/>
+		<state name="highlight" w="32" h="16" x="748" y="610"/>
+		<state name="pressed" w="32" h="16" x="748" y="578"/>
+		<state name="angry" w="32" h="16" x="748" y="546"/>
+		<state name="rest" w="32" h="16" x="748" y="530"/>
+		<state name="happy" w="32" h="16" x="748" y="498"/>
+	</element>
+	
+	<element name="shift7_rounded_on">
+		<state name="normal" w="32" h="16" x="780" y="626 "/>
+		<state name="highlight" w="32" h="16" x="780" y="594"/>
+		<state name="pressed" w="32" h="16" x="780" y="562"/>
+		<state name="angry" w="32" h="16" x="780" y="546"/>
+		<state name="rest" w="32" h="16" x="780" y="530"/>
+		<state name="happy" w="32" h="16" x="780" y="514"/>
+	</element>
+	<element name="shift7_rounded_off">
+		<state name="normal" w="32" h="16" x="780" y="642 "/>
+		<state name="highlight" w="32" h="16" x="780" y="610"/>
+		<state name="pressed" w="32" h="16" x="780" y="578"/>
+		<state name="angry" w="32" h="16" x="780" y="546"/>
+		<state name="rest" w="32" h="16" x="780" y="530"/>
+		<state name="happy" w="32" h="16" x="780" y="498"/>
+	</element>
+
+	<element name="shift8_rounded_on">
+		<state name="normal" w="32" h="16" x="812" y="626 "/>
+		<state name="highlight" w="32" h="16" x="812" y="594"/>
+		<state name="pressed" w="32" h="16" x="812" y="562"/>
+		<state name="angry" w="32" h="16" x="812" y="546"/>
+		<state name="rest" w="32" h="16" x="812" y="530"/>
+		<state name="happy" w="32" h="16" x="812" y="514"/>
+	</element>
+	<element name="shift8_rounded_off">
+		<state name="normal" w="32" h="16" x="812" y="642 "/>
+		<state name="highlight" w="32" h="16" x="812" y="610"/>
+		<state name="pressed" w="32" h="16" x="812" y="578"/>
+		<state name="angry" w="32" h="16" x="812" y="546"/>
+		<state name="rest" w="32" h="16" x="812" y="530"/>
+		<state name="happy" w="32" h="16" x="812" y="498"/>
+	</element>
+	
+	
+	<!-- alert progress bar -->
+	<element name="alert_bar_border" scale="border" border="4" pad="0">
+	<state name="default" w="12" h="12" x="304" y="220" />
+	</element>
+		
+	<element name="alert_bar_light" scale="border2" border="4" pad="0">
+	<state name="default" w="12" h="12" x="316" y="220" />
+	</element>
+	
+	<element name="alert_bar_dark" scale="border2" border="4" pad="0">
+	<state name="default" w="12" h="12" x="328" y="220" />
+	</element>
+	
+	<element name="alert_divider" scale="exact">
+	<state name="default" x="338" y="220" w="4" h="12" />
+	</element>
+	
+	
+	<!-- FYI window -->
+	<element name="dark_red_metal_border" scale="border" border="10" pad="0">
+		<state name="active" x="2" y="634" w="64" h="64" /> 
+		<state name="normal" x="2" y="634" w="64" h="64" /> 
+	</element>
+	
+	<element name="dark_red_metal_border_mini" scale="border" border="4" pad="0">
+		<state name="active" x="2" y="700" w="16" h="16" /> 
+		<state name="normal" x="2" y="700" w="16" h="16" /> 
+	</element>
+	
+</skin>
