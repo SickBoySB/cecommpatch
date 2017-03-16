@@ -71,8 +71,8 @@
 	<state name="normal"    w="22" h="16" x="75" y="218" />
 	</element>
 	<element name="cecommPop" scale="border" border="7" pad="0">
-		<state name="highlight" w="22" h="16" x="148" y="202" />
-		<state name="active" w="22" h="16" x="148" y="202" />
+		<state name="highlight" w="22" h="16" x="135" y="314" />
+		<state name="active" w="22" h="16" x="135" y="314" />
 		<state name="default" w="22" h="16" x="75" y="218" />
 		<state name="down" w="22" h="16" x="75" y="218" />
 		<state name="up" w="22" h="16" x="75" y="218" />
