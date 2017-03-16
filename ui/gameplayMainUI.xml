@@ -446,6 +446,57 @@
 					 vertical_padding="5" 
 					 horizontal_padding="5"
 					 horizontal_gutter="15" 
+					 skin="ui/styles/styleAlerts.xml">
+
+				<container name="commandsActivitiesHolder" type="horizbox" hsp="minimum" vsp="minimum" horizontal_gutter="15" skin="ui/styles/styleAlerts.xml">
+
+				</container>
+				<containerbutton name="AssignmentsButton" 
+							  hsp="minimum" 
+							  vsp="minimum" 
+							  vap="center"
+							  state="cecommPop">
+
+					<container name="assignmentsContainer"
+							type="horizbox"
+								hsp="minimum" vsp="minimum"
+								horizontal_padding="10"
+								horizontal_margin="2"
+								vertical_padding="9"
+								skin="ui/styles/default.xml">
+						<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+							<container type="vertbox"
+									hsp="minimum" 
+									vsp="minimum"
+									horizontal_padding="6" 
+									vertical_padding="6"
+									solidfill="1" 
+									solidfillname="glassBrassBorderDarkMoreOpaque" >
+
+								<container name="assignmentsTooltipVB" type="vertbox" hsp="fixed" fixed_width="345" vsp="minimum" horizontal_padding="4" vertical_padding="4" vertical_gutter="3"/>
+
+							</container>
+						</tooltip>
+
+						<label name="assignmentsCounter" vap="center" text="Assignments:         " state="tooltip_small" />
+
+					</container>
+
+				</containerbutton>
+
+			</container> 
+			
+			
+			<!--<container name="commandsActivitiesHolderOuter" 
+					 type="horizbox" 
+					 hsp="minimum" 
+					 vsp="minimum" 
+					 hap="center" 
+					 vap="bottom" 
+					 vertical_margin="15"
+					 vertical_padding="5" 
+					 horizontal_padding="5"
+					 horizontal_gutter="15" 
 					 skin="ui/styles/styleAlerts.xml"
 					solidfill="1"
 					solidfillname="emptyBrassBorder">
@@ -489,7 +540,7 @@
 
 				</containerbutton>
 
-			</container>      
+			</container>-->  
 			<!--<container type="vertbox" hsp="expand" vsp="expand" vap="bottom">
       
 				<decor name="screenBottomRepeater" hsp="expand" vap="bottom" element="screenBottomRepeater_normal" skin="ui/styles/styleGameplay.xml" />
