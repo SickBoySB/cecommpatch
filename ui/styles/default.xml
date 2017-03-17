@@ -1210,8 +1210,8 @@ name="blank2_glow" x1="120" y1="696" x2="160" y2="736"
 	
 		<element name="glassBrassBorder" scale="border" border="7" pad="0">
 	<!-- border ="4" -->
-	<state name="default" x="451" y="0" w="18" h="18" />
-	<state name="active" x="451" y="0" w="18" h="18" />
+	<state name="default" x="135" y="337" w="22" h="16" />
+	<state name="active" x="135" y="337" w="22" h="16" />
     
     <!--<state name="default" x="425" y="44" w="12" h="12" />
     <state name="active" x="425" y="44" w="12" h="12" />  active? -->
