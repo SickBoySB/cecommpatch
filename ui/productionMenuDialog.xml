@@ -1,0 +1,27 @@
+<container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="2" vertical_padding="2"> <!-- solidfill="1" solidfillname="window"> -->
+
+    <!--<spacer/>-->
+  <!--<container type="horizbox" hsp="expand" vsp="minimum" horizontal_padding="5" vertical_padding="5" horizontal_gutter="3" solidfill="1" solidfillname="glassBrassBorder">
+    <container type="horizbox" hsp="expand" vsp="minimum" horizontal_padding="10" vertical_padding="15" solidfillname="miniPaper" solidfill="1">
+      <label text="Occasionally We Make Things" vap="center" hap="center" />
+      --><!--font="large"--><!--
+    </container>
+  </container>-->
+  
+  <!--<container name="filterbuttonholder" type="horizbox" hsp="expand" vsp="minimum" horizontal_padding="5" vertical_padding="5" horizontal_gutter="3" solidfill="1" solidfillname="glassBrassBorder">-->
+    <!--
+    <imagebutton name="allcolonistbutton" sfx="paper02" text="All Colonists" imgPctX="75" imgPctY="75" imageSkin="ui/orderIcons.xml" image="everyone_icon" hsp="minimum" vsp="minimum" vap="center">
+		  <tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+			<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+        <label name="buttonTooltipLabel" text="Show All Colonists" vsp="center" state="tooltip_text"/>
+      </container>
+      </tooltip>
+    </imagebutton>
+    -->      
+     <!--</container>-->
+
+<container type="scrollablevertbox" hsp="expand" vsp="fixed" fixed_height="100" name="collapsed_workshops_vertbox" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorder"/>
+
+<container type="vertbox" hsp="expand" vsp="expand" name="workshops_vertbox" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorder"/>
+     
+</container>

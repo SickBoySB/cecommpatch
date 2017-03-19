@@ -1,0 +1,199 @@
+<container type="vertbox" hsp="expand" vsp="expand">
+	
+	<container type="horizbox"
+			 hsp="expand" vsp="minimum" horizontal_padding="2" vertical_padding="2"
+			 solidfill="1" solidfillname="miniPaperBrassLight" >
+		
+		<imagebutton name="BuildingIcon"
+				   text="Building Icon"
+				   hsp="minimum" vsp="minimum" 
+				imageSkin="ui//orderIcons.xml" image="workshops_category">
+			
+			<tooltip width="240" height="45" mouseRestDelay="0" followCursor="1">
+				<container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+					<label name="buttonTooltipLabel" text="Focus on Building" hap="center" vap="center" state="tooltip_text"/>
+				</container>
+			</tooltip>        
+		</imagebutton>
+		
+		<container type="vertbox" hsp="expand" vsp="expand" name="demolishBox">
+			<container type="vertbox" hsp="expand" vsp="minimum" name="buildingFancyName" hap="center" horizontal_padding="2" vertical_padding="2" solidfill="1" solidfillname="miniPaper"/>
+			<!--Commented out Upper Class Patron code until we hook it up-->
+			<!--<label name="workshopcrewlabel" text="Upper Class Patron" vsp="minimum" hap="center"/>
+			<combobox name="patron" />-->
+			<container type="vertbox" hsp="expand" vsp="expand" name="workCrewSelectionBoxContainer"/>
+		</container>
+
+    <!--<imagebutton name="UpgradeBuildingButton" text="Upgrade Building" sfx="buttonPneumatic" hsp="minimum" vsp="minimum"
+			imageSkin="ui/orderIconsGray.xml" image="building_upgrade">
+      <tooltip width="240" height="65" mouseRestDelay="0" followCursor="1">
+        <container name="UpgradeBuildingContainer" type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+          <label name="buttonTooltipLabel" text="Upgrade Building" hap="center" vap="center" state="tooltip_text"/>
+        </container>
+      </tooltip>
+    </imagebutton>-->
+
+		<imagebutton name="DemolishBuildingButton"
+				   text="Demolish Building"
+				   sfx="button_pneumatic"
+				   hsp="minimum" vsp="minimum" 
+			
+			imageSkin="ui/orderIcons.xml" image="demolish_building">
+			<tooltip width="240" height="45" mouseRestDelay="0" followCursor="1">
+				<container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+					<label name="buttonTooltipLabel" text="Demolish Building" hap="center" vap="center" state="tooltip_text"/>
+				</container>
+			</tooltip>        
+		</imagebutton>
+		
+	</container>
+
+	<!--
+	<container type="horizbox" hsp="expand" vsp="minimum" padding="2">
+		<button name="DismantleButton" text="Dismantle" hsp="expand" vsp="minimum" skin="ui/styles/styleBuildingDesignation.xml"/>    
+		<button name="DeactivateButton" text="Deactivate" hsp="expand" vsp="minimum" skin="ui/styles/styleBuildingDesignation.xml" />
+		<button name="RenovateButton" text="Renovate" hsp="expand" vsp="minimum" skin="ui/styles/styleBuildingDesignation.xml" />            
+	</container> -->
+	
+	<container name="workshiftContainer"
+			 type="vertbox"
+			  hsp="fixed" fixed_width="279"
+			  vsp="fixed" fixed_height="44"
+				 hap="center" vertical_padding="6" horizontal_padding="8"
+			 solidfill="1" solidfillname="miniPaperBrassLight" />
+	<!--
+	<container name="workshiftContainer" type="vertbox" hsp="minimum" vsp="minimum" hap="center" vertical_padding="6" horizontal_padding="8"
+			 solidfill="1" solidfillname="miniPaperBrassLight" /> -->
+	 
+	 
+	<container type="horizbox" hsp="expand" vsp="minimum" solidfill="1" solidfillname="miniPaperLight" gutter="2" >
+		<spacer hsp="expand" vsp="expand"/>
+		<label text="Building Modules" alignment="center" hsp="minimum" vsp="minimum"
+			solidfill="1" solidfillname="miniPaperBrassDark" horizontal_padding="3" vertical_padding="3" 
+			skin="ui/styles/default.xml" />
+		<spacer hsp="expand" vsp="expand"/>
+	</container>
+    
+ 	
+	<container name="modulesbox" type="scrollablevertbox" hsp="expand" vsp="expand" hap="left" vertical_padding="3" horizontal_padding="3" solidfill="1" solidfillname="miniPaperBrassLight"/>
+
+  <!--
+	<container type="horizbox" hsp="expand" vsp="minimum" solidfill="1" solidfillname="miniPaperLight" horizontal_padding="2" vertical_padding="2" >
+		<spacer hsp="expand" vsp="expand"/>
+		<label text="Production Queue" alignment="center" hsp="minimum" vsp="minimum"
+				solidfill="1" solidfillname="miniPaperBrassDark" horizontal_padding="3" vertical_padding="3" 
+				skin="ui/styles/default.xml" />
+		<spacer hsp="expand" vsp="expand"/>
+	</container>
+    
+	<container name="buildqueuevertbox" type="scrollablevertbox" hsp="expand" horizontal_padding="4" vertical_padding="4" vsp="expand" solidfill="1" solidfillname="miniPaperBrassDark">
+	
+	</container>
+-->
+  
+	<!-- Quality + HP display containers. -->
+	<container type="horizbox" hsp="expand" vsp="minimum" horizontal_margin="2" vertical_margin="2" >
+		
+		<!-- row 1 -->
+		<container type="horizbox" hsp="expand" vsp="expand"
+				 horizontal_gutter="6"
+				 horizontal_margin="2" vertical_margin="2"
+				 horizontal_padding="6" vertical_padding="2"
+				 solidfill="1" solidfillname="miniPaper">
+					
+			<!-- HP display -->
+			<container type="horizbox" hsp="minimum" vsp="minimum"
+					 horizontal_gutter="2"
+					 horizontal_padding="2"
+					 vertical_padding="2" vap="center" >
+				
+				<label text="HP:" vap="center" />
+				<container type="horizbox"
+						 hsp="minimum" vsp="minimum"
+						 horizontal_padding="5" vertical_padding="5"
+						 solidfill="1" solidfillname="label_background_grayer">
+					
+					<container name="HPNumberContainer" type="horizbox" hsp="minimum" vsp="minimum"/>
+					<label text="/"/>
+					<container name="HPMaxContainer" type="horizbox" hsp="minimum" vsp="minimum"/>
+				</container>
+				
+				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+					<container type="vertbox" hsp="fixed" fixed_width="200"
+							horizontal_padding="5" vertical_padding="5"
+							solidfill="1" solidfillname="glassBrassBorderDark" >
+						
+						<label text="Building Hitpoints" state="tooltip_text" hap="center"/>
+						<paragraph text="When a building reaches 0 HP, it is destroyed. Repair jobs for construction crews are automatically created when a building is damaged." alignment="left" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			 </container>
+			
+			<!-- Tech modifier display -->
+			<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_padding="2" vertical_padding="2" vap="center" >
+				<label text="Tech:" vap="center" />
+				<container type="vertbox" hsp="minimum" vsp="minimum"
+						 name="workshopTechModifier"
+						 horizontal_padding="4" vertical_padding="5"
+						 solidfill="1" vap="center" solidfillname="label_background_grayer"/>
+				
+				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+					<container type="vertbox"
+							 hsp="fixed"
+							 fixed_width="200"
+							 horizontal_padding="4"
+							 vertical_padding="4"
+							 solidfill="1" solidfillname="glassBrassBorderDark">
+						
+						<label text="Technology Modifier" state="tooltip_text" hap="center"/>
+						<paragraph text="Technology bonus modifies production time and can be improved by doing science in a Laboratory." alignment="left" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</container>
+		</container>
+		
+		<!-- Quality -->
+		<container type="horizbox"
+				 hsp="minimum" vsp="expand"
+				 horizontal_margin="2" vertical_margin="2"
+				 horizontal_padding="0" vertical_padding="0"
+				 solidfill="1" solidfillname="miniPaper">
+			
+			<container type="vertbox" hsp="minimum" vsp="minimum" vap="center" hap="left"
+					 horizontal_padding="8">
+				
+				<label text="Building Quality:" vap="center" />
+			</container>
+			
+			<container type="vertbox" hsp="minimum" vsp="expand"
+						horizontal_padding="12" vertical_padding="4"
+						solidfill="1"  solidfillname="miniPaperBrassDarkest">
+			
+				<container type="vertbox" hsp="minimum" vsp="minimum"
+						 vap="center"
+						 name="qualityNumberContainer" />
+			</container>
+	
+			<tooltip width="250" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+				<container type="vertbox" hsp="fixed" fixed_width="240" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+					<container type="horizbox" hsp="minimum" vsp="minimum">
+						<label text="Building Quality:" state="text" />
+						<container name="qualityDescriptionContainer"
+								 type="horizbox" hsp="minimum" vsp="minimum"
+								 vertical_padding="2" horizontal_padding="4"
+								 vap="center" />
+						
+					</container> 
+					<container type="vertbox" hsp="fixed" fixed_width="240">
+						<paragraph text="- Building Quality can range from -6 to +6" alignment="left" state="tooltip_text"/>
+						<paragraph text="- Work Modules reduce quality, while decor modules increase quality" alignment="left" state="tooltip_text"/>
+						<paragraph text="- High workplace quality makes colonists happy." alignment="left" state="tooltip_text"/>
+					</container>
+				</container>
+			</tooltip>
+		</container>
+	</container>
+	  
+	<container type="vertbox" hsp="minimum" vsp="minimum" name="contentsVB">
+	</container>
+</container>
