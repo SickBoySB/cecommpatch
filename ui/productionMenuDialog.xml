@@ -1,4 +1,4 @@
-<container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="2" vertical_padding="2"> <!-- solidfill="1" solidfillname="window"> -->
+<container type="vertbox" hsp="expand" vsp="minimum" horizontal_padding="2" vertical_padding="2"> <!-- solidfill="1" solidfillname="window"> -->
 
     <!--<spacer/>-->
   <!--<container type="horizbox" hsp="expand" vsp="minimum" horizontal_padding="5" vertical_padding="5" horizontal_gutter="3" solidfill="1" solidfillname="glassBrassBorder">
@@ -20,8 +20,8 @@
     -->      
      <!--</container>-->
 
-<container type="scrollablevertbox" hsp="expand" vsp="fixed" fixed_height="100" name="collapsed_workshops_vertbox" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorder"/>
+<container type="scrollablevertbox" hsp="fixed" name="collapsed_workshops_vertbox"  fixed_width="400" hap="center" vsp="fixed" fixed_height="100" vertical_padding="5" vertical_gutter="0" horizontal_padding="10" solidfill="1" solidfillname="cecommTopGlass" wheelScrollSpeed="10"/>
 
-<container type="vertbox" hsp="expand" vsp="expand" name="workshops_vertbox" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorder"/>
+<container type="vertbox" hsp="expand" vsp="minimum" name="workshops_vertbox" />
      
 </container>
