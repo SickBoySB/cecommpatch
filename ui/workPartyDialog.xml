@@ -1,0 +1,23 @@
+<container type="vertbox" hsp="expand" vsp="expand" solidfill="1" solidfillname="glassBrassBorder" name="exterior_work_party_dialog_container" vertical_padding="3" vertical_gutter="3" horizontal_padding="3" >
+  
+	<!-- Unassigned workers container -->
+	<container type="horizbox" hsp="expand" vsp="minimum"> 
+	
+		<container type="horizbox" hsp="minimum" vsp="minimum" hap="center" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorder" name="unassignedWorkersExteriorGlassPane">
+			<container type="horizbox" hsp="minimum" vsp="expand" name="unassigned_workers" solidfillname="miniPaper" solidfill="1" horizontal_padding="8" vertical_padding="4"/>
+			
+		</container>
+		<container type="vertbox" hsp="minimum" vsp="minimum" hap="right" horizontal_padding="4" vertical_padding="4" vertical_gutter="2" name="helpBox"/>
+	</container>
+	<!-- Two pane worker panel and work group panel-->
+	
+	<container type="scrollablevertbox"
+			 name="work_parties"
+			 hsp="expand" vsp="expand"
+			 solidfill="1" solidfillname="miniPaper"
+			 horizontal_padding="4" vertical_padding="4"
+			 wheelScrollSpeed="60">
+
+	</container>
+	
+</container>

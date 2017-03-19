@@ -1,0 +1,598 @@
+<container type="vertbox" hsp="expand" vsp="expand" name="contentsVB" >
+
+	<!-- topbar thing -->	
+	<container type="horizbox" hsp="expand" vsp="minimum"
+			 horizontal_padding="2" vertical_padding="2"
+			 solidfill="1" solidfillname="miniPaperBrassLight" >
+		
+		<imagebutton name="BuildingIcon" text="Building Icon"
+				   hsp="minimum" vsp="minimum"
+				   imageSkin="ui/orderIcons.xml" image="barracks">
+			
+			<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+				<container type="vertbox" hsp="expand" vsp="expand"
+						 horizontal_padding="4" vertical_padding="4"
+						 solidfill="1" solidfillname="glassBrassBorderDark">
+					
+					<label name="buttonTooltipLabel" text="Zoom camera to this Barracks" vsp="center" state="tooltip_text"/>
+				</container>
+			</tooltip>
+		</imagebutton>
+		
+		<container type="vertbox" hsp="expand" vsp="expand" name="demolishBox">
+			<container type="vertbox" hsp="expand" vsp="minimum"
+					 name="buildingFancyName" hap="center"
+					 horizontal_padding="2" vertical_padding="2" solidfill="1" solidfillname="miniPaper"/>
+					
+					
+				<!--<label name="workshopcrewlabel" text="Unclaimed Workshop" vsp="minimum"/>-->
+				<!--<combobox name="office" />-->
+			<container type="vertbox" hsp="expand" vsp="expand" name="workCrewSelectionBoxContainer"/>
+		</container>
+		
+		<imagebutton name="DemolishBuildingButton"
+				   text="Demolish Building"
+				   sfx="button_pneumatic"
+				   hsp="minimum" vsp="minimum" 
+			imageSkin="ui/orderIcons.xml" image="demolish_building">
+			
+			<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+				<container type="vertbox" hsp="expand" vsp="expand"
+						 horizontal_padding="4" vertical_padding="4"
+						 solidfill="1" solidfillname="glassBrassBorderDark">
+					
+					<label name="buttonTooltipLabel" text="Order this Barracks demolished" vsp="center" state="tooltip_text"/>
+				</container>
+			</tooltip>        
+		</imagebutton>
+		
+	</container>
+	
+	<container name="workshiftContainer" type="vertbox"
+			hsp="fixed" fixed_width="279"
+			vsp="fixed" fixed_height="44"
+			hap="center" vertical_padding="6" horizontal_padding="8"
+			solidfill="1" solidfillname="miniPaperBrassLight" />
+	
+	
+	<!-- supplies and workpoints -->
+	<container type="vertbox"
+			 hsp="expand" vsp="minimum"
+			 hap="center"
+			 horizontal_padding="4" vertical_padding="4"
+			 solidfill="1" solidfillname="miniPaperBrassLight" >
+		
+		<container name="warningContainer"
+				type="vertbox" hsp="minimum" vsp="minimum" hap="center" />
+		
+		<container name="workPointsStatusContainer"
+				type="horizbox" hsp="minimum" vsp="minimum" hap="center"
+				vertical_margin="2" horizontal_margin="2"
+				vertical_padding="2" horizontal_padding="2" >
+			
+		</container>
+		
+		<container type="horizbox" hsp="expand" vsp="minimum"
+				 solidfill="1" solidfillname="miniPaperLighter" hap="center">
+				
+			<label text="Ammo:" vap="center" horizontal_margin="4"/>
+			<spacer />
+				
+			<container type="horizbox" hsp="minimum" vsp="minimum"
+					 horizontal_padding="4" horizontal_margin="1"
+					 vertical_padding="4" vertical_margin="2"
+					 solidfill="1" solidfillname="miniPaperLighter"
+					 vap="center">
+				
+				<image hsp="minimum" vsp="minimum" scale="50"
+					  skin="ui\\commodityIcons.xml" image="ammo_stone" vap="center"/>
+				<label text="x" vap="center"/>
+				<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints1Container" vap="center"/>
+				
+				<tooltip width="300" height="140" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="expand" vsp="minimum"
+							 horizontal_padding="6" vertical_padding="6"
+							 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
+						
+						<label text="Stone Pellet Ammunition" hap="center" state="tooltip_text"/>
+						<paragraph text="Stone Pellet Ammunition, made in a Ceramics Workshop, is required for basic Muskets. The Barracks will be resupplied by spare workers or soldiers if this runs low." state="tooltip_small"/>
+					</container>
+				</tooltip>
+			</container>
+			
+			<container type="horizbox" hsp="minimum" vsp="minimum"
+					 horizontal_padding="4" horizontal_margin="1"
+					 vertical_padding="4" vertical_margin="2"
+					 solidfill="1" solidfillname="miniPaperLighter"
+					 vap="center">
+				
+				<image hsp="minimum" vsp="minimum" scale="50"
+					  skin="ui\\commodityIcons.xml" image="ammo_box" vap="center"/>
+				<label text="x" vap="center"/>
+				<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints2Container" vap="center"/>
+				
+				<tooltip width="300" height="140" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="expand" vsp="minimum"
+							 horizontal_padding="6" vertical_padding="6"
+							 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
+						
+						<label text="Ball Cartridge Ammunition" hap="center" state="tooltip_text"/>
+						<paragraph text="Ball Cartridge Ammunition, made in a Ceramics Workshop, is required by the Blunderbuss, and Revolver. The Barracks will be resupplied by spare workers or soldiers if this runs low." state="tooltip_small"/>
+					</container>
+				</tooltip>
+			</container>
+			
+			
+			<container type="horizbox" hsp="minimum" vsp="minimum"
+					 horizontal_padding="4" horizontal_margin="1"
+					 vertical_padding="4" vertical_margin="2"
+					 solidfill="1" solidfillname="miniPaperLighter"
+					 vap="center">
+				
+				<image hsp="minimum" vsp="minimum" scale="50"
+					  skin="ui\\commodityIcons.xml" image="ammo_box2" vap="center"/>
+				<label text="x" vap="center"/>
+				<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints3Container" vap="center"/>
+				
+				<tooltip width="300" height="140" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="expand" vsp="minimum"
+							 horizontal_padding="6" vertical_padding="6"
+							 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
+						
+						<label text="Full Metal Jacket Ammunition" hap="center" state="tooltip_text"/>
+						<paragraph text="Full Metal Jacket Ammunition, made in a Metalworks Workshop, is required by the Carbine and Jezail Rifle. The Barracks will be resupplied by spare workers or soldiers if this runs low." state="tooltip_small"/>
+					</container>
+				</tooltip>
+			</container>
+			
+			<container type="horizbox" hsp="minimum" vsp="minimum"
+					 horizontal_padding="4" horizontal_margin="1"
+					 vertical_padding="4" vertical_margin="2"
+					 solidfill="1" solidfillname="miniPaperLighter"
+					 vap="center">
+				
+				<!-- <label text="Grenades:" vap="center" state="text_small" /> -->
+				
+				<image hsp="minimum" vsp="minimum" scale="50"
+					  skin="ui\\commodityIcons.xml" image="grenades_crate" vap="center"/>
+				<label text="x" vap="center"/>
+				<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints4Container" vap="center"/>
+				
+				<tooltip width="300" height="140" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="expand" vsp="minimum"
+							 horizontal_padding="6" vertical_padding="6"
+							 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
+						
+						<label text="Crates of Grenades" hap="center" state="tooltip_text"/>
+						<paragraph text="Grenades, made in a Metalworks Workshop, are required to successfully operate Grenade Launchers. Workers will resupply the Barracks with available grenades if they run low." state="tooltip_small"/>
+					</container>
+				</tooltip>
+			</container>
+			
+			<container type="horizbox" hsp="minimum" vsp="minimum"
+					solidfill="1" solidfillname="miniPaperLighter"
+					vertical_padding="2" horizontal_padding="2"
+					horizontal_gutter="4"
+					hap="right">
+				
+				<container type="horizbox" hsp="minimum" vsp="minimum" name="supplyControlContainer1" />
+				<container type="horizbox" hsp="minimum" vsp="minimum" name="supplyControlContainer2" />
+			</container>
+		</container>
+	</container>
+    
+    
+	<!-- main holder ? -->
+	<container type="vertbox"
+			 hsp="expand" vsp="expand" hap="center"
+			 vertical_padding="2"
+			 horizontal_padding="2"
+			 solidfill="1" solidfillname="miniPaperBrassLight">
+
+		<container type="horizbox" vsp="minimum" hsp="expand" horizontal_margin="1" vertical_margin="1">
+			
+			<!-- selected weapon info. -->
+			<container type="horizbox" hsp="expand" vsp="minimum" vap="center" hap="left"
+					vertical_padding="4" horizontal_padding="4">
+				
+					<label text="Selected: " state="text_faded"  vap="center" />
+					<container type="horizbox" hsp="minimum" vsp="minimum" name="weaponNameContainer" vap="center" horizontal_margin="8"/>
+			</container>
+			
+			<!-- Day/Night shift controls -->
+	
+			<container type="horizbox" hsp="expand" vsp="minimum" hap="right"
+					vertical_padding="4" horizontal_padding="8"
+					horizontal_gutter="8"
+					solidfill="1" solidfillname="miniPaperLighter" >
+				
+				<container type="vertbox" hsp="minimum" vsp="minimum" vap="center">
+					<label text="Day/Night Shift:" vap="center" />
+					<tooltip width="300" height="100" mouseRestDelay="0" followCursor="1">
+						<container type="vertbox" hsp="expand" vsp="minimum"
+								 horizontal_padding="6" vertical_padding="6 "
+								 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
+							
+							<paragraph text="The squad assigned to this Barracks can be set to be active during either day or night. It is widely considered wise to have at least two barracks set on different shifts to cover all work-shifts with on-duty soldiers." state="tooltip_small"/>
+						</container>
+					</tooltip>
+				</container>
+
+				<container type="horizbox" hsp="minimum" vsp="minimum" name="dayShiftButtonContainer" />
+				<container type="horizbox" hsp="minimum" vsp="minimum" name="nightShiftButtonContainer" />
+			</container>
+		</container>
+		
+		<!-- <container type="vertbox" hsp="expand" vsp="minimum"
+				 vertical_padding="4"
+				 solidfill="1" solidfillname="label_background_grayer" >
+			<label text="Squad Weapon Selection" hap="center" horizontal_padding="2" vertical_padding="2" state="text_small"/>
+		</container> -->
+		
+		<container type="scrollablevertbox"
+			 hsp="expand" vsp="expand"
+			 hap="center"
+			 vertical_padding="2" horizontal_padding="2" 
+			 solidfill="1" solidfillname="label_background_grayer">
+				
+				<container type="horizbox" vsp="fixed" fixed_height="76" hsp="fixed" fixed_width="410" horizontal_margin="2">
+					<container type="vertbox" hsp="minimum" vsp="expand" name="pistolButtonContainer"/>
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_margin="3" vertical_margin="2"
+							 horizontal_padding="2" vertical_padding="2"
+							 solidfill="1" solidfillname="miniPaper" >
+						
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Pistol" state="text" vap="center" horizontal_margin="2"/>
+							<label text="A cheap sidearm, ubiquitous on the Fronter." state="text_small_faded" hap="right" vap="center"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Damage: 3" state="text_small_red" vap="center" horizontal_margin="2"/>
+							<label text="Reload 2s - (no special ammo required)" state="text_small" vap="center" horizontal_margin="4"/>
+							<image hsp="minimum" vsp="minimum" scale="50" skin="ui\\orderIcons.xml" image="intentionally_blank"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Range: 10" state="text_small" vap="center" horizontal_margin="4"/>
+							<!--<label text="Extra: none" state="text_small" vap="center" horizontal_margin="8"/> -->
+						</container>
+					</container>
+				</container>
+				
+				<container type="horizbox" vsp="fixed" fixed_height="76" hsp="fixed" fixed_width="410" horizontal_margin="2">
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="musketButtonContainer"/>
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_margin="3" vertical_margin="2"
+							 horizontal_padding="2" vertical_padding="2"
+							 solidfill="1" solidfillname="miniPaper" >
+						
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Improvised Musket" state="text" vap="center" horizontal_margin="2"/>
+							<label text="Ersatz longarm of archaic design." state="text_small_faded" hap="right" vap="center"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Damage: 4" state="text_small_red" vap="center" horizontal_margin="2"/>
+							<label text="Reload 2.4s - Stone Pellet Ammo" state="text_small" vap="center" horizontal_margin="4"/>
+							<image hsp="minimum" vsp="minimum" scale="50" skin="ui\\commodityIcons.xml" image="ammo_stone"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Range: 15" state="text_small" vap="center" horizontal_margin="4"/>
+							<!--<label text="Extra: none" state="text_small" vap="center" horizontal_margin="8"/> -->
+						</container>
+					</container>
+				</container>
+				
+				<container type="horizbox" vsp="fixed" fixed_height="76" hsp="fixed" fixed_width="410" horizontal_margin="2">
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="tripistolButtonContainer"/>
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_margin="3" vertical_margin="2"
+							 horizontal_padding="2" vertical_padding="2"
+							 solidfill="1" solidfillname="miniPaper" >
+						
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Ceramic TriPistol" state="text" vap="center" horizontal_margin="2"/>
+							<label text="A crude gun, effective vs. crowds." state="text_small_faded" hap="right" vap="center"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Damage: 5+" state="text_small_red" vap="center" horizontal_margin="2"/>
+							<label text="Reload 3s - Stone Pellet Ammo" state="text_small" vap="center" horizontal_margin="4"/>
+							<image hsp="minimum" vsp="minimum" scale="50" skin="ui\\commodityIcons.xml" image="ammo_stone"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Range: 10" state="text_small" vap="center" horizontal_margin="4"/>
+							<label text="Extra: small area hit" state="text_small" vap="center" horizontal_margin="8"/>
+						</container>
+					</container>
+				</container>
+				
+				<container type="horizbox" vsp="fixed" fixed_height="76" hsp="fixed" fixed_width="410" horizontal_margin="2">
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="blunderbussButtonContainer"/>
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_margin="3" vertical_margin="2"
+							 horizontal_padding="2" vertical_padding="2"
+							 solidfill="1" solidfillname="miniPaper" >
+						
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Blunderbuss" state="text" vap="center" horizontal_margin="2"/>
+							<label text="A dastardly scattergun effective vs. crowds." state="text_small_faded" hap="right" vap="center"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Damage: 6+" state="text_small_red" vap="center" horizontal_margin="2"/>
+							<label text="Reload 2s - Ball Cartridge Ammo" state="text_small" vap="center" horizontal_margin="4"/>
+							<image hsp="minimum" vsp="minimum" scale="50" skin="ui\\commodityIcons.xml" image="ammo_box"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Range: 14" state="text_small" vap="center" horizontal_margin="4"/>
+							<label text="Extra: small area hit" state="text_small" vap="center" horizontal_margin="8"/>
+						</container>
+					</container>
+				</container>
+				
+				<container type="horizbox" vsp="fixed" fixed_height="76" hsp="fixed" fixed_width="410" horizontal_margin="2">
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="revolverButtonContainer"/>
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_margin="3" vertical_margin="2"
+							 horizontal_padding="2" vertical_padding="2"
+							 solidfill="1" solidfillname="miniPaper" >
+						
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Revolver" state="text" vap="center" horizontal_margin="2"/>
+							<label text="Load it on Coalsday and shoot 'til next week." state="text_small_faded" hap="right" vap="center"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Damage: 6" state="text_small_red" vap="center" horizontal_margin="2"/>
+							<label text="Reload 3s - Ball Cartridge Ammo" state="text_small" vap="center" horizontal_margin="4"/>
+							<image hsp="minimum" vsp="minimum" scale="50" skin="ui\\commodityIcons.xml" image="ammo_box"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Range: 12" state="text_small" vap="center" horizontal_margin="4"/>
+							<label text="Extra: 6-round magazine" state="text_small" vap="center" horizontal_margin="8"/>
+						</container>
+					</container>
+				</container>
+				
+				<container type="horizbox" vsp="fixed" fixed_height="76" hsp="fixed" fixed_width="410" horizontal_margin="2">
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="jezailButtonContainer"/>
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_margin="3" vertical_margin="2"
+							 horizontal_padding="2" vertical_padding="2"
+							 solidfill="1" solidfillname="miniPaper" >
+						
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Jezail Rifle" state="text" vap="center" horizontal_margin="2"/>
+							<label text="The sharpshooter's choice." state="text_small_faded" hap="right" vap="center"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Damage: 10" state="text_small_red" vap="center" horizontal_margin="2"/>
+							<label text="Reload 3.2s - Full Metal Jacket Ammo" state="text_small" vap="center" horizontal_margin="4"/>
+							<image hsp="minimum" vsp="minimum" scale="50" skin="ui\\commodityIcons.xml" image="ammo_box2"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Range: 20" state="text_small" vap="center" horizontal_margin="4"/>
+							<!--<label text="Extra: small area hit" state="text_small" vap="center" horizontal_margin="8"/>-->
+						</container>
+					</container>
+				</container>
+
+				<container type="horizbox" hsp="expand" vsp="minimum" horizontal_margin="2">
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="carbineButtonContainer"/>
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_margin="3" vertical_margin="2"
+							 horizontal_padding="2" vertical_padding="2"
+							 solidfill="1" solidfillname="miniPaper" >
+						
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Carbine" state="text" vap="center" horizontal_margin="2"/>
+							<label text="A terrifying quick-firing rifle from Stahlmark." state="text_small_faded" hap="right" vap="center"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Damage: 7" state="text_small_red" vap="center" horizontal_margin="2"/>
+							<label text="Reload 4s - Full Metal Jacket Ammo" state="text_small" vap="center" horizontal_margin="4"/>
+							<image hsp="minimum" vsp="minimum" scale="50" skin="ui\\commodityIcons.xml" image="ammo_box2"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Range: 14" state="text_small" vap="center" horizontal_margin="4"/>
+							<label text="Extra: 8-round magazine" state="text_small" vap="center" horizontal_margin="8"/>-->
+						</container>
+					</container>
+				</container>
+				
+				<container type="horizbox" vsp="fixed" fixed_height="76" hsp="fixed" fixed_width="410" horizontal_margin="2">
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="grenadelauncherButtonContainer"/>
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_margin="3" vertical_margin="2"
+							 horizontal_padding="2" vertical_padding="2"
+							 solidfill="1" solidfillname="miniPaper" >
+						
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Grenade Launcher" state="text" vap="center" horizontal_margin="2"/>
+							<label text="A firearm of wanton destruction." state="text_small_faded" hap="right" vap="center"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Damage: 16++?" state="text_small_red" vap="center" horizontal_margin="2"/>
+							<label text="Reload 4.4s - Grenades" state="text_small" vap="center" horizontal_margin="4"/>
+							<image hsp="minimum" vsp="minimum" scale="50" skin="ui\\commodityIcons.xml" image="grenades_crate"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Range: 14" state="text_small" vap="center" horizontal_margin="4"/>
+							<label text="Extra: explosive fragmentation grenade" state="text_small" vap="center" horizontal_margin="8"/>-->
+						</container>
+					</container>
+				</container>
+				
+				<container type="horizbox" vsp="fixed" fixed_height="76" hsp="fixed" fixed_width="410" horizontal_margin="2">
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="leydenpistolButtonContainer"/>
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_margin="3" vertical_margin="2"
+							 horizontal_padding="2" vertical_padding="2"
+							 solidfill="1" solidfillname="miniPaper" >
+						
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Leyden Pistol" state="text" vap="center" horizontal_margin="2"/>
+							<label text="An advanced voltaic sidearm." state="text_small_faded" hap="right" vap="center"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Damage: 5+?" state="text_small_red" vap="center" horizontal_margin="2"/>
+							<label text="Reload 0.5s - (no ammo required)" state="text_small" vap="center" horizontal_margin="4"/>
+							<image hsp="minimum" vsp="minimum" scale="50" skin="ui\\orderIcons.xml" image="intentionally_blank"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Range: 10" state="text_small" vap="center" horizontal_margin="4"/>
+							<label text="Extra: chance of ignition" state="text_small" vap="center" horizontal_margin="8"/>-->
+						</container>
+					</container>
+				</container>
+				
+				<container type="horizbox" vsp="fixed" fixed_height="76" hsp="fixed" fixed_width="410" horizontal_margin="2">
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="leydenrifleButtonContainer"/>
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_margin="3" vertical_margin="2"
+							 horizontal_padding="2" vertical_padding="2"
+							 solidfill="1" solidfillname="miniPaper" >
+						
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Leyden Rifle" state="text" vap="center" horizontal_margin="2"/>
+							<label text="An advanced voltaic firearm." state="text_small_faded" hap="right" vap="center"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Damage: 7+?" state="text_small_red" vap="center" horizontal_margin="2"/>
+							<label text="Reload 0.5s - (no ammo required)" state="text_small" vap="center" horizontal_margin="4"/>
+							<image hsp="minimum" vsp="minimum" scale="50" skin="ui\\orderIcons.xml" image="intentionally_blank"/>
+						</container>
+						<container type="horizbox" hsp="expand" vsp="minimum" >
+							<label text="Range: 16" state="text_small" vap="center" horizontal_margin="4"/>
+							<label text="Extra: chance of ignition" state="text_small" vap="center" horizontal_margin="8"/>
+						</container>
+					</container>
+				</container>
+				
+				<container type="horizbox" vsp="fixed" fixed_height="76" hsp="fixed" fixed_width="410" horizontal_margin="2">
+					
+				</container>
+			<!-- <container type="horizbox" hsp="minimum" vsp="minimum"
+					 horizontal_gutter="8"
+					 vertical_margin="2"
+					 hap="center" >
+				
+				<container type="vertbox" hsp="minimum" vsp="minimum" name="pistolButtonContainer" />
+				<container type="vertbox" hsp="minimum" vsp="minimum" name="musketButtonContainer" />
+				<container type="vertbox" hsp="minimum" vsp="minimum" name="blunderbussButtonContainer" />
+				<container type="vertbox" hsp="minimum" vsp="minimum" name="jezailButtonContainer" />
+				<container type="vertbox" hsp="minimum" vsp="minimum" name="carbineButtonContainer" />
+			</container>
+			
+			<container type="horizbox" hsp="minimum" vsp="minimum"
+					 horizontal_gutter="8"
+					 vertical_margin="2"
+					 hap="center" >
+				
+				<container type="vertbox" hsp="minimum" vsp="minimum" name="tripistolButtonContainer" />
+				<container type="vertbox" hsp="minimum" vsp="minimum" name="revolverButtonContainer" />
+				<container type="vertbox" hsp="minimum" vsp="minimum" name="grenadelauncherButtonContainer" />
+				<container type="vertbox" hsp="minimum" vsp="minimum" name="leydenpistolButtonContainer" />
+				<container type="vertbox" hsp="minimum" vsp="minimum" name="leydenrifleButtonContainer" />
+			</container> -->
+		</container>
+	</container>
+	
+	<!-- Quality + HP display containers. -->
+	<container type="horizbox" hsp="expand" vsp="minimum" horizontal_margin="2" vertical_margin="2" >
+		
+		<!-- row 1 -->
+		<container type="horizbox" hsp="expand" vsp="minimum">
+			<container type="horizbox" hsp="expand" vsp="expand"
+					 horizontal_gutter="6"
+					 horizontal_margin="2" vertical_margin="2"
+					 horizontal_padding="6" vertical_padding="2"
+					 solidfill="1" solidfillname="miniPaper">
+				
+				<!-- HP display -->
+				<container type="horizbox" hsp="minimum" vsp="minimum"
+						 horizontal_gutter="2"
+						 horizontal_padding="2"
+						 vertical_padding="2" vap="center" >
+					
+					<label text="HP:" vap="center" />
+					<container type="horizbox"
+							 hsp="minimum" vsp="minimum"
+							 horizontal_padding="5" vertical_padding="5"
+							 solidfill="1" solidfillname="label_background_grayer">
+						
+						<container name="HPNumberContainer" type="horizbox" hsp="minimum" vsp="minimum"/>
+						<label text="/"/>
+						<container name="HPMaxContainer" type="horizbox" hsp="minimum" vsp="minimum"/>
+					</container>
+					
+					<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+						<container type="vertbox" hsp="fixed" fixed_width="200"
+								horizontal_padding="5" vertical_padding="5"
+								solidfill="1" solidfillname="glassBrassBorderDark" >
+							
+							<label text="Building Hitpoints" state="tooltip_text" hap="center"/>
+							<paragraph text="When a building reaches 0 HP, it is destroyed. Repair jobs are automatically created when a building is damaged and will be taken up by available Overseers." alignment="left" state="tooltip_text"/>
+						</container>
+					</tooltip>
+				 </container>
+			</container>
+			
+			<!-- Quality -->
+			<container type="horizbox"
+					 hsp="minimum" vsp="expand"
+					 horizontal_margin="2" vertical_margin="2"
+					 horizontal_padding="0" vertical_padding="0"
+					 solidfill="1" solidfillname="miniPaper">
+				
+				<container type="vertbox" hsp="minimum" vsp="minimum" vap="center" hap="left"
+						 horizontal_padding="8">
+					
+					<label text="Building Quality:" vap="center" />
+				</container>
+				
+				<container type="vertbox" hsp="minimum" vsp="expand"
+							horizontal_padding="12" vertical_padding="4"
+							solidfill="1"  solidfillname="miniPaperBrassDarkest">
+				
+					<container type="vertbox" hsp="minimum" vsp="minimum"
+							 vap="center"
+							 name="qualityNumberContainer" />
+				</container>
+		
+				<tooltip width="250" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+					<container type="vertbox" hsp="fixed" fixed_width="240" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+						<container type="horizbox" hsp="minimum" vsp="minimum">
+							<label text="Building Quality:" state="text" />
+							<container name="qualityDescriptionContainer"
+									 type="horizbox" hsp="minimum" vsp="minimum"
+									 vertical_padding="2" horizontal_padding="4"
+									 vap="center" />
+							
+						</container> 
+						<container type="vertbox" hsp="fixed" fixed_width="240">
+							<paragraph text="- Building Quality can range from -6 to +6" alignment="left" state="tooltip_text"/>
+							<paragraph text="- Work Modules reduce quality, while decor modules increase quality" alignment="left" state="tooltip_text"/>
+							<paragraph text="- High workplace quality makes colonists happy." alignment="left" state="tooltip_text"/>
+						</container>
+					</container>
+				</tooltip>
+			</container>
+		</container>
+		<container type="vertbox"
+			 hsp="minimum" vsp="minimum"
+			 horizontal_padding="4"
+			 horizontal_margin="0"
+			 vertical_margin="0"
+			 vertical_padding="3"
+			 solidfill="1" solidfillname="miniPaperBrassLight">
+		
+		
+			<container name="barracksCommandHolder"
+					type="horizbox" hsp="minimum" vsp="minimum"
+					horizontal_margin="8"
+					vertical_padding="2"
+					hap="right"/>
+		
+		</container>
+		
+	</container>
+
+	
+</container>
