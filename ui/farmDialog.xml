@@ -1,201 +1,210 @@
-<container type="vertbox" hsp="expand" vsp="minimum"  solidfill="1" skin="ui/styles/styleGlass.xml" horizontal_padding="5" vertical_padding="5" name="contentsVB"  >
+<container type="vertbox" hsp="expand" vsp="minimum" name="contentsVB"  >
 	<!--<container type="horizbox" hsp="expand" vsp="minimum" solidfill="1" solidfillname="miniPaperLight" name="tophorizbox"/>
 	-->
-	
-	<!-- Basic controls & title. -->
 	<container type="horizbox"
-			 hsp="expand" vsp="minimum"
-			 horizontal_padding="5"
-			 vertical_padding="5"
-			 horizontal_gutter="5"
-			 solidfill="1" solidfillname="miniPaperBrassLight"
-			 name="headerBox" >
-		
-		<imagebutton name="BuildingIcon"
-				   text="Building Icon"
-				   hsp="minimum" vsp="minimum"
-					imageSkin="ui/orderIcons.xml"
-					image="farming_icon"
-					imgPctX="50" imgPctY="50"
-					horizontal_margin="10" vertical_margin="10">
-					
-			<tooltip width="240" height="45" mouseRestDelay="0" followCursor="1">
-				<container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
-					<label name="buttonTooltipLabel" text="Focus on Crop Field" vsp="center" state="tooltip_text"/>
+			hsp="expand" vsp="minimum"
+			horizontal_margin="15"
+			solidfill="1" solidfillname="cecommPaperRoundInsideNoBottom"
+			vertical_padding="0">
+		<container type="horizbox" vap="center" hap="center" vsp="minimum" hsp="minimum">
+			
+			<imagebutton name="BuildingIcon" text="Building Icon"
+					   hsp="minimum" vsp="minimum"
+					   imageSkin="ui/orderIcons.xml" image="farming_icon" imgPctX="80" imgPctY="80" vertical_margin="8">
+				
+				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_padding="4" vertical_padding="4"
+							 solidfill="1" solidfillname="glassBrassBorderDark">
+						
+						<label name="buttonTooltipLabel" text="Focus on Crop Field" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</imagebutton>
+			
+			<container type="vertbox" hsp="expand" vsp="expand" name="demolishBox" vertical_margin="4" horizontal_margin="5">
+				<container type="vertbox" hsp="minimum" vsp="minimum" hap="center" horizontal_padding="2">
+					<label text="Farm" vsp="minimum" hsp="minimum" />
 				</container>
-			</tooltip>
-		</imagebutton>
+				<container type="vertbox" hsp="expand" vsp="minimum" name="workCrewSelectionBoxContainer"/>
+			</container>
+			
+			<imagebutton name="DemolishBuildingButton"
+					   text="Demolish Building"
+					   sfx="button_pneumatic"
+					   hsp="minimum" vsp="minimum" 
+				imageSkin="ui/orderIcons.xml" image="demolish_building" imgPctX="80" imgPctY="80" vertical_margin="8">
+				
+				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_padding="4" vertical_padding="4"
+							 solidfill="1" solidfillname="glassBrassBorderDark">
+						
+						<label name="buttonTooltipLabel" text="Demolish Zone" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>        
+			</imagebutton>
+		</container>
+	</container>
+
+	<container type="vertbox" hsp="expand" vsp="expand" solidfill="1" solidfillname="cecommWorkcrew" vertical_padding="12" horizontal_padding="10">
 		
-		<!-- assign workcrew widget -->
-		<container type="vertbox" hsp="expand" vsp="expand" name="demolishBox">
-			<container type="vertbox" hsp="expand" vsp="minimum" vap="center" name="workCrewSelectionBoxContainer"/>
+		<container type="vertbox" hsp="fixed" vsp="fixed" fixed_height="45" fixed_width="300" hap="center" solidfill="1" solidfillname="cecommTopGlassLight">
+			<!--
+			<container name="workshiftContainer" type="vertbox"
+					hsp="fixed" fixed_width="279"
+					hap="center" vertical_padding="10" horizontal_padding="10" />
+			-->
+			<label vap="center" text="Crop Progress" hap="center" state="text_large" />
 		</container>
 		
-		<!--<container name="ZoneVB" type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" >
-			<label name="ZoneNameLabel" text="Crop Field" hsp="expand" vsp="minimum"/>                       
-		</container> -->
-		
-		<imagebutton name="DemolishZoneButton"
-				   text="Demolish Zone"
-				   hsp="minimum" vsp="minimum"
-				   imageSkin="ui/orderIcons.xml"
-				   image="x_red_icon"
-				   imgPctX="50" imgPctY="50"
-				   horizontal_margin="10" vertical_margin="10">
-			
-			<tooltip width="240" height="45" mouseRestDelay="0" followCursor="1">
-				<container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
-					<label name="buttonTooltipLabel" text="Demolish Zone" vsp="center" state="tooltip_text"/>
-				</container>
-			</tooltip>
-			
-		</imagebutton>
-		
-	</container>
-	<container name="workshiftContainer" type="vertbox" hsp="minimum" vsp="minimum" hap="center" vertical_padding="3" horizontal_padding="3"/>
 
-	<container type="horizbox"
-			 hsp="expand" vsp="minimum"
-			 horizontal_padding="3" vertical_padding="3"
-			 horizontal_gutter="4"
-			 solidfill="1" solidfillname="miniPaper"
-			 name="row1">
-		
-			<container name="cropGrowingStaticTextContainer"
-					type="vertbox"
-					hsp="expand" vsp="expand"
-					horizontal_padding="2" vertical_padding="3" />
+		<container type="vertbox"
+				hsp="expand" vsp="minimum"
+				horizontal_padding="4" horizontal_margin="4"
+				vertical_padding="8"
+				solidfill="1" solidfillname="cecommDarkRoundPaper" >
+			<container type="horizbox"
+					 hsp="expand" vsp="minimum"
+					 horizontal_padding="3" vertical_padding="3"
+					 horizontal_gutter="4"
+					 name="row1">
+				
+					<container name="cropGrowingStaticTextContainer"
+							type="vertbox"
+							hsp="expand" vsp="expand"
+							horizontal_padding="2" vertical_padding="3" />
+					
+					<container name="cropGrowingTextContainer"
+							type="vertbox"
+							hsp="fixed" fixed_width="200"
+							vsp="expand"
+							horizontal_padding="2" vertical_padding="3"
+							solidfill="1" solidfillname="miniPaperRound" />
+			</container>
 			
-			<container name="cropGrowingTextContainer"
-					type="vertbox"
-					hsp="fixed" fixed_width="200"
-					vsp="expand"
-					horizontal_padding="2" vertical_padding="3"
-					solidfill="1" solidfillname="miniPaperLight" />
-	</container>
-	
-	<container type="horizbox"
-			 hsp="expand" vsp="minimum"
-			 horizontal_padding="3" vertical_padding="3"
-			 horizontal_gutter="4"
-			 solidfill="1" solidfillname="miniPaper"
-			 name="row2">
-		
-			<container name="fieldStatusStaticTextContainer"
-					type="vertbox"
-					hsp="expand" vsp="expand"
-					horizontal_padding="2" vertical_padding="3"
-					horizontal_gutter="2" />
+			<container type="horizbox"
+					 hsp="expand" vsp="minimum"
+					 horizontal_padding="3" vertical_padding="3"
+					 horizontal_gutter="4"
+					 name="row2">
+				
+					<container name="fieldStatusStaticTextContainer"
+							type="vertbox"
+							hsp="expand" vsp="expand"
+							horizontal_padding="2" vertical_padding="3"
+							horizontal_gutter="2" />
+					
+					<container name="fieldStatusTextContainer"
+							type="vertbox"
+							hsp="fixed" fixed_width="200"
+							vsp="expand"
+							horizontal_padding="2" vertical_padding="3"
+							horizontal_gutter="2"
+							solidfill="1" solidfillname="miniPaperRound" />
+			</container>
+				
+			<container type="horizbox"
+					 hsp="expand" vsp="minimum"
+					 horizontal_padding="3" vertical_padding="3"
+					 horizontal_gutter="4"
+					 name="row1">
+				
+					<container name="harvestLabourStaticTextContainer"
+							type="vertbox"
+							hsp="expand" vsp="expand"
+							horizontal_padding="2" vertical_padding="3"
+							horizontal_gutter="2" />
+					
+					<container name="harvestLabourTextContainer"
+							type="vertbox"
+							hsp="fixed" fixed_width="200"
+							vsp="expand"
+							horizontal_padding="2" vertical_padding="3"
+							horizontal_gutter="2"
+							solidfill="1" solidfillname="miniPaperRound" />
+			</container>
 			
-			<container name="fieldStatusTextContainer"
-					type="vertbox"
-					hsp="fixed" fixed_width="200"
-					vsp="expand"
-					horizontal_padding="2" vertical_padding="3"
-					horizontal_gutter="2"
-					solidfill="1" solidfillname="miniPaperLight" />
-	</container>
-		
-	<container type="horizbox"
-			 hsp="expand" vsp="minimum"
-			 horizontal_padding="3" vertical_padding="3"
-			 horizontal_gutter="4"
-			 solidfill="1" solidfillname="miniPaper"
-			 name="row1">
-		
-			<container name="harvestLabourStaticTextContainer"
-					type="vertbox"
-					hsp="expand" vsp="expand"
-					horizontal_padding="2" vertical_padding="3"
-					horizontal_gutter="2" />
+			<container type="horizbox"
+					 hsp="expand" vsp="minimum"
+					 horizontal_padding="3" vertical_padding="3"
+					 horizontal_gutter="4"
+					 name="row1">
+				
+					<container name="harvestAmountStaticTextContainer"
+							type="vertbox"
+							hsp="expand" vsp="expand"
+							horizontal_padding="2" vertical_padding="3"
+							horizontal_gutter="2" />
+					
+					<container name="harvestAmountTextContainer"
+							type="vertbox"
+							hsp="fixed" fixed_width="200"
+							vsp="expand"
+							horizontal_padding="2" vertical_padding="3"
+							horizontal_gutter="2"
+							solidfill="1" solidfillname="miniPaperRound" />
+			</container>
 			
-			<container name="harvestLabourTextContainer"
-					type="vertbox"
-					hsp="fixed" fixed_width="200"
-					vsp="expand"
-					horizontal_padding="2" vertical_padding="3"
-					horizontal_gutter="2"
-					solidfill="1" solidfillname="miniPaperLight" />
-	</container>
-	
-	<container type="horizbox"
-			 hsp="expand" vsp="minimum"
-			 horizontal_padding="3" vertical_padding="3"
-			 horizontal_gutter="4"
-			 solidfill="1" solidfillname="miniPaper"
-			 name="row1">
-		
-			<container name="harvestAmountStaticTextContainer"
-					type="vertbox"
-					hsp="expand" vsp="expand"
-					horizontal_padding="2" vertical_padding="3"
-					horizontal_gutter="2" />
+			<!--<container type="horizbox"
+					 hsp="expand" vsp="minimum"
+					 horizontal_padding="3" vertical_padding="3"
+					 horizontal_gutter="4"
+					 solidfill="1" solidfillname="miniPaper"
+					 name="row1">
+				
+					<container name="labourPerDayStaticTextContainer"
+							type="vertbox"
+							hsp="expand" vsp="expand"
+							horizontal_padding="2" vertical_padding="3"
+							horizontal_gutter="2" />
+					
+					<container name="labourPerDayTextContainer"
+							type="vertbox"
+							hsp="fixed" fixed_width="200"
+							vsp="expand"
+							horizontal_padding="2" vertical_padding="3"
+							horizontal_gutter="2"
+							solidfill="1" solidfillname="miniPaperLight" />
+			</container>
 			
-			<container name="harvestAmountTextContainer"
-					type="vertbox"
-					hsp="fixed" fixed_width="200"
-					vsp="expand"
-					horizontal_padding="2" vertical_padding="3"
-					horizontal_gutter="2"
-					solidfill="1" solidfillname="miniPaperLight" />
-	</container>
-	
-	<!--<container type="horizbox"
-			 hsp="expand" vsp="minimum"
-			 horizontal_padding="3" vertical_padding="3"
-			 horizontal_gutter="4"
-			 solidfill="1" solidfillname="miniPaper"
-			 name="row1">
-		
-			<container name="labourPerDayStaticTextContainer"
-					type="vertbox"
-					hsp="expand" vsp="expand"
-					horizontal_padding="2" vertical_padding="3"
-					horizontal_gutter="2" />
+			<container type="horizbox"
+					 hsp="expand" vsp="minimum"
+					 horizontal_padding="3" vertical_padding="3"
+					 horizontal_gutter="4"
+					 solidfill="1" solidfillname="miniPaper"
+					 name="row1">
+				
+					<container name="daysPerHarvestStaticTextContainer"
+							type="vertbox"
+							hsp="expand" vsp="expand"
+							horizontal_padding="2" vertical_padding="3"
+							horizontal_gutter="2" />
+					
+					<container name="daysPerHarvestTextContainer"
+							type="vertbox"
+							hsp="fixed" fixed_width="200"
+							vsp="expand"
+							horizontal_padding="2" vertical_padding="3"
+							horizontal_gutter="2"
+							solidfill="1" solidfillname="miniPaperLight" />
+			</container>-->
 			
-			<container name="labourPerDayTextContainer"
-					type="vertbox"
-					hsp="fixed" fixed_width="200"
-					vsp="expand"
-					horizontal_padding="2" vertical_padding="3"
-					horizontal_gutter="2"
-					solidfill="1" solidfillname="miniPaperLight" />
+			<!--<container type="vertbox" hsp="expand" vsp="expand" name="ZoneButtonVertBox" horizontal_padding="4" vertical_padding="4" >
+				<container type="scrollablevertbox"
+				name="MainList"
+				hsp="expand" vsp="fixed"
+				clamp="bottom"
+				fixed_height="200"
+				vap="bottom"
+				horizontal_padding="2"
+				vertical_padding="3"
+				skin="ui/styles/styleGameplay.xml"
+				solidfill="1"
+				solidfillname="gameLog"/>
+				
+			</container>-->
+		</container>
 	</container>
-	
-	<container type="horizbox"
-			 hsp="expand" vsp="minimum"
-			 horizontal_padding="3" vertical_padding="3"
-			 horizontal_gutter="4"
-			 solidfill="1" solidfillname="miniPaper"
-			 name="row1">
-		
-			<container name="daysPerHarvestStaticTextContainer"
-					type="vertbox"
-					hsp="expand" vsp="expand"
-					horizontal_padding="2" vertical_padding="3"
-					horizontal_gutter="2" />
-			
-			<container name="daysPerHarvestTextContainer"
-					type="vertbox"
-					hsp="fixed" fixed_width="200"
-					vsp="expand"
-					horizontal_padding="2" vertical_padding="3"
-					horizontal_gutter="2"
-					solidfill="1" solidfillname="miniPaperLight" />
-	</container>-->
-	
-	<container type="vertbox" hsp="expand" vsp="expand" name="ZoneButtonVertBox" horizontal_padding="4" vertical_padding="4" >
-		<!--<container type="scrollablevertbox"
-		name="MainList"
-		hsp="expand" vsp="fixed"
-		clamp="bottom"
-		fixed_height="200"
-		vap="bottom"
-		horizontal_padding="2"
-		vertical_padding="3"
-		skin="ui/styles/styleGameplay.xml"
-		solidfill="1"
-		solidfillname="gameLog"/>-->
-		
-	</container>
+	<container type="horizbox" hsp="fixed" fixed_width="400" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommBottomGlass" />
 </container>
