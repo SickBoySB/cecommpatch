@@ -1,219 +1,213 @@
-<container type="vertbox" hsp="expand" vsp="expand" name="contentsVB">
-	<container type="horizbox" hsp="expand" vsp="minimum" horizontal_padding="2" vertical_padding="2" solidfill="1" solidfillname="miniPaperBrassLight" >
-		
-		<!-- Zoom to button -->
-		<imagebutton name="BuildingIcon"
-				   text="Building Icon"
-				   hsp="minimum" vsp="minimum" 
-				imageSkin="ui//orderIcons.xml" image="messhall">
-			
-			<tooltip width="240" height="45" mouseRestDelay="0" followCursor="1">
-				<container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
-					<label name="buttonTooltipLabel"
-						  text="Focus on Building"
-						  hap="center" vap="center" state="tooltip_text"/>
-				</container>
-			</tooltip>        
-		</imagebutton>
-		
-		<!-- building name + workcrew selection box -->
-		<container type="vertbox" hsp="expand" vsp="expand" name="demolishBox">
-			<container type="vertbox" hsp="expand" vsp="minimum" name="buildingFancyName" hap="center" horizontal_padding="2" vertical_padding="2" solidfill="1" solidfillname="miniPaper"/>
-			<!--Commented out Upper Class Patron code until we hook it up-->
-			<!--<label name="workshopcrewlabel" text="Upper Class Patron" vsp="minimum" hap="center"/>
-			<combobox name="patron" />-->
-			<container type="vertbox" hsp="expand" vsp="expand" name="workCrewSelectionBoxContainer"/>
-		</container>
+<container type="vertbox" hsp="expand" vsp="minimum" name="contentsVB">
 
-		<!-- Demolition button -->
-		<imagebutton name="DemolishBuildingButton"
-				   text="Demolish Building"
-				   sfx="button_pneumatic"
-				   hsp="minimum" vsp="minimum" 
-			
-			imageSkin="ui/orderIcons.xml" image="demolish_building">
-			<tooltip width="240" height="45" mouseRestDelay="0" followCursor="1">
-				<container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
-					<label name="buttonTooltipLabel"
-						  text="Order this Public House demolished."
-						  hap="center" vap="center" state="tooltip_text"/>
-					
-				</container>
-			</tooltip>        
-		</imagebutton>
-		
-	</container>
-	
-	<container name="workshiftContainer"
-			type="vertbox"
-			hsp="fixed" fixed_width="279"
-			vsp="fixed" fixed_height="44"
-			hap="center" vertical_padding="6" horizontal_padding="8"
-			solidfill="1" solidfillname="miniPaperBrassLight"/>
-	
-	
-<!-- main content box -->
-<container type="vertbox" hsp="expand" vsp="minimum">
-	
-	<!-- booze vat count & pub contents -->
-	<container type="vertbox"
-			 hsp="expand" vsp="minimum"
-			 hap="center"
-			 horizontal_gutter="3" horizontal_padding="5"
-			 vertical_margin="5" vertical_padding="4"
-			 solidfill="1" solidfillname="miniPaperBrassLight" >
-		
-		<container type="horizbox" hsp="expand" vsp="minimum">
-			<container type="horizbox" hsp="expand" vsp="minimum"
-					 horizontal_padding="6" horizontal_margin="2"
-					 vertical_padding="4" vertical_margin="2"
-					 solidfill="1" solidfillname="miniPaperLighter"
-					 vap="center">
+	<container type="horizbox"
+			hsp="expand" vsp="minimum"
+			horizontal_margin="15"
+			solidfill="1" solidfillname="cecommPaperRoundInsideNoBottom"
+			vertical_padding="0">
+		<container type="horizbox" vap="center" hap="center" vsp="minimum" hsp="minimum">
+			<imagebutton name="BuildingIcon" text="Building Icon"
+					   hsp="minimum" vsp="minimum"
+					   imageSkin="ui/orderIcons.xml" image="messhall" imgPctX="80" imgPctY="80" vertical_margin="8">
 				
-				<image hsp="minimum" vsp="minimum" scale="50"
-					  skin="ui\\orderIcons.xml" image="icon_boozevat" vap="center"/>
-				<label text="Vats: " vap="center" />
-				<container type="horizbox" hsp="minimum" vsp="minimum" name="vatCountContainer" vap="center"/>
+				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_padding="4" vertical_padding="4"
+							 solidfill="1" solidfillname="glassBrassBorderDark">
+						
+						<label name="buttonTooltipLabel" text="Focus on Building" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</imagebutton>
+			
+			<container type="vertbox" hsp="expand" vsp="expand" name="demolishBox" vertical_margin="4" horizontal_margin="5">
+				<container type="vertbox" hsp="expand" vsp="minimum"
+						 name="buildingFancyName" hap="center"
+						 horizontal_padding="2"/>
+						
+				<container type="vertbox" hsp="expand" vsp="minimum" name="workCrewSelectionBoxContainer"/>
 			</container>
 			
-			<container type="horizbox" hsp="minimum" vsp="minimum" hap="right">
-				<label text="contents:" vap="center" horizontal_margin="2" />
+			<imagebutton name="DemolishBuildingButton"
+					   text="Demolish Building"
+					   sfx="button_pneumatic"
+					   hsp="minimum" vsp="minimum" 
+				imageSkin="ui/orderIcons.xml" image="demolish_building" imgPctX="80" imgPctY="80" vertical_margin="8">
 				
-				<container type="horizbox" hsp="minimum" vsp="minimum"
-						 horizontal_padding="3" horizontal_margin="1"
-						 vertical_padding="4" vertical_margin="2"
-						 solidfill="1" solidfillname="miniPaperLighter"
-						 vap="center">
-					
-					<image hsp="minimum" vsp="minimum" scale="50"
-						  skin="ui\\orderIcons2.xml" image="booze_brewed_on" vap="center"/>
-					<label text="x" vap="center"/>
-					<container type="horizbox" hsp="minimum" vsp="minimum" name="brewQuantityContainer" vap="center"/>
-					<label text="/" vap="center"/>
-					<container type="horizbox" hsp="minimum" vsp="minimum" name="brewCapacityContainer" vap="center"/>
-				</container>
-				
-				<container type="horizbox" hsp="minimum" vsp="minimum"
-						 horizontal_padding="3" horizontal_margin="1"
-						 vertical_padding="4" vertical_margin="2"
-						 solidfill="1" solidfillname="miniPaperLighter"
-						 vap="center">
-					<image hsp="minimum" vsp="minimum" scale="50"
-						  skin="ui\\orderIcons2.xml" image="booze_spirits_on" vap="center"/>
-					<label text="x" vap="center"/>
-					<container type="horizbox" hsp="minimum" vsp="minimum" name="spiritsQuantityContainer" vap="center"/>
-					<label text="/" vap="center"/>
-					<container type="horizbox" hsp="minimum" vsp="minimum" name="spiritsCapacityContainer" vap="center"/>
-				</container>
-				
-				<container type="horizbox" hsp="minimum" vsp="minimum"
-						 horizontal_padding="3" horizontal_margin="1"
-						 vertical_padding="4" vertical_margin="2"
-						 solidfill="1" solidfillname="miniPaperLighter"
-						 vap="center">
-					<image hsp="minimum" vsp="minimum" scale="50"
-						  skin="ui\\orderIcons2.xml" image="booze_laudanum_on" vap="center"/>
-					<label text="x" vap="center"/>
-					<container type="horizbox" hsp="minimum" vsp="minimum" name="laudanumQuantityContainer" vap="center"/>
-					<label text="/" vap="center"/>
-					<container type="horizbox" hsp="minimum" vsp="minimum" name="laudanumCapacityContainer" vap="center"/>
-				</container>
-			</container>
-			
+				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_padding="4" vertical_padding="4"
+							 solidfill="1" solidfillname="glassBrassBorderDark">
+						
+						<label name="buttonTooltipLabel" text="Order this Public House demolished." vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>        
+			</imagebutton>
 		</container>
 	</container>
 	
-	<!-- Pub controls & info -->
-	<container type="vertbox"
-			 hsp="expand" vsp="minimum"
-			 hap="center"
-			 horizontal_gutter="3" horizontal_padding="5"
-			 vertical_margin="5" vertical_padding="4"
-			 solidfill="1" solidfillname="miniPaperBrassLight" >
-			
-		<!-- lack of modules / workcrew Warnings here-->
-		<container type="vertbox" hsp="minimum" vsp="minimum" name="warningContainer" hap="center"/>
 	
-		<container type="horizbox" hsp="expand" vsp="minimum">
+	<container type="vertbox" hsp="expand" vsp="minimum" solidfill="1" solidfillname="cecommWorkcrew">
+		<container type="vertbox" hsp="expand" vsp="fixed" fixed_height="12"/>
+		<container type="vertbox" hsp="fixed" vsp="fixed" fixed_height="45" fixed_width="300" hap="center" solidfill="1" solidfillname="cecommTopGlassLight">
+			<container name="workshiftContainer" type="vertbox"
+					hsp="fixed" fixed_width="279"
+					hap="center" vertical_padding="10" horizontal_padding="10" />
+		</container>
+		
+		<container type="vertbox"
+				 hsp="fixed" vsp="fixed"
+				 hap="center"
+				 horizontal_padding="4" vertical_padding="10"
+				 solidfill="1" solidfillname="cecommDarkRoundPaper" fixed_width="350" fixed_height="90" >
 			
-			<container type="vertbox" hsp="expand" vsp="minimum">
+			
+			<container type="horizbox" vsp="expand" hap="center" vap="center">
 				
-				<label text="Select booze to stock:" state="small" hap="center"/>
-			
-				<!-- Booze Distribution Modes -->
-				<container type="vertbox" hsp="expand" vsp="minimum"
-						hap="center"
-						vertical_gutter="4" vertical_padding="4"
-						horizontal_padding="8"
-						horizontal_margin="4"
-						solidfill="1" solidfillname="miniPaperLight"
-						name="modeControlsContainer">
-					
-					<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_gutter="8" hap="center">
-						
-						<container type="vertbox" hsp="minimum" vsp="minimum">
-							<container type="vertbox" hsp="minimum" vsp="minimum"
-									 solidfill="1" solidfillname="miniPaperLight"
-									 name="modeControlsContainer1"/>
-						</container>
-						
-						<container type="vertbox" hsp="minimum" vsp="minimum">
-							<container type="vertbox" hsp="minimum" vsp="minimum"
-									 solidfill="1" solidfillname="miniPaperLight"
-									 name="modeControlsContainer2"/>
-						</container>
-						
-						<!--
-						<container type="vertbox" hsp="minimum" vsp="minimum">
-							<container type="vertbox" hsp="minimum" vsp="minimum"
-									 solidfill="1" solidfillname="miniPaperLight"
-									 name="modeControlsContainer3"/>
-							
-							<container type="horizbox" hsp="minimum" vsp="minimum" hap="center" vertical_padding="4">
+				<container type="vertbox" hap="center" vap="center" vsp="expand">
+					<container name="warningContainer" type="vertbox" hsp="minimum" vsp="minimum" vap="top" hap="center" />
+					<container type="vertbox" hap="center" vap="center" vsp="minimum">
+						<container type="horizbox" hsp="minimum" vsp="minimum" hap="center">
+							<container type="horizbox" hsp="minimum" vsp="minimum"
+									 horizontal_padding="3" horizontal_margin="1"
+									 vertical_padding="4" vertical_margin="2"
+									 solidfill="1" solidfillname="miniPaperLighter"
+									 vap="center">
+								
 								<image hsp="minimum" vsp="minimum" scale="50"
-								  skin="ui\\orderIcons2.xml" image="booze_laudanum_on" vap="center"/>
+									  skin="ui\\orderIcons2.xml" image="booze_brewed_on" vap="center"/>
+								<label text="x" vap="center"/>
+								<container type="horizbox" hsp="minimum" vsp="minimum" name="brewQuantityContainer" vap="center"/>
+								<label text="/" vap="center"/>
+								<container type="horizbox" hsp="minimum" vsp="minimum" name="brewCapacityContainer" vap="center"/>
+							</container>
+							
+							<container type="horizbox" hsp="minimum" vsp="minimum"
+									 horizontal_padding="3" horizontal_margin="1"
+									 vertical_padding="4" vertical_margin="2"
+									 solidfill="1" solidfillname="miniPaperLighter"
+									 vap="center">
+								<image hsp="minimum" vsp="minimum" scale="50"
+									  skin="ui\\orderIcons2.xml" image="booze_spirits_on" vap="center"/>
+								<label text="x" vap="center"/>
+								<container type="horizbox" hsp="minimum" vsp="minimum" name="spiritsQuantityContainer" vap="center"/>
+								<label text="/" vap="center"/>
+								<container type="horizbox" hsp="minimum" vsp="minimum" name="spiritsCapacityContainer" vap="center"/>
+							</container>
+							
+							<container type="horizbox" hsp="minimum" vsp="minimum"
+									 horizontal_padding="3" horizontal_margin="1"
+									 vertical_padding="4" vertical_margin="2"
+									 solidfill="1" solidfillname="miniPaperLighter"
+									 vap="center">
+								<image hsp="minimum" vsp="minimum" scale="50"
+									  skin="ui\\orderIcons2.xml" image="booze_laudanum_on" vap="center"/>
 								<label text="x" vap="center"/>
 								<container type="horizbox" hsp="minimum" vsp="minimum" name="laudanumQuantityContainer" vap="center"/>
-							</container>
+								<label text="/" vap="center"/>
+								<container type="horizbox" hsp="minimum" vsp="minimum" name="laudanumCapacityContainer" vap="center"/>
+							</container>			
 						</container>
-						-->
-						
 					</container>
-					
-					<container type="vertbox" hsp="minimum" vsp="minimum" name="distributionModeContainer" hap="center"/>
 				</container>
 				
 			</container>
-			
-			<container type="vertbox" hsp="expand" vsp="minimum">
-				<label text="Laudanum distribution:" state="small" hap="center"/>
-				<!-- Booze Distribution Modes -->
-				<container type="horizbox" hsp="expand" vsp="minimum"
-						hap="center"
-						vertical_gutter="4" vertical_padding="4"
-						horizontal_padding="8"
-						horizontal_margin="4"
-						solidfill="1" solidfillname="miniPaperLight"
-						name="modeControlsContainer">
-					
-					<container type="vertbox" hsp="expand" vsp="minimum">
-					<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_gutter="8" hap="center">
+		</container>
+	
+	
+		<container type="vertbox"
+				 hsp="fixed" vsp="fixed"
+				 hap="center"
+				 horizontal_padding="4" vertical_padding="4"
+				 solidfill="1" solidfillname="cecommBottomGlassLight" fixed_height="35" fixed_width="300" >
 
-						<container type="vertbox" hsp="minimum" vsp="minimum">
-							<container type="vertbox" hsp="minimum" vsp="minimum"
-									 solidfill="1" solidfillname="miniPaperLight"
-									 name="laudanumControlsContainer1"/>
+			<container type="vertbox" hsp="minimum" hap="center">
+				<container type="horizbox" vsp="minimum" hsp="expand" hap="center" horizontal_margin="1" vertical_margin="1">
+					
+					<container type="horizbox" hsp="expand" vsp="minimum" vap="center" hap="center"
+							vertical_padding="4" horizontal_padding="4">
+						<label text="Available Booze Vats: " vap="center" state="text_faded" />
+						<container type="horizbox" hsp="minimum" vsp="minimum" name="vatCountContainer" vap="center"/>
+					</container>
+				</container>
+			</container>
+		</container>
+		
+		<container type="vertbox" hsp="expand" vsp="fixed" fixed_height="8"/>
+		<!-- main content box -->
+		<container type="vertbox" hsp="expand" vsp="minimum">
+			<container type="vertbox"
+					 hsp="expand" vsp="minimum"
+					 hap="center"
+					 horizontal_gutter="1" horizontal_padding="5" >
+								
+				<container type="vertbox" hsp="expand" vsp="minimum">
+					
+					<container type="horizbox" hsp="expand" vsp="minimum"
+							horizontal_padding="2" vertical_padding="2">
+						
+						<container type="horizbox" hsp="minimum" vsp="minimum" name="modeControlsContainer" hap="left">
+							<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_gutter="2" hap="center">
+								
+								<container type="vertbox" hsp="minimum" vsp="minimum">
+									<container type="vertbox" hsp="minimum" vsp="minimum"
+											 name="modeControlsContainer1"/>
+								</container>
+								
+								<container type="vertbox" hsp="minimum" vsp="minimum">
+									<container type="vertbox" hsp="minimum" vsp="minimum"
+											 name="modeControlsContainer2"/>
+								</container>
+								
+							</container>
 						</container>
 						
-						<container type="vertbox" hsp="minimum" vsp="minimum">
-							<container type="vertbox" hsp="minimum" vsp="minimum"
-									 solidfill="1" solidfillname="miniPaperLight"
-									 name="laudanumControlsContainer2"/>
+						<container type="horizbox" hsp="expand" vsp="expand"
+								horizontal_padding="2" vertical_padding="6"
+								solidfill="1" solidfillname="miniPaper">
+							
+							<container type="vertbox" hsp="expand">
+								<container type="vertbox" hsp="expand" vsp="minimum" name="distributionModeContainer" hap="left"/>
+								<container type="vertbox" hsp="expand" vsp="minimum" hap="left">
+									<paragraph text="Who needs water when we've got withdrawal-inducing yeast excrement?" vertical_margin="2" horizontal_margin="4" state="text_small" />
+								</container>
+							</container>
+						</container>
+					</container>
+
+					<container type="horizbox" hsp="expand" vsp="minimum"
+							horizontal_padding="2" vertical_padding="2">
+						
+						<container type="horizbox" hsp="expand" vsp="expand"
+								horizontal_padding="2" vertical_padding="6"
+								solidfill="1" solidfillname="miniPaper">
+							
+							<container type="vertbox" hsp="expand">
+								<container type="vertbox" hsp="expand" vsp="minimum" name="laudanumModeContainer" hap="left"/>
+								<container type="vertbox" hsp="expand" vsp="minimum" hap="left">
+									<paragraph text="Freshly squeezed snake juice. Grow hair, remove warts, forget everything!" vertical_margin="2" horizontal_margin="4" state="text_small" />
+								</container>
+							</container>
+						</container>
+						
+						<container type="horizbox" hsp="minimum" vsp="minimum" name="modeControlsContainer" hap="left">
+							<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_gutter="2" hap="center">
+								
+								<container type="vertbox" hsp="minimum" vsp="minimum">
+									<container type="vertbox" hsp="minimum" vsp="minimum"
+											 name="laudanumControlsContainer1"/>
+								</container>
+								
+								<container type="vertbox" hsp="minimum" vsp="minimum">
+									<container type="vertbox" hsp="minimum" vsp="minimum"
+											 name="laudanumControlsContainer2"/>
+								</container>
+								
+							</container>
 						</container>
 						
 					</container>
-					<container type="vertbox" hsp="minimum" vsp="minimum" name="laudanumModeContainer" hap="center"/>
-					</container>
+					
 				</container>
 				
 			</container>
@@ -221,45 +215,34 @@
 		
 	</container>
 	
-</container>
-	<!-- Special treatment display 
-	<container type="vertbox"
-			 hsp="expand" vsp="minimum"
-			 hap="center"
-			 horizontal_gutter="3" horizontal_padding="5"
-			 vertical_margin="10" vertical_padding="5"
-			 solidfill="1" solidfillname="miniPaperBrassLight" >
-	
-		<label text="(Special treatment container)" hap="center"/>
-		<container type="horizbox" hsp="minimum" vsp="minimum" name="lastGroupSpecialTreatment"/>
-		
-	</container>-->
-	
-	<!-- Quality + HP display containers. -->
-	<container type="horizbox" hsp="expand" vsp="minimum" horizontal_margin="2" vertical_margin="2" >
+	<container type="horizbox" vsp="fixed" fixed_height="50" hsp="expand" horizontal_margin="15" solidfill="1" solidfillname="cecommPaperRoundInsideNoTop" vertical_padding="0" horizontal_padding="5" >
 		
 		<!-- row 1 -->
 		<container type="horizbox" hsp="expand" vsp="expand"
 				 horizontal_gutter="6"
-				 horizontal_margin="2" vertical_margin="2"
-				 horizontal_padding="6" vertical_padding="2"
-				 solidfill="1" solidfillname="miniPaper">
-			
+				 horizontal_margin="2" vertical_margin="0"
+				 horizontal_padding="6" vertical_padding="2">
+		
 			<!-- HP display -->
-			<container type="horizbox" hsp="minimum" vsp="minimum"
-					 horizontal_gutter="2"
+			<container type="horizbox" hsp="minimum" vsp="expand"
 					 horizontal_padding="2"
-					 vertical_padding="2" vap="center" >
+					 vertical_padding="2"
+					 vap="center" >
 				
-				<label text="HP:" vap="center" />
+				<label text="HP:" vap="center"/>
+
 				<container type="horizbox"
 						 hsp="minimum" vsp="minimum"
-						 horizontal_padding="5" vertical_padding="5"
-						 solidfill="1" solidfillname="label_background_grayer">
+						  horizontal_padding="8"
+						  horizontal_margin="4" 
+						   vertical_padding="4"
+						   vertical_margin="8"
+						 solidfill="1" solidfillname="miniPaperRound">
 					
-					<container name="HPNumberContainer" type="horizbox" hsp="minimum" vsp="minimum"/>
-					<label text="/"/>
-					<container name="HPMaxContainer" type="horizbox" hsp="minimum" vsp="minimum"/>
+					<container name="HPNumberContainer" type="horizbox" hsp="minimum" vsp="minimum" vap="center"/>
+					<label text="/" vap="center" />
+					<container name="HPMaxContainer" type="horizbox" hsp="minimum" vsp="minimum" vap="center"/>
+					
 				</container>
 				
 				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
@@ -271,61 +254,36 @@
 						<paragraph text="When a building reaches 0 HP, it is destroyed. Repair jobs are automatically created when a building is damaged and will be taken up by available Overseers." alignment="left" state="tooltip_text"/>
 					</container>
 				</tooltip>
-			 </container>
-			
-			<!-- Chair count display 
-			<container type="horizbox" hsp="minimum" vsp="minimum"
-					 horizontal_gutter="3" horizontal_padding="3"
-					 vertical_padding="5">
-				
-				<label text="Booze:" vap="center" state="small"/>
-				<container type="horizbox"
-						 hsp="minimum" vsp="minimum"
-						 name="beerNumberContainer"
-						 horizontal_gutter="3" horizontal_padding="4" vertical_padding="4"
-						 solidfill="1" solidfillname="label_background_grayer"/>
-				
-				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
-					<container type="vertbox"
-							 hsp="fixed" fixed_width="300"
-							 horizontal_padding="5" vertical_padding="4"
-							 vertical_gutter="4"
-							 solidfill="1" solidfillname="glassBrassBorderDark">
-						
-						<container type="vertbox" hsp="fixed" fixed_width="200">
-							<paragraph text="Beer stored in a Booze Vat module can be served to your colonists to keep them happy and your pub running smoothly. Make sure to keep a healthy stock!" alignment="left" state="tooltip_text"/>
-						</container>
-					</container>
-				</tooltip>
-			</container>-->
+			</container>
 		</container>
 		
 		<!-- Quality -->
 		<container type="horizbox"
 				 hsp="minimum" vsp="expand"
-				 horizontal_margin="2" vertical_margin="2"
-				 horizontal_padding="0" vertical_padding="0"
-				 solidfill="1" solidfillname="miniPaper">
+				 horizontal_margin="8" vertical_margin="0"
+				 horizontal_padding="0" vertical_padding="0">
 			
-			<container type="vertbox" hsp="minimum" vsp="minimum" vap="center" hap="left"
-					 horizontal_padding="8">
+			<container type="vertbox" hsp="minimum" vsp="minimum" vap="center"
+					 horizontal_padding="8"
+					 hap="left">
 				
-				<label text="Building Quality:" vap="center" />
+				<label text="Quality:" vap="center" />
 			</container>
 			
-			<container type="vertbox" hsp="minimum" vsp="expand"
-						horizontal_padding="12" vertical_padding="4"
-						solidfill="1"  solidfillname="miniPaperBrassDarkest">
+			<container type="vertbox" hsp="minimum" vsp="minimum" vap="center"
+						horizontal_padding="10" vertical_padding="4"
+						solidfill="1"  solidfillname="miniPaperRound">
 			
 				<container type="vertbox" hsp="minimum" vsp="minimum"
 						 vap="center"
 						 name="qualityNumberContainer" />
+						 
 			</container>
 	
 			<tooltip width="250" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
 				<container type="vertbox" hsp="fixed" fixed_width="240" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
 					<container type="horizbox" hsp="minimum" vsp="minimum">
-						<label text="Building Quality:" state="text" />
+						<label text="Quality:" state="text" />
 						<container name="qualityDescriptionContainer"
 								 type="horizbox" hsp="minimum" vsp="minimum"
 								 vertical_padding="2" horizontal_padding="4"
@@ -333,12 +291,13 @@
 						
 					</container> 
 					<container type="vertbox" hsp="fixed" fixed_width="240">
-						<paragraph text="- Building Quality can range from -6 to +6" alignment="left" state="tooltip_text"/>
-						<paragraph text="- Work Modules reduce quality, while decor modules increase quality" alignment="left" state="tooltip_text"/>
-						<paragraph text="- High workplace quality makes colonists happy." alignment="left" state="tooltip_text"/>
+							<paragraph text="- Building Quality can range from -6 to +6" alignment="left" state="tooltip_text"/>
+							<paragraph text="- Work Modules reduce quality, while decor modules increase quality" alignment="left" state="tooltip_text"/>
+							<paragraph text="- High workplace quality makes colonists happy." alignment="left" state="tooltip_text"/>
 					</container>
 				</container>
 			</tooltip>
 		</container>
 	</container>
+	<container type="vertbox" hsp="fixed" fixed_width="400" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommBottomGlass" />
 </container>
