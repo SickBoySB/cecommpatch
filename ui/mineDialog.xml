@@ -1,387 +1,391 @@
-<container type="vertbox" hsp="expand" vsp="expand" name="contentsVB">
+<container type="vertbox" hsp="expand" vsp="minimum" name="contentsVB">
 	
-	<container type="horizbox" hsp="expand" vsp="minimum"
-			 horizontal_padding="2" vertical_padding="2"
-			 solidfill="1" solidfillname="miniPaperBrassLight" >
-		
-		<imagebutton name="BuildingIcon" text="Building Icon"
-				   hsp="minimum" vsp="minimum"
-				   imageSkin="ui/orderIcons.xml"
-				   image="mineshaft_image">
-			
-			<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
-				<container type="vertbox" hsp="expand" vsp="expand"
-						 horizontal_padding="4" vertical_padding="4"
-						 solidfill="1" solidfillname="glassBrassBorderDark">
-					
-					<label name="buttonTooltipLabel" text="Focus on Building" vsp="center" state="tooltip_text"/>
-				</container>
-			</tooltip>
-		</imagebutton>
-		
-		<container type="vertbox" hsp="expand" vsp="expand" name="demolishBox">
-			<container type="vertbox" hsp="expand" vsp="minimum"
-					 name="buildingFancyName" hap="center"
-					 horizontal_padding="2" vertical_padding="2" solidfill="1" solidfillname="miniPaper"/>
-					
-					
-					<!--<label name="workshopcrewlabel" text="Unclaimed Workshop" vsp="minimum"/>-->
-				<!--<combobox name="office" />-->
-			<container type="vertbox" hsp="expand" vsp="expand" name="workCrewSelectionBoxContainer"/>
-		</container>
-		
-		<imagebutton name="DemolishBuildingButton"
-				   text="Demolish Building"
-				   sfx="button_pneumatic"
-				   hsp="minimum" vsp="minimum"
-			imageSkin="ui/orderIcons.xml" image="demolish_building">
-			
-			<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
-				<container type="vertbox" hsp="expand" vsp="expand"
-						 horizontal_padding="4" vertical_padding="4"
-						 solidfill="1" solidfillname="glassBrassBorderDark">
-					
-					<label name="buttonTooltipLabel" text="Demolish Building" vsp="center" state="tooltip_text"/>
-				</container>
-			</tooltip>        
-		</imagebutton>
-		
-	</container>
-
-
-	<container name="workshiftContainer"
-			type="vertbox"
-			hsp="fixed" fixed_width="279"
-			vsp="fixed" fixed_height="44"
-			hap="center" vertical_padding="6" horizontal_padding="8"
-			solidfill="1" solidfillname="miniPaperBrassLight" />
-    
-    
-    <!-- supplies and workpoints -->
-	<container type="vertbox"
-			 hsp="expand" vsp="minimum"
-			 hap="center"
-			 horizontal_gutter="3" horizontal_padding="5"
-			 vertical_margin="5" vertical_padding="4"
-			 solidfill="1" solidfillname="miniPaperBrassLight" >
-		
-		<container name="warningContainer"
-				type="vertbox" hsp="minimum" vsp="minimum" hap="center" />
-		
-		<container name="workPointsStatusContainer"
-				type="horizbox" hsp="minimum" vsp="minimum" hap="center"
-				vertical_margin="2" horizontal_margin="2"
-				vertical_padding="2" horizontal_padding="2" >
-			
-		</container>
-		
-		<container type="horizbox" hsp="expand" vsp="minimum"
-				 solidfill="1" solidfillname="miniPaperLighter" hap="center">
+	<container type="horizbox"
+			hsp="expand" vsp="minimum"
+			horizontal_margin="15"
+			solidfill="1" solidfillname="cecommPaperRoundInsideNoBottom"
+			vertical_padding="0">
+		<container type="horizbox" vap="center" hap="center" vsp="minimum" hsp="minimum">
+			<imagebutton name="BuildingIcon" text="Building Icon"
+					   hsp="minimum" vsp="minimum"
+					   imageSkin="ui/orderIcons.xml" image="mineshaft_image" imgPctX="80" imgPctY="80" vertical_margin="8">
 				
-			<container type="horizbox" hsp="minimum" vsp="minimum"
-					 horizontal_padding="4" horizontal_margin="4"
-					 vertical_padding="4" vertical_margin="2"
-					 solidfill="1" solidfillname="miniPaperLighter"
-					 vap="center">
-				
-				<label text="Mine Shorings: " vap="center"  state="small"/>
-				
-				<image hsp="minimum" vsp="minimum" scale="50"
-					  skin="ui\\commodityIcons.xml" image="mine_shoring" vap="center"/>
-				<label text="x" vap="center"/>
-				<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints1Container" vap="center"/>
-				
-				<tooltip width="300" height="140" mouseRestDelay="0" followCursor="1">
-					<container type="vertbox" hsp="expand" vsp="minimum"
-							 horizontal_padding="6" vertical_padding="6"
-							 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
+				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_padding="4" vertical_padding="4"
+							 solidfill="1" solidfillname="glassBrassBorderDark">
 						
-						<label text="Mine Supplies Remaining" hap="center" state="tooltip_text"/>
-						<paragraph text="Mine Shorings, made in a Carpentry Workshop, are required to do Mining. This number shows how many times miners can mine with current supply stocks. Workers will resupply the Mine if Mine shorings run low." state="tooltip_small"/>
+						<label name="buttonTooltipLabel" text="Focus on Building" vsp="center" state="tooltip_text"/>
 					</container>
 				</tooltip>
+			</imagebutton>
+			
+			<container type="vertbox" hsp="expand" vsp="expand" name="demolishBox" vertical_margin="4" horizontal_margin="5">
+				<container type="vertbox" hsp="expand" vsp="minimum"
+						 name="buildingFancyName" hap="center"
+						 horizontal_padding="2"/>
+						
+						
+					<!--<label name="workshopcrewlabel" text="Unclaimed Workshop" vsp="minimum"/>-->
+					<!--<combobox name="office" />-->
+				<container type="vertbox" hsp="expand" vsp="minimum" name="workCrewSelectionBoxContainer"/>
 			</container>
 			
-			<container type="horizbox" hsp="minimum" vsp="minimum"
-					solidfill="1" solidfillname="miniPaperLighter"
-					vertical_padding="2" horizontal_padding="2"
-					horizontal_gutter="4"
-					hap="right">
+			<imagebutton name="DemolishBuildingButton"
+					   text="Demolish Building"
+					   sfx="button_pneumatic"
+					   hsp="minimum" vsp="minimum" 
+				imageSkin="ui/orderIcons.xml" image="demolish_building" imgPctX="80" imgPctY="80" vertical_margin="8">
 				
-				<container type="horizbox" hsp="minimum" vsp="minimum" name="supplyControlContainer1" />
-				<container type="horizbox" hsp="minimum" vsp="minimum" name="supplyControlContainer2" />
-			</container>
+				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_padding="4" vertical_padding="4"
+							 solidfill="1" solidfillname="glassBrassBorderDark">
+						
+						<label name="buttonTooltipLabel" text="Demolish Building" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>        
+			</imagebutton>
 		</container>
 	</container>
-	
-	
-    <!-- Mine depth box -->
-	<container type="horizbox" hsp="expand" vsp="minimum" solidfill="1" solidfillname="miniPaper">
-		<container type="horizbox" hsp="minimum" vsp="minimum"
-				 vap="center"
-				 vertical_padding="4" horizontal_padding="4"
-				 vertical_margin="2" horizontal_margin="2"
-				 solidfill="1" solidfillname="miniPaperLight" >
-			
-			<label text="Depth:" vap="center" state="small"/>
-			
-			<container type="vertbox" hsp="minimum" vsp="minimum"
-					 name="mineDepthHolder"
-					 horizontal_padding="4" vertical_padding="4" vap="center" />
-			
-			<tooltip width="300" height="40" mouseRestDelay="0" followCursor="1">
-				<container type="vertbox" hsp="expand" vsp="expand"
-						 horizontal_padding="6" vertical_padding="6"
-						 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque">
-					<paragraph text="Increase the depth of your mine to unlock deeper Stratas." state="tooltip_small" />
-				</container>
-			</tooltip> 
-		</container>
 
-		<container type="horizbox" hsp="expand" vsp="minimum"
-				 vap="center"
-				 vertical_padding="4" horizontal_padding="4"
-				  vertical_margin="2" horizontal_margin="2"
-				 solidfill="1" solidfillname="miniPaperLight">
-			
-			<label text="Local Products:" vap="center" state="small"/>
-			
-			<container type="vertbox" hsp="minimum" vsp="minimum"
-					 name="localProductsHolder"
-					 horizontal_padding="4" vertical_padding="4" vap="center" />
-			
-			<tooltip width="300" height="40" mouseRestDelay="0" followCursor="1">
-				<container type="vertbox" hsp="expand" vsp="expand"
-						 horizontal_padding="6" vertical_padding="6"
-						 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque">
-					<paragraph text="This mine's local products drawn from sources near mineshafts." state="tooltip_small" />
-				</container>
-			</tooltip>
+	<container type="vertbox" hsp="expand" vsp="expand" solidfill="1" solidfillname="cecommWorkcrew" vertical_padding="12">
+		<container type="vertbox" hsp="fixed" vsp="fixed" fixed_height="45" fixed_width="300" hap="center" solidfill="1" solidfillname="cecommTopGlassLight">
+			<container name="workshiftContainer" type="vertbox"
+					hsp="fixed" fixed_width="279"
+					hap="center" vertical_padding="10" horizontal_padding="10" />
 		</container>
-	</container>
     
-    
-	<!-- main mine content -->
-	<container type="scrollablevertbox" hsp="expand" vsp="expand"
-			 vertical_padding="1" horizontal_padding="2"
-			 vertical_margin="1"
-			solidfill="1" solidfillname="label_background_grayer">
-		
-		<container type="horizbox" hsp="expand" vsp="minimum"
-				horizontal_padding="4" vertical_padding="2">
+			<!-- supplies and workpoints -->
+		<container type="vertbox"
+				 hsp="fixed" vsp="minimum"
+				 hap="center"
+				 horizontal_padding="4" vertical_padding="5"
+				 solidfill="1" solidfillname="cecommDarkRoundPaper" fixed_width="440" >
 			
-			<container type="horizbox" hsp="expand" vsp="expand"
-					horizontal_padding="2" vertical_padding="2"
-					horizontal_margin="4" vertical_margin="4"
-					solidfill="1" solidfillname="miniPaper">
-				
-				<!--<label text="Dig Deeper" vertical_margin="4" horizontal_margin="4" vap="top"/>-->
-				<paragraph text="Dig Deeper: Focus on deepening the mineshaft to gain access to lower strata."
-						vertical_margin="4" horizontal_margin="4" state="text_small"/>
-			</container>
 			
-			<container type="horizbox" hsp="minimum" vsp="minimum" name="mining1ButtonContainer" hap="right">
-				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
-					<container type="vertbox" hsp="expand" vsp="expand"
-							 horizontal_padding="4" vertical_padding="4"
-							 solidfill="1" solidfillname="glassBrassBorderDark">
+			<container type="horizbox" hsp="expand" vsp="expand" hap="center">
+					
+				<container type="vertbox" hsp="expand" vsp="minimum" hap="left"
+						vertical_padding="4" horizontal_padding="4"
+						horizontal_gutter="1" vap="center" >
 						
-						<label text="Set this mine to 'Dig Deeper'" state="tooltip_text" />
-						<paragraph text="No ore will be extracted, but mine depth will rapidly increase."
-							vertical_margin="4" horizontal_margin="4" state="tooltip_small" />
+					<container type="vertbox" hsp="minimum" vsp="minimum">
+						<label text="  Depth" vap="center" state="small"/>
 					</container>
-				</tooltip> 
-			</container>
-		</container>
-		
-		
-		<container type="horizbox" hsp="expand" vsp="minimum"
-				horizontal_padding="2" vertical_padding="2">
-			
-			<container type="horizbox" hsp="expand" vsp="expand"
-					horizontal_padding="2" vertical_padding="2"
-					horizontal_margin="4" vertical_margin="4"
-					solidfill="1" solidfillname="miniPaper">
-				
-				<!-- <label text="Surface Mining" vertical_margin="4" horizontal_margin="4" vap="top"/> -->
-				<paragraph text="Surface Mining: Yields no metallic ores but provides a steady source of common materials." 
-						 vertical_margin="4" horizontal_margin="4" state="text_small" />
-			</container>
-			
-			<container type="horizbox" hsp="minimum" vsp="minimum" name="mining2ButtonContainer" hap="right">
-				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
-					<container type="vertbox" hsp="expand" vsp="expand"
-							 horizontal_padding="4" vertical_padding="4"
-							 solidfill="1" solidfillname="glassBrassBorderDark">
+					<container type="vertbox" hsp="minimum" vsp="minimum">
+						<container type="vertbox" hsp="minimum" vsp="minimum"
+								 name="mineDepthHolder"
+								 horizontal_padding="4" vertical_padding="4" vap="center" solidfill="1" solidfillname="miniPaperRound" />
 						
-						<label text="Set this mine to 'Surface Mining'" state="tooltip_text" hap="center" />
-						<label text="Potential yield:" vsp="center" hsp="center" state="tooltip_small" />
+						<tooltip width="300" height="40" mouseRestDelay="0" followCursor="1">
+							<container type="vertbox" hsp="expand" vsp="expand"
+									 horizontal_padding="6" vertical_padding="6"
+									 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque">
+								<paragraph text="Increase the depth of your mine to unlock deeper Stratas." state="tooltip_small" />
+							</container>
+						</tooltip> 
+					</container>
+				</container>
+					
+				<container type="horizbox"	vsp="expand" hap="center" vap="center">
+					
+					<container type="vertbox" hap="center" vap="center" vsp="expand">
+						<container name="warningContainer" type="vertbox" hsp="minimum" vsp="minimum" vap="top" hap="center" />
+						<container type="vertbox" hap="center" vap="center" vsp="minimum">
+							<container type="horizbox" hap="center">
+							
+								<container type="horizbox" hsp="minimum" vsp="minimum"
+										 horizontal_padding="4" horizontal_margin="1"
+										 vertical_padding="4" vertical_margin="2"
+										 solidfill="1" solidfillname="miniPaperLighter"
+										 vap="center">
+									
+									<label text="Mine Shorings: " vap="center"  state="small"/>
+									
+									<image hsp="minimum" vsp="minimum" scale="50"
+										  skin="ui\\commodityIcons.xml" image="mine_shoring" vap="center"/>
+									<label text="x" vap="center"/>
+									<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints1Container" vap="center"/>
+									
+									<tooltip width="300" height="140" mouseRestDelay="0" followCursor="1">
+										<container type="vertbox" hsp="expand" vsp="minimum"
+												 horizontal_padding="6" vertical_padding="6"
+												 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
+											
+											<label text="Mine Supplies Remaining" hap="center" state="tooltip_text"/>
+											<paragraph text="Mine Shorings, made in a Carpentry Workshop, are required to do Mining. This number shows how many times miners can mine with current supply stocks. Workers will resupply the Mine if Mine shorings run low." state="tooltip_small"/>
+										</container>
+									</tooltip>
+								</container>
+							
+							</container>
+						</container>
+						<container name="workPointsStatusContainer" type="vertbox" hsp="expand" vsp="minimum" vap="bottom" hap="center" />
+					</container>
+					
+				</container>
+				
+				<container type="vertbox" hsp="minimum" vsp="minimum"
+						vertical_padding="3" horizontal_padding="2"
+						horizontal_gutter="2"
+						hap="right">
+					
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="supplyControlContainer1" />
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="supplyControlContainer2" />
+				</container>
+				
+			</container>
 
-						<container type="horizbox" hsp="minimum" vsp="minimum" name="strata1productsHolder"
-							horizontal_padding="6" vertical_padding="6"/>
-						<container type="horizbox" hsp="minimum" vsp="minimum" name="strata1enabledStringHolder"
-							horizontal_padding="6" vertical_padding="6" />
-					</container>
-				</tooltip> 
-			</container>
 		</container>
 		
-		<container type="horizbox" hsp="expand" vsp="minimum"
-				horizontal_padding="2" vertical_padding="2">
-			
-			<container type="horizbox" hsp="expand" vsp="expand"
-					horizontal_padding="2" vertical_padding="2"
-					horizontal_margin="4" vertical_margin="4"
-					solidfill="1" solidfillname="miniPaper">
-				
-				<!-- <label text="Surface Mining" vertical_margin="4" horizontal_margin="4" vap="top"/> -->
-				<paragraph text="Shallow Mixed: Shallow Mixed mining provides access to both common surface materials and deeper ores." 
-						 vertical_margin="4" horizontal_margin="4" state="text_small" />
-			</container>
-			
-			<container type="horizbox" hsp="minimum" vsp="minimum" name="mining3ButtonContainer" hap="right">
-				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
-					<container type="vertbox" hsp="expand" vsp="expand"
-							 horizontal_padding="4" vertical_padding="4"
-							 solidfill="1" solidfillname="glassBrassBorderDark">
-						
-						<label text="Set this mine to 'Shallow Mixed'" state="tooltip_text" hap="center" />
-						<label text="Potential yield:" vsp="center" hsp="center" state="tooltip_small" />
+		<container type="vertbox"
+				 hsp="fixed" vsp="fixed"
+				 hap="center"
+				 horizontal_padding="4" vertical_padding="4"
+				 solidfill="1" solidfillname="cecommBottomGlassLight" fixed_height="35" fixed_width="300" >
 
-						<container type="horizbox" hsp="minimum" vsp="minimum" name="strata2productsHolder"
-							horizontal_padding="6" vertical_padding="6"/>
-						<container type="horizbox" hsp="minimum" vsp="minimum" name="strata2enabledStringHolder"
-							horizontal_padding="6" vertical_padding="6" />
-					</container>
-				</tooltip> 
-			</container>
-		</container>
-		
-		<container type="horizbox" hsp="expand" vsp="minimum"
-				horizontal_padding="2" vertical_padding="2">
-			
-			<container type="horizbox" hsp="expand" vsp="expand"
-					horizontal_padding="2" vertical_padding="2"
-					horizontal_margin="4" vertical_margin="4"
-					solidfill="1" solidfillname="miniPaper">
-				
-				<!-- <label text="Core Vein" vertical_margin="4" horizontal_margin="4" vap="top"/> -->
-				<paragraph text="Core Vein: Bounty of the Metalworks, this level provides excellent access to the mineshaft's primary vein products." 
-						 vertical_margin="4" horizontal_margin="4" state="text_small" />
-			</container>
-			
-			<container type="horizbox" hsp="minimum" vsp="minimum" name="mining4ButtonContainer" hap="right">
-				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
-					<container type="vertbox" hsp="expand" vsp="expand"
-							 horizontal_padding="4" vertical_padding="4"
-							 solidfill="1" solidfillname="glassBrassBorderDark">
+			<container type="vertbox" hsp="minimum" hap="center">
+				<container type="horizbox" vsp="minimum" hsp="expand" hap="center" horizontal_margin="1" vertical_margin="1">
+					
+					<container type="horizbox" hsp="expand" vsp="minimum" vap="center" hap="center"
+							vertical_padding="4" horizontal_padding="4">
 						
-						<label text="Set this mine to 'Core Vein'" state="tooltip_text" hap="center" />
-						<label text="Potential yield:" vsp="center" hsp="center" state="tooltip_small" />
-
-						<container type="horizbox" hsp="minimum" vsp="minimum" name="strata3productsHolder"
-							horizontal_padding="6" vertical_padding="6"/>
-						<container type="horizbox" hsp="minimum" vsp="minimum" name="strata3enabledStringHolder"
-							horizontal_padding="6" vertical_padding="6" />
+							<label text="Local Products: " state="text_faded"  vap="center" />
+							<container type="vertbox" hsp="minimum" vsp="minimum"
+									 name="localProductsHolder"
+									 horizontal_padding="4" vertical_padding="4" vap="center" />
+							
+							<tooltip width="300" height="40" mouseRestDelay="0" followCursor="1">
+								<container type="vertbox" hsp="expand" vsp="expand"
+										 horizontal_padding="6" vertical_padding="6"
+										 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque">
+									<paragraph text="This mine's local products drawn from sources near mineshafts." state="tooltip_small" />
+								</container>
+							</tooltip>
 					</container>
-				</tooltip> 
+				</container>
 			</container>
-		</container>
+		</container>		
 		
-		<container type="horizbox" hsp="expand" vsp="minimum"
-				horizontal_padding="2" vertical_padding="2">
-			
-			<container type="horizbox" hsp="expand" vsp="expand"
-					horizontal_padding="2" vertical_padding="2"
-					horizontal_margin="4" vertical_margin="4"
-					solidfill="1" solidfillname="miniPaper">
+		<!-- main mine content -->
+		<container type="scrollablevertbox" hsp="expand" vsp="expand"
+				 vertical_padding="5" horizontal_padding="8"
+				 vertical_margin="1">
+				 
+			<container type="horizbox" hsp="expand" vsp="minimum"
+					horizontal_padding="2" vertical_padding="2">
 				
-				<!-- <label text="Deep Vein" vertical_margin="4" horizontal_margin="4" vap="top"/> -->
-				<paragraph text="Deep Vein: A daring choice, these depths are risky to mine but allow for the discovery of entirely new mineral veins." 
-						 vertical_margin="4" horizontal_margin="4" state="text_small" />
-			</container>
-			
-			<container type="horizbox" hsp="minimum" vsp="minimum" name="mining5ButtonContainer" hap="right">
-				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
-					<container type="vertbox" hsp="expand" vsp="expand"
-							 horizontal_padding="4" vertical_padding="4"
-							 solidfill="1" solidfillname="glassBrassBorderDark">
-						
-						<label text="Set this mine to 'Deep Vein'" state="tooltip_text" hap="center" />
-						<label text="Potential yield:" vsp="center" hsp="center" state="tooltip_small" />
-
-						<container type="horizbox" hsp="minimum" vsp="minimum" name="strata4productsHolder"
-							horizontal_padding="6" vertical_padding="6"/>
-						<container type="horizbox" hsp="minimum" vsp="minimum" name="strata4enabledStringHolder"
-							horizontal_padding="6" vertical_padding="6" />
-					</container>
-				</tooltip> 
-			</container>
-		</container>
-		
-		<container type="horizbox" hsp="expand" vsp="minimum"
-				horizontal_padding="2" vertical_padding="2">
-			
-			<container type="horizbox" hsp="expand" vsp="expand"
-					horizontal_padding="2" vertical_padding="2"
-					horizontal_margin="4" vertical_margin="4"
-					solidfill="1" solidfillname="miniPaper">
+				<container type="horizbox" hsp="expand" vsp="expand"
+						horizontal_padding="2" vertical_padding="2"
+						solidfill="1" solidfillname="miniPaper">
+					<!--<label text="Dig Deeper" vertical_margin="4" horizontal_margin="4" vap="top"/>-->
+					<paragraph text="Dig Deeper: Focus on deepening the mineshaft to gain access to lower strata."
+							vertical_margin="4" horizontal_margin="4" state="text_small"/>
+				</container>
 				
-				<!-- <label text="Darkest Depths" vertical_margin="4" horizontal_margin="4" vap="top"/> -->
-				<paragraph text="Stygian Abyss: Seek the treasure of places deep, dark, and untouched by human hand - unnatural caves and odd, ancient structures may be found." 
-						 vertical_margin="4" horizontal_margin="4" state="text_small" />
+				<container type="horizbox" hsp="minimum" vsp="minimum" name="mining1ButtonContainer" hap="right">
+					<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+						<container type="vertbox" hsp="expand" vsp="expand"
+								 horizontal_padding="4" vertical_padding="4"
+								 solidfill="1" solidfillname="glassBrassBorderDark">
+							
+							<label text="Set this mine to 'Dig Deeper'" state="tooltip_text" />
+							<paragraph text="No ore will be extracted, but mine depth will rapidly increase."
+								vertical_margin="4" horizontal_margin="4" state="tooltip_small" />
+						</container>
+					</tooltip> 
+				</container>
 			</container>
 			
-			<container type="horizbox" hsp="minimum" vsp="minimum" name="mining6ButtonContainer" hap="right">
-				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
-					<container type="vertbox" hsp="expand" vsp="expand"
-							 horizontal_padding="4" vertical_padding="4"
-							 solidfill="1" solidfillname="glassBrassBorderDark">
-						
-						<label text="Set this mine to 'Stygian Abyss'" state="tooltip_text" hap="center" />
-						<label text="Potential yield:" vsp="center" hsp="center" state="tooltip_small" />
+			
+			<container type="horizbox" hsp="expand" vsp="minimum"
+					horizontal_padding="2" vertical_padding="2">
+				
+				<container type="horizbox" hsp="expand" vsp="expand"
+						horizontal_padding="2" vertical_padding="2"
+						solidfill="1" solidfillname="miniPaper">
+					
+					<!-- <label text="Surface Mining" vertical_margin="4" horizontal_margin="4" vap="top"/> -->
+					<paragraph text="Surface Mining: Yields no metallic ores but provides a steady source of common materials." 
+							 vertical_margin="4" horizontal_margin="4" state="text_small" />
+				</container>
+				
+				<container type="horizbox" hsp="minimum" vsp="minimum" name="mining2ButtonContainer" hap="right">
+					<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+						<container type="vertbox" hsp="expand" vsp="expand"
+								 horizontal_padding="4" vertical_padding="4"
+								 solidfill="1" solidfillname="glassBrassBorderDark">
+							
+							<label text="Set this mine to 'Surface Mining'" state="tooltip_text" hap="center" />
+							<label text="Potential yield:" vsp="center" hsp="center" state="tooltip_small" />
 
-						<container type="horizbox" hsp="minimum" vsp="minimum" name="strata5productsHolder"
-							horizontal_padding="6" vertical_padding="6"/>
-						<container type="horizbox" hsp="minimum" vsp="minimum" name="strata5enabledStringHolder"
-							horizontal_padding="6" vertical_padding="6" />
-					</container>
-				</tooltip> 
+							<container type="horizbox" hsp="minimum" vsp="minimum" name="strata1productsHolder"
+								horizontal_padding="6" vertical_padding="6"/>
+							<container type="horizbox" hsp="minimum" vsp="minimum" name="strata1enabledStringHolder"
+								horizontal_padding="6" vertical_padding="6" />
+						</container>
+					</tooltip> 
+				</container>
+			</container>
+			
+			<container type="horizbox" hsp="expand" vsp="minimum"
+					horizontal_padding="2" vertical_padding="2">
+				
+				<container type="horizbox" hsp="expand" vsp="expand"
+						horizontal_padding="2" vertical_padding="2"
+						solidfill="1" solidfillname="miniPaper">
+					
+					<!-- <label text="Surface Mining" vertical_margin="4" horizontal_margin="4" vap="top"/> -->
+					<paragraph text="Shallow Mixed: Shallow Mixed mining provides access to both common surface materials and deeper ores." 
+							 vertical_margin="4" horizontal_margin="4" state="text_small" />
+				</container>
+				
+				<container type="horizbox" hsp="minimum" vsp="minimum" name="mining3ButtonContainer" hap="right">
+					<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+						<container type="vertbox" hsp="expand" vsp="expand"
+								 horizontal_padding="4" vertical_padding="4"
+								 solidfill="1" solidfillname="glassBrassBorderDark">
+							
+							<label text="Set this mine to 'Shallow Mixed'" state="tooltip_text" hap="center" />
+							<label text="Potential yield:" vsp="center" hsp="center" state="tooltip_small" />
+
+							<container type="horizbox" hsp="minimum" vsp="minimum" name="strata2productsHolder"
+								horizontal_padding="6" vertical_padding="6"/>
+							<container type="horizbox" hsp="minimum" vsp="minimum" name="strata2enabledStringHolder"
+								horizontal_padding="6" vertical_padding="6" />
+						</container>
+					</tooltip> 
+				</container>
+			</container>
+			
+			<container type="horizbox" hsp="expand" vsp="minimum"
+					horizontal_padding="2" vertical_padding="2">
+				
+				<container type="horizbox" hsp="expand" vsp="expand"
+						horizontal_padding="2" vertical_padding="2"
+						solidfill="1" solidfillname="miniPaper">
+					
+					<!-- <label text="Core Vein" vertical_margin="4" horizontal_margin="4" vap="top"/> -->
+					<paragraph text="Core Vein: Bounty of the Metalworks, this level provides excellent access to the mineshaft's primary vein products." 
+							 vertical_margin="4" horizontal_margin="4" state="text_small" />
+				</container>
+				
+				<container type="horizbox" hsp="minimum" vsp="minimum" name="mining4ButtonContainer" hap="right">
+					<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+						<container type="vertbox" hsp="expand" vsp="expand"
+								 horizontal_padding="4" vertical_padding="4"
+								 solidfill="1" solidfillname="glassBrassBorderDark">
+							
+							<label text="Set this mine to 'Core Vein'" state="tooltip_text" hap="center" />
+							<label text="Potential yield:" vsp="center" hsp="center" state="tooltip_small" />
+
+							<container type="horizbox" hsp="minimum" vsp="minimum" name="strata3productsHolder"
+								horizontal_padding="6" vertical_padding="6"/>
+							<container type="horizbox" hsp="minimum" vsp="minimum" name="strata3enabledStringHolder"
+								horizontal_padding="6" vertical_padding="6" />
+						</container>
+					</tooltip> 
+				</container>
+			</container>
+			
+			<container type="horizbox" hsp="expand" vsp="minimum"
+					horizontal_padding="2" vertical_padding="2">
+				
+				<container type="horizbox" hsp="expand" vsp="expand"
+						horizontal_padding="2" vertical_padding="2"
+						solidfill="1" solidfillname="miniPaper">
+					
+					<!-- <label text="Deep Vein" vertical_margin="4" horizontal_margin="4" vap="top"/> -->
+					<paragraph text="Deep Vein: A daring choice, these depths are risky to mine but allow for the discovery of entirely new mineral veins." 
+							 vertical_margin="4" horizontal_margin="4" state="text_small" />
+				</container>
+				
+				<container type="horizbox" hsp="minimum" vsp="minimum" name="mining5ButtonContainer" hap="right">
+					<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+						<container type="vertbox" hsp="expand" vsp="expand"
+								 horizontal_padding="4" vertical_padding="4"
+								 solidfill="1" solidfillname="glassBrassBorderDark">
+							
+							<label text="Set this mine to 'Deep Vein'" state="tooltip_text" hap="center" />
+							<label text="Potential yield:" vsp="center" hsp="center" state="tooltip_small" />
+
+							<container type="horizbox" hsp="minimum" vsp="minimum" name="strata4productsHolder"
+								horizontal_padding="6" vertical_padding="6"/>
+							<container type="horizbox" hsp="minimum" vsp="minimum" name="strata4enabledStringHolder"
+								horizontal_padding="6" vertical_padding="6" />
+						</container>
+					</tooltip> 
+				</container>
+			</container>
+			
+			<container type="horizbox" hsp="expand" vsp="minimum"
+					horizontal_padding="2" vertical_padding="2">
+				
+				<container type="horizbox" hsp="expand" vsp="expand"
+						horizontal_padding="2" vertical_padding="2"
+						solidfill="1" solidfillname="miniPaper">
+					
+					<!-- <label text="Darkest Depths" vertical_margin="4" horizontal_margin="4" vap="top"/> -->
+					<paragraph text="Stygian Abyss: Seek the treasure of places deep, dark, and untouched by human hand - unnatural caves and odd, ancient structures may be found." 
+							 vertical_margin="4" horizontal_margin="4" state="text_small" />
+				</container>
+				
+				<container type="horizbox" hsp="minimum" vsp="minimum" name="mining6ButtonContainer" hap="right">
+					<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+						<container type="vertbox" hsp="expand" vsp="expand"
+								 horizontal_padding="4" vertical_padding="4"
+								 solidfill="1" solidfillname="glassBrassBorderDark">
+							
+							<label text="Set this mine to 'Stygian Abyss'" state="tooltip_text" hap="center" />
+							<label text="Potential yield:" vsp="center" hsp="center" state="tooltip_small" />
+
+							<container type="horizbox" hsp="minimum" vsp="minimum" name="strata5productsHolder"
+								horizontal_padding="6" vertical_padding="6"/>
+							<container type="horizbox" hsp="minimum" vsp="minimum" name="strata5enabledStringHolder"
+								horizontal_padding="6" vertical_padding="6" />
+						</container>
+					</tooltip> 
+				</container>
+			</container>
+			
+			<container type="horizbox" hsp="expand" vsp="fixed" fixed_height="20"
+					horizontal_padding="2" vertical_padding="2">
+				
 			</container>
 		</container>
-		
-		<container type="horizbox" hsp="expand" vsp="fixed" fixed_height="20"
-				horizontal_padding="2" vertical_padding="2">
-			
-		</container>
+
 	</container>
-
 	
-	<!-- Quality + HP display containers. -->
-	<container type="horizbox" hsp="expand" vsp="minimum" horizontal_margin="2" vertical_margin="2" >
+	<!-- Quality display container. -->
+	<container type="horizbox" vsp="fixed" fixed_height="50" hsp="expand" horizontal_margin="15" solidfill="1" solidfillname="cecommPaperRoundInsideNoTop" vertical_padding="0" horizontal_padding="5" >
 		
 		<!-- row 1 -->
 		<container type="horizbox" hsp="expand" vsp="expand"
 				 horizontal_gutter="6"
-				 horizontal_margin="2" vertical_margin="2"
-				 horizontal_padding="6" vertical_padding="2"
-				 solidfill="1" solidfillname="miniPaper">
-			
+				 horizontal_margin="2" vertical_margin="0"
+				 horizontal_padding="6" vertical_padding="2">
+		
 			<!-- HP display -->
-			<container type="horizbox" hsp="minimum" vsp="minimum"
-					 horizontal_gutter="2"
+			<container type="horizbox" hsp="minimum" vsp="expand"
 					 horizontal_padding="2"
-					 vertical_padding="2" vap="center" >
+					 vertical_padding="2"
+					 vap="center" >
 				
-				<label text="HP:" vap="center" />
+				<label text="HP:" vap="center"/>
+
 				<container type="horizbox"
 						 hsp="minimum" vsp="minimum"
-						 horizontal_padding="5" vertical_padding="5"
-						 solidfill="1" solidfillname="label_background_grayer">
+						  horizontal_padding="8"
+						  horizontal_margin="4" 
+						   vertical_padding="4"
+						   vertical_margin="8"
+						 solidfill="1" solidfillname="miniPaperRound">
 					
-					<container name="HPNumberContainer" type="horizbox" hsp="minimum" vsp="minimum"/>
-					<label text="/"/>
-					<container name="HPMaxContainer" type="horizbox" hsp="minimum" vsp="minimum"/>
+					<container name="HPNumberContainer" type="horizbox" hsp="minimum" vsp="minimum" vap="center"/>
+					<label text="/" vap="center" />
+					<container name="HPMaxContainer" type="horizbox" hsp="minimum" vsp="minimum" vap="center"/>
+					
 				</container>
 				
 				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
@@ -390,10 +394,10 @@
 							solidfill="1" solidfillname="glassBrassBorderDark" >
 						
 						<label text="Building Hitpoints" state="tooltip_text" hap="center"/>
-						<paragraph text="When a building reaches 0 HP, it is destroyed. Repair jobs are automatically created when a building is damaged and will be taken on by available Overseers." alignment="left" state="tooltip_text"/>
+						<paragraph text="When a building reaches 0 HP, it is destroyed. Repair jobs are automatically created when a building is damaged and will be taken up by available Overseers." alignment="left" state="tooltip_text"/>
 					</container>
 				</tooltip>
-			 </container>
+			</container>
 			
 			<!-- Tech modifier display  ??? -->
 			<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_padding="2" vertical_padding="2" vap="center" >
@@ -401,7 +405,7 @@
 				<container type="vertbox" hsp="minimum" vsp="minimum"
 						 name="workshopTechModifier"
 						 horizontal_padding="5" vertical_padding="5"
-						 solidfill="1" vap="center" solidfillname="label_background_grayer"/>
+						 solidfill="1" vap="center" solidfillname="miniPaperRound"/>
 				
 				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
 					<container type="vertbox"
@@ -415,29 +419,30 @@
 						<paragraph text="Technology bonus modifies production time and can be improved by doing science in a Laboratory." alignment="left" state="tooltip_text"/>
 					</container>
 				</tooltip>
-			</container>
+			</container>				
 		</container>
 		
 		<!-- Quality -->
 		<container type="horizbox"
 				 hsp="minimum" vsp="expand"
-				 horizontal_margin="2" vertical_margin="2"
-				 horizontal_padding="0" vertical_padding="0"
-				 solidfill="1" solidfillname="miniPaper">
+				 horizontal_margin="8" vertical_margin="0"
+				 horizontal_padding="0" vertical_padding="0">
 			
-			<container type="vertbox" hsp="minimum" vsp="minimum" vap="center" hap="left"
-					 horizontal_padding="8">
+			<container type="vertbox" hsp="minimum" vsp="minimum" vap="center"
+					 horizontal_padding="8"
+					 hap="left">
 				
-				<label text="Building Quality:" vap="center" />
+				<label text="Quality:" vap="center" />
 			</container>
 			
-			<container type="vertbox" hsp="minimum" vsp="expand"
-						horizontal_padding="12" vertical_padding="4"
-						solidfill="1"  solidfillname="miniPaperBrassDarkest">
+			<container type="vertbox" hsp="minimum" vsp="minimum" vap="center"
+						horizontal_padding="10" vertical_padding="4"
+						solidfill="1"  solidfillname="miniPaperRound">
 			
 				<container type="vertbox" hsp="minimum" vsp="minimum"
 						 vap="center"
 						 name="qualityNumberContainer" />
+						 
 			</container>
 	
 			<tooltip width="250" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
@@ -459,4 +464,5 @@
 			</tooltip>
 		</container>
 	</container>
+	<container type="vertbox" hsp="fixed" fixed_width="400" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommBottomGlass" />
 </container>
