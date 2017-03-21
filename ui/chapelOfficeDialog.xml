@@ -1,6 +1,5 @@
 <container type="vertbox" hsp="expand" vsp="expand" name="contentsVB">
 	
-	
 	<container type="horizbox"
 			hsp="expand" vsp="minimum"
 			horizontal_margin="15"
@@ -47,7 +46,6 @@
 		</container>
 	</container>
 	
-	
 	<container type="vertbox" hsp="expand" vsp="minimum" solidfill="1" solidfillname="cecommWorkcrew">
 		<container type="vertbox" hsp="expand" vsp="fixed" fixed_height="12"/>
 		<container type="vertbox" hsp="fixed" vsp="fixed" fixed_height="45" fixed_width="300" hap="center" solidfill="1" solidfillname="cecommTopGlassLight">
@@ -61,7 +59,6 @@
 				 hap="center"
 				 horizontal_padding="4" vertical_padding="10"
 				 solidfill="1" solidfillname="cecommDarkRoundPaper" fixed_width="400" fixed_height="90" >
-			
 			
 			<container type="horizbox" hsp="expand" vsp="expand" hap="center">
 					
@@ -121,7 +118,7 @@
 		</container>
 		
 		<container type="vertbox" hsp="expand" vsp="fixed" fixed_height="10"/>  
-		<container type="scrollablevertbox" hsp="expand" vsp="fixed" fixed_height="260" vertical_gutter="0" vertical_padding="0" horizontal_gutter="0" horizontal_padding="8" horizontal_margin="0" >  
+		<container type="scrollablevertbox" hsp="expand" vsp="fixed" fixed_height="295" vertical_gutter="0" vertical_padding="0" horizontal_gutter="0" horizontal_padding="8" horizontal_margin="0" >  
 		
 			<container type="horizbox" hsp="expand" vsp="minimum"
 					horizontal_padding="2" vertical_padding="2">
@@ -234,7 +231,6 @@
 		
 	</container>
 	
-	
 	<container type="horizbox" vsp="fixed" fixed_height="50" hsp="expand" horizontal_margin="15" solidfill="1" solidfillname="cecommPaperRoundInsideNoTop" vertical_padding="0" horizontal_padding="5" >
 		
 		<!-- row 1 -->
@@ -296,7 +292,6 @@
 					<container name="altarsNumberContainer" type="horizbox" hsp="minimum" vsp="minimum" vap="center"/>
 					
 				</container>
-				
 				
 				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
 					<container type="vertbox"
