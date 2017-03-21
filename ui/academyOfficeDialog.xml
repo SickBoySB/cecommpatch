@@ -1,210 +1,300 @@
-<container type="vertbox" hsp="expand" vsp="expand" skin="ui/styles/styleGlass.xml" name="contentsVB" >
+<container type="vertbox" hsp="expand" vsp="minimum" name="contentsVB">
 	
-	<!-- Basic office controls & title. -->
-	<container type="horizbox" hsp="expand" vsp="minimum"
-			 horizontal_padding="2" vertical_padding="2"
-			 solidfill="1" solidfillname="miniPaperBrassLight" >
-		
-		<imagebutton name="BuildingIcon" text="Building Icon" hsp="minimum" vsp="minimum"
-			imageSkin="ui/thoughtIcons.xml" image="journal_icon">
+	<container type="horizbox"
+			hsp="expand" vsp="minimum"
+			horizontal_margin="15"
+			solidfill="1" solidfillname="cecommPaperRoundInsideNoBottom"
+			vertical_padding="0">
+		<container type="horizbox" vap="center" hap="center" vsp="minimum" hsp="minimum">
+			<imagebutton name="BuildingIcon" text="Building Icon"
+					   hsp="minimum" vsp="minimum"
+					   imageSkin="ui/orderIcons.xml" image="journal_icon" imgPctX="80" imgPctY="80" vertical_margin="8">
+				
+				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_padding="4" vertical_padding="4"
+							 solidfill="1" solidfillname="glassBrassBorderDark">
+						
+						<label name="buttonTooltipLabel" text="Focus on Building" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</imagebutton>
 			
-			<tooltip width="240" height="45" mouseRestDelay="0" followCursor="1">
-				<container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" >
-					<label name="buttonTooltipLabel" text="Zoom to Academy" vsp="center" state="tooltip_text"/>
+			<container type="vertbox" hsp="expand" vsp="expand" name="demolishBox" vertical_margin="4" horizontal_margin="5">
+				<container type="vertbox" hsp="expand" vsp="minimum"
+						 name="buildingFancyName" hap="center"
+						 horizontal_padding="2"/>
+						
+						
+					<!--<label name="workshopcrewlabel" text="Unclaimed Workshop" vsp="minimum"/>-->
+					<!--<combobox name="office" />-->
+				<container type="vertbox" hsp="expand" vsp="minimum" name="workCrewSelectionBoxContainer"/>
+			</container>
+			
+			<imagebutton name="DemolishBuildingButton"
+					   text="Demolish Building"
+					   sfx="button_pneumatic"
+					   hsp="minimum" vsp="minimum" 
+				imageSkin="ui/orderIcons.xml" image="demolish_building" imgPctX="80" imgPctY="80" vertical_margin="8">
+				
+				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_padding="4" vertical_padding="4"
+							 solidfill="1" solidfillname="glassBrassBorderDark">
+						
+						<label name="buttonTooltipLabel" text="Demolish Building" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>        
+			</imagebutton>
+		</container>
+	</container>
+
+	<container type="vertbox" hsp="expand" vsp="expand" solidfill="1" solidfillname="cecommWorkcrew" vertical_padding="12">
+		<container type="vertbox" hsp="fixed" vsp="fixed" fixed_height="45" fixed_width="300" hap="center" solidfill="1" solidfillname="cecommTopGlassLight">
+			<container name="workshiftContainer" type="vertbox"
+					hsp="fixed" fixed_width="279"
+					hap="center" vertical_padding="10" horizontal_padding="10" />
+		</container>
+    
+			<!-- supplies and workpoints -->
+		<container type="vertbox"
+				 hsp="fixed" vsp="minimum"
+				 hap="center"
+				 horizontal_padding="4" vertical_padding="5"
+				 solidfill="1" solidfillname="cecommDarkRoundPaper" fixed_width="440" >
+			
+			
+			<container type="horizbox" hsp="expand" vsp="expand" hap="center">
+					
+				<container type="vertbox" hsp="expand" vsp="minimum" hap="left"
+						vertical_padding="4" horizontal_padding="4"
+						horizontal_gutter="1" vap="center" >
 				</container>
-			</tooltip>
-		</imagebutton>
-		
-		<container type="vertbox" hsp="expand" vsp="expand" name="demolishBox">
-			<container type="vertbox" hsp="expand" vsp="minimum" name="buildingFancyName" hap="center" horizontal_padding="2" vertical_padding="2" solidfill="1" solidfillname="miniPaper"/>
-			<!--<combobox name="office" />-->
-			<container type="vertbox" hsp="expand" vsp="expand" name="workCrewSelectionBoxContainer"/>
-		</container>
-		
-		<imagebutton name="DemolishBuildingButton" text="Demolish Academy" sfx="button_pneumatic" hsp="minimum" vsp="minimum"
-			imageSkin="ui/orderIcons.xml" image="demolish_building">
-			
-			<tooltip width="240" height="45" mouseRestDelay="0" followCursor="1">
-				<container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" >
-					<label name="buttonTooltipLabel" text="Demolish Academy" vsp="center" state="tooltip_text"/>
+					
+				<container type="horizbox"	vsp="expand" hap="center" vap="center">
+					
+					<container type="vertbox" hap="center" vap="center" vsp="expand">
+						<container name="warningContainer" type="vertbox" hsp="minimum" vsp="minimum" vap="top" hap="center" />
+						<container type="vertbox" hap="center" vap="center" vsp="minimum">
+						
+							<container type="horizbox" hap="center">
+							
+								<container type="horizbox" hsp="minimum" vsp="minimum"
+										 horizontal_padding="4" horizontal_margin="1"
+										 vertical_padding="4" vertical_margin="2"
+										 solidfill="1" solidfillname="miniPaperLighter"
+										 vap="center">
+									
+									<image hsp="minimum" vsp="minimum" scale="50"
+										  skin="ui\\commodityIcons.xml" image="paperBundle" vap="center"/>
+									<label text="x" vap="center"/>
+									<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints1Container" vap="center"/>
+									
+									<tooltip width="300" height="140" mouseRestDelay="0" followCursor="1">
+										<container type="vertbox" hsp="expand" vsp="minimum"
+												 horizontal_padding="6" vertical_padding="6"
+												 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
+											
+											<label text="Paper Remaining: " hap="center" state="tooltip_text"/>
+											<paragraph text="Bundles of Paper, made in a Carpentry Workshop, are required for training to take place. This number shows how many training jobs can be performed. Workers will procure more paper if it runs low." state="tooltip_small"/>
+										</container>
+									</tooltip>
+								</container>
+
+								<container type="horizbox" hsp="minimum" vsp="minimum"
+										 horizontal_padding="4" horizontal_margin="1"
+										 vertical_padding="4" vertical_margin="2"
+										 solidfill="1" solidfillname="miniPaperLighter"
+										 vap="center">
+									
+									<image hsp="minimum" vsp="minimum" scale="50"
+										  skin="ui\\commodityIcons.xml" image="bucketInk" vap="center"/>
+									<label text="x" vap="center"/>
+									<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints2Container" vap="center"/>
+									
+									<tooltip width="300" height="140" mouseRestDelay="0" followCursor="1">
+										<container type="vertbox" hsp="expand" vsp="minimum"
+												 horizontal_padding="6" vertical_padding="6"
+												 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
+											
+											<label text="Buckets of Ink" hap="center" state="tooltip_text"/>
+											<paragraph text="Buckets of Ink, made in a Carpentry Workshop, will be used to double training speed. Workers will resupply the office if these run low." state="tooltip_small"/>
+										</container>
+									</tooltip>
+								</container>
+							
+							</container>
+							
+						</container>
+						<container name="workPointsStatusContainer" type="vertbox" hsp="expand" vsp="minimum" vap="bottom" hap="center" />
+					</container>
+					
 				</container>
-			</tooltip>        
-		</imagebutton>     
+				
+				<container type="vertbox" hsp="minimum" vsp="minimum"
+						vertical_padding="3" horizontal_padding="2"
+						horizontal_gutter="2"
+						hap="right">
+					
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="supplyControlContainer1" />
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="supplyControlContainer2" />
+				</container>
+				
+			</container>
+
+		</container>
+
+
+
+		
+		
+		<!-- main mine content -->
+		<container type="scrollablevertbox" hsp="expand" vsp="expand"
+				 vertical_padding="5" horizontal_padding="8"
+				 vertical_margin="1">
+				 
+			<container type="horizbox" hsp="expand" vsp="minimum"
+					horizontal_padding="2" vertical_padding="2">
+				
+				<container type="horizbox" hsp="minimum" vsp="minimum" hap="left">
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="skill1ButtonContainer" />
+				</container>
+				
+				<container type="horizbox" hsp="expand" vsp="expand"
+						horizontal_padding="2" vertical_padding="2"
+						solidfill="1" solidfillname="miniPaper">
+					<paragraph text="Woodworking 101: Breathe deep the oaky stench of sawdust and finger blood. Safety goggles optional, no measuring required."
+							vertical_margin="4" horizontal_margin="4" state="text_small"/>
+				</container>
+			</container>
+			
+			<container type="horizbox" hsp="expand" vsp="minimum"
+					horizontal_padding="2" vertical_padding="2">
+				
+				<container type="horizbox" hsp="minimum" vsp="minimum" hap="left">
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="skill2ButtonContainer" />
+				</container>
+				
+				<container type="horizbox" hsp="expand" vsp="expand"
+						horizontal_padding="2" vertical_padding="2"
+						solidfill="1" solidfillname="miniPaper">
+					<paragraph text="Hallucinogenic Mushrooms and You: The interactive lecture series. Vomit troths and existential epiphanies provided."
+							vertical_margin="4" horizontal_margin="4" state="text_small"/>
+				</container>
+			</container>
+			
+			<container type="horizbox" hsp="expand" vsp="minimum"
+					horizontal_padding="2" vertical_padding="2">
+				
+				<container type="horizbox" hsp="minimum" vsp="minimum" hap="left">
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="skill3ButtonContainer" />
+				</container>
+				
+				<container type="horizbox" hsp="expand" vsp="expand"
+						horizontal_padding="2" vertical_padding="2"
+						solidfill="1" solidfillname="miniPaper">
+					<paragraph text="Secrets of Alchemical Transmutation 203: All you do is miCLANG CLANGith a dash ofCLANG CLANG CLANGold CLANG"
+							vertical_margin="4" horizontal_margin="4" state="text_small"/>
+				</container>
+			</container>
+			
+			<container type="horizbox" hsp="expand" vsp="minimum"
+					horizontal_padding="2" vertical_padding="2">
+				
+				<container type="horizbox" hsp="minimum" vsp="minimum" hap="left">
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="skill4ButtonContainer" />
+				</container>
+				
+				<container type="horizbox" hsp="expand" vsp="expand"
+						horizontal_padding="2" vertical_padding="2"
+						solidfill="1" solidfillname="miniPaper">
+					<paragraph text="Pottery For Beginners: Thousand of years of artistic expression reduced to phallus jokes and dirty fingers."
+							vertical_margin="4" horizontal_margin="4" state="text_small"/>
+				</container>
+			</container>
+			
+			<container type="horizbox" hsp="expand" vsp="minimum"
+					horizontal_padding="2" vertical_padding="2">
+				
+				<container type="horizbox" hsp="minimum" vsp="minimum" hap="left">
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="skill5ButtonContainer" />
+				</container>
+				
+				<container type="horizbox" hsp="expand" vsp="expand"
+						horizontal_padding="2" vertical_padding="2"
+						solidfill="1" solidfillname="miniPaper">
+					<paragraph text="Cooking Master Course: How to make anything unidentifiable, bland, burned, and overpriced."
+							vertical_margin="4" horizontal_margin="4" state="text_small"/>
+				</container>
+			</container>
+			
+			<container type="horizbox" hsp="expand" vsp="minimum"
+					horizontal_padding="2" vertical_padding="2">
+				
+				<container type="horizbox" hsp="minimum" vsp="minimum" hap="left">
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="skill6ButtonContainer" />
+				</container>
+				
+				<container type="horizbox" hsp="expand" vsp="expand"
+						horizontal_padding="2" vertical_padding="2"
+						solidfill="1" solidfillname="miniPaper">
+					<paragraph text="S.C.I.E.N.C.E: The study of everything, made mind-numbing and soul-crushing through incessantly repetititious torture."
+							vertical_margin="4" horizontal_margin="4" state="text_small"/>
+				</container>
+			</container>
+			
+			<container type="horizbox" hsp="expand" vsp="minimum"
+					horizontal_padding="2" vertical_padding="2">
+				
+				<container type="horizbox" hsp="minimum" vsp="minimum" hap="left">
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="skill7ButtonContainer" />
+				</container>
+				
+				<container type="horizbox" hsp="expand" vsp="expand"
+						horizontal_padding="2" vertical_padding="2"
+						solidfill="1" solidfillname="miniPaper">
+					<paragraph text="Farming ABCs: The one subject worth knowing, made taboo by those too lazy to be bothered."
+							vertical_margin="4" horizontal_margin="4" state="text_small"/>
+				</container>
+			</container>			
+			
+			<container type="horizbox" hsp="expand" vsp="fixed" fixed_height="20"
+					horizontal_padding="2" vertical_padding="2">
+				
+			</container>
+		</container>
+
 	</container>
 	
-	
-	<container name="workshiftContainer"
-				type="vertbox"
-				hsp="fixed" fixed_width="279"
-				vsp="fixed" fixed_height="44"
-				hap="center" vertical_padding="6" horizontal_padding="8"
-				solidfill="1" solidfillname="miniPaperBrassLight" />
-	
-	
-	<!-- supplies and workpoints -->
-	<container type="vertbox"
-			 hsp="expand" vsp="minimum"
-			 hap="center"
-			 horizontal_padding="4" vertical_padding="4"
-			 solidfill="1" solidfillname="miniPaperBrassLight" >
-		
-		<container name="warningContainer"
-				type="vertbox" hsp="minimum" vsp="minimum" hap="center" />
-		
-		<container name="workPointsStatusContainer"
-				type="horizbox" hsp="minimum" vsp="minimum" hap="center"
-				vertical_margin="2" horizontal_margin="2"
-				vertical_padding="2" horizontal_padding="2" >
-			
-		</container>
-		
-		<container type="horizbox" hsp="expand" vsp="minimum"
-				 solidfill="1" solidfillname="miniPaperLighter" hap="center">
-				
-			<container type="horizbox" hsp="minimum" vsp="minimum"
-					 horizontal_padding="4" horizontal_margin="1"
-					 vertical_padding="4" vertical_margin="2"
-					 solidfill="1" solidfillname="miniPaperLighter"
-					 vap="center">
-				
-				<label text="Paper Bundles: " vap="center"/>
-				
-				<image hsp="minimum" vsp="minimum" scale="50"
-					  skin="ui\\commodityIcons.xml" image="paperBundle" vap="center"/>
-				<label text="x" vap="center"/>
-				<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints1Container" vap="center"/>
-				
-				<tooltip width="300" height="140" mouseRestDelay="0" followCursor="1">
-					<container type="vertbox" hsp="expand" vsp="minimum"
-							 horizontal_padding="6" vertical_padding="6"
-							 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
-						
-						<label text="Paper Remaining: " hap="center" state="tooltip_text"/>
-						<paragraph text="Bundles of Paper, made in a Carpentry Workshop, are required for training to take place. This number shows how many training jobs can be performed. Workers will procure more paper if it runs low." state="tooltip_small"/>
-					</container>
-				</tooltip>
-			</container>
-			
-			<container type="horizbox" hsp="minimum" vsp="minimum"
-					 horizontal_padding="4" horizontal_margin="1"
-					 vertical_padding="4" vertical_margin="2"
-					 solidfill="1" solidfillname="miniPaperLighter"
-					 vap="center">
-				
-				<label text="Ink Uses: " vap="center"/>
-				
-				<image hsp="minimum" vsp="minimum" scale="50"
-					  skin="ui\\commodityIcons.xml" image="bucketInk" vap="center"/>
-				<label text="x" vap="center"/>
-				<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints2Container" vap="center"/>
-				
-				<tooltip width="300" height="140" mouseRestDelay="0" followCursor="1">
-					<container type="vertbox" hsp="expand" vsp="minimum"
-							 horizontal_padding="6" vertical_padding="6"
-							 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
-						
-						<label text="Buckets of Ink" hap="center" state="tooltip_text"/>
-						<paragraph text="Buckets of Ink, made in a Carpentry Workshop, will be used to double training speed. Workers will resupply the office if these run low." state="tooltip_small"/>
-					</container>
-				</tooltip>
-			</container>
-			
-			<container type="horizbox" hsp="minimum" vsp="minimum"
-					solidfill="1" solidfillname="miniPaperLighter"
-					vertical_padding="2" horizontal_padding="2"
-					horizontal_gutter="4"
-					hap="right">
-				
-				<container type="horizbox" hsp="minimum" vsp="minimum" name="supplyControlContainer1" />
-				<container type="horizbox" hsp="minimum" vsp="minimum" name="supplyControlContainer2" />
-			</container>
-		</container>
-	</container>
-	
-	
-	<!-- Academy controls -->
-	<container type="vertbox" hsp="expand" vsp="minimum"
-			 hap="left"
-			 vertical_padding="2" horizontal_padding="2"
-			 solidfill="1" solidfillname="label_background_grayer">
-		
-		<container type="vertbox" hsp="expand" vsp="expand"
-				 hap="left"
-				 vertical_gutter="2"
-				 vertical_padding="4" horizontal_padding="10">
-			
-			<container type="vertbox" hsp="expand" vsp="expand"
-					 hap="center"
-					 vertical_gutter="3"
-					 vertical_padding="4" horizontal_padding="6"
-					 solidfill="1" solidfillname="miniPaperBrassLight" >
-				
-				<label text="Training Programmes" hap="center" state="text" />
-				<tooltip width="240" height="100" mouseRestDelay="0" followCursor="1">
-					<container type="vertbox" hsp="expand" vsp="minimum"
-							 horizontal_padding="6" vertical_padding="6"
-							 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
-						
-						<label text="Select Training Programme" hap="center" state="tooltip_text"/>
-						<paragraph text="Below you may select a skill training programme for the assigned Overseer to undertake." state="tooltip_small"/>
-					</container>
-				</tooltip>
-			</container>
-		</container>
-		
-		<!-- Programmes -->
-		<container type="vertbox" hsp="expand" vsp="minimum" vertical_gutter="3" vertical_padding="5" horizontal_gutter="5" horizontal_padding="6" solidfill="1" horizontal_margin="3" solidfillname="miniPaperLight" >  
-			<container type="horizbox"
-					 hsp="expand" vsp="minimum"
-					 vertical_gutter="2" horizontal_gutter="8"
-					 vertical_padding="2" horizontal_padding="2"
-					 horizontal_margin="4">
-				
-				<container type="vertbox" hsp="minimum" vsp="minimum" name="skill1ButtonContainer" />
-				<container type="vertbox" hsp="minimum" vsp="minimum" name="skill2ButtonContainer" />
-				<container type="vertbox" hsp="minimum" vsp="minimum" name="skill3ButtonContainer" />
-				<container type="vertbox" hsp="minimum" vsp="minimum" name="skill4ButtonContainer" />
-				<container type="vertbox" hsp="minimum" vsp="minimum" name="skill5ButtonContainer" />
-				
-			</container>
-			<container type="horizbox"
-					 hsp="expand" vsp="minimum"
-					 vertical_gutter="2" horizontal_gutter="8"
-					 vertical_padding="2" horizontal_padding="2"
-					 horizontal_margin="4">
-				
-				<container type="vertbox" hsp="minimum" vsp="minimum" name="skill6ButtonContainer" />
-				<container type="vertbox" hsp="minimum" vsp="minimum" name="skill7ButtonContainer" />
-			</container>
-		</container>
-	</container>
-	
-	
-	<!-- Quality + HP display containers. -->
-	<container type="horizbox" hsp="expand" vsp="minimum" horizontal_margin="2" vertical_margin="2" >
+	<!-- Quality display container. -->
+	<container type="horizbox" vsp="fixed" fixed_height="50" hsp="expand" horizontal_margin="15" solidfill="1" solidfillname="cecommPaperRoundInsideNoTop" vertical_padding="0" horizontal_padding="5" >
 		
 		<!-- row 1 -->
 		<container type="horizbox" hsp="expand" vsp="expand"
 				 horizontal_gutter="6"
-				 horizontal_margin="2" vertical_margin="2"
-				 horizontal_padding="6" vertical_padding="2"
-				 solidfill="1" solidfillname="miniPaper">
-			
+				 horizontal_margin="2" vertical_margin="0"
+				 horizontal_padding="6" vertical_padding="2">
+		
 			<!-- HP display -->
-			<container type="horizbox" hsp="minimum" vsp="minimum"
-					 horizontal_gutter="2"
+			<container type="horizbox" hsp="minimum" vsp="expand"
 					 horizontal_padding="2"
-					 vertical_padding="2" vap="center" >
+					 vertical_padding="2"
+					 vap="center" >
 				
-				<label text="HP:" vap="center" />
+				<label text="HP:" vap="center"/>
+
 				<container type="horizbox"
 						 hsp="minimum" vsp="minimum"
-						 horizontal_padding="5" vertical_padding="5"
-						 solidfill="1" solidfillname="label_background_grayer">
+						  horizontal_padding="8"
+						  horizontal_margin="4" 
+						   vertical_padding="4"
+						   vertical_margin="8"
+						 solidfill="1" solidfillname="miniPaperRound">
 					
-					<container name="HPNumberContainer" type="horizbox" hsp="minimum" vsp="minimum"/>
-					<label text="/"/>
-					<container name="HPMaxContainer" type="horizbox" hsp="minimum" vsp="minimum"/>
+					<container name="HPNumberContainer" type="horizbox" hsp="minimum" vsp="minimum" vap="center"/>
+					<label text="/" vap="center" />
+					<container name="HPMaxContainer" type="horizbox" hsp="minimum" vsp="minimum" vap="center"/>
+					
 				</container>
 				
 				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
@@ -213,11 +303,11 @@
 							solidfill="1" solidfillname="glassBrassBorderDark" >
 						
 						<label text="Building Hitpoints" state="tooltip_text" hap="center"/>
-						<paragraph text="When a building reaches 0 HP, it is destroyed. Repair jobs are automatically created when a building is damaged and will be taken up by free Overseers." alignment="left" state="tooltip_text"/>
+						<paragraph text="When a building reaches 0 HP, it is destroyed. Repair jobs are automatically created when a building is damaged and will be taken up by available Overseers." alignment="left" state="tooltip_text"/>
 					</container>
 				</tooltip>
-			 </container>
-			
+			</container>			
+	
 			<!-- Bookshelf count display -->
 			<container type="horizbox" hsp="minimum" vsp="minimum"
 					 horizontal_gutter="2"
@@ -229,7 +319,7 @@
 				<container type="horizbox" name="bookshelvesNumberContainer"
 						 hsp="minimum" vsp="minimum"
 						 horizontal_padding="5" vertical_padding="5"
-						 solidfill="1" solidfillname="label_background_grayer"/>
+						 solidfill="1" solidfillname="miniPaperRound"/>
 				
 				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
 					<container type="vertbox"
@@ -243,35 +333,36 @@
 						</container>
 					</container>
 				</tooltip>
-			</container>
+			</container>				
 		</container>
 		
 		<!-- Quality -->
 		<container type="horizbox"
 				 hsp="minimum" vsp="expand"
-				 horizontal_margin="2" vertical_margin="2"
-				 horizontal_padding="0" vertical_padding="0"
-				 solidfill="1" solidfillname="miniPaper">
+				 horizontal_margin="8" vertical_margin="0"
+				 horizontal_padding="0" vertical_padding="0">
 			
-			<container type="vertbox" hsp="minimum" vsp="minimum" vap="center" hap="left"
-					 horizontal_padding="8">
+			<container type="vertbox" hsp="minimum" vsp="minimum" vap="center"
+					 horizontal_padding="8"
+					 hap="left">
 				
-				<label text="Building Quality:" vap="center" />
+				<label text="Quality:" vap="center" />
 			</container>
 			
-			<container type="vertbox" hsp="minimum" vsp="expand"
-						horizontal_padding="12" vertical_padding="4"
-						solidfill="1"  solidfillname="miniPaperBrassDarkest">
+			<container type="vertbox" hsp="minimum" vsp="minimum" vap="center"
+						horizontal_padding="10" vertical_padding="4"
+						solidfill="1"  solidfillname="miniPaperRound">
 			
 				<container type="vertbox" hsp="minimum" vsp="minimum"
 						 vap="center"
 						 name="qualityNumberContainer" />
+						 
 			</container>
 	
 			<tooltip width="250" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
 				<container type="vertbox" hsp="fixed" fixed_width="240" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
 					<container type="horizbox" hsp="minimum" vsp="minimum">
-						<label text="Building Quality:" state="text" />
+						<label text="Quality:" state="text" />
 						<container name="qualityDescriptionContainer"
 								 type="horizbox" hsp="minimum" vsp="minimum"
 								 vertical_padding="2" horizontal_padding="4"
@@ -286,5 +377,6 @@
 				</container>
 			</tooltip>
 		</container>
-	</container>	
+	</container>
+	<container type="vertbox" hsp="fixed" fixed_width="400" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommBottomGlass" />
 </container>
