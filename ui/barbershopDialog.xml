@@ -10,12 +10,12 @@
 					   hsp="minimum" vsp="minimum"
 					   imageSkin="ui/orderIcons.xml" image="barbershop_image" imgPctX="80" imgPctY="80" vertical_margin="8">
 				
-				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+				<tooltip width="120" height="1" mouseRestDelay="0" followCursor="1">
 					<container type="vertbox" hsp="expand" vsp="expand"
 							 horizontal_padding="4" vertical_padding="4"
 							 solidfill="1" solidfillname="glassBrassBorderDark">
 						
-						<label name="buttonTooltipLabel" text="Focus camera on this Barbershop" vsp="center" state="tooltip_text"/>
+						<label name="buttonTooltipLabel" text="Focus on Building" vsp="center" state="tooltip_text"/>
 					</container>
 				</tooltip>
 			</imagebutton>
@@ -34,12 +34,12 @@
 					   hsp="minimum" vsp="minimum" 
 				imageSkin="ui/orderIcons.xml" image="demolish_building" imgPctX="80" imgPctY="80" vertical_margin="8">
 				
-				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+				<tooltip width="115" height="1" mouseRestDelay="0" followCursor="1">
 					<container type="vertbox" hsp="expand" vsp="expand"
 							 horizontal_padding="4" vertical_padding="4"
 							 solidfill="1" solidfillname="glassBrassBorderDark">
 						
-						<label name="buttonTooltipLabel" text="Order this Barbershop demolished" vsp="center" state="tooltip_text"/>
+						<label name="buttonTooltipLabel" text="Demolish Building" vsp="center" state="tooltip_text"/>
 					</container>
 				</tooltip>        
 			</imagebutton>
@@ -86,7 +86,7 @@
 									<label text="x" vap="center"/>
 									<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints1Container" vap="center"/>
 									
-									<tooltip width="300" height="140" mouseRestDelay="0" followCursor="1">
+									<tooltip width="300" height="1" mouseRestDelay="0" followCursor="1">
 										<container type="vertbox" hsp="expand" vsp="minimum"
 												 horizontal_padding="6" vertical_padding="6"
 												 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
@@ -238,17 +238,17 @@
 						 
 			</container>
 	
-			<tooltip width="250" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
-				<container type="vertbox" hsp="fixed" fixed_width="240" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+			<tooltip width="260" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+				<container type="vertbox" hsp="fixed" fixed_width="250" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
 					<container type="horizbox" hsp="minimum" vsp="minimum">
-						<label text="Quality:" state="text" />
+						<label text="Building Quality:" state="text" />
 						<container name="qualityDescriptionContainer"
 								 type="horizbox" hsp="minimum" vsp="minimum"
 								 vertical_padding="2" horizontal_padding="4"
 								 vap="center" />
 						
 					</container> 
-					<container type="vertbox" hsp="fixed" fixed_width="240">
+					<container type="vertbox" hsp="fixed" fixed_width="250">
 						<paragraph text="- Building Quality can range from -6 to +6" alignment="left" state="tooltip_text"/>
 						<paragraph text="- Work Modules reduce quality, while decor modules increase quality" alignment="left" state="tooltip_text"/>
 						<paragraph text="- High workplace quality makes colonists happy." alignment="left" state="tooltip_text"/>
