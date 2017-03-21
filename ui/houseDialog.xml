@@ -23,7 +23,7 @@
 							 horizontal_padding="4" vertical_padding="4"
 							 solidfill="1" solidfillname="glassBrassBorderDark">
 						
-						<label name="buttonTooltipLabel" text="Order this House demolished" vsp="center" state="tooltip_text"/>
+						<label name="buttonTooltipLabel" text="Demolish Building" vsp="center" state="tooltip_text"/>
 					</container>
 				</tooltip>        
 			</imagebutton>
