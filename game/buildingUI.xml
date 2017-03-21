@@ -263,21 +263,21 @@
 				parentContainer="horrorPolicyContainer1"
 				icon_skin="ui\\orderIcons.xml" icon="x_red_icon"
 				icon_skin_off="ui\\orderIconsGray.xml" icon_off="x_red_icon"
-				size="small"/>
+				size="large"/>
 			
 			<icon_detached name="harvest" display_name="Harvest For Resources" default="0"
 				description="Harvest the remains of unnatural beings for resources."
 				parentContainer="horrorPolicyContainer2"
 				icon_skin="ui\\thoughtIcons.xml" icon="butcher"
 				icon_skin_off="ui\\thoughtIconsGray.xml" icon_off="butcher"
-				size="small"/>
+				size="large"/>
 			
 			<icon_detached name="study" display_name="Study For Science" default="0"
 				description="Study the remains of unnatural beings to assist Science and to improve our Standing in the Empire and amongst other Nations."
 				parentContainer="horrorPolicyContainer3"
 				icon_skin="ui\\thoughtIcons.xml" icon="science"
 				icon_skin_off="ui\\thoughtIconsGray.xml" icon_off="science"
-				size="small"/>
+				size="large"/>
 			
 		</icon_selector_detached>
 
@@ -330,26 +330,29 @@
 			
 		</icon_selector_detached>
 		
-		<command_button name="Explore" display_name="Explore"
+		<command_button name="Explore"
 					default="1"
 					icon_skin="ui\\orderIcons.xml" icon="explore_icon"
 					icon_skin_off="ui\\orderIconsGray.xml" icon_off="explore_icon"
 					description="Select particular locations to target for exploring. Requires that the Naturalist have Scouting selected."
-					parentContainer="naturalistCommandHolder1"/>
+					parentContainer="naturalistCommandHolder1"
+					scale="50"/>
 	
-		<command_button name="Conduct Mineralogical Survey (player order)" display_name="Survey"
+		<command_button name="Conduct Mineralogical Survey (player order)"
 					default="1"
 					icon_skin="ui\\orderIcons.xml" icon="mineshaft_image"
 					icon_skin_off="ui\\orderIconsGray.xml" icon_off="mineshaft_image"
 					description="Select a particular Ore Beacon for a mineralogical survey to be performed. Requires that the Naturalist have Mineralogical Surveying selected."
-					parentContainer="naturalistCommandHolder2"/>
+					parentContainer="naturalistCommandHolder2"
+					scale="50"/>
 		
-		<command_button name="Hunt Animals" display_name="Hunt"
+		<command_button name="Hunt Animals"
 					default="1"
 					icon_skin="ui\\orderIcons.xml" icon="hunting"
 					icon_skin_off="ui\\orderIconsGray.xml" icon_off="hunting"
 					description="Select particular animals to target for hunting. Requires that the Naturalist have Hunting selected."
-					parentContainer="naturalistCommandHolder3"/>
+					parentContainer="naturalistCommandHolder3"
+					scale="50"/>
 
   </building>
   
@@ -382,7 +385,7 @@
 		
 		<label name="buildingFancyName" parentContainer="buildingFancyName" officeStringAttrib="buildingFancyName"/>
 		
-		<jobs_list name="Incoming Patients"/>
+		<!--<jobs_list name="Incoming Patients"/>-->
 		
 		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
@@ -948,7 +951,7 @@
 		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
 		
-		<jobs_list/>
+		<!--<jobs_list/>-->
 
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
 		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
