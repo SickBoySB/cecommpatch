@@ -1,0 +1,426 @@
+<container type="vertbox" hsp="expand" vsp="expand" name="contentsVB">
+	
+	<!-- Basic office controls & title. -->
+	<container type="horizbox" hsp="expand" vsp="minimum"
+			 horizontal_padding="2" vertical_padding="2"
+			 solidfill="1" solidfillname="miniPaperBrassLight" >
+		
+		<imagebutton name="BuildingIcon" text="Building Icon" hsp="minimum" vsp="minimum"
+			imageSkin="ui/orderIcons.xml" image="naturalism_icon">
+			<tooltip width="240" height="45" mouseRestDelay="0" followCursor="1">
+				<container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+					<label name="buttonTooltipLabel" text="Focus on this Naturalist's Office" vsp="center" state="tooltip_text"/>
+				</container>
+			</tooltip>        
+		</imagebutton>
+		
+		<container type="vertbox" hsp="expand" vsp="expand" name="demolishBox">
+			<container type="vertbox" hsp="expand" vsp="minimum" name="buildingFancyName" hap="center" horizontal_padding="2" vertical_padding="2" solidfill="1" solidfillname="miniPaper"/>
+			<!--<label name="workshopcrewlabel" text="Unclaimed Workshop" vsp="minimum"/>-->
+			<container type="vertbox" hsp="expand" vsp="expand" name="workCrewSelectionBoxContainer"/>
+		</container>
+		
+		<imagebutton name="DemolishBuildingButton" text="Demolish Building" sfx="buttonPneumatic" hsp="minimum" vsp="minimum"
+			imageSkin="ui/orderIcons.xml" image="demolish_building">
+			<tooltip width="240" height="45" mouseRestDelay="0" followCursor="1">
+				<container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+					<label name="buttonTooltipLabel" text="Demolish Building" vsp="center" state="tooltip_text"/>
+				</container>
+			</tooltip>
+		</imagebutton>
+	</container>
+	
+	<container name="workshiftContainer"
+				type="vertbox"
+				hsp="fixed" fixed_width="279"
+				vsp="fixed" fixed_height="44"
+				hap="center" vertical_padding="6" horizontal_padding="8"
+				solidfill="1" solidfillname="miniPaperBrassLight" />
+	
+	
+	<!-- supplies and workpoints -->
+	<container type="vertbox"
+			 hsp="expand" vsp="minimum"
+			 hap="center"
+			 horizontal_gutter="3" horizontal_padding="5"
+			 vertical_margin="5" vertical_padding="4"
+			 solidfill="1" solidfillname="miniPaperBrassLight" >
+		
+		<container name="warningContainer"
+				type="vertbox" hsp="minimum" vsp="minimum" hap="center" />
+		
+		<container name="workPointsStatusContainer"
+				type="horizbox" hsp="minimum" vsp="minimum" hap="center"
+				vertical_margin="2" horizontal_margin="2"
+				vertical_padding="2" horizontal_padding="2" >
+			
+		</container>
+		
+		<container type="horizbox" hsp="expand" vsp="minimum"
+				 solidfill="1" solidfillname="miniPaperLighter" hap="center">
+				
+			<container type="horizbox" hsp="minimum" vsp="minimum"
+					 horizontal_padding="4" horizontal_margin="1"
+					 vertical_padding="4" vertical_margin="2"
+					 solidfill="1" solidfillname="miniPaperLighter"
+					 vap="center">
+				
+				<label text="Hunting: " vap="center"/>
+				
+				<image hsp="minimum" vsp="minimum" scale="50"
+					  skin="ui\\commodityIcons.xml" image="ammo_stone" vap="center"/>
+				<label text="x" vap="center"/>
+				<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints1Container" vap="center"/>
+				
+				<tooltip width="300" height="140" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="expand" vsp="minimum"
+							 horizontal_padding="6" vertical_padding="6"
+							 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
+						
+						<label text="Stone Pellet Ammunition: Hunting" hap="center" state="tooltip_text"/>
+						<paragraph text="Stone Pellet Ammunition, made in a Ceramics Workshop, is required to do Hunting jobs. This number shows how many shots can be fired by hunters. Workers will resupply the Naturalist's Office if ammunition runs low." state="tooltip_small"/>
+					</container>
+				</tooltip>
+			</container>
+			
+			<container type="horizbox" hsp="minimum" vsp="minimum"
+					 horizontal_padding="4" horizontal_margin="1"
+					 vertical_padding="4" vertical_margin="2"
+					 solidfill="1" solidfillname="miniPaperLighter"
+					 vap="center">
+				
+				<label text="Surveying: " vap="center"/>
+				
+				<image hsp="minimum" vsp="minimum" scale="50"
+					  skin="ui\\commodityIcons.xml" image="paperBundle" vap="center"/>
+				<label text="x" vap="center"/>
+				<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints2Container" vap="center"/>
+				
+				<tooltip width="300" height="140" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="expand" vsp="minimum"
+							 horizontal_padding="6" vertical_padding="6"
+							 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
+						
+						<label text="Stacks of Paper: Surveying" hap="center" state="tooltip_text"/>
+						<paragraph text="Stacks of Paper, made in a Carpentry Workshop, are required to do Mineralogical Surveying, 5 per ore beacon. Workers will resupply the office if these run low." state="tooltip_small"/>
+					</container>
+				</tooltip>
+			</container>
+			
+			<container type="horizbox" hsp="minimum" vsp="minimum"
+					solidfill="1" solidfillname="miniPaperLighter"
+					vertical_padding="2" horizontal_padding="2"
+					horizontal_gutter="4"
+					hap="right">
+				
+				<container type="horizbox" hsp="minimum" vsp="minimum" name="supplyControlContainer1" />
+				<container type="horizbox" hsp="minimum" vsp="minimum" name="supplyControlContainer2" />
+			</container>
+		</container>
+	</container>
+	
+	
+	<!-- Naturalist controls -->
+	<container type="vertbox" hsp="expand" vsp="minimum"
+			 hap="left"
+			 vertical_padding="3" horizontal_padding="3"
+			 vertical_gutter="3"
+			 solidfill="1" solidfillname="label_background_grayer">
+
+			<container type="vertbox" hsp="expand" vsp="expand" hap="center"
+					 vertical_gutter="3" vertical_padding="5"
+					 solidfill="1" solidfillname="miniPaperBrassLight" >
+				
+				<label text="Naturalist Job Focus" hap="center" font="medium" />
+				
+				<!--<container type="vertbox" hsp="minimum" vsp="minimum" name="doctrineTipBox" hap="center" />-->
+				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+					<container type="vertbox" hsp="fixed" fixed_width="200"
+							horizontal_padding="5" vertical_padding="5"
+							solidfill="1" solidfillname="glassBrassBorderDark" >
+						
+						<!--<label text="Naturalist " state="tooltip_text" hap="center"/>-->
+						<paragraph text="The Naturalist can be set to focus on different jobs depending on what your Colony requires. Select Job Focus using the buttons below." alignment="left" state="tooltip_text"/>
+					</container>
+				</tooltip>
+				
+			</container>
+
+		<!-- Modes -->
+		<container type="vertbox" hsp="expand" vsp="minimum"
+				hap="center"
+				vertical_gutter="4" vertical_padding="4"
+				horizontal_padding="8"
+				horizontal_margin="4"
+				solidfill="1" solidfillname="miniPaperLight"
+				name="modeControlsContainer">
+			
+			<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_gutter="8" hap="center">
+				
+				<container type="vertbox" hsp="minimum" vsp="minimum" name="modeControlsContainer1" >
+					
+					<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+						<container type="vertbox" hsp="fixed" fixed_width="240"
+								horizontal_padding="5" vertical_padding="5"
+								solidfill="1" solidfillname="glassBrassBorderDark" >
+							
+							<label text="Scouting " state="tooltip_text" hap="center"/>
+							<paragraph text="The Naturalist and their assigned Labourers will be given greatly increased sight radius and will explore randomly. Useful to provide an overview of the local area. Skilled Naturalists can see further." alignment="left" state="tooltip_text"/>
+						</container>
+					</tooltip>
+				</container>
+				
+				<container type="vertbox" hsp="minimum" vsp="minimum" name="modeControlsContainer2">
+					<!--<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+						<container type="vertbox" hsp="fixed" fixed_width="240"
+								horizontal_padding="5" vertical_padding="5"
+								solidfill="1" solidfillname="glassBrassBorderDark" >
+							
+							<label text="Hunting " state="tooltip_text" hap="center"/>
+							<paragraph text="The Naturalist and workcrew will hunt nearby wildlife. If they cannot find any animals to hunt, they will attempt to flush out wild game. Skilled Naturalists will find more success." alignment="left" state="tooltip_text"/>
+						</container>
+					</tooltip>-->
+				</container>
+				
+				<container type="vertbox" hsp="minimum" vsp="minimum" name="modeControlsContainer3">
+					<!--<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+						<container type="vertbox" hsp="fixed" fixed_width="240"
+								horizontal_padding="5" vertical_padding="5"
+								solidfill="1" solidfillname="glassBrassBorderDark" >
+							
+							<label text="Mineral Surveying " state="tooltip_text" hap="center"/>
+							<paragraph text="The Naturalist and workcrew will survey designated ore veins to reveal their contents, or will survey randomly if left to their own devices. This provides useful information for establishing mines. Skilled Naturalists can survey faster." alignment="left" state="tooltip_text"/>
+						</container>
+					</tooltip>-->
+				</container>
+	
+				<!--
+				<container type="vertbox" hsp="minimum" vsp="minimum" name="modeControlsContainer4">
+					<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+						<container type="vertbox" hsp="fixed" fixed_width="240"
+								horizontal_padding="5" vertical_padding="5"
+								solidfill="1" solidfillname="glassBrassBorderDark" >
+							
+							<label text="Forestry " state="tooltip_text" hap="center"/>
+							<paragraph text="The Naturalist and workcrew will automatically nurture local plant life, encouraging the growth of trees and foragable plants and fungi. Skilled Naturalists will perform work faster and more successfully." alignment="left" state="tooltip_text"/>
+						</container>
+					</tooltip>
+				</container>
+			
+				<container type="vertbox" hsp="minimum" vsp="minimum" name="modeControlsContainer5">
+					<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+						<container type="vertbox" hsp="fixed" fixed_width="240"
+								horizontal_padding="5" vertical_padding="5"
+								solidfill="1" solidfillname="glassBrassBorderDark" >
+							
+							<label text="Discovery " state="tooltip_text" hap="center"/>
+							<paragraph text="The Naturalist and workcrew will automatically study nearby flora, fauna, and archaeological sites. A Skilled Naturalists will find more success. Discoveries may increase your standing with various factions, provide Science points, and may even trigger special events... " alignment="left" state="tooltip_text"/>
+						</container>
+					</tooltip>
+				</container>
+			-->
+			</container>
+			
+			<container type="horizbox"
+					hsp="expand" vsp="minimum"
+					horizontal_padding="8" horizontal_margin="32"
+					solidfill="1" solidfillname="miniPaperLight"
+					hap="center">
+				
+				<container type="horizbox"
+					hsp="minimum" vsp="minimum"
+					hap="center">
+				
+					<label text="Currently: " vap="center" />
+					<container type="horizbox"
+							 name="modeLabelContainer"
+							
+							 hsp="minimum" vsp="minimum"
+							 horizontal_padding="4" vertical_padding="4" />
+				</container>
+			</container>
+		</container>
+		
+		<container type="vertbox" hsp="expand" vsp="minimum" hap="center"
+			vertical_gutter="0" vertical_padding="5" horizontal_padding="9"
+			solidfill="1" solidfillname="miniPaper" >
+	    
+			<label text="Manual Job Targeting" hap="center" font="medium" />
+			<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+				<container type="vertbox" hsp="fixed" fixed_width="200"
+						horizontal_padding="5" vertical_padding="2"
+						solidfill="1" solidfillname="glassBrassBorderDark" >
+					
+					<paragraph text="Naturalists will automatically pick targets for their jobs, but if you find yourself wanting to target a specific location or animal, you may use the buttons below to do so."
+							 alignment="left" state="tooltip_text"/>
+				</container>
+			</tooltip>
+		</container>
+		
+		<container type="horizbox"
+			hsp="expand" vsp="minimum" hap="center"
+			horizontal_padding="8"
+			horizontal_margin="0"
+			vertical_padding="3"
+			solidfill="1" solidfillname="miniPaper">
+			
+			<container type="horizbox" hsp="minimum" vsp="minimum" hap="center">
+				
+				<container name="naturalistCommandHolder1"
+						type="horizbox" hsp="expand" vsp="minimum"
+						horizontal_margin="5"
+						vertical_padding="2"
+						/>
+				<container name="naturalistCommandHolder2"
+						type="horizbox" hsp="expand" vsp="minimum"
+						horizontal_margin="5"
+						vertical_padding="2"
+						/>
+				<container name="naturalistCommandHolder3"
+						type="horizbox" hsp="expand" vsp="minimum"
+						horizontal_margin="5"
+						vertical_padding="2"
+						/>
+			</container>
+		</container>
+		
+		<container type="horizbox" hsp="expand" vsp="minimum"
+				 vertical_gutter="0" vertical_padding="5" horizontal_padding="9"
+				solidfill="1" solidfillname="miniPaper" >
+			
+			<container type="vertbox" hsp="minimum" vsp="expand"
+					 horizontal_padding="4">
+				
+		    
+				<label text="Unnatural Encounter Policy:" hap="center" font="medium" vap="center" />
+				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+					<container type="vertbox" hsp="fixed" fixed_width="200"
+							horizontal_padding="5" vertical_padding="2"
+							solidfill="1" solidfillname="glassBrassBorderDark" >
+						
+						<paragraph text="It has been said that Strange and Unnatural beings may be encountered on the Frontier. The Colonial Ministry denies these allegations, so it is effectively up to each Colonial Bureaucrat to decide how to 'deal with' such phenomena."
+								 alignment="left" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</container>
+			
+			<container type="horizbox" hsp="minimum" vsp="expand">
+			
+				<container name="horrorPolicyContainer1"
+						type="horizbox" hsp="minimum" vsp="expand"
+						horizontal_margin="2"
+						vertical_padding="2"/>
+				
+				<container name="horrorPolicyContainer2"
+						type="horizbox" hsp="minimum" vsp="expand"
+						horizontal_margin="2"
+						vertical_padding="2"/>
+				
+				<container name="horrorPolicyContainer3"
+						type="horizbox" hsp="minimum" vsp="expand"
+						horizontal_margin="2"
+						vertical_padding="2"/>
+				
+			</container>
+			
+			<container type="horizbox" hsp="expand" vsp="expand"
+							horizontal_margin="4"
+							vertical_padding="2"
+							vap="center"
+							solidfill="1"
+							solidfillname="miniPaperBrassLight">
+					
+					<container name="horrorPolicyLabelContainer" type="horizbox" hsp="minimum" vsp="minimum"
+							 vap="center"
+							 hap="center"/>
+					
+			</container>
+			
+		</container>
+	</container>
+	
+	<!-- Quality + HP display containers. -->
+	<container type="horizbox" hsp="expand" vsp="expand" horizontal_margin="2" vertical_margin="2" >
+		
+		<!-- row 1 -->
+		<container type="horizbox" hsp="expand" vsp="minimum">
+			
+			<container type="horizbox" hsp="expand" vsp="expand"
+					 horizontal_gutter="6"
+					 horizontal_margin="2" vertical_margin="2"
+					 horizontal_padding="6" vertical_padding="2"
+					 solidfill="1" solidfillname="miniPaper">
+				
+				<!-- HP display -->
+				<container type="horizbox" hsp="minimum" vsp="minimum"
+						 horizontal_gutter="2"
+						 horizontal_padding="7"
+						 vertical_padding="2" vap="center" >
+					
+					<label text="HP:" vap="center" />
+					<container type="horizbox"
+							 hsp="minimum" vsp="minimum"
+							 horizontal_padding="5" vertical_padding="1"
+							 solidfill="1" solidfillname="label_background_grayer">
+						<container name="HPNumberContainer" type="horizbox" hsp="minimum" vsp="minimum"/>
+						<label text="/"/>
+						<container name="HPMaxContainer" type="horizbox" hsp="minimum" vsp="minimum"/>
+					</container>
+					
+					<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+						<container type="vertbox" hsp="fixed" fixed_width="200"
+								horizontal_padding="5" vertical_padding="5"
+								solidfill="1" solidfillname="glassBrassBorderDark" >
+							
+							<label text="Building Hitpoints" state="tooltip_text" hap="center"/>
+							<paragraph text="When a building reaches 0 HP, it is destroyed. Repair jobs are automatically created when a building is damaged and will be taken up by available Overseers." alignment="left" state="tooltip_text"/>
+						</container>
+					</tooltip>
+				</container>
+			</container>
+			
+			<!--<container type="horizbox" hsp="expand" vsp="minimum"/> -->
+			<!-- Quality -->
+			<container type="horizbox"
+					 hsp="minimum" vsp="expand"
+					 horizontal_margin="2" vertical_margin="2"
+					 horizontal_padding="0" vertical_padding="0"
+					 solidfill="1" solidfillname="miniPaper">
+				
+				<container type="vertbox" hsp="minimum" vsp="minimum" vap="center" hap="left"
+						 horizontal_padding="8">
+					
+					<label text="Building Quality:" vap="center" />
+				</container>
+				
+				<container type="vertbox" hsp="minimum" vsp="expand"
+							horizontal_padding="12" vertical_padding="4"
+							solidfill="1"  solidfillname="miniPaperBrassDarkest">
+				
+					<container type="vertbox" hsp="minimum" vsp="minimum"
+							 vap="center"
+							 name="qualityNumberContainer" />
+				</container>
+		
+				<tooltip width="250" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+					<container type="vertbox" hsp="fixed" fixed_width="240" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+						<container type="horizbox" hsp="minimum" vsp="minimum">
+							<label text="Building Quality:" state="text" />
+							<container name="qualityDescriptionContainer"
+									 type="horizbox" hsp="minimum" vsp="minimum"
+									 vertical_padding="2" horizontal_padding="4"
+									 vap="center" />
+							
+						</container> 
+						<container type="vertbox" hsp="fixed" fixed_width="240">
+							<paragraph text="- Building Quality can range from -6 to +6" alignment="left" state="tooltip_text"/>
+							<paragraph text="- Work Modules reduce quality, while decor modules increase quality" alignment="left" state="tooltip_text"/>
+							<paragraph text="- High workplace quality makes colonists happy." alignment="left" state="tooltip_text"/>
+						</container>
+					</container>
+				</tooltip>
+			</container>
+		</container>
+		
+	</container>
+</container>
