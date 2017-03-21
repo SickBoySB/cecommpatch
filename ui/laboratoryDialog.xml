@@ -187,7 +187,7 @@
 						hap="center" 
 						vertical_padding="0" vertical_margin="0" >
 						
-						<container name="scienceSkillTextContainer" type="horizbox" hsp="minimum" vsp="minimum"  vertical_padding="4"/>
+						<container name="scienceSkillTextContainer" type="horizbox" hsp="minimum" vsp="minimum" />
 						<container name="scienceSkillPlusContainer" type="horizbox" hsp="minimum" vsp="minimum"  horizontal_margin="1"/>
 						<container name="scienceGainHolder1" type="horizbox" hsp="minimum" vsp="minimum"  horizontal_margin="1"/>
 					</container>

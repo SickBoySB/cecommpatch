@@ -30,16 +30,6 @@
 		</container>
 	</container>
 	
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
 	<!-- middle content. -->
 	<container type="vertbox" hsp="expand" vsp="minimum"
 			vertical_padding="10" horizontal_padding="0" solidfill="1" solidfillname="cecommWorkcrew" >
@@ -173,11 +163,10 @@
 						  horizontal_padding="8"
 						  horizontal_margin="4" 
 						   vertical_padding="6"
-						   vertical_margin="0"
-						 solidfill="1" solidfillname="miniPaperRound">
+						   vertical_margin="0">
 					
 					<container name="popCapBonusHolder1" type="horizbox" hsp="minimum" vsp="minimum" vap="center" horizontal_margin="1"/>
-					<label text="/" state="tooltip_title" />
+					<container name="popCapBonusHolder1Slash" type="horizbox" hsp="minimum" vsp="minimum" vap="center" horizontal_margin="1"/>
 					<container name="popCapBonusHolder2" type="horizbox" hsp="minimum" vsp="minimum" vap="center" horizontal_margin="1"/>
 				</container>
 

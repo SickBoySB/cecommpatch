@@ -212,7 +212,7 @@
 					<container type="horizbox" hsp="expand" vsp="minimum" vap="center" hap="center"
 							vertical_padding="4" horizontal_padding="4">
 						
-							<label text="Using: " state="text_faded"  vap="center" />
+							<container type="horizbox" hsp="minimum" vsp="minimum" name="weaponNameContainerText" vap="center"/>
 							<container type="horizbox" hsp="minimum" vsp="minimum" name="weaponNameContainer" vap="center"/>
 					</container>
 				</container>

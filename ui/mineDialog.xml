@@ -151,10 +151,12 @@
 					<container type="horizbox" hsp="expand" vsp="minimum" vap="center" hap="center"
 							vertical_padding="4" horizontal_padding="4">
 						
-							<label text="Local Products: " state="text_faded"  vap="center" />
+							<container type="vertbox" hsp="minimum" vsp="minimum"
+									 name="localProductsHolderText"
+									 horizontal_padding="4" vap="center" />
 							<container type="vertbox" hsp="minimum" vsp="minimum"
 									 name="localProductsHolder"
-									 horizontal_padding="4" vertical_padding="4" vap="center" />
+									 horizontal_padding="4" vap="center" />
 							
 							<tooltip width="300" height="40" mouseRestDelay="0" followCursor="1">
 								<container type="vertbox" hsp="expand" vsp="expand"

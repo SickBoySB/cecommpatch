@@ -27,6 +27,7 @@
 		<label name="workPoints4" parentContainer="workPoints4Container" officeIntAttrib="workPoints4"/>
 		<label name="workPointsStatus"  parentContainer="workPointsStatusContainer" officeStringAttrib="workPointsStatus" font="small" color="black" />
 		
+		<label text="Using:" parentContainer="weaponNameContainerText" font="medium" color="black_faded"/>
 		<label name="weaponName" parentContainer="weaponNameContainer" officeStringAttrib="weaponName" font="medium" color="black"/>
 
 		<icon_selector_detached name="supply" display_name="Supply Mode" type="only_one_of">
@@ -456,7 +457,8 @@
 			
 		</icon_selector_detached>
 		
-		<label name="vatCount" parentContainer="vatCountContainer" officeIntAttrib="vatCount"/>
+		<label text="Available Booze Vats: " parentContainer="vatCountContainerText" font="medium" color="black_faded" />
+		<label name="vatCount" parentContainer="vatCountContainer" officeIntAttrib="vatCount" font="medium" color="black" />
 		
 		<label name="brewQuantity" parentContainer="brewQuantityContainer" officeIntAttrib="brewQuantity"/>
 		<label name="spiritsQuantity" parentContainer="spiritsQuantityContainer" officeIntAttrib="spiritsQuantity"/>
@@ -511,7 +513,8 @@
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
 		
 		<label name="mineDepthLabel" parentContainer="mineDepthHolder" officeStringAttrib="mineDepth" font="small" color="black"/>
-		<label name="localProducts" parentContainer="localProductsHolder" officeStringAttrib="localProducts" font="small" color="black"/>
+		<label text="Local Products:" parentContainer="localProductsHolderText" font="medium" color="black_faded"/>
+		<label name="localProducts" parentContainer="localProductsHolder" officeStringAttrib="localProducts" font="medium" color="black"/>
 		
 		<label name="strata1products" parentContainer="strata1productsHolder" color="green" officeStringAttrib="strata1products"/>
 		<label name="strata2products" parentContainer="strata2productsHolder" color="green" officeStringAttrib="strata2products"/>
@@ -640,10 +643,10 @@
 		<label name="condition4DoneTextLabel" parentContainer="condition4doneContainerText" officeStringAttrib="condition4DoneText" font="small" color="bone"/>
 		<label name="condition4DoneIntLabel"  parentContainer="condition4doneContainerInt" officeStringAttrib="condition4DoneInt" font="small" color="bone"/>
 		
-		<label name="scienceGainLabel1" parentContainer="scienceGainHolder1" officeStringAttrib="scienceGainPointsText1" font="large" color="black" />
+		<label name="scienceGainLabel1" parentContainer="scienceGainHolder1" officeStringAttrib="scienceGainPointsText1" font="medium" color="black" />
 		
-		<label text="Science Accumulation Rate:" font="small" parentContainer="scienceSkillTextContainer"/>
-		<label text="x" font="large" parentContainer="scienceSkillPlusContainer"/>
+		<label text="Accumulation Rate:" font="medium" color="black_faded" parentContainer="scienceSkillTextContainer"/>
+		<label text="x" font="medium" parentContainer="scienceSkillPlusContainer"/>
 		
 		<label name="agriculturePointsLabel" parentContainer="agriculturePointsNumberContainer" officeIntAttrib="researchPointsagriculture" hap="left" font="clarendonTitle"/>
 		<label name="agriculturePointsMaxLabel" parentContainer="agriculturePointsMaxContainer" officeIntAttrib="agriculturePointsMax" hap="left" font="clarendonTitle"/>
@@ -1088,10 +1091,11 @@
 		<label name="condition4DoneTextLabel" parentContainer="condition4doneContainerText" officeStringAttrib="condition4DoneText" font="medium" color="bone"/>
 		<label name="condition4DoneIntLabel"  parentContainer="condition4doneContainerInt" officeStringAttrib="condition4DoneInt" font="medium" color="bone"/>
 		
-		<label name="popCapBonusTitle"  parentContainer="popCapBonusTitleContainer" officeStringAttrib="popCapBonusTitle" font="medium" color="black"/>
+		<label name="popCapBonusTitle"  parentContainer="popCapBonusTitleContainer" officeStringAttrib="popCapBonusTitle" font="medium" color="black_faded"/>
 		<label name="popcapTooltip"  parentContainer="popcapTooltip" officeStringAttrib="popcapTooltip" font="small" color="cream"/>
-		<label name="popCapBonusLabel1"  parentContainer="popCapBonusHolder1" officeStringAttrib="popCapBonusText1" font="clarendonTitle" color="black" />
-		<label name="popCapBonusLabel2"  parentContainer="popCapBonusHolder2" officeStringAttrib="popCapBonusText2" font="clarendonTitle" color="black" />
+		<label name="popCapBonusLabel1"  parentContainer="popCapBonusHolder1" officeStringAttrib="popCapBonusText1" font="medium" color="black" />
+		<label text="/"  parentContainer="popCapBonusHolder1Slash" font="medium" color="black" />
+		<label name="popCapBonusLabel2"  parentContainer="popCapBonusHolder2" officeStringAttrib="popCapBonusText2" font="medium" color="black" />
 		
 		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
@@ -1120,10 +1124,11 @@
 		<label name="condition4DoneTextLabel" parentContainer="condition4doneContainerText" officeStringAttrib="condition4DoneText" font="medium" color="bone"/>
 		<label name="condition4DoneIntLabel"  parentContainer="condition4doneContainerInt" officeStringAttrib="condition4DoneInt" font="medium" color="bone"/>
 		
-		<label name="popCapBonusTitle"  parentContainer="popCapBonusTitleContainer" officeStringAttrib="popCapBonusTitle" font="medium" color="black"/>
+		<label name="popCapBonusTitle"  parentContainer="popCapBonusTitleContainer" officeStringAttrib="popCapBonusTitle" font="medium" color="black_faded"/>
 		<label name="popcapTooltip"  parentContainer="popcapTooltip" officeStringAttrib="popcapTooltip" font="small" color="cream"/>
-		<label name="popCapBonusLabel1"  parentContainer="popCapBonusHolder1" officeStringAttrib="popCapBonusText1" font="clarendonTitle" color="black" />
-		<label name="popCapBonusLabel2"  parentContainer="popCapBonusHolder2" officeStringAttrib="popCapBonusText2" font="clarendonTitle" color="black" />
+		<label name="popCapBonusLabel1"  parentContainer="popCapBonusHolder1" officeStringAttrib="popCapBonusText1" font="medium" color="black" />
+		<label text="/"  parentContainer="popCapBonusHolder1Slash" font="medium" color="black" />
+		<label name="popCapBonusLabel2"  parentContainer="popCapBonusHolder2" officeStringAttrib="popCapBonusText2" font="medium" color="black" />
 		
 		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
@@ -1152,10 +1157,11 @@
 		<label name="condition4DoneTextLabel" parentContainer="condition4doneContainerText" officeStringAttrib="condition4DoneText" font="medium" color="bone"/>
 		<label name="condition4DoneIntLabel"  parentContainer="condition4doneContainerInt" officeStringAttrib="condition4DoneInt" font="medium" color="bone"/>
 		
-		<label name="popCapBonusTitle"  parentContainer="popCapBonusTitleContainer" officeStringAttrib="popCapBonusTitle" font="medium" color="black"/>
+		<label name="popCapBonusTitle"  parentContainer="popCapBonusTitleContainer" officeStringAttrib="popCapBonusTitle" font="medium" color="black_faded"/>
 		<label name="popcapTooltip"  parentContainer="popcapTooltip" officeStringAttrib="popcapTooltip" font="small" color="cream"/>
-		<label name="popCapBonusLabel1"  parentContainer="popCapBonusHolder1" officeStringAttrib="popCapBonusText1" font="clarendonTitle" color="black" />
-		<label name="popCapBonusLabel2"  parentContainer="popCapBonusHolder2" officeStringAttrib="popCapBonusText2" font="clarendonTitle" color="black" />
+		<label name="popCapBonusLabel1"  parentContainer="popCapBonusHolder1" officeStringAttrib="popCapBonusText1" font="medium" color="black" />
+		<label text="/"  parentContainer="popCapBonusHolder1Slash" font="medium" color="black" />
+		<label name="popCapBonusLabel2"  parentContainer="popCapBonusHolder2" officeStringAttrib="popCapBonusText2" font="medium" color="black" />
 		
 		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
