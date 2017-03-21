@@ -35,6 +35,7 @@
 	<color name="bone" red="200" green="190" blue="170"/>
 	<color name="red" red="255" green="0" blue="0"/>
 	<color name="green" red="130" green="210" blue="110" />
+	<color name="green_dark" red="88" green="156" blue="71" />
 
 	<color name="burlap" red="170" green="140" blue="120"/>
 

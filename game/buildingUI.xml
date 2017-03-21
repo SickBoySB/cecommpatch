@@ -167,9 +167,9 @@
 	</icon_selector_detached>
 
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
-		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
-		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="cream_light"/>
-		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
 
 		<command_button name="Rally Squad"
 					display_name="Rally Squad"
@@ -192,9 +192,9 @@
 		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
-		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
-		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="cream_light"/>
-		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
 		
 		<label name="condition1todoTextLabel" parentContainer="condition1todoContainerText" officeStringAttrib="condition1todoText" font="small"  color="black"/>
 		<label name="condition1todoIntLabel"  parentContainer="condition1todoContainerInt" officeStringAttrib="condition1todoInt" font="small"  color="black"/>
@@ -249,9 +249,9 @@
 		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" />
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" />
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
-		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
-		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="cream_light"/>
-		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
 
 		<label name="modeLabel"  parentContainer="modeLabelContainer" officeStringAttrib="modeLabel" />
 		
@@ -391,9 +391,9 @@
 		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
-		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
-		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="cream_light"/>
-		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
 
 		<label name="chairsPresent"  parentContainer="chairNumberContainer" officeIntAttrib="chairsPresent"/>
 	</building>
@@ -474,9 +474,9 @@
 		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
-		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
-		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="cream_light"/>
-		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
 		
 	</building>
 	
@@ -582,9 +582,9 @@
 		</icon_selector_detached>
 		
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
-		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
-		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="cream_light"/>
-		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
 		
 	</building>
 
@@ -621,9 +621,9 @@
 		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
-		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
-		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="cream_light"/>
-		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
 		
 		<label name="condition1todoTextLabel" parentContainer="condition1todoContainerText" officeStringAttrib="condition1todoText" font="small"  color="black"/>
 		<label name="condition1todoIntLabel"  parentContainer="condition1todoContainerInt" officeStringAttrib="condition1todoInt" font="small"  color="black"/>
@@ -732,9 +732,9 @@
 		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
-		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
-		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="cream_light"/>
-		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
 		<label name="desksPresent"  parentContainer="deskNumberContainer" officeIntAttrib="desksPresent"/>
 		
 		<label name="empirePoints" parentContainer="empirePointsNumberContainer" hap="left" font="clarendonTitle" officeIntAttrib="Diplomacy_Points_Empire"/>
@@ -861,9 +861,9 @@
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
 
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
-		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
-		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="cream_light"/>
-		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
 
 		<label name="bookshelvesPresent"  parentContainer="bookshelvesNumberContainer" officeIntAttrib="bookshelvesPresent"/>
 		
@@ -957,9 +957,9 @@
 		<!--<jobs_list/>-->
 
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
-		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
-		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="cream_light"/>
-		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
 		<label name="altarsPresent"  parentContainer="altarsNumberContainer" officeIntAttrib="altarsPresent"/>
 
 		<icon_selector_detached name="Doctrine"
@@ -1010,9 +1010,9 @@
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" />
 		<label name="workshopTechModifier" parentContainer="workshopTechModifier" officeStringAttrib="workshopTechModifier"/>	
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
-		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
-		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="cream_light"/>
-		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
 	</building>
 	
 	<building name="Kitchen">
@@ -1021,9 +1021,9 @@
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" />
 		<label name="workshopTechModifier" parentContainer="workshopTechModifier" officeStringAttrib="workshopTechModifier"/>	
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
-		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
-		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="cream_light"/>
-		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
 	</building>
 
 	<building name="Ceramics Workshop">
@@ -1032,9 +1032,9 @@
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" />
 		<label name="workshopTechModifier" parentContainer="workshopTechModifier" officeStringAttrib="workshopTechModifier"/>	
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
-		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
-		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="cream_light"/>
-		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
 	</building>
 
 	<building name="Steam Knight Manufactory">
@@ -1043,9 +1043,9 @@
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" />
 		<label name="workshopTechModifier" parentContainer="workshopTechModifier" officeStringAttrib="workshopTechModifier"/>	
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
-		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
-		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="cream_light"/>
-		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
 	</building>
 	
 	<building name="Metalworks">
@@ -1054,9 +1054,9 @@
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" />
 		<label name="workshopTechModifier" parentContainer="workshopTechModifier" officeStringAttrib="workshopTechModifier"/>	
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
-		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
-		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="cream_light"/>
-		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
 	</building>
 
 	<building name="Chemical Works">
@@ -1065,9 +1065,9 @@
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" />
 		<label name="workshopTechModifier" parentContainer="workshopTechModifier" officeStringAttrib="workshopTechModifier"/>	
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
-		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
-		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="cream_light"/>
-		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
 	</building>
 
 <!-- Houses -->
@@ -1100,9 +1100,9 @@
 		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
-		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
-		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="cream_light"/>
-		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
 	</building>
 	
 	<building name="Middle Class House">
@@ -1133,9 +1133,9 @@
 		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
-		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
-		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="cream_light"/>
-		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
 	</building>
 	
 	<building name="Upper Class House">
@@ -1166,9 +1166,9 @@
 		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
 		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
 		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
-		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="orange_dark"/>
-		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="cream_light"/>
-		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
 	</building>
 	
 <!-- Zones -->
