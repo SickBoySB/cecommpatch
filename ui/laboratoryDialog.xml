@@ -467,7 +467,7 @@
 			<tooltip width="260" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
 				<container type="vertbox" hsp="fixed" fixed_width="250" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
 					<container type="horizbox" hsp="minimum" vsp="minimum">
-						<label text="Quality:" state="text" />
+						<label text="Building Quality:" state="text" />
 						<container name="qualityDescriptionContainer"
 								 type="horizbox" hsp="minimum" vsp="minimum"
 								 vertical_padding="2" horizontal_padding="4"
