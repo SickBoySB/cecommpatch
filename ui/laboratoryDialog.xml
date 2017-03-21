@@ -35,12 +35,12 @@
 					   hsp="minimum" vsp="minimum" 
 				imageSkin="ui/orderIcons.xml" image="demolish_building" imgPctX="80" imgPctY="80" vertical_margin="8">
 				
-				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+				<tooltip width="115" height="1" mouseRestDelay="0" followCursor="1">
 					<container type="vertbox" hsp="expand" vsp="expand"
 							 horizontal_padding="4" vertical_padding="4"
 							 solidfill="1" solidfillname="glassBrassBorderDark">
 						
-						<label name="buttonTooltipLabel" text="Order this Laboratory demolished" vsp="center" state="tooltip_text"/>
+						<label name="buttonTooltipLabel" text="Demolish Building" vsp="center" state="tooltip_text"/>
 					</container>
 				</tooltip>        
 			</imagebutton>
@@ -115,8 +115,8 @@
 										<container name="condition4doneContainerInt" type="horizbox" hsp="minimum" vsp="minimum"  hap="right" horizontal_margin="8"/>
 									</container>
 									
-									<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
-										<container type="vertbox" hsp="fixed" fixed_width="200"
+									<tooltip width="220" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+										<container type="vertbox" hsp="fixed" fixed_width="220"
 												 horizontal_padding="5" vertical_padding="5"
 												 solidfill="1" solidfillname="glassBrassBorderDark">
 											<paragraph text="Build the listed modules to increase the rate at which your workers produce Science." />
@@ -138,7 +138,7 @@
 									<label text="x" vap="center"/>
 									<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints1Container" vap="center"/>
 									
-									<tooltip width="300" height="140" mouseRestDelay="0" followCursor="1">
+									<tooltip width="310" height="1" mouseRestDelay="0" followCursor="1">
 										<container type="vertbox" hsp="expand" vsp="minimum"
 												 horizontal_padding="6" vertical_padding="6"
 												 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
@@ -236,8 +236,7 @@
 										 solidfill="1" solidfillname="glassBrassBorderDark" >
 									
 									<label text="Colony Production Research Points" state="tooltip_text"/>
-									<paragraph text="The maximum Research Points are increased by 20 with every Overseer skill level.
-									If you wish to quickly increase Overseer skills, use an Academy Building." state="tooltip_small"/>
+									<paragraph text="The maximum Research Points are increased by 20 with every Overseer skill level. If you wish to quickly increase Overseer skills, use an Academy Building." state="tooltip_small"/>
 
 								</container>
 							</tooltip>
@@ -269,7 +268,7 @@
 							<label text="/" vap="center" state="title" />
 							<container type="horizbox" hsp="minimum" vsp="minimum" vap="center" name="agriculturePointsMaxContainer" vertical_padding="2" horizontal_padding="2" />
 							
-							<tooltip width="200" height="100" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+							<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
 								<container type="vertbox"
 										 hsp="expand"
 										 vsp="minimum"
@@ -277,8 +276,7 @@
 										 solidfill="1" solidfillname="glassBrassBorderDark" >
 									
 									<label text="Agriculture and Food Research Points" state="tooltip_text"/>
-									<paragraph text="The maximum Research Points are increased by 20 with every Overseer skill level.
-									If you wish to quickly increase Overseer skills, use an Academy Building." state="tooltip_small"/>
+									<paragraph text="The maximum Research Points are increased by 20 with every Overseer skill level. If you wish to quickly increase Overseer skills, use an Academy Building." state="tooltip_small"/>
 								</container>
 							</tooltip>
 						</container>
@@ -320,8 +318,7 @@
 										 solidfill="1" solidfillname="glassBrassBorderDark" >
 									
 									<label text="Military Research Points" state="tooltip_text"/>
-									<paragraph text="The maximum Research Points are increased by 20 with every Overseer skill level.
-									If you wish to quickly increase Overseer skills, use an Academy Building." state="tooltip_small"/>
+									<paragraph text="The maximum Research Points are increased by 20 with every Overseer skill level. If you wish to quickly increase Overseer skills, use an Academy Building." state="tooltip_small"/>
 								</container>
 							</tooltip>
 						</container>
@@ -467,8 +464,8 @@
 						 
 			</container>
 	
-			<tooltip width="250" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
-				<container type="vertbox" hsp="fixed" fixed_width="240" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+			<tooltip width="260" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+				<container type="vertbox" hsp="fixed" fixed_width="250" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
 					<container type="horizbox" hsp="minimum" vsp="minimum">
 						<label text="Quality:" state="text" />
 						<container name="qualityDescriptionContainer"
@@ -477,7 +474,7 @@
 								 vap="center" />
 						
 					</container> 
-					<container type="vertbox" hsp="fixed" fixed_width="240">
+					<container type="vertbox" hsp="fixed" fixed_width="250">
 						<paragraph text="- Building Quality can range from -6 to +6" alignment="left" state="tooltip_text"/>
 						<paragraph text="- Work Modules reduce quality, while decor modules increase quality" alignment="left" state="tooltip_text"/>
 						<paragraph text="- High workplace quality makes colonists happy." alignment="left" state="tooltip_text"/>
