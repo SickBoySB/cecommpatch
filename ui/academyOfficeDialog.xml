@@ -8,9 +8,9 @@
 		<container type="horizbox" vap="center" hap="center" vsp="minimum" hsp="minimum">
 			<imagebutton name="BuildingIcon" text="Building Icon"
 					   hsp="minimum" vsp="minimum"
-					   imageSkin="ui/orderIcons.xml" image="journal_icon" imgPctX="80" imgPctY="80" vertical_margin="8">
+					   imageSkin="ui/thoughtIcons.xml" image="journal_icon" imgPctX="80" imgPctY="80" vertical_margin="8">
 				
-				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+				<tooltip width="120" height="1" mouseRestDelay="0" followCursor="1">
 					<container type="vertbox" hsp="expand" vsp="expand"
 							 horizontal_padding="4" vertical_padding="4"
 							 solidfill="1" solidfillname="glassBrassBorderDark">
@@ -37,7 +37,7 @@
 					   hsp="minimum" vsp="minimum" 
 				imageSkin="ui/orderIcons.xml" image="demolish_building" imgPctX="80" imgPctY="80" vertical_margin="8">
 				
-				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+				<tooltip width="115" height="1" mouseRestDelay="0" followCursor="1">
 					<container type="vertbox" hsp="expand" vsp="expand"
 							 horizontal_padding="4" vertical_padding="4"
 							 solidfill="1" solidfillname="glassBrassBorderDark">
@@ -61,7 +61,7 @@
 				 hsp="fixed" vsp="minimum"
 				 hap="center"
 				 horizontal_padding="4" vertical_padding="5"
-				 solidfill="1" solidfillname="cecommDarkRoundPaper" fixed_width="440" >
+				 solidfill="1" solidfillname="cecommDarkRoundPaper" fixed_width="400" >
 			
 			
 			<container type="horizbox" hsp="expand" vsp="expand" hap="center">
@@ -85,18 +85,18 @@
 										 solidfill="1" solidfillname="miniPaperLighter"
 										 vap="center">
 									
-									<label text="Blank Paper:" vap="center" horizontal_margin="4"/>
+									<label text="Paper:" vap="center" horizontal_margin="4"/>
 									<image hsp="minimum" vsp="minimum" scale="50"
 										  skin="ui\\commodityIcons.xml" image="paperBundle" vap="center"/>
 									<label text="x" vap="center"/>
 									<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints1Container" vap="center"/>
 									
-									<tooltip width="300" height="140" mouseRestDelay="0" followCursor="1">
+									<tooltip width="300" height="1" mouseRestDelay="0" followCursor="1">
 										<container type="vertbox" hsp="expand" vsp="minimum"
 												 horizontal_padding="6" vertical_padding="6"
 												 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
 											
-											<label text="Paper Remaining: " hap="center" state="tooltip_text"/>
+											<label text="Paper Bundles " hap="center" state="tooltip_text"/>
 											<paragraph text="Bundles of Paper, made in a Carpentry Workshop, are required for training to take place. This number shows how many training jobs can be performed. Workers will procure more paper if it runs low." state="tooltip_small"/>
 										</container>
 									</tooltip>
@@ -114,7 +114,7 @@
 									<label text="x" vap="center"/>
 									<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints2Container" vap="center"/>
 									
-									<tooltip width="300" height="140" mouseRestDelay="0" followCursor="1">
+									<tooltip width="300" height="1" mouseRestDelay="0" followCursor="1">
 										<container type="vertbox" hsp="expand" vsp="minimum"
 												 horizontal_padding="6" vertical_padding="6"
 												 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
@@ -325,7 +325,7 @@
 				
 				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
 					<container type="vertbox"
-							 hsp="fixed" fixed_width="300"
+							 hsp="fixed" fixed_width="200"
 							 horizontal_padding="5" vertical_padding="4"
 							 vertical_gutter="4"
 							 solidfill="1" solidfillname="glassBrassBorderDark">
@@ -361,8 +361,8 @@
 						 
 			</container>
 	
-			<tooltip width="250" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
-				<container type="vertbox" hsp="fixed" fixed_width="240" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+			<tooltip width="260" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+				<container type="vertbox" hsp="fixed" fixed_width="250" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
 					<container type="horizbox" hsp="minimum" vsp="minimum">
 						<label text="Quality:" state="text" />
 						<container name="qualityDescriptionContainer"
@@ -371,7 +371,7 @@
 								 vap="center" />
 						
 					</container> 
-					<container type="vertbox" hsp="fixed" fixed_width="240">
+					<container type="vertbox" hsp="fixed" fixed_width="250">
 						<paragraph text="- Building Quality can range from -6 to +6" alignment="left" state="tooltip_text"/>
 						<paragraph text="- Work Modules reduce quality, while decor modules increase quality" alignment="left" state="tooltip_text"/>
 						<paragraph text="- High workplace quality makes colonists happy." alignment="left" state="tooltip_text"/>

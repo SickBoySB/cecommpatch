@@ -61,7 +61,7 @@
 				 hsp="fixed" vsp="minimum"
 				 hap="center"
 				 horizontal_padding="4" vertical_padding="5"
-				 solidfill="1" solidfillname="cecommDarkRoundPaper" fixed_width="440" >
+				 solidfill="1" solidfillname="cecommDarkRoundPaper" fixed_width="400" >
 			
 			
 			<container type="horizbox" hsp="expand" vsp="expand" hap="center">
