@@ -295,7 +295,7 @@
 				
 				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
 					<container type="vertbox"
-							 hsp="fixed" fixed_width="300"
+							 hsp="fixed" fixed_width="200"
 							 horizontal_padding="5" vertical_padding="4"
 							 vertical_gutter="4"
 							 solidfill="1" solidfillname="glassBrassBorderDark">
@@ -332,8 +332,8 @@
 						 
 			</container>
 	
-			<tooltip width="250" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
-				<container type="vertbox" hsp="fixed" fixed_width="240" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+			<tooltip width="260" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+				<container type="vertbox" hsp="fixed" fixed_width="250" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
 					<container type="horizbox" hsp="minimum" vsp="minimum">
 						<label text="Quality:" state="text" />
 						<container name="qualityDescriptionContainer"
@@ -342,7 +342,7 @@
 								 vap="center" />
 						
 					</container> 
-					<container type="vertbox" hsp="fixed" fixed_width="240">
+					<container type="vertbox" hsp="fixed" fixed_width="250">
 						<paragraph text="- Building Quality can range from -6 to +6" alignment="left" state="tooltip_text"/>
 						<paragraph text="- Work Modules reduce quality, while decor modules increase quality" alignment="left" state="tooltip_text"/>
 						<paragraph text="- High workplace quality makes colonists happy." alignment="left" state="tooltip_text"/>
