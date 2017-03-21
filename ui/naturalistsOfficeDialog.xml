@@ -15,7 +15,7 @@
 							 horizontal_padding="4" vertical_padding="4"
 							 solidfill="1" solidfillname="glassBrassBorderDark">
 						
-						<label name="buttonTooltipLabel" text="Focus on this Naturalist's Office" vsp="center" state="tooltip_text"/>
+						<label name="buttonTooltipLabel" text="Focus on Building" vsp="center" state="tooltip_text"/>
 					</container>
 				</tooltip>
 			</imagebutton>
@@ -46,7 +46,6 @@
 		</container>
 	</container>
 	
-	
 	<container type="vertbox" hsp="expand" vsp="minimum" solidfill="1" solidfillname="cecommWorkcrew">
 		<container type="vertbox" hsp="expand" vsp="fixed" fixed_height="12"/>
 		<container type="vertbox" hsp="fixed" vsp="fixed" fixed_height="45" fixed_width="300" hap="center" solidfill="1" solidfillname="cecommTopGlassLight">
@@ -55,29 +54,11 @@
 					hap="center" vertical_padding="10" horizontal_padding="10" />
 		</container>
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		<container type="vertbox"
 				 hsp="fixed" vsp="fixed"
 				 hap="center"
 				 horizontal_padding="4" vertical_padding="10"
 				 solidfill="1" solidfillname="cecommDarkRoundPaper" fixed_width="400" fixed_height="90" >
-			
-			
-			
-			
 			
 			<container type="horizbox" hsp="expand" vsp="expand" hap="center">
 					
@@ -106,12 +87,12 @@
 									<label text="x" vap="center"/>
 									<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints1Container" vap="center"/>
 									
-									<tooltip width="300" height="140" mouseRestDelay="0" followCursor="1">
+									<tooltip width="300" height="1" mouseRestDelay="0" followCursor="1">
 										<container type="vertbox" hsp="expand" vsp="minimum"
 												 horizontal_padding="6" vertical_padding="6"
 												 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
 											
-											<label text="Stone Pellet Ammunition: Hunting" hap="center" state="tooltip_text"/>
+											<label text="Stone Pellet Ammo: Hunting" hap="center" state="tooltip_text"/>
 											<paragraph text="Stone Pellet Ammunition, made in a Ceramics Workshop, is required to do Hunting jobs. This number shows how many shots can be fired by hunters. Workers will resupply the Naturalist's Office if ammunition runs low." state="tooltip_small"/>
 										</container>
 									</tooltip>
@@ -130,7 +111,7 @@
 									<label text="x" vap="center"/>
 									<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints2Container" vap="center"/>
 									
-									<tooltip width="300" height="140" mouseRestDelay="0" followCursor="1">
+									<tooltip width="290" height="1" mouseRestDelay="0" followCursor="1">
 										<container type="vertbox" hsp="expand" vsp="minimum"
 												 horizontal_padding="6" vertical_padding="6"
 												 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
@@ -161,7 +142,6 @@
 			
 		</container>
 
-		
 		<container type="vertbox" hsp="expand" vsp="fixed" fixed_height="8"/>
 		<!-- main content box -->
 		<container type="vertbox" hsp="expand" vsp="minimum">
@@ -182,12 +162,11 @@
 									<container type="vertbox" hsp="minimum" vsp="minimum" name="modeControlsContainer1" >
 										
 										<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
-											<container type="vertbox" hsp="fixed" fixed_width="240"
+											<container type="vertbox" hsp="fixed" fixed_width="200"
 													horizontal_padding="5" vertical_padding="5"
 													solidfill="1" solidfillname="glassBrassBorderDark" >
 												
-												<label text="Scouting " state="tooltip_text" hap="center"/>
-												<paragraph text="The Naturalist and their assigned Labourers will be given greatly increased sight radius and will explore randomly. Useful to provide an overview of the local area. Skilled Naturalists can see further." alignment="left" state="tooltip_text"/>
+												<paragraph text="Scouting: The Naturalist and their assigned Labourers will be given greatly increased sight radius and will explore randomly. Useful to provide an overview of the local area. Skilled Naturalists can see further." alignment="left" state="tooltip_text"/>
 											</container>
 										</tooltip>
 									</container>
@@ -247,6 +226,40 @@
 						</container>
 					</container>
 
+					<container type="horizbox" hsp="expand" vsp="fixed" fixed_height="10"/>
+					<container type="horizbox" solidfill="1" solidfillname="cecommDarkRoundPaper" hap="center" horizontal_padding="50" vertical_padding="10">
+						<label text="Manual Job Targeting" hap="center" state="text"/>
+						
+						<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+							<container type="vertbox" hsp="fixed" fixed_width="200"
+									horizontal_padding="5" vertical_padding="2"
+									solidfill="1" solidfillname="glassBrassBorderDark" >
+								
+								<paragraph text="Naturalists will automatically pick targets for their jobs, but if you find yourself wanting to target a specific location or animal, you may use the buttons below to do so."
+										 alignment="left" state="tooltip_text"/>
+							</container>
+						</tooltip>
+					</container>
+					<container type="horizbox" hsp="minimum" vsp="minimum" hap="center">
+						
+						<container name="naturalistCommandHolder1"
+								type="horizbox" hsp="expand" vsp="minimum"
+								horizontal_margin="1"
+								vertical_padding="0"
+								/>
+						<container name="naturalistCommandHolder2"
+								type="horizbox" hsp="expand" vsp="minimum"
+								horizontal_margin="1"
+								vertical_padding="0"
+								/>
+						<container name="naturalistCommandHolder3"
+								type="horizbox" hsp="expand" vsp="minimum"
+								horizontal_margin="1"
+								vertical_padding="0"
+								/>
+					</container>
+					<container type="horizbox" hsp="expand" vsp="fixed" fixed_height="10"/>
+					
 					<container type="horizbox" hsp="expand" vsp="minimum"
 							horizontal_padding="2" vertical_padding="2">
 						
@@ -293,39 +306,6 @@
 							</container>
 						</container>
 						
-					</container>
-					
-					<container type="horizbox" hsp="expand" vsp="fixed" fixed_height="10"/>
-					<container type="horizbox" solidfill="1" solidfillname="cecommDarkRoundPaper" hap="center" horizontal_padding="50" vertical_padding="10">
-						<label text="Manual Job Targeting" hap="center" state="text"/>
-						
-						<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
-							<container type="vertbox" hsp="fixed" fixed_width="200"
-									horizontal_padding="5" vertical_padding="2"
-									solidfill="1" solidfillname="glassBrassBorderDark" >
-								
-								<paragraph text="Naturalists will automatically pick targets for their jobs, but if you find yourself wanting to target a specific location or animal, you may use the buttons below to do so."
-										 alignment="left" state="tooltip_text"/>
-							</container>
-						</tooltip>
-					</container>
-					<container type="horizbox" hsp="minimum" vsp="minimum" hap="center">
-						
-						<container name="naturalistCommandHolder1"
-								type="horizbox" hsp="expand" vsp="minimum"
-								horizontal_margin="1"
-								vertical_padding="0"
-								/>
-						<container name="naturalistCommandHolder2"
-								type="horizbox" hsp="expand" vsp="minimum"
-								horizontal_margin="1"
-								vertical_padding="0"
-								/>
-						<container name="naturalistCommandHolder3"
-								type="horizbox" hsp="expand" vsp="minimum"
-								horizontal_margin="1"
-								vertical_padding="0"
-								/>
 					</container>
 				</container>
 				
@@ -399,8 +379,8 @@
 						 
 			</container>
 	
-			<tooltip width="250" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
-				<container type="vertbox" hsp="fixed" fixed_width="240" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+			<tooltip width="260" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+				<container type="vertbox" hsp="fixed" fixed_width="250" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
 					<container type="horizbox" hsp="minimum" vsp="minimum">
 						<label text="Quality:" state="text" />
 						<container name="qualityDescriptionContainer"
@@ -409,7 +389,7 @@
 								 vap="center" />
 						
 					</container> 
-					<container type="vertbox" hsp="fixed" fixed_width="240">
+					<container type="vertbox" hsp="fixed" fixed_width="250">
 							<paragraph text="- Building Quality can range from -6 to +6" alignment="left" state="tooltip_text"/>
 							<paragraph text="- Work Modules reduce quality, while decor modules increase quality" alignment="left" state="tooltip_text"/>
 							<paragraph text="- High workplace quality makes colonists happy." alignment="left" state="tooltip_text"/>
