@@ -46,8 +46,6 @@
 		</container>
 	</container>	
 	
-	
-	
 	<container type="vertbox" hsp="expand" vsp="minimum" solidfill="1" solidfillname="cecommWorkcrew">
 		<container type="vertbox" hsp="expand" vsp="fixed" fixed_height="12"/>
 		<container type="vertbox" hsp="fixed" vsp="fixed" fixed_height="45" fixed_width="300" hap="center" solidfill="1" solidfillname="cecommTopGlassLight">
@@ -61,10 +59,6 @@
 				 hap="center"
 				 horizontal_padding="4" vertical_padding="10"
 				 solidfill="1" solidfillname="cecommDarkRoundPaper" fixed_width="400" fixed_height="90" >
-			
-			
-			
-			
 			
 			<container type="horizbox" hsp="expand" vsp="expand" hap="center">
 					
@@ -86,6 +80,7 @@
 										 solidfill="1" solidfillname="miniPaperLighter"
 										 vap="center">
 									
+									<label text="Medical:" vap="center" horizontal_margin="4"/>
 									<image hsp="minimum" vsp="minimum" scale="50"
 										  skin="ui\\commodityIcons.xml" image="medical_bag" vap="center"/>
 									<label text="x" vap="center"/>
@@ -108,6 +103,7 @@
 										 solidfill="1" solidfillname="miniPaperLighter"
 										 vap="center">
 									
+									<label text="Tonic:" vap="center" horizontal_margin="4"/>
 									<image hsp="minimum" vsp="minimum" scale="50"
 										  skin="ui\\commodityIcons.xml" image="sulphur_tonic_bottle" vap="center"/>
 									<label text="x" vap="center"/>

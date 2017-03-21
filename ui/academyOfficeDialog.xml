@@ -85,6 +85,7 @@
 										 solidfill="1" solidfillname="miniPaperLighter"
 										 vap="center">
 									
+									<label text="Blank Paper:" vap="center" horizontal_margin="4"/>
 									<image hsp="minimum" vsp="minimum" scale="50"
 										  skin="ui\\commodityIcons.xml" image="paperBundle" vap="center"/>
 									<label text="x" vap="center"/>
@@ -106,7 +107,8 @@
 										 vertical_padding="4" vertical_margin="2"
 										 solidfill="1" solidfillname="miniPaperLighter"
 										 vap="center">
-									
+										 
+									<label text="Ink:" vap="center" horizontal_margin="4"/>
 									<image hsp="minimum" vsp="minimum" scale="50"
 										  skin="ui\\commodityIcons.xml" image="bucketInk" vap="center"/>
 									<label text="x" vap="center"/>

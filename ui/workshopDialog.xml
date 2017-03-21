@@ -55,7 +55,7 @@
 				 hap="center"
 				 horizontal_padding="4" vertical_padding="10"
 				 solidfill="1" solidfillname="cecommDarkRoundPaper" fixed_width="350" >
-			<label text="Production Queues:" alignment="center" hsp="minimum" vsp="minimum" hap="center"
+			<label text="Production Queues" alignment="center" hsp="minimum" vsp="minimum" hap="center"
 			solidfill="1" solidfillname="miniPaperBrassDark" horizontal_padding="3" vertical_padding="3" 
 			skin="ui/styles/default.xml" />
 		</container>
