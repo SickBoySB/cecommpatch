@@ -30,18 +30,19 @@ gameobject "foreign_office" inherit "office"
 			local supply_warning = ""
 			
 			if state.supplies[1] >= EntityDB[ state.entityName ].lc_resupply_when_below then
-				status = "Working. Office is supplied."
+				--status = "Working. Office is supplied."
 				if state.resupply == false then
-					status = "Working. Workcrew ordered to NOT re-supply office."
+					--status = "Working. Workcrew ordered to NOT re-supply office."
 				end
 				SELF.tags.no_supplies1 = nil
 				SELF.tags.needs_resupply1 = nil
 				SELF.tags.needs_resupply1_badly = nil
 				
 			elseif state.supplies[1] >= EntityDB[ state.entityName ].mc_resupply_when_below then
-				status = "Working. Supplies low. Assigned labourers will re-supply office."
+				--status = "Working. Supplies low. Assigned labourers will re-supply office."
+				status = "Paper (low) needed!"
 				if state.resupply == false then
-					status = "Working. Supplies low. Workcrew ordered to NOT re-supply office."
+					--status = "Working. Supplies low. Workcrew ordered to NOT re-supply office."
 					SELF.tags.needs_resupply1 = nil
 					SELF.tags.needs_resupply1_badly = nil
 				else
@@ -49,12 +50,13 @@ gameobject "foreign_office" inherit "office"
 					SELF.tags.needs_resupply1_badly = nil
 				end
 				SELF.tags.no_supplies1 = nil
-				supply_warning = "Running low on Bureaucratic Forms."
+				--supply_warning = "Running low on Bureaucratic Forms."
 				
 			elseif state.supplies[1] == 0 then
-				status = "Work halted. Bureaucratic Forms needed. Workcrew will re-supply office."
+				--status = "Work halted. Bureaucratic Forms needed. Workcrew will re-supply office."
+				status = "Paper needed!"
 				if state.resupply == false then
-					status = "Work halted. Workcrew ordered to NOT re-supply office."
+					--status = "Work halted. Workcrew ordered to NOT re-supply office."
 					SELF.tags.needs_resupply1 = nil
 					SELF.tags.needs_resupply1_badly = nil
 				else
@@ -83,7 +85,7 @@ gameobject "foreign_office" inherit "office"
 				end
 				
 				SELF.tags.no_supplies1 = true
-				supply_warning = "Bureaucratic Forms required to do work."
+				--supply_warning = "Bureaucratic Forms required to do work."
 			end
 			
 			send("rendUIManager", "SetOfficeString", SELF, "noSuppliesWarning",supply_warning)
@@ -127,6 +129,9 @@ gameobject "foreign_office" inherit "office"
 		send("rendUIManager", "SetOfficeInt", SELF, "Diplomacy_Points_Republique", 0)
 		send("rendUIManager", "SetOfficeInt", SELF, "Diplomacy_Points_Bandits"   , 0)
 		send("rendUIManager", "SetOfficeInt", SELF, "Diplomacy_Points_Fishpeople", 0)
+		
+		send("rendUIManager","SetOfficeString",SELF,"noDeskWarning","Desks needed!")
+		send("rendUIManager", "SetOfficeString", SELF, "workPointsStatus", "Paper needed!")
 
 		foreign_office_reset_supply_text()
 	>>
@@ -542,7 +547,7 @@ gameobject "foreign_office" inherit "office"
 		
 		send("rendUIManager", "SetOfficeInt", SELF, "desksPresent", desk_count)
 		if desk_count == 0 then
-			send("rendUIManager","SetOfficeString",SELF,"noDeskWarning","At least one desk is required to perform work.")
+			send("rendUIManager","SetOfficeString",SELF,"noDeskWarning","Desks needed!")
 		else
 			send("rendUIManager","SetOfficeString",SELF,"noDeskWarning","")
 		end
