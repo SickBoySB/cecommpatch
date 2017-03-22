@@ -33,18 +33,18 @@ gameobject "barracks" inherit "office"
 				for i=1,4 do
 					if i == ammo then
 						if state.supplies[i] >= state.ammo_stocking_goals[ "ammo" .. tostring(i) ] then
-							status = "Working. Barracks is supplied."
+							status = "Working. Stocked with supplies."
 							if state.resupply == false then
-								status = "Working. Barracks ordered to NOT re-supply ammo."
+								status = "Working. Resupply HALTED."
 							end
 							SELF.tags["needs_resupply" .. tostring(i)] = nil
 							SELF.tags["needs_resupply" .. tostring(i) .. "_badly"] = nil
 							SELF.tags["no_supplies" ..  tostring(i)] = nil
 
 						elseif state.supplies[i] >= EntityDB[ state.entityName ].mc_resupply_when_below then
-							status = "Working. Ammo low. Barracks will be re-supplied with ammo."
+							status = "Working. Low supplies."
 							if state.resupply == false then
-								status = "Working. Supplies low. Workcrew ordered to NOT re-supply office."
+								status = "Working. Resupply HALTED."
 								SELF.tags["needs_resupply" .. tostring(i)] = nil
 								SELF.tags["needs_resupply" .. tostring(i) .. "_badly"] = nil
 							else
@@ -55,10 +55,10 @@ gameobject "barracks" inherit "office"
 							supply_warning = "Running low on ammo."
 							
 						elseif state.supplies[i] == 0 then
-							status = "Using fallback weapons. Ammo needed. Barracks will be re-supplied."
+							status = "Using fallback weapon. Out of supplies."
 							SELF.tags["no_supplies" ..  tostring(i)] = true
 							if state.resupply == false then
-								status = "Using fallback weapons. Ammo needed. Barracks will NOT be re-supplied."
+								status = "Using fallback weapon. Resupply HALTED."
 								SELF.tags["needs_resupply" .. tostring(i)] = nil
 								SELF.tags["needs_resupply" .. tostring(i) .. "_badly"] = nil
 							else
@@ -84,7 +84,7 @@ gameobject "barracks" inherit "office"
 										state.director)
 								end
 							end
-							supply_warning = "Out of ammo!"
+							supply_warning = "Ammo required."
 						end
 					else
 						SELF.tags["needs_resupply" .. tostring(i)] = nil
@@ -92,6 +92,10 @@ gameobject "barracks" inherit "office"
 						SELF.tags["no_supplies" ..  tostring(i)] = true
 					end
 				end
+			end
+			
+			if not state.buildingOwner then
+				status = "Work HALTED. Overseer needed."
 			end
 			
 			send("rendUIManager","SetOfficeString",SELF,"noSuppliesWarning",supply_warning)

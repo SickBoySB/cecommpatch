@@ -76,10 +76,7 @@ gameobject "laboratory" inherit "office"
 				SELF.tags.no_supplies1 = true
 			end
 			
-			-- doublecheck ownership before pushing text
-			if state.buildingOwner then
-				-- keep using the previous status names
-			else
+			if not state.buildingOwner then
 				status = "Work HALTED. Overseer needed."
 			end
 			
