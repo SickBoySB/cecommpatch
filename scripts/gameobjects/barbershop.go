@@ -7,11 +7,12 @@ gameobject "barbershop" inherit "office"
 			local status = ""
 			local supply_warning = ""
 			local office_data = EntityDB[ state.entityName ]
+			local status_data = {}
 			
 			if state.supplies[1] >= office_data.lc_resupply_when_below then
-				status = "Working. Medical Supplies stocked."
+				--status = "Working. Medical Supplies stocked."
 				if state.resupply == false then
-					status = "Working. Workcrew ordered to NOT re-supply office."
+					--status = "Working. Workcrew ordered to NOT re-supply office."
 				end
 
 				SELF.tags.no_supplies1 = nil
@@ -19,10 +20,11 @@ gameobject "barbershop" inherit "office"
 				SELF.tags.needs_resupply1_badly = nil
 				
 			elseif state.supplies[1] > office_data.mc_resupply_when_below then
-				status = "Working. Medical Supplies low. Assigned labourers will re-supply office."
-				supply_warning = supply_warning .. "Low on Medical Supplies."
+				--status = "Working. Medical Supplies low. Assigned labourers will re-supply office."
+				--supply_warning = supply_warning .. "Low on Medical Supplies."
+				--table.insert(status_data,"Medical Supplies")
 				if state.resupply == false then
-					status = "Working. Workcrew ordered to NOT re-supply office."
+					--status = "Working. Workcrew ordered to NOT re-supply office."
 				end
 			
 				if state.resupply == false then
@@ -37,10 +39,11 @@ gameobject "barbershop" inherit "office"
 				
 			elseif state.supplies[1] == 0 then
 				
-				status = "Work halted. Medical Supplies needed."
-				supply_warning = "Medical Supplies required to heal wounded."
+				--status = "Work halted. Medical Supplies needed."
+				--supply_warning = "Medical Supplies required to heal wounded."
+				table.insert(status_data,"Medical Supplies")
 				if state.resupply == false then
-					status = "Work halted. Workcrew ordered to NOT re-supply office."
+					--status = "Work halted. Workcrew ordered to NOT re-supply office."
 				else
 					if state.buildingOwner then
 						local ownername = query(state.buildingOwner,"getName")[1]
@@ -76,15 +79,15 @@ gameobject "barbershop" inherit "office"
 			
 			-- Sulphur tonic is a bonus, not a requirement.
 			if state.supplies[2] >= office_data.lc_resupply_when_below then
-				status = status .. " Sulphur Tonic stocked."
+				--status = status .. " Sulphur Tonic stocked."
 				SELF.tags.no_supplies2 = nil
 				SELF.tags.needs_resupply2 = nil
 				SELF.tags.needs_resupply2_badly = nil
 				
 			elseif state.supplies[2] > office_data.mc_resupply_when_below then
 
-				status = status .. " Sulphur Tonic low."
-				supply_warning = supply_warning .. " Sulphur Tonic low."
+				--status = status .. " Sulphur Tonic low."
+				--supply_warning = supply_warning .. " Sulphur Tonic low."
 				
 				if state.resupply == false then
 					SELF.tags.needs_resupply2 = nil
@@ -98,7 +101,8 @@ gameobject "barbershop" inherit "office"
 				
 			elseif state.supplies[2] == 0 then
 
-				status = status .. " No Sulphur Tonic."
+				--status = status .. " No Sulphur Tonic."
+				table.insert(status_data,"Sulphur Tonic")
 				--[[if state.resupply == false then
 					status = "Work halted. Workcrew ordered to NOT re-supply office."
 				else
@@ -134,8 +138,8 @@ gameobject "barbershop" inherit "office"
 				SELF.tags.no_supplies2 = true
 			end
 			
-			send("rendUIManager", "SetOfficeString", SELF, "noSuppliesWarning",supply_warning)
-			send("rendUIManager", "SetOfficeString", SELF, "workPointsStatus", status)
+			send("rendUIManager", "SetOfficeString", SELF, "noSuppliesWarning", supply_warning)
+			send("rendUIManager", "SetOfficeString", SELF, "workPointsStatus", combined_warning_status(status_data))
 		end
 	>>
 
@@ -151,7 +155,7 @@ gameobject "barbershop" inherit "office"
 	
 	receive odinBuildingCompleteMessage( int handle, gameSimJobInstanceHandle ji )
 	<<
-		send("rendUIManager","SetOfficeString",SELF,"noChairWarning","At least one chair is required to perform work.")
+		send("rendUIManager","SetOfficeString",SELF,"noChairWarning","Chairs needed!")
 		send("rendUIManager", "SetOfficeInt", SELF, "chairsPresent",0)
 		send("rendUIManager", "SetOfficeInt", SELF, "workPoints1", 0)
 		send("rendUIManager", "SetOfficeInt", SELF, "workPoints2", 0)
@@ -217,7 +221,7 @@ gameobject "barbershop" inherit "office"
 		if chair_count > 0 then
 			send("rendUIManager","SetOfficeString",SELF,"noChairWarning","")
 		else
-			send("rendUIManager","SetOfficeString",SELF,"noChairWarning","At least one chair is required to perform work.")
+			send("rendUIManager","SetOfficeString",SELF,"noChairWarning","Chairs needed!")
 		end
 		send("rendUIManager", "SetOfficeInt", SELF, "chairsPresent",chair_count)	
      >>
