@@ -358,7 +358,7 @@ gameobject "public_house" inherit "office"
 			send("rendUIManager", "SetOfficeString", SELF, "noChairsWarning", "")
 		else
 			send("rendUIManager", "SetOfficeString", SELF, "noChairsWarning", "")
-			table.insert(warning_data,"Chairs"
+			table.insert(warning_data,"Chairs")
 		end
 		
 		send("rendUIManager", "SetOfficeString", SELF, "noChairsWarning", combined_warning_status(warning_data))
