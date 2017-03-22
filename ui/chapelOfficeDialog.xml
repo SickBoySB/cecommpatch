@@ -194,7 +194,7 @@
 					
 					<container type="vertbox" hsp="expand" hap="center" vap="center">
 						<container type="vertbox" hsp="expand" vsp="minimum">
-							<paragraph text="Muscular Ecclesiastcism" vertical_margin="0" horizontal_margin="4" state="text_large" />
+							<paragraph text="Muscular Ecclesiasticism" vertical_margin="0" horizontal_margin="4" state="text_large" />
 							<paragraph text="Work harder, faster, smarter... PRODUCTIVITY!" vertical_margin="0" horizontal_margin="4" state="text_small" />
 						</container>
 					</container>
