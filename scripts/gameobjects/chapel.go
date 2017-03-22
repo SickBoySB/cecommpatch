@@ -27,6 +27,7 @@ gameobject "chapel" inherit "office"
 				--if state.mode_hunt then
 					--status = "Working. Supplies low. Assigned labourers will re-supply chapel."
 					--supply_warning = supply_warning .. "Low on iron votive cogs."
+					status = "Iron Cogs (low) needed!"
 					if state.resupply == false then
 						--status = "Working. Workcrew ordered to NOT re-supply chapel."
 					end
