@@ -35,6 +35,7 @@
 	<color name="bone" red="200" green="190" blue="170"/>
 	<color name="red" red="255" green="0" blue="0"/>
 	<color name="green" red="130" green="210" blue="110" />
+	<color name="green_dark" red="88" green="156" blue="71" />
 
 	<color name="burlap" red="170" green="140" blue="120"/>
 
@@ -70,6 +71,7 @@
 	<state name="active"    w="22" h="16" x="75" y="218" />
 	<state name="normal"    w="22" h="16" x="75" y="218" />
 	</element>
+	
 	<element name="cecommPop" scale="border" border="7" pad="0">
 		<state name="highlight" w="22" h="16" x="135" y="314" />
 		<state name="active" w="22" h="16" x="135" y="314" />
@@ -77,6 +79,77 @@
 		<state name="down" w="22" h="16" x="75" y="218" />
 		<state name="up" w="22" h="16" x="75" y="218" />
 	</element>
+	
+	<element name="cecommWorkcrew" scale="border" border="14" pad="0">
+	 <!--<state name="default"    w="16" h="16" x="110" y="314" />
+	<state name="active"    w="16" h="16" x="110" y="314" />
+	<state name="normal"    w="16" h="16" x="110" y="314" />-->
+	<state name="default"    w="30" h="30" x="87" y="335" />
+	<state name="active"    w="30" h="30" x="87" y="335" />
+	<state name="normal"    w="30" h="30" x="87" y="335" />
+	</element>
+	
+	<element name="cecommTopGlass" scale="border" border="9" pad="0">
+	<state name="default"    w="32" h="20" x="135" y="358" />
+	<state name="active"    w="32" h="20" x="135" y="358" />
+	<state name="normal"    w="32" h="20" x="135" y="358" />
+	</element>
+	
+	<element name="cecommMidGlass" scale="border" border="6" pad="0">
+	<state name="default"    w="32" h="12" x="135" y="366" />
+	<state name="active"    w="32" h="12" x="135" y="366" />
+	<state name="normal"    w="32" h="12" x="135" y="366" />
+	</element>
+	
+	<element name="cecommBottomGlass" scale="border" border="9" pad="0">
+	<state name="default"    w="32" h="20" x="135" y="366" />
+	<state name="active"    w="32" h="20" x="135" y="366" />
+	<state name="normal"    w="32" h="20" x="135" y="366" />
+	</element>
+	
+	<element name="cecommPaperRoundInside" scale="border" border="25" pad="0">
+	<state name="default"    w="76" h="55" x="413" y="900" />
+	<state name="active"    w="76" h="55" x="413" y="900" />
+	<state name="normal"    w="76" h="55" x="413" y="900" />
+	</element>
+	
+	<element name="cecommPaperRoundInsideNoBottom" scale="border" border="25" pad="0">
+	<state name="default"    w="76" h="52" x="413" y="900" />
+	<state name="active"    w="76" h="52" x="413" y="900" />
+	<state name="normal"    w="76" h="52" x="413" y="900" />
+	</element>
+	
+	<element name="cecommPaperRoundInsideNoTop" scale="border" border="25" pad="0">
+	<state name="default"    w="76" h="52" x="413" y="904" />
+	<state name="active"    w="76" h="52" x="413" y="904" />
+	<state name="normal"    w="76" h="52" x="413" y="904" />
+	</element>
+	
+	<element name="cecommGlassDarkBlue" scale="border" border="7" pad="0">
+	<state name="default"    w="22" h="16" x="135" y="314" />
+	<state name="active"    w="22" h="16" x="135" y="314" />
+	<state name="normal"    w="22" h="16" x="135" y="314" />
+	</element>
+	
+
+	<element name="cecommTopGlassLight" scale="border" border="9" pad="0">
+	<state name="default"    w="32" h="20" x="49" y="304" />
+	<state name="active"    w="32" h="20" x="49" y="304" />
+	<state name="normal"    w="32" h="20" x="49" y="304" />
+	</element>
+	
+	<element name="cecommBottomGlassLight" scale="border" border="9" pad="0">
+	<state name="default"    w="32" h="20" x="49" y="312" />
+	<state name="active"    w="32" h="20" x="49" y="312" />
+	<state name="normal"    w="32" h="20" x="49" y="312" />
+	</element>
+
+	<element name="cecommDarkRoundPaper" scale="border" border="14" pad="0">
+	<state name="default"    w="32" h="28" x="160" y="302" />
+	<state name="active"    w="32" h="28" x="160" y="302" />
+	<state name="normal"    w="32" h="28" x="160" y="302" />
+	</element>
+	
 	
 	<element name="assignment_beacon_bg" scale="exact">
 		<state name="highlight" x="944" y="648" w="80" h="80" />

@@ -1,7 +1,7 @@
 gameobject "laboratory" inherit "office"
 <<
 	local 
-	<<
+	<<		
 		function laboratory_reset_supply_text()
 			
 			local status = ""
@@ -10,9 +10,9 @@ gameobject "laboratory" inherit "office"
 
 			if state.supplies[1] >= office_data.lc_resupply_when_below then
 
-				status = "Working. Laboratory is supplied with Science Materials."
+				--status = "Working. Stocked with supplies."
 				if state.resupply == false then
-					status = "Working. Resupply of Laboratory HALTED."
+					--status = "Working. Resupply HALTED."
 				end
 
 				SELF.tags.no_supplies1 = nil
@@ -21,10 +21,11 @@ gameobject "laboratory" inherit "office"
 				
 			elseif state.supplies[1] > office_data.mc_resupply_when_below then
 	
-				status = "Working. Supplies low. Assigned labourers will re-supply Laboratory."
-				supply_warning = supply_warning .. "Low on Science Materials."
+				--status = "Working. Supplies low."
+				status = "Science Materials (low) needed!"
+				supply_warning = ""
 				if state.resupply == false then
-					status = "Working. Resupply of Laboratory HALTED."
+					--status = "Working. Resupply HALTED."
 				end
 				
 				if state.resupply == false then
@@ -39,10 +40,11 @@ gameobject "laboratory" inherit "office"
 				
 			elseif state.supplies[1] == 0 then
 			
-				status = "Work halted. Science Materials needed. Workers will re-supply Laboratory."
-				supply_warning = "Science Materials required to do research."
+				--status = "Work HALTED. Supplies needed."
+				supply_warning = ""
+				status = "Science Materials needed!"
 				if state.resupply == false then
-					status = "Work halted. Resupply of Laboratory HALTED."
+					--status = "Work HALTED. Resupply HALTED."
 				else
 					if state.buildingOwner then
 						local ownername = query(state.buildingOwner,"getName")[1]
@@ -75,7 +77,11 @@ gameobject "laboratory" inherit "office"
 				
 				SELF.tags.no_supplies1 = true
 			end
-	
+			
+			if not state.buildingOwner then
+				--status = "Work HALTED. Overseer needed."
+			end
+			
 			send("rendUIManager", "SetOfficeString", SELF, "noSuppliesWarning",supply_warning)
 			send("rendUIManager", "SetOfficeString", SELF, "workPointsStatus", status)
 		end
@@ -198,6 +204,9 @@ gameobject "laboratory" inherit "office"
 		send("rendUIManager","SetOfficeInt",SELF,"workPoints1",0)
 		--send("rendUIManager","SetOfficeInt",SELF,"workPoints2",0)
 		--send("rendUIManager","SetOfficeInt",SELF,"workPoints3",0)
+		
+		send("rendUIManager", "SetOfficeString", SELF, "workPointsStatus", "Science Materials needed!")
+		send("rendUIManager","SetOfficeString",SELF,"noEquipmentWarning","Research module needed!")
 		
 		laboratory_reset_supply_text()
 	>>
@@ -696,7 +705,7 @@ gameobject "laboratory" inherit "office"
 		if equipment_count > 0 then
 			send("rendUIManager","SetOfficeString",SELF,"noEquipmentWarning","")
 		else
-			send("rendUIManager","SetOfficeString",SELF,"noEquipmentWarning","At least one scientific module is required to begin research!")
+			send("rendUIManager","SetOfficeString",SELF,"noEquipmentWarning","Research module needed!")
 		end
 		
 		send(SELF, "labRefreshConditions")

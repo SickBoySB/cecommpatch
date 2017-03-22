@@ -3,70 +3,49 @@
 	<!-- top control bar -->
 	<container type="horizbox"
 			hsp="expand" vsp="minimum"
-			horizontal_padding="2" vertical_padding="2"
-			solidfill="1" solidfillname="miniPaperBrassLight" >
+			horizontal_margin="15"
+			solidfill="1" solidfillname="cecommPaperRoundInsideNoBottom"
+			vertical_padding="0">
+		<container type="horizbox" vap="center" hap="center" vsp="minimum" hsp="minimum">
 			
-		<!--<imagebutton name="BuildingIcon"
-				   text="Building Icon"
-				   hsp="minimum" vsp="minimum"
-					imageSkin="ui/orderIcons.xml" image="housing">
- 
-			<tooltip width="240" height="45" mouseRestDelay="0" followCursor="1">
-				<container type="vertbox"
-						 hsp="expand" vsp="expand"
-						 horizontal_padding="4" vertical_padding="4"
-						 solidfill="1" solidfillname="glassBrassBorderDark" >
-					
-					<label text="Focus camera on this House" vap="center" state="tooltip_text"/>
-				</container>
-			</tooltip>
-		</imagebutton>-->
+			<container type="vertbox" hsp="fixed" vsp="fixed" name="houseTypeContainer" fixed_width="341" fixed_height="64">
+				<label name="workshopnamelabel" text="A House" vsp="minimum" hsp="minimum" vap="center" horizontal_margin="70" />
+			</container>
 			
-		<container type="vertbox" hsp="expand" vsp="expand" name="houseTypeContainer">
-			<label name="workshopnamelabel" text="A House" vsp="minimum" hap="center" vap="center"/>
+			<imagebutton name="DemolishBuildingButton"
+					   text="Demolish Building"
+					   sfx="button_pneumatic"
+					   hsp="minimum" vsp="minimum" 
+				imageSkin="ui/orderIcons.xml" image="demolish_building" imgPctX="80" imgPctY="80" vertical_margin="8">
+				
+				<tooltip width="120" height="25" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_padding="4" vertical_padding="4"
+							 solidfill="1" solidfillname="glassBrassBorderDark">
+						
+						<label name="buttonTooltipLabel" text="Demolish Building" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>        
+			</imagebutton>
 		</container>
-		
-		<imagebutton name="DemolishBuildingButton"
-					text="Demolish Building"
-					sfx="button_pneumatic"
-					hsp="minimum" vsp="minimum"
-					imageSkin="ui/orderIcons.xml" image="demolish_building">
-			
-			<tooltip width="240" height="45" mouseRestDelay="0" followCursor="1">
-				<container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4"
-						solidfill="1" solidfillname="glassBrassBorderDark">
-					<label text="Order this House demolished" vsp="center" state="tooltip_text"/>
-				</container>
-			</tooltip>
-		</imagebutton>
 	</container>
 	
 	<!-- middle content. -->
 	<container type="vertbox" hsp="expand" vsp="minimum"
-			horizontal_padding="2" horizontal_margin="2"
-			vertical_padding="2" vertical_margin="2"
-			solidfill="1" solidfillname="miniPaperBrassDark" >
+			vertical_padding="10" horizontal_padding="0" solidfill="1" solidfillname="cecommWorkcrew" >
 		
-		<container type="horizbox" hsp="expand" vsp="minimum"
-			horizontal_padding="2" horizontal_margin="0"
-			vertical_padding="2" vertical_margin="0"
-			solidfill="1" solidfillname="miniPaperLighter"
+		<!-- hack to hide useless info -->
+		<container type="horizbox" hsp="fixed" vsp="fixed" vap="center" hap="center" fixed_height="0" fixed_width="0"
+			horizontal_padding="0" horizontal_margin="0"
+			vertical_padding="0" vertical_margin="0"
 			name="houseDescriptionLabelContainer" >
-			<!--
-			<paragraph vertical_margin="3" horizontal_margin="3"
-					text="A home for common labourers. Adds a base of +2 Lower Class population capacity to the colony." />
-			
-			<paragraph vertical_margin="3" horizontal_margin="3"
-					 text="Each Lower Class House increases the population cap for lower class colonists by two. Each Middle Class House increases the population cap for middle class colonists by one." />
-			-->
 		</container>
 		
 		<container type="vertbox" hsp="expand" vsp="minimum"
 			horizontal_padding="2" horizontal_margin="0"
-			vertical_padding="2" vertical_margin="0"
-			solidfill="1" solidfillname="miniPaperBrassLight" >
+			vertical_padding="2" vertical_margin="0" >
 			
-			<container type="horizbox" hsp="expand" vsp="minimum" horizontal_margin="20">
+			<container type="horizbox" hsp="fixed" hap="center" vsp="minimum" fixed_width="350" vertical_padding="5" solidfill="1" solidfillname="cecommTopGlassLight">
 				<label vertical_margin="2" horizontal_margin="2" text="Amenities" hap="center" state="text_large" />
 				
 				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
@@ -81,9 +60,9 @@
 			
 			<container type="vertbox"
 					hsp="expand" vsp="minimum"
-					horizontal_padding="4" horizontal_margin="8"
-					vertical_padding="4" vertical_margin="2"
-					solidfill="1" solidfillname="miniPaperLighter" >
+					horizontal_padding="4" horizontal_margin="4"
+					vertical_padding="4"
+					solidfill="1" solidfillname="cecommDarkRoundPaper" >
 				
 			<!-- <container type="scrollablevertbox"
 					hsp="expand" 
@@ -99,7 +78,7 @@
 						vsp="minimum"
 						name="testHolder"
 						horizontal_padding="6"
-						vertical_padding="6" />
+						vertical_padding="0" />
 				
 					<container type="vertbox" hsp="expand" vsp="minimum" >
 						<label vertical_margin="2" horizontal_margin="2" text="To Do:" hap="left" state="text" />
@@ -160,14 +139,15 @@
 			</container>
 			
 			<container type="horizbox"
-					hsp="minimum"
-					vsp="minimum" hap="right"
-					horizontal_padding="4" horizontal_margin="4"
-					vertical_padding="4" vertical_margin="4" >
+					hsp="fixed"
+					vsp="minimum" hap="center"
+					horizontal_padding="40" horizontal_margin="4"
+					vertical_margin="0" fixed_width="350" vertical_padding="5"
+					solidfill="1" solidfillname="cecommBottomGlassLight" >
 				
 				<!--<label text="Lower Class Population Cap Bonus: " vap="center" /> -->
 				
-				<container name="popCapBonusTitleContainer" type="horizbox" hsp="minimum" vsp="minimum" vap="center">
+				<container name="popCapBonusTitleContainer" type="horizbox" hsp="minimum" vsp="expand" vap="center" vertical_margin="7">
 					<tooltip width="300" height="50" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
 						<container type="vertbox" hsp="fixed" fixed_width="200"
 								 horizontal_padding="5" vertical_padding="5"
@@ -179,15 +159,14 @@
 				</container>
 				
 				<container type="horizbox"
-					hsp="minimum"
-					vsp="minimum"
-					vap="center" 
-					horizontal_padding="10" horizontal_margin="4"
-					vertical_padding="3" vertical_margin="2"
-					solidfill="1" solidfillname="miniPaperLighter" >
+						 hsp="minimum" vsp="minimum"
+						  horizontal_padding="8"
+						  horizontal_margin="4" 
+						   vertical_padding="6"
+						   vertical_margin="0">
 					
 					<container name="popCapBonusHolder1" type="horizbox" hsp="minimum" vsp="minimum" vap="center" horizontal_margin="1"/>
-					<label text="/" state="tooltip_title" />
+					<container name="popCapBonusHolder1Slash" type="horizbox" hsp="minimum" vsp="minimum" vap="center" horizontal_margin="1"/>
 					<container name="popCapBonusHolder2" type="horizbox" hsp="minimum" vsp="minimum" vap="center" horizontal_margin="1"/>
 				</container>
 
@@ -231,15 +210,15 @@
 	</container>
 -->
 
+
 	<!-- Quality display container. -->
-	<container type="horizbox" vsp="fixed" fixed_height="38" hsp="expand" horizontal_margin="2" vertical_margin="2" >
+	<container type="horizbox" vsp="fixed" fixed_height="50" hsp="expand" horizontal_margin="15" solidfill="1" solidfillname="cecommPaperRoundInsideNoTop" vertical_padding="0" horizontal_padding="5" >
 		
 		<!-- row 1 -->
 		<container type="horizbox" hsp="expand" vsp="expand"
 				 horizontal_gutter="6"
-				 horizontal_margin="2" vertical_margin="2"
-				 horizontal_padding="6" vertical_padding="2"
-				 solidfill="1" solidfillname="miniPaper">
+				 horizontal_margin="2" vertical_margin="0"
+				 horizontal_padding="6" vertical_padding="2">
 		
 			<!-- HP display -->
 			<container type="horizbox" hsp="minimum" vsp="expand"
@@ -250,10 +229,12 @@
 				<label text="HP:" vap="center"/>
 
 				<container type="horizbox"
-						 hsp="minimum" vsp="expand"
+						 hsp="minimum" vsp="minimum"
 						  horizontal_padding="8"
 						  horizontal_margin="4" 
-						 solidfill="1" solidfillname="label_background_grayer">
+						   vertical_padding="4"
+						   vertical_margin="8"
+						 solidfill="1" solidfillname="miniPaperRound">
 					
 					<container name="HPNumberContainer" type="horizbox" hsp="minimum" vsp="minimum" vap="center"/>
 					<label text="/" vap="center" />
@@ -276,20 +257,19 @@
 		<!-- Quality -->
 		<container type="horizbox"
 				 hsp="minimum" vsp="expand"
-				 horizontal_margin="2" vertical_margin="2"
-				 horizontal_padding="0" vertical_padding="0"
-				 solidfill="1" solidfillname="miniPaper">
+				 horizontal_margin="8" vertical_margin="0"
+				 horizontal_padding="0" vertical_padding="0">
 			
 			<container type="vertbox" hsp="minimum" vsp="minimum" vap="center"
 					 horizontal_padding="8"
 					 hap="left">
 				
-				<label text="Building Quality:" vap="center" />
+				<label text="Quality:" vap="center" />
 			</container>
 			
-			<container type="vertbox" hsp="minimum" vsp="expand"
-						horizontal_padding="12" vertical_padding="4"
-						solidfill="1"  solidfillname="miniPaperBrassDarkest">
+			<container type="vertbox" hsp="minimum" vsp="minimum" vap="center"
+						horizontal_padding="10" vertical_padding="4"
+						solidfill="1"  solidfillname="miniPaperRound">
 			
 				<container type="vertbox" hsp="minimum" vsp="minimum"
 						 vap="center"
