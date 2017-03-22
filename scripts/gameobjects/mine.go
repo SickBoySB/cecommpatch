@@ -219,18 +219,19 @@ gameobject "mine" inherit "office"
 			local supply_warning = ""
 			
 			if state.supplies[1] >= EntityDB[ state.entityName ].lc_resupply_when_below then
-				status = "Working. Mine is supplied."
+				--status = "Working. Mine is supplied."
 				if state.resupply == false then
-					status = "Working. Workcrew ordered to NOT re-supply mine."
+					--status = "Working. Workcrew ordered to NOT re-supply mine."
 				end
 				SELF.tags.no_supplies1 = nil
 				SELF.tags.needs_resupply1 = nil
 				SELF.tags.needs_resupply1_badly = nil
 				
 			elseif state.supplies[1] >= EntityDB[ state.entityName ].mc_resupply_when_below then
-				status = "Working. Mine Shorings low. Assigned labourers will re-supply mine."
+				--status = "Working. Mine Shorings low. Assigned labourers will re-supply mine."
+				status = "Mine Shorings (low) needed!"
 				if state.resupply == false then
-					status = "Working. Low on Mine Shorings. Workcrew ordered to NOT re-supply mine."
+					--status = "Working. Low on Mine Shorings. Workcrew ordered to NOT re-supply mine."
 					SELF.tags.needs_resupply1 = nil
 					SELF.tags.needs_resupply1_badly = nil
 				else
@@ -238,12 +239,13 @@ gameobject "mine" inherit "office"
 					SELF.tags.needs_resupply1_badly = nil
 				end
 				SELF.tags.no_supplies1 = nil
-				supply_warning = "Running low on Mine Shorings."
+				--supply_warning = "Running low on Mine Shorings."
 				
 			elseif state.supplies[1] == 0 then
-				status = "Work halted. Mine Shorings needed. Workcrew will re-supply mine."
+				--status = "Work halted. Mine Shorings needed. Workcrew will re-supply mine."
+				status = "Mine Shorings needed!"
 				if state.resupply == false then
-					status = "Work halted. Workcrew ordered to NOT re-supply mine."
+					--status = "Work halted. Workcrew ordered to NOT re-supply mine."
 					SELF.tags.needs_resupply1 = nil
 					SELF.tags.needs_resupply1_badly = nil
 				else
@@ -273,7 +275,7 @@ gameobject "mine" inherit "office"
 				end
 				
 				SELF.tags.no_supplies1 = true
-				supply_warning = "Mine Shorings required to do work."
+				--supply_warning = "Mine Shorings required to do work."
 			end
 			
 			send("rendUIManager", "SetOfficeString", SELF, "noSuppliesWarning",supply_warning)
@@ -331,7 +333,8 @@ gameobject "mine" inherit "office"
 
 	receive odinBuildingCompleteMessage ( int handle, gameSimJobInstanceHandle ji )
 	<<
-		send("rendUIManager","SetOfficeString",SELF,"noShaftWarning","At least one mineshaft is required to perform work.")
+		send("rendUIManager","SetOfficeString",SELF,"noShaftWarning","Mineshafts needed!")
+		send("rendUIManager", "SetOfficeString", SELF, "workPointsStatus", "Mine Shorings needed!")
 		send("rendUIManager", "SetOfficeString", SELF, "mineDepth", tostring(state.mineDepth) .. " yards")
 		
 		UpdateMineProducts()
@@ -398,7 +401,7 @@ gameobject "mine" inherit "office"
 		end
           
 		if not has_shaft then
-			send("rendUIManager","SetOfficeString",SELF,"noShaftWarning","At least one mineshaft is required to perform work.")
+			send("rendUIManager","SetOfficeString",SELF,"noShaftWarning","Mineshafts needed!")
 		else
 			send("rendUIManager","SetOfficeString",SELF,"noShaftWarning","")
 		end
