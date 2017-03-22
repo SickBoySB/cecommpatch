@@ -4,7 +4,7 @@ gameobject "public_house" inherit "office"
 	<<
 		
 		function updateBoozeCounts()
-			local warning_data = {}
+			local status_data = {}
 			
 			send("rendUIManager", "SetOfficeInt", SELF, "brewQuantity", #state.brewTable)
 			send("rendUIManager", "SetOfficeInt", SELF, "spiritsQuantity", #state.spiritsTable)
@@ -14,7 +14,7 @@ gameobject "public_house" inherit "office"
 				if #state.brewTable == 0 then
 					send("rendUIManager", "SetOfficeString", SELF, "noBoozeWarning", "")
 					SELF.tags.has_contents = nil
-					table.insert(warning_data,"Brewed Booze")
+					table.insert(status_data,"Brewed Booze")
 				else
 					send("rendUIManager", "SetOfficeString", SELF, "noBoozeWarning", "")
 					SELF.tags.has_contents = true
@@ -23,7 +23,7 @@ gameobject "public_house" inherit "office"
 				if #state.spiritsTable == 0 then
 					send("rendUIManager", "SetOfficeString", SELF, "noBoozeWarning", "")
 					SELF.tags.has_contents = nil
-					table.insert(warning_data,"Distilled Spirits")
+					table.insert(status_data,"Distilled Spirits")
 				else
 					send("rendUIManager", "SetOfficeString", SELF, "noBoozeWarning", "")
 					SELF.tags.has_contents = true
@@ -34,7 +34,7 @@ gameobject "public_house" inherit "office"
 				if #state.laudanumTable == 0 then
 					send("rendUIManager", "SetOfficeString", SELF, "noLaudanumWarning", "")
 					SELF.tags.has_laudanum = nil
-					table.insert(warning_data,"Laudanum")
+					table.insert(status_data,"Laudanum")
 				else
 					send("rendUIManager", "SetOfficeString", SELF, "noLaudanumWarning", "")
 					SELF.tags.has_laudanum = true
@@ -44,7 +44,7 @@ gameobject "public_house" inherit "office"
 				SELF.tags.has_laudanum = true
 			end
 			
-			send("rendUIManager", "SetOfficeString", SELF, "workPointsStatus", combined_warning_status(warning_data))
+			send("rendUIManager", "SetOfficeString", SELF, "workPointsStatus", combined_warning_status(status_data))
 		end
 		
 		function dumpBooze( entityname )
