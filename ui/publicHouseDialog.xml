@@ -109,6 +109,7 @@
 							</container>			
 						</container>
 					</container>
+					<container name="workPointsStatusContainer" type="vertbox" hsp="fixed" fixed_width="150" vsp="minimum" vap="bottom" hap="center" />
 				</container>
 				
 			</container>

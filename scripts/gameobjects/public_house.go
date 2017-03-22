@@ -4,22 +4,26 @@ gameobject "public_house" inherit "office"
 	<<
 		
 		function updateBoozeCounts()
+			local status = ""
+			
 			send("rendUIManager", "SetOfficeInt", SELF, "brewQuantity", #state.brewTable)
 			send("rendUIManager", "SetOfficeInt", SELF, "spiritsQuantity", #state.spiritsTable)
 			send("rendUIManager", "SetOfficeInt", SELF, "laudanumQuantity", #state.laudanumTable)
 			
 			if state.distribution_mode == "brew" then
 				if #state.brewTable == 0 then
-					send("rendUIManager", "SetOfficeString", SELF, "noBoozeWarning", " The Pub is out of brewed booze! ")
+					send("rendUIManager", "SetOfficeString", SELF, "noBoozeWarning", "")
 					SELF.tags.has_contents = nil
+					status = "Brewed Booze "
 				else
 					send("rendUIManager", "SetOfficeString", SELF, "noBoozeWarning", "")
 					SELF.tags.has_contents = true
 				end
 			elseif state.distribution_mode == "spirits" then
 				if #state.spiritsTable == 0 then
-					send("rendUIManager", "SetOfficeString", SELF, "noBoozeWarning", " The Pub is out of spirits! ")
+					send("rendUIManager", "SetOfficeString", SELF, "noBoozeWarning", "")
 					SELF.tags.has_contents = nil
+					status = "Spirits "
 				else
 					send("rendUIManager", "SetOfficeString", SELF, "noBoozeWarning", "")
 					SELF.tags.has_contents = true
@@ -28,8 +32,14 @@ gameobject "public_house" inherit "office"
 			
 			if state.laudanum_distribution == true then
 				if #state.laudanumTable == 0 then
-					send("rendUIManager", "SetOfficeString", SELF, "noLaudanumWarning", " The Pub is out of Laudanum! ")
+					send("rendUIManager", "SetOfficeString", SELF, "noLaudanumWarning", "")
 					SELF.tags.has_laudanum = nil
+					
+					if not SELF.tags.has_contents then
+						status = status .. "and "
+					end
+					
+					status = status .. "Laudanum "
 				else
 					send("rendUIManager", "SetOfficeString", SELF, "noLaudanumWarning", "")
 					SELF.tags.has_laudanum = true
@@ -38,6 +48,12 @@ gameobject "public_house" inherit "office"
 				send("rendUIManager", "SetOfficeString", SELF, "noLaudanumWarning", "")
 				SELF.tags.has_laudanum = true
 			end
+			
+			if status ~= "" then
+				status = status .. "needed."
+			end
+			
+			send("rendUIManager", "SetOfficeString", SELF, "workPointsStatus", status)
 		end
 		
 		function dumpBooze( entityname )
@@ -160,11 +176,13 @@ gameobject "public_house" inherit "office"
 		send("rendUIManager", "SetOfficeInt", SELF, "spiritsCapacity", 0)
 		send("rendUIManager", "SetOfficeInt", SELF, "laudanumCapacity", 0)
 		
-		send("rendUIManager", "SetOfficeString", SELF, "noBoozeVatWarning", " Booze vat needed! ")
-		send("rendUIManager", "SetOfficeString", SELF, "noChairsWarning", " Chairs needed! ")
-		send("rendUIManager", "SetOfficeString", SELF, "noWorkcrewWarning", " Work crew needed! ")
-		send("rendUIManager", "SetOfficeString", SELF, "noBoozeWarning", " Need booze of selected type! ")
-		send("rendUIManager", "SetOfficeString", SELF, "noLaudanumWarning", " Need Laudanum! ")
+		send("rendUIManager", "SetOfficeString", SELF, "noBoozeVatWarning", "")
+		send("rendUIManager", "SetOfficeString", SELF, "noChairsWarning", "")
+		send("rendUIManager", "SetOfficeString", SELF, "noWorkcrewWarning", "")
+		send("rendUIManager", "SetOfficeString", SELF, "noBoozeWarning", "")
+		send("rendUIManager", "SetOfficeString", SELF, "noLaudanumWarning", "")
+		
+		send("rendUIManager", "SetOfficeString", SELF, "noChairsWarning", "Booze Vat and Chairs needed.")
 		
 		send("rendUIManager", "SetOfficeString", SELF, "lastGroupSpecialTreatment", "")
 		
@@ -175,6 +193,7 @@ gameobject "public_house" inherit "office"
 		--send("rendUIManager", "SetOfficeString", SELF, "boozeModeTooltip", "Now Stocking and Serving: Brewed Drinks")
 		
 		state.distribution_mode = "brew"
+		state.laudanum_distribution = true
 		SELF.tags.collect_brew = true
 		SELF.tags.collect_spirits = nil
 		SELF.tags.collect_laudanum = true
@@ -221,6 +240,7 @@ gameobject "public_house" inherit "office"
 		elseif messagereceived == "laudanum_mode_button1" then
 			
 			send("rendUIManager", "SetOfficeString", SELF, "laudanumMode", "Administering Laudanum")
+			state.laudanum_distribution = true
 			SELF.tags.collect_laudanum = true
 			updateBoozeCounts()
 			refreshBoozeCapacity()
@@ -228,6 +248,7 @@ gameobject "public_house" inherit "office"
 		elseif messagereceived == "laudanum_mode_button2" then
 			
 			send("rendUIManager", "SetOfficeString", SELF, "laudanumMode", "Not administering Laudanum ")
+			state.laudanum_distribution = nil
 			SELF.tags.collect_laudanum = nil
 			updateBoozeCounts()
 			refreshBoozeCapacity()
@@ -315,6 +336,7 @@ gameobject "public_house" inherit "office"
 		local has_chairs = false
 		local has_booze_vat = false
 		local num_vats = 0
+		local status = ""
 		
 		local modules = query("gameWorkshopManager", "getBuildingModulesGameSide", SELF)[1]
 		for k,v in pairs(modules) do
@@ -333,17 +355,28 @@ gameobject "public_house" inherit "office"
 			send("rendUIManager", "SetOfficeInt", SELF, "vatCount", num_vats)
 			state.vatCount = num_vats
 		else
-			send("rendUIManager", "SetOfficeString", SELF, "noBoozeVatWarning", " Booze vat needed! ")
+			send("rendUIManager", "SetOfficeString", SELF, "noBoozeVatWarning", "")
 			send("rendUIManager", "SetOfficeInt", SELF, "vatCount",0)
+			status = status .. "Booze Vat "
 			state.vatCount = 0
-
+		end
+		
+		if not has_booze_vat and not has_chairs then
+			status = status .. "and "
 		end
 		
 		if has_chairs then
 			send("rendUIManager", "SetOfficeString", SELF, "noChairsWarning", "")
 		else
-			send("rendUIManager", "SetOfficeString", SELF, "noChairsWarning", " Chairs needed! ")
+			send("rendUIManager", "SetOfficeString", SELF, "noChairsWarning", "")
+			status = status .. "Chairs "
 		end
+		
+		if status ~= "" then
+			status = status .. "needed."
+		end
+		
+		send("rendUIManager", "SetOfficeString", SELF, "noChairsWarning", status)
 		
 		updateBoozeCounts()
 		refreshBoozeCapacity()

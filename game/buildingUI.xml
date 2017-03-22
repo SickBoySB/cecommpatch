@@ -410,6 +410,7 @@
 		<label name="noOverseerWarning"  parentContainer="warningContainer" officeStringAttrib="noOverseerWarning" font="small" color="red" />
 		<label name="noBoozeWarning"  parentContainer="warningContainer" officeStringAttrib="noBoozeWarning" font="small" color="red" />
 		
+		<label name="workPointsStatus"  parentContainer="workPointsStatusContainer" officeStringAttrib="workPointsStatus" font="small" color="black" />
 		
 		<label name="boozeMode"  parentContainer="distributionModeContainer" officeStringAttrib="boozeMode" font="small" color="black" />
 		<label name="laudanumMode"  parentContainer="laudanumModeContainer" officeStringAttrib="laudanumMode" font="small" color="black" />
