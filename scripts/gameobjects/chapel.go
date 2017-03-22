@@ -8,29 +8,29 @@ gameobject "chapel" inherit "office"
 			local supply_warning = ""
 			local office_data = EntityDB[ state.entityName ]
 			
-			if state.mode_scout then
-				status = "No supplies required to perform Chapel rituals."
-			end
+			--if state.mode_scout then
+				--status = "No supplies required to perform Chapel rituals."
+			--end
 			
 			if state.supplies[1] >= office_data.lc_resupply_when_below then
-				if state.mode_hunt then
-					status = "Working. Chapel is supplied with iron votive cogs."
+				--if state.mode_hunt then
+					--status = "Working. Chapel is supplied with iron votive cogs."
 					if state.resupply == false then
-						status = "Working. Workcrew ordered to NOT re-supply chapel."
+						--status = "Working. Workcrew ordered to NOT re-supply chapel."
 					end
-				end
+				--end
 				SELF.tags.no_supplies1 = nil
 				SELF.tags.needs_resupply1 = nil
 				SELF.tags.needs_resupply1_badly = nil
 				
 			elseif state.supplies[1] > office_data.mc_resupply_when_below then
-				if state.mode_hunt then
-					status = "Working. Supplies low. Assigned labourers will re-supply chapel."
-					supply_warning = supply_warning .. "Low on iron votive cogs."
+				--if state.mode_hunt then
+					--status = "Working. Supplies low. Assigned labourers will re-supply chapel."
+					--supply_warning = supply_warning .. "Low on iron votive cogs."
 					if state.resupply == false then
-						status = "Working. Workcrew ordered to NOT re-supply chapel."
+						--status = "Working. Workcrew ordered to NOT re-supply chapel."
 					end
-				end
+				--end
 				
 				if state.resupply == false then
 					SELF.tags.needs_resupply1 = nil
@@ -43,11 +43,12 @@ gameobject "chapel" inherit "office"
 				SELF.tags.no_supplies1 = nil
 				
 			elseif state.supplies[1] == 0 then
-				if state.mode_hunt then
-					status = "Work halted. Iron Cogs needed. Assigned Overseer/Labourers will re-supply chapel."
-					supply_warning = "Iron Cogs required to do perform Chapel services."
+				--if state.mode_hunt then
+					--status = "Work halted. Iron Cogs needed. Assigned Overseer/Labourers will re-supply chapel."
+					--supply_warning = "Iron Cogs required to do perform Chapel services."
+					status = "Iron Cogs needed!"
 					if state.resupply == false then
-						status = "Work halted. Overseer/Labourers ordered to NOT re-supply chapel."
+						--status = "Work halted. Overseer/Labourers ordered to NOT re-supply chapel."
 					else
 						if state.buildingOwner then
 							local ownername = query(state.buildingOwner,"getName")[1]
@@ -69,7 +70,7 @@ gameobject "chapel" inherit "office"
 								state.director)
 						end
 					end
-				end
+				--end
 				
 				if state.resupply == false then
 					SELF.tags.needs_resupply1 = nil
@@ -135,7 +136,8 @@ gameobject "chapel" inherit "office"
 		send("rendUIManager","SetOfficeInt",SELF,"workPoints1",0)
 		--send("rendUIManager","SetOfficeInt",SELF,"workPoints2",0)
 		
-		send("rendUIManager","SetOfficeString",SELF,"noAltarWarning","Altar needed to perform services.")
+		send("rendUIManager","SetOfficeString",SELF,"noAltarWarning","Altar needed!")
+		send("rendUIManager","SetOfficeString",SELF,"workPointsStatus","Iron Cogs needed!")
 		
 		chapel_reset_supply_text()
 		
@@ -191,7 +193,7 @@ gameobject "chapel" inherit "office"
 		if has_altar then
 			send("rendUIManager","SetOfficeString",SELF,"noAltarWarning","")
 		else
-			send("rendUIManager","SetOfficeString",SELF,"noAltarWarning","Altar needed to perform services.")
+			send("rendUIManager","SetOfficeString",SELF,"noAltarWarning","Altar needed!")
 		end
 		
 		send("rendUIManager", "SetOfficeInt", SELF, "altarsPresent",altarCount)	
