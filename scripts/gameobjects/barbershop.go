@@ -22,7 +22,8 @@ gameobject "barbershop" inherit "office"
 			elseif state.supplies[1] > office_data.mc_resupply_when_below then
 				--status = "Working. Medical Supplies low. Assigned labourers will re-supply office."
 				--supply_warning = supply_warning .. "Low on Medical Supplies."
-				--table.insert(status_data,"Medical Supplies")
+				table.insert(status_data,"Medical Supplies (low)")
+				
 				if state.resupply == false then
 					--status = "Working. Workcrew ordered to NOT re-supply office."
 				end
@@ -88,7 +89,7 @@ gameobject "barbershop" inherit "office"
 
 				--status = status .. " Sulphur Tonic low."
 				--supply_warning = supply_warning .. " Sulphur Tonic low."
-				
+				table.insert(status_data,"Sulphur Tonic (low)")
 				if state.resupply == false then
 					SELF.tags.needs_resupply2 = nil
 					SELF.tags.needs_resupply2_badly = nil
