@@ -90,12 +90,12 @@ gameobject "office" inherit "buildings"
 				SELF.tags.overseer_active = true
 			end
 		end
-		
+		--[[ CECOMMPATCH - removing overseer warning, redundant
 		if newOwner then
 			send("rendUIManager", "SetOfficeString", SELF, "noOverseerWarning", "")
 		else
 			send("rendUIManager", "SetOfficeString", SELF, "noOverseerWarning", "Overseer required to begin operations.")
-		end
+		end--]]
 	>>
 
 	receive DeregisterSupervisor ( gameObjectHandle supervisor )
@@ -227,7 +227,7 @@ gameobject "office" inherit "buildings"
 		send(SELF, "recalculateQuality")
 		
 		if not SELF.tags.trade_office then
-			send("rendUIManager", "SetOfficeString", SELF, "noOverseerWarning", "Overseer required to begin operations.")
+			--send("rendUIManager", "SetOfficeString", SELF, "noOverseerWarning", "Overseer required to begin operations.")
 			send("rendUIManager", "SetOfficeInt", SELF, "workPoints1", 0)
 			SELF.tags.no_supplies1 = true
 		end
