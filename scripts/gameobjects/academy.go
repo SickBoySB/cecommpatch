@@ -7,30 +7,32 @@ gameobject "academy" inherit "office"
 			local status = ""
 			local supply_warning = ""
 			local office_data = EntityDB[ state.entityName ]
+			local status_data = {}
 			
-			if state.mode_scout then
-				status = "No supplies required to do Scouting."
-			end
+			--if state.mode_scout then
+			--	status = "No supplies required to do Scouting."
+			--end
 			
 			if state.supplies[1] >= office_data.lc_resupply_when_below then
-				if state.mode_hunt then
-					status = "Working. Office is supplied with ammo."
+				--if state.mode_hunt then
+					--status = "Working. Office is supplied with ammo."
 					if state.resupply == false then
-						status = "Working. Workcrew ordered to NOT re-supply office."
+						--status = "Working. Workcrew ordered to NOT re-supply office."
 					end
-				end
+				--end
 				SELF.tags.no_supplies1 = nil
 				SELF.tags.needs_resupply1 = nil
 				SELF.tags.needs_resupply1_badly = nil
 				
 			elseif state.supplies[1] > office_data.mc_resupply_when_below then
-				if state.mode_hunt then
-					status = "Working. Supplies low. Assigned labourers will re-supply office."
-					supply_warning = supply_warning .. "Low on hunting ammo."
+				--if state.mode_hunt then
+					--status = "Working. Supplies low. Assigned labourers will re-supply office."
+					--supply_warning = supply_warning .. "Low on hunting ammo."
+					table.insert(status_data,"Paper (low)")
 					if state.resupply == false then
-						status = "Working. Workcrew ordered to NOT re-supply office."
+						--status = "Working. Workcrew ordered to NOT re-supply office."
 					end
-				end
+				--end
 				
 				if state.resupply == false then
 					SELF.tags.needs_resupply1 = nil
@@ -43,12 +45,14 @@ gameobject "academy" inherit "office"
 				SELF.tags.no_supplies1 = nil
 				
 			elseif state.supplies[1] == 0 then
-				if state.mode_hunt then
-					status = "Work halted. Stone Pellet Ammunition needed. Assigned Overseer/Labourers will re-supply office."
-					supply_warning = "Stone Pellet Ammunition required to do Hunting."
+				--if state.mode_hunt then
+					--status = "Work halted. Stone Pellet Ammunition needed. Assigned Overseer/Labourers will re-supply office."
+					--supply_warning = "Stone Pellet Ammunition required to do Hunting."
+					table.insert(status_data,"Paper")
 					if state.resupply == false then
-						status = "Work halted. Workcrew ordered to NOT re-supply office."
+						--status = "Work halted. Workcrew ordered to NOT re-supply office."
 					else
+						--[[ TODO: swap to academy-specific stuff
 						if state.buildingOwner then
 							local ownername = query(state.buildingOwner,"getName")[1]
 							local alertstring = "The Naturalist's Office operated by " .. ownername .. " is out of Stone Pellet Ammunition! Produce more to enable hunting jobs."
@@ -68,8 +72,9 @@ gameobject "academy" inherit "office"
 								0, -- snooze
 								state.director)
 						end
+						]]--
 					end
-				end
+				--end
 				
 				if state.resupply == false then
 					SELF.tags.needs_resupply1 = nil
@@ -83,24 +88,25 @@ gameobject "academy" inherit "office"
 			end
 			
 			if state.supplies[2] >= office_data.lc_resupply_when_below then
-				if state.mode_survey then
-					status = "Working. Office is supplied with paperwork."
+				--if state.mode_survey then
+					--status = "Working. Office is supplied with paperwork."
 					if state.resupply == false then
-						status = "Working. Workcrew ordered to NOT re-supply office."
+						--status = "Working. Workcrew ordered to NOT re-supply office."
 					end
-				end
+				--end
 				SELF.tags.no_supplies2 = nil
 				SELF.tags.needs_resupply2 = nil
 				SELF.tags.needs_resupply2_badly = nil
 				
 			elseif state.supplies[2] > office_data.mc_resupply_when_below then
-				if state.mode_survey then
-					status = "Working. Supplies low. Assigned labourers will re-supply office."
-					supply_warning = supply_warning .. "Low on Bureaucratic Forms."
+				--if state.mode_survey then
+					--status = "Working. Supplies low. Assigned labourers will re-supply office."
+					--supply_warning = supply_warning .. "Low on Bureaucratic Forms."
+					table.insert(status_data,"Ink (low)")
 					if state.resupply == false then
-						status = "Working. Workcrew ordered to NOT re-supply office."
+						--status = "Working. Workcrew ordered to NOT re-supply office."
 					end
-				end
+				--end
 				
 				if state.resupply == false then
 					SELF.tags.needs_resupply2 = nil
@@ -113,12 +119,14 @@ gameobject "academy" inherit "office"
 				SELF.tags.no_supplies2 = nil
 				
 			elseif state.supplies[2] == 0 then
-				if state.mode_survey then
-					status = "Work halted. Bureaucratic Forms needed. Assigned Overseer/Labourers will re-supply office."
-					supply_warning = "Bureaucratic Forms required to do Surveying."
+				--if state.mode_survey then
+					--status = "Work halted. Bureaucratic Forms needed. Assigned Overseer/Labourers will re-supply office."
+					--supply_warning = "Bureaucratic Forms required to do Surveying."
+					table.insert(status_data,"Ink")
 					if state.resupply == false then
-						status = "Work halted. Workcrew ordered to NOT re-supply office."
+						--status = "Work halted. Workcrew ordered to NOT re-supply office."
 					else
+						--[[ TODO: swap to academy-specific info
 						if state.buildingOwner then
 							local ownername = query(state.buildingOwner,"getName")[1]
 							local alertstring = "The Naturalist's Office operated by " .. ownername .. " is out of Stone Pellet Ammunition! Produce more to enable hunting jobs."
@@ -138,8 +146,9 @@ gameobject "academy" inherit "office"
 								0, -- snooze
 								state.director)
 						end
+						]]--
 					end
-				end
+				--end
 				
 				if state.resupply == false then
 					SELF.tags.needs_resupply2 = nil
@@ -153,7 +162,7 @@ gameobject "academy" inherit "office"
 			end
 			
 			send("rendUIManager", "SetOfficeString", SELF, "noSuppliesWarning",supply_warning)
-			send("rendUIManager", "SetOfficeString", SELF, "workPointsStatus", status)
+			send("rendUIManager", "SetOfficeString", SELF, "workPointsStatus", combined_warning_status(status_data))
 		end
 	>>
 
@@ -173,7 +182,8 @@ gameobject "academy" inherit "office"
 		send("rendUIManager", "SetOfficeInt", SELF, "workPoints1", 0)
 		send("rendUIManager", "SetOfficeInt", SELF, "workPoints2", 0)
 		send("rendUIManager","SetOfficeInt",SELF,"bookshelvesPresent",0)
-		send("rendUIManager","SetOfficeString",SELF,"noBookshelvesWarning","At least one bookshelf is required to train.")
+		send("rendUIManager", "SetOfficeString", SELF, "workPointsStatus", "Paper and Ink needed!")
+		send("rendUIManager","SetOfficeString",SELF,"noBookshelvesWarning","Bookshelves needed!")
 		academy_reset_supply_text()
 	>>
 	
@@ -227,7 +237,7 @@ gameobject "academy" inherit "office"
 		if shelf_count > 0 then 
 			send("rendUIManager","SetOfficeString",SELF,"noBookshelvesWarning","")
 		else
-			send("rendUIManager","SetOfficeString",SELF,"noBookshelvesWarning","At least one bookshelf is required to train.")
+			send("rendUIManager","SetOfficeString",SELF,"noBookshelvesWarning","Bookshelves needed!")
 		end
 	>>
 	
