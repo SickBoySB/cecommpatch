@@ -9,14 +9,14 @@ gameobject "naturalist_office" inherit "office"
 			local office_data = EntityDB[ state.entityName ]
 			
 			if state.mode_scout then
-				status = "No supplies required to do Scouting."
+				--status = "No supplies required to do Scouting."
 			end
 			
 			if state.supplies[1] >= office_data.lc_resupply_when_below then
 				if state.mode_hunt then
-					status = "Working. Office is supplied with ammo."
+					--status = "Working. Office is supplied with ammo."
 					if state.resupply == false then
-						status = "Working. Overseer/Labourers ordered to NOT re-supply office."
+						--status = "Working. Overseer/Labourers ordered to NOT re-supply office."
 					end
 				end
 				SELF.tags.no_supplies1 = nil
@@ -25,10 +25,11 @@ gameobject "naturalist_office" inherit "office"
 				
 			elseif state.supplies[1] > office_data.mc_resupply_when_below then
 				if state.mode_hunt then
-					status = "Working. Supplies low. Assigned labourers will re-supply office."
-					supply_warning = supply_warning .. "Low on hunting ammo."
+					--status = "Working. Supplies low. Assigned labourers will re-supply office."
+					--supply_warning = supply_warning .. "Low on hunting ammo."
+					status = "Stone Pellet Ammo (low) needed!"
 					if state.resupply == false then
-						status = "Working. Overseer/Labourers ordered to NOT re-supply office."
+						--status = "Working. Overseer/Labourers ordered to NOT re-supply office."
 					end
 				end
 				
@@ -44,10 +45,11 @@ gameobject "naturalist_office" inherit "office"
 				
 			elseif state.supplies[1] == 0 then
 				if state.mode_hunt then
-					status = "Work halted. Stone Pellet Ammunition needed. Assigned Overseer/Labourers will re-supply office."
-					supply_warning = "Stone Pellet Ammunition required to do Hunting."
+					--status = "Work halted. Stone Pellet Ammunition needed. Assigned Overseer/Labourers will re-supply office."
+					--supply_warning = "Stone Pellet Ammunition required to do Hunting."
+					status = "Stone Pellet Ammo needed!"
 					if state.resupply == false then
-						status = "Work halted. Overseer/Labourers ordered to NOT re-supply office."
+						--status = "Work halted. Overseer/Labourers ordered to NOT re-supply office."
 					else
 						if state.buildingOwner then
 							local ownername = query(state.buildingOwner,"getName")[1]
@@ -84,9 +86,9 @@ gameobject "naturalist_office" inherit "office"
 			
 			if state.supplies[2] >= office_data.lc_resupply_when_below then
 				if state.mode_survey then
-					status = "Working. Office is supplied with paperwork."
+					--status = "Working. Office is supplied with paperwork."
 					if state.resupply == false then
-						status = "Working.  Overseer/Labourers ordered to NOT re-supply office."
+						--status = "Working.  Overseer/Labourers ordered to NOT re-supply office."
 					end
 				end
 				SELF.tags.no_supplies2 = nil
@@ -95,10 +97,11 @@ gameobject "naturalist_office" inherit "office"
 				
 			elseif state.supplies[2] > office_data.mc_resupply_when_below then
 				if state.mode_survey then
-					status = "Working. Supplies low. Assigned labourers will re-supply office."
-					supply_warning = supply_warning .. "Low on Bureaucratic Forms."
+					--status = "Working. Supplies low. Assigned labourers will re-supply office."
+					--supply_warning = supply_warning .. "Low on Bureaucratic Forms."
+					status = "Paper (low) needed!"
 					if state.resupply == false then
-						status = "Working. Overseer/Labourers ordered to NOT re-supply office."
+						--status = "Working. Overseer/Labourers ordered to NOT re-supply office."
 					end
 				end
 				
@@ -115,10 +118,11 @@ gameobject "naturalist_office" inherit "office"
 			elseif state.supplies[2] == 0 then
 				
 				if state.mode_survey then
-					status = "Work halted. Bureaucratic Forms needed. Overseer/Labourers will re-supply office."
-					supply_warning = "Bureaucratic Forms required to do Surveying."
+					--status = "Work halted. Bureaucratic Forms needed. Overseer/Labourers will re-supply office."
+					--supply_warning = "Bureaucratic Forms required to do Surveying."
+					status = "Paper needed!"
 					if state.resupply == false then
-						status = "Work halted. Overseer/Labourers ordered to NOT re-supply office."
+						--status = "Work halted. Overseer/Labourers ordered to NOT re-supply office."
 					else
 						if state.buildingOwner then
 							local ownername = query(state.buildingOwner,"getName")[1]
@@ -206,6 +210,7 @@ gameobject "naturalist_office" inherit "office"
 	
 	receive InteractiveMessage( string messagereceived )
 	<<
+		local status = ""
 		printl("buildings", "naturalist office received message: " .. messagereceived)
 		if not state.completed or SELF.tags.slated_for_demolition then
 			return
@@ -248,7 +253,7 @@ gameobject "naturalist_office" inherit "office"
 					state.director)
 				
 			elseif state.buildingOwner and state.supplies[2] == 0 then
-				
+				status = "Paper needed!"
 				local ownername = query(state.buildingOwner,"getName")[1]
 				local alertstring = "The Naturalist's Office operated by " .. ownername .. " requires Paper Bundles! Produce some Paper Bundles in a Carpentry Workshop so surveying may proceed."
 			
@@ -297,6 +302,7 @@ gameobject "naturalist_office" inherit "office"
 				
 			elseif state.buildingOwner and state.supplies[1] == 0 then
 				
+				status = "Stone Pellet Ammo needed!"
 				local ownername = query(state.buildingOwner,"getName")[1]
 				local alertstring = "The Naturalist's Office operated by " .. ownername .. " requires Stone Pellet Ammunition! Produce this ammo in a Ceramics Workshop so hunting may proceed."
 			
@@ -374,6 +380,8 @@ gameobject "naturalist_office" inherit "office"
 			send("gameSession","setSessionBool","horror_policy_dump", true)
 			
 		end
+		
+		send("rendUIManager", "SetOfficeString", SELF, "workPointsStatus", status)
 	>>
 	
 	receive setWeaponLoadout(string loadoutname)
