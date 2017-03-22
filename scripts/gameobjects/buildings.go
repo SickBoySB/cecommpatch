@@ -2,6 +2,23 @@ gameobject "buildings"
 <<
 	local
 	<<
+	
+		function combined_warning_status( warning_data )
+			-- CECOMMPATCH function. Used to combine warnings/status text for offices
+			local o = ""
+			
+			if #warning_data > 0 then
+				if #warning_data == 2 then
+					o = table.concat(warning_data," and ")
+				else
+					o = table.concat(warning_data,", ")
+				end
+				
+				o = o .. " needed!"
+			end
+			
+			return o
+		end
 
 	>>
 	
