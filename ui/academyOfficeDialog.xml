@@ -96,8 +96,8 @@
 												 horizontal_padding="6" vertical_padding="6"
 												 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
 											
-											<label text="Paper Bundles " hap="center" state="tooltip_text"/>
-											<paragraph text="Bundles of Paper, made in a Carpentry Workshop, are required for training to take place. This number shows how many training jobs can be performed. Workers will procure more paper if it runs low." state="tooltip_small"/>
+											<label text="Paper" hap="center" state="tooltip_text"/>
+											<paragraph text="Paper, made in a Carpentry Workshop, are required for training to take place. This number shows how many training jobs can be performed. Workers will procure more paper if it runs low." state="tooltip_small"/>
 										</container>
 									</tooltip>
 								</container>
@@ -119,8 +119,8 @@
 												 horizontal_padding="6" vertical_padding="6"
 												 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
 											
-											<label text="Buckets of Ink" hap="center" state="tooltip_text"/>
-											<paragraph text="Buckets of Ink, made in a Carpentry Workshop, will be used to double training speed. Workers will resupply the office if these run low." state="tooltip_small"/>
+											<label text="Ink" hap="center" state="tooltip_text"/>
+											<paragraph text="Ink, made in a Ceramics Workshop, will be used to double training speed. Workers will resupply the office if these run low." state="tooltip_small"/>
 										</container>
 									</tooltip>
 								</container>
