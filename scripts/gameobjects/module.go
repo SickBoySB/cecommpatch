@@ -228,7 +228,17 @@ gameobject "module" inherit "spatialobject" -- inherit "object_damage" not yet -
 		state.machinePos.y = modulePosY
 		state.moduleRotation = moduleRotation
 		state.statedModuleName = moduleName
-		moduledisplayname = "Module Under Construction" --FIXME Fix this to the module's display name. Maybe find a more efficient way than copypasting EVERY display name from buildings.xml. No, we can't use modulename. It's the wrong name.
+		
+		-- CECOMMPATCH - easypeasy display name check so everything isn't copypasted in modules.edb
+		--  manual addition of display_name in modules.edb for those that need it (not all that many, turns out)
+		local edb = EntityDB[state.name]
+		if edb.displayname ~= nil then
+			moduledisplayname = edb.displayname .. " (unbuilt)"
+		else
+			moduledisplayname = state.name .. " (unbuilt)"
+		end
+		
+		--moduledisplayname = "Module Under Construction"
 		state.statedBuildingName = buildingName
 		state.moduleGhost = ghostModule
 

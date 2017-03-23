@@ -17,6 +17,12 @@ icon = the icon name in the above xml file.
 
 tier = numbers are 1-4. This is used to determine how long the module takes to build. Higher
 numbers take longer. This does not affect build cost or anything else, those are set in buildings.xml.
+
+
+CECOMMPATCH:
+
+displayname = the name used when the module is in "ghosted" form, for the tooltip.. probably useful elsewhere as well.
+
 ]]
 
 -- front access modules:
@@ -173,6 +179,7 @@ Entity
 Entity
 {
 	name = "Mixing Tank",
+	displayname = "Mechanical Brewing Vat",
 	type = "frontaccessmodule",
 	description = "A large tank with a mechanical mixing apparatus. Used to mix ingredients for brewing alchohol.  Made in a Metalworks Workshop. Quality: -1",
 	tags = { "mixing_tank",  "machine", "brewing_device" },
@@ -187,6 +194,7 @@ Entity
 Entity
 {
 	name = "Brewing Vat",
+	displayname = "Wooden Brewing Vat",
 	type = "frontaccessmodule",
 	description = "A large tub used to mix ingredients for brewing alchohol.  Made in a Carpentry Workshop. Quality: -1",
 	tags = { "mixing_tank",  "machine", "brewing_device" },
@@ -246,6 +254,7 @@ Entity
 Entity
 {
 	name = "Workbench",
+	displayname = "Assembly Workbench",
 	type = "frontaccessmodule",
 	description = "A basic workbench for crafting a variety of different items. Made in a Carpentry Workshop. Quality: -1",
 	tags = { "workbench",  "machine" },
@@ -912,6 +921,7 @@ Entity
 Entity
 {
 	name = "Middle Class Single Bed",
+	displayname = "Practical Bed",
 	type = "bed",
 	sleep_positive = 10,
 	sleep_negative = -25,
@@ -932,6 +942,7 @@ Entity
 Entity
 {
 	name = "Middle Class Bed",
+	displayname = "Practical Bed",
 	type = "bed",
 	sleep_positive = 10,
 	sleep_negative = -25,
@@ -952,6 +963,7 @@ Entity
 Entity
 {
 	name = "Upper Class Bed",
+	displayname = "Ornate Bed",
 	type = "bed",
 	sleep_positive = 25,
 	sleep_negative = -25,
@@ -972,6 +984,7 @@ Entity
 Entity
 {
 	name = "Upper Class Chair",
+	displayname = "Ornate Chair",
 	type = "chair",
 	description = "A vertiable throne, used by Our Betters. Made in a Carpentry Workshop. Quality: 0",
 	tags = { "upper_class_module", "chair" },
@@ -987,6 +1000,7 @@ Entity
 Entity
 {
 	name = "Clothes Line 01",
+	displayname = "Small Clothes Line",
 	type = "interiorDecor",
 	description = "Cloooothes",
 	tags = { "lower_class_module", "decor" },
@@ -1017,6 +1031,7 @@ Entity
 Entity
 {
 	name = "Clothes Line 05",
+	displayname = "Large Clothes Line",
 	type = "interiorDecor",
 	description = "Cloooothes",
 	tags = { "lower_class_module", "decor" },
@@ -1077,6 +1092,7 @@ Entity
 Entity
 {
 	name = "LC Cabinet",
+	displayname = "Simple Cabinet",
 	type = "cabinet",
 	description = "A dingy cabinet suitable for the lower classes. Made in a Carpentry Workshop.",
 	tags = { "lower_class_module", "cabinet", "decor" },
@@ -1091,6 +1107,7 @@ Entity
 Entity
 {
 	name = "MC Cabinet",
+	displayname = "Practical Cabinet",
 	type = "cabinet",
 	description = "A cabinet equal parts handsome & practical. Made in a Carpentry Workshop.",
 	tags = { "middle_class_module", "cabinet", "decor" },
@@ -1105,6 +1122,7 @@ Entity
 Entity
 {
 	name = "UC Cabinet",
+	displayname = "Ornate Cabinet",
 	type = "cabinet",
 	description = "A richly-worked cabinet, doubtless full of treasures. Made in a Carpentry Workshop.",
 	tags = { "upper_class_module", "cabinet", "decor", "upper_class_cabinet" },
@@ -1386,6 +1404,7 @@ Entity
 Entity
 {
 	name = "Lower Class Door 00",
+	displayname = "Simple Door",
 	type = "door",
 	description = "A crude but effective door.",
 	tags = { "lower_class_module", "door" },
@@ -1400,6 +1419,7 @@ Entity
 Entity
 {
 	name = "Upper Class Door 00",
+	displayname = "Practical Door",
 	type = "door",
 	description = "An ornately wrought portal suitable for Our Betters.",
 	tags = { "upper_class_module", "door" },
@@ -1414,6 +1434,7 @@ Entity
 Entity
 {
 	name = "Middle Class Door 00",
+	displayname = "Ornate Door",
 	type = "door",
 	description = "A well-cut, fine, and practical door for the middle classes.",
 	tags = { "middle_class_module", "door" },
@@ -1456,6 +1477,7 @@ Entity
 Entity
 {
 	name = "Lower Class Window 00",
+	displayname = "Simple Open Window",
 	type = "buildingDecor",
 	description = "It lets in the cold and lets out the smell.",
 	tags = { "window", "decor" },
@@ -1469,6 +1491,7 @@ Entity
 Entity
 {
 	name = "Lower Class Window 01",
+	displayname = "Simple Closed Window",
 	type = "buildingDecor",
 	description = "It lets in the cold and lets out the smell.",
 	tags = { "window", "decor" },
@@ -1483,6 +1506,7 @@ Entity
 Entity
 {
 	name = "Middle Class Window 00",
+	displayname = "Fancy Window",
 	type = "buildingDecor",
 	description = "A fine window for the middle class; all appears as it should.",
 	tags = { "window", "decor" },
@@ -1497,6 +1521,7 @@ Entity
 Entity
 {
 	name = "Upper Class Window",
+	displayname = "Aristocratic Window",
 	type = "buildingDecor",
 	description = "The finest viewing-glass for the finest people in the Empire.",
 	tags = { "window", "decor" },
@@ -1511,6 +1536,7 @@ Entity
 Entity
 {
 	name = "Stained Glass Window 00",
+	displayname = "Stained Glass Window",
 	type = "buildingDecor",
 	description="A fine stained glass window for use in chapels. (Decor)",
 	tags = { "window", "decor" },
@@ -1525,6 +1551,7 @@ Entity
 Entity
 {
 	name = "Stained Glass Window 01",
+	displayname = "Stained Glass Window",
 	type = "buildingDecor",
 	description="A fine stained glass window for use in chapels. (Decor)",
 	tags = { "window", "decor" },
@@ -1581,6 +1608,7 @@ Entity
 Entity
 {
 	name = "Lower Class Table and Chair Set",
+	displayname = "Simple Table and Chair Set",
 	type = "table",
 	description = "A robust wooden table and chair for the lower classes. Made in a Carpentry Workshop.",
 	tags = { "lower_class_module", "table", "chair", "sittable" },
@@ -1597,6 +1625,7 @@ Entity
 Entity
 {
 	name = "Upper Class Table and Chair Set",
+	displayname = "Ornate Table and Chair Set",
 	type = "table",
 	description = "A lovely table and chair of rich & fabulous construction. Made in a Carpentry Workshop.",
 	tags = { "upper_class_module", "chair", "table", "sittable" },
@@ -1626,6 +1655,7 @@ Entity
 Entity
 {
 	name = "Lower Class Chair",
+	displayname = "Simple Chair",
 	type = "chair",
 	description = "A simple, rugged wooden chair. Made in a Carpentry Workshop.",
 	tags = { "lower_class_module", "chair" },
@@ -1640,6 +1670,7 @@ Entity
 Entity
 {
 	name = "Middle Class Chair",
+	displayname = "Practical Chair",
 	type = "chair",
 	description = "A study, practical chair constructed of fine wood. Made in a Carpentry Workshop.",
 	tags = { "middle_class_module", "chair" },
@@ -1654,6 +1685,7 @@ Entity
 Entity
 {
 	name = "Middle Class Table and Chair Set",
+	displayname = "Practical Tale and Chair Set",
 	type = "table",
 	description = "A practical, well-wrought table and chair. Made in a Carpentry Workshop.",
 	tags = { "middle_class_module", "table", "chair", "sittable" },
@@ -1768,6 +1800,7 @@ Entity
 Entity
 {
 	name = "Pot Amphora 00",
+	displayname = "Tall Amphora Pot",
 	type = "interiorDecor",
 	description = "",
 	tags = { "art", "decor"},
@@ -1782,6 +1815,7 @@ Entity
 Entity
 {
 	name = "Pot Amphora 01",
+	displayname = "Wide Amphora Pot",
 	type = "interiorDecor",
 	description = "",
 	tags = { "art", "decor"},
@@ -1794,6 +1828,7 @@ Entity
 Entity
 {
 	name = "Pot Bell Krater",
+	displayname = "Bell Krater Pot",
 	type = "interiorDecor",
 	description = "",
 	tags = { "art", "decor"},
@@ -1808,6 +1843,7 @@ Entity
 Entity
 {
 	name = "Pot Calyx Krater",
+	displayname = "Calyx Krater Pot",
 	type = "interiorDecor",
 	description = "",
 	tags = { "art", "decor"},
@@ -1878,6 +1914,7 @@ Entity
 Entity
 {
 	name = "Carpet00",
+	displayname = "Ostentatious Carpet",
 	type = "interiorDecor",
 	description = "",
 	tags = { "carpet", "decor"},
@@ -1892,6 +1929,7 @@ Entity
 Entity
 {
 	name = "Carpet01",
+	displayname = "Tasteful Carpet",
 	type = "interiorDecor",
 	description = "",
 	tags = { "carpet", "decor"},
@@ -1906,6 +1944,7 @@ Entity
 Entity
 {
 	name = "Lower Class Rug 00",
+	displayname = "Lower Class Rug",
 	type = "interiorDecor",
 	description = "",
 	tags = { "carpet", "decor"},
@@ -1920,6 +1959,7 @@ Entity
 Entity
 {
 	name = "Middle Class Rug 00",
+	displayname = "Middle Class Rug",
 	type = "interiorDecor",
 	description = "",
 	tags = { "carpet", "decor"},
@@ -1934,6 +1974,7 @@ Entity
 Entity
 {
 	name = "Middle Class Rug 01",
+	displayname = "Middle Class Rug",
 	type = "interiorDecor",
 	description = "",
 	tags = { "carpet", "decor"},
@@ -1948,6 +1989,7 @@ Entity
 Entity
 {
 	name = "Upper Class Rug 00",
+	displayname = "Upper Class Rug",
 	type = "interiorDecor",
 	description = "",
 	tags = { "carpet", "decor"},
@@ -1962,6 +2004,7 @@ Entity
 Entity
 {
 	name = "Lower Class Wall Shrine",
+	displayname = "Simple Wall Shrine",
 	type = "interiorDecor",
 	description = "",
 	tags = { "wall_shrine", "decor" },
@@ -1976,6 +2019,7 @@ Entity
 Entity
 {
 	name = "Upper Class Wall Shrine",
+	displayname = "Ornate Wall Shrine",
 	type = "interiorDecor",
 	description = "",
 	tags = { "wall_shrine", "decor" },
@@ -1990,6 +2034,7 @@ Entity
 Entity
 {
 	name = "Lamp 00",
+	displayname = "Exterior Lamp",
 	type = "buildingDecor",
 	description = "",
 	tags = { "lamp", "decor"},
@@ -2004,6 +2049,7 @@ Entity
 Entity
 {
 	name = "Lamp 01",
+	displayname = "Exterior Lamp",
 	type = "buildingDecor",
 	description = "",
 	tags = { "lamp", "decor"},
@@ -2018,6 +2064,7 @@ Entity
 Entity
 {
 	name = "Lamp 02",
+	displayname = "Exterior Lamp",
 	type = "buildingDecor",
 	description = "",
 	tags = { "lamp", "decor"},
@@ -2032,6 +2079,7 @@ Entity
 Entity
 {
 	name = "Lamp 03",
+	displayname = "Exterior Lamp",
 	type = "buildingDecor",
 	description = "",
 	tags = { "lamp", "decor"},
@@ -2046,6 +2094,7 @@ Entity
 Entity
 {
 	name = "Lamp 04",
+	displayname = "Exterior Lamp",
 	type = "buildingDecor",
 	description = "",
 	tags = { "lamp", "decor"},
@@ -2200,6 +2249,7 @@ Entity
 Entity
 {
 	name = "Musket Locker",
+	displayname = "Improvised Musket Locker",
 	type = "frontaccessmodule",
 	description="This is a version of the archaic firearm upon which the Empire was built. Improvised with a hardwood barrel on a civilian pistol base. Place this module in a barracks to unlock this weapon for that military crew.",
 	tags = { "locker", "musket_locker" },
@@ -2260,6 +2310,7 @@ Entity
 Entity
 {
 	name = "Tripistol Locker",
+	displayname = "Ceramic Tripistol Locker",
 	type = "frontaccessmodule",
 	description = "It's a tripistol. What does that even mean? Place this module in a barracks to unlock this weapon for that military crew.",
 	tags = { "locker", "tripistol_locker" },
