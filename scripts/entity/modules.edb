@@ -1,0 +1,2334 @@
+--[[ Quick notes on what these entries do
+
+name = Entity database name. Look these up with this. For now, it's the display name too.
+
+type = This has a number of possible entries. Most work modules are frontaccessmodules.
+Decors are interiorDecor. beds, tables and chairs are special. These determine how the game interacts with
+them. It's very complicated.
+
+description = The tooltip description for the module.
+
+tags = the tags for the module. Various jobs and other things will look these up when interacting
+with the object.
+
+icon_skin = the file to be used when looking up the icon entry.
+
+icon = the icon name in the above xml file.
+
+tier = numbers are 1-4. This is used to determine how long the module takes to build. Higher
+numbers take longer. This does not affect build cost or anything else, those are set in buildings.xml.
+]]
+
+-- front access modules:
+Entity
+{
+	name = "Stone Ceramics Kiln",
+	type = "frontaccessmodule",
+	description = "A crude kiln built of rough stone, suitable (just) for firing ceramics. Quality: -1",
+	tags = { "ceramics_kiln", "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="stone_kiln",
+	repair_materials = { "rough_stone_block", },
+	tier=1,
+	quality=-1,
+	upkeep_type=1,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Brick Ceramics Kiln",
+	type = "frontaccessmodule", 
+	description = "A kiln built of solid bricks for firing ceramic products - unlike a stone kiln, it is hot enough to create glass. Made in a Ceramics Workshop. Quality: -1",
+	tags = { "ceramics_kiln", "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="kiln_ceramics_brick",
+	tier=2,
+	repair_materials = { "bricks", "rough_stone_block", },
+	quality=-1,
+	upkeep_type=2,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Iron Ceramics Kiln",
+	type = "frontaccessmodule",
+	description = "A fine kiln built of iron plates for firing ceramic products. Made in a Metalworks Workshop. Quality: -1",
+	tags = { "ceramics_kiln", "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="kiln_ceramics_iron",
+	tier=3,
+	repair_materials = { "bricks", "iron_plates", "iron_pipes", },
+	quality=-1,
+	upkeep_type=3,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Stone Smelting Crucible",
+	type = "frontaccessmodule",
+	description = "A crude smelter built of rough stone, suitable (just) for extracting metals from ores. Made in a Ceramics Workshop. Quality: -1",
+	tags = { "crucible", "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="stone_crucible",
+	repair_materials = { "rough_stone_block", },
+	tier=1,
+	quality=-1,
+	upkeep_type=1,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Stone Charcoal Kiln",
+	type = "frontaccessmodule",
+	description = "A crude kiln built of rough stone, suitable (just) for producing charcoal. Made in a Ceramics Workshop. Quality: -1",
+	tags = { "charcoal_kiln", "kiln", "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="stone_kiln",
+	repair_materials = { "rough_stone_block", },
+	tier=1,
+	quality=-1,
+	upkeep_type=1,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Brick Charcoal Kiln",
+	type = "frontaccessmodule",
+	description = "A kiln built of solid bricks for producing charcoal. Made in a Ceramics Workshop. Quality: -1",
+	tags = { "charcoal_kiln", "kiln", "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="brick_charcoal_kiln",
+	repair_materials = { "rough_stone_block", "bricks", },
+	tier=2,
+	quality=-1,
+	upkeep_type=2,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Iron Charcoal Kiln",
+	type = "frontaccessmodule",
+	description = "A fine kiln built of iron plates for producing charcoal. Made in a Metalworks Workshop. Quality: -1",
+	tags = { "charcoal_kiln", "kiln", "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="iron_charcoal_kiln",
+	repair_materials = { "bricks", },
+	tier=3,
+	quality=-1,
+	upkeep_type=3,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Small Iron Oven",
+	type = "frontaccessmodule",
+	description = "A small yet sophisticated iron oven for cooking meals. Made in a Metalworks Workshop. Quality: -1",
+	tags = { "oven", "machine" },
+	icon_skin="ui//orderIcons.xml",
+	icon="small_oven_icon",
+	repair_materials = { "bricks", },
+	tier=3,
+	quality=-1,
+	upkeep_type=3,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Small Stone Oven",
+	type = "frontaccessmodule",
+	description = "A crude stone oven for cooking hearty colonial meals. Quality: -1",
+	tags = { "oven", "machine" },
+	icon_skin="ui//orderIcons.xml",
+	icon="stone_oven",
+	repair_materials = { "rough_stone_block", },
+	tier=1,
+	quality=-1,
+	upkeep_type=1,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Iron Smelting Crucible",
+	type = "frontaccessmodule",
+	description = "An industrial machine for smelting metal from ore. Made in a Metalworks Workshop. Quality: -1",
+	tags = { "crucible",  "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="crucible_icon",
+	tier=3,
+	quality=-1,
+	upkeep_type=3,
+	upkeep_quantity=2
+}
+
+
+Entity
+{
+	name = "Mixing Tank",
+	type = "frontaccessmodule",
+	description = "A large tank with a mechanical mixing apparatus. Used to mix ingredients for brewing alchohol.  Made in a Metalworks Workshop. Quality: -1",
+	tags = { "mixing_tank",  "machine", "brewing_device" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="mixing_tank_icon",
+	tier=2,
+	quality=-1,
+	upkeep_type=3,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Brewing Vat",
+	type = "frontaccessmodule",
+	description = "A large tub used to mix ingredients for brewing alchohol.  Made in a Carpentry Workshop. Quality: -1",
+	tags = { "mixing_tank",  "machine", "brewing_device" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="simple_mixing_vat",
+	tier=2,
+	repair_materials = { "planks", },
+	quality=-1,
+	upkeep_type=1,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Still",
+	type = "frontaccessmodule",
+	description = "The distillation of strong spirits is important for the well-being of any colony. The industrial still will ensure your soldiers their rum rations and keep the upper class supplied with gin.  Made in a Metalworks Workshop. Quality: -1",
+	tags = { "still",  "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="still_icon",
+	tier=2,
+	quality=-1,
+	upkeep_type=3,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Carpentry Workbench",
+	type = "frontaccessmodule",
+	description = "A basic frontier workbench for carpentry and woodworking. Quality: -1",
+	tags = { "saw_source", "carpentry_workbench",  "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="carpentry_workbench_icon",
+	repair_materials = { "timber" },
+	tier=1,
+	quality=-1,
+	upkeep_type=1,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Ceramics Workbench",
+	type = "frontaccessmodule",
+	description = "A very basic frontier workbench for making ceramic products. Made in a Carpentry Workshop. Quality: -1",
+	tags = { "ceramics_workbench",  "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="ceramics_workbench_icon",
+	repair_materials = { "planks" },
+	tier=1,
+	quality=-1,
+	upkeep_type=2,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Workbench",
+	type = "frontaccessmodule",
+	description = "A basic workbench for crafting a variety of different items. Made in a Carpentry Workshop. Quality: -1",
+	tags = { "workbench",  "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="generic_workbench_icon",
+	repair_materials = { "planks" },
+	tier=1,
+	quality=-1,
+	upkeep_type=2,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Decor Workbench",
+	type = "frontaccessmodule",
+	description = "A workbench for crafting bricabrac and Decor modules. Use this to improve the quality of your buildings! Made in a Carpentry Workshop. Quality: -1",
+	tags = { "workbench",  "machine" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="workbench_decor",
+	repair_materials = { "planks" },
+	tier=1,
+	quality=-1,
+	upkeep_type=2,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Advanced Workbench",
+	type = "frontaccessmodule",
+	description = "An advanced workbench for crafting items in bulk. Made in a Carpentry Workshop. Quality: -1",
+	tags = { "workbench", "advanced_workbench", "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="workbench_advanced",
+	repair_materials = { "planks" },
+	tier=1,
+	quality=-1,
+	upkeep_type=3,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Power Core Dynamo",
+	type = "frontaccessmodule",
+	description = "A complex device with a turbine for winding torque-based Steam Knight components.",
+	tags = { "power_core_dynamo", "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="turbine_icon",
+	repair_materials = { "planks" },
+	tier=4,
+	quality=-2,
+	upkeep_type=3,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Steam Knight Forge",
+	type = "frontaccessmodule",
+	description = "This monstrous forge is necessary to allow the huge parts of a steam knight to fit inside. Once a steam knight is forged, it can never be disassembled without destroying it.",
+	tags = { "steam_knight_forge", "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="boiler_icon",
+	repair_materials = { "planks" },
+	tier=4,
+	quality=-2,
+	upkeep_type=3,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Chemistry Workbench",
+	type = "frontaccessmodule",
+	description = "Acts of Chemistry can be carried out using the equipment available at this workbench. Made in a Carpentry Workshop. Quality: -1",
+	tags = { "research_source", "chemistry_workbench",  "machine", "lab_equipment" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="chemistry_workbench_icon",
+	repair_materials = { "planks" },
+	tier=2,
+	quality=-1,
+	upkeep_type=2,
+	upkeep_quantity=1
+} 
+
+Entity
+{
+	name = "Smithing Forge",
+	type = "frontaccessmodule",
+	description = "For the forging of metal materials, tools, and weapons. Made in a Metalworks Workshop. Quality: -1",
+	tags = { "forge", "lathe_source", "stamper_source",  "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="smithing_forge_icon",
+	repair_materials = { "planks", "bricks", },
+	tier=2,
+	quality=-1,
+	upkeep_type=2,
+	upkeep_quantity=1
+}
+
+
+Entity
+{
+	name = "Booze Vat",
+	type = "frontaccessmodule",
+	description = "The industrial size booze vat can store many gallons of fine hooch. Made in a Carpentry Workshop. Quality: -1",
+	tags = { "machine", "booze_vat" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="icon_boozevat",
+	tier=2,
+	quality=-1,
+	upkeep_type=2,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Spinning Mule",
+	type = "frontaccessmodule",
+	description = "The spinning mule weaves cloth at entirely unsafe speeds. Quality: -1",
+	tags = { "machine", "spinning_mule", "workbench" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="placeholder",
+	tier=2,
+	quality=-1,
+	upkeep_type=1,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Wooden Altar",
+	type = "frontaccessmodule",
+	description = "A 'humble' wooden altar with a rather nice finish. Made in a Carpentry Workshop. Quality: -1",
+	tags = { "chapel_module", "chapel_altar", "chapel_altar1" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="chapel_altar_wood",
+	tier=1,
+	quality=-1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Stone Altar",
+	type = "frontaccessmodule",
+	description = "A finely crafted stone altar. Made in a Ceramics Workshop. Quality: 0",
+	tags = { "chapel_module", "chapel_altar", "chapel_altar2" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="chapel_altar_stone",
+	tier=1,
+	quality=0,
+	upkeep_type=2,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Large Stone Altar",
+	type = "frontaccessmodule",
+	description = "An impressively large stone altar. Made in a Ceramics Workshop. Quality: 0",
+	tags = { "chapel_module", "chapel_altar", "chapel_altar3" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="chapel_altar_stone_large",
+	tier=2,
+	quality=0,
+	upkeep_type=3,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Macroscope",
+	type = "frontaccessmodule",
+	description = "The macroscope allows a natural-scientist to scientifically examine objects of macroscopic size. Made in a Metalworks Workshop. Quality: -1",
+	tags = { "macroscope", "lab_equipment", "machine" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="macroscope",
+	tier=3,
+	quality=-1,
+	upkeep_type=3,
+	upkeep_quantity=2,
+}
+
+
+Entity
+{
+	name = "Candelabra",
+	type = "interiorDecor",
+	description = "A large brass candelabra. Made in a Metalworks Workshop. Quality: +1",
+	tags = { "chapel_module", "decor"},
+	icon_skin = "ui//orderIcons2.xml",
+	icon="chapel_candelabra",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Church Banner",
+	type = "interiorDecor",
+	description = "A banner displaying the symbol of the Church of The Divine Mechanic, The Cog Rho. Made in a Metalworks Workshop. Quality: +1",
+	tags = { "chapel_module", "decor"},
+	icon_skin = "ui//orderIcons2.xml",
+	icon="chapel_banner",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Church Pews",
+	type = "chair",
+	description = "Wooden pews for a chapel. Quality: -1",
+	tags = { "chapel_module"},
+	icon_skin = "ui//orderIcons2.xml",
+	icon="pews",
+	tier=1,
+	quality=-1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+-- DYNAMICS MODULES
+Entity
+{
+	name = "Steam Oven",
+	type = "frontaccessmodule",
+	description = "A technological marvel with a cost to match, this oven uses aetheric forces heat your food while infusing it with humour-enhancing fluid. Quality: -1",
+	tags = { "steam_oven", "oven", "powered_module", "machine" },
+	default_animation = "off",
+	icon_skin = "ui//orderIcons.xml",
+	icon="steam_oven",
+	repair_materials = { "steel_plate", },
+	tier=4,
+	quality=-1,
+	upkeep_type=4,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Power Saw",
+	type = "frontaccessmodule",
+	description = "The final word in plank production. Widely used despite being nicknamed \"The Widowmaker\" for it's role in many a grievous industrial incident.",
+	tags = { "power_saw", "saw_source", "powered_module", "powered_saw_source", "machine" },
+	default_animation = "unpowered",
+	icon_skin = "ui//orderIcons.xml",
+	icon="power_saw_icon",
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	quality=-1,
+	upkeep_type=4,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Ceramics Press",
+	type = "frontaccessmodule",
+	description = "Invented by Lord Palmerstoke himself, the Ceramics Press is an alarming device guaranteed to crunch clay and other materials into submission with a minimum of casualties. Quality: -1",
+	default_animation = "unpowered", --check this
+	tags = { "ceramics_kiln", "ceramics_press", "powered_module",  "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="ceramics_press", --may need icon
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	quality=-1,
+	upkeep_type=4,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Industrial Kiln",
+	type = "frontaccessmodule",
+	description = "A factory-grade charcoal kiln that would impress even the Great Glaubenschaufel. A monolith of brick and steel. Quality: -1",
+	default_animation = "unpowered", --check this
+	tags = { "industrial_kiln", "kiln", "powered_module",  "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="iron_kiln", --may need icon
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	quality=-1,
+	upkeep_type=4,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Grinder",
+	type = "frontaccessmodule",
+	description = "Originally invented by a small cult of coffee addicts, this fearsome device now sees widespread use in the processing of ore and stone. Quality: -1",
+	default_animation = "unpowered", --check this
+	tags = { "grinder", "powered_module", "machine" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="grinder",
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	quality=-1,
+	upkeep_type=4,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Power Stamper",
+	type = "frontaccessmodule",
+	description = "A vital part of every Steam Knight manufactory, the power stamper will smash metal, or anything else that happens to get caught in it, into nice flat plates. Quality: -1",
+	default_animation = "unpowered", --check this
+	tags = { "power_stamper", "powered_module",  "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="power_stamper", --may need icon
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	quality=-1,
+	upkeep_type=4,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Power Lathe",
+	type = "frontaccessmodule",
+	description = "Companion to the power stamper, the power lathe makes pipes and weapon barrels extremely quickly via the use of tiny aetheric vortices. Please keep all items firmly attached to your person when standing near the vortices. Quality: -1",
+	default_animation = "unpowered", --NEEDS ANIMATIONS
+	tags = { "power_lathe", "lathe_source", "powered_module",  "machine" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="power_lathe", --may need icon
+	tier=4,
+	quality=-1,
+	upkeep_type=4,
+	upkeep_quantity=1
+}
+
+--start of tempblock
+
+Entity
+{
+	name = "Dewatering Pump",
+	type = "frontaccessmodule",
+	description = "It makes the waters not be in the mines. Quality: -1",
+	default_animation = "unpowered", --check this
+	tags = { "dewatering_pump", "powered_module",  "machine" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="dewatering_pump", --may need icon
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	quality=-1,
+	upkeep_type=2,
+	upkeep_quantity=1
+}
+
+
+Entity
+{
+	name = "Ventilation Unit",
+	type = "frontaccessmodule",
+	description = "For putting air into your vents. Quality: -1",
+	default_animation = "unpowered", --check this
+	tags = { "ventilation_unit", "powered_module",  "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="ventilation_unit",
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	quality=-1,
+	upkeep_type=3,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Steam Distributor",
+	type = "frontaccessmodule",
+	description = "It makes all your things steamy.",
+	default_animation = "unpowered", --check this
+	tags = { "steam_distributor", "powered_module",  "machine" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="steam_distributor", --may need icon
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	quality=-1,
+	upkeep_type=4,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Pneumatic Commodity Snoot",
+	type = "frontaccessmodule",
+	description = "A pneumatic snoot that transports items in relative safety from point to point. Quality: -1",
+	default_animation = "idle",
+	tags = { "commodity_pump", "powered_module",  "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="pneumatic_pipe", 
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	quality=-1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+--[[
+Entity
+{
+	name = "Voltaic Transformer",
+	type = "frontaccessmodule",
+	description = "A thoroughly worrisome device, this transformer uses the newly discovered principal of Voltaics to create light from other forms of energy. Quality: -1",
+	tags = { "voltaic_transformer", "powered_module",  "machine" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="voltaic_transformer", --may need icon
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	quality=-1
+}
+--]]
+
+Entity
+{
+	name = "Airship Mast",
+	type = "airship_mast",
+	description = "Used to position supply drops.",
+	tags = { "mast" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="icon_airshiptower1",
+	repair_materials = { "planks", },
+	tier=4,
+	standalone=true,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Turbine",
+	type = "frontaccessmodule",
+	description = "Spinny.",
+	tags = { "turbine", "powered_module",  "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="turbine_icon", --may need icon
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	standalone=true,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Dynamics Support",
+	type = "frontaccessmodule",
+	description = "Holds up steam and water pipes, and axles.",
+	tags = { "powered_module",  "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="dynamics_category_icon", --may need icon
+	repair_materials = { "planks", },
+	tier=4,
+	standalone=true,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Boiler",
+	type = "frontaccessmodule",
+	description = "It makes things boiled.",
+	tags = { "boiler", "powered_module",  "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="boiler_icon", --may need icon
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	standalone=true,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Windmill",
+	type = "frontaccessmodule",
+	description = "A mill that uses wind.",
+	tags = { "windmill", "powered_module",  "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="windmill", --may need icon
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	standalone=true,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+
+}
+
+Entity
+{
+	name = "Water Pump",
+	type = "frontaccessmodule",
+	description = "Pumps water real good.",
+	tags = { "water_pump", "powered_module",  "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="waterpump_icon", --may need icon
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	standalone=true,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Dynamo",
+	type = "frontaccessmodule",
+	description = "A Dynamo for Dyning your Amos.",
+	tags = { "dynamo", "powered_module",  "machine" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="waterpump_icon", --may need icon
+	repair_materials = { "steel_ingots", },	
+	tier=4,
+	standalone=true,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Lamp (Small)",
+	type = "module",
+	description = "A small, standalone lamp for illuminating the darkness.",
+	tags = { "lamp",  "machine" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="lamppost00", --may need icon
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	standalone=true,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Lamp (Medium)",
+	type = "module",
+	description = "A medium-sized, standalone lamp for illuminating a medium-sized quantity of darkness.",
+	tags = { "lamp",  "machine" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="lamppost01", --may need icon
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	standalone=true,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Lamp (Large)",
+	type = "module",
+	description = "A large, standalone lamp for illuminating a lot of darkness.",
+	tags = { "lamp",  "machine" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="lamppost02", --may need icon
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	standalone=true,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Bunker",
+	type = "bunker",
+	description = "The bunker provides a safe space for troops to fire upon the enemy with their weaponry, but may be destroyed by sufficient firepower.",
+	tags = { "bunker",  "machine" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="bunker", --may need icon
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	standalone=true,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Minum Gun Turret",
+	type = "frontaccessmodule",
+	description = "What is it that we have got? The Minum Gun and they have not.",
+	tags = { "minum_gun_turret",  "machine" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="bunker", --may need icon
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	standalone=true,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Jail Cell",
+	type = "frontaccessmodule",
+	description = "Criminals go here. Quality: -1",
+	tags = { "jail_cell", "machine" },
+	default_animation = "idle",
+	icon_skin = "ui//orderIcons2.xml",
+	icon="jail_cell", --may need icon
+	repair_materials = { "steel_ingots", },
+	tier=4,
+	quality=-1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+-- beds and things
+
+Entity
+{
+	name = "Cot",
+	type = "bed",
+	sleep_positive = 0,
+	sleep_negative = -25,
+	bedType = "bed",
+     restBonus = 1,
+     bedSocialClass = "lower",
+	description = "A crude cot, suitable for a lower-class flophouse. Made in a Carpentry Workshop. Quality: -1",
+	tags = { "lower_class_module", "lower_class_bed", "bed" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="cot_icon",
+	repair_materials = { "planks", },
+	tier=1,
+	quality=-1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Lower Class Bed",
+	type = "bed",
+	sleep_positive = 0,
+	sleep_negative = -25,
+     restBonus = 2,
+     restQuality = "low",
+     bedSocialClass = "lower",
+	description = "A crude bed, suitable for the lower-classes. Made in a Carpentry Workshop. Quality: -1",
+	tags = { "lower_class_module", "lower_class_bed", "bed" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="lc_bed_icon",
+	repair_materials = { "planks",},
+	tier=1,
+	quality=-1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Middle Class Single Bed",
+	type = "bed",
+	sleep_positive = 10,
+	sleep_negative = -25,
+	bedType = "bed",
+     restBonus = 3,
+     bedSocialClass = "middle",
+	description = "A comfortable single bed, with a restrained aesthetic that appeals to the no-nonsense middle class. Made in a Carpentry Workshop. Quality: -1",
+	tags = { "middle_class_module", "middle_class_bed", "bed" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="mc_bed_icon",
+	repair_materials = { "planks", },
+	tier=2,
+	quality=-1,
+	upkeep_type=2,
+	upkeep_quantity=1,
+}
+
+Entity
+{
+	name = "Middle Class Bed",
+	type = "bed",
+	sleep_positive = 10,
+	sleep_negative = -25,
+	bedType = "bed",
+     restBonus = 4,
+     bedSocialClass = "middle",
+	description = "A comfortable bed, with a restrained aesthetic that appeals to the no-nonsense middle class. Made in a Carpentry Workshop. Quality: -1",
+	tags = { "middle_class_module", "middle_class_bed", "bed" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="mc_bed_icon",
+	repair_materials = { "planks", },
+	tier=2,
+	quality=-1,
+	upkeep_type=1,
+	upkeep_quantity=1,
+}
+
+Entity
+{
+	name = "Upper Class Bed",
+	type = "bed",
+	sleep_positive = 25,
+	sleep_negative = -25,
+	bedType = "bed",
+     restBonus = 5,
+     bedSocialClass = "upper",
+	description = "A lavish bed, ostentatious enough for the upper classes. Made in a Carpentry Workshop. Quality: -1",
+	tags = { "upper_class_module", "upper_class_bed", "bed" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="uc_bed_icon",
+	repair_materials = { "planks", "ingot_of_gold" },
+	tier=2,
+	quality=-1,
+	upkeep_type=3,
+	upkeep_quantity=1,
+}
+
+Entity
+{
+	name = "Upper Class Chair",
+	type = "chair",
+	description = "A vertiable throne, used by Our Betters. Made in a Carpentry Workshop. Quality: 0",
+	tags = { "upper_class_module", "chair" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="uc_chair_icon",
+	tier=2,
+	repair_materials = { "planks", "ingot_of_gold" },
+	quality=0,
+	upkeep_type=3,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Clothes Line 01",
+	type = "interiorDecor",
+	description = "Cloooothes",
+	tags = { "lower_class_module", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="clothesline_short",
+	tier=1,
+	repair_materials = { "planks", },
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Clothes Line 02",
+	type = "interiorDecor",
+	description = "Cloooothes",
+	tags = { "lower_class_module", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="clothesline_short",
+	tier=1,
+	repair_materials = { "planks", },
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Clothes Line 05",
+	type = "interiorDecor",
+	description = "Cloooothes",
+	tags = { "lower_class_module", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="clothesline_long",
+	tier=1,
+	repair_materials = { "planks", },
+	quality=2,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Clothes Line 06",
+	type = "interiorDecor",
+	description = "Cloooothes",
+	tags = { "lower_class_module", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="clothesline_long",
+	tier=1,
+	repair_materials = { "planks", },
+	quality=2,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+
+
+Entity
+{
+	name = "Fancy Bookshelf",
+	type = "bookshelf",
+	description = "Fancy reading material dwells here. Made in a Carpentry Workshop.",
+	tags = { "upper_class_module", "decor", "bookshelf", "training_bookshelf2" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="icon_bookshelf_uc",
+	tier=2,
+	quality=0,
+	upkeep_type=2,
+	upkeep_quantity=1,
+}
+
+Entity
+{
+	name = "Bookshelf",
+	type = "bookshelf",
+	description = "Reading material dwells here. Made in a Carpentry Workshop.",
+	tags = { "middle_class_module", "decor", "bookshelf", "training_bookshelf1" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="icon_bookshelf_mc",
+	tier=2,
+	quality=0,
+	upkeep_type=1,
+	upkeep_quantity=1,
+}
+
+Entity
+{
+	name = "LC Cabinet",
+	type = "cabinet",
+	description = "A dingy cabinet suitable for the lower classes. Made in a Carpentry Workshop.",
+	tags = { "lower_class_module", "cabinet", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="icon_lc_cabinet",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "MC Cabinet",
+	type = "cabinet",
+	description = "A cabinet equal parts handsome & practical. Made in a Carpentry Workshop.",
+	tags = { "middle_class_module", "cabinet", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="icon_mc_cabinet",
+	tier=2,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "UC Cabinet",
+	type = "cabinet",
+	description = "A richly-worked cabinet, doubtless full of treasures. Made in a Carpentry Workshop.",
+	tags = { "upper_class_module", "cabinet", "decor", "upper_class_cabinet" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="icon_uc_cabinet",
+	tier=2,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Bureaucrat's Cabinet",
+	type = "cabinet",
+	description = "A cabinet for storing important documents, never to be seen again. Made in a Carpentry Workshop.",
+	tags = { "cabinet", "middle_class_module", "furniture" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="bureaucrat_cabinet_icon",
+	tier=2,
+	quality=-1,
+	upkeep_type=2,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Bureaucrat's Desk",
+	type = "desk",
+	description = "Just as a running engine gives off heat, so the functioning of the empire generates massive amounts of paperwork. An improvement over the Standing Desk, generating double the number of Diplomacy Points. Made in a Carpentry Workshop.",
+	tags = { "desk", "furniture",  "middle_class_module", "diplomatic_desk", "diplomatic_desk2"},
+	icon_skin = "ui//orderIcons.xml",
+	icon="bureaucrat_desk_icon",
+	tier=2,
+	quality=-1,
+	upkeep_type=2,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Standing Desk",
+	type = "desk",
+	description = "An exceedingly practical design, the standing desk allows the Overseer to maintain a position of Maximum Industry while processing paperwork. Made in a Carpentry Workshop.",
+	tags = {  "desk", "standing_desk", "furniture",  "middle_class_module", "diplomatic_desk", "diplomatic_desk1" },
+	icon_skin = "ui//orderIcons.xml",
+	icon = "standing_desk_icon",
+	tier=1,
+	quality=-1,
+	upkeep_type=1,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Mineshaft Module",
+	type = "mineshaftmodule",
+	description = "Underground mining is necessary to ensure long term supplies of minerals.",
+	tags = { "mineshaft" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="mineshaft_image",
+	tier=2,
+	quality=-1,
+	upkeep_type=1,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Chalkboard",
+	type = "interiorDecor",
+	description = "A board upon which to scrawl notes and diagrams. Made in a Carpentry Workshop.",
+	tags = { "chalkboard", "lab_equipment", "machine" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="chalkboard",
+	tier=1,
+	quality=-1,
+	upkeep_type=2,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Vacuum Chamber",
+	type = "frontaccessmodule",
+	description = "Exposes specimens to vacuum for the furtherance of Science. Made in a Metalworks Workshop.",
+	tags = { "vacuum_chamber", "lab_equipment", "machine" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="vacuum_chamber",
+	tier=3,
+	quality=-1,
+	upkeep_type=4,
+	upkeep_quantity=2,
+}
+
+Entity
+{
+	name = "Rare Painting",
+	type = "interiorDecor",
+	description = "An ostentatious painting by a certain famous artist - place this astonishing rarity in a house to increase your population cap.",
+	tags = { "painting", "art", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="decor_uc_icon",
+	tier=1,
+	quality=7,
+	upkeep_type=-1,
+	upkeep_quantity=-1,
+	models={"models/buildingProps/pictureFrameUc01.upm","models/buildingProps/pictureFrameUc02.upm","models/buildingProps/pictureFrameUc03.upm","models/buildingProps/pictureFrameUc04.upm","models/buildingProps/pictureFrameUc05.upm"}
+}
+
+Entity
+{
+	name = "Painting Uc 01",
+	type = "interiorDecor",
+	description = "An ostentatious painting of high class.",
+	tags = { "painting", "art", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="decor_uc_icon",
+	tier=1,
+	quality=7,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Painting Uc 02",
+	type = "interiorDecor",
+	description = "An ostentatious painting of high class.",
+	tags = { "painting", "art", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="decor_uc_icon",
+	tier=1,
+	quality=7,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Painting Uc 03",
+	type = "interiorDecor",
+	description = "An ostentatious painting of high class.",
+	tags = { "painting", "art", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="decor_uc_icon",
+	tier=1,
+	quality=7,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Painting Uc 04",
+	type = "interiorDecor",
+	description = "An ostentatious painting of high class.",
+	tags = { "painting", "art", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="decor_uc_icon",
+	tier=1,
+	quality=7,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Painting Mc 00",
+	type = "interiorDecor",
+	description = "A straightforward and reasonable painting of middling class.",
+	tags = { "painting", "art", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="decor_mc_icon",
+	tier=1,
+	quality=4,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Painting Mc 01",
+	type = "interiorDecor",
+	description = "A straightforward and reasonable painting of middling class.",
+	tags = { "painting", "art", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="decor_mc_icon",
+	tier=1,
+	quality=4,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Painting Mc 02",
+	type = "interiorDecor",
+	description = "A straightforward and reasonable painting of middling class.",
+	tags = { "painting", "art", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="decor_mc_icon",
+	tier=1,
+	quality=4,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Painting Mc 03",
+	type = "interiorDecor",
+	description = "A straightforward and reasonable painting of middling class.",
+	tags = { "painting", "art", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="decor_mc_icon",
+	tier=1,
+	quality=4,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Painting Lc 00",
+	type = "interiorDecor",
+	description = "A rude and poorly-executed painting of low class.",
+	tags = { "painting", "art", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="decor_lc_icon",
+	tier=1,
+	quality=2,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Painting Lc 01",
+	type = "interiorDecor",
+	description = "A rude and poorly-executed painting of low class.",
+	tags = { "painting", "art", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="decor_lc_icon",
+	tier=1,
+	quality=2,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Painting Lc 02",
+	type = "interiorDecor",
+	description = "A rude and poorly-executed painting of low class.",
+	tags = { "painting", "art", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="decor_lc_icon",
+	tier=1,
+	quality=2,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Painting Lc 03",
+	type = "interiorDecor",
+	description = "A rude and poorly-executed painting of low class.",
+	tags = { "painting", "art", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="decor_lc_icon",
+	tier=1,
+	quality=2,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Lower Class Door 00",
+	type = "door",
+	description = "A crude but effective door.",
+	tags = { "lower_class_module", "door" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="lower_class_door_icon",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Upper Class Door 00",
+	type = "door",
+	description = "An ornately wrought portal suitable for Our Betters.",
+	tags = { "upper_class_module", "door" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="upper_class_door_icon",
+	tier=2,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Middle Class Door 00",
+	type = "door",
+	description = "A well-cut, fine, and practical door for the middle classes.",
+	tags = { "middle_class_module", "door" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="middle_class_door_icon",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Loading Bay Door",
+	type = "door",
+	description = "",
+	tags = { "loading_bay_door", "door" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="icon_loadingbaywood",
+	tier=2,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Metal Loading Bay Door",
+	type = "door",
+	description = "",
+	tags = { "loading_bay_door", "door" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="icon_loadingbaymetal",
+	tier=2,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Lower Class Window 00",
+	type = "buildingDecor",
+	description = "It lets in the cold and lets out the smell.",
+	tags = { "window", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="lc_window_icon",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+Entity
+{
+	name = "Lower Class Window 01",
+	type = "buildingDecor",
+	description = "It lets in the cold and lets out the smell.",
+	tags = { "window", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="lc_window_icon2",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Middle Class Window 00",
+	type = "buildingDecor",
+	description = "A fine window for the middle class; all appears as it should.",
+	tags = { "window", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="mc_window_icon",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Upper Class Window",
+	type = "buildingDecor",
+	description = "The finest viewing-glass for the finest people in the Empire.",
+	tags = { "window", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="uc_window_icon",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Stained Glass Window 00",
+	type = "buildingDecor",
+	description="A fine stained glass window for use in chapels. (Decor)",
+	tags = { "window", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="window_stained_glass",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Stained Glass Window 01",
+	type = "buildingDecor",
+	description="A fine stained glass window for use in chapels. (Decor)",
+	tags = { "window", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="window_stained_glass",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Wooden Church Window 00",
+	type = "buildingDecor",
+	description="A simple wooden window for use in chapels. (Decor)",
+	tags = { "window", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="placeholder",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Wood Plinth",
+	type = "interiorDecor",
+	description="A simple wooden window for use in chapels. Made in a Carpentry Workshop. (Decor) ",
+	tags = { "plinth", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="plinth_wood",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Stone Plinth",
+	type = "interiorDecor",
+	description="A simple wooden window for use in chapels. Made in a Ceramics Workshop. (Decor)",
+	tags = { "plinth", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="plinth_marble",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Lower Class Table and Chair Set",
+	type = "table",
+	description = "A robust wooden table and chair for the lower classes. Made in a Carpentry Workshop.",
+	tags = { "lower_class_module", "table", "chair", "sittable" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="lc_table_icon",
+	tier=1,
+	repair_materials={"planks"},
+	quality=0,
+	upkeep_type=1,
+	upkeep_quantity=1
+}
+
+
+Entity
+{
+	name = "Upper Class Table and Chair Set",
+	type = "table",
+	description = "A lovely table and chair of rich & fabulous construction. Made in a Carpentry Workshop.",
+	tags = { "upper_class_module", "chair", "table", "sittable" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="uc_table_icon",
+	tier=2,
+	repair_materials = { "planks", "ingot_of_gold" },
+	quality=0,
+	upkeep_type=3,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Steam Radiator",
+	type = "interiorDecor",
+	description = "Ah, the warming steam of Civilization! Made in a Metalworks Workshop.",
+	tags = { "oven", "machine", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="steam_radiator",
+	tier=2,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Lower Class Chair",
+	type = "chair",
+	description = "A simple, rugged wooden chair. Made in a Carpentry Workshop.",
+	tags = { "lower_class_module", "chair" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="lc_chair_icon",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Middle Class Chair",
+	type = "chair",
+	description = "A study, practical chair constructed of fine wood. Made in a Carpentry Workshop.",
+	tags = { "middle_class_module", "chair" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="mc_chair_icon",
+	tier=1,
+	quality=0,
+	upkeep_type=1,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Middle Class Table and Chair Set",
+	type = "table",
+	description = "A practical, well-wrought table and chair. Made in a Carpentry Workshop.",
+	tags = { "middle_class_module", "table", "chair", "sittable" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="mc_table_icon",
+	tier=2,
+	repair_materials={"planks"},
+	quality=0,
+	upkeep_type=1,
+	upkeep_quantity=1
+}
+
+
+Entity
+{
+	name = "Spice Rack",
+	type = "interiorDecor",
+	description = "A dash of paprika, perhaps? A pinch of pepper? Made in a Carpentry Workshop.",
+	tags = { "interiorDecor", "decor", "spice_rack"},
+	icon_skin = "ui//orderIcons.xml",
+	icon="spice_rack",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Hanging Pots",
+	type = "interiorDecor",
+	description = "This cookware is the chef's sword & shield in battle against raw food. Made in a Metalworks Workshop.",
+	tags = { "interiorDecor", "decor", "hanging_pots"},
+	icon_skin = "ui//orderIcons.xml",
+	icon="hanging_pots",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Lower Class Picture Frame Cluster 00",
+	type = "interiorDecor",
+	description = "A rude piece of art fit for the lower classes.",
+	tags = { "art", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="lc_frame_cluster",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Lower Class Picture Frame Cluster 01",
+	type = "interiorDecor",
+	description = "A piece of rude art fit for the lower classes.",
+	tags = { "art", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="lc_frame_cluster",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Middle Class Picture Frame Cluster 00",
+	type = "interiorDecor",
+	description = "Practical imagery fit for the professional class.",
+	tags = { "art", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="mc_frame_cluster",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Middle Class Picture Frame Cluster 01",
+	type = "interiorDecor",
+	description = "Practical imagery fit for the professional class.",
+	tags = { "art", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="mc_frame_cluster",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Middle Class Picture Frame Cluster 02",
+	type = "interiorDecor",
+	description = "Practical imagery fit for the professional class.",
+	tags = { "art", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="mc_frame_cluster",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Pot Amphora 00",
+	type = "interiorDecor",
+	description = "",
+	tags = { "art", "decor"},
+	icon_skin = "ui//orderIcons2.xml",
+	icon="ceramic_pot",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Pot Amphora 01",
+	type = "interiorDecor",
+	description = "",
+	tags = { "art", "decor"},
+	icon_skin = "ui//orderIcons2.xml",
+	icon="ceramic_pot",
+	tier=1,
+	quality=1
+}
+
+Entity
+{
+	name = "Pot Bell Krater",
+	type = "interiorDecor",
+	description = "",
+	tags = { "art", "decor"},
+	icon_skin = "ui//orderIcons2.xml",
+	icon="ceramic_pot",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Pot Calyx Krater",
+	type = "interiorDecor",
+	description = "",
+	tags = { "art", "decor"},
+	icon_skin = "ui//orderIcons2.xml",
+	icon="ceramic_pot",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Science Wall Plaque",
+	type = "interiorDecor",
+	description = "",
+	tags = { "plaque", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="wall_plaque00",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Military Wall Plaque",
+	type = "interiorDecor",
+	description = "",
+	tags = { "plaque", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="wall_plaque01",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Royal Wall Plaque",
+	type = "interiorDecor",
+	description = "",
+	tags = { "plaque", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="wall_plaque02",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Lower Class Certificate",
+	type = "interiorDecor",
+	description = "",
+	tags = { "plaque", "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="decor_lc_icon",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Carpet00",
+	type = "interiorDecor",
+	description = "",
+	tags = { "carpet", "decor"},
+	icon_skin = "ui//orderIcons.xml",
+	icon="uc_carpet",
+	tier=1,
+	quality=2,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Carpet01",
+	type = "interiorDecor",
+	description = "",
+	tags = { "carpet", "decor"},
+	icon_skin = "ui//orderIcons.xml",
+	icon="mc_carpet",
+	tier=1,
+	quality=2,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Lower Class Rug 00",
+	type = "interiorDecor",
+	description = "",
+	tags = { "carpet", "decor"},
+	icon_skin = "ui//orderIcons.xml",
+	icon="lc_rug",
+	tier=1,
+	quality=2,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Middle Class Rug 00",
+	type = "interiorDecor",
+	description = "",
+	tags = { "carpet", "decor"},
+	icon_skin = "ui//orderIcons.xml",
+	icon="mc_carpet",
+	tier=1,
+	quality=2,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Middle Class Rug 01",
+	type = "interiorDecor",
+	description = "",
+	tags = { "carpet", "decor"},
+	icon_skin = "ui//orderIcons.xml",
+	icon="mc_carpet",
+	tier=1,
+	quality=2,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Upper Class Rug 00",
+	type = "interiorDecor",
+	description = "",
+	tags = { "carpet", "decor"},
+	icon_skin = "ui//orderIcons.xml",
+	icon="uc_carpet",
+	tier=1,
+	quality=2,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Lower Class Wall Shrine",
+	type = "interiorDecor",
+	description = "",
+	tags = { "wall_shrine", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="wall_shrine_lc",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Upper Class Wall Shrine",
+	type = "interiorDecor",
+	description = "",
+	tags = { "wall_shrine", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="decor_lc_icon",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Lamp 00",
+	type = "buildingDecor",
+	description = "",
+	tags = { "lamp", "decor"},
+	icon_skin = "ui//orderIcons.xml",
+	icon="icon_lamp00",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Lamp 01",
+	type = "buildingDecor",
+	description = "",
+	tags = { "lamp", "decor"},
+	icon_skin = "ui//orderIcons.xml",
+	icon="icon_lamp01",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Lamp 02",
+	type = "buildingDecor",
+	description = "",
+	tags = { "lamp", "decor"},
+	icon_skin = "ui//orderIcons.xml",
+	icon="icon_lamp02",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Lamp 03",
+	type = "buildingDecor",
+	description = "",
+	tags = { "lamp", "decor"},
+	icon_skin = "ui//orderIcons.xml",
+	icon="icon_lamp03",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Lamp 04",
+	type = "buildingDecor",
+	description = "",
+	tags = { "lamp", "decor"},
+	icon_skin = "ui//orderIcons.xml",
+	icon="icon_lamp04",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Barometer",
+	type = "interiorDecor",
+	description = "",
+	tags = { "barometer", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="barometer",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Large Pipe and Valve",
+	type = "buildingDecor",
+	description = "",
+	tags = { "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="pipe_and_valve",
+	tier=2,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Vent",
+	type = "buildingDecor",
+	description = "",
+	tags = { "decor", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="vent",
+	tier=2,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Pipe Cluster",
+	type = "buildingDecor",
+	description = "",
+	tags = { "decor", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="pipe_cluster",
+	tier=2,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Sign Board Small 00",
+	type = "buildingDecor",
+	description = "",
+	tags = { "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="signboard",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Sign Hanger Metal 00",
+	type = "buildingDecor",
+	description = "",
+	tags = { "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="metal_sign_hanger",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Sign Hanger Wood 00",
+	type = "buildingDecor",
+	description = "",
+	tags = { "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="wood_sign_hanger",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Barbershop Pole",
+	type = "buildingDecor",
+	description = "Please do not eat the candy stripes. Made in a Carpentry Workshop.",
+	tags = { "decor" },
+	icon_skin = "ui//orderIcons.xml",
+	icon="barbershop_image",
+	tier=1,
+	quality=0,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Wall-Mounted Aurochs Head",
+	type = "interiorDecor",
+	description = "About as much of the Majestic Aurochs as one can reasonably put on display.",
+	tags = { "decor", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="mounted_head_aurochs",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Wall-Mounted Beetle Head",
+	type = "interiorDecor",
+	description = "This massive beetle makes for an intimidating - and dangerous - wall decoration.",
+	tags = { "decor", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="mounted_head_beetle",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Musket Locker",
+	type = "frontaccessmodule",
+	description="This is a version of the archaic firearm upon which the Empire was built. Improvised with a hardwood barrel on a civilian pistol base. Place this module in a barracks to unlock this weapon for that military crew.",
+	tags = { "locker", "musket_locker" },
+	icon_skin = "ui//commodityIcons.xml",
+	icon="icon_musket",
+	tier=2,
+	quality=-1,
+	upkeep_type=1,
+	upkeep_quantity=2
+}
+
+Entity
+{
+	name = "Carbine Locker",
+	type = "frontaccessmodule",
+	description = "This quick-firing rifle of Stahlmarkian design had its blueprints \z
+	leaked by the infamous Sydney the Rosare, and sees occasional seen use in the Empire. \z
+	Place this module in a barracks to unlock this weapon for that military crew.",
+	tags = { "locker", "carbine_locker" },
+	icon_skin = "ui//commodityIcons.xml",
+	icon="icon_carbine",
+	tier=3,
+	quality=-1,
+	upkeep_type=2,
+	upkeep_quantity=2
+}
+
+Entity
+{
+	name = "Blunderbuss Locker",
+	type = "frontaccessmodule",
+	description = "Favoured for defending one's cottage or steam-carriage from ne'er-do-wells, \z
+	this stout firearm may unleash a hail of shot at close range. Place this module in a barracks to unlock this weapon for that military crew.",
+	tags = { "locker", "blunderbuss_locker" },
+	icon_skin = "ui//commodityIcons.xml",
+	icon="icon_blunderbuss",
+	tier=4,
+	quality=-1,
+	upkeep_type=2,
+	upkeep_quantity=2,
+}
+
+Entity
+{
+	name = "Jezail Rifle Locker",
+	type = "frontaccessmodule",
+	description = "A wholly dishonourable weapon, this rifle is accurate at long-range, allowing \z
+	a soldier to fire upon their enemy without fear of reprisal. Place this module in a barracks to unlock this weapon for that military crew.",
+	tags = { "locker", "jezail_locker" },
+	icon_skin = "ui//commodityIcons.xml",
+	icon="icon_jezail",
+	tier=4,
+	quality=-1,
+	upkeep_type=3,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Tripistol Locker",
+	type = "frontaccessmodule",
+	description = "It's a tripistol. What does that even mean? Place this module in a barracks to unlock this weapon for that military crew.",
+	tags = { "locker", "tripistol_locker" },
+	icon_skin = "ui//commodityIcons.xml",
+	icon="icon_tripistol",
+	tier=4,
+	quality=-1,
+	upkeep_type=2,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Revolver Locker",
+	type = "frontaccessmodule",
+	description = "A powerful handgun that can fire multiple times before reloading - its capacity should be more than enough to kill anything that moves.\z
+	Place this module in a barracks to unlock this weapon for that military crew.",
+	tags = { "locker", "revolver_locker" },
+	icon_skin = "ui//commodityIcons.xml",
+	icon="icon_revolver",
+	tier=3,
+	quality=-1,
+	upkeep_type=2,
+	upkeep_quantity=1,
+}
+
+Entity
+{
+	name = "Grenade Launcher Locker",
+	type = "frontaccessmodule",
+	description = "An unwieldy weapon that costs a fortune to maintain, this monstrosity's explosions will absolutely, positively kill everything in the general vicinity, including: \z
+	Your colonists, commodities, nearby trees, buildings, etc. Please exercise caution. \z
+	Place this module in a barracks to unlock this weapon for that military crew.",
+	tags = { "locker", "grenade_launcher_locker" },
+	icon_skin = "ui//commodityIcons.xml",
+	icon="icon_grenadelauncher",
+	tier=7,
+	quality=-1,
+	upkeep_type=4,
+	upkeep_quantity=1
+}
+
+Entity
+{
+	name = "Leyden Pistol Locker",
+	type = "frontaccessmodule",
+	description = "A rather unusual weapon that uses electrical discharges rather than bullets to fire. No ammunition needed! Just don't tell the ministry you're experimenting with Forbidden Sciences. \z
+	Place this module in a barracks to unlock this weapon for that military crew.",
+	tags = { "locker", "leyden_pistol_locker" },
+	icon_skin = "ui//commodityIcons.xml",
+	icon="icon_leydenpistol",
+	tier=5,
+	quality=-1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
+
+Entity
+{
+	name = "Leyden Rifle Locker",
+	type = "frontaccessmodule",
+	description = "The latest Stahlmarkian design, this electric rifle is frighteningly powerful - who knows what the Empire Legion would do \z
+	with this in their hands. Best not to find out. \z
+	Place this module in a barracks to unlock this weapon for that military crew.",
+	tags = { "locker", "leyden_rifle_locker" },
+	icon_skin = "ui//commodityIcons.xml",
+	icon="icon_leydenrifle",
+	tier=7,
+	quality=-1,
+	upkeep_type=-1,
+	upkeep_quantity=-1
+}
