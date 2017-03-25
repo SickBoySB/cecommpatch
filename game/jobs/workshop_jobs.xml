@@ -4441,6 +4441,116 @@
 	<history importance="10" />
 </job>
 
+<job name="Make Wall-Mounted Aurochs Head" display_name="Make Wall-Mounted Aurochs Head"
+	mandatory_eval="0"
+	icon_skin="ui\orderIcons2.xml" icon="mounted_head_aurochs"
+	must_lock_owner="0"
+	filter="workshop">
+	
+	<require_character_on_shift/>
+	<require_empty_hands failure_reason="Character required to not be carrying stuff."/>
+	<require_multiple_gameobjects input="sulphur" amount="1" use_multiplier="1" range="100" tag="raw_sulphur" failure_reason="Requires available bricabrac." closest="1" require_owned="1"/>
+	<require_multiple_gameobjects input="chalk" amount="1" use_multiplier="1" range="100" tag="flux" failure_reason="Requires available bricabrac." closest="1" require_owned="1"/>
+	<require_multiple_gameobjects input="lacquered_planks" amount="1" use_multiplier="1" range="100" tag="lacquered_planks" failure_reason="Requires available bricabrac." closest="1" require_owned="1"/>
+	<require_multiple_gameobjects input="raw_aurochs_steak" amount="2" use_multiplier="1" range="100" tag="aurochs_meat" failure_reason="Requires available bricabrac." closest="1" require_owned="1"/>
+	<require_multiple_gameobjects input="bushel_of_bones" amount="2" use_multiplier="1" range="100" tag="bones" failure_reason="Requires available bricabrac." closest="1" require_owned="1"/>
+	<require_multiple_gameobjects input="glass_panes" amount="1" use_multiplier="1" range="100" tag="glass_panes" failure_reason="Requires available bricabrac." closest="1" require_owned="1"/>
+	<require_work_party_filter name="workshop"/>
+	<require_item_drop_location input="drop_location"/>
+	
+	<utility>
+	<base_job_utility weight="1000"/>
+	</utility>
+	
+	<fsm>
+		<walk_to_adjacent_position_and_pickup_things input="sulphur"/>
+		<walk_to_module input="workshop_module"/>
+		<building_cache_item input="workshop"/>
+		
+		<walk_to_adjacent_position_and_pickup_things input="chalk"/>
+		<walk_to_module input="workshop_module"/>
+		<building_cache_item input="workshop"/>
+		
+		<walk_to_adjacent_position_and_pickup_things input="lacquered_planks"/>
+		<walk_to_module input="workshop_module"/>
+		<building_cache_item input="workshop"/>
+		
+		<walk_to_adjacent_position_and_pickup_things input="raw_aurochs_steak"/>
+		<walk_to_module input="workshop_module"/>
+		<building_cache_item input="workshop"/>
+		
+		<walk_to_adjacent_position_and_pickup_things input="bushel_of_bones"/>
+		<walk_to_module input="workshop_module"/>
+		<building_cache_item input="workshop"/>
+		
+		<walk_to_adjacent_position_and_pickup_things input="glass_panes"/>
+		<walk_to_module input="workshop_module"/>
+		<building_transform_item input="workshop_module" name="Assemble Module"/>
+		
+		<complete_workshop_order input="workshop"/>            
+		<increment_character_skill name="carpentry"/>
+		<fill_input_for_held_item name="drop_location"/>
+		<walk_to_adjacent_position_for_item_drop input="drop_location" />
+		<place_item_behaviour input="drop_location" />      
+	</fsm>
+	<history importance="10" />
+</job>
+
+<job name="Make Wall-Mounted Beetle Head" display_name="Make Wall-Mounted Beetle Head"
+	mandatory_eval="0"
+	icon_skin="ui\orderIcons2.xml" icon="mounted_head_beetle"
+	must_lock_owner="0"
+	filter="workshop">
+	
+	<require_character_on_shift/>
+	<require_empty_hands failure_reason="Character required to not be carrying stuff."/>
+	<require_multiple_gameobjects input="sulphur" amount="1" use_multiplier="1" range="100" tag="raw_sulphur" failure_reason="Requires available bricabrac." closest="1" require_owned="1"/>
+	<require_multiple_gameobjects input="chalk" amount="1" use_multiplier="1" range="100" tag="flux" failure_reason="Requires available bricabrac." closest="1" require_owned="1"/>
+	<require_multiple_gameobjects input="lacquered_planks" amount="1" use_multiplier="1" range="100" tag="lacquered_planks" failure_reason="Requires available bricabrac." closest="1" require_owned="1"/>
+	<require_multiple_gameobjects input="raw_beetle_steak" amount="2" use_multiplier="1" range="100" tag="beetle_meat" failure_reason="Requires available bricabrac." closest="1" require_owned="1"/>
+	<require_multiple_gameobjects input="bushel_of_bones" amount="2" use_multiplier="1" range="100" tag="bones" failure_reason="Requires available bricabrac." closest="1" require_owned="1"/>
+	<require_multiple_gameobjects input="glass_panes" amount="1" use_multiplier="1" range="100" tag="glass_panes" failure_reason="Requires available bricabrac." closest="1" require_owned="1"/>
+	<require_work_party_filter name="workshop"/>
+	<require_item_drop_location input="drop_location"/>
+	
+	<utility>
+	<base_job_utility weight="1000"/>
+	</utility>
+	
+	<fsm>
+		<walk_to_adjacent_position_and_pickup_things input="sulphur"/>
+		<walk_to_module input="workshop_module"/>
+		<building_cache_item input="workshop"/>
+		
+		<walk_to_adjacent_position_and_pickup_things input="chalk"/>
+		<walk_to_module input="workshop_module"/>
+		<building_cache_item input="workshop"/>
+		
+		<walk_to_adjacent_position_and_pickup_things input="lacquered_planks"/>
+		<walk_to_module input="workshop_module"/>
+		<building_cache_item input="workshop"/>
+		
+		<walk_to_adjacent_position_and_pickup_things input="raw_beetle_steak"/>
+		<walk_to_module input="workshop_module"/>
+		<building_cache_item input="workshop"/>
+		
+		<walk_to_adjacent_position_and_pickup_things input="bushel_of_bones"/>
+		<walk_to_module input="workshop_module"/>
+		<building_cache_item input="workshop"/>
+		
+		<walk_to_adjacent_position_and_pickup_things input="glass_panes"/>
+		<walk_to_module input="workshop_module"/>
+		<building_transform_item input="workshop_module" name="Assemble Module"/>
+		
+		<complete_workshop_order input="workshop"/>            
+		<increment_character_skill name="carpentry"/>
+		<fill_input_for_held_item name="drop_location"/>
+		<walk_to_adjacent_position_for_item_drop input="drop_location" />
+		<place_item_behaviour input="drop_location" />      
+	</fsm>
+	<history importance="10" />
+</job>
+
 
 <job name="Make Carpet" display_name="Make Carpet"
 	mandatory_eval="0"

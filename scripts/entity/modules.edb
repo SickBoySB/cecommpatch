@@ -2227,7 +2227,7 @@ Entity
 	icon_skin = "ui//orderIcons2.xml",
 	icon="mounted_head_aurochs",
 	tier=1,
-	quality=1,
+	quality=3,
 	upkeep_type=-1,
 	upkeep_quantity=-1
 }
@@ -2241,7 +2241,7 @@ Entity
 	icon_skin = "ui//orderIcons2.xml",
 	icon="mounted_head_beetle",
 	tier=1,
-	quality=1,
+	quality=3,
 	upkeep_type=-1,
 	upkeep_quantity=-1
 }
