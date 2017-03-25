@@ -446,7 +446,7 @@ Entity {
 				 damageAmount=5,
 				 onHitEffect="",
 				 damageSound="Animal Large Attack" },
-	butcherOutput = "raw_steak",
+	butcherOutput = "raw_aurochs_steak",
 	numCommodityOutput = 6,
      bonesOutput = "Aurochs Bones",
 	herd_size = {min=5,max=7},
@@ -510,7 +510,7 @@ Entity {
 		attack = "Aurochs Attack",
 		die = "Aurochs Die",
 		},
-	butcherOutput = "raw_steak",
+	butcherOutput = "raw_aurochs_steak",
 	numCommodityOutput = 6,
 }
 
@@ -904,7 +904,7 @@ Entity {
      animationSetF = "beetleGiant",
      walkTicks = 4,
 	runTicks = 2,
-	butcherOutput = "raw_steak",
+	butcherOutput = "raw_beetle_steak",
 	numCommodityOutput = 6,
 	extraOutput = "lacquer",
 	spawnAfterDeath = { entityType = "objectcluster",
