@@ -1,0 +1,1259 @@
+Entity {
+	name = "Small Anemone",
+	type = "animal",
+	modelM = "models/character/animals/anemoneSm.upm",
+	modelF = "models/character/animals/anemoneSm.upm",
+	animationSetM = "anemone_sm",
+	animationSetF = "anemone_sm",
+	walkTicks = 8,
+	domestic = false,
+	job_classes = { "herbivore", },
+	butcherOutput = "raw_steak",
+	occupancyMap =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	occupancyMapRotate45 =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	tags = { "animal", "anemone", "herbivore", "huntable" },
+     deadTags = { "meat_source",},
+}
+
+
+Entity {
+	name = "Tall Anemone",
+	type = "animal",
+	modelM = "models/character/animals/anemoneTall.upm",
+	modelF = "models/character/animals/anemoneTall.upm",
+	animationSetM = "anemone_tall",
+	animationSetF = "anemone_tall",
+	walkTicks = 8,
+	domestic = false,
+	job_classes = { "herbivore"},
+	butcherOutput = "raw_fish_steak",
+	occupancyMap =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	occupancyMapRotate45 =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	tags = { "animal", "anemone", "herbivore", "huntable" },
+     deadTags = { "meat_source",},
+}
+
+Entity {
+	name = "Huge Anemone",
+	type = "animal",
+	modelM = "models/character/animals/anemoneHuge.upm",
+	modelF = "models/character/animals/anemoneHuge.upm",
+	animationSetM = "anemone_huge",
+	animationSetF = "anemone_huge",
+	walkTicks = 8,
+	domestic = false,
+	job_classes = { "herbivore" },
+	butcherOutput = "raw_fish_steak",
+	occupancyMap =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	occupancyMapRotate45 =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	tags = { "animal", "anemone", "herbivore", "huntable" },
+     deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+}
+
+Entity {
+	name = "Man-o-war",
+	type = "animal",
+	modelM = "models/character/animals/manOWar02.upm",
+	modelF = "models/character/animals/manOWar02.upm",
+	animationSetM = "manOWar",
+	animationSetF = "manOWar",
+	walkTicks = 8,
+	domestic = false,
+	job_classes = { "carnivore" },
+	butcherOutput = "raw_fish_steak",
+	health = { healthMax=3, healthTimerSeconds=6 },
+  	occupancyMap =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	occupancyMapRotate45 =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	numCommodityOutput = 1,
+	corpseRotTimeDays=2,
+	tags = { "animal", "manowar", "carnivore", "huntable" },
+	deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+}
+
+
+Entity {
+	name = "Chicken",
+	type = "animal",
+	modelM = "models/character/animals/chickenRooster01.upm",
+	modelF = "models/character/animals/chickenHen01.upm",
+	animationSetM = "chicken",
+	animationSetF = "chicken",
+	walkTicks = 10,
+	domestic = true,
+	job_classes = { "herbivore", "egg_laying" },
+	butcherOutput = "raw_bird",
+	occupancyMap =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	occupancyMapRotate45 =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	tags = { "animal", "bird", "herbivore", "huntable" },
+     deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+	sounds = {
+		idle = "Chicken Cluck",
+		die = "Chicken Offended",
+		},
+}
+
+Entity {
+	name = "Junglefowl",
+	type = "animal",
+	modelM = "models/character/animals/chickenRooster01.upm",
+	modelF = "models/character/animals/chickenRooster01.upm",
+	animationSetM = "chicken",
+	animationSetF = "chicken",
+	walkTicks = 10,
+	domestic = true,
+	butcherOutput = "raw_bird",
+	occupancyMap =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	occupancyMapRotate45 =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	job_classes = { "herbivore", "herd_herbivore" },
+	numCommodityOutput = 1,
+	gibs = { name="Small Gibs", min=1, max=1 },
+	health = { healthMax=3, healthTimerSeconds=-1 },
+	numAfflictionsToDie=1,
+	corpseRotTimeDays=2,
+	starvationHungerDays=3,
+	sleepTirednessRecoverySeconds=600,
+	tirednessMaxSeconds=600,
+	idealSleepTimeSeconds=90,
+     tags = { "animal", "bird", "herbivore", "huntable", "nesting" },
+     deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+	sounds = {
+		idle = "Chicken Cluck",
+		die = "Chicken Offended",
+		},
+}
+
+Entity {
+	name = "Giant Snail",
+	type = "animal",
+	modelM = "models/character/animals/snail00.upm",
+	modelF = "models/character/animals/snail00.upm",
+	animationSetM = "snail",
+	animationSetF = "snail",
+	walkTicks = 8,
+	domestic = false,
+	butcherOutput = "raw_steak",
+	occupancyMap =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	occupancyMapRotate45 =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	job_classes = { "herbivore" },
+	numCommodityOutput = 1,
+	gibs = { name="Small Gibs", min=1, max=1 },
+	health = { healthMax=3, healthTimerSeconds=-1 },
+	numAfflictionsToDie=1,
+	corpseRotTimeDays=2,
+	starvationHungerDays=3,
+	sleepTirednessRecoverySeconds=600,
+	tirednessMaxSeconds=600,
+	idealSleepTimeSeconds=90,
+     tags = { "animal", "snail", "herbivore", "huntable", "has_shell", "armoured" },
+     deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+}
+
+Entity {
+	name = "Fox",
+	type = "animal",
+	modelM = "models/character/animals/fox.upm",
+	modelF = "models/character/animals/fox.upm",
+	animationSetM = "fox",
+	animationSetF = "fox",
+	walkTicks = 5,
+	runTicks = 1,
+	domestic = false,
+	job_classes = { "carnivore", "pack_carnivore" },
+	butcherOutput = "raw_steak",
+	health = { healthMax=6, healthTimerSeconds=6 },
+  	occupancyMap =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	occupancyMapRotate45 =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	healthMax=3,
+	healthRegenTimerSeconds=20,
+	tags = { "animal", "fox", "carnivore", "small_carnivore", "skittish", "huntable" },
+	sounds = {
+		idle = "Fox Call",
+		attack = "Fox Attack",
+		die = "Fox Die", -- Do you think love can bloom, even on the battlefield?
+		},
+}
+
+Entity {
+	name = "Snow Fox",
+	type = "animal",
+	modelM = "models/character/animals/foxArctic.upm",
+	modelF = "models/character/animals/foxArctic.upm",
+	animationSetM = "fox",
+	animationSetF = "fox",
+	walkTicks = 5,
+	runTicks = 1,
+	domestic = false,
+	job_classes = { "carnivore", "pack_carnivore" },
+	butcherOutput = "raw_steak",
+	health = { healthMax=6, healthTimerSeconds=6 },
+  	occupancyMap =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	occupancyMapRotate45 =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	healthMax=3,
+	healthRegenTimerSeconds=20,
+	tags = { "animal", "fox", "carnivore", "small_carnivore", "skittish", "huntable" },
+	sounds = {
+		idle = "Fox Call",
+		attack = "Fox Attack",
+		die = "Fox Die", -- Do you think love can bloom, even on the battlefield?
+		},
+}
+
+Entity {
+	name = "Desert Fox",
+	type = "animal",
+	modelM = "models/character/animals/foxDesert.upm",
+	modelF = "models/character/animals/foxDesert.upm",
+	animationSetM = "fox",
+	animationSetF = "fox",
+	walkTicks = 5,
+	runTicks = 1,
+	domestic = false,
+	job_classes = { "carnivore", "pack_carnivore" },
+	butcherOutput = "raw_steak",
+	health = { healthMax=6, healthTimerSeconds=6 },
+  	occupancyMap =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	occupancyMapRotate45 =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	healthMax=3,
+	healthRegenTimerSeconds=20,
+	tags = { "animal", "fox", "carnivore", "small_carnivore", "skittish", "huntable" },
+	sounds = {
+		idle = "Fox Call",
+		attack = "Fox Attack",
+		die = "Fox Die", -- Do you think love can bloom, even on the battlefield?
+		},
+}
+
+Entity {
+	name = "Land Dragon",
+	type = "animal",
+	modelM = "models/character/animals/landDragon.upm",
+	modelF = "models/character/animals/landDragon.upm",
+	animationSetM = "landDragon",
+	animationSetF = "landDragon",
+	walkTicks = 8,
+	runTicks = 2,
+	domestic = false,
+	job_classes = { "carnivore" },
+	butcherOutput = "raw_steak",
+	health = { healthMax=10, healthTimerSeconds=8 },
+  -- 	occupancyMap =
+		-- "--*--\\"..
+		-- "-***-\\"..
+		-- "**C**\\"..
+		-- "-***-\\"..
+		-- "--*--\\",
+  -- 	occupancyMapRotate45 =
+		-- "--*--\\"..
+	 --     "-***-\\"..
+		-- "**C**\\"..
+		-- "-***-\\"..
+		-- "--*--\\",
+	occupancyMap = 
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	occupancyMapRotate45 =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	numAfflictionsToDie=1,
+	corpseRotTimeDays=2,
+	starvationHungerDays=3,
+	sleepTirednessRecoverySeconds=600,
+	tirednessMaxSeconds=600,
+	idealSleepTimeSeconds=90,
+	healthMax=3,
+	healthRegenTimerSeconds=20,
+	tags = { "animal", "landDragon", "reptile", "carnivore", "large_carnivore", },
+	sounds = {
+		idle = "Reptile Large Grunt",
+		attack = "Reptile Large Attack",
+		die = "Reptile Large Grunt 2",
+		},
+}
+
+Entity {
+	name = "Deathwurm",
+	type = "animal",
+	modelM = "models/character/animals/deathwurm.upm",
+	modelF = "models/character/animals/deathwurm.upm",
+	animationSetM = "deathwurm",
+	animationSetF = "deathwurm",
+	walkTicks = 6,
+	domestic = false,
+	job_classes = { "carnivore" },
+	butcherOutput = "raw_steak",
+	health = { healthMax=15, healthTimerSeconds=8 },
+	occupancyMap =
+		".-.\\".. 
+		"-C-\\"..
+		".-.\\",
+	occupancyMapRotate45 =
+		".-.\\".. 
+		"-C-\\"..
+		".-.\\",
+	tags = { "animal", "deathwurm", "carnivore", "large_carnivore",
+		   "burrowing", "large_burrow", "rampager", "vicious", "hostile_agent" },
+     deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+	sounds = {
+		idle = "Animal Large Grunt",
+		attack = "Savage Large Attack",
+		die = "Animal Large Grunt Alligator", },
+	gibs = { name="Gibs", min=1, max=2 },
+	defaultMeleeAttack = { "slash", 4, "" },
+}
+
+Entity {
+	name = "Ravenous Dunewurm",
+	type = "animal",
+	modelM = "models/character/animals/deathwurm_desert.upm",
+	modelF = "models/character/animals/deathwurm_desert.upm",
+	animationSetM = "deathwurm",
+	animationSetF = "deathwurm",
+	walkTicks = 6,
+	domestic = false,
+	job_classes = { "carnivore" },
+	butcherOutput = "raw_steak",
+	health = { healthMax=15, healthTimerSeconds=8 },
+	occupancyMap =
+		".-.\\".. 
+		"-C-\\"..
+		".-.\\",
+	occupancyMapRotate45 =
+		".-.\\".. 
+		"-C-\\"..
+		".-.\\",
+	tags = { "animal", "deathwurm", "carnivore", "large_carnivore",
+		   "burrowing", "large_burrow", "rampager", "vicious", "hostile_agent" },
+     deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+	sounds = {
+		idle = "Animal Large Grunt",
+		attack = "Savage Large Attack",
+		die = "Animal Large Grunt Alligator", },
+	gibs = { name="Gibs", min=1, max=2 },
+	defaultMeleeAttack = { "slash", 5, "" },
+	health = { 	healthMax = 12,
+				healthTimerSeconds = 45,},
+}
+
+Entity {
+	name = "Hyperborean Icewurm",
+	type = "animal",
+	modelM = "models/character/animals/deathwurm_arctic.upm",
+	modelF = "models/character/animals/deathwurm_arctic.upm",
+	animationSetM = "deathwurm",
+	animationSetF = "deathwurm",
+	walkTicks = 6,
+	domestic = false,
+	job_classes = { "carnivore" },
+	butcherOutput = "raw_steak",
+	health = { healthMax=15, healthTimerSeconds=8 },
+	occupancyMap =
+		".-.\\".. 
+		"-C-\\"..
+		".-.\\",
+	occupancyMapRotate45 =
+		".-.\\".. 
+		"-C-\\"..
+		".-.\\",
+	tags = { "animal", "deathwurm", "carnivore", "large_carnivore",
+		   "burrowing", "large_burrow", "rampager", "vicious", "hostile_agent" },
+     deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+	sounds = {
+		idle = "Animal Large Grunt",
+		attack = "Savage Large Attack",
+		die = "Animal Large Grunt Alligator", },
+	gibs = { name="Gibs", min=1, max=2 },
+	defaultMeleeAttack = { "slash", 6, "" },
+	health = { healthMax = 16,
+			healthTimerSeconds = 30,},
+}
+
+Entity {
+	name = "Aurochs",
+	type = "animal",
+	modelM = "models/character/animals/aurochs.upm",
+	modelF = "models/character/animals/aurochs.upm",
+	animationSetM = "aurochs",
+	animationSetF = "aurochs",
+	walkTicks = 6,
+	runTicks = 1,
+	job_classes = { "herbivore", "herd_herbivore" },
+	
+	gibs = { name="Gibs", min=1, max=2 },
+	health = { healthMax=12, healthTimerSeconds=8 },
+	melee_attack = { damageType = "slash",
+				 damageAmount=5,
+				 onHitEffect="",
+				 damageSound="Animal Large Attack" },
+	butcherOutput = "raw_steak",
+	numCommodityOutput = 6,
+     bonesOutput = "Aurochs Bones",
+	herd_size = {min=5,max=7},
+	-- occupancyMap =
+	-- 	"--*--\\"..
+	-- 	"-***-\\"..
+	-- 	"**C**\\"..
+	-- 	"-***-\\"..
+	-- 	"--*--\\",
+ --  	occupancyMapRotate45 =
+	-- 	"--*--\\"..
+	--      "-***-\\"..
+	-- 	"**C**\\"..
+	-- 	"-***-\\"..
+	-- 	"--*--\\",
+	occupancyMap = 
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	occupancyMapRotate45 =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	numAfflictionsToDie=1,
+	corpseRotTimeDays=2,
+	starvationHungerDays=3,
+	sleepTirednessRecoverySeconds=600,
+	tirednessMaxSeconds=600,
+	idealSleepTimeSeconds=90,
+	healthMax=3,
+	healthRegenTimerSeconds=20,
+     tags = { "animal", "aurochs", "herbivore", "huntable", "rampager", },
+	sounds = {
+		idle = "Aurochs Idle",
+		attack = "Aurochs Attack",
+		die = "Aurochs Die",
+		},
+}
+
+
+Entity {
+	name = "Wooly Aurochs",
+	type = "animal",
+	modelM = "models/character/animals/aurochsWooly.upm",
+	modelF = "models/character/animals/aurochsWooly.upm",
+	animationSetM = "aurochsWooly",
+	animationSetF = "aurochsWooly",
+	walkTicks = 6,
+	runTicks = 1,
+	job_classes = { "herbivore" },
+  	occupancyMap = ".-.\\".. 
+				"-C-\\"..
+				".-.\\",
+	occupancyMapRotate45 =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+     tags = { "animal", "aurochs", "herbivore", "huntable" },
+	sounds = {
+		idle = "Aurochs Idle",
+		attack = "Aurochs Attack",
+		die = "Aurochs Die",
+		},
+	butcherOutput = "raw_steak",
+	numCommodityOutput = 6,
+}
+
+Entity {
+	name = "Deer",
+	type = "animal",
+	modelM = "models/character/animals/deerMale.upm",
+	modelF = "models/character/animals/deerFemale.upm",
+	animationSetM = "deerM",
+	animationSetF = "deerF",
+	walkTicks = 5,
+	runTicks = 1,
+	job_classes = { "herbivore" },
+	occupancyMap = 
+		".-.\\".. 
+		"-C-\\"..
+		".-.\\",
+	occupancyMapRotate45 =
+		".-.\\".. 
+		"-C-\\"..
+		".-.\\",
+	tags = { "animal", "deer", "herbivore", "huntable" },
+     deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+	butcherOutput = "raw_steak",
+	numCommodityOutput = 4,
+}
+
+Entity {
+	name = "Dodo",
+	type = "animal",
+	modelM = "models/character/animals/dodo01.upm",
+	modelF = "models/character/animals/dodo01.upm",
+	animationSetM = "dodo",
+	animationSetF = "dodo",
+	walkTicks = 7,
+	runTicks = 1,
+	job_classes = { "herbivore", "herd_herbivore" },
+	tags = { "animal", "dodo", "herbivore", "huntable", "skittish" },
+	gibs = { name="Small Gibs", min=1, max=2 },
+	health = { healthMax=5, healthTimerSeconds=-1 },
+     numCommodityOutput = 2,
+     butcherOutput = "raw_bird",
+  	occupancyMap = ".-.\\".. 
+		           "-C-\\"..
+		           ".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+	tags = { "animal", "dodo", "herbivore", "huntable", "nesting" },
+     deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+}
+
+Entity {
+	name = "Arctic Dodo",
+	type = "animal",
+	modelM = "models/character/animals/dodoArctic.upm",
+	modelF = "models/character/animals/dodoArctic.upm",
+	animationSetM = "dodo",
+	animationSetF = "dodo",
+	walkTicks = 7,
+	runTicks = 1,
+	job_classes = { "herbivore", "herd_herbivore" },
+	tags = { "animal", "dodo", "herbivore", "huntable", "skittish" },
+	gibs = { name="Small Gibs", min=1, max=2 },
+	health = { healthMax=5, healthTimerSeconds=-1 },
+     numCommodityOutput = 2,
+     butcherOutput = "raw_bird",
+  	occupancyMap = ".-.\\".. 
+		           "-C-\\"..
+		           ".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+	tags = { "animal", "dodo", "herbivore", "huntable", "nesting" },
+     deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+}
+
+Entity {
+	name = "Beetle",
+	type = "animal",
+
+	modelM = "models/character/animals/beetle01.upm",
+	modelF = "models/character/animals/beetle01.upm",
+
+	animationSetM = "beetle",
+	animationSetF = "beetle",
+	walkTicks = 7,
+	runTicks = 1,
+	job_classes = { "herbivore" },
+	butcherOutput = "raw_beetle_steak",
+	numCommodityOutput = 2,
+	extraOutput = "lacquer",
+  	occupancyMap = ".-.\\".. 
+				   "-C-\\"..
+				   ".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+     numCommodityOutput = 1,
+     gibs = { name="Gibs", min=1, max=2 },
+     health = { healthMax=6, healthTimerSeconds=-1 },
+     numAfflictionsToDie=1,
+     corpseRotTimeDays=2,
+     starvationHungerDays=3,
+     sleepTirednessRecoverySeconds=600,
+     tirednessMaxSeconds=600,
+     idealSleepTimeSeconds=90,
+     healthMax=3,
+     healthRegenTimerSeconds=20,
+     tags = { "animal", "beetle", "herbivore", "huntable", "insect", "burrowing", "large_burrow"},
+	sounds = {
+		idle = "Small Insect Idle",
+		attack = "Small Insect Idle",
+		die = "Small Insect Die",
+		},
+}
+
+Entity {
+	name = "Scintillating Beetle",
+	type = "animal",
+
+	modelM = "models/character/animals/beetle02.upm",
+	modelF = "models/character/animals/beetle02.upm",
+
+	animationSetM = "beetle",
+	animationSetF = "beetle",
+	walkTicks = 7,
+	runTicks = 1,
+	job_classes = { "herbivore" },
+	butcherOutput = "raw_beetle_steak",
+	numCommodityOutput = 2,
+	extraOutput = "lacquer",
+  	occupancyMap = ".-.\\".. 
+				   "-C-\\"..
+				   ".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+     numCommodityOutput = 1,
+     gibs = { name="Gibs", min=1, max=2 },
+     health = { healthMax=6, healthTimerSeconds=-1 },
+     numAfflictionsToDie=1,
+     corpseRotTimeDays=2,
+     starvationHungerDays=3,
+     sleepTirednessRecoverySeconds=600,
+     tirednessMaxSeconds=600,
+     idealSleepTimeSeconds=90,
+     healthMax=3,
+     healthRegenTimerSeconds=20,
+     tags = { "animal", "beetle", "herbivore", "huntable", "insect", "burrowing", "large_burrow"},
+	sounds = {
+		idle = "Small Insect Idle",
+		attack = "Small Insect Idle",
+		die = "Small Insect Die",
+		},
+}
+
+Entity {
+	name = "Tiny Beetle",
+	type = "vermin",
+	modelM = "models/character/animals/beetleSmall01.upm",
+	modelF = "models/character/animals/beetleSmall02.upm",
+	animationSetM = "beetle_small",
+	animationSetF = "beetle_small",
+	walkTicks = 9,
+	runTicks = 2,
+	job_classes = { "vermin" },
+  	occupancyMap = "c",
+	".-.\\".. 
+				   "-c-\\"..
+				   ".-.\\",
+	occupancyMapRotate45 = "c",
+					".-.\\".. 
+					"-c.\\"..
+					"...\\",
+	herd_size = {min=8,max=16},
+	tags = { "beetle", "insect", "vermin"}, --, "burrowing" },
+	deadTags = { "debris", "rubbish" },
+	health = { healthMax=1, healthTimerSeconds=-1 },
+	sounds = {
+		idle = "Small Insect Idle",
+		attack = "Small Insect Idle",
+		die = "Small Insect Die", },
+}
+
+Entity {
+	name = "Capybara",
+	type = "animal",
+	modelM = "models/character/animals/capybara.upm",
+	modelF = "models/character/animals/capybara.upm",
+	animationSetM = "capybara",
+	animationSetF = "capybara",
+	walkTicks = 8,
+	job_classes = { "herbivore", },
+	butcherOutput = "raw_steak",
+	numCommodityOutput = 3,
+  	occupancyMap = ".-.\\".. 
+				   "-C-\\"..
+				   ".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+	tags = { "animal", "capybara", "herbivore", "huntable" },
+     deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+	sounds = {
+		idle = "Animal Medium Grunt",
+		attack = "Animal Medium Attack",
+		die = "Animal Medium Grunt",
+		},
+}
+
+Entity {
+	name = "Desert Tortoise",
+	type = "animal",
+	modelM = "models/character/animals/tortoiseDesert.upm",
+	modelF = "models/character/animals/tortoiseDesert.upm",
+	animationSetM = "tortoise",
+	animationSetF = "tortoise",
+	walkTicks = 18,
+	runTicks = 18,
+	job_classes = { "herbivore" },
+	butcherOutput = "raw_steak",
+	numCommodityOutput = 5,
+  	occupancyMap = ".-.\\".. 
+				   "-C-\\"..
+				   ".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+	tags = { "animal", "tortoise", "herbivore", "huntable" },
+     deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+}
+
+Entity {
+	name = "Scrub Tortoise",
+	type = "animal",
+	modelM = "models/character/animals/tortoiseScrub.upm",
+	modelF = "models/character/animals/tortoiseScrub.upm",
+	animationSetM = "tortoise",
+	animationSetF = "tortoise",
+	walkTicks = 18,
+	runTicks = 18,
+	job_classes = { "herbivore" },
+	butcherOutput = "raw_steak",
+	numCommodityOutput = 5,
+  	occupancyMap = ".-.\\".. 
+				   "-C-\\"..
+				   ".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+	tags = { "animal", "tortoise", "herbivore", "huntable" },
+     deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+}
+
+Entity {
+	name = "Swamp Tortoise",
+	type = "animal",
+	modelM = "models/character/animals/tortoiseSwamp.upm",
+	modelF = "models/character/animals/tortoiseSwamp.upm",
+	animationSetM = "tortoise",
+	animationSetF = "tortoise",
+	walkTicks = 18,
+	runTicks = 18,
+	job_classes = { "herbivore" },
+	butcherOutput = "raw_steak",
+	numCommodityOutput = 5,
+  	occupancyMap = ".-.\\".. 
+				   "-C-\\"..
+				   ".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+	tags = { "animal", "tortoise", "herbivore", "huntable" },
+     deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+}
+
+Entity {
+	name = "Giant Horseshoe Crab",
+	type = "animal",
+	modelM = "models/character/animals/horseshoeCrabLG.upm",
+	modelF = "models/character/animals/horseshoeCrabLG.upm",
+	animationSetM = "horseshoecrabGiant",
+	animationSetF = "horseshoecrabGiant",
+	walkTicks = 8,
+  	occupancyMap = ".-.\\".. 
+				   "-C-\\"..
+				   ".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+	butcherOutput = "raw_steak",
+	numCommodityOutput = 4,
+	tags = { "animal", "horseshoe_crab", "herbivore", "huntable" },
+     deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+	sounds = {
+		idle = "Giant Insect Idle",
+		attack = "Giant Insect Idle",
+		die = "Giant Insect Die",
+		},
+}
+
+Entity {
+	name = "Horseshoe Crab",
+	type = "animal",
+	modelM = "models/character/animals/horseshoeCrabSM.upm",
+	modelF = "models/character/animals/horseshoeCrabSM.upm",
+	animationSetM = "horseshoecrab",
+	animationSetF = "horseshoecrab",
+	butcherOutput = "raw_steak",
+	numCommodityOutput = 2,
+	walkTicks = 8,
+  	occupancyMap = ".-.\\".. 
+				   "-C-\\"..
+				   ".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+	tags = { "animal", "horseshoe_crab", "herbivore", "huntable" },
+     deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+	sounds = {
+		idle = "Small Insect Idle",
+		die = "Small Insect Die",
+		},
+}
+
+Entity {
+	name = "Frog",
+	type = "animal",
+	modelM = "models/character/animals/frog.upm",
+	modelF = "models/character/animals/frog.upm",
+	animationSetM = "frog",
+	animationSetF = "frog",
+	walkTicks = 8,
+  	occupancyMap = ".-.\\".. 
+				   "-C-\\"..
+				   ".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+	butcherOutput = "raw_steak",
+	numCommodityOutput = 1,
+	tags = { "animal", "frog", "herbivore", "huntable" },
+	deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+		sounds = {
+		idle = "Frog Call",
+		die = "Squish",
+		},
+}
+
+Entity {
+	name = "Trilobite",
+	type = "animal",
+	modelM = "models/character/animals/trilobite.upm",
+	modelF = "models/character/animals/trilobite.upm",
+	animationSetM = "trilobite",
+	animationSetF = "trilobite",
+	walkTicks = 8,
+  	occupancyMap = ".-.\\".. 
+				   "-C-\\"..
+				   ".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+	tags = { "animal", "trilobite", "herbivore", "huntable" },
+	deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+	sounds = {
+		idle = "Small Insect Idle",
+		die = "Small Insect Die",
+		},
+}
+
+Entity {
+     name = "Giant Beetle",
+     type = "animal",
+     modelM = "models/character/animals/rhinoBeetle.upm",
+     modelF = "models/character/animals/rhinoBeetle.upm",
+     animationSetM = "beetleGiant",
+     animationSetF = "beetleGiant",
+     walkTicks = 4,
+	runTicks = 2,
+	butcherOutput = "raw_steak",
+	numCommodityOutput = 6,
+	extraOutput = "lacquer",
+	spawnAfterDeath = { entityType = "objectcluster",
+				     entityName = "Vermin Beetle Spawn" },
+     job_classes = { "herbivore", "herd_herbivore" },
+	herd_size = {min=4,max=6},
+     -- occupancyMap =
+     --      "--*--\\"..
+     --      "-***-\\"..
+     --      "**C**\\"..
+     --      "-***-\\"..
+     --      "--*--\\",
+     -- occupancyMapRotate45 =
+     --      "--*--\\"..
+     --      "-***-\\"..
+     --      "**C**\\"..
+     --      "-***-\\"..
+     --      "--*--\\",
+     occupancyMap = 
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+	occupancyMapRotate45 =
+	".-.\\".. 
+	"-C-\\"..
+	".-.\\",
+     gibs = { name="Gibs", min=1, max=2 },
+     health = { healthMax=4, healthTimerSeconds=3 },
+     numAfflictionsToDie=1,
+     corpseRotTimeDays=2,
+     starvationHungerDays=3,
+     sleepTirednessRecoverySeconds=600,
+     tirednessMaxSeconds=600,
+     idealSleepTimeSeconds=90,
+     tags = { "animal", "giantBeetle", "herbivore", "huntable", "armoured", "rampager", "has_shell" },
+	deadTags = { "corpse", "meat_source", "dead_animal", "dead" },
+	sounds = {
+		idle = "Giant Insect Idle",
+		attack = "Giant Insect Idle",
+		die = "Giant Insect Die",
+		},
+}
+
+Entity {
+	name = "Obeliskian Servitor",
+	type = "obeliskian",
+	model = "models/character/horrors/oServitor.upm",
+	--model = "models/character/horrors/oServitorOff.upm",
+	dormant_model = "models/character/horrors/oServitorOff.upm",
+	animationSet = "obeliskian_servitor",
+	walkTicks = 6,
+	domestic = false,
+	job_classes = { "obeliskian", "obeliskian_servitor" },
+	butcherOutput = "rough_stone_block",
+	numCommodityOutput = 2,
+	harvest_objectcluster_output = "Obeliskian Harvest",
+  	occupancyMap = ".-.\\".. 
+				   "-C-\\"..
+				   ".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+     health = { healthMax=20, healthTimerSeconds=3 },
+     tags = { "horror", "obeliskian", "armoured", "hostile_agent", "movement_floating" },
+     deadTags = { "corpse", "horror_corpse", "dead" },
+	defaultMeleeAttack = { "blunt", 3, "" },
+}
+
+Entity {
+	name = "Obeliskian Master",
+	type = "obeliskian",
+	model = "models/character/horrors/oMaster.upm",
+	--model = "models/character/horrors/oMasterOff.upm",
+	dormant_model = "models/character/horrors/oMasterOff.upm",
+	animationSet = "obeliskian_master",
+	walkTicks = 3,
+	domestic = false,
+	job_classes = { "obeliskian", "obeliskian_master" },
+	butcherOutput = "raw_clay",
+	numCommodityOutput = 2,
+	harvest_objectcluster_output = "Obeliskian Harvest",
+	occupancyMap =  ".-.\\".. 
+				"-C-\\"..
+				".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+	tags = { "horror", "obeliskian", "armoured", "hostile_agent", "movement_walking" },
+     deadTags = { "corpse", "horror_corpse", "dead" },
+	health = { healthMax=36, healthTimerSeconds=3 },
+	defaultMeleeAttack = { "blunt", 1, "Psychic Blast" },
+}
+
+Entity {
+	name = "Obeliskian Guardian",
+	type = "obeliskian",
+	model = "models/character/horrors/oGuardian.upm",
+	--model = "models/character/horrors/oGuardianOff.upm",
+	dormant_model = "models/character/horrors/oGuardianOff.upm",
+	animationSet = "obeliskian_guardian",
+	walkTicks = 5,
+	domestic = false,
+	job_classes = { "obeliskian", "obeliskian_guardian" },
+	butcherOutput = "rough_stone_block",
+	numCommodityOutput = 1,
+	harvest_objectcluster_output = "Obeliskian Harvest",
+  	occupancyMap = ".-.\\".. 
+				   "-C-\\"..
+				   ".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+     health = { healthMax=30, healthTimerSeconds=3 },
+     tags = { "horror", "obeliskian", "armoured", "hostile_agent", "movement_floating" },
+     deadTags = { "corpse", "horror_corpse", "dead" },
+	defaultRangedAttack = { "eldritch", 3, "Small Eldritch Explosion" },
+}
+
+Entity {
+	name = "quaggaroth",
+	type = "quaggaroth",
+	model = "models/character/horrors/horrorQuaggaroth.upm",
+	--dormant_model = "models/character/horrors/quaggarothOff.upm",
+	animationSet = "quaggaroth",
+	walkTicks = 1,
+  	occupancyMap = ".-.\\".. 
+				"-C-\\"..
+				".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+     health = { healthMax=200, healthTimerSeconds=2 },
+     tags = { "horror", "quaggaroth", "armoured", "hostile_agent", "movement_floating", "ultra_terror" },
+     deadTags = { "corpse", "horror_corpse", "quaggaroth_corpse", "dead" },
+	defaultMeleeAttack = { "blunt", 10, "Quaggaroth Trample" },
+	defaultRangedAttack = { "eldritch", 20, "Quaggaroth Beam Hit" },
+	melee_weapons = {"default"},
+	ranged_weapons = {"default"},
+
+	-- weapon stats are here so Quaggaroth can wield itself as a weapon
+	ammo_capacity = -1,
+	ranged_damage = 20,
+	attack_maxrange=15,
+	melee_damage_type = "blunt",
+     melee_damage = 10,
+	ranged_attack_animation = "eyelaser",
+     melee_attack_animation = "attack",
+	ranged_onhit_effect = "Quaggaroth Beam Hit",
+	melee_onhit_effect = "Quaggaroth Trample",
+	rangedHitFrame = 20,
+}
+
+
+Entity {
+	name = "fishperson",
+	type = "fishperson",
+	modelM = "models/character/horrors/fishpersonBlueFulltransform.upm",
+	modelsM = { blue =       "models/character/horrors/fishpersonBlueFulltransform.upm",
+			grey =         "models/character/horrors/fishpersonGreyFulltransform.upm",
+               green =        "models/character/horrors/fishpersonGreenFulltransform.upm",
+               blue_clothed = "models/character/horrors/fishpersonBlueClothed.upm",
+               grey_clothed = "models/character/horrors/fishpersonGreyClothed.upm",
+               green_clothed = "models/character/horrors/fishpersonGreenClothed.upm" },
+	animationSetM = "biped",
+	headM = "models/character/horrors/fishpersonBlueHead.upm",
+	headsM = { blue = "models/character/horrors/fishpersonBlueHead.upm",
+			grey = "models/character/horrors/fishpersonGreyHead.upm",
+			green = "models/character/horrors/fishpersonGreenHead.upm" },
+	hats = {  "models/hats/whelkGalea.upm",
+			"models/hats/pufferHelm.upm", },
+	helmets = { "models/character/heads/headDivingHelmet.upm",
+			  "models/character/heads/headDivingHelmet.upm", },
+	walkTicks = 3,
+     runTicks = 2,
+	tags = { "horror", "fishperson", "humanoidSized", "amphibious", "tool_use", "mission_jobs" },
+	butcherOutput = "raw_fishperson_steak",
+	numCommodityOutput = 3,
+  	occupancyMap = ".-.\\".. 
+				   "-C-\\"..
+				   ".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+     gibs = { name="Gibs", min=1, max=2 },
+	defaultMeleeAttack = { "slash", 2, "" },
+	sounds = {
+		idle = "Fishperson Idle",
+		attack = "Fishperson Attack",
+		die = "Fishperson Death", },
+	melee_weapons = {"coral_club", "bone_knife", "default", "default", },
+	ranged_weapons = {"none", "none", "spine_gun", }, -- urchin_grenade
+}
+
+Entity {
+	name = "Selenian Polyp",
+	type = "selenian",
+	spores_per_fruit = 3,
+	walkTicks = 4,
+	runTicks = 2,
+	stages = {
+		[0] = {
+			display_name = "Selenian Spore",
+			model = "models/character/horrors/horrorSelSpore.upm",
+			animationSet = "selenian_spore",
+			tags = { "horror", "selenian", "selenian_spore" },
+			deadTags = {"corpse", "horror_corpse", "dead"},
+			health = { healthMax = 30, healthTimerSeconds = 3 },
+			defaultMeleeAttack = nil,
+			defaultRangedAttack = nil,
+			transformTime = 10,},
+		[1] = {
+			display_name = "Selenian Slug",
+			model = "models/character/horrors/horrorSelSlug.upm",
+			animationSet = "selenian_slug",
+			tags = { "horror", "selenian", "selenian_slug" },
+			deadTags = {"corpse", "horror_corpse", "dead"},
+			health = { healthMax = 30, healthTimerSeconds = 3 },
+			defaultMeleeAttack = { "blunt", 3, "" },
+			defaultRangedAttack = nil,
+			transformTime = 10, },
+		[2] = {
+			display_name = "Selenian Stalk", -- aka "Juvenile"
+			model = "models/character/horrors/horrorSelJuvenile.upm",
+			animationSet = "selenian_juvenile",
+			tags = { "horror", "selenian", "immobile", "selenian_stalk" },
+			deadTags = {"corpse", "horror_corpse", "dead"},
+			health = { healthMax = 30, healthTimerSeconds = 3 },
+			defaultMeleeAttack = nil,
+			defaultRangedAttack = nil,
+			transformTime = 10, },
+		[3] = {
+			display_name = "Selenian Fruiting Body",
+			model = "models/character/horrors/horrorSelFruit.upm",
+			animationSet = "selenian_fruit",
+			tags = { "horror", "selenian", "immobile", "selenian_fruit" },
+			deadTags = {"corpse", "horror_corpse", "dead"},
+			health = { healthMax = 30, healthTimerSeconds = 3 },
+			defaultMeleeAttack = nil,
+			defaultRangedAttack = nil,
+			transformTime = 10, },
+		--[[ 
+		[4] = {
+			display_name = "Selenian Tower",
+			model = "models/horrors/selenianFungalTower.upm",
+			animationSet = "selenian_tower",
+			tags = { "horror", "selenian", "immobile", "selenian_tower" },
+			deadTags = {"corpse", "horror_corpse", "dead"},
+			health = { healthMax = 30, healthTimerSeconds = 3 },
+			defaultMeleeAttack = nil,
+			defaultRangedAttack = nil,
+			transformTime = 10, },]]
+	}
+}
+
+Entity {
+	name = "Geometer Observator",
+	type = "geometer_observator",
+	model = "models/character/horrors/horrorGeomObservator.upm",
+	animationSet = "geometer_observator",
+	walkTicks = 8,
+	--job_classes = { "geometer_observator", },
+	butcherOutput = "pitchblende",
+  	occupancyMap = 	".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+     health = { healthMax=30, healthTimerSeconds=-1 },
+     tags = { "horror", "geometer", "geometer_observator", "armoured", "movement_floating" },
+     deadTags = { "corpse", "horror_corpse", "dead" },
+	defaultRangedAttack = nil,
+	defaultMeleeAttack = nil, -- { "eldritch", 3, "Small Eldritch Explosion" },
+}
+
+Entity {
+	name = "Geometer",
+	type = "geometer",
+	model = "models/character/horrors/horrorGeomNaked.upm",
+	headModel = "models/character/horrors/horrorGeomHead.upm",
+	animationSet = "geometer",
+	walkTicks = 4,
+	runTicks = 2,
+	fleeing = 2,
+	job_classes = { "geometer_observator", },
+	butcherOutput = "rough_stone_block",
+  	occupancyMap = 	".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+     health = { healthMax=30, healthTimerSeconds=-1 },
+     tags = { "horror", "geometer", "geometer_biped", },
+     deadTags = { "corpse", "horror_corpse", "dead" },
+	defaultRangedAttack = nil,
+	defaultMeleeAttack = nil, -- { "eldritch", 3, "Small Eldritch Explosion" },
+	animation="walk",
+}
+
+Entity {
+	name = "Geometer Mech",
+	type = "geometer_mech",
+	model = "models/character/horrors/horrorGeomMech.upm",
+	headModel = "models/character/horrors/horrorGeomHead.upm",
+	animationSet = "geometer_mech",
+	walkTicks = 8,
+	job_classes = { "geometer_observator", },
+	butcherOutput = "rough_stone_block",
+  	occupancyMap = 	".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+     health = { healthMax=30, healthTimerSeconds=-1 },
+     tags = { "horror", "geometer", "armoured", "hostile_agent", "movement_floating" },
+     deadTags = { "corpse", "horror_corpse", "dead" },
+	defaultRangedAttack = nil,
+	defaultMeleeAttack = nil, -- { "eldritch", 3, "Small Eldritch Explosion" },
+}
+
+Entity {
+	name = "Geometer Portal",
+	type = "geometer_portal",
+	model = "models/character/horrors/horrorGeomMech.upm",
+	headModel = "models/character/horrors/horrorGeomHead.upm",
+	animationSet = "geometer_mech",
+	walkTicks = 8,
+	job_classes = { "geometer_observator", },
+	butcherOutput = "rough_stone_block",
+  	occupancyMap = 	".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+	occupancyMapRotate45 =
+					".-.\\".. 
+					"-C-\\"..
+					".-.\\",
+     health = { healthMax=30, healthTimerSeconds=-1 },
+     tags = { "horror", "geometer", "armoured", "hostile_agent", "movement_floating" },
+     deadTags = { "corpse", "horror_corpse", "dead" },
+	defaultRangedAttack = nil,
+	defaultMeleeAttack = nil, -- { "eldritch", 3, "Small Eldritch Explosion" },
+}
