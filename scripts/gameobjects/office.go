@@ -7,17 +7,11 @@ gameobject "office" inherit "buildings"
 			if not state.completed then
 				return
 			end
-
-		--[[
-			if state.buildingOwner == nil then
-				send("rendOdinBuildingClassHandler", "odinRendererSetBuildingExpressionMessage", SELF, "overseer");
-			elseif #state.jobs == 0 then
-				send("rendOdinBuildingClassHandler", "odinRendererSetBuildingExpressionMessage", SELF, "cog_gray");
-			else
-				send("rendOdinBuildingClassHandler", "odinRendererSetBuildingExpressionMessage", SELF, "");
+			
+			-- trade offices don't use overseers, so don't use icons
+			if state.entityName ~= "Trade Office" then
+				send("gameWorkshopManager", "WorkshopUpdateIcon", SELF);
 			end
-		--]]
-			send("gameWorkshopManager", "WorkshopUpdateIcon", SELF);
 		end	
 	>>
 
