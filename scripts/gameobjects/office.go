@@ -2,6 +2,17 @@ gameobject "office" inherit "buildings"
 <<
 	local 
 	<<
+		function update_icon()
+
+			if not state.completed then
+				return
+			end
+			
+			-- trade offices don't use overseers, so don't use icons
+			if state.entityName ~= "Trade Office" then
+				send("gameWorkshopManager", "WorkshopUpdateIcon", SELF);
+			end
+		end	
 	>>
 
 	state
@@ -288,7 +299,7 @@ gameobject "office" inherit "buildings"
 
 	receive Update()
 	<<
-
+		update_icon()
 	>>
 	
 	receive DestroyBuilding( gameSimJobInstanceHandle ji )

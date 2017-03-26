@@ -684,7 +684,7 @@ Entity {
      filter="raw",
 	description="Assorted bones in a range of sizes and shapes.",
  	gameplay_description="Gross! Why are you putting bones in a basket like that?",
-     tags = {"commodity", "fertiliser", "cecomm_foraged" },
+     tags = {"commodity", "fertiliser", "bones", "cecomm_foraged" },
 	tier = 0,
 	trade_good = true,
 }

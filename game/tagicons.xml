@@ -48,6 +48,12 @@
 			visibility="0"
 			tags="copper_plates"
 			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="iron_ingots_icon"        
+			display_name="An ingot of iron."
+			visibility="0"
+			tags="ingot_of_iron"
+			icon_skin="commodityIcons.xml" />
 			
 <!-- other UI stuff, flavor text, etc -->
 	<tag	display_name="Harvest with 'Mine Surface Nodes'"
@@ -309,7 +315,6 @@
 			visibility="1"
 			tags="stolen"
 			icon_skin="orderIcons.xml" />
-			
 	
 <!--
 CECOMM NEW VISUAL-ONLY TAGS
