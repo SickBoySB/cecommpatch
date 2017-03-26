@@ -2,6 +2,23 @@ gameobject "office" inherit "buildings"
 <<
 	local 
 	<<
+		function update_icon()
+
+			if not state.completed then
+				return
+			end
+
+		--[[
+			if state.buildingOwner == nil then
+				send("rendOdinBuildingClassHandler", "odinRendererSetBuildingExpressionMessage", SELF, "overseer");
+			elseif #state.jobs == 0 then
+				send("rendOdinBuildingClassHandler", "odinRendererSetBuildingExpressionMessage", SELF, "cog_gray");
+			else
+				send("rendOdinBuildingClassHandler", "odinRendererSetBuildingExpressionMessage", SELF, "");
+			end
+		--]]
+			send("gameWorkshopManager", "WorkshopUpdateIcon", SELF);
+		end	
 	>>
 
 	state
@@ -288,7 +305,7 @@ gameobject "office" inherit "buildings"
 
 	receive Update()
 	<<
-
+		update_icon()
 	>>
 	
 	receive DestroyBuilding( gameSimJobInstanceHandle ji )
