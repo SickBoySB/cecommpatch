@@ -3205,6 +3205,66 @@ are already contained within other buildings. Consider those a placeholder for l
 				amount="1"/> <!--product commodity name; used for passing product to job.-->
 			</module_job>
 			
+			<module_job name="Make Wall-Mounted Aurochs Head"
+				display_name="Wall-Mounted Aurochs Head"
+				icon_skin="ui\orderIcons2.xml"
+				icon="mounted_head_aurochs"
+				standing_order_display_name="Standing Order for Wall-Mounted Aurochs Heads"
+				product_name="Wall-Mounted Aurochs Head">
+				<visible>
+					<require_commodity_geq name="sulphur" amount="1" failure_reason="1x Sulphur needed." is_cost="1" />
+					<require_commodity_geq name="chalk" amount="1" failure_reason="1x Chalk needed." is_cost="2" />
+					<require_commodity_geq name="lacquered_planks" amount="1" failure_reason="1x Lacquered Plank needed." is_cost="3" />
+					<require_commodity_geq name="raw_aurochs_steak" amount="2" failure_reason="2x Raw Aurochs Steaks needed." is_cost="4" />
+					<require_commodity_geq name="bushel_of_bones" amount="2" failure_reason="2x Bones needed." is_cost="5" />
+					<require_commodity_geq name="glass_panes" amount="1" failure_reason="1x Glass Pane needed." is_cost="6" />
+				</visible>
+			<cost name="sulphur_lump" display_name="Sulphur"
+				amount="1"/>
+			<cost name="chalk_icon" display_name="Chalk"
+				amount="1"/>
+			<cost name="planks_lacquered" display_name="Lacquered Plank"
+				amount="1"/>
+			<cost name="icon_rawsteak" display_name="Raw Aurochs Steaks"
+				amount="2"/>
+			<cost name="icon_bushelbones" display_name="Bones"
+				amount="2"/>
+			<cost name="glass_panes_pallet_icon" display_name="Glass Pane"
+				amount="1"/><!-- only used for tooltip cost icon-->
+			<out product="boxed_wall-mounted_aurochs_head"
+				amount="1"/> <!--product commodity name; used for passing product to job.-->
+			</module_job>
+			
+			<module_job name="Make Wall-Mounted Beetle Head"
+				display_name="Wall-Mounted Beetle Head"
+				icon_skin="ui\orderIcons2.xml"
+				icon="mounted_head_beetle"
+				standing_order_display_name="Standing Order for Wall-Mounted Beetle Heads"
+				product_name="Wall-Mounted Beetle Head">
+				<visible>
+					<require_commodity_geq name="sulphur" amount="1" failure_reason="1x Sulphur needed." is_cost="1" />
+					<require_commodity_geq name="chalk" amount="1" failure_reason="1x Chalk needed." is_cost="2" />
+					<require_commodity_geq name="lacquered_planks" amount="1" failure_reason="1x Lacquered Plank needed." is_cost="3" />
+					<require_commodity_geq name="raw_beetle_steak" amount="2" failure_reason="2x Raw Beetle Steaks needed." is_cost="4" />
+					<require_commodity_geq name="bushel_of_bones" amount="2" failure_reason="2x Bones needed." is_cost="5" />
+					<require_commodity_geq name="glass_panes" amount="1" failure_reason="1x Glass Pane needed." is_cost="6" />
+				</visible>
+			<cost name="sulphur_lump" display_name="Sulphur"
+				amount="1"/>
+			<cost name="chalk_icon" display_name="Chalk"
+				amount="1"/>
+			<cost name="planks_lacquered" display_name="Lacquered Plank"
+				amount="1"/>
+			<cost name="raw_beetlesteak" display_name="Raw Beetle Steaks"
+				amount="2"/>
+			<cost name="icon_bushelbones" display_name="Bones"
+				amount="2"/>
+			<cost name="glass_panes_pallet_icon" display_name="Glass Pane"
+				amount="1"/><!-- only used for tooltip cost icon-->
+			<out product="boxed_wall-mounted_beetle_head"
+				amount="1"/> <!--product commodity name; used for passing product to job.-->
+			</module_job>
+			
 			<module_job name="Make Carpet"
 				display_name="Carpet"
 				icon_skin="ui\orderIcons.xml"
@@ -10717,7 +10777,7 @@ are already contained within other buildings. Consider those a placeholder for l
 			internal_wall="1"
 			decor="1"
 			short_description="Decor increases the Quality of your building, improving the mood of those who live and work there."
-			quality="1"
+			quality="3"
 			upkeep_type="-1" 
 			upkeep_quantity="-1"
 			description="About as much of the Majestic Aurochs as one can reasonably put on display."
@@ -10740,7 +10800,7 @@ are already contained within other buildings. Consider those a placeholder for l
 			internal_wall="1"
 			decor="1"
 			short_description="Decor increases the Quality of your building, improving the mood of those who live and work there."
-			quality="1"
+			quality="3"
 			upkeep_type="-1" 
 			upkeep_quantity="-1"
 			description="This massive beetle makes for an intimidating - and dangerous - wall decoration."

@@ -529,6 +529,7 @@
 		<tags>
 			<tag name="commodity"/>
 			<tag name="fertiliser"/>
+			<tag name="bones"/>
 			<tag name="cecomm_foraged"/>
 		</tags>
 	</commodity>
