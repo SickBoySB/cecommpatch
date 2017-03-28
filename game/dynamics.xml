@@ -120,8 +120,9 @@
 	<zone name="farm_lacquer_tree" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="11" fixedH="11"/>
 	<zone name="farm_tobacco" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="9" fixedH="9"/>
 
-	<zone name="Stockpile" texture="textures//terrain//dirtDark00.tga" fixedW="7" fixedH="7" />
-	<zone name="Small Stockpile" texture="textures//terrain//dirtDark00.tga" fixedW="3" fixedH="3" />
+	<!--<zone name="Stockpile" texture="textures//terrain//dirtDark00.tga" fixedW="7" fixedH="7" />
+	<zone name="Small Stockpile" texture="textures//terrain//dirtDark00.tga" fixedW="3" fixedH="3" />-->
+	<zone name="Stockpile" texture="textures//terrain//dirtDark00.tga" />
 	
 	<zone name="Graveyard" texture="textures//terrain//dirtDark00.tga" fixedW="9" fixedH="9" />
 	<zone name="Road" texture="textures//overlays//cobblestone01.tga" />

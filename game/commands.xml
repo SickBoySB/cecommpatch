@@ -551,7 +551,7 @@
            width="32" height="32" assignment_beacon_type="0"/>
 
 
-    <command type="zone"
+    <!--<command type="zone"
  				name="Stockpile"
 				display_text="Large Stockpile"
 				icon_skin="ui\orderIcons.xml" icon="big_stockpile"
@@ -563,6 +563,14 @@
 				name="Small Stockpile"
 				display_text="Small Stockpile"
 				icon_skin="ui\orderIcons.xml" icon="small_stockpile"
+				description="Stockpiles allow colonists to place commodities into efficient, organized zones."
+				default_visibility="visible">
+		</command>-->
+		
+		<command type="zone"
+				name="Stockpile"
+				display_text="Stockpile"
+				icon_skin="ui\orderIcons.xml" icon="stockpile"
 				description="Stockpiles allow colonists to place commodities into efficient, organized zones."
 				default_visibility="visible">
 		</command>
