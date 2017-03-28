@@ -518,7 +518,7 @@ Entity {
 	filter="metalworking",
 	description="The ultimate end of copper and zinc combined to form something greater than its parts, and shaped into beautiful form: the cog - whether miniscule or mighty - is a highly revered symbol of Progress to the Empire.",
 	gameplay_description="Essential for the creation of complex machinery and weapons in a Metalworks.",
-	tags = {"commodity", "cogs", "metal", "brass", "brass_cogs", "craft", "cecomm_chapel"},
+	tags = {"commodity", "cogs", "metal", "brass", "brass_cogs", "craft"},
 	tier = 3,
 	trade_good = true,
 }
