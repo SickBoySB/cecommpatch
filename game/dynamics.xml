@@ -1,0 +1,130 @@
+<dynamicsxml>
+
+	<dynamics name="Gabion (High)" mode="fence">
+	<piece filename="models//constructions//gabion.upm" n="0" e="0" s="0" w="0"/>
+	<representativemodel filename="models//constructions//gabion.upm"/>
+	</dynamics>
+
+	<dynamics name="Brick Wall" mode="wall2">
+	<piece filename="models//constructions//fences//brickWall00Rail.upm" n="0" e="0" s="0" w="0"/>
+	<piece filename="models//constructions//fences//brickWall00Post.upm" n="0" e="0" s="0" w="0"/>    
+	<representativemodel filename="models//constructions//fences//brickWall00Post.upm"/>
+	</dynamics>
+
+	<dynamics name="White Picket Fence" mode="wall">
+	<piece filename="models//constructions//fences//whitePicketFenceRail02.upm" n="0" e="0" s="0" w="1"/>
+	<piece filename="models//constructions//fences//whitePicketFencePost01.upm" n="0" e="0" s="0" w="0"/>
+	<representativemodel filename="models//constructions//fences//whitePicketFencePost01.upm"/>
+	</dynamics>
+	
+	<dynamics name="Fence" mode="wall">
+	<piece filename="models//constructions//fences//basicRailFenceRail02.upm" n="0" e="0" s="0" w="1"/>
+	<piece filename="models//constructions//fences//basicRailFencePost01.upm" n="0" e="0" s="0" w="0"/>
+	<representativemodel filename="models//constructions//fences//basicRailFencePost01.upm"/>
+	</dynamics>
+	
+	<dynamics name="Barbed Wire Fence" mode="wall">
+		<piece filename="models//constructions//fences//barbedwireFenceRail02.upm" n="0" e="0" s="0" w="1"/>
+		<piece filename="models//constructions//fences//barbedwireFencePost01.upm" n="0" e="0" s="0" w="0"/>
+		<representativemodel filename="models//constructions//fences//barbedwireFencePost01.upm"/>
+	</dynamics>
+	
+	<dynamics name="Rustic Fence" mode="wall">
+		<piece filename="models//constructions//fences//rusticFenceRail01.upm" n="0" e="0" s="0" w="1"/>
+		<piece filename="models//constructions//fences//rusticFencePost01.upm" n="0" e="0" s="0" w="0"/>
+		<representativemodel filename="models//constructions//fences//rusticFencePost01.upm"/>
+	</dynamics>
+
+  <!--
+	<dynamics name="Barbed Wire Barrier" mode="fence">
+		<piece filename="models//constructions//fences//barbedwireRoll1x1.upm" n="0" e="0" s="0" w="1"/>
+		<piece filename="models//constructions//fences//barbedwireRoll1x1.upm" n="0" e="0" s="0" w="0"/>
+		<representativemodel filename="models//constructions//fences//barbedwireRoll1x1.upm"/>
+	</dynamics>
+  -->
+
+	<dynamics name="Furrow" rotate="0">
+		<piece filename="models//constructions//cropFurrowsMid.upm" n="1" e="0" s="1" w="0"/>
+		<piece filename="models//constructions//cropFurrowsCapStart.upm" n="1" e="0" s="0" w="0"/>
+		<piece filename="models//constructions//cropFurrowsCapEnd.upm" n="0" e="0" s="1" w="0"/>
+		<piece filename="models//constructions//cropFurrowsSingle.upm" n="0" e="0" s="0" w="0"/>
+	</dynamics>  
+
+	<dynamics name="Tram Rail">
+		<piece filename="models//vehicles//trackTramX.upm" n="1" e="1" s="1" w="1"/>
+		<piece filename="models//vehicles//trackTramT.upm" n="1" e="1" s="1" w="0"/>
+		<piece filename="models//vehicles//trackTramCurve.upm" n="0" e="0" s="1" w="1"/>
+		<piece filename="models//vehicles//trackTramStraight1x1.upm" n="1" e="0" s="1" w="0"/>
+		<piece filename="models//vehicles//trackTramStop.upm" n="0" e="1" s="0" w="0"/>
+		<piece filename="models//vehicles//trackTramStraight1x1.upm" n="0" e="0" s="0" w="0"/>
+		<representativemodel filename="models//vehicles//trackTramStraight1x1.upm"/>
+	</dynamics>
+  
+	<dynamics name="Steam Pipes">
+		<piece filename="models//dynamicsLines//steamPipeX.upm" n="1" e="1" s="1" w="1"/>
+		<piece filename="models//dynamicsLines//steamPipeT.upm" n="1" e="1" s="1" w="0"/>
+		<piece filename="models//dynamicsLines//steamPipeElbow.upm" n="0" e="0" s="1" w="1"/>
+		<piece filename="models//dynamicsLines//steamPipeStraight1x1A.upm" n="1" e="0" s="1" w="0"/>
+		<piece filename="models//dynamicsLines//steamPipeAttach.upm" n="1" e="0" s="0" w="0" d="1"/>
+		<piece filename="models//dynamicsLines//steamPipeCap.upm" n="1" e="0" s="0" w="0" d="0"/>
+		<piece filename="models//dynamicsLines//steamPipeStraight1x1A.upm" n="0" e="0" s="0" w="0"/>
+		<representativemodel filename="models//dynamicsLines//steamPipeStraight1x1a.upm"/>
+	</dynamics>
+
+	<dynamics name="Commodity Transportation Pipes">
+		<piece filename="models//dynamicsLines//waterPipeX.upm" n="1" e="1" s="1" w="1"/>
+		<piece filename="models//dynamicsLines//waterPipeT.upm" n="1" e="1" s="1" w="0"/>
+		<piece filename="models//dynamicsLines//waterPipeElbow.upm" n="0" e="0" s="1" w="1"/>
+		<piece filename="models//dynamicsLines//waterPipeStraight1x1A.upm" n="1" e="0" s="1" w="0"/>
+		<piece filename="models//dynamicsLines//waterPipeAttach.upm" n="1" e="0" s="0" w="0" d="1"/>
+		<piece filename="models//dynamicsLines//waterPipeCap.upm" n="1" e="0" s="0" w="0"/>
+		<piece filename="models//dynamicsLines//waterPipeStraight1x1A.upm" n="0" e="0" s="0" w="0"/>
+		<representativemodel filename="models//dynamicsLines//waterPipeStraight1x1a.upm"/>
+	</dynamics>
+
+	<dynamics name="Axles">
+		<piece filename="models//dynamicsLines//axleXIdle.upm" n="1" e="1" s="1" w="1"/>
+		<piece filename="models//dynamicsLines//axleTIdle.upm" n="1" e="1" s="1" w="0"/>
+		<piece filename="models//dynamicsLines//axleCornerIdle.upm" n="0" e="1" s="1" w="0"/>
+		<piece filename="models//dynamicsLines//axleStraightIdle.upm" n="1" e="0" s="1" w="0"/>
+		
+		<!--    <piece filename="models//dynamicsLines//axleCapIdle.upm" n="0" e="0" s="1" w="0"/> -->
+		
+		<piece filename="models//dynamicsLines//axleAttachIdle.upm" n="0" e="0" s="1" w="0"/>
+		<piece filename="models//dynamicsLines//axleStraightIdle.upm" n="0" e="0" s="0" w="0"/>
+		<representativemodel filename="models//dynamicsLines//axleStraightIdle.upm"/>
+	</dynamics>  
+
+	<zone name="Farm" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="10" fixedH="10"/>
+	
+	<zone name="farm_maize" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="7" fixedH="7"/>
+	<zone name="farm_wheat" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="15" fixedH="15"/>
+	<zone name="farm_pumpkin" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="23" fixedH="23"/>
+	<zone name="farm_cabbage" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="7" fixedH="7"/>
+	<zone name="farm_lacquer" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="7" fixedH="7"/>
+	<zone name="farm_sugarcane" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="15" fixedH="15"/>
+	<zone name="farm_chillies" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="5" fixedH="5"/>
+	<zone name="farm_grapes" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="7" fixedH="7"/>
+	
+	<zone name="farm_coconut_palm" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="13" fixedH="13"/>
+	<zone name="farm_opium" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="7" fixedH="7"/>
+	<zone name="farm_bamboo" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="11" fixedH="11"/>
+	<zone name="farm_larch" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="11" fixedH="11"/>
+	
+	<zone name="farm_agave" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="9" fixedH="9"/>
+	<zone name="farm_prickly_pear" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="11" fixedH="11"/>
+	<zone name="farm_lingonberries" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="7" fixedH="7"/>
+	<zone name="farm_flax" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="11" fixedH="11"/>
+	<zone name="farm_tea" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="9" fixedH="9"/>
+	<zone name="farm_coffee" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="7" fixedH="7"/>
+	<zone name="farm_lacquer_tree" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="11" fixedH="11"/>
+	<zone name="farm_tobacco" texture="textures//terrain//dirtDark00.tga" dynamics="Furrow" fixedW="9" fixedH="9"/>
+
+	<zone name="Stockpile" texture="textures//terrain//dirtDark00.tga" fixedW="7" fixedH="7" />
+	<zone name="Small Stockpile" texture="textures//terrain//dirtDark00.tga" fixedW="3" fixedH="3" />
+	
+	<zone name="Graveyard" texture="textures//terrain//dirtDark00.tga" fixedW="9" fixedH="9" />
+	<zone name="Road" texture="textures//overlays//cobblestone01.tga" />
+	<zone name="Trench" texture="textures//overlays//cobblestone01.tga" />
+
+</dynamicsxml>
