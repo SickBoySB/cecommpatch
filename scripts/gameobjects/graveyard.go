@@ -47,10 +47,10 @@ gameobject "graveyard"
 
 		for i = 1,w-1 do
 			for j = 1,h-1 do
-				if (i-1)%2 == 1 and (j-1)%2 == 1 then
+				if i%2 == 0 and j%2 == 0 then
 					gp = gameGridPosition:new()
-					gp.x = state.x + i
-					gp.y = state.y + j
+					gp.x = state.x + (i-1)
+					gp.y = state.y + (j-1)
 					state.empty_squares[#state.empty_squares+1] = gp
 				end
 			end
