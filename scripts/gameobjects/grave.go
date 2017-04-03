@@ -30,12 +30,14 @@ gameobject "grave"
 	receive GameObjectPlace( int x, int y ) 
 	<<		
 		local models = {
+			-- vanilla headstones
 			"graveyardHeadstone00.upm",
 			"graveyardHeadstone01.upm",
 			"graveyardHeadstone02.upm",
 			"graveyardCogStone00.upm",
 			"graveyardCogStone01.upm",
 			"graveyardCogWood00.upm",
+			-- CECOMMPATCH additions.. mostly unused fence posts
 			"fences/basicRailFencePost01.upm",
 			"fences/basicRailFencePost02.upm",
 			"fences/basicRailFencePost03.upm",
@@ -46,13 +48,16 @@ gameobject "grave"
 			"fences/rusticFencePost03.upm",
 			"fences/whitePicketFencePost01.upm",
 			"memorial00.upm",
-			"graveyardObelisk00.upm",
-			"graveyardObelisk01.upm",
+			-- BIG graves - disabled for now. they have a weird alignment
+			--"graveyardObelisk00.upm",
+			--"graveyardObelisk01.upm",
 		}
 		
+		-- TODO: base randomization on class/faction
 		local grave_model = models[rand(1,#models)]
-		local grave_rotate = rand(-7,7)
+		local grave_rotate = rand(-7,7) -- slight rotation for variety. too much is weird looking
 		
+		-- memorial00.upm has a bad rotation by default, hackish fix
 		if grave_model == "memorial00.upm" then
 			grave_rotate = grave_rotate + 180
 		end
@@ -60,7 +65,6 @@ gameobject "grave"
 		state.position.x = x
 		state.position.y = y
 		state.renderHandle = SELF.id
-		
 		
 		send("rendStaticPropClassHandler",
 			"odinRendererCreateStaticPropRequest",
@@ -123,13 +127,23 @@ gameobject "grave"
 			"odinRendererOrientStaticProp",
 			state.renderHandle,
 			0)
-			
+		
+		-- some slight rotation... must be done LAST because of odinRendererOrientStaticProp
 		send("rendStaticPropClassHandler",
 			"odinRendererRotateStaticProp",
 			state.renderHandle,
 			grave_rotate,
 			0.25)
 		
+		-- TODO: get some interesting grave text, randomized, maybe based on the colonist being buried?
+          local tooltipTitle = "Grave"
+          local tooltipDescription = "A marker to show where a rich vein of bones and rotting meat may be found."
+          send("rendInteractiveObjectClassHandler",
+                    "odinRendererBindTooltip",
+                    state.renderHandle,
+                    "ui//tooltips//groundItemTooltipDetailed.xml",
+                    tooltipTitle,
+                    tooltipDescription)
 
 	>>
 
