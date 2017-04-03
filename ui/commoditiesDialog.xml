@@ -1,5 +1,6 @@
 <container type="vertbox" hsp="expand" vsp="expand" > <!-- solidfill="1" solidfillname="window"> NOOO. -->
-    <container type="horizbox" hsp="expand" vsp="minimum" horizontal_padding="2" vertical_padding="2" solidfill="1" solidfillname="glassBrassBorder" name="commodity_filter_holder">
+	<container type="vertbox" hsp="fixed" fixed_width="400" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommTopGlass" />
+    <container type="horizbox" hsp="expand" vsp="minimum" horizontal_padding="2" name="commodity_filter_holder">
 
       <!--
       
@@ -61,5 +62,6 @@
       -->
     </container>
 
-    <container type="scrollablevertbox" hsp="expand" vsp="expand" name="commoditiesVB" skin="ui/styles/default.xml" horizontal_padding="8" vertical_padding="8" solidfill="1" solidfillname="glassBrassBorder"/>
+    <container type="scrollablevertbox" hsp="expand" vsp="fixed" height="550" name="commoditiesVB" skin="ui/styles/default.xml" horizontal_padding="8" vertical_padding="8"  solidfill="1" solidfillname="cecommWorkcrew"/>
+	<container type="vertbox" hsp="fixed" fixed_width="400" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommBottomGlass" />
 </container>
