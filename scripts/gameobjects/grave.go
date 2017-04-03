@@ -28,30 +28,81 @@ gameobject "grave"
 	>>
 
 	receive GameObjectPlace( int x, int y ) 
-	<<		
-		local models = {
-			-- vanilla headstones
+	<<	
+		state.position.x = x
+		state.position.y = y
+		state.renderHandle = SELF.id
+		
+		local models_lc = {
+			"graveyardCogWood00.upm",
+			"graveyardCogStone00.upm",
+			"graveyardCogStone01.upm",
+			"fences/fencePost01.upm",
+			--"fences/fencePost02.upm",
+		}
+		
+		local models_mc = {
 			"graveyardHeadstone00.upm",
 			"graveyardHeadstone01.upm",
 			"graveyardHeadstone02.upm",
-			"graveyardCogStone00.upm",
-			"graveyardCogStone01.upm",
-			"graveyardCogWood00.upm",
-			-- CECOMMPATCH additions.. mostly unused fence posts
-			"fences/basicRailFencePost01.upm",
-			"fences/basicRailFencePost02.upm",
-			"fences/basicRailFencePost03.upm",
-			"fences/fencePost01.upm",
-			"fences/fencePost02.upm",
+		}
+		
+		local models_uc = {
+			"graveyardObelisk00.upm",
+			"graveyardObelisk01.upm",
+		}
+		
+		local models_military_lc = {
+			"fences/whitePicketFencePost01.upm",
+		}
+		
+		local models_military_mc = {
+			"memorial00.upm",
+		}
+		
+		local models_other = {
 			"fences/rusticFencePost01.upm",
 			"fences/rusticFencePost02.upm",
 			"fences/rusticFencePost03.upm",
-			"fences/whitePicketFencePost01.upm",
-			"memorial00.upm",
-			-- BIG graves - disabled for now. they have a weird alignment
-			--"graveyardObelisk00.upm",
-			--"graveyardObelisk01.upm",
+			"fences/basicRailFencePost01.upm",
+			"fences/basicRailFencePost02.upm",
+			"fences/basicRailFencePost03.upm",
 		}
+			
+		local models = {}
+		local grave_who = "Unknown"
+
+		local results = query("gameSpatialDictionary",
+						  "allObjectsInRadiusWithTagRequest",
+						  state.position,
+						  1,"corpse",true)[1]
+		
+		if results then
+			grave_who_tags = query(results[1],"getTags")[1]
+			grave_who = query(results[1],"getName")[1]
+			--printl("CECOMMPATCH: " .. grave_who)
+		end	
+		
+		if grave_who_tags["citizen"] then
+			if grave_who_tags["lower_class"] then
+				if grave_who_tags["military"] then
+					models = models_military_lc
+				else
+					models = models_lc
+				end
+			elseif grave_who_tags["middle_class"] then
+				if grave_who_tags["military"] then
+					models = models_military_mc
+				else
+					models = models_mc
+				end
+			elseif grave_who_tags["upper_class"] then
+				models = models_uc
+			end
+		else
+			-- non-citizen, give 'em sticks
+			models = models_other
+		end
 		
 		-- TODO: base randomization on class/faction
 		local grave_model = models[rand(1,#models)]
@@ -61,10 +112,6 @@ gameobject "grave"
 		if grave_model == "memorial00.upm" then
 			grave_rotate = grave_rotate + 180
 		end
-		
-		state.position.x = x
-		state.position.y = y
-		state.renderHandle = SELF.id
 		
 		send("rendStaticPropClassHandler",
 			"odinRendererCreateStaticPropRequest",
@@ -137,7 +184,7 @@ gameobject "grave"
 		
 		-- TODO: get some interesting grave text, randomized, maybe based on the colonist being buried?
           local tooltipTitle = "Grave"
-          local tooltipDescription = "A marker to show where a rich vein of bones and rotting meat may be found."
+          local tooltipDescription = "Here rests " .. grave_who .. ". Good riddance."
           send("rendInteractiveObjectClassHandler",
                     "odinRendererBindTooltip",
                     state.renderHandle,
