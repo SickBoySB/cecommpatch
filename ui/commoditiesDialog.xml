@@ -62,6 +62,6 @@
       -->
     </container>
 
-    <container type="scrollablevertbox" hsp="expand" vsp="fixed" height="550" name="commoditiesVB" skin="ui/styles/default.xml" horizontal_padding="8" vertical_padding="8"  solidfill="1" solidfillname="cecommWorkcrew"/>
+    <container type="scrollablevertbox" hsp="expand" vsp="fixed" fixed_height="590" name="commoditiesVB" skin="ui/styles/default.xml" horizontal_padding="8" vertical_padding="8"  solidfill="1" solidfillname="cecommWorkcrew"/>
 	<container type="vertbox" hsp="fixed" fixed_width="400" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommBottomGlass" />
 </container>
