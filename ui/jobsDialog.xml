@@ -47,7 +47,7 @@
                     </imagebutton>
           </container>-->
     <container type="vertbox" hsp="expand" solidfill="1" solidfillname="cecommWorkcrew" horizontal_padding="8" vertical_padding="8">
-    <container type="scrollablevertbox" hsp="expand" vsp="minimum" name="jobs_vertbox" skin="ui/styles/default.xml" solidfill="1" solidfillname="miniPaper"/>
+    <container type="scrollablevertbox" hsp="expand" vsp="minimum" name="jobs_vertbox" skin="ui/styles/default.xml" solidfill="1"/>
 	</container>
 	<container type="vertbox" hsp="fixed" fixed_width="600" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommBottomGlass" />
 	</container>
