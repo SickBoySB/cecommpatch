@@ -28,11 +28,7 @@ gameobject "grave"
 	>>
 
 	receive GameObjectPlace( int x, int y ) 
-	<<
-		state.position.x = x
-		state.position.y = y
-		state.renderHandle = SELF.id
-		
+	<<		
 		local models = {
 			"graveyardHeadstone00.upm",
 			"graveyardHeadstone01.upm",
@@ -40,15 +36,38 @@ gameobject "grave"
 			"graveyardCogStone00.upm",
 			"graveyardCogStone01.upm",
 			"graveyardCogWood00.upm",
-			--"graveyardObelisk00.upm",
-			--"graveyardObelisk01.upm",
+			"fences/basicRailFencePost01.upm",
+			"fences/basicRailFencePost02.upm",
+			"fences/basicRailFencePost03.upm",
+			"fences/fencePost01.upm",
+			"fences/fencePost02.upm",
+			"fences/rusticFencePost01.upm",
+			"fences/rusticFencePost02.upm",
+			"fences/rusticFencePost03.upm",
+			"fences/whitePicketFencePost01.upm",
+			"memorial00.upm",
+			"graveyardObelisk00.upm",
+			"graveyardObelisk01.upm",
 		}
+		
+		local grave_model = models[rand(1,#models)]
+		local grave_rotate = rand(-7,7)
+		
+		if grave_model == "memorial00.upm" then
+			grave_rotate = grave_rotate + 180
+		end
+		
+		state.position.x = x
+		state.position.y = y
+		state.renderHandle = SELF.id
+		
+		
 		send("rendStaticPropClassHandler",
 			"odinRendererCreateStaticPropRequest",
 			SELF,
-			"models/constructions/" .. models[rand(1,#models)],
+			"models/constructions/" .. grave_model,
 			state.position.x,
-			state.position.y)				
+			state.position.y)
 
 		-- TODO: check with Micah to see if these are, in fact, sane (I would prefer borders.)
 
@@ -104,6 +123,12 @@ gameobject "grave"
 			"odinRendererOrientStaticProp",
 			state.renderHandle,
 			0)
+			
+		send("rendStaticPropClassHandler",
+			"odinRendererRotateStaticProp",
+			state.renderHandle,
+			grave_rotate,
+			0.25)
 		
 
 	>>
