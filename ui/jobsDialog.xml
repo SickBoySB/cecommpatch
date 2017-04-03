@@ -1,5 +1,6 @@
-     <container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="2" vertical_padding="2" > <!-- solidfill="1" solidfillname="window"> -->
-          
+     <container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="2"> <!-- solidfill="1" solidfillname="window"> -->
+	<container type="vertbox" hsp="fixed" fixed_width="640" vsp="fixed" fixed_height="675">
+	<container type="vertbox" hsp="fixed" fixed_width="600" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommTopGlass" />
           <!--<container type="horizbox" hsp="expand" vsp="minimum" horizontal_padding="2" vertical_padding="2" solidfill="1" solidfillname="glassBrassBorder">
                <spacer/>
                     <imagebutton text="Discovery Jobs" imageSkin="ui/orderIcons.xml" sfx="paper05" image="explore_icon" hsp="minimum" vsp="minimum">
@@ -46,5 +47,7 @@
                     </imagebutton>
           </container>-->
     
-    <container type="scrollablevertbox" hsp="expand" vsp="expand" name="jobs_vertbox" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorder"/>
+    <container type="scrollablevertbox" hsp="expand" vsp="minimum" name="jobs_vertbox" skin="ui/styles/default.xml" horizontal_padding="8" vertical_padding="8"  solidfill="1" solidfillname="cecommWorkcrew"/>
+	<container type="vertbox" hsp="fixed" fixed_width="600" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommBottomGlass" />
+	</container>
   </container>
