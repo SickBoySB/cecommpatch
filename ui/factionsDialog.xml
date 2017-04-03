@@ -1,0 +1,37 @@
+<container type="vertbox"
+		 hsp="expand" vsp="expand" horizontal_padding="2" vertical_padding="2">
+  
+	<container type="vertbox" name="abridged_standing_container" hsp="expand" vsp="minimum" solidfill="1" solidfillname="miniPaperLight" />
+	
+	<!--<container type="horizbox" name="faction_type_holderholder"
+			 hsp="expand" vsp="minimum" horizontal_padding="4" vertical_padding="4" minimumheight="72"
+			 solidfill="1" solidfillname="glassBrassBorder" >
+	</container>
+	
+	<container type="vertbox"
+			 hsp="expand" vsp="minimum" horizontal_padding="4" vertical_padding="2"
+			 solidfill="1" solidfillname="miniPaperLight" >
+		
+		<label text="Current Policy"/>
+	</container>
+	
+	<container type="vertbox" name="faction_policy_holder"
+			 hsp="expand" vsp="minimum"   minimumheight="60"
+			 solidfill="1" solidfillname="miniPaper">
+		
+	</container>
+	
+	<container type="vertbox"
+			 hsp="expand" vsp="minimum" horizontal_padding="4" vertical_padding="2"
+			 solidfill="1" solidfillname="miniPaperLight">
+		
+		<label text="Known Groups"/>
+	</container>
+	
+	<container type="scrollablevertbox" name="factions_display"
+			 hsp="expand" vsp="expand"
+			 solidfill="1" solidfillname="miniPaper" >
+	
+	</container>-->
+
+</container>
