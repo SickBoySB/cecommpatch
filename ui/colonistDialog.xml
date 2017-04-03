@@ -1,6 +1,8 @@
-<container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="2" vertical_padding="2"> <!-- solidfill="1" solidfillname="window"> -->
+     <container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="2"> <!-- solidfill="1" solidfillname="window"> -->
+	<container type="vertbox" hsp="fixed" fixed_width="600" vsp="fixed" fixed_height="675">
+	<container type="vertbox" hsp="fixed" fixed_width="580" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommTopGlass" />
 
-     <container type="horizbox" hsp="expand" vsp="minimum" horizontal_padding="5" vertical_padding="5" horizontal_gutter="3" solidfill="1" solidfillname="glassBrassBorder">
+    <!-- <container type="horizbox" hsp="expand" vsp="minimum" horizontal_padding="5" vertical_padding="5" horizontal_gutter="3" solidfill="1" solidfillname="glassBrassBorder">-->
           <!--<spacer/>-->
           <!--<container type="horizbox" hsp="expand" vsp="expand" horizontal_padding="10" vertical_padding="15" solidfillname="miniPaper" solidfill="1">
 			<label text="An Overview of our Colonists" vap="center" hap="center" /> --><!--font="large"--><!--
@@ -38,8 +40,12 @@
                </tooltip>
           </imagebutton>-->
           
-     </container>
+     <!--</container>-->
      
-     <container type="scrollablevertbox" hsp="expand" vsp="expand" name="colonists_vertbox" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorder"/>
+	 <container type="vertbox" hsp="expand" solidfill="1" solidfillname="cecommWorkcrew" horizontal_padding="8" vertical_padding="12">
+     <container type="scrollablevertbox" hsp="expand" vsp="expand" name="colonists_vertbox" solidfill="1"/>
+	 </container>
      
+	<container type="vertbox" hsp="fixed" fixed_width="580" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommBottomGlass" />
+	</container>
 </container>
