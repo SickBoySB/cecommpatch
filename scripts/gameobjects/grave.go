@@ -2,7 +2,94 @@ gameobject "grave"
 <<
 	local 
 	<<
-
+		function epitaph_choose (grave_who_tags, grave_who)
+		
+			local epitaph_choice = {"REDACTED"}
+			
+			-- all the epitaphs
+			local epitaphs_all = {
+				"%s: lover, friend, human... probably.",
+				"R.I.P. %s",
+				"%s was taken too soon by REDACTED.",
+				"Here lies %s.",
+				"%s - \"What could go wrong?\"",
+				"%s is buried here.",
+				"Rest in peace, %s.",
+				"%s: Finally free.",
+				"%s: Never wanted to be here anyways.",
+				"%s: One of the lucky ones.",
+				"%s is buried here. The rest of the gravemarker is unintelligible.",
+				"%s: REDACTED",
+				"Here lies %s. The rest of the gravemarker is covered in claw marks and dried blood.",
+				"%s - \"It was worth it!\"",
+				"%s - \"It wasn't worth it!\"",
+				"%s: What a waste of perfectly good meat..."
+			}
+			
+			local epitaphs_lc = {
+				"%s lived and loved, but mostly re-arranged stockpiles.",
+				"Here lies %s: loyal peon and meat-enthusiast.",
+				"%s: Devoted friend and employee.",
+				"%s's job position now available. No health benefits. Minor risk involved.",
+				"%s - \"I sure hope there is work after death.\""
+			}
+			
+			local epitaphs_mc = {
+				"%s knew how to enjoy the middle-life: tidying, ignoring work condition complaints, and LOTS of alcohol.",
+				"%s - \"Work! Faster! PRODUCTIVITY!\"",
+				"%s - \"I may be dead, but that's no excuse for slacking off!\"",
+				"%s: A true clockworkian genius at paper shuffling.",
+				"%s: Respected, feared, drunk."
+			}
+			
+			local epitaphs_uc = {
+				"%s is remembered by this monument, as high as their arbitrary standards for fashion and food.",
+				"%s - \"Even in death I'm better than all of you combined.\"",
+				"%s: Novus Ordo Seclorum",
+				"%s - \"Why did I ever come to this filthy backwater?\"",
+				"%s lies here. The rest of the gravemarker is covered in complex-looking symbols."
+			}
+			
+			local epitaphs_bandits = {
+				"%s: Finally left behind a life of crime.",
+				"%s: Was known mostly for their uncanny ability to steal completely worthless commodities and get shot.",
+				"%s: Stole my watch. Joke's on them now, the jerk."
+			}
+			
+			local epitaphs_other = {
+				"%s: Nobody really knew or understood them. Rest well.",
+				"%s: Probably a foreigner of some kind.",
+				"%s: Nothing was really known about them."
+			}
+			
+			-- TODO: military specific stuff? more epitaphs? *better* epitaphs?
+			
+			-- 50/50 chance for exclusive epitaph
+			if rand(1,2) == 1 then
+				epitaph_choice = epitaphs_all
+			else
+				if grave_who_tags["bandit"] and not grave_who_tags["citizen"] then
+					epitaph_choice = epitaphs_bandits
+				elseif grave_who_tags["citizen"] then
+					if grave_who_tags["lower_class"] then
+						epitaph_choice = epitaphs_lc
+					elseif grave_who_tags["middle_class"] then
+						epitaph_choice = epitaphs_mc
+					elseif grave_who_tags["upper_class"] then
+						epitaph_choice = epitaphs_uc
+					else
+						-- we shouldn't ever hit this, LOG IT
+						printl("CECOMMPATCH - Graves: we got a citizen with no class tag (for " .. grave_who .. ") somehow.")
+						epitaph_choice = epitaphs_other
+					end
+				else
+					epitaph_choice = epitaphs_other
+				end
+			end
+			
+			-- now pick a random one, format the string, and return it
+			return string.format(epitaph_choice[rand(1,#epitaph_choice)], grave_who)
+		end
 	>>
 
 	state
@@ -37,7 +124,7 @@ gameobject "grave"
 			"graveyardCogWood00.upm",
 			"graveyardCogStone00.upm",
 			"graveyardCogStone01.upm",
-			"fences/fencePost01.upm",
+			--"fences/fencePost01.upm",
 			--"fences/fencePost02.upm",
 		}
 		
@@ -71,7 +158,9 @@ gameobject "grave"
 			
 		local models = {}
 		local grave_who = "Unknown"
+		local grave_epitaph = "Details about who is buried here has been forgotten. Or misplaced. Or was unimportant."
 
+		
 		local results = query("gameSpatialDictionary",
 						  "allObjectsInRadiusWithTagRequest",
 						  state.position,
@@ -83,7 +172,11 @@ gameobject "grave"
 			--printl("CECOMMPATCH: " .. grave_who)
 		end	
 		
+		-- get the epitaph for the gravestone
+		grave_epitaph = epitaph_choose(grave_who_tags, grave_who)
+		
 		if grave_who_tags["citizen"] then
+			-- figure out class-specific gravestones and whatnot
 			if grave_who_tags["lower_class"] then
 				if grave_who_tags["military"] then
 					models = models_military_lc
@@ -104,7 +197,6 @@ gameobject "grave"
 			models = models_other
 		end
 		
-		-- TODO: base randomization on class/faction
 		local grave_model = models[rand(1,#models)]
 		local grave_rotate = rand(-7,7) -- slight rotation for variety. too much is weird looking
 		
@@ -183,8 +275,8 @@ gameobject "grave"
 			0.25)
 		
 		-- TODO: get some interesting grave text, randomized, maybe based on the colonist being buried?
-          local tooltipTitle = "Grave"
-          local tooltipDescription = "Here rests " .. grave_who .. ". Good riddance."
+          local tooltipTitle = "Grave of " .. grave_who
+          local tooltipDescription = grave_epitaph
           send("rendInteractiveObjectClassHandler",
                     "odinRendererBindTooltip",
                     state.renderHandle,
