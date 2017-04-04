@@ -1,0 +1,524 @@
+<jobsDB>
+<job
+ name="CE: Should Retreat"
+ loop="0"
+ display_name="unnamed job"
+ icon_skin=""
+ icon=""
+ decision_tree="1"
+ decision_tree_level="-1"
+ minimum_utility="-2147483647"
+ mandatory_eval="0"
+ is_social="0"
+ can_interrupt="0"
+ DTNx="721" DTNy="353" 
+ put_in_jobs="1"
+ goods_job="0"
+ persistent="0"
+ interrupter_type="3"
+ interruptee_type="4"
+ must_lock_owner="1"
+ do_not_suspend_parent_assignment="0"
+ filter="">
+      <require_gameobject input="enemy" amount="1" require_owned="0" tag_from_job="0" random="0" closest="0" useMultiplier="0" 
+                          tag="hostile_agent" not_tag="dead"
+                          create_marker="0" in_party="0" range="30" unique="0" must_lock="0" must_unlock="0" must_test_lock="0" must_lock_ggp="0" 
+                          civ_value_leq="-1" civ_value_geq="-1" />
+      <yes node="MT: In Civilization?"/>
+</job>
+<job
+ name="CT: Friendly Check"
+ loop="0"
+ display_name="unnamed job"
+ icon_skin=""
+ icon=""
+ decision_tree="1"
+ decision_tree_level="-1"
+ minimum_utility="-2147483647"
+ mandatory_eval="0"
+ is_social="0"
+ can_interrupt="0"
+ DTNx="357" DTNy="387" 
+ put_in_jobs="1"
+ goods_job="0"
+ persistent="0"
+ interrupter_type="3"
+ interruptee_type="4"
+ must_lock_owner="1"
+ do_not_suspend_parent_assignment="0"
+ filter="">
+      <require_gameobject input="enemy" amount="1" tag="hostile_agent" not_tag="dead,ultra_terror" require_owned="0" tag_from_job="0" random="0" closest="1" useMultiplier="0" create_marker="0" in_party="0" range="15" unique="0" must_lock="0" must_unlock="1" must_test_lock="0" must_lock_ggp="0" civ_value_leq="-1" civ_value_geq="-1" />
+      <require_no_gameobject input="whatever" amount="1" tag="military" not_tag="dead" require_owned="0" tag_from_job="0" random="0" closest="0" useMultiplier="0" create_marker="0" in_party="0" range="30" unique="0" must_lock="0" must_unlock="0" must_test_lock="0" must_lock_ggp="0" civ_value_leq="-1" civ_value_geq="-1" />
+      <no node="CE: Should Retreat"/>
+      <yes node="Civilian Tree: Melee Attack Entity (spontaneous target)"/>
+</job>
+<job
+ name="CT: Morale Check"
+ loop="0"
+ display_name="Morale Check"
+ icon_skin=""
+ icon=""
+ decision_tree="1"
+ decision_tree_level="1"
+ minimum_utility="-2147483647"
+ mandatory_eval="0"
+ is_social="0"
+ can_interrupt="0"
+ DTNx="221" DTNy="580" 
+ put_in_jobs="1"
+ goods_job="0"
+ persistent="0"
+ interrupter_type="0"
+ interruptee_type="0"
+ must_lock_owner="1"
+ do_not_suspend_parent_assignment="0"
+ filter="">
+      <require_character_personal_stat_leq name="morale" amount="-30" />
+      <yes node="MT: In Civilization?"/>
+</job>
+<job
+ name="Civilian Tree: Melee Attack Entity (spontaneous target)"
+ loop="0"
+ display_name="Melee Attack Entity"
+ icon_skin="ui\orderIcons.xml"
+ icon="guns_image"
+ decision_tree="1"
+ decision_tree_level="0"
+ minimum_utility="0"
+ mandatory_eval="0"
+ is_social="0"
+ can_interrupt="1"
+ DTNx="23" DTNy="494" 
+ put_in_jobs="1"
+ goods_job="0"
+ persistent="0"
+ interrupter_type="3"
+ interruptee_type="4"
+ must_lock_owner="1"
+ do_not_suspend_parent_assignment="0"
+ filter="military">
+      <require_not_sitting />
+      <require_not_attending_party />
+      <require_empty_hands />
+      <require_character_personal_stat_geq name="morale" amount="-30" />
+      <require_character_has_tag tag="has_melee_attack" />
+      <require_gameobject input="enemy" amount="1" tag="hostile_agent" not_tag="dead,ultra_terror" require_owned="0" tag_from_job="0" random="0" closest="1" useMultiplier="0" create_marker="0" in_party="0" range="15" unique="0" must_lock="0" must_unlock="1" must_test_lock="0" must_lock_ggp="0" civ_value_leq="-1" civ_value_geq="-1" />
+      <fsm>
+            <attack_melee  input="enemy" name="run"/>
+      </fsm>
+      <no node="Civilian Tree: Shoot At Entity (first loop, reload)"/>
+</job>
+<job
+ name="Civilian Tree: Raise Alarm"
+ loop="0"
+ display_name="Raise Alarm"
+ icon_skin="ui\orderIcons.xml"
+ icon="hunting"
+ decision_tree="1"
+ decision_tree_level="0"
+ minimum_utility="-2147483647"
+ mandatory_eval="1"
+ is_social="0"
+ can_interrupt="1"
+ DTNx="22" DTNy="245" 
+ put_in_jobs="1"
+ goods_job="0"
+ persistent="0"
+ interrupter_type="3"
+ interruptee_type="4"
+ must_lock_owner="1"
+ do_not_suspend_parent_assignment="0"
+ filter="">
+      <require_gameobject input="enemy" amount="1" tag="cecomm_prevent,hostile_agent" not_tag="alarm_waypoint_active" require_owned="0" tag_from_job="0" random="0" closest="0" useMultiplier="0" create_marker="0" in_party="0" range="15" unique="0" must_lock="0" must_unlock="1" must_test_lock="0" must_lock_ggp="0" civ_value_leq="-1" civ_value_geq="-1" />
+      <fsm>
+            <create_alarm_waypoint  input="enemy"/>
+            <set_tag_other  input="enemy" name="alarm_waypoint_active"/>
+      </fsm>
+      <no node="CT: Friendly Check"/>
+</job>
+<job
+ name="Civilian Tree: Shoot At Entity (first loop, reload)"
+ loop="0"
+ display_name="Shoot At Entity"
+ icon_skin="ui\orderIcons.xml"
+ icon="guns_image"
+ decision_tree="1"
+ decision_tree_level="0"
+ minimum_utility="-2147483647"
+ mandatory_eval="1"
+ is_social="0"
+ can_interrupt="1"
+ DTNx="47" DTNy="547" 
+ put_in_jobs="1"
+ goods_job="0"
+ persistent="0"
+ interrupter_type="3"
+ interruptee_type="4"
+ must_lock_owner="1"
+ do_not_suspend_parent_assignment="0"
+ filter="military">
+      <require_not_sitting />
+      <require_empty_hands />
+      <require_gameobject input="enemy" amount="1" tag="hostile_agent" not_tag="dead" require_owned="0" tag_from_job="0" random="0" closest="1" useMultiplier="0" create_marker="0" in_party="0" range="16" unique="0" must_lock="0" must_unlock="1" must_test_lock="0" must_lock_ggp="0" civ_value_leq="-1" civ_value_geq="-1" />
+      <require_character_personal_stat_geq name="morale" amount="-30" />
+      <require_character_has_tag tag="has_ranged_attack" />
+      <fsm>
+            <attack_ranged  input="enemy" name="run"/>
+      </fsm>
+      <no node="CT: Morale Check"/>
+</job>
+<job
+ name="MT: In Civilization?"
+ loop="0"
+ display_name="unnamed job"
+ icon_skin=""
+ icon=""
+ decision_tree="1"
+ decision_tree_level="1"
+ minimum_utility="-2147483647"
+ mandatory_eval="0"
+ is_social="0"
+ can_interrupt="0"
+ DTNx="589" DTNy="704" 
+ put_in_jobs="1"
+ goods_job="0"
+ persistent="0"
+ interrupter_type="0"
+ interruptee_type="0"
+ must_lock_owner="1"
+ do_not_suspend_parent_assignment="0"
+ filter="">
+      <require_at_civilization />
+      <no node="MT: Retreat (Outside Civilization)"/>
+      <yes node="MT: Retreat (Within Civilization)"/>
+</job>
+<job
+ name="MT: Morale Check"
+ loop="0"
+ display_name="unnamed job"
+ icon_skin=""
+ icon=""
+ decision_tree="1"
+ decision_tree_level="1"
+ minimum_utility="-2147483647"
+ mandatory_eval="0"
+ is_social="0"
+ can_interrupt="0"
+ DTNx="347" DTNy="248" 
+ put_in_jobs="1"
+ goods_job="0"
+ persistent="0"
+ interrupter_type="0"
+ interruptee_type="0"
+ must_lock_owner="1"
+ do_not_suspend_parent_assignment="0"
+ filter="">
+      <require_character_personal_stat_geq name="morale" amount="-70" />
+      <no node="MT: In Civilization?"/>
+      <yes node="MT: Retreat To Rally Point"/>
+</job>
+<job
+ name="MT: Rally (idle)"
+ loop="0"
+ display_name="Rallying"
+ icon_skin="ui\orderIcons.xml"
+ icon="explore_image"
+ decision_tree="1"
+ decision_tree_level="3"
+ minimum_utility="-2147483647"
+ mandatory_eval="0"
+ is_social="0"
+ can_interrupt="0"
+ DTNx="725" DTNy="171" 
+ put_in_jobs="1"
+ goods_job="0"
+ persistent="0"
+ interrupter_type="0"
+ interruptee_type="1"
+ must_lock_owner="1"
+ do_not_suspend_parent_assignment="0"
+ filter="military">
+      <require_work_party />
+      <require_work_party_rally_point input="beacon" min_distance="-1" max_distance="10" must_lock="0" must_test_lock="0"  do_not_fill_dependency="1" />
+      <require_random_location tag="beacon" input="beacon_location" must_lock="0" must_test_lock="0" use_origin="0" require_flat="0" range="5" min_elevation="-1000" max_elevation="1000" num_samples="10"  do_not_fill_dependency="1" />
+      <require_not_sitting />
+      <fsm>
+            <walk_to_adjacent_target_position  input="beacon_location"/>
+      </fsm>
+</job>
+<job
+ name="MT: Rally (run)"
+ loop="0"
+ display_name="Rallying"
+ icon_skin="ui\orderIcons.xml"
+ icon="explore_image"
+ decision_tree="1"
+ decision_tree_level="3"
+ minimum_utility="-2147483647"
+ mandatory_eval="0"
+ is_social="0"
+ can_interrupt="0"
+ DTNx="743" DTNy="130" 
+ put_in_jobs="1"
+ goods_job="0"
+ persistent="0"
+ interrupter_type="0"
+ interruptee_type="1"
+ must_lock_owner="1"
+ do_not_suspend_parent_assignment="0"
+ filter="military">
+      <require_not_sitting />
+      <require_work_party />
+      <require_work_party_rally_point input="beacon" min_distance="10" max_distance="-1" must_lock="0" must_test_lock="0"  do_not_fill_dependency="1" />
+      <require_random_location tag="beacon" input="beacon_location" must_lock="0" must_test_lock="0" use_origin="0" require_flat="0" range="5" min_elevation="-1000" max_elevation="1000" num_samples="10"  do_not_fill_dependency="1" />
+      <fsm>
+            <walk_to_adjacent_target_position  input="beacon_location" name="run"/>
+      </fsm>
+      <no node="MT: Rally (idle)"/>
+</job>
+<job
+ name="MT: Retreat (Outside Civilization)"
+ loop="0"
+ display_name="Retreating Toward Civilization"
+ icon_skin="ui\thoughtIcons.xml"
+ icon="retreat"
+ decision_tree="1"
+ decision_tree_level="1"
+ minimum_utility="-2147483647"
+ mandatory_eval="0"
+ is_social="0"
+ can_interrupt="1"
+ DTNx="761" DTNy="639" 
+ put_in_jobs="1"
+ goods_job="0"
+ persistent="0"
+ interrupter_type="2"
+ interruptee_type="4"
+ must_lock_owner="1"
+ do_not_suspend_parent_assignment="0"
+ filter="">
+      <require_civ_dist_geq input="200" />
+      <require_closest_civilization_location input="the_place" />
+      <require_not_sitting />
+      <fsm>
+            <set_tag  name="fleeing"/>
+            <attempt_emote  name="retreat"/>
+            <walk_to_near_location  input="the_place" name="run"/>
+            <remove_tag  name="fleeing"/>
+            <flee_success_test />
+      </fsm>
+</job>
+<job
+ name="MT: Retreat (Within Civilization)"
+ loop="0"
+ display_name="Retreating (Within Civilization)"
+ icon_skin="ui\thoughtIcons.xml"
+ icon="retreat"
+ decision_tree="1"
+ decision_tree_level="1"
+ minimum_utility="-2147483647"
+ mandatory_eval="0"
+ is_social="0"
+ can_interrupt="1"
+ DTNx="759" DTNy="592" 
+ put_in_jobs="1"
+ goods_job="0"
+ persistent="0"
+ interrupter_type="2"
+ interruptee_type="3"
+ must_lock_owner="1"
+ do_not_suspend_parent_assignment="0"
+ filter="">
+      <require_not_sitting />
+      <require_gameobject input="enemy" amount="1" tag="hostile_agent" not_tag="dead" require_owned="0" tag_from_job="0" random="0" closest="0" useMultiplier="0" create_marker="0" in_party="0" range="16" unique="0" must_lock="0" must_unlock="1" must_test_lock="0" must_lock_ggp="0" civ_value_leq="-1" civ_value_geq="-1" />
+      <fsm>
+            <set_tag  name="fleeing"/>
+            <unlock  input="enemy"/>
+            <walk_away_from_creature  input="enemy" name="run"/>
+            <remove_tag  name="fleeing"/>
+            <flee_success_test />
+      </fsm>
+</job>
+<job
+ name="MT: Retreat To Rally Point"
+ loop="0"
+ display_name="Retreating To Rally Point"
+ icon_skin="ui\thoughtIcons.xml"
+ icon="retreat"
+ decision_tree="1"
+ decision_tree_level="2"
+ minimum_utility="-2147483647"
+ mandatory_eval="0"
+ is_social="0"
+ can_interrupt="0"
+ DTNx="680" DTNy="39" 
+ put_in_jobs="1"
+ goods_job="0"
+ persistent="0"
+ interrupter_type="3"
+ interruptee_type="4"
+ must_lock_owner="1"
+ do_not_suspend_parent_assignment="0"
+ filter="military">
+      <require_work_party_rally_point input="beacon" min_distance="10" max_distance="1882988576" must_lock="0" must_test_lock="0" />
+      <require_random_location tag="beacon" input="beacon_location" must_lock="0" must_test_lock="0" use_origin="0" require_flat="0" range="5" min_elevation="-1000" max_elevation="1000" num_samples="10"  do_not_fill_dependency="1" />
+      <require_not_sitting />
+      <require_character_personal_stat_leq name="morale" amount="-50" />
+      <fsm>
+            <set_tag  name="fleeing"/>
+            <walk_to_adjacent_target_position  input="beacon_location" name="run"/>
+            <remove_tag  name="fleeing"/>
+            <flee_success_test />
+      </fsm>
+      <no node="Military Tree: Respond To Alarm"/>
+</job>
+<job
+ name="MT: Shoot At Entity (first loop, no reload)"
+ loop="0"
+ display_name="Shoot At Entity"
+ icon_skin="ui\orderIcons.xml"
+ icon="guns_image"
+ decision_tree="1"
+ decision_tree_level="0"
+ minimum_utility="-2147483647"
+ mandatory_eval="1"
+ is_social="0"
+ can_interrupt="1"
+ DTNx="20" DTNy="41" 
+ put_in_jobs="1"
+ goods_job="0"
+ persistent="0"
+ interrupter_type="3"
+ interruptee_type="4"
+ must_lock_owner="1"
+ do_not_suspend_parent_assignment="0"
+ filter="military">
+      <require_not_sitting />
+      <require_empty_hands />
+      <require_gameobject input="enemy" amount="1" tag="hostile_agent" require_owned="0" tag_from_job="0" random="0" closest="1" useMultiplier="0" create_marker="0" in_party="0" range="16" unique="0" must_lock="0" must_unlock="1" must_test_lock="0" must_lock_ggp="0" civ_value_leq="-1" civ_value_geq="-1" />
+      <require_character_personal_stat_geq name="morale" amount="-70" />
+      <require_character_has_tag tag="has_ranged_attack" />
+      <fsm>
+            <attack_ranged  input="enemy" name="run"/>
+      </fsm>
+      <no node="Military Tree: Melee Attack Entity (spontaneous target)"/>
+</job>
+<job
+ name="MT: Shoot At Entity (first loop, reload)"
+ loop="0"
+ display_name="Shoot At Entity"
+ icon_skin="ui\orderIcons.xml"
+ icon="guns_image"
+ decision_tree="1"
+ decision_tree_level="0"
+ minimum_utility="-2147483647"
+ mandatory_eval="1"
+ is_social="0"
+ can_interrupt="1"
+ DTNx="23" DTNy="164" 
+ put_in_jobs="1"
+ goods_job="0"
+ persistent="0"
+ interrupter_type="3"
+ interruptee_type="4"
+ must_lock_owner="1"
+ do_not_suspend_parent_assignment="0"
+ filter="military">
+      <require_not_sitting />
+      <require_empty_hands />
+      <require_gameobject input="enemy" amount="1" tag="hostile_agent" require_owned="0" tag_from_job="0" random="0" closest="1" useMultiplier="0" create_marker="0" in_party="0" range="16" unique="0" must_lock="0" must_unlock="1" must_test_lock="0" must_lock_ggp="0" civ_value_leq="-1" civ_value_geq="-1" />
+      <require_character_personal_stat_geq name="morale" amount="-70" />
+      <fsm>
+            <attack_ranged  input="enemy" name="run"/>
+      </fsm>
+      <no node="MT: Morale Check"/>
+</job>
+<job
+ name="Military Tree: Melee Attack Entity (spontaneous target)"
+ loop="0"
+ display_name="Melee Attack Entity"
+ icon_skin="ui\orderIcons.xml"
+ icon="guns_image"
+ decision_tree="1"
+ decision_tree_level="0"
+ minimum_utility="0"
+ mandatory_eval="0"
+ is_social="0"
+ can_interrupt="1"
+ DTNx="24" DTNy="116" 
+ put_in_jobs="1"
+ goods_job="0"
+ persistent="0"
+ interrupter_type="3"
+ interruptee_type="4"
+ must_lock_owner="1"
+ do_not_suspend_parent_assignment="0"
+ filter="military">
+      <require_not_sitting />
+      <require_empty_hands />
+      <require_gameobject input="enemy" amount="1" tag="hostile_agent" not_tag="dead,ultra_terror" require_owned="0" tag_from_job="0" random="0" closest="1" useMultiplier="0" create_marker="0" in_party="0" range="15" unique="0" must_lock="0" must_unlock="1" must_test_lock="0" must_lock_ggp="0" civ_value_leq="-1" civ_value_geq="-1" />
+      <require_character_personal_stat_geq name="morale" amount="-70" />
+      <require_character_has_tag tag="has_melee_attack" />
+      <require_no_gameobject amount="1" require_owned="0" tag_from_job="0" random="0" closest="0" useMultiplier="0" create_marker="0" in_party="0" range="30" unique="0" must_lock="0" must_unlock="0" must_test_lock="0" must_lock_ggp="0" civ_value_leq="-1" civ_value_geq="-1" />
+      <fsm>
+            <attack_melee  input="enemy" name="run"/>
+      </fsm>
+      <no node="MT: Shoot At Entity (first loop, reload)"/>
+</job>
+<job
+ name="Military Tree: Raise Alarm"
+ loop="0"
+ display_name="Raise Alarm"
+ icon_skin="ui\orderIcons.xml"
+ icon="hunting"
+ decision_tree="1"
+ decision_tree_level="0"
+ minimum_utility="-2147483647"
+ mandatory_eval="1"
+ is_social="0"
+ can_interrupt="1"
+ DTNx="19" DTNy="-14" 
+ put_in_jobs="1"
+ goods_job="0"
+ persistent="0"
+ interrupter_type="3"
+ interruptee_type="4"
+ must_lock_owner="1"
+ do_not_suspend_parent_assignment="0"
+ filter="">
+      <require_gameobject input="enemy" amount="1" tag="cecomm_prevent,hostile_agent" not_tag="alarm_waypoint_active" require_owned="0" tag_from_job="0" random="0" closest="0" useMultiplier="0" create_marker="0" in_party="0" range="15" unique="0" must_lock="0" must_unlock="1" must_test_lock="0" must_lock_ggp="0" civ_value_leq="-1" civ_value_geq="-1" />
+      <fsm>
+            <create_alarm_waypoint  input="enemy"/>
+            <set_tag_other  input="enemy" name="alarm_waypoint_active"/>
+      </fsm>
+      <no node="MT: Shoot At Entity (first loop, no reload)"/>
+</job>
+<job
+ name="Military Tree: Respond To Alarm"
+ loop="0"
+ display_name="Responding To Alarm"
+ icon_skin="ui\orderIcons.xml"
+ icon="march_image"
+ decision_tree="1"
+ decision_tree_level="2"
+ minimum_utility="-2147483647"
+ mandatory_eval="0"
+ is_social="0"
+ can_interrupt="1"
+ DTNx="688" DTNy="76" 
+ put_in_jobs="1"
+ goods_job="0"
+ persistent="0"
+ interrupter_type="3"
+ interruptee_type="4"
+ must_lock_owner="1"
+ do_not_suspend_parent_assignment="0"
+ filter="military">
+      <require_gameobject input="alarm" amount="1" tag="alarm_waypoint" require_owned="0" tag_from_job="0" random="0" closest="1" useMultiplier="0" create_marker="0" in_party="0" range="50" unique="0" must_lock="0" must_unlock="1" must_test_lock="0" must_lock_ggp="0" civ_value_leq="-1" civ_value_geq="-1" />
+      <require_not_sitting />
+      <fsm>
+            <walk_to_adjacent_position  input="alarm" name="run"/>
+      </fsm>
+      <no node="MT: Rally (run)"/>
+</job>
+</jobsDB>

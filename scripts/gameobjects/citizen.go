@@ -7393,7 +7393,7 @@ gameobject "citizen" inherit "ai_agent"
 		elseif food_points == 1 then
 			description = description .. " has been satisfactory fed for the last few days."
 			shortFix = "Well-fed but happier with higher-quality food."
-			heading = "Well Fed"
+			heading = "Well-Fed But Unsated"
 			
 		elseif food_points == 2 then
 			description = description .. " has eaten above " .. state.AI.strs.POSSESSIVE .. " station and feels very well taken care of."
