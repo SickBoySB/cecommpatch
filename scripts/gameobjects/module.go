@@ -349,7 +349,7 @@ gameobject "module" inherit "spatialobject" -- inherit "object_damage" not yet -
 			printl("buildings"," module setting desired height to 0");
 			desired_height = 0
 		end
-		if SELF.tags["window"] == true then
+		if SELF.tags["window"] == true or myTable.type == "buildingDecor" then
 			printl("buildings"," module setting desired height to 0");
 			desired_height = 0
 		end
