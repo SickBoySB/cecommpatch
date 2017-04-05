@@ -2041,7 +2041,7 @@ Entity
 	icon_skin = "ui//orderIcons.xml",
 	icon="icon_lamp00",
 	tier=1,
-	quality=0,
+	quality=1,
 	upkeep_type=-1,
 	upkeep_quantity=-1
 }
@@ -2056,7 +2056,7 @@ Entity
 	icon_skin = "ui//orderIcons.xml",
 	icon="icon_lamp01",
 	tier=1,
-	quality=0,
+	quality=1,
 	upkeep_type=-1,
 	upkeep_quantity=-1
 }
@@ -2071,7 +2071,7 @@ Entity
 	icon_skin = "ui//orderIcons.xml",
 	icon="icon_lamp02",
 	tier=1,
-	quality=0,
+	quality=1,
 	upkeep_type=-1,
 	upkeep_quantity=-1
 }
@@ -2086,7 +2086,7 @@ Entity
 	icon_skin = "ui//orderIcons.xml",
 	icon="icon_lamp03",
 	tier=1,
-	quality=0,
+	quality=1,
 	upkeep_type=-1,
 	upkeep_quantity=-1
 }
@@ -2101,7 +2101,7 @@ Entity
 	icon_skin = "ui//orderIcons.xml",
 	icon="icon_lamp04",
 	tier=1,
-	quality=0,
+	quality=1,
 	upkeep_type=-1,
 	upkeep_quantity=-1
 }
@@ -2115,7 +2115,7 @@ Entity
 	icon_skin = "ui//orderIcons2.xml",
 	icon="barometer",
 	tier=1,
-	quality=0,
+	quality=1,
 	upkeep_type=-1,
 	upkeep_quantity=-1
 }
@@ -2129,7 +2129,7 @@ Entity
 	icon_skin = "ui//orderIcons2.xml",
 	icon="pipe_and_valve",
 	tier=2,
-	quality=0,
+	quality=1,
 	upkeep_type=-1,
 	upkeep_quantity=-1
 }
@@ -2143,7 +2143,7 @@ Entity
 	icon_skin = "ui//orderIcons2.xml",
 	icon="vent",
 	tier=2,
-	quality=0,
+	quality=1,
 	upkeep_type=-1,
 	upkeep_quantity=-1
 }
@@ -2157,7 +2157,7 @@ Entity
 	icon_skin = "ui//orderIcons2.xml",
 	icon="pipe_cluster",
 	tier=2,
-	quality=0,
+	quality=1,
 	upkeep_type=-1,
 	upkeep_quantity=-1
 }
