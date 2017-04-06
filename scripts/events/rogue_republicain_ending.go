@@ -71,8 +71,27 @@ event "rogue_republicain_ending"
 						
                          elseif successLevel <= 5 then
 						--very minor success
-						
-                              table.insert(resultTable, "boxed_rare_painting")
+                              --[[
+							  table.insert(resultTable, "boxed_rare_painting")
+                              table.insert(resultTable, "boxed_rare_painting_02")
+                              table.insert(resultTable, "boxed_rare_painting_03")
+                              table.insert(resultTable, "boxed_rare_painting_04")
+                              table.insert(resultTable, "boxed_rare_painting_05")
+                              table.insert(resultTable, "boxed_uncommon_painting_01")
+                              table.insert(resultTable, "boxed_uncommon_painting_02")
+                              table.insert(resultTable, "boxed_uncommon_painting_03")
+                              table.insert(resultTable, "boxed_uncommon_painting_04")
+                              table.insert(resultTable, "boxed_common_painting_01")
+                              table.insert(resultTable, "boxed_common_painting_02")
+                              table.insert(resultTable, "boxed_common_painting_03")
+                              table.insert(resultTable, "boxed_common_painting_04")
+                              table.insert(resultTable, "boxed_uncommon_picture_01")
+                              table.insert(resultTable, "boxed_uncommon_picture_02")
+                              table.insert(resultTable, "boxed_common_picture_01")
+                              table.insert(resultTable, "boxed_common_picture_02")
+							  ]]--
+                              table.insert(resultTable, "boxed_common_picture_01")
+                              table.insert(resultTable, "boxed_common_picture_02")
                               table.insert(resultTable, "boxed_stained_glass_window")
                               table.insert(resultTable, "boxed_stone_plinth")
                               table.insert(resultTable, "boxed_wood_plinth")
@@ -80,12 +99,15 @@ event "rogue_republicain_ending"
                               table.insert(resultTable, "bricabrac")
                               table.insert(resultTable, "rough_stone_block")
                               table.insert(resultTable, "boxed_wall-mounted_aurochs_head")
+                              table.insert(resultTable, "boxed_wall-mounted_beetle_head")
 						
                          elseif successLevel <= 10 then
 						--minor success
 						
-                              table.insert(resultTable, "boxed_rare_painting")
-                              table.insert(resultTable, "boxed_rare_painting")
+                              table.insert(resultTable, "boxed_uncommon_picture_01")
+                              table.insert(resultTable, "boxed_uncommon_picture_02")
+                              table.insert(resultTable, "boxed_common_picture_01")
+                              table.insert(resultTable, "boxed_common_picture_02")
                               table.insert(resultTable, "boxed_stained_glass_window")
                               table.insert(resultTable, "boxed_stone_plinth")
                               table.insert(resultTable, "boxed_wood_plinth")
@@ -94,13 +116,19 @@ event "rogue_republicain_ending"
                               table.insert(resultTable, "rough_stone_block")
                               table.insert(resultTable, "steel_ingots")
                               table.insert(resultTable, "boxed_wall-mounted_aurochs_head")
+                              table.insert(resultTable, "boxed_wall-mounted_beetle_head")
 						
                          elseif successLevel <= 15 then
 						-- standard success
 						
-                              table.insert(resultTable, "boxed_rare_painting")
-                              table.insert(resultTable, "boxed_rare_painting")
-                              table.insert(resultTable, "boxed_rare_painting")
+                              table.insert(resultTable, "boxed_common_painting_01")
+                              table.insert(resultTable, "boxed_common_painting_02")
+                              table.insert(resultTable, "boxed_common_painting_03")
+                              table.insert(resultTable, "boxed_common_painting_04")
+                              table.insert(resultTable, "boxed_uncommon_picture_01")
+                              table.insert(resultTable, "boxed_uncommon_picture_02")
+                              table.insert(resultTable, "boxed_common_picture_01")
+                              table.insert(resultTable, "boxed_common_picture_02")
                               table.insert(resultTable, "boxed_stained_glass_window")
                               table.insert(resultTable, "boxed_stone_plinth")
                               table.insert(resultTable, "boxed_wood_plinth")
@@ -109,44 +137,63 @@ event "rogue_republicain_ending"
                               table.insert(resultTable, "rough_stone_block")
                               table.insert(resultTable, "steel_ingots")
                               table.insert(resultTable, "boxed_wall-mounted_aurochs_head")
+                              table.insert(resultTable, "boxed_wall-mounted_beetle_head")
 						
                          elseif successLevel <= 20 then
 						-- significant success
 						
-                              table.insert(resultTable, "boxed_rare_painting")
-                              table.insert(resultTable, "boxed_rare_painting")
-                              table.insert(resultTable, "boxed_rare_painting")
-                              table.insert(resultTable, "boxed_rare_painting")
-                              table.insert(resultTable, "boxed_rare_painting")
+                              table.insert(resultTable, "boxed_uncommon_painting_01")
+                              table.insert(resultTable, "boxed_uncommon_painting_02")
+                              table.insert(resultTable, "boxed_uncommon_painting_03")
+                              table.insert(resultTable, "boxed_uncommon_painting_04")
+                              table.insert(resultTable, "boxed_common_painting_01")
+                              table.insert(resultTable, "boxed_common_painting_02")
+                              table.insert(resultTable, "boxed_common_painting_03")
+                              table.insert(resultTable, "boxed_common_painting_04")
+                              table.insert(resultTable, "boxed_uncommon_picture_01")
+                              table.insert(resultTable, "boxed_uncommon_picture_02")
+                              table.insert(resultTable, "boxed_common_picture_01")
+                              table.insert(resultTable, "boxed_common_picture_02")
                               table.insert(resultTable, "boxed_stained_glass_window")
                               table.insert(resultTable, "boxed_stone_plinth")
                               table.insert(resultTable, "boxed_wood_plinth")
                               table.insert(resultTable, "bricks")
                               table.insert(resultTable, "steel_ingots")
                               table.insert(resultTable, "boxed_wall-mounted_aurochs_head")
+                              table.insert(resultTable, "boxed_wall-mounted_beetle_head")
 						
                          else
 						--super success!!
-                              table.insert(resultTable, "boxed_rare_painting")
-                              table.insert(resultTable, "boxed_rare_painting")
-                              table.insert(resultTable, "boxed_rare_painting")
-                              table.insert(resultTable, "boxed_rare_painting")
-                              table.insert(resultTable, "boxed_rare_painting")
-                              table.insert(resultTable, "boxed_rare_painting")
-                              table.insert(resultTable, "boxed_rare_painting")
-                              table.insert(resultTable, "boxed_rare_painting")
+							  table.insert(resultTable, "boxed_rare_painting")
+                              table.insert(resultTable, "boxed_rare_painting_02")
+                              table.insert(resultTable, "boxed_rare_painting_03")
+                              table.insert(resultTable, "boxed_rare_painting_04")
+                              table.insert(resultTable, "boxed_rare_painting_05")
+                              table.insert(resultTable, "boxed_uncommon_painting_01")
+                              table.insert(resultTable, "boxed_uncommon_painting_02")
+                              table.insert(resultTable, "boxed_uncommon_painting_03")
+                              table.insert(resultTable, "boxed_uncommon_painting_04")
+                              table.insert(resultTable, "boxed_common_painting_01")
+                              table.insert(resultTable, "boxed_common_painting_02")
+                              table.insert(resultTable, "boxed_common_painting_03")
+                              table.insert(resultTable, "boxed_common_painting_04")
+                              table.insert(resultTable, "boxed_uncommon_picture_01")
+                              table.insert(resultTable, "boxed_uncommon_picture_02")
+                              table.insert(resultTable, "boxed_common_picture_01")
+                              table.insert(resultTable, "boxed_common_picture_02")
                               table.insert(resultTable, "boxed_grenade_launcher_locker") --!??!?!?
                               table.insert(resultTable, "boxed_stone_plinth")
                               table.insert(resultTable, "boxed_wood_plinth")
                               table.insert(resultTable, "steel_ingots")
                               table.insert(resultTable, "boxed_wall-mounted_aurochs_head")
+                              table.insert(resultTable, "boxed_wall-mounted_beetle_head")
                          end
 
                          state.itemPick = resultTable[rand(1,#resultTable)]
 					
                          local mysteriousResult = "The work of art appears to be something truly mysterious. You're not quite sure what it is, honestly. You blink, and suddenly it's gone. Huh. You feel like you've been had."
                          
-                         if state.itemPick == "boxed_rare_painting" then
+                         if state.itemPick == "boxed_rare_painting" or state.itemPick == "boxed_rare_painting_02" or state.itemPick == "boxed_rare_painting_03" or state.itemPick == "boxed_rare_painting_04" or state.itemPick == "boxed_rare_painting_05" then
 						
                               mysteriousResult = "The work of art is an astonishing painting, capturing your colony in glorious, swirling colors - truly a masterwork! \z
                               Your colonists' hearts swell with pride."
@@ -156,6 +203,23 @@ event "rogue_republicain_ending"
 							send("gameSession","setSessionBool","patronOfTheArts",true)
 							send("gameSession", "setSteamAchievement", "patronOfTheArts")
 						end
+						
+						 elseif state.itemPick == "boxed_uncommon_painting_01" or state.itemPick == "boxed_uncommon_painting_02" or state.itemPick == "boxed_uncommon_painting_03" or state.itemPick == "boxed_uncommon_painting_04" then
+						
+                              mysteriousResult = "The work of art is a stylish painting, capturing your colony in a breath-taking way - anyone would be willing to house it! \z
+                              Your colonists' hearts swell with pride."
+						
+						 elseif state.itemPick == "boxed_common_painting_01" or state.itemPick == "boxed_common_painting_02" or state.itemPick == "boxed_common_painting_03" or state.itemPick == "boxed_common_painting_04" then
+						
+                              mysteriousResult = "The work of art is a traditional painting. It may not be mind-blowing, but it looks good enough to hang on the wall."
+						
+						 elseif state.itemPick == "boxed_uncommon_picture_01" or state.itemPick == "boxed_uncommon_picture_02" then
+						
+                              mysteriousResult = "It's a bit difficult to make out the details, but boy does that frame look nice!"
+						
+						 elseif state.itemPick == "boxed_common_picture_01" or state.itemPick == "boxed_common_picture_02" then
+						
+                              mysteriousResult = "Blurry, raunchy, and only worth hanging to cover up that stain from that last laudanum binge."
 						
                          elseif state.itemPick == "boxed_grenade_launcher_locker" then
 						
@@ -178,9 +242,9 @@ event "rogue_republicain_ending"
                               They leave behind a pile of steel ingots - were they really trying to \z
                               make art out of that...?"
 						
-                         elseif state.itemPick == "boxed_wall-mounted_aurochs_head" then
+                         elseif state.itemPick == "boxed_wall-mounted_aurochs_head" or state.itemPick == "boxed_wall-mounted_beetle_head" then
 						
-                              mysteriousResult = "The 'work of art' appears to be a mounted aurochs head. 'Hunted it myself!' the rogue proclaims. \z
+                              mysteriousResult = "The 'work of art' appears to be a mounted head. 'Hunted it myself!' the rogue proclaims. \z
                               You suppose taxidermy is a form of art, but you can't help but be a bit disappointed."
 						
                          elseif state.itemPick == "bricks" or state.itemPick == "rough_stone_block" then
