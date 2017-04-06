@@ -17,7 +17,7 @@
 		icon="beacon_category_icon"
 		decription="Activities designate areas where your colonists will attempt to perform actions, such as chopping trees and mining surface nodes.">
 
-    <command type="activity"
+    <!--<command type="activity"
 		   name="Chop Down" display_text="Chop Trees" icon_skin="ui\orderIcons.xml" icon="chop_tree_icon"
              description="Designates a region where colonists will harvest timber."
              width="32" height="32" assignment_beacon_type="0"
@@ -39,7 +39,7 @@
 		   name="Clear Terrain" display_text="Clear Terrain" icon_skin="ui\orderIcons.xml" icon="dig_icon"
              description="Designates a region where colonists will clear debris and obstructions from terrain."
 		   width="32" height="32" assignment_beacon_type="3"
-		   order_string="d"/>    
+		   order_string="d"/> -->  
 <!--
     <command type="structure"
           name="Explore"
@@ -519,188 +519,8 @@
     <command type="zone" name="Stockpile" display_text="Stockpile" icon_skin="ui\orderIcons.xml" icon="stockpile"/>
   -->
 </command_category>
-<!--
-  <command_category name="Decor" display_text="Decorations" icon_skin="ui\orderIcons.xml" icon="decor_category">
-      <command type="zone" name="Stockpile" display_text="Stockpile" icon_skin="ui\orderIcons.xml" icon="stockpile"/>
-  </command_category> -->
-  <!-- Until we have them.
-  <command_category name="Special Structures" display_text="Special Structures" icon_skin="ui\orderIcons.xml" icon="special_category">
-    <command type="zone" name="Stockpile" display_text="Stockpile" icon_skin="ui\orderIcons.xml" icon="stockpile"/>
-  </command_category>
--->
-
-	<command_category name="Structures"
-				display_text="Zones and Constructions"
-				icon_skin="ui\orderIcons.xml"
-				description="Various and sundry outdoor activities and constructables lie within."
-				icon="zones_image">
-		
-    
-		<command type="zone"
-				name="Flatten"
-				display_text="Flatten Terrain"
-				icon_skin="ui\orderIcons.xml" icon="flatten_icon"
-				description="Orders the Civilizing of displeasingly rumpled landscape features."
-				default_visibility="visible">
-			
-		</command>
-
-   <command type="activity"
-     name="Dismantle Objects" display_text="Dismantle Objects" icon_skin="ui\orderIcons.xml" icon="remove_construction"
-           description="Designates a non-building, non-zone construction for removal."
-           width="32" height="32" assignment_beacon_type="0"/>
 
 
-    <!--<command type="zone"
- 				name="Stockpile"
-				display_text="Large Stockpile"
-				icon_skin="ui\orderIcons.xml" icon="big_stockpile"
- 				description="Stockpiles allow colonists to place commodities into efficient, organized zones."
-				default_visibility="visible">
-		</command>
- 		
-		<command type="zone"
-				name="Small Stockpile"
-				display_text="Small Stockpile"
-				icon_skin="ui\orderIcons.xml" icon="small_stockpile"
-				description="Stockpiles allow colonists to place commodities into efficient, organized zones."
-				default_visibility="visible">
-		</command>-->
-		
-		<command type="zone"
-				name="Stockpile"
-				display_text="Stockpile"
-				icon_skin="ui\orderIcons.xml" icon="stockpile"
-				description="Stockpiles allow colonists to place commodities into efficient, organized zones."
-				default_visibility="visible">
-		</command>
-		
-		<!--<command type="zone"
-				name="Farm"
-				display_text="Farm"
-				icon_skin="ui\orderIcons.xml" icon="farming_icon"
-				description="Farms allow food to be grown. Food is extremely important for long-term survival on the Frontier."
-				default_visibility="visible"
-				>
-		</command>-->
-		
-		<command type="zone"
-				name="Graveyard"
-				display_text="Graveyard"
-				icon_skin="ui\orderIcons.xml" icon="graveyard"
-				description="It is important to the health and mood of your colonists to bury the dead in a graveyard."
-				default_visibility="visible">
-		</command>
-		
-		<!-- type="standalone_module" -->
-		<command type="structure"
-				name="Airship Mast"
-				display_text="Airship Mast"
-				icon_skin="ui\orderIcons.xml" icon="icon_airshiptower1"
-				description="An airship mast allows (mostly) precision delivery of essential goods and cargo by the Airship Corps." 
-				default_visibility="visible"/>
-		
-		<command type="line_placer"
-				name="Gabion (High)"
-				display_text="Construct High Gabion"
-				icon_skin="ui\orderIcons.xml" icon="gabion_high_image"
-				description="Crude fortifications. Cleverly applied, these may vex invaders."/>		
-		
-		<command type="line_placer"
-			   name="Gabion (Low)"
-			   display_text="Construct Low Gabion"
-			   icon_skin="ui\orderIcons.xml" icon="gabion_half_image"
-			   description="Crude fortifications. Cleverly applied, these may vex invaders."/>		
-		
-		<command type="structure"
-			   name="Landmine"
-			   display_text="Place Landmine"
-			   icon_skin="ui\orderIcons.xml" icon="landmine"
-			   description="A dishonourable weapon, these will automatically detonate when trod upon by the feet and flippers of your enemies."/>
-
-<!--
-
-    -->
-    
-<!--
-    <command type="dynamics" name="Brick Wall" display_text="Brick Wall" icon_skin="ui\orderIcons.xml"
-		   description="Fences are more durable than buildings, and work well for keeping out the bandit-y riffraff." 
-		   icon="fence_brick_wall_image"/>
-    <command type="dynamics" name="Fence" display_text="Fence" icon_skin="ui\orderIcons.xml"
-		   description="Fences are more durable than buildings, and work well for keeping out the bandit-y riffraff." 
-		   icon="fence_wooden_image"/>
-    <command type="dynamics" name="White Picket Fence" display_text="White Picket Fence" icon_skin="ui\orderIcons.xml"
-		   description="Fences are more durable than buildings, and work well for keeping out the bandit-y riffraff." 
-		   icon="fence_white_picket_image"/>
--->    
-    <!--
-
-      -->
-    <!--
-      <command type="dynamics" name="Barbed Wire Fence" display_text="Barbed Wire Fence" icon_skin="ui\orderIconsGray.xml" icon="fence_brick_wall_image"/>
-      <command type="dynamics" name="Rustic Fence" display_text="Rustic Fence" icon_skin="ui\orderIconsGray.xml" icon="fence_brick_wall_image"/>
-     -->
-
-   <!-- <command type="road" name="Road" display_text="Construct Road" icon_skin="ui\orderIcons.xml" icon="road_image"/>
-    -->
-	<!-- Light sources -->
-		<command type="standalone_module"
-				 name="Lamp (Small)"
-				 display_text="Lamp (Small)"
-				 icon_skin="ui\orderIcons2.xml" icon="lamppost00"
-				 description="A free-standing lamp, for keeping the darkness at bay."
-				 default_visibility="visible"/>
- 
-		<command type="standalone_module"
-				 name="Lamp (Medium)"
-				 display_text="Lamp (Medium)"
-				 icon_skin="ui\orderIcons2.xml" icon="lamppost01"
-				 description="A free-standing lamp, for keeping the darkness at bay."
-				 default_visibility="visible"/>
- 
-		<command type="standalone_module"
-				 name="Lamp (Large)"
-				 display_text="Lamp (Large)"
-				 icon_skin="ui\orderIcons2.xml" icon="lamppost02"
-				 description="A free-standing lamp, for keeping the darkness at bay."
-				 default_visibility="visible"/>
-
-	<!-- decor plants! -->
-		<command type="structure"
-				name="Plant Grass"
-				display_text="Plant Grass"
-				icon_skin="ui\orderIcons.xml" icon="plant_grass"
-				description="Plant some grass to liven things up." 
-				default_visibility="visible">
-		</command>
-		
-		<command type="structure"
-				name="Plant Shrubbery"
-				display_text="Plant Shrubbery"
-				icon_skin="ui\orderIcons.xml" icon="plant_shrubbery"
-				description="Plant some shrubbery to liven things up." 
-				default_visibility="visible">
-		</command>
-				
-		<command type="structure"
-				name="Plant Flowers"
-				display_text="Plant Flowers"
-				icon_skin="ui\orderIcons.xml" icon="plant_flowers"
-				description="Plant some flowers to liven things up." 
-				default_visibility="visible">
-		</command>
-
-	<!--Light RGB values are 234, 236, 170.-->
-    <!--
-		<command type="building" name="Windmill" display_text="Windmill" icon_skin="ui\orderIcons.xml" icon_skin_gray="ui\orderIconsGray.xml" icon="windmill" default_visibility="grayed">
-
-			<visible>
-				<require_building tag="carpentry_shop" failure_reason="Requires Carpentry Workshop to Unlock."/>
-			</visible>
-      
-		</command>
-	-->
-	</command_category>
 
 	<command_category name="Farms"
 			display_text="Crop Fields"
@@ -1143,6 +963,218 @@
 			</visible>
 		</command>
 
+	</command_category>
+	
+<!--
+  <command_category name="Decor" display_text="Decorations" icon_skin="ui\orderIcons.xml" icon="decor_category">
+      <command type="zone" name="Stockpile" display_text="Stockpile" icon_skin="ui\orderIcons.xml" icon="stockpile"/>
+  </command_category> -->
+  <!-- Until we have them.
+  <command_category name="Special Structures" display_text="Special Structures" icon_skin="ui\orderIcons.xml" icon="special_category">
+    <command type="zone" name="Stockpile" display_text="Stockpile" icon_skin="ui\orderIcons.xml" icon="stockpile"/>
+  </command_category>
+-->
+
+	<command_category name="Structures"
+				display_text="Zones and Constructions"
+				icon_skin="ui\orderIcons.xml"
+				description="Various and sundry outdoor activities and constructables lie within."
+				icon="zones_image">
+		
+    <!--<command type="zone"
+ 				name="Stockpile"
+				display_text="Large Stockpile"
+				icon_skin="ui\orderIcons.xml" icon="big_stockpile"
+ 				description="Stockpiles allow colonists to place commodities into efficient, organized zones."
+				default_visibility="visible">
+		</command>
+ 		
+		<command type="zone"
+				name="Small Stockpile"
+				display_text="Small Stockpile"
+				icon_skin="ui\orderIcons.xml" icon="small_stockpile"
+				description="Stockpiles allow colonists to place commodities into efficient, organized zones."
+				default_visibility="visible">
+		</command>-->
+		
+		<command type="zone"
+				name="Stockpile"
+				display_text="Stockpile"
+				icon_skin="ui\orderIcons.xml" icon="stockpile"
+				description="Stockpiles allow colonists to place commodities into efficient, organized zones."
+				default_visibility="visible">
+		</command>
+		
+		<!--<command type="zone"
+				name="Farm"
+				display_text="Farm"
+				icon_skin="ui\orderIcons.xml" icon="farming_icon"
+				description="Farms allow food to be grown. Food is extremely important for long-term survival on the Frontier."
+				default_visibility="visible"
+				>
+		</command>-->
+		
+		<command type="zone"
+				name="Graveyard"
+				display_text="Graveyard"
+				icon_skin="ui\orderIcons.xml" icon="graveyard"
+				description="It is important to the health and mood of your colonists to bury the dead in a graveyard."
+				default_visibility="visible">
+		</command>
+		
+		<!-- type="standalone_module" -->
+		<command type="structure"
+				name="Airship Mast"
+				display_text="Airship Mast"
+				icon_skin="ui\orderIcons.xml" icon="icon_airshiptower1"
+				description="An airship mast allows (mostly) precision delivery of essential goods and cargo by the Airship Corps." 
+				default_visibility="visible"/>
+		
+		<command type="line_placer"
+				name="Gabion (High)"
+				display_text="Construct High Gabion"
+				icon_skin="ui\orderIcons.xml" icon="gabion_high_image"
+				description="Crude fortifications. Cleverly applied, these may vex invaders."/>		
+		
+		<command type="line_placer"
+			   name="Gabion (Low)"
+			   display_text="Construct Low Gabion"
+			   icon_skin="ui\orderIcons.xml" icon="gabion_half_image"
+			   description="Crude fortifications. Cleverly applied, these may vex invaders."/>		
+		
+		<command type="structure"
+			   name="Landmine"
+			   display_text="Place Landmine"
+			   icon_skin="ui\orderIcons.xml" icon="landmine"
+			   description="A dishonourable weapon, these will automatically detonate when trod upon by the feet and flippers of your enemies."/>
+
+<!--
+
+    -->
+    
+<!--
+    <command type="dynamics" name="Brick Wall" display_text="Brick Wall" icon_skin="ui\orderIcons.xml"
+		   description="Fences are more durable than buildings, and work well for keeping out the bandit-y riffraff." 
+		   icon="fence_brick_wall_image"/>
+    <command type="dynamics" name="Fence" display_text="Fence" icon_skin="ui\orderIcons.xml"
+		   description="Fences are more durable than buildings, and work well for keeping out the bandit-y riffraff." 
+		   icon="fence_wooden_image"/>
+    <command type="dynamics" name="White Picket Fence" display_text="White Picket Fence" icon_skin="ui\orderIcons.xml"
+		   description="Fences are more durable than buildings, and work well for keeping out the bandit-y riffraff." 
+		   icon="fence_white_picket_image"/>
+-->    
+    <!--
+
+      -->
+    <!--
+      <command type="dynamics" name="Barbed Wire Fence" display_text="Barbed Wire Fence" icon_skin="ui\orderIconsGray.xml" icon="fence_brick_wall_image"/>
+      <command type="dynamics" name="Rustic Fence" display_text="Rustic Fence" icon_skin="ui\orderIconsGray.xml" icon="fence_brick_wall_image"/>
+     -->
+
+   <!-- <command type="road" name="Road" display_text="Construct Road" icon_skin="ui\orderIcons.xml" icon="road_image"/>
+    -->
+	<!-- Light sources -->
+		<command type="standalone_module"
+				 name="Lamp (Small)"
+				 display_text="Lamp (Small)"
+				 icon_skin="ui\orderIcons2.xml" icon="lamppost00"
+				 description="A free-standing lamp, for keeping the darkness at bay."
+				 default_visibility="visible"/>
+ 
+		<command type="standalone_module"
+				 name="Lamp (Medium)"
+				 display_text="Lamp (Medium)"
+				 icon_skin="ui\orderIcons2.xml" icon="lamppost01"
+				 description="A free-standing lamp, for keeping the darkness at bay."
+				 default_visibility="visible"/>
+ 
+		<command type="standalone_module"
+				 name="Lamp (Large)"
+				 display_text="Lamp (Large)"
+				 icon_skin="ui\orderIcons2.xml" icon="lamppost02"
+				 description="A free-standing lamp, for keeping the darkness at bay."
+				 default_visibility="visible"/>
+
+	<!-- decor plants! -->
+		<command type="structure"
+				name="Plant Grass"
+				display_text="Plant Grass"
+				icon_skin="ui\orderIcons.xml" icon="plant_grass"
+				description="Plant some grass to liven things up." 
+				default_visibility="visible">
+		</command>
+		
+		<command type="structure"
+				name="Plant Shrubbery"
+				display_text="Plant Shrubbery"
+				icon_skin="ui\orderIcons.xml" icon="plant_shrubbery"
+				description="Plant some shrubbery to liven things up." 
+				default_visibility="visible">
+		</command>
+				
+		<command type="structure"
+				name="Plant Flowers"
+				display_text="Plant Flowers"
+				icon_skin="ui\orderIcons.xml" icon="plant_flowers"
+				description="Plant some flowers to liven things up." 
+				default_visibility="visible">
+		</command>
+
+	<!--Light RGB values are 234, 236, 170.-->
+    <!--
+		<command type="building" name="Windmill" display_text="Windmill" icon_skin="ui\orderIcons.xml" icon_skin_gray="ui\orderIconsGray.xml" icon="windmill" default_visibility="grayed">
+
+			<visible>
+				<require_building tag="carpentry_shop" failure_reason="Requires Carpentry Workshop to Unlock."/>
+			</visible>
+      
+		</command>
+	-->
+	</command_category>
+
+	<command_category name="Commands"
+			display_text="Commands"
+			icon_skin="ui\orderIcons.xml"
+			icon="beacon_category_icon"
+			description="A collection of commands and designations. Micromanagement, yay!">
+
+	   <command type="activity"
+		 name="Dismantle Objects" display_text="Dismantle Objects" icon_skin="ui\orderIcons.xml" icon="remove_construction"
+			   description="Designates a non-building, non-zone construction for removal."
+			   width="32" height="32" assignment_beacon_type="0"/>
+				
+		<command type="zone"
+				name="Flatten"
+				display_text="Flatten Terrain"
+				icon_skin="ui\orderIcons.xml" icon="flatten_icon"
+				description="Orders the Civilizing of displeasingly rumpled landscape features."
+				default_visibility="visible"/>
+			   
+		<command type="structure"
+			    name="Rally Squad" display_text="Rally Troops" icon_skin="ui\orderIcons.xml" icon="icon_rally"
+				 description="Send your troops to the designated spot and their certain doom."/>
+			   
+			   
+		<command type="activity"
+			   name="Chop Down" display_text="Chop Trees" icon_skin="ui\orderIcons.xml" icon="chop_tree_icon"
+				 description="Designates a region where colonists will harvest timber."
+				 width="32" height="32" assignment_beacon_type="0"/>
+		
+		<command type="activity"
+			   name="Mine Surface Nodes" display_text="Mine Surface Nodes" icon_skin="ui\orderIcons.xml" icon="pickaxe_icon"
+				 description="Designates a region where colonists will harvest stone, clay, and other surface minerals and ore."
+				width="32" height="32"  assignment_beacon_type="1"/>
+		
+		<command type="activity"
+			   name="Forage" display_text="Forage" icon_skin="ui\orderIcons.xml" icon="arm_icon"
+				 description="Designates a region where colonists will forage for food resources."
+				width="32" height="32"  assignment_beacon_type="2"/>
+		
+		<command type="activity"
+			   name="Clear Terrain" display_text="Clear Terrain" icon_skin="ui\orderIcons.xml" icon="dig_icon"
+				 description="Designates a region where colonists will clear debris and obstructions from terrain."
+			   width="32" height="32" assignment_beacon_type="3"/>  
+			   
 	</command_category>
 
 
