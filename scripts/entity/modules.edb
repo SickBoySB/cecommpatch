@@ -1221,6 +1221,7 @@ Entity
 Entity
 {
 	name = "Rare Painting",
+	displayname = "Rare Painting no.1",
 	type = "interiorDecor",
 	description = "An ostentatious painting by a certain famous artist - place this astonishing rarity in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
@@ -1230,176 +1231,250 @@ Entity
 	quality=7,
 	upkeep_type=-1,
 	upkeep_quantity=-1,
-	models={"models/buildingProps/pictureFrameUc01.upm","models/buildingProps/pictureFrameUc02.upm","models/buildingProps/pictureFrameUc03.upm","models/buildingProps/pictureFrameUc04.upm","models/buildingProps/pictureFrameUc05.upm"}
 }
 
 Entity
 {
-	name = "Painting Uc 01",
+	name = "Rare Painting 02",
+	displayname = "Rare Painting no.2",
 	type = "interiorDecor",
-	description = "An ostentatious painting of high class.",
+	description = "An ostentatious painting by a certain famous artist - place this astonishing rarity in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
 	icon_skin = "ui//orderIcons.xml",
 	icon="decor_uc_icon",
 	tier=1,
 	quality=7,
 	upkeep_type=-1,
-	upkeep_quantity=-1
+	upkeep_quantity=-1,
 }
 
 Entity
 {
-	name = "Painting Uc 02",
+	name = "Rare Painting 03",
+	displayname = "Rare Painting no.3",
 	type = "interiorDecor",
-	description = "An ostentatious painting of high class.",
+	description = "An ostentatious painting by a certain famous artist - place this astonishing rarity in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
 	icon_skin = "ui//orderIcons.xml",
 	icon="decor_uc_icon",
 	tier=1,
 	quality=7,
 	upkeep_type=-1,
-	upkeep_quantity=-1
+	upkeep_quantity=-1,
 }
 
 Entity
 {
-	name = "Painting Uc 03",
+	name = "Rare Painting 04",
+	displayname = "Rare Painting no.4",
 	type = "interiorDecor",
-	description = "An ostentatious painting of high class.",
+	description = "An ostentatious painting by a certain famous artist - place this astonishing rarity in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
 	icon_skin = "ui//orderIcons.xml",
 	icon="decor_uc_icon",
 	tier=1,
 	quality=7,
 	upkeep_type=-1,
-	upkeep_quantity=-1
+	upkeep_quantity=-1,
 }
 
 Entity
 {
-	name = "Painting Uc 04",
+	name = "Rare Painting 05",
+	displayname = "Rare Painting no.5",
 	type = "interiorDecor",
-	description = "An ostentatious painting of high class.",
+	description = "An ostentatious painting by a certain famous artist - place this astonishing rarity in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
 	icon_skin = "ui//orderIcons.xml",
 	icon="decor_uc_icon",
 	tier=1,
 	quality=7,
 	upkeep_type=-1,
-	upkeep_quantity=-1
+	upkeep_quantity=-1,
 }
 
 Entity
 {
-	name = "Painting Mc 00",
+	name = "Uncommon Painting 01",
+	displayname = "Uncommon Painting no.1",
 	type = "interiorDecor",
-	description = "A straightforward and reasonable painting of middling class.",
+	description = "An stylish painting by a certain famous artist - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
 	icon_skin = "ui//orderIcons.xml",
 	icon="decor_mc_icon",
 	tier=1,
 	quality=4,
 	upkeep_type=-1,
-	upkeep_quantity=-1
+	upkeep_quantity=-1,
 }
 
 Entity
 {
-	name = "Painting Mc 01",
+	name = "Uncommon Painting 02",
+	displayname = "Uncommon Painting no.2",
 	type = "interiorDecor",
-	description = "A straightforward and reasonable painting of middling class.",
+	description = "An stylish painting by a certain famous artist - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
 	icon_skin = "ui//orderIcons.xml",
 	icon="decor_mc_icon",
 	tier=1,
 	quality=4,
 	upkeep_type=-1,
-	upkeep_quantity=-1
+	upkeep_quantity=-1,
 }
 
 Entity
 {
-	name = "Painting Mc 02",
+	name = "Uncommon Painting 03",
+	displayname = "Uncommon Painting no.3",
 	type = "interiorDecor",
-	description = "A straightforward and reasonable painting of middling class.",
+	description = "An stylish painting by a certain famous artist - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
 	icon_skin = "ui//orderIcons.xml",
 	icon="decor_mc_icon",
 	tier=1,
 	quality=4,
 	upkeep_type=-1,
-	upkeep_quantity=-1
+	upkeep_quantity=-1,
 }
 
 Entity
 {
-	name = "Painting Mc 03",
+	name = "Uncommon Painting 04",
+	displayname = "Uncommon Painting no.4",
 	type = "interiorDecor",
-	description = "A straightforward and reasonable painting of middling class.",
+	description = "An stylish painting by a certain famous artist - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
 	icon_skin = "ui//orderIcons.xml",
 	icon="decor_mc_icon",
 	tier=1,
 	quality=4,
 	upkeep_type=-1,
-	upkeep_quantity=-1
+	upkeep_quantity=-1,
 }
 
 Entity
 {
-	name = "Painting Lc 00",
+	name = "Common Painting 01",
+	displayname = "Common Painting no.1",
 	type = "interiorDecor",
-	description = "A rude and poorly-executed painting of low class.",
+	description = "A traditional painting by a certain famous artist - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
 	icon_skin = "ui//orderIcons.xml",
 	icon="decor_lc_icon",
 	tier=1,
-	quality=2,
+	quality=3,
 	upkeep_type=-1,
-	upkeep_quantity=-1
+	upkeep_quantity=-1,
 }
 
 Entity
 {
-	name = "Painting Lc 01",
+	name = "Common Painting 02",
+	displayname = "Common Painting no.2",
 	type = "interiorDecor",
-	description = "A rude and poorly-executed painting of low class.",
+	description = "A traditional painting by a certain famous artist - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
 	icon_skin = "ui//orderIcons.xml",
 	icon="decor_lc_icon",
 	tier=1,
-	quality=2,
+	quality=3,
 	upkeep_type=-1,
-	upkeep_quantity=-1
+	upkeep_quantity=-1,
 }
 
 Entity
 {
-	name = "Painting Lc 02",
+	name = "Common Painting 03",
+	displayname = "Common Painting no.3",
 	type = "interiorDecor",
-	description = "A rude and poorly-executed painting of low class.",
+	description = "A traditional painting by a certain famous artist - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
 	icon_skin = "ui//orderIcons.xml",
 	icon="decor_lc_icon",
 	tier=1,
-	quality=2,
+	quality=3,
 	upkeep_type=-1,
-	upkeep_quantity=-1
+	upkeep_quantity=-1,
 }
 
 Entity
 {
-	name = "Painting Lc 03",
+	name = "Common Painting 04",
+	displayname = "Common Painting no.4",
 	type = "interiorDecor",
-	description = "A rude and poorly-executed painting of low class.",
+	description = "A traditional painting by a certain famous artist - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
 	icon_skin = "ui//orderIcons.xml",
 	icon="decor_lc_icon",
 	tier=1,
+	quality=3,
+	upkeep_type=-1,
+	upkeep_quantity=-1,
+}
+
+Entity
+{
+	name = "Uncommon Picture Cluster 01",
+	displayname = "Uncommon Picture Cluster no.1",
+	type = "interiorDecor",
+	description = "Practical imagery fit for the professional class - place this in a house to increase your population cap.",
+	tags = { "painting", "art", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="mc_frame_cluster",
+	tier=1,
 	quality=2,
 	upkeep_type=-1,
-	upkeep_quantity=-1
+	upkeep_quantity=-1,
 }
+
+Entity
+{
+	name = "Uncommon Picture Cluster 02",
+	displayname = "Uncommon Picture Cluster no.2",
+	type = "interiorDecor",
+	description = "Practical imagery fit for the professional class - place this in a house to increase your population cap.",
+	tags = { "painting", "art", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="mc_frame_cluster",
+	tier=1,
+	quality=2,
+	upkeep_type=-1,
+	upkeep_quantity=-1,
+}
+
+Entity
+{
+	name = "Common Picture Cluster 01",
+	displayname = "Common Picture Cluster no.1",
+	type = "interiorDecor",
+	description = "A rude piece of art fit for the lower classes - place this in a house to increase your population cap.",
+	tags = { "painting", "art", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="lc_frame_cluster",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1,
+}
+
+Entity
+{
+	name = "Common Picture Cluster 02",
+	displayname = "Common Picture Cluster no.2",
+	type = "interiorDecor",
+	description = "A rude piece of art fit for the lower classes - place this in a house to increase your population cap.",
+	tags = { "painting", "art", "decor" },
+	icon_skin = "ui//orderIcons2.xml",
+	icon="lc_frame_cluster",
+	tier=1,
+	quality=1,
+	upkeep_type=-1,
+	upkeep_quantity=-1,
+}
+
+
+
 
 Entity
 {
@@ -1721,76 +1796,6 @@ Entity
 	tags = { "interiorDecor", "decor", "hanging_pots"},
 	icon_skin = "ui//orderIcons.xml",
 	icon="hanging_pots",
-	tier=1,
-	quality=1,
-	upkeep_type=-1,
-	upkeep_quantity=-1
-}
-
-Entity
-{
-	name = "Lower Class Picture Frame Cluster 00",
-	type = "interiorDecor",
-	description = "A rude piece of art fit for the lower classes.",
-	tags = { "art", "decor" },
-	icon_skin = "ui//orderIcons.xml",
-	icon="lc_frame_cluster",
-	tier=1,
-	quality=1,
-	upkeep_type=-1,
-	upkeep_quantity=-1
-}
-
-Entity
-{
-	name = "Lower Class Picture Frame Cluster 01",
-	type = "interiorDecor",
-	description = "A piece of rude art fit for the lower classes.",
-	tags = { "art", "decor" },
-	icon_skin = "ui//orderIcons.xml",
-	icon="lc_frame_cluster",
-	tier=1,
-	quality=1,
-	upkeep_type=-1,
-	upkeep_quantity=-1
-}
-
-Entity
-{
-	name = "Middle Class Picture Frame Cluster 00",
-	type = "interiorDecor",
-	description = "Practical imagery fit for the professional class.",
-	tags = { "art", "decor" },
-	icon_skin = "ui//orderIcons.xml",
-	icon="mc_frame_cluster",
-	tier=1,
-	quality=1,
-	upkeep_type=-1,
-	upkeep_quantity=-1
-}
-
-Entity
-{
-	name = "Middle Class Picture Frame Cluster 01",
-	type = "interiorDecor",
-	description = "Practical imagery fit for the professional class.",
-	tags = { "art", "decor" },
-	icon_skin = "ui//orderIcons.xml",
-	icon="mc_frame_cluster",
-	tier=1,
-	quality=1,
-	upkeep_type=-1,
-	upkeep_quantity=-1
-}
-
-Entity
-{
-	name = "Middle Class Picture Frame Cluster 02",
-	type = "interiorDecor",
-	description = "Practical imagery fit for the professional class.",
-	tags = { "art", "decor" },
-	icon_skin = "ui//orderIcons.xml",
-	icon="mc_frame_cluster",
 	tier=1,
 	quality=1,
 	upkeep_type=-1,
