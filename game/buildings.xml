@@ -7279,7 +7279,8 @@ are already contained within other buildings. Consider those a placeholder for l
 	</module> 
 	-->
     
-	<module name="Rare Painting" display_name="Rare Painting"
+	<!-- RARE paintings -->
+	<module name="Rare Painting" display_name="Rare Painting no.1"
 		icon_skin="ui\orderIcons.xml" icon="decor_uc_icon"
 		script="painting"
 		model="models/buildingProps/pictureFrameUc01.upm"
@@ -7292,211 +7293,322 @@ are already contained within other buildings. Consider those a placeholder for l
 		upkeep_type="-1" 
 		upkeep_quantity="-1"
 		quality="7"
-		order_string="030401"
-		>
+		order_string="030401">
 			
 		<module_requirement tag="boxed_rare_painting" art="flatpack-placeholder" amount="1"/>
 		<access_point x="0" y="0"/>
 	</module>
-  <!-- Alt models
-	<module name="Painting Uc 01" display_name="Upper Class Painting"
+    
+	<module name="Rare Painting 02" display_name="Rare Painting no.2"
 		icon_skin="ui\orderIcons.xml" icon="decor_uc_icon"
 		script="painting"
 		model="models/buildingProps/pictureFrameUc02.upm"
 		width="1" height="1"
 		cut_wall="0"
 		internal_wall="1"
-		description="An ostentatious painting of high class. (Decor)"
-		decor="1" passable="1">
-		
-		<filter name="decor"/>
-		<module_requirement tag="planks" art="planks_icon" amount="1"/>
-		<module_requirement tag="ingot_of_gold" art="gold_ingots_icon" amount="1"/>
+		short_description="Place in a house to increase population cap."
+		description="An ostentatious painting by a certain famous artist - these can only be found via events and other opportunities, not created by the colony."
+		decor="1" passable="1"
+		upkeep_type="-1" 
+		upkeep_quantity="-1"
+		quality="7"
+		order_string="030402">
+			
+		<module_requirement tag="boxed_rare_painting_02" art="flatpack-placeholder" amount="1"/>
 		<access_point x="0" y="0"/>
 	</module>
-  
-	<module name="Painting Uc 02" display_name="Upper Class Painting"
+    
+	<module name="Rare Painting 03" display_name="Rare Painting no.3"
 		icon_skin="ui\orderIcons.xml" icon="decor_uc_icon"
 		script="painting"
 		model="models/buildingProps/pictureFrameUc03.upm"
 		width="1" height="1"
 		cut_wall="0"
 		internal_wall="1"
-		description="An ostentatious painting of high class. (Decor)"
-		decor="1" passable="1">
+		short_description="Place in a house to increase population cap."
+		description="An ostentatious painting by a certain famous artist - these can only be found via events and other opportunities, not created by the colony."
+		decor="1" passable="1"
+		upkeep_type="-1" 
+		upkeep_quantity="-1"
+		quality="7"
+		order_string="030403">
 			
-	<filter name="decor"/>
-	<module_requirement tag="planks" art="planks_icon" amount="1"/>
-	<module_requirement tag="ingot_of_gold" art="gold_ingots_icon" amount="1"/>
-	<access_point x="0" y="0"/>
+		<module_requirement tag="boxed_rare_painting_03" art="flatpack-placeholder" amount="1"/>
+		<access_point x="0" y="0"/>
 	</module>
-  
-  <module name="Painting Uc 03" display_name="Upper Class Painting"
-          icon_skin="ui\orderIcons.xml" icon="decor_uc_icon"
-          script="painting"
-          model="models/buildingProps/pictureFrameUc04.upm"
-          width="1" height="1"
-          cut_wall="0"
-          internal_wall="1"
-		description="An ostentatious painting of high class. (Decor)"
-          decor="1" passable="1">
-     <filter name="decor"/>
-    <module_requirement tag="planks" art="planks_icon" amount="1"/>
-    <module_requirement tag="ingot_of_gold" art="gold_ingots_icon" amount="1"/>
-    <access_point x="0" y="0"/>
-  </module>
-  
-  <module name="Painting Uc 04" display_name="Upper Class Painting"
-          icon_skin="ui\orderIcons.xml" icon="decor_uc_icon"
-          script="painting"
-          model="models/buildingProps/pictureFrameUc05.upm"
-          width="1" height="1"
-          cut_wall="0"
-          internal_wall="1"
-		description="An ostentatious painting of high class. (Decor)"
-          decor="1" passable="1">
-     <filter name="decor"/>
-    <module_requirement tag="planks" art="planks_icon" amount="1"/>
-    <module_requirement tag="ingot_of_gold" art="gold_ingots_icon" amount="1"/>
-    <access_point x="0" y="0"/>
-  </module>
-  
-
-  
-  <module name="Painting Mc 00" display_name="Middle Class Painting"
-          icon_skin="ui\orderIcons.xml" icon="decor_mc_icon"
-          script="painting"
-          model="models/buildingProps/pictureFrameMc01.upm"
-          width="1" height="1"
-          cut_wall="0"
-          internal_wall="1"
-		description="A straightforward and reasonable painting of middling class. (Decor)"
-          decor="1" passable="1">
-     <filter name="decor"/>
-    <module_requirement tag="planks" art="planks_icon" amount="1"/>
-    <module_requirement tag="bolt_of_cloth" art="icon_clothbolt" amount="1"/>
-    <access_point x="0" y="0"/>
-  </module>
-  
-
-  
-  <module name="Painting Mc 01" display_name="Middle Class Painting"
-          icon_skin="ui\orderIcons.xml" icon="decor_mc_icon"
-          script="painting"
-          model="models/buildingProps/pictureFrameMc02.upm"
-          width="1" height="1"
-          cut_wall="0"
-          internal_wall="1"
-		description="A straightforward and reasonable painting of middling class. (Decor)"
-          decor="1" passable="1">
-     <filter name="decor"/>
-    <module_requirement tag="planks" art="planks_icon" amount="1"/>
-    <module_requirement tag="bolt_of_cloth" art="icon_clothbolt" amount="1"/>
-    <access_point x="0" y="0"/>
-  </module>
-  
-  <module name="Painting Mc 02" display_name="Middle Class Painting"
-          icon_skin="ui\orderIcons.xml" icon="decor_mc_icon"
-          script="painting"
-          model="models/buildingProps/pictureFrameMc03.upm"
-          width="1" height="1"
-          cut_wall="0"
-          internal_wall="1"
-		description="A straightforward and reasonable painting of middling class. (Decor)"
-          decor="1" passable="1">
-     <filter name="decor"/>
-    <module_requirement tag="planks" art="planks_icon" amount="1"/>
-    <module_requirement tag="bolt_of_cloth" art="icon_clothbolt" amount="1"/>
-    <access_point x="0" y="0"/>
-  </module>
-  
-  <module name="Painting Mc 03" display_name="Middle Class Painting"
-          icon_skin="ui\orderIcons.xml" icon="decor_mc_icon"
-          script="painting"
-          model="models/buildingProps/pictureFrameMc04.upm"
-          width="1" height="1"
-          cut_wall="0"
-          internal_wall="1"
-		description="A straightforward and reasonable painting of middling class. (Decor)"
-          decor="1" passable="1">
-     <filter name="decor"/>
-    <module_requirement tag="planks" art="planks_icon" amount="1"/>
-    <module_requirement tag="bolt_of_cloth" art="icon_clothbolt" amount="1"/>
-    <access_point x="0" y="0"/>
-  </module>
-  
-
-  
-  <module name="Painting Lc 00" display_name="Lower Class Painting"
-          icon_skin="ui\orderIcons.xml" icon="decor_lc_icon"
-          script="painting"
-          model="models/buildingProps/pictureFrameLc01.upm"
-          width="1"
-          height="1"
-          cut_wall="0"
-          decor="1"
-          internal_wall="1"
-		description="A rude and poorly-executed painting of low class. (Decor)"
-          passable="1">
-     <filter name="decor"/>
-    <module_requirement tag="timber" art="logs" amount="1"/>
-    <module_requirement tag="bolt_of_cloth" art="icon_clothbolt" amount="1"/>
-    <access_point x="0" y="0"/>
-  </module>
-  
-
-  
-  <module name="Painting Lc 01" display_name="Lower Class Painting"
-          icon_skin="ui\orderIcons.xml" icon="decor_lc_icon"
-          script="painting"
-          model="models/buildingProps/pictureFrameLc02.upm"
-          width="1"
-          height="1"
-          cut_wall="0"
-          decor="1"
-          internal_wall="1"
-		description="A rude and poorly-executed painting of low class. (Decor)"
-          passable="1">
-     <filter name="decor"/>
-    <module_requirement tag="timber" art="logs" amount="1"/>
-    <module_requirement tag="bolt_of_cloth" art="icon_clothbolt" amount="1"/>
-    <access_point x="0" y="0"/>
-  </module>
-  
-  <module name="Painting Lc 02" display_name="Lower Class Painting"
-          icon_skin="ui\orderIcons.xml" icon="decor_lc_icon"
-          script="painting"
-          model="models/buildingProps/pictureFrameLc03.upm"
-          width="1"
-          height="1"
-          cut_wall="0"
-          decor="1"
-          internal_wall="1"
-		description="A rude and poorly-executed painting of low class. (Decor)"
-          passable="1">
-     <filter name="decor"/>
-    <module_requirement tag="timber" art="logs" amount="1"/>
-    <module_requirement tag="bolt_of_cloth" art="icon_clothbolt" amount="1"/>
-    <access_point x="0" y="0"/>
-  </module>
-  
-  <module name="Painting Lc 03" display_name="Lower Class Painting"
-          icon_skin="ui\orderIcons.xml" icon="decor_lc_icon"
-          script="painting"
-          model="models/buildingProps/pictureFrameLc04.upm"
-          width="1"
-          height="1"
-          cut_wall="0"
-          decor="1"
-          internal_wall="1"
-		description="A rude and poorly-executed painting of low class."
-          passable="1">
-     <filter name="decor"/>
-    <module_requirement tag="timber" art="logs" amount="1"/>
-    <module_requirement tag="bolt_of_cloth" art="icon_clothbolt" amount="1"/>
-    <access_point x="0" y="0"/>
-  </module>
-  -->
+    
+	<module name="Rare Painting 04" display_name="Rare Painting no.4"
+		icon_skin="ui\orderIcons.xml" icon="decor_uc_icon"
+		script="painting"
+		model="models/buildingProps/pictureFrameUc04.upm"
+		width="1" height="1"
+		cut_wall="0"
+		internal_wall="1"
+		short_description="Place in a house to increase population cap."
+		description="An ostentatious painting by a certain famous artist - these can only be found via events and other opportunities, not created by the colony."
+		decor="1" passable="1"
+		upkeep_type="-1" 
+		upkeep_quantity="-1"
+		quality="7"
+		order_string="030404">
+			
+		<module_requirement tag="boxed_rare_painting_04" art="flatpack-placeholder" amount="1"/>
+		<access_point x="0" y="0"/>
+	</module>
+    
+	<module name="Rare Painting 05" display_name="Rare Painting no.5"
+		icon_skin="ui\orderIcons.xml" icon="decor_uc_icon"
+		script="painting"
+		model="models/buildingProps/pictureFrameUc05.upm"
+		width="1" height="1"
+		cut_wall="0"
+		internal_wall="1"
+		short_description="Place in a house to increase population cap."
+		description="An ostentatious painting by a certain famous artist - these can only be found via events and other opportunities, not created by the colony."
+		decor="1" passable="1"
+		upkeep_type="-1" 
+		upkeep_quantity="-1"
+		quality="7"
+		order_string="030405">
+			
+		<module_requirement tag="boxed_rare_painting_05" art="flatpack-placeholder" amount="1"/>
+		<access_point x="0" y="0"/>
+	</module>
+	
+	<!-- UNCOMMON paintings -->
+	<module name="Uncommon Painting 01" display_name="Uncommon Painting no.1"
+		icon_skin="ui\orderIcons.xml" icon="decor_mc_icon"
+		script="painting"
+		model="models/buildingProps/pictureFrameMc01.upm"
+		width="1" height="1"
+		cut_wall="0"
+		internal_wall="1"
+		short_description="Place in a house to increase population cap."
+		description="An stylish painting by a certain famous artist - these can only be found via events and other opportunities, not created by the colony."
+		decor="1" passable="1"
+		upkeep_type="-1" 
+		upkeep_quantity="-1"
+		quality="4"
+		order_string="030411">
+			
+		<module_requirement tag="boxed_uncommon_painting_01" art="flatpack-placeholder" amount="1"/>
+		<access_point x="0" y="0"/>
+	</module>
+	
+	<module name="Uncommon Painting 02" display_name="Uncommon Painting no.2"
+		icon_skin="ui\orderIcons.xml" icon="decor_mc_icon"
+		script="painting"
+		model="models/buildingProps/pictureFrameMc02.upm"
+		width="1" height="1"
+		cut_wall="0"
+		internal_wall="1"
+		short_description="Place in a house to increase population cap."
+		description="An stylish painting by a certain famous artist - these can only be found via events and other opportunities, not created by the colony."
+		decor="1" passable="1"
+		upkeep_type="-1" 
+		upkeep_quantity="-1"
+		quality="4"
+		order_string="030412">
+			
+		<module_requirement tag="boxed_uncommon_painting_02" art="flatpack-placeholder" amount="1"/>
+		<access_point x="0" y="0"/>
+	</module>
+	
+	<module name="Uncommon Painting 03" display_name="Uncommon Painting no.3"
+		icon_skin="ui\orderIcons.xml" icon="decor_mc_icon"
+		script="painting"
+		model="models/buildingProps/pictureFrameMc03.upm"
+		width="1" height="1"
+		cut_wall="0"
+		internal_wall="1"
+		short_description="Place in a house to increase population cap."
+		description="An stylish painting by a certain famous artist - these can only be found via events and other opportunities, not created by the colony."
+		decor="1" passable="1"
+		upkeep_type="-1" 
+		upkeep_quantity="-1"
+		quality="4"
+		order_string="030413">
+			
+		<module_requirement tag="boxed_uncommon_painting_03" art="flatpack-placeholder" amount="1"/>
+		<access_point x="0" y="0"/>
+	</module>
+	
+	<module name="Uncommon Painting 04" display_name="Uncommon Painting no.4"
+		icon_skin="ui\orderIcons.xml" icon="decor_mc_icon"
+		script="painting"
+		model="models/buildingProps/pictureFrameMc04.upm"
+		width="1" height="1"
+		cut_wall="0"
+		internal_wall="1"
+		short_description="Place in a house to increase population cap."
+		description="An stylish painting by a certain famous artist - these can only be found via events and other opportunities, not created by the colony."
+		decor="1" passable="1"
+		upkeep_type="-1" 
+		upkeep_quantity="-1"
+		quality="4"
+		order_string="030414">
+			
+		<module_requirement tag="boxed_uncommon_painting_04" art="flatpack-placeholder" amount="1"/>
+		<access_point x="0" y="0"/>
+	</module>
+	
+	<!--COMMON paintings-->
+	<module name="Common Painting 01" display_name="Common Painting no.1"
+		icon_skin="ui\orderIcons.xml" icon="decor_lc_icon"
+		script="painting"
+		model="models/buildingProps/pictureFrameLc01.upm"
+		width="1" height="1"
+		cut_wall="0"
+		internal_wall="1"
+		short_description="Place in a house to increase population cap."
+		description="A traditional painting by a certain famous artist - these can only be found via events and other opportunities, not created by the colony."
+		decor="1" passable="1"
+		upkeep_type="-1" 
+		upkeep_quantity="-1"
+		quality="3"
+		order_string="030421">
+			
+		<module_requirement tag="boxed_common_painting_01" art="flatpack-placeholder" amount="1"/>
+		<access_point x="0" y="0"/>
+	</module>
+	
+	<module name="Common Painting 02" display_name="Common Painting no.2"
+		icon_skin="ui\orderIcons.xml" icon="decor_lc_icon"
+		script="painting"
+		model="models/buildingProps/pictureFrameLc02.upm"
+		width="1" height="1"
+		cut_wall="0"
+		internal_wall="1"
+		short_description="Place in a house to increase population cap."
+		description="A traditional painting by a certain famous artist - these can only be found via events and other opportunities, not created by the colony."
+		decor="1" passable="1"
+		upkeep_type="-1" 
+		upkeep_quantity="-1"
+		quality="3"
+		order_string="030422">
+			
+		<module_requirement tag="boxed_common_painting_02" art="flatpack-placeholder" amount="1"/>
+		<access_point x="0" y="0"/>
+	</module>
+	
+	<module name="Common Painting 03" display_name="Common Painting no.3"
+		icon_skin="ui\orderIcons.xml" icon="decor_lc_icon"
+		script="painting"
+		model="models/buildingProps/pictureFrameLc03.upm"
+		width="1" height="1"
+		cut_wall="0"
+		internal_wall="1"
+		short_description="Place in a house to increase population cap."
+		description="A traditional painting by a certain famous artist - these can only be found via events and other opportunities, not created by the colony."
+		decor="1" passable="1"
+		upkeep_type="-1" 
+		upkeep_quantity="-1"
+		quality="3"
+		order_string="030423">
+			
+		<module_requirement tag="boxed_common_painting_03" art="flatpack-placeholder" amount="1"/>
+		<access_point x="0" y="0"/>
+	</module>
+	
+	<module name="Common Painting 04" display_name="Common Painting no.4"
+		icon_skin="ui\orderIcons.xml" icon="decor_lc_icon"
+		script="painting"
+		model="models/buildingProps/pictureFrameLc04.upm"
+		width="1" height="1"
+		cut_wall="0"
+		internal_wall="1"
+		short_description="Place in a house to increase population cap."
+		description="A traditional painting by a certain famous artist - these can only be found via events and other opportunities, not created by the colony."
+		decor="1" passable="1"
+		upkeep_type="-1" 
+		upkeep_quantity="-1"
+		quality="3"
+		order_string="030424">
+			
+		<module_requirement tag="boxed_common_painting_04" art="flatpack-placeholder" amount="1"/>
+		<access_point x="0" y="0"/>
+	</module>
+	
+	<!--UNCOMMON picture cluster-->
+	<module name="Uncommon Picture Cluster 01" display_name="Uncommon Picture Cluster no.1"
+		icon_skin="ui\orderIcons2.xml" icon="mc_frame_cluster"
+		script="painting"
+		model="models/buildingProps/pictureFrameClusterMc01.upm"
+		width="1" height="1"
+		cut_wall="0"
+		internal_wall="1"
+		short_description="Place in a house to increase population cap."
+		description="Practical imagery fit for the professional class - these can only be found via events and other opportunities, not created by the colony."
+		decor="1" passable="1"
+		upkeep_type="-1" 
+		upkeep_quantity="-1"
+		quality="2"
+		order_string="030431">
+			
+		<module_requirement tag="boxed_uncommon_picture_01" art="flatpack-placeholder" amount="1"/>
+		<access_point x="0" y="0"/>
+	</module>
+	
+	<module name="Uncommon Picture Cluster 02" display_name="Uncommon Picture Cluster no.2"
+		icon_skin="ui\orderIcons2.xml" icon="mc_frame_cluster"
+		script="painting"
+		model="models/buildingProps/pictureFrameClusterMc02.upm"
+		width="1" height="1"
+		cut_wall="0"
+		internal_wall="1"
+		short_description="Place in a house to increase population cap."
+		description="Practical imagery fit for the professional class - these can only be found via events and other opportunities, not created by the colony."
+		decor="1" passable="1"
+		upkeep_type="-1" 
+		upkeep_quantity="-1"
+		quality="2"
+		order_string="030432">
+			
+		<module_requirement tag="boxed_uncommon_picture_02" art="flatpack-placeholder" amount="1"/>
+		<access_point x="0" y="0"/>
+	</module>
+	
+	<!--COMMON picture cluster-->
+	<module name="Common Picture Cluster 01" display_name="Common Picture Cluster no.1"
+		icon_skin="ui\orderIcons2.xml" icon="lc_frame_cluster"
+		script="painting"
+		model="models/buildingProps/pictureFrameClusterLc01.upm"
+		width="1" height="1"
+		cut_wall="0"
+		internal_wall="1"
+		short_description="Place in a house to increase population cap."
+		description="A rude piece of art fit for the lower classes - these can only be found via events and other opportunities, not created by the colony."
+		decor="1" passable="1"
+		upkeep_type="-1" 
+		upkeep_quantity="-1"
+		quality="1"
+		order_string="030441">
+			
+		<module_requirement tag="boxed_common_picture_01" art="flatpack-placeholder" amount="1"/>
+		<access_point x="0" y="0"/>
+	</module>
+	
+	<module name="Common Picture Cluster 02" display_name="Common Picture Cluster no.2"
+		icon_skin="ui\orderIcons2.xml" icon="lc_frame_cluster"
+		script="painting"
+		model="models/buildingProps/pictureFrameClusterLc02.upm"
+		width="1" height="1"
+		cut_wall="0"
+		internal_wall="1"
+		short_description="Place in a house to increase population cap."
+		description="A rude piece of art fit for the lower classes - these can only be found via events and other opportunities, not created by the colony."
+		decor="1" passable="1"
+		upkeep_type="-1" 
+		upkeep_quantity="-1"
+		quality="1"
+		order_string="030442">
+			
+		<module_requirement tag="boxed_common_picture_02" art="flatpack-placeholder" amount="1"/>
+		<access_point x="0" y="0"/>
+	</module>
+	
+	
+	
   
 	<module name="Fancy Bookshelf" display_name="Fancy Bookshelf"
 		icon_skin="ui\orderIcons.xml" icon="icon_bookshelf_uc"
@@ -10270,67 +10382,6 @@ are already contained within other buildings. Consider those a placeholder for l
 		<module_requirement tag="boxed_wood_plinth" art="flatpack-placeholder" amount="1"/>
 		<filter name="decor"/>
 	</module>
-	
-  <!-- FIXME: READD AFTER THE PLAYER CAN GET THEM SOMEHOW
-  <module name="Lower Class Picture Frame Cluster 00" display_name="Lower Class Picture Frame Cluster"
-          icon_skin="ui\orderIcons2.xml" icon="lc_frame_cluster"
-          model="models/buildingProps/pictureFrameClusterLc01.upm"
-          width="1" height="1"
-          cut_wall="0"
-          internal_wall="1"
-          decor="1" passable="1"
-		description="Many rude pieces of art fit for the lower classes. (Decor)"
-          script="interiorDecor">
-     <filter name="decor"/>
-    <module_requirement tag="timber" art="logs" amount="1"/>
-    <module_requirement tag="bolt_of_cloth" art="icon_clothbolt" amount="1"/>
-  </module>
-   
-
-   
-   <module name="Lower Class Picture Frame Cluster 01" display_name="Lower Class Picture Frame Cluster"
-          icon_skin="ui\orderIcons2.xml" icon="lc_frame_cluster"
-          model="models/buildingProps/pictureFrameClusterLc02.upm"
-          width="1" height="1"
-          cut_wall="0"
-          internal_wall="1"
-          decor="1" passable="1"
-		description="Many rude pieces of art fit for the lower classes. (Decor)"
-          script="interiorDecor">
-     <filter name="decor"/>
-    <module_requirement tag="timber" art="logs" amount="1"/>
-    <module_requirement tag="bolt_of_cloth" art="icon_clothbolt" amount="1"/>
-  </module>
-   
-   <module name="Middle Class Picture Frame Cluster 01" display_name="Middle Class Picture Frame Cluster"
-          icon_skin="ui\orderIcons2.xml" icon="mc_frame_cluster"
-          model="models/buildingProps/pictureFrameClusterMc01.upm"
-          width="1" height="1"
-          cut_wall="0"
-          internal_wall="1"
-          decor="1" passable="1"
-		description="A collection of practical imagery fit for the professional class. (Decor)"
-          script="interiorDecor">
-     <filter name="decor"/>
-    <module_requirement tag="planks" art="planks_icon" amount="1"/>
-    <module_requirement tag="bolt_of_cloth" art="icon_clothbolt" amount="1"/>
-  </module>
-   
-
-   <module name="Middle Class Picture Frame Cluster 02" display_name="Middle Class Picture Frame Cluster"
-          icon_skin="ui\orderIcons2.xml" icon="mc_frame_cluster"
-          model="models/buildingProps/pictureFrameClusterMc02.upm"
-          width="1" height="1"
-          cut_wall="0"
-          internal_wall="1"
-          decor="1" passable="1"
-		description="A collection of practical imagery fit for the professional class. (Decor)"
-          script="interiorDecor">
-     <filter name="decor"/>
-    <module_requirement tag="planks" art="planks_icon" amount="1"/>
-    <module_requirement tag="bolt_of_cloth" art="icon_clothbolt" amount="1"/>
-  </module>
-	-->
   
 	<module name="Pot Amphora 00" display_name="Tall Amphora Pot"
 		icon_skin="ui\orderIcons2.xml" icon="ceramic_pot"
@@ -11750,10 +11801,14 @@ are already contained within other buildings. Consider those a placeholder for l
 		<addition type="module" name="Lower Class Window 00" required="0"/>
 		<addition type="module" name="Lower Class Window 01" required="0"/>
 		<addition type="module" name="Lower Class Wall Shrine" required="0"/>
-		<!--<addition type="module" name="Painting Lc 01" required="0"/>-->
 		<addition type="module" name="Clothes Line 01" required="0"/>
 		<addition type="module" name="Clothes Line 05" required="0"/>
-		<addition type="module" name="Rare Painting" required="0"/>
+		<addition type="module" name="Common Painting 01" required="0"/>
+		<addition type="module" name="Common Painting 02" required="0"/>
+		<addition type="module" name="Common Painting 03" required="0"/>
+		<addition type="module" name="Common Painting 04" required="0"/>
+		<addition type="module" name="Common Picture Cluster 01" required="0"/>
+		<addition type="module" name="Common Picture Cluster 02" required="0"/>
 		<addition type="module" name="Lower Class Rug 00" required="0"/>
           <addition type="module" name="Lamp 02" required="0"/>
 		
@@ -11793,12 +11848,16 @@ are already contained within other buildings. Consider those a placeholder for l
 	<addition type="module" name="Middle Class Chair" required="0"/>
 	<addition type="module" name="Middle Class Window 00" required="0"/>
 	<addition type="module" name="MC Cabinet" required="0"/>
-	<!--<addition type="module" name="Painting Mc 00" required="0"/>-->
 	<addition type="module" name="Middle Class Rug 00" required="0"/>
 	<addition type="module" name="Middle Class Rug 01" required="0"/>
      <addition type="module" name="Wood Plinth" required="0"/>
 	<addition type="module" name="Middle Class Table and Chair Set" required="0"/>
-	<addition type="module" name="Rare Painting" required="0"/>
+	<addition type="module" name="Uncommon Painting 01" required="0"/>
+	<addition type="module" name="Uncommon Painting 02" required="0"/>
+	<addition type="module" name="Uncommon Painting 03" required="0"/>
+	<addition type="module" name="Uncommon Painting 04" required="0"/>
+	<addition type="module" name="Uncommon Picture Cluster 01" required="0"/>
+	<addition type="module" name="Uncommon Picture Cluster 02" required="0"/>
      <addition type="module" name="Lamp 02" required="0"/>
     
     
@@ -11844,7 +11903,11 @@ are already contained within other buildings. Consider those a placeholder for l
 	<!--<addition type="module" name="Royal Wall Plaque" required="0"/>-->
 	<addition type="module" name="Steam Radiator" required="0"/>
 	<addition type="module" name="Upper Class Rug 00" required="0"/>
-	<!--<addition type="module" name="Painting Uc 00" required="0"/>-->
+	<addition type="module" name="Rare Painting" required="0"/>
+	<addition type="module" name="Rare Painting 02" required="0"/>
+	<addition type="module" name="Rare Painting 03" required="0"/>
+	<addition type="module" name="Rare Painting 04" required="0"/>
+	<addition type="module" name="Rare Painting 05" required="0"/>
      <addition type="module" name="Lamp 02" required="0"/>
 
           <construction_cost tag="lacquered_planks" fixedCost="4"
@@ -11860,7 +11923,7 @@ are already contained within other buildings. Consider those a placeholder for l
 	<building name="Show All Modules" display_name="All Modules"
 			description="Useful modules for workshops. Probably."
 			icon="modules_category"
-			order_string="96">
+			order_string="94">
 	<addition type="module" name="Advanced Workbench" required="0" />
 	<addition type="module" name="Blunderbuss Locker" required="0"/>
 	<addition type="module" name="Bookshelf" required="0"/>
@@ -11920,7 +11983,7 @@ are already contained within other buildings. Consider those a placeholder for l
 	<building name="Show All Decor" display_name="All Decor"
 			description="Pointless adornments to help pretend Everything Is Okay."
 			icon="decor_category"
-			order_string="95">
+			order_string="97">
 	<addition type="module" name="Barbershop Pole" required="0"/>
 	<addition type="module" name="Barometer" required="0"/>
 	<addition type="module" name="Candelabra" required="0"/>
@@ -11951,6 +12014,22 @@ are already contained within other buildings. Consider those a placeholder for l
 	<addition type="module" name="Pot Bell Krater" required="0"/>
 	<addition type="module" name="Pot Calyx Krater" required="0"/>
 	<addition type="module" name="Rare Painting" required="0"/>
+	<addition type="module" name="Rare Painting 02" required="0"/>
+	<addition type="module" name="Rare Painting 03" required="0"/>
+	<addition type="module" name="Rare Painting 04" required="0"/>
+	<addition type="module" name="Rare Painting 05" required="0"/>
+	<addition type="module" name="Uncommon Painting 01" required="0"/>
+	<addition type="module" name="Uncommon Painting 02" required="0"/>
+	<addition type="module" name="Uncommon Painting 03" required="0"/>
+	<addition type="module" name="Uncommon Painting 04" required="0"/>
+	<addition type="module" name="Common Painting 01" required="0"/>
+	<addition type="module" name="Common Painting 02" required="0"/>
+	<addition type="module" name="Common Painting 03" required="0"/>
+	<addition type="module" name="Common Painting 04" required="0"/>
+	<addition type="module" name="Uncommon Picture Cluster 01" required="0"/>
+	<addition type="module" name="Uncommon Picture Cluster 02" required="0"/>
+	<addition type="module" name="Common Picture Cluster 01" required="0"/>
+	<addition type="module" name="Common Picture Cluster 02" required="0"/>
 	<addition type="module" name="Spice Rack" required="0" />
 	<addition type="module" name="Stone Plinth" required="0"/>
 	<addition type="module" name="UC Cabinet" required="0"/>
@@ -11985,7 +12064,7 @@ are already contained within other buildings. Consider those a placeholder for l
 	<building name="Show All Furniture" display_name="All Furniture"
 			description="Oh look, things we can rub our bodies on! Mmm.. soft..."
 			icon="furniture_category"
-			order_string="94">
+			order_string="96">
 	<addition type="module" name="Cot" required="0"/>
 	<addition type="module" name="Lower Class Chair" required="0"/>
 	<addition type="module" name="Lower Class Table and Chair Set" required="0"/>
@@ -12000,6 +12079,32 @@ are already contained within other buildings. Consider those a placeholder for l
 	<addition type="module" name="Upper Class Chair" required="0"/>
 	<addition type="module" name="Upper Class Table and Chair Set" required="0"/>
 	<addition type="module" name="UC Cabinet" required="0"/>
+	</building>
+		
+	<!-- CECOMMPATCH - Hacky way to add the "all furniture" filter -->
+	<building name="Show All Art" display_name="All Art"
+			description="To understand art we must first discuss what we meaBANG...BANGBANGBANG"
+			icon="decor_uc_icon"
+			order_string="98">
+	<addition type="module" name="Rare Painting" required="0"/>
+	<addition type="module" name="Rare Painting 02" required="0"/>
+	<addition type="module" name="Rare Painting 03" required="0"/>
+	<addition type="module" name="Rare Painting 04" required="0"/>
+	<addition type="module" name="Rare Painting 05" required="0"/>
+	<addition type="module" name="Uncommon Painting 01" required="0"/>
+	<addition type="module" name="Uncommon Painting 02" required="0"/>
+	<addition type="module" name="Uncommon Painting 03" required="0"/>
+	<addition type="module" name="Uncommon Painting 04" required="0"/>
+	<addition type="module" name="Common Painting 01" required="0"/>
+	<addition type="module" name="Common Painting 02" required="0"/>
+	<addition type="module" name="Common Painting 03" required="0"/>
+	<addition type="module" name="Common Painting 04" required="0"/>
+	<addition type="module" name="Uncommon Picture Cluster 01" required="0"/>
+	<addition type="module" name="Uncommon Picture Cluster 02" required="0"/>
+	<addition type="module" name="Common Picture Cluster 01" required="0"/>
+	<addition type="module" name="Common Picture Cluster 02" required="0"/>
+	<addition type="module" name="Wall-Mounted Aurochs Head" required="0"/>
+	<addition type="module" name="Wall-Mounted Beetle Head" required="0"/>
 	</building>
 	
 	<building name="Chapel" script="chapel" display_name="Chapel"
