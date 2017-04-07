@@ -514,6 +514,11 @@ gameobject "steamknight" inherit "ai_agent"
 							  SELF )
 
 			if results.name == "gameAgentAssignedJobMessage" then 
+				-- CECOMMPATCH - hacky temp fix for alarm performance spikes
+				if results[1].displayName == "Responding To Alarm" then
+					return
+				end
+				
 				state.AI.curJobInstance = results[1]
 				state.AI.curJobInstance.assignedCitizen = SELF
 				
@@ -536,8 +541,13 @@ gameobject "steamknight" inherit "ai_agent"
 								  "gameAgentTestForInterruptsMessage",
 								  state.AI,
 								  SELF )
-				
                     if results.name == "gameAgentAssignedJobMessage" then
+
+						-- CECOMMPATCH - hacky temp fix for alarm performance spikes
+						if results[1].displayName == "Responding To Alarm" then
+							return
+						end
+
                          results[1].assignedCitizen = SELF
                          if state.AI.curJobInstance then
                               if state.AI.FSMindex > 0 then
