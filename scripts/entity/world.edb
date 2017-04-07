@@ -313,7 +313,7 @@ Entity {
 	name="Rally Squad",
 	type="waypoint",
 	visible=true,
-	lifetimeInSeconds=20,
+	lifetimeInSeconds=40,
 	tags={"alarm_waypoint","rally_waypoint"},
 }
 
