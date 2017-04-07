@@ -9,7 +9,7 @@ gameobject "office" inherit "buildings"
 			end
 			
 			-- trade offices don't use overseers, so don't use icons
-			if state.entityName ~= "Trade Office" then
+			if not SELF.tags.trade_office then
 				send("gameWorkshopManager", "WorkshopUpdateIcon", SELF);
 			end
 		end	
