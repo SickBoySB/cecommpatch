@@ -9078,6 +9078,7 @@ are already contained within other buildings. Consider those a placeholder for l
 		<animation name="close" file="models/modules/ovenSmallDoorClose.upa" />
 		<animation name="idleon" file="models/modules/ovenSmallIdleOn.upa" />
 		<animation name="idleoff" file="models/modules/ovenSmallIdle.upa" />
+		<animation name="idle" file="models/modules/ovenSmallIdle.upa" />
 		
 		<module_jobs_for name="Kitchen">
 				
