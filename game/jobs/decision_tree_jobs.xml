@@ -129,7 +129,7 @@
  must_lock_owner="1"
  do_not_suspend_parent_assignment="0"
  filter="">
-      <require_gameobject input="enemy" amount="1" tag="cecomm_prevent,hostile_agent" not_tag="alarm_waypoint_active" require_owned="0" tag_from_job="0" random="0" closest="0" useMultiplier="0" create_marker="0" in_party="0" range="15" unique="0" must_lock="0" must_unlock="1" must_test_lock="0" must_lock_ggp="0" civ_value_leq="-1" civ_value_geq="-1" />
+      <require_gameobject input="enemy" amount="1" tag="hostile_agent" not_tag="alarm_waypoint_active" require_owned="0" tag_from_job="0" random="0" closest="0" useMultiplier="0" create_marker="0" in_party="0" range="15" unique="0" must_lock="0" must_unlock="1" must_test_lock="0" must_lock_ggp="0" civ_value_leq="-1" civ_value_geq="-1" />
       <fsm>
             <create_alarm_waypoint  input="enemy"/>
             <set_tag_other  input="enemy" name="alarm_waypoint_active"/>
@@ -486,7 +486,7 @@
  must_lock_owner="1"
  do_not_suspend_parent_assignment="0"
  filter="">
-      <require_gameobject input="enemy" amount="1" tag="cecomm_prevent,hostile_agent" not_tag="alarm_waypoint_active" require_owned="0" tag_from_job="0" random="0" closest="0" useMultiplier="0" create_marker="0" in_party="0" range="15" unique="0" must_lock="0" must_unlock="1" must_test_lock="0" must_lock_ggp="0" civ_value_leq="-1" civ_value_geq="-1" />
+      <require_gameobject input="enemy" amount="1" tag="hostile_agent" not_tag="alarm_waypoint_active" require_owned="0" tag_from_job="0" random="0" closest="0" useMultiplier="0" create_marker="0" in_party="0" range="15" unique="0" must_lock="0" must_unlock="1" must_test_lock="0" must_lock_ggp="0" civ_value_leq="-1" civ_value_geq="-1" />
       <fsm>
             <create_alarm_waypoint  input="enemy"/>
             <set_tag_other  input="enemy" name="alarm_waypoint_active"/>

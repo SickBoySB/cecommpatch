@@ -1903,42 +1903,6 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_painting_uc" display_name="Upper-Class Painting" filter="finished">
-		<display skin="ui\orderIcons.xml" icon="decor_uc_icon"/>
-		<description text="A boxed module, ready for setting up in an appropriate building." />
-		<gameplay_description text="Module used for scientific research." />
-		<tags>
-			<tag name="commodity"/>
-			<tag name="boxed"/>
-			<tag name="boxed_painting_uc"/>
-			<tag name="crate"/>
-		</tags>
-	</commodity>
-
-	<commodity name="boxed_painting_mc" display_name="Middle-Class Painting" filter="finished">
-		<display skin="ui\orderIcons.xml" icon="decor_mc_icon"/>
-		<description text="A boxed module, ready for setting up in an appropriate building." />
-		<gameplay_description text="Module that isn't in this game." />
-		<tags>
-			<tag name="commodity"/>
-			<tag name="boxed"/>
-			<tag name="boxed_painting_mc"/>
-			<tag name="crate"/>
-		</tags>
-	</commodity>
-
-	<commodity name="boxed_painting_lc" display_name="Lower-Class Painting" filter="finished">
-		<display skin="ui\orderIcons.xml" icon="decor_lc_icon"/>
-		<description text="A boxed module, ready for setting up in an appropriate building." />
-		<gameplay_description text="Module that isn't in this game." />
-		<tags>
-			<tag name="commodity"/>
-			<tag name="boxed"/>
-			<tag name="boxed_painting_lc"/>
-			<tag name="crate"/>
-		</tags>
-	</commodity>
-
 	<commodity name="boxed_loading_bay_door" display_name="Loading Bay Door" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="icon_loadingbaywood"/>
 		<description text="A boxed module, ready for setting up in an appropriate building." />
@@ -2586,6 +2550,262 @@
 			<tag name="painting"/>
 			<tag name="boxed"/>
 			<tag name="boxed_rare_painting"/>
+			<tag name="crate"/>
+			<tag name="dramatic"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
+		</tags>
+	</commodity>
+
+	<commodity name="boxed_rare_painting_02" display_name="Exquisite Painting" filter="finished">
+		<display skin="ui\orderIcons.xml" icon="decor_uc_icon"/>
+		<description text="An ostentatious painting by a certain famous artist - you've probably heard of them. Place this astonishing rarity in a house to increase your population capacity." />
+		<gameplay_description text="Place in a house to increase population cap." />
+		<tags>
+			<tag name="commodity"/>
+			<tag name="painting"/>
+			<tag name="boxed"/>
+			<tag name="boxed_rare_painting_02"/>
+			<tag name="crate"/>
+			<tag name="dramatic"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
+		</tags>
+	</commodity>
+
+	<commodity name="boxed_rare_painting_03" display_name="Aureate Painting" filter="finished">
+		<display skin="ui\orderIcons.xml" icon="decor_uc_icon"/>
+		<description text="An ostentatious painting by a certain famous artist - you've probably heard of them. Place this astonishing rarity in a house to increase your population capacity." />
+		<gameplay_description text="Place in a house to increase population cap." />
+		<tags>
+			<tag name="commodity"/>
+			<tag name="painting"/>
+			<tag name="boxed"/>
+			<tag name="boxed_rare_painting_03"/>
+			<tag name="crate"/>
+			<tag name="dramatic"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
+		</tags>
+	</commodity>
+
+	<commodity name="boxed_rare_painting_04" display_name="Grandiloquent Painting" filter="finished">
+		<display skin="ui\orderIcons.xml" icon="decor_uc_icon"/>
+		<description text="An ostentatious painting by a certain famous artist - you've probably heard of them. Place this astonishing rarity in a house to increase your population capacity." />
+		<gameplay_description text="Place in a house to increase population cap." />
+		<tags>
+			<tag name="commodity"/>
+			<tag name="painting"/>
+			<tag name="boxed"/>
+			<tag name="boxed_rare_painting_04"/>
+			<tag name="crate"/>
+			<tag name="dramatic"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
+		</tags>
+	</commodity>
+
+	<commodity name="boxed_rare_painting_05" display_name="Magisterial Painting" filter="finished">
+		<display skin="ui\orderIcons.xml" icon="decor_uc_icon"/>
+		<description text="An ostentatious painting by a certain famous artist - you've probably heard of them. Place this astonishing rarity in a house to increase your population capacity." />
+		<gameplay_description text="Place in a house to increase population cap." />
+		<tags>
+			<tag name="commodity"/>
+			<tag name="painting"/>
+			<tag name="boxed"/>
+			<tag name="boxed_rare_painting_05"/>
+			<tag name="crate"/>
+			<tag name="dramatic"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
+		</tags>
+	</commodity>
+
+	<commodity name="boxed_uncommon_painting_01" display_name="Exceptional Painting" filter="finished">
+		<display skin="ui\orderIcons.xml" icon="decor_mc_icon"/>
+		<description text="An stylish painting by a certain famous artist - you've probably heard of them. Place this in a house to increase your population capacity." />
+		<gameplay_description text="Place in a house to increase population cap." />
+		<tags>
+			<tag name="commodity"/>
+			<tag name="painting"/>
+			<tag name="boxed"/>
+			<tag name="boxed_uncommon_painting_01"/>
+			<tag name="crate"/>
+			<tag name="dramatic"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
+		</tags>
+	</commodity>
+
+	<commodity name="boxed_uncommon_painting_02" display_name="Remarkable Painting" filter="finished">
+		<display skin="ui\orderIcons.xml" icon="decor_mc_icon"/>
+		<description text="An stylish painting by a certain famous artist - you've probably heard of them. Place this in a house to increase your population capacity." />
+		<gameplay_description text="Place in a house to increase population cap." />
+		<tags>
+			<tag name="commodity"/>
+			<tag name="painting"/>
+			<tag name="boxed"/>
+			<tag name="boxed_uncommon_painting_02"/>
+			<tag name="crate"/>
+			<tag name="dramatic"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
+		</tags>
+	</commodity>
+
+	<commodity name="boxed_uncommon_painting_03" display_name="Extraordinary Painting" filter="finished">
+		<display skin="ui\orderIcons.xml" icon="decor_mc_icon"/>
+		<description text="An stylish painting by a certain famous artist - you've probably heard of them. Place this in a house to increase your population capacity." />
+		<gameplay_description text="Place in a house to increase population cap." />
+		<tags>
+			<tag name="commodity"/>
+			<tag name="painting"/>
+			<tag name="boxed"/>
+			<tag name="boxed_uncommon_painting_03"/>
+			<tag name="crate"/>
+			<tag name="dramatic"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
+		</tags>
+	</commodity>
+
+	<commodity name="boxed_uncommon_painting_04" display_name="Distinguished Painting" filter="finished">
+		<display skin="ui\orderIcons.xml" icon="decor_mc_icon"/>
+		<description text="An stylish painting by a certain famous artist - you've probably heard of them. Place this in a house to increase your population capacity." />
+		<gameplay_description text="Place in a house to increase population cap." />
+		<tags>
+			<tag name="commodity"/>
+			<tag name="painting"/>
+			<tag name="boxed"/>
+			<tag name="boxed_uncommon_painting_04"/>
+			<tag name="crate"/>
+			<tag name="dramatic"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
+		</tags>
+	</commodity>
+
+	<commodity name="boxed_common_painting_01" display_name="Noteworthy Painting" filter="finished">
+		<display skin="ui\orderIcons.xml" icon="decor_lc_icon"/>
+		<description text="A traditional painting by a certain famous artist - you've probably heard of them. Place this in a house to increase your population capacity." />
+		<gameplay_description text="Place in a house to increase population cap." />
+		<tags>
+			<tag name="commodity"/>
+			<tag name="painting"/>
+			<tag name="boxed"/>
+			<tag name="boxed_common_painting_01"/>
+			<tag name="crate"/>
+			<tag name="dramatic"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
+		</tags>
+	</commodity>
+
+	<commodity name="boxed_common_painting_02" display_name="Distinctive Painting" filter="finished">
+		<display skin="ui\orderIcons.xml" icon="decor_lc_icon"/>
+		<description text="A traditional painting by a certain famous artist - you've probably heard of them. Place this in a house to increase your population capacity." />
+		<gameplay_description text="Place in a house to increase population cap." />
+		<tags>
+			<tag name="commodity"/>
+			<tag name="painting"/>
+			<tag name="boxed"/>
+			<tag name="boxed_common_painting_02"/>
+			<tag name="crate"/>
+			<tag name="dramatic"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
+		</tags>
+	</commodity>
+
+	<commodity name="boxed_common_painting_03" display_name="Singular Painting" filter="finished">
+		<display skin="ui\orderIcons.xml" icon="decor_lc_icon"/>
+		<description text="A traditional painting by a certain famous artist - you've probably heard of them. Place this in a house to increase your population capacity." />
+		<gameplay_description text="Place in a house to increase population cap." />
+		<tags>
+			<tag name="commodity"/>
+			<tag name="painting"/>
+			<tag name="boxed"/>
+			<tag name="boxed_common_painting_03"/>
+			<tag name="crate"/>
+			<tag name="dramatic"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
+		</tags>
+	</commodity>
+
+	<commodity name="boxed_common_painting_04" display_name="Interesting Painting" filter="finished">
+		<display skin="ui\orderIcons.xml" icon="decor_lc_icon"/>
+		<description text="A traditional painting by a certain famous artist - you've probably heard of them. Place this in a house to increase your population capacity." />
+		<gameplay_description text="Place in a house to increase population cap." />
+		<tags>
+			<tag name="commodity"/>
+			<tag name="painting"/>
+			<tag name="boxed"/>
+			<tag name="boxed_common_painting_04"/>
+			<tag name="crate"/>
+			<tag name="dramatic"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
+		</tags>
+	</commodity>
+
+	<commodity name="boxed_uncommon_picture_01" display_name="Mediocre Pictures" filter="finished">
+		<display skin="ui\orderIcons2.xml" icon="mc_frame_cluster"/>
+		<description text="Practical imagery fit for the professional class - you've probably heard of them. Place this in a house to increase your population capacity." />
+		<gameplay_description text="Place in a house to increase population cap." />
+		<tags>
+			<tag name="commodity"/>
+			<tag name="painting"/>
+			<tag name="boxed"/>
+			<tag name="boxed_uncommon_picture_01"/>
+			<tag name="crate"/>
+			<tag name="dramatic"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
+		</tags>
+	</commodity>
+
+	<commodity name="boxed_uncommon_picture_02" display_name="Average Pictures" filter="finished">
+		<display skin="ui\orderIcons2.xml" icon="mc_frame_cluster"/>
+		<description text="Practical imagery fit for the professional class - you've probably heard of them. Place this in a house to increase your population capacity." />
+		<gameplay_description text="Place in a house to increase population cap." />
+		<tags>
+			<tag name="commodity"/>
+			<tag name="painting"/>
+			<tag name="boxed"/>
+			<tag name="boxed_uncommon_picture_02"/>
+			<tag name="crate"/>
+			<tag name="dramatic"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
+		</tags>
+	</commodity>
+
+	<commodity name="boxed_common_picture_01" display_name="Awful Pictures" filter="finished">
+		<display skin="ui\orderIcons2.xml" icon="lc_frame_cluster"/>
+		<description text="A rude piece of art fit for the lower classes - you've probably heard of them. Place this in a house to increase your population capacity." />
+		<gameplay_description text="Place in a house to increase population cap." />
+		<tags>
+			<tag name="commodity"/>
+			<tag name="painting"/>
+			<tag name="boxed"/>
+			<tag name="boxed_common_picture_01"/>
+			<tag name="crate"/>
+			<tag name="dramatic"/>
+			<tag name="cecomm_decor"/>
+			<tag name="cecomm_boxed"/>
+		</tags>
+	</commodity>
+
+	<commodity name="boxed_common_picture_02" display_name="Shoddy Pictures" filter="finished">
+		<display skin="ui\orderIcons2.xml" icon="lc_frame_cluster"/>
+		<description text="A rude piece of art fit for the lower classes - you've probably heard of them. Place this in a house to increase your population capacity." />
+		<gameplay_description text="Place in a house to increase population cap." />
+		<tags>
+			<tag name="commodity"/>
+			<tag name="painting"/>
+			<tag name="boxed"/>
+			<tag name="boxed_common_picture_02"/>
 			<tag name="crate"/>
 			<tag name="dramatic"/>
 			<tag name="cecomm_decor"/>
