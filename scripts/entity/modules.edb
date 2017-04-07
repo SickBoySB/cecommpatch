@@ -1221,7 +1221,7 @@ Entity
 Entity
 {
 	name = "Rare Painting",
-	displayname = "Rare Painting no.1",
+	displayname = "Rare Painting",
 	type = "interiorDecor",
 	description = "An ostentatious painting by a certain famous artist - place this astonishing rarity in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
@@ -1236,7 +1236,7 @@ Entity
 Entity
 {
 	name = "Rare Painting 02",
-	displayname = "Rare Painting no.2",
+	displayname = "Exquisite Painting",
 	type = "interiorDecor",
 	description = "An ostentatious painting by a certain famous artist - place this astonishing rarity in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
@@ -1251,7 +1251,7 @@ Entity
 Entity
 {
 	name = "Rare Painting 03",
-	displayname = "Rare Painting no.3",
+	displayname = "Aureate Painting",
 	type = "interiorDecor",
 	description = "An ostentatious painting by a certain famous artist - place this astonishing rarity in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
@@ -1266,7 +1266,7 @@ Entity
 Entity
 {
 	name = "Rare Painting 04",
-	displayname = "Rare Painting no.4",
+	displayname = "Grandiloquent Painting",
 	type = "interiorDecor",
 	description = "An ostentatious painting by a certain famous artist - place this astonishing rarity in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
@@ -1281,7 +1281,7 @@ Entity
 Entity
 {
 	name = "Rare Painting 05",
-	displayname = "Rare Painting no.5",
+	displayname = "Magisterial Painting",
 	type = "interiorDecor",
 	description = "An ostentatious painting by a certain famous artist - place this astonishing rarity in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
@@ -1296,7 +1296,7 @@ Entity
 Entity
 {
 	name = "Uncommon Painting 01",
-	displayname = "Uncommon Painting no.1",
+	displayname = "Exceptional Painting",
 	type = "interiorDecor",
 	description = "An stylish painting by a certain famous artist - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
@@ -1311,7 +1311,7 @@ Entity
 Entity
 {
 	name = "Uncommon Painting 02",
-	displayname = "Uncommon Painting no.2",
+	displayname = "Remarkable Painting",
 	type = "interiorDecor",
 	description = "An stylish painting by a certain famous artist - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
@@ -1326,7 +1326,7 @@ Entity
 Entity
 {
 	name = "Uncommon Painting 03",
-	displayname = "Uncommon Painting no.3",
+	displayname = "Extraordinary Painting",
 	type = "interiorDecor",
 	description = "An stylish painting by a certain famous artist - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
@@ -1341,7 +1341,7 @@ Entity
 Entity
 {
 	name = "Uncommon Painting 04",
-	displayname = "Uncommon Painting no.4",
+	displayname = "Distinguished Painting",
 	type = "interiorDecor",
 	description = "An stylish painting by a certain famous artist - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
@@ -1356,7 +1356,7 @@ Entity
 Entity
 {
 	name = "Common Painting 01",
-	displayname = "Common Painting no.1",
+	displayname = "Noteworthy Painting",
 	type = "interiorDecor",
 	description = "A traditional painting by a certain famous artist - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
@@ -1371,7 +1371,7 @@ Entity
 Entity
 {
 	name = "Common Painting 02",
-	displayname = "Common Painting no.2",
+	displayname = "Distinctive Painting",
 	type = "interiorDecor",
 	description = "A traditional painting by a certain famous artist - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
@@ -1386,7 +1386,7 @@ Entity
 Entity
 {
 	name = "Common Painting 03",
-	displayname = "Common Painting no.3",
+	displayname = "Singular Painting",
 	type = "interiorDecor",
 	description = "A traditional painting by a certain famous artist - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
@@ -1401,7 +1401,7 @@ Entity
 Entity
 {
 	name = "Common Painting 04",
-	displayname = "Common Painting no.4",
+	displayname = "Interesting Painting",
 	type = "interiorDecor",
 	description = "A traditional painting by a certain famous artist - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
@@ -1416,7 +1416,7 @@ Entity
 Entity
 {
 	name = "Uncommon Picture Cluster 01",
-	displayname = "Uncommon Picture Cluster no.1",
+	displayname = "Mediocre Pictures",
 	type = "interiorDecor",
 	description = "Practical imagery fit for the professional class - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
@@ -1431,7 +1431,7 @@ Entity
 Entity
 {
 	name = "Uncommon Picture Cluster 02",
-	displayname = "Uncommon Picture Cluster no.2",
+	displayname = "Average Pictures",
 	type = "interiorDecor",
 	description = "Practical imagery fit for the professional class - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
@@ -1446,7 +1446,7 @@ Entity
 Entity
 {
 	name = "Common Picture Cluster 01",
-	displayname = "Common Picture Cluster no.1",
+	displayname = "Awful Pictures",
 	type = "interiorDecor",
 	description = "A rude piece of art fit for the lower classes - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },
@@ -1461,7 +1461,7 @@ Entity
 Entity
 {
 	name = "Common Picture Cluster 02",
-	displayname = "Common Picture Cluster no.2",
+	displayname = "Shoddy Pictures",
 	type = "interiorDecor",
 	description = "A rude piece of art fit for the lower classes - place this in a house to increase your population cap.",
 	tags = { "painting", "art", "decor" },

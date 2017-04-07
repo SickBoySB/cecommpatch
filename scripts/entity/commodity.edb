@@ -3310,7 +3310,7 @@ Entity {
 
 Entity {
 	name = "boxed_rare_painting",
-	display_name = "Rare Painting no.1",
+	display_name = "Rare Painting",
 	display_compound_name = "rare painting",
 	type = "commodity",
 	trade_value=10000,
@@ -3328,7 +3328,7 @@ Entity {
 
 Entity {
 	name = "boxed_rare_painting_02",
-	display_name = "Rare Painting no.2",
+	display_name = "Exquisite Painting",
 	display_compound_name = "rare painting",
 	type = "commodity",
 	trade_value=10000,
@@ -3346,7 +3346,7 @@ Entity {
 
 Entity {
 	name = "boxed_rare_painting_03",
-	display_name = "Rare Painting no.3",
+	display_name = "Aureate Painting",
 	display_compound_name = "rare painting",
 	type = "commodity",
 	trade_value=10000,
@@ -3364,7 +3364,7 @@ Entity {
 
 Entity {
 	name = "boxed_rare_painting_04",
-	display_name = "Rare Painting no.4",
+	display_name = "Grandiloquent Painting",
 	display_compound_name = "rare painting",
 	type = "commodity",
 	trade_value=10000,
@@ -3382,7 +3382,7 @@ Entity {
 
 Entity {
 	name = "boxed_rare_painting_05",
-	display_name = "Rare Painting no.5",
+	display_name = "Magisterial Painting",
 	display_compound_name = "rare painting",
 	type = "commodity",
 	trade_value=10000,
@@ -3400,7 +3400,7 @@ Entity {
 
 Entity {
 	name = "boxed_uncommon_painting_01",
-	display_name = "Uncommon Painting no.1",
+	display_name = "Exceptional Painting",
 	display_compound_name = "uncommon painting",
 	type = "commodity",
 	trade_value=5714,
@@ -3418,7 +3418,7 @@ Entity {
 
 Entity {
 	name = "boxed_uncommon_painting_02",
-	display_name = "Uncommon Painting no.2",
+	display_name = "Remarkable Painting",
 	display_compound_name = "uncommon painting",
 	type = "commodity",
 	trade_value=5714,
@@ -3436,7 +3436,7 @@ Entity {
 
 Entity {
 	name = "boxed_uncommon_painting_03",
-	display_name = "Uncommon Painting no.3",
+	display_name = "Extraordinary Painting",
 	display_compound_name = "uncommon painting",
 	type = "commodity",
 	trade_value=5714,
@@ -3454,7 +3454,7 @@ Entity {
 
 Entity {
 	name = "boxed_uncommon_painting_04",
-	display_name = "Uncommon Painting no.4",
+	display_name = "Distinguished Painting",
 	display_compound_name = "uncommon painting",
 	type = "commodity",
 	trade_value=5714,
@@ -3472,7 +3472,7 @@ Entity {
 
 Entity {
 	name = "boxed_common_painting_01",
-	display_name = "Common Painting no.1",
+	display_name = "Noteworthy Painting",
 	display_compound_name = "common painting",
 	type = "commodity",
 	trade_value=4286,
@@ -3490,7 +3490,7 @@ Entity {
 
 Entity {
 	name = "boxed_common_painting_02",
-	display_name = "Common Painting no.2",
+	display_name = "Distinctive Painting",
 	display_compound_name = "common painting",
 	type = "commodity",
 	trade_value=4286,
@@ -3508,7 +3508,7 @@ Entity {
 
 Entity {
 	name = "boxed_common_painting_03",
-	display_name = "Common Painting no.3",
+	display_name = "Singular Painting",
 	display_compound_name = "common painting",
 	type = "commodity",
 	trade_value=4286,
@@ -3526,7 +3526,7 @@ Entity {
 
 Entity {
 	name = "boxed_common_painting_04",
-	display_name = "Common Painting no.4",
+	display_name = "Interesting Painting",
 	display_compound_name = "common painting",
 	type = "commodity",
 	trade_value=4286,
@@ -3544,7 +3544,7 @@ Entity {
 
 Entity {
 	name = "boxed_uncommon_picture_01",
-	display_name = "Uncommon Picture Cluster no.1",
+	display_name = "Mediocre Pictures",
 	display_compound_name = "uncommon picture cluster",
 	type = "commodity",
 	trade_value=2857,
@@ -3562,7 +3562,7 @@ Entity {
 
 Entity {
 	name = "boxed_uncommon_picture_02",
-	display_name = "Uncommon Picture Cluster no.2",
+	display_name = "Average Pictures",
 	display_compound_name = "uncommon picture cluster",
 	type = "commodity",
 	trade_value=2857,
@@ -3580,7 +3580,7 @@ Entity {
 
 Entity {
 	name = "boxed_common_picture_01",
-	display_name = "Common Picture Cluster no.1",
+	display_name = "Awful Pictures",
 	display_compound_name = "common picture cluster",
 	type = "commodity",
 	trade_value=1429,
@@ -3598,7 +3598,7 @@ Entity {
 
 Entity {
 	name = "boxed_common_picture_02",
-	display_name = "Common Picture Cluster no.2",
+	display_name = "Shoddy Pictures",
 	display_compound_name = "common picture cluster",
 	type = "commodity",
 	trade_value=1429,

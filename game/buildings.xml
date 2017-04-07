@@ -7280,7 +7280,7 @@ are already contained within other buildings. Consider those a placeholder for l
 	-->
     
 	<!-- RARE paintings -->
-	<module name="Rare Painting" display_name="Rare Painting no.1"
+	<module name="Rare Painting" display_name="Rare Painting"
 		icon_skin="ui\orderIcons.xml" icon="decor_uc_icon"
 		script="painting"
 		model="models/buildingProps/pictureFrameUc01.upm"
@@ -7299,7 +7299,7 @@ are already contained within other buildings. Consider those a placeholder for l
 		<access_point x="0" y="0"/>
 	</module>
     
-	<module name="Rare Painting 02" display_name="Rare Painting no.2"
+	<module name="Rare Painting 02" display_name="Exquisite Painting"
 		icon_skin="ui\orderIcons.xml" icon="decor_uc_icon"
 		script="painting"
 		model="models/buildingProps/pictureFrameUc02.upm"
@@ -7318,7 +7318,7 @@ are already contained within other buildings. Consider those a placeholder for l
 		<access_point x="0" y="0"/>
 	</module>
     
-	<module name="Rare Painting 03" display_name="Rare Painting no.3"
+	<module name="Rare Painting 03" display_name="Aureate Painting"
 		icon_skin="ui\orderIcons.xml" icon="decor_uc_icon"
 		script="painting"
 		model="models/buildingProps/pictureFrameUc03.upm"
@@ -7337,7 +7337,7 @@ are already contained within other buildings. Consider those a placeholder for l
 		<access_point x="0" y="0"/>
 	</module>
     
-	<module name="Rare Painting 04" display_name="Rare Painting no.4"
+	<module name="Rare Painting 04" display_name="Grandiloquent Painting"
 		icon_skin="ui\orderIcons.xml" icon="decor_uc_icon"
 		script="painting"
 		model="models/buildingProps/pictureFrameUc04.upm"
@@ -7356,7 +7356,7 @@ are already contained within other buildings. Consider those a placeholder for l
 		<access_point x="0" y="0"/>
 	</module>
     
-	<module name="Rare Painting 05" display_name="Rare Painting no.5"
+	<module name="Rare Painting 05" display_name="Magisterial Painting"
 		icon_skin="ui\orderIcons.xml" icon="decor_uc_icon"
 		script="painting"
 		model="models/buildingProps/pictureFrameUc05.upm"
@@ -7376,7 +7376,7 @@ are already contained within other buildings. Consider those a placeholder for l
 	</module>
 	
 	<!-- UNCOMMON paintings -->
-	<module name="Uncommon Painting 01" display_name="Uncommon Painting no.1"
+	<module name="Uncommon Painting 01" display_name="Exceptional Painting"
 		icon_skin="ui\orderIcons.xml" icon="decor_mc_icon"
 		script="painting"
 		model="models/buildingProps/pictureFrameMc01.upm"
@@ -7395,7 +7395,7 @@ are already contained within other buildings. Consider those a placeholder for l
 		<access_point x="0" y="0"/>
 	</module>
 	
-	<module name="Uncommon Painting 02" display_name="Uncommon Painting no.2"
+	<module name="Uncommon Painting 02" display_name="Remarkable Painting"
 		icon_skin="ui\orderIcons.xml" icon="decor_mc_icon"
 		script="painting"
 		model="models/buildingProps/pictureFrameMc02.upm"
@@ -7414,7 +7414,7 @@ are already contained within other buildings. Consider those a placeholder for l
 		<access_point x="0" y="0"/>
 	</module>
 	
-	<module name="Uncommon Painting 03" display_name="Uncommon Painting no.3"
+	<module name="Uncommon Painting 03" display_name="Extraordinary Painting"
 		icon_skin="ui\orderIcons.xml" icon="decor_mc_icon"
 		script="painting"
 		model="models/buildingProps/pictureFrameMc03.upm"
@@ -7433,7 +7433,7 @@ are already contained within other buildings. Consider those a placeholder for l
 		<access_point x="0" y="0"/>
 	</module>
 	
-	<module name="Uncommon Painting 04" display_name="Uncommon Painting no.4"
+	<module name="Uncommon Painting 04" display_name="Distinguished Painting"
 		icon_skin="ui\orderIcons.xml" icon="decor_mc_icon"
 		script="painting"
 		model="models/buildingProps/pictureFrameMc04.upm"
@@ -7453,7 +7453,7 @@ are already contained within other buildings. Consider those a placeholder for l
 	</module>
 	
 	<!--COMMON paintings-->
-	<module name="Common Painting 01" display_name="Common Painting no.1"
+	<module name="Common Painting 01" display_name="Noteworthy Painting"
 		icon_skin="ui\orderIcons.xml" icon="decor_lc_icon"
 		script="painting"
 		model="models/buildingProps/pictureFrameLc01.upm"
@@ -7472,7 +7472,7 @@ are already contained within other buildings. Consider those a placeholder for l
 		<access_point x="0" y="0"/>
 	</module>
 	
-	<module name="Common Painting 02" display_name="Common Painting no.2"
+	<module name="Common Painting 02" display_name="Distinctive Painting"
 		icon_skin="ui\orderIcons.xml" icon="decor_lc_icon"
 		script="painting"
 		model="models/buildingProps/pictureFrameLc02.upm"
@@ -7491,7 +7491,7 @@ are already contained within other buildings. Consider those a placeholder for l
 		<access_point x="0" y="0"/>
 	</module>
 	
-	<module name="Common Painting 03" display_name="Common Painting no.3"
+	<module name="Common Painting 03" display_name="Singular Painting"
 		icon_skin="ui\orderIcons.xml" icon="decor_lc_icon"
 		script="painting"
 		model="models/buildingProps/pictureFrameLc03.upm"
@@ -7510,7 +7510,7 @@ are already contained within other buildings. Consider those a placeholder for l
 		<access_point x="0" y="0"/>
 	</module>
 	
-	<module name="Common Painting 04" display_name="Common Painting no.4"
+	<module name="Common Painting 04" display_name="Interesting Painting"
 		icon_skin="ui\orderIcons.xml" icon="decor_lc_icon"
 		script="painting"
 		model="models/buildingProps/pictureFrameLc04.upm"
@@ -7530,7 +7530,7 @@ are already contained within other buildings. Consider those a placeholder for l
 	</module>
 	
 	<!--UNCOMMON picture cluster-->
-	<module name="Uncommon Picture Cluster 01" display_name="Uncommon Picture Cluster no.1"
+	<module name="Uncommon Picture Cluster 01" display_name="Mediocre Pictures"
 		icon_skin="ui\orderIcons2.xml" icon="mc_frame_cluster"
 		script="painting"
 		model="models/buildingProps/pictureFrameClusterMc01.upm"
@@ -7549,7 +7549,7 @@ are already contained within other buildings. Consider those a placeholder for l
 		<access_point x="0" y="0"/>
 	</module>
 	
-	<module name="Uncommon Picture Cluster 02" display_name="Uncommon Picture Cluster no.2"
+	<module name="Uncommon Picture Cluster 02" display_name="Average Pictures"
 		icon_skin="ui\orderIcons2.xml" icon="mc_frame_cluster"
 		script="painting"
 		model="models/buildingProps/pictureFrameClusterMc02.upm"
@@ -7569,7 +7569,7 @@ are already contained within other buildings. Consider those a placeholder for l
 	</module>
 	
 	<!--COMMON picture cluster-->
-	<module name="Common Picture Cluster 01" display_name="Common Picture Cluster no.1"
+	<module name="Common Picture Cluster 01" display_name="Awful Pictures"
 		icon_skin="ui\orderIcons2.xml" icon="lc_frame_cluster"
 		script="painting"
 		model="models/buildingProps/pictureFrameClusterLc01.upm"
@@ -7588,7 +7588,7 @@ are already contained within other buildings. Consider those a placeholder for l
 		<access_point x="0" y="0"/>
 	</module>
 	
-	<module name="Common Picture Cluster 02" display_name="Common Picture Cluster no.2"
+	<module name="Common Picture Cluster 02" display_name="Shoddy Pictures"
 		icon_skin="ui\orderIcons2.xml" icon="lc_frame_cluster"
 		script="painting"
 		model="models/buildingProps/pictureFrameClusterLc02.upm"

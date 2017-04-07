@@ -2541,7 +2541,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_rare_painting" display_name="Rare Painting no.1" filter="finished">
+	<commodity name="boxed_rare_painting" display_name="Rare Painting" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="decor_uc_icon"/>
 		<description text="An ostentatious painting by a certain famous artist - you've probably heard of them. Place this astonishing rarity in a house to increase your population capacity." />
 		<gameplay_description text="Place in a house to increase population cap." />
@@ -2557,7 +2557,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_rare_painting_02" display_name="Rare Painting no.2" filter="finished">
+	<commodity name="boxed_rare_painting_02" display_name="Exquisite Painting" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="decor_uc_icon"/>
 		<description text="An ostentatious painting by a certain famous artist - you've probably heard of them. Place this astonishing rarity in a house to increase your population capacity." />
 		<gameplay_description text="Place in a house to increase population cap." />
@@ -2573,7 +2573,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_rare_painting_03" display_name="Rare Painting no.3" filter="finished">
+	<commodity name="boxed_rare_painting_03" display_name="Aureate Painting" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="decor_uc_icon"/>
 		<description text="An ostentatious painting by a certain famous artist - you've probably heard of them. Place this astonishing rarity in a house to increase your population capacity." />
 		<gameplay_description text="Place in a house to increase population cap." />
@@ -2589,7 +2589,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_rare_painting_04" display_name="Rare Painting no.4" filter="finished">
+	<commodity name="boxed_rare_painting_04" display_name="Grandiloquent Painting" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="decor_uc_icon"/>
 		<description text="An ostentatious painting by a certain famous artist - you've probably heard of them. Place this astonishing rarity in a house to increase your population capacity." />
 		<gameplay_description text="Place in a house to increase population cap." />
@@ -2605,7 +2605,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_rare_painting_05" display_name="Rare Painting no.5" filter="finished">
+	<commodity name="boxed_rare_painting_05" display_name="Magisterial Painting" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="decor_uc_icon"/>
 		<description text="An ostentatious painting by a certain famous artist - you've probably heard of them. Place this astonishing rarity in a house to increase your population capacity." />
 		<gameplay_description text="Place in a house to increase population cap." />
@@ -2621,7 +2621,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_uncommon_painting_01" display_name="Uncommon Painting no.1" filter="finished">
+	<commodity name="boxed_uncommon_painting_01" display_name="Exceptional Painting" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="decor_mc_icon"/>
 		<description text="An stylish painting by a certain famous artist - you've probably heard of them. Place this in a house to increase your population capacity." />
 		<gameplay_description text="Place in a house to increase population cap." />
@@ -2637,7 +2637,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_uncommon_painting_02" display_name="Uncommon Painting no.2" filter="finished">
+	<commodity name="boxed_uncommon_painting_02" display_name="Remarkable Painting" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="decor_mc_icon"/>
 		<description text="An stylish painting by a certain famous artist - you've probably heard of them. Place this in a house to increase your population capacity." />
 		<gameplay_description text="Place in a house to increase population cap." />
@@ -2653,7 +2653,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_uncommon_painting_03" display_name="Uncommon Painting no.3" filter="finished">
+	<commodity name="boxed_uncommon_painting_03" display_name="Extraordinary Painting" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="decor_mc_icon"/>
 		<description text="An stylish painting by a certain famous artist - you've probably heard of them. Place this in a house to increase your population capacity." />
 		<gameplay_description text="Place in a house to increase population cap." />
@@ -2669,7 +2669,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_uncommon_painting_04" display_name="Uncommon Painting no.4" filter="finished">
+	<commodity name="boxed_uncommon_painting_04" display_name="Distinguished Painting" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="decor_mc_icon"/>
 		<description text="An stylish painting by a certain famous artist - you've probably heard of them. Place this in a house to increase your population capacity." />
 		<gameplay_description text="Place in a house to increase population cap." />
@@ -2685,7 +2685,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_common_painting_01" display_name="Common Painting no.1" filter="finished">
+	<commodity name="boxed_common_painting_01" display_name="Noteworthy Painting" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="decor_lc_icon"/>
 		<description text="A traditional painting by a certain famous artist - you've probably heard of them. Place this in a house to increase your population capacity." />
 		<gameplay_description text="Place in a house to increase population cap." />
@@ -2701,7 +2701,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_common_painting_02" display_name="Common Painting no.2" filter="finished">
+	<commodity name="boxed_common_painting_02" display_name="Distinctive Painting" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="decor_lc_icon"/>
 		<description text="A traditional painting by a certain famous artist - you've probably heard of them. Place this in a house to increase your population capacity." />
 		<gameplay_description text="Place in a house to increase population cap." />
@@ -2717,7 +2717,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_common_painting_03" display_name="Common Painting no.3" filter="finished">
+	<commodity name="boxed_common_painting_03" display_name="Singular Painting" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="decor_lc_icon"/>
 		<description text="A traditional painting by a certain famous artist - you've probably heard of them. Place this in a house to increase your population capacity." />
 		<gameplay_description text="Place in a house to increase population cap." />
@@ -2733,7 +2733,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_common_painting_04" display_name="Common Painting no.4" filter="finished">
+	<commodity name="boxed_common_painting_04" display_name="Interesting Painting" filter="finished">
 		<display skin="ui\orderIcons.xml" icon="decor_lc_icon"/>
 		<description text="A traditional painting by a certain famous artist - you've probably heard of them. Place this in a house to increase your population capacity." />
 		<gameplay_description text="Place in a house to increase population cap." />
@@ -2749,7 +2749,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_uncommon_picture_01" display_name="Uncommon Picture Cluster no.1" filter="finished">
+	<commodity name="boxed_uncommon_picture_01" display_name="Mediocre Pictures" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="mc_frame_cluster"/>
 		<description text="Practical imagery fit for the professional class - you've probably heard of them. Place this in a house to increase your population capacity." />
 		<gameplay_description text="Place in a house to increase population cap." />
@@ -2765,7 +2765,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_uncommon_picture_02" display_name="Uncommon Picture Cluster no.2" filter="finished">
+	<commodity name="boxed_uncommon_picture_02" display_name="Average Pictures" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="mc_frame_cluster"/>
 		<description text="Practical imagery fit for the professional class - you've probably heard of them. Place this in a house to increase your population capacity." />
 		<gameplay_description text="Place in a house to increase population cap." />
@@ -2781,7 +2781,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_common_picture_01" display_name="Common Picture Cluster no.1" filter="finished">
+	<commodity name="boxed_common_picture_01" display_name="Awful Pictures" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="lc_frame_cluster"/>
 		<description text="A rude piece of art fit for the lower classes - you've probably heard of them. Place this in a house to increase your population capacity." />
 		<gameplay_description text="Place in a house to increase population cap." />
@@ -2797,7 +2797,7 @@
 		</tags>
 	</commodity>
 
-	<commodity name="boxed_common_picture_02" display_name="Common Picture Cluster no.2" filter="finished">
+	<commodity name="boxed_common_picture_02" display_name="Shoddy Pictures" filter="finished">
 		<display skin="ui\orderIcons2.xml" icon="lc_frame_cluster"/>
 		<description text="A rude piece of art fit for the lower classes - you've probably heard of them. Place this in a house to increase your population capacity." />
 		<gameplay_description text="Place in a house to increase population cap." />
