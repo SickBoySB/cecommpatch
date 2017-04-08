@@ -1974,13 +1974,13 @@ gameobject "citizen" inherit "ai_agent"
 			-- male-only because 1) to prevent a lot of bald females, and 2) because females already have hats attached to head models.
 			if state.AI.strs["gender"] == "male" then
 				-- chance to have a hat at all
-				if rand(1,100) <= 40 then
+				if rand(1,100) <= 50 then
 					-- artistocrats wouldn't be caught dead in headwear below their class
 					if entityName == "Aristocrat" then
 						hatchoice = rand(18,20)
 					else
 						-- should we split by social class, or use the pilgrim hat?
-						if rand(1,100) <= 10 then
+						if rand(1,100) <= 35 then
 							if entityName == "Overseer" then
 								hatchoice = rand(7,17)
 							else
