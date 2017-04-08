@@ -771,56 +771,14 @@ gameobject "bandit" inherit "ai_agent"
 		-- you're not a bandit anymore:
 		send("gameSpatialDictionary","gameObjectRemoveBit",SELF,14) 
 
-		-- animation time
-		local beheadedDeath = rand(0, 100)
-		local randomDeath = rand(0, 7)
-
-		if beheadedDeath == 100 then
+		local animName = bipedDeathAnimSmart(damageType) -- func in ai_agent.go
+		
+		if animName then
 			send("rendOdinCharacterClassHandler",
 				"odinRendererSetCharacterAnimationMessage",
 				state.renderHandle,
-				"deathHeadfalloff", false);
-
-		elseif randomDeath == 0 then
-			send("rendOdinCharacterClassHandler",
-				"odinRendererSetCharacterAnimationMessage",
-				state.renderHandle,
-				"death", false)
-		elseif randomDeath == 1 then
-			send("rendOdinCharacterClassHandler",
-				"odinRendererSetCharacterAnimationMessage",
-				state.renderHandle,
-				"death1", false)
-		elseif randomDeath == 2 then
-			send("rendOdinCharacterClassHandler",
-				"odinRendererSetCharacterAnimationMessage",
-				state.renderHandle,
-				"death2", false)
-		elseif randomDeath == 3 then
-			send("rendOdinCharacterClassHandler",
-				"odinRendererSetCharacterAnimationMessage",
-				state.renderHandle,
-				"death3", false)
-		elseif randomDeath == 4 then
-			send("rendOdinCharacterClassHandler",
-				"odinRendererSetCharacterAnimationMessage",
-				state.renderHandle,
-				"death_brainmelt", false)
-		elseif randomDeath == 5 then
-			send("rendOdinCharacterClassHandler",
-				"odinRendererSetCharacterAnimationMessage",
-				state.renderHandle,
-				"death_choke", false)
-		elseif randomDeath == 6 then
-			send("rendOdinCharacterClassHandler",
-				"odinRendererSetCharacterAnimationMessage",
-				state.renderHandle,
-				"death_shot", false)
-		else
-			send("rendOdinCharacterClassHandler",
-				"odinRendererSetCharacterAnimationMessage",
-				state.renderHandle,
-				"death", false);
+				animName,
+				false)
 		end
 		
 		send("gameSession","incSessionInt","banditDeaths",1)

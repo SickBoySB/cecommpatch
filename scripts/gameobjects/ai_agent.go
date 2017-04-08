@@ -11,6 +11,51 @@ gameobject "ai_agent" inherit "renderableobject" inherit "ai_damage"
 		function ai_agent_doOneSecondUpdate()
 			state.AI.ints.emoteTimer = state.AI.ints.emoteTimer + 1
 		end
+		
+		function bipedDeathAnimSmart( damageType )
+		-- CECOMMPATCH function for picking a death animation for: colonists, bandits, foreigners, and fishpeople
+		-- should we keep this completely random, or add in weight for damageType? random keeps it Gaslamp-style silly
+			local animName = "death"
+			local deathAnims = {
+				"death",
+				"death1",
+				"death2",
+				"death3",
+				"death_brainmelt",
+				"death_choke",
+				"death_shot", 
+				"death_while_fleeing", -- short leap forward
+				"death_on_fire", -- medium sway fall shudder
+				"death_platoon", -- long kneel reach towards sky
+				"death_poet", -- long dramatic kneeling one handed grab
+				"death_bulletriddled", -- quick spasms
+				--"deathHeadfalloff" -- quick and awesome
+				}
+				
+			if damageType == "starvation" then
+			-- keep starvation special
+				deathAnims = {
+				"death",
+				"death1",
+				"death2",
+				"death3",
+				"death_brainmelt",
+				"death_choke",
+				"death_on_fire", -- medium sway fall shudder
+				"death_platoon", -- long kneel reach towards sky
+				"death_poet", -- long dramatic kneeling one handed grab
+				}
+			else
+			-- give a 1/100 chance to pop the head off for non-starvation deaths
+				if rand(0,100) == 100 then
+					deathAnims = { "deathHeadfalloff" }
+				end
+			end
+			
+			animName = deathAnims[ rand(1,#deathAnims) ]
+
+			return animName
+		end
 	>>
 
 	state

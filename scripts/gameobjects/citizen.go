@@ -4844,29 +4844,7 @@ gameobject "citizen" inherit "ai_agent"
 					state.AI.position.y)
 			end
 		else
-			local animName = false
-			local deathAnims = {
-				"death",
-				"death",
-				"death1",
-				"death2",
-				"death3",
-				"death_brainmelt",
-				"death_choke",
-				"death_shot", 
-				"death_while_fleeing", -- short leap forward
-				"death_on_fire", -- medium sway fall shudder
-				"death_platoon", -- long kneel reach towards sky
-				"death_poet", -- long dramatic kneeling one handed grab
-				"death_bulletriddled", -- quick spasms
-				"deathHeadfalloff" -- quick and awesome
-				}
-
-			--if rand(0,100) == 100 then
-			--	animName = "deathHeadfalloff"
-			--else
-				animName = deathAnims[ rand(1,#deathAnims) ]
-			--end
+			local animName = bipedDeathAnimSmart(damageType) -- func in ai_agent.go
 			
 			if animName then
 				if removeFlesh then
