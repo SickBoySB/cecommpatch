@@ -35,6 +35,8 @@
 	<state name="shock" w="64" h="64" x="640" y="0" />
 	<state name="afraid" w="64" h="64" x="640" y="0" />
 	<state name="fearful" w="64" h="64" x="640" y="0" />
+	
+	
 	<state name="happy" w="64" h="64" x="704" y="0" />
 	<state name="angry" w="64" h="64" x="768" y="0" />
 	<state name="madness" w="64" h="64" x="832" y="0" />
@@ -78,6 +80,10 @@
 	<state name="haze" w="64" h="64" x="768" y="192" />
 	
 	<state name="beer_mug" w="64" h="64" x="576" y="256" />
+	
+	<state name="despair_face1" w="64" h="64" x="640" y="256" />
+	<state name="despair_face2" w="64" h="64" x="704" y="256" />
+	<state name="despair_face4" w="64" h="64" x="768" y="256" />
 	
 	<state name="strike" w="64" h="64" x="512" y="384" />
 	<state name="holy_cog" w="64" h="64" x="576" y="384" />
@@ -179,6 +185,8 @@
 	<state name="morale4" w="64" h="64" x="256" y="896" />
 	<state name="morale5" w="64" h="64" x="320" y="896" />
 	
+	<state name="fear_face4" w="64" h="64" x="384" y="896" />
+	
 <!-- foreigners -->
 	<state name="factions" w="64" h="64" x="320" y="320" />
 	<state name="republique_troops" w="64" h="64" x="384" y="256" />
@@ -234,6 +242,7 @@
 	<state name="invisible" x="960" y="768" w="64" h="64" />
 
 	<state name="placeholder" w="64" h="64" x="960" y="512" />
+	<state name="fear_face2" w="64" h="64" x="960" y="512" />
     
      <state name="question" x1="96" y1="32" x2="128" y2="64"/>
      
@@ -299,7 +308,8 @@
     <state name="cultist_no" w="64" h="64" x="768" y="320" />
     <state name="uc_skull" w="64" h="64" x="832" y="320" />
     <state name="madness_complete" w="64" h="64" x="896" y="320" />
-    <state name="factions" w="64" h="64" x="960" y="320" />
+    <state name="factions" w="64" h="64" x="960" y="320" /> <!-- placeholder, replaced with fear_face1 -->
+	<state name="fear_face1" w="64" h="64" x="960" y="320" />
     
     <state name="bee" w="64" h="64" x="832" y="384" />
     <state name="beetle" w="64" h="64" x="896" y="384" />

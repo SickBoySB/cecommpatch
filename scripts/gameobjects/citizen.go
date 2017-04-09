@@ -590,6 +590,9 @@ gameobject "citizen" inherit "ai_agent"
 				state.renderHandle,
 				parsedParagraph)
 		
+		--state.AI.ints["emoteTimer"] = state.AI.ints["emoteTimer"] + 1
+		emote()
+		
 		tmLeave()
 	end
 
@@ -4989,16 +4992,19 @@ gameobject "citizen" inherit "ai_agent"
 	>>
 	
 	receive emoteThought()
-	<<
+	<<				
 		thought = ""
 		-- here we decide what to emote to the world.
 		
 		local humanstats = EntityDB["HumanStats"]
 		local worldstats = EntityDB["WorldStats"]
+		local do_bubble = false
+		local mood_thought = false
 		
 		-- combat, life, death, majorly unhealthy status effects
 		if SELF.tags["fishy_state"] then
 			thought = "sea"
+			do_bubble = true
 		elseif SELF.tags["burning"] and state.AI.strs["lastThought"] ~= "i_am_on_fire" then
 			--if testThoughtVsLast("i_am_on_fire") then thought = "i_am_on_fire" end
 			thought = "i_am_on_fire"
@@ -5011,24 +5017,81 @@ gameobject "citizen" inherit "ai_agent"
 			thought = "affliction" 
 		elseif state.AI.ints["hunger"] >= humanstats.hungerWarningDays then -- * 10 then
 			thought = "hungry"	
-		elseif state.AI.ints["tiredness"] >= humanstats.tirednessWarningDays then
+			do_bubble = true
+		elseif state.AI.ints["tiredness"] >= 2 then -- humanstats.tirednessWarningDays
 			thought = "bed"
+			do_bubble = true
 		elseif SELF.tags["has_plague"] then
 			thought = "sick"
+			do_bubble = true
 		else
+			
 			thought = state.AI.strs["mood"]
+			
+			-- some icon usage seems weird... this is due to the ultra limited space available in the thoughtIcons
+			
+			if state.AI.strs["mood"] == "angry" then
+				if state.AI.ints["anger"] >= 60 then
+					mood_thought = "angry4"
+				elseif state.AI.ints["anger"] >= 50 then
+					mood_thought = "angry3"
+				elseif state.AI.ints["anger"] >= 30 then
+					mood_thought = "angry5"
+				elseif state.AI.ints["anger"] >= 15 then
+					mood_thought = "angry2"
+				end
+				
+				if state.AI.ints["anger"] >= 15 then 
+					do_bubble = true
+				end
+			elseif state.AI.strs["mood"] == "despair" then
+				if state.AI.ints["despair"] >= 60 then
+					mood_thought = "despair_face4"
+				elseif state.AI.ints["despair"] >= 50 then
+					mood_thought = "despair"
+				elseif state.AI.ints["despair"] >= 30 then
+					mood_thought = "despair_face2"
+				elseif state.AI.ints["despair"] >= 15 then
+					mood_thought = "despair_face1"
+				end
+				
+				if state.AI.ints["despair"] >= 15 then 
+					do_bubble = true
+				end
+			elseif state.AI.strs["mood"] == "afraid" then
+				if state.AI.ints["fear"] >= 60 then
+					mood_thought = "fear_face4"
+				elseif state.AI.ints["fear"] >= 50 then
+					mood_thought = "afraid"
+				elseif state.AI.ints["fear"] >= 30 then
+					mood_thought = "fear_face2"
+				elseif state.AI.ints["fear"] >= 15 then
+					mood_thought = "fear_face1"
+				end
+				
+				if state.AI.ints["fear"] >= 15 then 
+					do_bubble = true
+				end
+			end
+		
 		end
+
+		state.AI.strs["lastThought"] = thought
 		
 		-- OUR MOMENT OF GLORY
 		
-		send("rendOdinCharacterClassHandler",
-			"odinRendererCharacterExpression",
-			state.renderHandle,
-			"thought",
-			thought,
-			false )
+		if SELF.tags["sleeping"] or SELF.tags["dead"] or SELF.tags["fleeing"] then
+			do_bubble = false
+		end
 		
-		state.AI.strs["lastThought"] = thought
+		if do_bubble then
+			if mood_thought then
+				send(SELF,"attemptEmote",mood_thought,5,true)
+			else
+				send(SELF,"attemptEmote",thought,5,true)
+			end
+		end
+		
 	>>
 	
 	receive ConsumeFood( gameObjectHandle food )
