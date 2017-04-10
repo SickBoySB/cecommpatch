@@ -704,6 +704,11 @@ gameobject "fishperson" inherit "ai_agent"
      
 	receive corpseUpdate()
 	<<
+		if not SELF.tags["corpse_interact"] then
+			send(SELF, "resetInteractions")
+			SELF.tags["corpse_interact"] = true
+		end
+		
 		if not state.AI.bools["rotted"] then
 			
 			state.AI.ints["corpse_timer"] = state.AI.ints["corpse_timer"] - 1

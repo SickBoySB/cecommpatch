@@ -926,6 +926,11 @@ gameobject "bandit" inherit "ai_agent"
      
 	receive corpseUpdate()
 	<<
+		if not SELF.tags["corpse_interact"] then
+			send(SELF, "resetInteractions")
+			SELF.tags["corpse_interact"] = true
+		end
+		
 		if state.AI.bools["rotted"] then
 			-- now use the corpse_timer to send out detect corpse pings
 			--[[
