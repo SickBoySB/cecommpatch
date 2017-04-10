@@ -56,6 +56,15 @@ gameobject "ai_agent" inherit "renderableobject" inherit "ai_damage"
 
 			return animName
 		end
+		
+		function disable_buried_corpses()
+			if not SELF.tags["buriedandhidden"] then
+				SELF.tags["buriedandhidden"] = true
+				
+				-- screw it, just delete the damn thing... isn't used for anything anyways, and this fixes a TON of problems
+				send(SELF,"despawn")
+			end
+		end
 	>>
 
 	state
@@ -905,7 +914,7 @@ gameobject "ai_agent" inherit "renderableobject" inherit "ai_damage"
 		newPos.y = state.AI.position.y
 		state.gravePosition = newPos
 		
-		SELF.tags.buried = true
+		--SELF.tags.buried = true
 		
 		printl("ai_agent", state.AI.name ..
 			  " was buried in a grave at " .. tostring(state.AI.position.x) .. " / " .. tostring(state.AI.position.y))

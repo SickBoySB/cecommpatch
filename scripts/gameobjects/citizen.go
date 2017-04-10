@@ -3356,16 +3356,18 @@ gameobject "citizen" inherit "ai_agent"
 		if state.AI.bools["dead"] then
 			if not SELF.tags["buried"] then
 				send(SELF,"corpseUpdate")
-			else
-				if not SELF.tags["buriedandhidden"] then
-					SELF.tags["buriedandhidden"] = true
+				
+				--[[
+				-- FOR TESTING
+				if not SELF.tags["deadanddeactive"] then
+				
+					SELF.tags["deadanddeactive"] = true
 					
-					send("rendInteractiveObjectClassHandler",
-						"odinRendererClearInteractions",
-						state.renderHandle)
-					
-					--printl("CECOMMPATCH - Hi, I'm a "..SELF.id.." and I'm a buried corpseaholic. Interactions smooshed")
 				end
+				
+				]]--
+			else
+				disable_buried_corpses() -- ai_agent.go function
 			end			
 			
 			return
@@ -6463,6 +6465,15 @@ gameobject "citizen" inherit "ai_agent"
 	receive despawn() override
 	<<
 		printl("ai_agent", state.AI.name .. "received despawn")
+
+		if SELF.tags["buriedandhidden"] then
+			send("rendUIManager", "uiRemoveColonist", SELF.id)
+			send("gameBlackboard", "gameObjectRemoveTargetingJobs", SELF, nil)
+			send("rendOdinCharacterClassHandler", "odinRendererDeleteCharacterMessage", state.renderHandle)
+			send("gameSpatialDictionary", "gridRemoveObject", SELF)
+			
+			return
+		end
 		
 		FSM.abort( state, "Despawning.")
 

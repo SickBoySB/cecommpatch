@@ -6314,8 +6314,8 @@
 			<walk_to_adjacent_target_position input="graveyard"/>
 			<drop_person input="body" name="burial"/>
 			<place_grave input="graveyard"/>
-			<set_tag_other input="body" name="buried" />
 			<hide_other input="body"/>
+			<set_tag_other input="body" name="buried" />
 		</fsm>
 		<history importance="10" />
 	</job>
@@ -6424,8 +6424,8 @@
 			<walk_to_adjacent_target_position input="graveyard"/>
 			<drop_person input="body" name="burial"/>
 			<place_grave input="graveyard"/>
-			<set_tag_other input="body" name="buried" />
 			<hide_other input="body"/>
+			<set_tag_other input="body" name="buried" />
 		</fsm>
 		<history importance="10" />
 	</job>
