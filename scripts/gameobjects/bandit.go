@@ -377,8 +377,18 @@ gameobject "bandit" inherit "ai_agent"
     
 		if state.AI.bools["dead"] then
 			if not SELF.tags["buried"] then
-				send(SELF, "corpseUpdate")
-			end
+				send(SELF,"corpseUpdate")
+			else
+				if not SELF.tags["buriedandhidden"] then
+					SELF.tags["buriedandhidden"] = true
+					
+					send("rendInteractiveObjectClassHandler",
+						"odinRendererClearInteractions",
+						state.renderHandle)
+					
+					--printl("CECOMMPATCH - Hi, I'm a "..SELF.id.." and I'm a buried corpseaholic. Interactions smooshed")
+				end
+			end	
 			return
 		end
 
