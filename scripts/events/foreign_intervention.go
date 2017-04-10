@@ -1,5 +1,36 @@
 event "foreign_intervention"
 <<
+	local
+	<<
+		function choose_faction()
+			local o = ""
+			local dominant = query("gameSession","getSessionString", "dominantFaction")[1]
+			
+			-- CECOMMPATCH - hack to fix dominantFaction pulling fullName rather than shortName
+			-- TODO: do it properly via EntityDB lookup
+			
+			local dominant_short_name = {
+				["Grossherzoginnentum von Stahlmark"] = "Stahlmark",
+				["Novorus Imperiya"] = "Novorus",
+				["Republique Mecanique"] = "Republique",
+				-- not sure if any of the below is ever used, but just to be safe..
+				["The Clockwork Empire"] = "Empire",
+				["Fishpeople"] = "Fishpeople",
+				["Bandits"] = "Bandits"
+			}		
+			
+			local nations = { "Stahlmark", "Novorus", "Republique" }
+			
+			if dominant_short_name[dominant] then
+				table.insert(nations,dominant_short_name[dominant])
+			end
+			
+			o = nations[rand(1,#nations)]
+			
+			return o
+		end
+	>>
+	
 	state 
 	<<
 		bool alertTriggered
@@ -16,10 +47,7 @@ event "foreign_intervention"
 		-- choose a nation
 		-- have them send a squad to do a mission based on relation status.
 		
-		local dominant = query("gameSession","getSessionString", "dominantFaction")[1]
-		local nations = { "Stahlmark", "Novorus", "Republique", dominant }
-		
-		state.nationName = nations[ rand(1,#nations) ]
+		state.nationName = choose_faction()
 		state.nation = query("gameSession","getSessiongOH", state.nationName)[1]
 		state.nationInfo = EntityDB[ state.nationName .. "Info"]
 	>>
@@ -37,6 +65,18 @@ event "foreign_intervention"
 	FSM 
 	<<
 		["start"] = function(state,tags)
+			if not state.nation then
+				-- OLDER SAVE FIX
+				-- pick a new faction since dominantFaction was broken previously. shouldn't ever hit this with new saves
+				printl("CECOMMPATCH: foreign_intervention event broke.. invalid faction. retrying")
+				state.nationName = choose_faction()
+				state.nation = query("gameSession","getSessiongOH", state.nationName)[1]
+				state.nationInfo = EntityDB[ state.nationName .. "Info"]
+				-- /OLDER SAVE FIX
+				
+				return "start"
+			end	
+			
 			settimer("Foreign Troops Event Timer", 0)
 
 			local isPatrol = false
