@@ -7,7 +7,7 @@ gameobject "ai_agent" inherit "renderableobject" inherit "ai_damage"
 		function tooltip_refresh_from_save()
 		-- CECOMMPATCH function - this is a way to hackishly refresh tooltips when a game is reloaded, since tooltip binding isn't saved properly
 			if SELF.id and not tooltip_refreshed[SELF.id] then
-				local tooltip_name = "blank" -- default to this just in case
+				local tooltip_name = "UNKNOWN" -- error out later
 				local tooltip_alignment = ""
 				
 				-- setup the name for the tooltip file
@@ -17,12 +17,14 @@ gameobject "ai_agent" inherit "renderableobject" inherit "ai_damage"
 					tooltip_name = "bandit"
 				elseif SELF.tags.fishperson then
 					tooltip_name = "fishperson"
-				elseif SELF.tags.inspector then
+				elseif SELF.tags.occult_inspector then
 					tooltip_name = "occultInspector"
 				elseif SELF.tags.steamknight then
 					tooltip_name = "steamknight"
 				elseif SELF.tags.spectre then
 					tooltip_name = "spectre"
+				elseif SELF.tags.clockworkian then
+					tooltip_name = "clockworkianFriendly" -- they only have this state currently
 				end
 				
 				-- dead stuff doesn't need anything alignment-based
@@ -38,15 +40,15 @@ gameobject "ai_agent" inherit "renderableobject" inherit "ai_damage"
 						end
 					end
 				end
-			
-				send("rendOdinCharacterClassHandler",
-					"odinRendererSetCharacterCustomTooltipMessage",
-					SELF.id,
-					"ui\\tooltips\\"..tooltip_name..""..tooltip_alignment.."Tooltip.xml")
-					
-				tooltip_refreshed[SELF.id] = true
-				
+
 				--printl("CECOMMPATCH - tooltip_refresh_from_save - ".. SELF.id.." - "..tooltip_name..""..tooltip_alignment)
+				if tooltip_name ~= "UNKNOWN" then
+					send("rendOdinCharacterClassHandler",
+						"odinRendererSetCharacterCustomTooltipMessage",
+						SELF.id,
+						"ui\\tooltips\\"..tooltip_name..""..tooltip_alignment.."Tooltip.xml")
+				end
+				tooltip_refreshed[SELF.id] = true
 			end
 		end
 		
