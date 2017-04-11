@@ -1,8 +1,6 @@
-<tooltip width="280" height="72" mouseRestDelay="250" followCursor="0" skin="ui/styles/styleTooltip.xml">
-    <container name="charactervertbox" type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
-      <!-- TODO: Align left! -->
+<tooltip width="280" height="1" mouseRestDelay="250" followCursor="0" skin="ui/styles/styleTooltip.xml">
+    <container name="charactervertboxblank" type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
       <label name="buttonTooltipLabel" text=" Friendly Foreigner" vsp="minimum" hap="center" state="tooltip_friendly_text" />
-      <label name="buttonTooltipLabel" text=" [Name]" vsp="minimum" alignment="left" state="tooltip_text"/>
-      <label name="buttonTooltipLabel" text=" Current Job: [currentJob]" vsp="minimum" alignment="left" state="tooltip_text"/>
+	  <paragraph name="descriptionLabel" text="A friendly, allied foreigner. Maybe they'll help you thin out with your enemies or bring shiny trade items. Better keep them away from your xenophobic colonists though... they don't take too kindly to these types 'round here." vsp="minimum"  state="tooltip_text"/>
     </container>
 </tooltip>

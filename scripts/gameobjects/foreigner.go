@@ -1,7 +1,7 @@
 gameobject "foreigner" inherit "ai_agent"
 <<
 	local
-	<<
+	<<	
           function foreigner_doOneSecondUpdate()
                state.AI.ints["emoteTimer"] = state.AI.ints["emoteTimer"] + 1
                
@@ -176,7 +176,7 @@ gameobject "foreigner" inherit "ai_agent"
 		send("rendOdinCharacterClassHandler",
 			"odinRendererSetCharacterCustomTooltipMessage",
 			SELF.id,
-			"ui\\tooltips\\banditTooltip.xml")
+			"ui\\tooltips\\foreignerTooltip.xml")
           
 		-- set up foreign faction flags as appropriate.
 		if state.nation == "Stahlmark" then
@@ -273,6 +273,8 @@ gameobject "foreigner" inherit "ai_agent"
 
      receive Update()
      <<
+		tooltip_refresh_from_save()
+	 
   		if state.AI.thinkLocked then
                return
           end
@@ -502,6 +504,11 @@ gameobject "foreigner" inherit "ai_agent"
 		local civ = query("gameSpatialDictionary",
 						"gridGetCivilization",
 						state.AI.position)[1]
+		
+		send("rendOdinCharacterClassHandler",
+			"odinRendererSetCharacterCustomTooltipMessage",
+			SELF.id,
+			"ui\\tooltips\\foreignerDeadTooltip.xml")
 						
 		if civ == 0 then
 			send(SELF,"HandleInteractiveMessage","Bury Corpse (player order)",nil)

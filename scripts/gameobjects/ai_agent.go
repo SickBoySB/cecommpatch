@@ -2,6 +2,54 @@ gameobject "ai_agent" inherit "renderableobject" inherit "ai_damage"
 <<
 	local
 	<<
+		local tooltip_refreshed = {} -- hacky container to hold our refreshed tooltip IDs per-session
+			
+		function tooltip_refresh_from_save()
+		-- CECOMMPATCH function - this is a way to hackishly refresh tooltips when a game is reloaded, since tooltip binding isn't saved properly
+			if SELF.id and not tooltip_refreshed[SELF.id] then
+				local tooltip_name = "blank" -- default to this just in case
+				local tooltip_alignment = ""
+				
+				-- setup the name for the tooltip file
+				if SELF.tags.foreigner then
+					tooltip_name = "foreigner"
+				elseif SELF.tags.bandit then
+					tooltip_name = "bandit"
+				elseif SELF.tags.fishperson then
+					tooltip_name = "fishperson"
+				elseif SELF.tags.inspector then
+					tooltip_name = "occultInspector"
+				elseif SELF.tags.steamknight then
+					tooltip_name = "steamknight"
+				elseif SELF.tags.spectre then
+					tooltip_name = "spectre"
+				end
+				
+				-- dead stuff doesn't need anything alignment-based
+				if SELF.tags.dead and not SELF.tags.spectre then
+						tooltip_alignment = "Dead"
+				else
+					-- only the core staples have hostile/neutral/friendly variations
+					if SELF.tags.foreigner or SELF.tags.bandit or SELF.tags.fishperson then
+						if SELF.tags.hostile_agent then
+							tooltip_alignment = "Hostile"
+						elseif SELF.tags.friendly_agent then
+							tooltip_alignment = "Friendly"
+						end
+					end
+				end
+			
+				send("rendOdinCharacterClassHandler",
+					"odinRendererSetCharacterCustomTooltipMessage",
+					SELF.id,
+					"ui\\tooltips\\"..tooltip_name..""..tooltip_alignment.."Tooltip.xml")
+					
+				tooltip_refreshed[SELF.id] = true
+				
+				--printl("CECOMMPATCH - tooltip_refresh_from_save - ".. SELF.id.." - "..tooltip_name..""..tooltip_alignment)
+			end
+		end
+		
 		function setposition( x, y )
 			newPos = gameGridPosition:new()
 			newPos:set( x, y )

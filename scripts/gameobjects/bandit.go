@@ -349,6 +349,8 @@ gameobject "bandit" inherit "ai_agent"
 
      receive Update()
      <<
+		tooltip_refresh_from_save()
+		
   		if state.AI.thinkLocked then
                return
           end
@@ -795,6 +797,11 @@ gameobject "bandit" inherit "ai_agent"
 		if state.AI.curJobInstance then
 			FSM.abort(state,"Died.")
 		end
+		
+		send("rendOdinCharacterClassHandler",
+			"odinRendererSetCharacterCustomTooltipMessage",
+			SELF.id,
+			"ui\\tooltips\\banditDeadTooltip.xml")
 		
 		state.attempt_auto_corpse_handling = true
 		send(SELF,"resetInteractions")

@@ -1,8 +1,6 @@
-<tooltip width="280" height="72" mouseRestDelay="250" followCursor="0" skin="ui/styles/styleTooltip.xml">
-    <container name="charactervertbox" type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark">
-      <!-- TODO: Align left! -->
+<tooltip width="280" height="1" mouseRestDelay="250" followCursor="0" skin="ui/styles/styleTooltip.xml">
+    <container name="charactervertboxblank" type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
       <label name="buttonTooltipLabel" text=" Foreigner" vsp="minimum" hap="center" state="tooltip_neutral_text" />
-      <label name="buttonTooltipLabel" text=" [Name]" vsp="minimum" alignment="left" state="tooltip_text"/>
-      <label name="buttonTooltipLabel" text=" Current Job: [currentJob]" vsp="minimum" alignment="left" state="tooltip_text"/>
+	  <paragraph name="descriptionLabel" text="Neither friend nor foe. It may be worth trying to win their favor at some point... it's pretty rough out there, after all." vsp="minimum"  state="tooltip_text"/>
     </container>
 </tooltip>

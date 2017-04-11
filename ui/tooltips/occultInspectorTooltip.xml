@@ -1,9 +1,6 @@
-<tooltip width="280" height="72" mouseRestDelay="250" followCursor="0" skin="ui/styles/styleTooltip.xml">
-    <container name="charactervertbox" type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
-        <!-- TODO: Align left! -->
-        
-        <label name="buttonTooltipLabel" text=" Occult Inspector " vsp="minimum" hap="center" state="tooltip_occult_text" />
-        <label name="buttonTooltipLabel" text=" [Name]" vsp="minimum" alignment="left" state="tooltip_text"/>
-        <label name="buttonTooltipLabel" text=" Current Job: [CurrentJob]" vsp="minimum" alignment="left" state="tooltip_text"/>
+<tooltip width="280" height="1" mouseRestDelay="250" followCursor="0" skin="ui/styles/styleTooltip.xml">
+    <container name="charactervertboxblank" type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+      <label name="buttonTooltipLabel" text=" Occult Inspector" vsp="minimum" hap="center" state="tooltip_occult_text" />
+	  <paragraph name="descriptionLabel" text="Doesn't say much but seems pretty efficient. There's something off about this 'person', but the Empire wouldn't have sent them if we had anything to fear... right?" vsp="minimum"  state="tooltip_text"/>
     </container>
 </tooltip>

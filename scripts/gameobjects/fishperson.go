@@ -309,6 +309,8 @@ gameobject "fishperson" inherit "ai_agent"
 
 	receive Update()
 	<<
+		tooltip_refresh_from_save()
+		
 		if state.AI.thinkLocked then
                return
           end
@@ -475,6 +477,11 @@ gameobject "fishperson" inherit "ai_agent"
 		end
 		send("gameSession", "incSteamStat", "stat_fishpeople_killed", 1)
 		
+		send("rendOdinCharacterClassHandler",
+			"odinRendererSetCharacterCustomTooltipMessage",
+			SELF.id,
+			"ui\\tooltips\\fishpersonDeadTooltip.xml")
+			
 		send(SELF,"resetInteractions")
 		
 		local civ = query("gameSpatialDictionary", "gridGetCivilization", state.AI.position )[1]

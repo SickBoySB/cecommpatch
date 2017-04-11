@@ -359,6 +359,8 @@ gameobject "outsider" inherit "ai_agent"
 
      receive Update()
      <<
+		tooltip_refresh_from_save()
+		
   		if state.AI.thinkLocked then
                return
           end
@@ -562,60 +564,24 @@ gameobject "outsider" inherit "ai_agent"
 
 		SELF.tags.meat_source = true
 
-		-- animation time
-		local beheadedDeath = rand(0, 100)
-		local randomDeath = rand(0, 7)
-
-		if beheadedDeath == 100 then
+		local animName = bipedDeathAnimSmart(damageType) -- func in ai_agent.go
+		
+		if animName then
 			send("rendOdinCharacterClassHandler",
 				"odinRendererSetCharacterAnimationMessage",
 				state.renderHandle,
-				"deathHeadfalloff", false)
-		elseif randomDeath == 0 then
-			send("rendOdinCharacterClassHandler",
-				"odinRendererSetCharacterAnimationMessage",
-				state.renderHandle,
-				"death", false)
-		elseif randomDeath == 1 then
-			send("rendOdinCharacterClassHandler",
-				"odinRendererSetCharacterAnimationMessage",
-				state.renderHandle,
-				"death1", false)
-		elseif randomDeath == 2 then
-			send("rendOdinCharacterClassHandler",
-				"odinRendererSetCharacterAnimationMessage",
-				state.renderHandle,
-				"death2", false)
-		elseif randomDeath == 3 then
-			send("rendOdinCharacterClassHandler",
-				"odinRendererSetCharacterAnimationMessage",
-				state.renderHandle,
-				"death3", false)
-		elseif randomDeath == 4 then
-			send("rendOdinCharacterClassHandler",
-				"odinRendererSetCharacterAnimationMessage",
-				state.renderHandle,
-				"death_brainmelt", false)
-		elseif randomDeath == 5 then
-			send("rendOdinCharacterClassHandler",
-				"odinRendererSetCharacterAnimationMessage",
-				state.renderHandle,
-				"death_choke", false)
-		elseif randomDeath == 6 then
-			send("rendOdinCharacterClassHandler",
-				"odinRendererSetCharacterAnimationMessage",
-				state.renderHandle,
-				"death_shot", false)
-		else
-			send("rendOdinCharacterClassHandler",
-				"odinRendererSetCharacterAnimationMessage",
-				state.renderHandle,
-				"death", false);
+				animName,
+				false)
 		end
     
 		if state.AI.curJobInstance then
 			FSM.abort( state, "Died.")
 		end
+		
+		send("rendOdinCharacterClassHandler",
+			"odinRendererSetCharacterCustomTooltipMessage",
+			SELF.id,
+			"ui\\tooltips\\occultInspectorDeadTooltip.xml")
 		
 		send(SELF,"resetInteractions")
 	>>
@@ -726,6 +692,11 @@ gameobject "outsider" inherit "ai_agent"
      
 	receive corpseUpdate()
 	<<
+		if not SELF.tags["corpse_interact"] then
+			send(SELF, "resetInteractions")
+			SELF.tags["corpse_interact"] = true
+		end
+		
 		if state.AI.bools["rotted"] then
 
 		else
@@ -855,8 +826,8 @@ gameobject "outsider" inherit "ai_agent"
 				state.renderHandle,
                          "Give " .. state.AI.name .. " a Proper Burial",
                          "Bury Corpse (player order)",
-                         "", --"Bury Corpses",
-                         "", --"Bury Corpse (player order)",
+                         "Bury Corpses", --"Bury Corpses",
+                         "Bury Corpse (player order)", --"Bury Corpse (player order)",
 						"graveyard",
 						"",
 						"Dirt",
@@ -867,8 +838,8 @@ gameobject "outsider" inherit "ai_agent"
 				state.renderHandle,
                          "Dump the Corpse of " .. state.AI.name,
                          "Dump Corpse (player order)",
-                         "", --"Dump Corpses",
-                         "", --"Dump Corpse (player order)",
+                         "Dump Corpses", --"Dump Corpses",
+                         "Dump Corpse (player order)", --"Dump Corpse (player order)",
 						"graveyard",
 						"",
 						"Dirt",
