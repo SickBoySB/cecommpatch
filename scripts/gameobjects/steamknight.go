@@ -150,6 +150,8 @@ gameobject "steamknight" inherit "ai_agent"
 		--state.animSet = entityData.animationSet
 		state.animSet = entityData.animationSet
 		 
+		--[[
+		-- CECOMMPATCH - disabling, this is causing a model to exist at 0,0 for some reason
 		send("rendOdinCharacterClassHandler",
 			"odinRendererCreateCharacter", 
 			SELF,
@@ -157,6 +159,7 @@ gameobject "steamknight" inherit "ai_agent"
 			state.animSet,
 			0,
 			0 )
+			]]--
 		
 		send("rendOdinCharacterClassHandler",
 			"odinRendererFaceCharacter", 
