@@ -578,10 +578,17 @@ gameobject "outsider" inherit "ai_agent"
 			FSM.abort( state, "Died.")
 		end
 		
-		send("rendOdinCharacterClassHandler",
-			"odinRendererSetCharacterCustomTooltipMessage",
-			SELF.id,
-			"ui\\tooltips\\occultInspectorDeadTooltip.xml")
+		if SELF.tags.occult_inspector then
+			send("rendOdinCharacterClassHandler",
+				"odinRendererSetCharacterCustomTooltipMessage",
+				SELF.id,
+				"ui\\tooltips\\occultInspectorDeadTooltip.xml")
+		else
+			send("rendOdinCharacterClassHandler",
+				"odinRendererSetCharacterCustomTooltipMessage",
+				SELF.id,
+				"ui\\tooltips\\clockworkianFriendlyDeadTooltip.xml")
+		end
 		
 		send(SELF,"resetInteractions")
 	>>
@@ -696,7 +703,7 @@ gameobject "outsider" inherit "ai_agent"
 			send(SELF, "resetInteractions")
 			SELF.tags["corpse_interact"] = true
 		end
-		
+
 		if state.AI.bools["rotted"] then
 
 		else
