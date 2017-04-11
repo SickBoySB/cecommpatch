@@ -1,0 +1,8 @@
+<tooltip width="280" height="72" mouseRestDelay="250" followCursor="0" skin="ui/styles/styleTooltip.xml">
+    <container name="charactervertbox" type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+      <!-- TODO: Align left! -->
+      <label name="buttonTooltipLabel" text=" Bandit" vsp="minimum" hap="center" state="tooltip_hostile_text" />
+      <label name="buttonTooltipLabel" text=" [Name]" vsp="minimum" alignment="left" state="tooltip_text"/>
+      <label name="buttonTooltipLabel" text=" Current Job: [currentJob]" vsp="minimum" alignment="left" state="tooltip_text"/>
+    </container>
+</tooltip>
