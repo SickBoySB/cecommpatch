@@ -4108,6 +4108,8 @@ gameobject "citizen" inherit "ai_agent"
 	
 	receive corpseUpdate()
 	<<
+		tooltip_refresh_from_save() -- colonists don't need this UNLESS they're dead
+		
 		if not SELF.tags["corpse_interact"] then
 			send(SELF, "resetInteractions")
 			SELF.tags["corpse_interact"] = true
@@ -4958,6 +4960,11 @@ gameobject "citizen" inherit "ai_agent"
 				state.renderHandle,
 				"")
 		end
+		
+		send("rendOdinCharacterClassHandler",
+			"odinRendererSetCharacterCustomTooltipMessage",
+			SELF.id,
+			"ui\\tooltips\\colonistDeadTooltip.xml")
 		
 		send(SELF,"resetInteractions")
 		SELF.tags.attempt_autoburial = true

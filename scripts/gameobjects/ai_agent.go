@@ -11,7 +11,9 @@ gameobject "ai_agent" inherit "renderableobject" inherit "ai_damage"
 				local tooltip_alignment = ""
 				
 				-- setup the name for the tooltip file
-				if SELF.tags.foreigner then
+				if SELF.tags.citizen then
+					tooltip_name = "colonist"
+				elseif SELF.tags.foreigner then
 					tooltip_name = "foreigner"
 				elseif SELF.tags.bandit then
 					tooltip_name = "bandit"
