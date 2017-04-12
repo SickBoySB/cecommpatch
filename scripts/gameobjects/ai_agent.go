@@ -981,48 +981,86 @@ gameobject "ai_agent" inherit "renderableobject" inherit "ai_damage"
 	>>
 
 	receive despawn()
-	<<
-		FSM.abort( state, "Despawning.")
-		if SELF.tags.spectre then
-			send("rendCommandManager",
-					"odinRendererCreateParticleSystemMessage",
-					"QuagSmokePuffLarge",
-					state.AI.position.x,
-					state.AI.position.y )
-		
-			-- The jig is up!
-			printl("ai_agent", state.AI.name .. " being removed from game.")
+	<<		
+		if SELF.tags["buriedandhidden"] then
+			FSM.abort( state, "Despawning.")
+			if state.AI.possessedObjects then
+				local holdingChar = false
+				for key,value in pairs(state.AI.possessedObjects) do
+					if key == "curPickedUpCharacter" then
+						send("rendOdinCharacterClassHandler", "odinRendererCharacterDetachCharacter", state.renderHandle, value.id, "Bones_Group");
+						send(value, "DropItemMessage", state.AI.position.x, state.AI.position.y)
+						send(value, "GameObjectPlace", state.AI.position.x, state.AI.position.y)
+						send("rendOdinCharacterClassHandler",
+							"odinRendererSetCharacterAnimationMessage",
+							value.id,
+							"corpse_dropped", false)
+						
+						holdingChar = true
+					elseif key then
+						send(value, "DestroySelf", state.AI.curJobInstance )
+					end
+				end
+			end
 			
+			if state.AI.possessedObjects["curCarriedTool"] then
+				send(state.AI.possessedObjects["curCarriedTool"], "DestroySelf", state.AI.curJobInstance )
+			end
 			
-			state.AI.bools["canBeSocial"] = false
-			send("rendOdinCharacterClassHandler",
-				"odinRendererHideCharacterMessage",
-				state.renderHandle,
-				true)
-			
-			send("rendOdinCharacterClassHandler",
-				"odinRendererDeleteCharacterMessage",
-				state.renderHandle)
-			
-			send("gameSpatialDictionary",
-				"gridRemoveObject",
-				SELF)
-			
-			send("gameBlackboard",
-				"gameObjectRemoveTargetingJobs",
-				SELF,
-				nil)
-			
-			--send(SELF,"AICancelJob", "despawning")
+			if state.AI.possessedObjects["curPickedUpItem"] then
+				send(state.AI.possessedObjects["curPickedUpItem"], "DestroySelf", state.AI.curJobInstance )
+			end
+			send(SELF,"AICancelJob", "despawning")
 			send(SELF,"ForceDropEverything")
-			SELF.tags.destroy_me = true
-			return
-		end
+			send("rendUIManager", "uiRemoveColonist", SELF.id)
+			send("gameSpatialDictionary", "gridRemoveObject", SELF)
+			send("rendOdinCharacterClassHandler", "odinRendererDeleteCharacterMessage", state.renderHandle)
+			send("gameBlackboard", "gameObjectRemoveTargetingJobs", SELF, nil)
+			destroyfromjob(SELF, ji)
+		else
 		
-		send("rendOdinCharacterClassHandler", "odinRendererDeleteCharacterMessage", state.renderHandle)
-          send("gameSpatialDictionary", "gridRemoveObject", SELF)
-          send("gameBlackboard", "gameObjectRemoveTargetingJobs", SELF, nil)
-		destroyfromjob(SELF,nil)
+			FSM.abort( state, "Despawning.")
+			if SELF.tags.spectre then
+				send("rendCommandManager",
+						"odinRendererCreateParticleSystemMessage",
+						"QuagSmokePuffLarge",
+						state.AI.position.x,
+						state.AI.position.y )
+			
+				-- The jig is up!
+				printl("ai_agent", state.AI.name .. " being removed from game.")
+				
+				
+				state.AI.bools["canBeSocial"] = false
+				send("rendOdinCharacterClassHandler",
+					"odinRendererHideCharacterMessage",
+					state.renderHandle,
+					true)
+				
+				send("rendOdinCharacterClassHandler",
+					"odinRendererDeleteCharacterMessage",
+					state.renderHandle)
+				
+				send("gameSpatialDictionary",
+					"gridRemoveObject",
+					SELF)
+				
+				send("gameBlackboard",
+					"gameObjectRemoveTargetingJobs",
+					SELF,
+					nil)
+				
+				--send(SELF,"AICancelJob", "despawning")
+				send(SELF,"ForceDropEverything")
+				SELF.tags.destroy_me = true
+				return
+			end
+			
+			send("rendOdinCharacterClassHandler", "odinRendererDeleteCharacterMessage", state.renderHandle)
+			  send("gameSpatialDictionary", "gridRemoveObject", SELF)
+			  send("gameBlackboard", "gameObjectRemoveTargetingJobs", SELF, nil)
+			destroyfromjob(SELF,nil)
+		end
 	>>
 	
 	receive registerTradeOffice( gameObjectHandle trade_office )

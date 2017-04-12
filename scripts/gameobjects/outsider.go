@@ -516,46 +516,83 @@ gameobject "outsider" inherit "ai_agent"
 
 	receive despawn() override
 	<<
-		-- disappear in a poof of smoke.
-		send("rendCommandManager",
-			"odinRendererCreateParticleSystemMessage",
-			"CeramicsStamperPoof",
-			state.AI.position.x,
-			state.AI.position.y)
-	
-		-- remove me from world, take carried objects with me.
-		-- if carrying a body (for some reason), leave it behind.
-		
-		if state.AI.possessedObjects then
-			local holdingChar = false
-			for key,value in pairs(state.AI.possessedObjects) do
-				if key == "curPickedUpCharacter" then
-					send("rendOdinCharacterClassHandler", "odinRendererCharacterDetachCharacter", state.renderHandle, value.id, "Bones_Group");
-					send(value, "DropItemMessage", state.AI.position.x, state.AI.position.y)
-					send(value, "GameObjectPlace", state.AI.position.x, state.AI.position.y)
-					send("rendOdinCharacterClassHandler",
-						"odinRendererSetCharacterAnimationMessage",
-						value.id,
-						"corpse_dropped", false)
-					
-					holdingChar = true
-				elseif key then
-					send(value, "DestroySelf", state.AI.curJobInstance )
+		if SELF.tags["buriedandhidden"] then
+			FSM.abort( state, "Despawning.")
+			if state.AI.possessedObjects then
+				local holdingChar = false
+				for key,value in pairs(state.AI.possessedObjects) do
+					if key == "curPickedUpCharacter" then
+						send("rendOdinCharacterClassHandler", "odinRendererCharacterDetachCharacter", state.renderHandle, value.id, "Bones_Group");
+						send(value, "DropItemMessage", state.AI.position.x, state.AI.position.y)
+						send(value, "GameObjectPlace", state.AI.position.x, state.AI.position.y)
+						send("rendOdinCharacterClassHandler",
+							"odinRendererSetCharacterAnimationMessage",
+							value.id,
+							"corpse_dropped", false)
+						
+						holdingChar = true
+					elseif key then
+						send(value, "DestroySelf", state.AI.curJobInstance )
+					end
 				end
 			end
-		end
+			
+			if state.AI.possessedObjects["curCarriedTool"] then
+				send(state.AI.possessedObjects["curCarriedTool"], "DestroySelf", state.AI.curJobInstance )
+			end
+			
+			if state.AI.possessedObjects["curPickedUpItem"] then
+				send(state.AI.possessedObjects["curPickedUpItem"], "DestroySelf", state.AI.curJobInstance )
+			end
+			send(SELF,"AICancelJob", "despawning")
+			send(SELF,"ForceDropEverything")
+			send("rendUIManager", "uiRemoveColonist", SELF.id)
+			send("gameSpatialDictionary", "gridRemoveObject", SELF)
+			send("rendOdinCharacterClassHandler", "odinRendererDeleteCharacterMessage", state.renderHandle)
+			send("gameBlackboard", "gameObjectRemoveTargetingJobs", SELF, nil)
+			destroyfromjob(SELF, ji)
+		else
+			-- disappear in a poof of smoke.
+			send("rendCommandManager",
+				"odinRendererCreateParticleSystemMessage",
+				"CeramicsStamperPoof",
+				state.AI.position.x,
+				state.AI.position.y)
 		
-		if state.AI.possessedObjects["curCarriedTool"] then
-			send(state.AI.possessedObjects["curCarriedTool"], "DestroySelf", state.AI.curJobInstance )
+			-- remove me from world, take carried objects with me.
+			-- if carrying a body (for some reason), leave it behind.
+			
+			if state.AI.possessedObjects then
+				local holdingChar = false
+				for key,value in pairs(state.AI.possessedObjects) do
+					if key == "curPickedUpCharacter" then
+						send("rendOdinCharacterClassHandler", "odinRendererCharacterDetachCharacter", state.renderHandle, value.id, "Bones_Group");
+						send(value, "DropItemMessage", state.AI.position.x, state.AI.position.y)
+						send(value, "GameObjectPlace", state.AI.position.x, state.AI.position.y)
+						send("rendOdinCharacterClassHandler",
+							"odinRendererSetCharacterAnimationMessage",
+							value.id,
+							"corpse_dropped", false)
+						
+						holdingChar = true
+					elseif key then
+						send(value, "DestroySelf", state.AI.curJobInstance )
+					end
+				end
+			end
+			
+			if state.AI.possessedObjects["curCarriedTool"] then
+				send(state.AI.possessedObjects["curCarriedTool"], "DestroySelf", state.AI.curJobInstance )
+			end
+			
+			if state.AI.possessedObjects["curPickedUpItem"] then
+				send(state.AI.possessedObjects["curPickedUpItem"], "DestroySelf", state.AI.curJobInstance )
+			end
+			
+			send("rendOdinCharacterClassHandler", "odinRendererDeleteCharacterMessage", state.renderHandle)
+			send("gameSpatialDictionary", "gridRemoveObject", SELF)
+			destroyfromjob(SELF,ji)
 		end
-		
-		if state.AI.possessedObjects["curPickedUpItem"] then
-			send(state.AI.possessedObjects["curPickedUpItem"], "DestroySelf", state.AI.curJobInstance )
-		end
-		
-		send("rendOdinCharacterClassHandler", "odinRendererDeleteCharacterMessage", state.renderHandle)
-		send("gameSpatialDictionary", "gridRemoveObject", SELF)
-		destroyfromjob(SELF,ji)
 	>>
 
 	receive deathBy( gameObjectHandle damagingObject, string damageType )
