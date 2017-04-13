@@ -819,7 +819,7 @@ gameobject "bandit" inherit "ai_agent"
 			send("gameSpatialDictionary", "gridRemoveObject", SELF)
 			send("rendOdinCharacterClassHandler", "odinRendererDeleteCharacterMessage", state.renderHandle)
 			send("gameBlackboard", "gameObjectRemoveTargetingJobs", SELF, nil)
-			destroyfromjob(SELF, ji)
+			--destroyfromjob(SELF, ji)
 		else
 			-- disappear in a poof of smoke.
 			send("rendCommandManager",

@@ -1131,7 +1131,7 @@ gameobject "ai_agent" inherit "renderableobject" inherit "ai_damage"
 			send("gameSpatialDictionary", "gridRemoveObject", SELF)
 			send("rendOdinCharacterClassHandler", "odinRendererDeleteCharacterMessage", state.renderHandle)
 			send("gameBlackboard", "gameObjectRemoveTargetingJobs", SELF, nil)
-			destroyfromjob(SELF, ji)
+			--destroyfromjob(SELF, ji)
 		else
 		
 			FSM.abort( state, "Despawning.")
