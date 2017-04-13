@@ -38,6 +38,23 @@ event "foreign_relations_correction"
 				local neutral = query("gameSession","getSessionString","defaultNeutral")[1]
 				local friendly = query("gameSession","getSessionString","defaultFriendly")[1]
 				
+				-- CECOMMPATCH more effing hacks for dominant not using the right name
+				local dominant_short_name = {
+					["Grossherzoginnentum von Stahlmark"] = "Stahlmark",
+					["Novorus Imperiya"] = "Novorus",
+					["Republique Mecanique"] = "Republique",
+					-- not sure if any of the below is ever used, but just to be safe..
+					["The Clockwork Empire"] = "Empire",
+					["Fishpeople"] = "Fishpeople",
+					["Bandits"] = "Bandits"
+				}
+					
+				if dominant_short_name[dominant] then
+					printl("CECOMMPATCH - dominant faction shortname correction")
+					dominant = dominant_short_name[dominant]
+				end
+				-- /hack
+				
 				if hostile == dominant then
 					nationNameShort = dominant
 					targetRelations = -75
