@@ -3,6 +3,7 @@ gameobject "ai_agent" inherit "renderableobject" inherit "ai_damage"
 	local
 	<<
 		local tooltip_refreshed = {} -- hacky container to hold our refreshed tooltip IDs per-session
+		local cecomm_corpse_timer = {}
 			
 		function tooltip_refresh_from_save()
 		-- CECOMMPATCH function - this is a way to hackishly refresh tooltips when a game is reloaded, since tooltip binding isn't saved properly
@@ -116,16 +117,39 @@ gameobject "ai_agent" inherit "renderableobject" inherit "ai_damage"
 		
 		function disable_buried_corpses()
 			if not SELF.tags["buriedandhidden"] then
+			
+				-- ULTRA hacky fix to prevent graveyards from getting screwed up
+				-- TODO: do it properly in the FSM
+				if SELF.id then
+					if not cecomm_corpse_timer[SELF.id] then
+						cecomm_corpse_timer[SELF.id] = 1
+						return
+					else
+						cecomm_corpse_timer[SELF.id] = cecomm_corpse_timer[SELF.id] + 1
+						if cecomm_corpse_timer[SELF.id] >= 30 then
+							-- continue on
+						else
+							return
+						end
+					end
+				else
+					return
+				end
+				
+				
 				SELF.tags["buriedandhidden"] = true
 				
+				--[[
 				-- puff some smoke for kicks
 				send("rendCommandManager",
 					"odinRendererCreateParticleSystemMessage",
 					"DustPuffLarge",
 					state.AI.position.x,
 					state.AI.position.y+1) -- +1 for laziness in finding the spot
+				]]--
 				
 				-- screw it, just delete the damn thing... isn't used for anything anyways, and this fixes a TON of problems
+				cecomm_corpse_timer[SELF.id] = nil -- cleanup the array
 				send(SELF,"despawn")
 			end
 		end
