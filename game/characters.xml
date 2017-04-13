@@ -1,0 +1,2055 @@
+<characters>
+	
+	<animationset name="minum_turret">
+		<animation name="idle" file="models/vehicles/animations/minumgunIdleEmpty.upa"/>
+		<animation name="aiming" file="models/vehicles/animations/minumgunAiming.upa"/>
+		<animation name="hit" file="models/vehicles/animations/minumgunHit.upa" loop="false"/>
+		<animation name="reloading" file="models/vehicles/animations/minumgunReloading.upa" loop="false"/>
+		<animation name="die_slump" file="models/vehicles/animations/minumgunDieSlump.upa" loop="false"/>
+		<animation name="die_fall" file="models/vehicles/animations/minumgunDieFall.upa"  loop="false"/>
+	</animationset>
+	
+	<animationset name="steamknight_unloaded">
+		<animation name="open_idle" file="models/vehicles/animations/steamKnightLoaderOpenIdle.upa" />
+		<animation name="idle" file="models/vehicles/animations/steamKnightLoaderCloseIdle.upa" />
+		<animation name="close" file="models/vehicles/animations/steamKnightLoaderClose.upa" loop="false"/>
+		<animation name="open" file="models/vehicles/animations/steamKnightLoaderOpen.upa" loop="false"/>
+	</animationset>
+
+	<animationset name="steamknight">
+		<animation name="die_back" file="models/vehicles/animations/steamKnightDieBack.upa" loop="false"/>
+		<animation name="die_front" file="models/vehicles/animations/steamKnightDieFront.upa" loop="false"/>
+		<animation name="hit_large" file="models/vehicles/animations/steamKnightHitLarge.upa" loop="false"/>
+		<animation name="hit_small" file="models/vehicles/animations/steamKnightHitSmall.upa" loop="false"/>
+		
+		<animation name="kneel" file="models/vehicles/animations/steamKnightKneel.upa" loop="false"/>
+		<animation name="stand" file="models/vehicles/animations/steamKnightStand.upa" loop="false"/>
+		
+		<!--<animation name="idle" file="models/vehicles/animations/steamKnightIdle.upa" />
+		<animation name="walk" file="models/vehicles/animations/steamKnightWalk.upa" />-->
+		
+		<!-- assume a weapon is being held -->
+		<animation name="idle" file="models/vehicles/animations/steamKnightIdleRifle.upa" />
+		<animation name="walk" file="models/vehicles/animations/steamKnightWalkRifle.upa" />
+		<animation name="run" file="models/vehicles/animations/steamKnightWalkRifle.upa" />
+		
+		<animation name="attack" file="models/vehicles/animations/steamKnightPunchRight.upa" />
+		<animation name="punch_right" file="models/vehicles/animations/steamKnightPunchRight.upa" />
+		
+		<animation name="idle_rifle" file="models/vehicles/animations/steamKnightIdleRifle.upa" />
+		<animation name="walk_rifle" file="models/vehicles/animations/steamKnightWalkRifle.upa" />
+		<animation name="fire_rifle" file="models/vehicles/animations/steamKnightFireRifle.upa" loop="false"/>
+		<animation name="fire_biggun" file="models/vehicles/animations/steamKnightFireBigGun.upa" loop="false"/>
+		<animation name="punch_left" file="models/vehicles/animations/steamKnightPunchLeft.upa" />
+		
+		<animation name="idle_dual_rifle" file="models/vehicles/animations/steamKnightIdleDualRifle.upa" />
+		<animation name="walk_dual_rifle" file="models/vehicles/animations/steamKnightWalkDualRifle.upa" />
+		<animation name="fire_dual_biggun" file="models/vehicles/animations/steamKnightFireDualBigGun.upa" />
+		<animation name="fire_dual_rifle" file="models/vehicles/animations/steamKnightFireDualRifle.upa" />
+		
+		<animation name="lift_item_p1" file="models/vehicles/animations/steamKnightCommodLiftP1.upa" loop="false"/>
+		<animation name="lift_item_p2" file="models/vehicles/animations/steamKnightCommodLiftP2.upa" loop="false"/>
+		<animation name="drop_item_p1" file="models/vehicles/animations/steamKnightCommodPlaceP1.upa" loop="false"/>
+		<animation name="drop_item_p2" file="models/vehicles/animations/steamKnightCommodPlaceP2.upa" loop="false"/>
+		<animation name="walk_item" file="models/vehicles/animations/steamKnightCommodWalk.upa" />
+		
+		<animation name="pickup_tool_1" file="models/vehicles/animations/steamKnightGrabWeaponP1.upa" loop="false"/>
+		<animation name="pickup_tool_2" file="models/vehicles/animations/steamKnightGrabWeaponP2.upa" loop="false"/>
+		<animation name="drop_tool_1" file="models/vehicles/animations/steamKnightDropWeaponP1.upa" loop="false"/>
+		<animation name="drop_tool_2" file="models/vehicles/animations/steamKnightDropWeaponP2.upa" loop="false"/>
+		<animation name="grab_second_weapon_part1" file="models/vehicles/animations/steamKnightGrabDualWeaponP1.upa" loop="false"/>
+		<animation name="grab_second_weapon_part2" file="models/vehicles/animations/steamKnightGrabDualWeaponP2.upa" loop="false"/>
+		<animation name="drop_second_weapon_part1" file="models/vehicles/animations/steamKnightDropDualWeaponP1.upa" loop="false"/>
+		<animation name="drop_second_weapon_part2" file="models/vehicles/animations/steamKnightDropDualWeaponP2.upa" loop="false"/>
+		
+		<animation name="drop_in" file="models/vehicles/animations/steamKnightFall.upa" />  
+		<animation name="jump_out" file="models/vehicles/animations/steamKnightJump.upa" />
+	</animationset>
+	
+	<animationset name="steamknight_nogun"> <!--BLATANT HACK TIME-->
+		<animation name="die_back" file="models/vehicles/animations/steamKnightDieBack.upa" loop="false"/>
+		<animation name="die_front" file="models/vehicles/animations/steamKnightDieFront.upa" loop="false"/>
+		<animation name="hit_large" file="models/vehicles/animations/steamKnightHitLarge.upa" loop="false"/>
+		<animation name="hit_small" file="models/vehicles/animations/steamKnightHitSmall.upa" loop="false"/>
+		
+		<animation name="kneel" file="models/vehicles/animations/steamKnightKneel.upa" loop="false"/>
+		<animation name="stand" file="models/vehicles/animations/steamKnightStand.upa" loop="false"/>
+		
+		<animation name="idle" file="models/vehicles/animations/steamKnightIdle.upa" />
+		<animation name="walk" file="models/vehicles/animations/steamKnightWalk.upa" />
+		<animation name="run" file="models/vehicles/animations/steamKnightWalk.upa" />
+		
+		<animation name="attack" file="models/vehicles/animations/steamKnightPunchRight.upa" />
+		<animation name="punch_right" file="models/vehicles/animations/steamKnightPunchRight.upa" />
+		
+		<animation name="idle_rifle" file="models/vehicles/animations/steamKnightIdleRifle.upa" />
+		<animation name="walk_rifle" file="models/vehicles/animations/steamKnightWalkRifle.upa" />
+		<animation name="fire_rifle" file="models/vehicles/animations/steamKnightFireRifle.upa" loop="false"/>
+		<animation name="fire_biggun" file="models/vehicles/animations/steamKnightFireBigGun.upa" loop="false"/>
+		<animation name="punch_left" file="models/vehicles/animations/steamKnightPunchLeft.upa" />
+		
+		<animation name="idle_dual_rifle" file="models/vehicles/animations/steamKnightIdleDualRifle.upa" />
+		<animation name="walk_dual_rifle" file="models/vehicles/animations/steamKnightWalkDualRifle.upa" />
+		<animation name="fire_dual_biggun" file="models/vehicles/animations/steamKnightFireDualBigGun.upa" />
+		<animation name="fire_dual_rifle" file="models/vehicles/animations/steamKnightFireDualRifle.upa" />
+		
+		<animation name="lift_item_p1" file="models/vehicles/animations/steamKnightCommodLiftP1.upa" loop="false"/>
+		<animation name="lift_item_p2" file="models/vehicles/animations/steamKnightCommodLiftP2.upa" loop="false"/>
+		<animation name="drop_item_p1" file="models/vehicles/animations/steamKnightCommodPlaceP1.upa" loop="false"/>
+		<animation name="drop_item_p2" file="models/vehicles/animations/steamKnightCommodPlaceP2.upa" loop="false"/>
+		<animation name="walk_item" file="models/vehicles/animations/steamKnightCommodWalk.upa" />
+		
+		<animation name="pickup_tool_1" file="models/vehicles/animations/steamKnightGrabWeaponP1.upa" loop="false"/>
+		<animation name="pickup_tool_2" file="models/vehicles/animations/steamKnightGrabWeaponP2.upa" loop="false"/>
+		<animation name="drop_tool_1" file="models/vehicles/animations/steamKnightDropWeaponP1.upa" loop="false"/>
+		<animation name="drop_tool_2" file="models/vehicles/animations/steamKnightDropWeaponP2.upa" loop="false"/>
+		<animation name="grab_second_weapon_part1" file="models/vehicles/animations/steamKnightGrabDualWeaponP1.upa" loop="false"/>
+		<animation name="grab_second_weapon_part2" file="models/vehicles/animations/steamKnightGrabDualWeaponP2.upa" loop="false"/>
+		<animation name="drop_second_weapon_part1" file="models/vehicles/animations/steamKnightDropDualWeaponP1.upa" loop="false"/>
+		<animation name="drop_second_weapon_part2" file="models/vehicles/animations/steamKnightDropDualWeaponP2.upa" loop="false"/>
+		
+		<animation name="drop_in" file="models/vehicles/animations/steamKnightFall.upa" />  
+		<animation name="jump_out" file="models/vehicles/animations/steamKnightJump.upa" />
+	</animationset>
+
+	<animationset name="quaggaroth_maw">
+		<animation name="appear" file="models/character/animations/quagMawAppear.upa" loop="false"/>
+		<animation name="idle" file="models/character/animations/quagMawIdle.upa"/>
+		<animation name="wake" file="models/character/animations/quagMawWake.upa" loop="false"/>
+		<animation name="grab" file="models/character/animations/quagMawGrab.upa" loop="false"/>
+		<animation name="eruption" file="models/character/animations/quagMawEruption.upa" loop="false"/>
+	</animationset>
+	
+	<animationset name="landingcraft">
+		<animation name="idle" file="models/vehicles/animations/landingCraftIdle.upa"/>
+		<animation name="forward" file="models/vehicles/animations/landingCraftForward.upa"/>
+		<animation name="rampdown" file="models/vehicles/animations/landingCraftRampDown.upa" loop="false"/>
+		<animation name="rampup" file="models/vehicles/animations/landingCraftRampUp.upa" loop="false"/>
+		<animation name="backup" file="models/vehicles/animations/landingCraftBackup.upa"/>
+	</animationset>
+  
+	<animationset name="cultist">
+		<animation name="idle" file="models/character/animations/cultistIdle.upa"/>
+		<animation name="walk" file="models/character/animations/cultistWalk.upa"/>
+		<animation name="pray" file="models/character/animations/cultistPray.upa"/>
+		<animation name="insanity_worship" file="models/character/animations/cultistInsanityWorship.upa"/>
+		<animation name="greetCultist" file="models/character/animations/cultistGreetCultist.upa" />
+		<animation name="flee" file="models/character/animations/cultistFlee.upa"/>
+		<animation name="listen" file="models/character/animations/cultistIdle.upa"/>
+		<animation name="chat" file="models/character/animations/cultistRant.upa"/>
+		<animation name="die" file="models/character/animations/cultistDie.upa" loop="false"/>
+		<animation name="worshipSmall" file="models/character/animations/cultistWorshipSmallBookend.upa"/>
+		<animation name="worshipLarge" file="models/character/animations/cultistWorshipLargeBookend.upa"/>
+		<animation name="anger" file="models/character/animations/cultistRant.upa" />
+		<animation name="laugh" file="models/character/animations/cultistSurprised.upa" loop="false"/>
+		<animation name="surprised" file="models/character/animations/cultistSurprised.upa" loop="false"/>
+		<animation name="maweat" file="models/character/animations/cultistMawEat.upa" loop="false"/>
+	</animationset>
+  
+	<animationset name="biped">
+		<!-- Section: Idles -->
+			<animation name="idle_alt1" file="models/character/animations/bipedIdleAlt1.upa"/>
+			<animation name="idle_alt2" file="models/character/animations/bipedIdleAlt2.upa"/>
+			<animation name="idle_alt3" file="models/character/animations/bipedIdleAlt3.upa"/>
+			<animation name="idle_angry" file="models/character/animations/bipedIdleAngry.upa"/>
+			<animation name="idle_celebrate" file="models/character/animations/bipedIdleCelebrate.upa"/>
+			<animation name="idle_happy" file="models/character/animations/bipedIdleHappy.upa"/>
+			<animation name="idle_hungry" file="models/character/animations/bipedIdleHungry.upa"/>
+			<animation name="idle_insane" file="models/character/animations/bipedIdleInsane.upa"/>
+			<animation name="idle_murderous" file="models/character/animations/bipedIdleMurderous.upa"/>
+			<animation name="idle_sad" file="models/character/animations/bipedIdleSad.upa"/>
+			<animation name="idle_shellshocked" file="models/character/animations/bipedIdleShellshocked.upa"/>
+			<animation name="idle_dead" file="models/character/animations/bipedDeadIdle.upa"/>
+			
+		<!-- Section: Movement -->
+			<animation name="walk_run" file="models/character/animations/bipedRun.upa"/>
+			<animation name="walk_fleeing" file="models/character/animations/bipedFlee.upa"/>
+			<animation name="walk_angry" file="models/character/animations/bipedWalkAngry.upa"/>
+			<animation name="walk_hungry" file="models/character/animations/bipedWalkHungry.upa"/>
+			<animation name="walk_insane" file="models/character/animations/bipedWalkInsane.upa"/>
+			<animation name="walk_murderous" file="models/character/animations/bipedWalkMurderous.upa"/>
+			<animation name="walk_sad" file="models/character/animations/bipedWalkSad.upa"/>
+			<animation name="walk_skip" file="models/character/animations/bipedWalkSkip.upa"/>
+			<animation name="walk_doublebounce" file="models/character/animations/bipedWalkDoublebounce.upa"/>
+			<animation name="walk_captured_front" file="models/character/animations/bipedWalkCapturedF.upa"/>
+			<animation name="walk_captured_back" file="models/character/animations/bipedWalkCapturedB.upa"/>
+			<animation name="walk_capturing" file="models/character/animations/bipedWalkCapturing.upa"/>
+			<animation name="walk_straitjacket_normal" file="models/character/animations/bipedWalkStraitjacketN.upa"/>
+			<animation name="walk_straitjacket_insane" file="models/character/animations/bipedWalkStraitjacketI.upa"/>
+			<animation name="walk_fishy" file="models/character/animations/bipedWalkFishy.upa"/>
+			
+	    <!-- Section: Art appreciation. -->
+			<animation name="inspect_painting_neutral" file="models/character/animations/bipedExaminePaintingNeutral.upa"/>
+			<animation name="inspect_painting_dislike" file="models/character/animations/bipedExaminePaintingDismiss.upa"/>
+			<animation name="inspect_painting_moved" file="models/character/animations/bipedExaminePaintingMoved.upa"/>
+			<animation name="inspect_painting_shrug" file="models/character/animations/bipedExaminePaintingShrug.upa"/>
+		 
+	    <!-- Section: Combat -->
+			<animation name="fire_handgun" file="models/character/animations/bipedPistolFire.upa" loop="false"/>
+			<animation name="fire_leyden_pistol" file="models/character/animations/bipedPistolFireLeyden.upa" loop="false"/>
+			<animation name="fire_fish_handgun" file="models/character/animations/bipedPistolFishFire.upa" loop="false"/>
+			<animation name="fire_longarm" file="models/character/animations/bipedFireRifle.upa" loop="false"/>
+			<animation name="fire_longarm_jezail" file="models/character/animations/bipedFireJezail.upa" loop="false"/>
+			<animation name="attack" file="models/character/animations/bipedPunch.upa" loop="false"/>
+			<animation name="attack_with_prop" file="models/character/animations/bipedAtkProp.upa" loop="false"/>
+			<animation name="attack_wildly_prop" file="models/character/animations/bipedAtkWild.upa" loop="false"/>
+			<animation name="attack_slash_prop" file="models/character/animations/bipedAtkSlash.upa" loop="false"/>
+			<animation name="attack_overhead_prop" file="models/character/animations/bipedAtkOverhead.upa" loop="false"/>
+			<animation name="punch_blocked" file="models/character/animations/bipedPunchBlocked.upa" loop="false"/>
+			<animation name="throw" file="models/character/animations/bipedThrow.upa" loop="false"/>
+			<animation name="bayonet" file="models/character/animations/bipedBayonet.upa" loop="false"/>
+			<animation name="hit" file="models/character/animations/bipedHit.upa" loop="false"/>
+			<animation name="hit1" file="models/character/animations/bipedGetHit1.upa" loop="false"/>
+			<animation name="hit2" file="models/character/animations/bipedGetHit2.upa" loop="false"/>
+			<animation name="hit3" file="models/character/animations/bipedGetHit3.upa" loop="false"/>
+			<animation name="hit4" file="models/character/animations/bipedGetHit4.upa" loop="false"/>
+			<animation name="blown_back" file="models/character/animations/bipedExploded.upa" loop="false"/>
+			
+			<animation name="walk_injured" file="models/character/animations/bipedInjuredWalk.upa"/>
+			<animation name="idle_injured" file="models/character/animations/bipedInjuredIdle.upa"/>
+			
+			<animation name="stand_transition_to_attention" file="models/character/animations/bipedStandToAttention.upa" loop="false"/>
+			
+				<!-- Subsection: Combat Stance Standing -->
+					<animation name="combat_stand_bayonet" file="models/character/animations/bipedCombatStandBayonet.upa" loop="false"/>
+					<animation name="combat_stand_fire_rifle" file="models/character/animations/bipedCombatStandFireRifle.upa" loop="false"/>
+					<animation name="combat_stand_flinch" file="models/character/animations/bipedCombatStandFlinch.upa" loop="false"/>
+					<animation name="combat_stand_idle" file="models/character/animations/bipedCombatStandIdle.upa"/>
+					<animation name="combat_stand_idle_with_rifle" file="models/character/animations/bipedCombatStandIdleRifle.upa"/>
+					<animation name="combat_stand_reload_pistol" file="models/character/animations/bipedCombatStandPistolReload.upa" />
+					<animation name="combat_stand_reload_pistol_long" file="models/character/animations/bipedCombatStandPistolReloadSlow.upa" />
+					<animation name="combat_stand_reload_longgun" file="models/character/animations/bipedCombatStandRifleReload.upa" />
+					<animation name="combat_stand_reload_longgun_long" file="models/character/animations/bipedCombatStandReloadSlow.upa" />
+					<animation name="combat_stand_throw" file="models/character/animations/bipedCombatStandThrow.upa" loop="false"/>
+					<animation name="combat_stand_transition_to_attention" file="models/character/animations/bipedCombatStandToAttention.upa" loop="false"/>
+					<animation name="combat_stand_transition_to_attention_with_rifle" file="models/character/animations/bipedCombatStandToAttentionRifle.upa" loop="false"/>
+					<animation name="combat_stand_transition_to_crouch" file="models/character/animations/bipedCombatStandToCrouch.upa" loop="false"/>
+					<animation name="combat_stand_walk" file="models/character/animations/bipedCombatStandWalk.upa"/>
+					
+					<animation name="combat_stand_rifle_away_p1" file="models/character/animations/bipedCombatStandRifleAwayP1.upa" loop="false"/>
+					<animation name="combat_stand_rifle_away_p2" file="models/character/animations/bipedCombatStandRifleAwayP2.upa" loop="false"/>
+					<animation name="combat_stand_rifle_out_p1" file="models/character/animations/bipedCombatStandRifleOutP1.upa" loop="false"/>
+					<animation name="combat_stand_rifle_out_p2" file="models/character/animations/bipedCombatStandRifleOutP2.upa" loop="false"/>
+					<animation name="combat_stand_pistol_out_p1" file="models/character/animations/bipedCombatStandPistolOutP1.upa" loop="false"/>
+					<animation name="combat_stand_pistol_out_p2" file="models/character/animations/bipedCombatStandPistolOutP2.upa" loop="false"/>
+					<animation name="combat_stand_pistol_away_p1" file="models/character/animations/bipedCombatStandPistolAwayP1.upa" loop="false"/>
+					<animation name="combat_stand_pistol_away_p2" file="models/character/animations/bipedCombatStandPistolAwayP2.upa" loop="false"/>
+					
+				<!-- Subsection: Standing at attention -->
+					<animation name="attention_idle" file="models/character/animations/bipedAttentionIdle.upa" loop="true"/>
+					<animation name="attention_idle_with_rifle" file="models/character/animations/bipedAttentionIdleRifle.upa"/>
+					<animation name="attention_transition_to_standing" file="models/character/animations/bipedAttentionToStand.upa" loop="false"/>
+					<animation name="attention_transition_to_combat_standing" file="models/character/animations/bipedAttentionToCombatStand.upa" loop="false"/>
+					<animation name="attention_transition_to_combat_standing_with_rifle" file="models/character/animations/bipedAttentionToCombatStandRifle.upa" loop="false"/>
+				
+				<!-- Subsection: Crouching -->
+					<animation name="crouch_die" file="models/character/animations/bipedCombatCrouchDie.upa" loop="false"/>
+					<animation name="crouch_fire rifle" file="models/character/animations/bipedCombatCrouchFireRifle.upa" loop="false"/>
+					<animation name="crouch_flinch" file="models/character/animations/bipedCombatCrouchFlinch.upa" loop="false"/>
+					<animation name="crouch_hit" file="models/character/animations/bipedCombatCrouchHit.upa" loop="false"/>
+					<animation name="crouch_idle" file="models/character/animations/bipedCombatCrouchIdle.upa"/>
+					<animation name="crouch_idle_with_rifle" file="models/character/animations/bipedCombatCrouchIdleRifle.upa"/>
+					<animation name="crouch_fire_pistol" file="models/character/animations/bipedCombatCrouchPistol.upa" loop="false"/>
+					<animation name="crouch_reload_pistol" file="models/character/animations/bipedCombatCrouchPistolReload.upa" />
+					<animation name="crouch_reload_longgun" file="models/character/animations/bipedCombatCrouchRifleReload.upa" />
+					<animation name="crouch_transition_to_prone" file="models/character/animations/bipedCombatCrouchToProne.upa" loop="false"/>
+					<animation name="crouch_dive_to_prone" file="models/character/animations/bipedCombatCrouchToProneFlop.upa" loop="false"/>
+					<animation name="crouch_transition_to_combat_standing" file="models/character/animations/bipedCombatCrouchToStand.upa" loop="false"/>
+					<animation name="crouch_walk" file="models/character/animations/bipedCombatCrouchWalk.upa"/>
+				
+				<!-- Subsection: Prone -->
+					<animation name="prone_crawl_high" file="models/character/animations/bipedCombatProneCrawlHigh.upa"/>
+					<animation name="prone_crawl_low" file="models/character/animations/bipedCombatProneCrawlLow.upa"/>
+					<animation name="prone_die" file="models/character/animations/bipedCombatProneDie.upa" loop="false"/>
+					<animation name="prone_fire_rifle" file="models/character/animations/bipedCombatProneFireRifle.upa" loop="false"/>
+					<animation name="prone_flinch" file="models/character/animations/bipedCombatProneFlinch.upa" loop="false"/>
+					<animation name="prone_hit" file="models/character/animations/bipedCombatProneHit.upa" loop="false"/>
+					<animation name="prone_idle" file="models/character/animations/bipedCombatProneIdle.upa"/>
+					<animation name="prone_idle_with_rifle" file="models/character/animations/bipedCombatProneIdleRifle.upa"/>
+					<animation name="prone_fire_pistol" file="models/character/animations/bipedCombatPronePistol.upa" loop="false"/>
+					<animation name="prone_reload_pistol" file="models/character/animations/bipedCombatPronePistolReload.upa" />
+					<animation name="prone_reload_longgun" file="models/character/animations/bipedCombatProneRifleReload.upa" />
+					<animation name="prone_transition_to_crouch" file="models/character/animations/bipedCombatProneToCrouch.upa" loop="false"/>
+			
+		<!-- Section: Death -->
+			<animation name="death" file="models/character/animations/bipedDie.upa" loop="false"/>
+			<animation name="death1" file="models/character/animations/bipedDieAlt1.upa" loop="false"/>
+			<animation name="death2" file="models/character/animations/bipedDieAlt2.upa" loop="false"/>
+			<animation name="death3" file="models/character/animations/bipedDieAlt3.upa" loop="false"/>
+			<animation name="deathHeadfalloff" file="models/character/animations/bipedDieHeadFallOff.upa" loop="false"/>
+			<animation name="death_brainmelt" file="models/character/animations/bipedDieBrainMelt.upa" loop="false"/>
+			<animation name="death_choke" file="models/character/animations/bipedDieChoke.upa" loop="false"/>
+			<animation name="death_while_fleeing" file="models/character/animations/bipedDieFleeing.upa" loop="false"/>
+			<animation name="death_on_fire" file="models/character/animations/bipedDieOnFire.upa" loop="false"/>
+			<animation name="death_platoon" file="models/character/animations/bipedDiePlatoon.upa" loop="false"/>
+			<animation name="death_poet" file="models/character/animations/bipedDiePoet.upa" loop="false"/>
+			<animation name="death_shot" file="models/character/animations/bipedDieShot.upa" loop="false"/>
+			<animation name="death_bulletriddled" file="models/character/animations/bipedDieBulletRiddled.upa" loop="false"/>
+		
+		<!-- Section: Sleeping -->
+			<animation name="KO" file="models/character/animations/bipedKO.upa" loop="false"/>
+			<animation name="sleep_start" file="models/character/animations/bipedSleepGroundLaydown.upa" loop="false"/>
+			<animation name="sleep_stop" file="models/character/animations/bipedSleepGroundGetup.upa" loop="false"/>
+			<animation name="sleep_loop" file="models/character/animations/bipedSleepGroundLoop.upa"/>
+			<animation name="sleep_sleeping_to_injured_trans" file="models/character/animations/bipedSleepGroundSleepingToInjured.upa" loop="false"/>
+			<animation name="sleep_injured_to_sleeping_trans" file="models/character/animations/bipedSleepGroundInjuredToSleeping.upa" loop="false"/>
+			<animation name="sleep_injured_loop" file="models/character/animations/bipedSleepGroundInjuredLoop.upa"/>
+			<animation name="sleep_die" file="models/character/animations/bipedSleepGroundInjuredDie.upa" loop="false"/>
+			
+			<animation name="sleep_bed_l_start" file="models/character/animations/bipedSleepOnBedL.upa" loop="false"/>
+			<animation name="sleep_bed_l_stop" file="models/character/animations/bipedSleepOutBedL.upa" loop="false"/>
+			<animation name="sleep_bed_l_loop" file="models/character/animations/bipedSleepBedLoopL.upa"/>
+			<animation name="sleep_bed_l_sleeping_to_injured_trans" file="models/character/animations/bipedOnBedLSleepingToInjured.upa" loop="false"/>
+			<animation name="sleep_bed_l_injured_to_sleeping_trans" file="models/character/animations/bipedOnBedLInjuredToSleeping.upa" loop="false"/>
+			<animation name="sleep_bed_l_injured_loop" file="models/character/animations/bipedOnBedLInjuredLoop.upa"/>
+			<animation name="sleep_bed_l_die" file="models/character/animations/bipedOnBedLDie.upa" loop="false"/>
+			
+			<animation name="sleep_bed_r_start" file="models/character/animations/bipedSleepOnBedR.upa" loop="false"/>
+			<animation name="sleep_bed_r_stop" file="models/character/animations/bipedSleepOutBedR.upa" loop="false"/>
+			<animation name="sleep_bed_r_loop" file="models/character/animations/bipedSleepBedLoopR.upa"/>
+			<animation name="sleep_bed_r_sleeping_to_injured_trans" file="models/character/animations/bipedOnBedRSleepingToInjured.upa"/>
+			<animation name="sleep_bed_r_injured_to_sleeping_trans" file="models/character/animations/bipedOnBedRInjuredToSleeping.upa"/>
+			<animation name="sleep_bed_r_injured_loop" file="models/character/animations/bipedOnBedRInjuredLoop.upa"/>
+			<animation name="sleep_bed_r_die" file="models/character/animations/bipedOnBedRDie.upa" loop="false"/>
+			
+			<!-- Old unnecessary anims for sleeping on cots. -->
+				<animation name="sleep_cot_l" file="models/character/animations/bipedSleepCotL.upa"/>
+				<animation name="sleep_cot_r" file="models/character/animations/bipedSleepCotR.upa"/>
+			
+		<!-- Section: Working -->
+			<animation name="generic_ground_interaction" file="models/character/animations/bipedHitGround.upa"/>
+			<animation name="harvesting" file="models/character/animations/bipedHitGround.upa"/>
+			
+			<animation name="inspiration_success" file="models/character/animations/bipedInspirationSuccess.upa" />
+			<animation name="inspiration_failure" file="models/character/animations/bipedInspirationFailure.upa" />
+			<animation name="hammer" file="models/character/animations/bipedHammer.upa"/>
+			<animation name="hoe" file="models/character/animations/bipedHoeing.upa"/>
+			<animation name="chop" file="models/character/animations/bipedChopTree.upa"/>
+			<animation name="shoveling" file="models/character/animations/bipedShoveling.upa"/>
+			<animation name="pick_survey" file="models/character/animations/bipedPickSurvey.upa"/>
+			<animation name="mine_node" file="models/character/animations/bipedPickOreNode.upa"/>
+			<animation name="hit_ground" file="models/character/animations/bipedHitGround.upa"/>
+			<animation name="sweep" file="models/character/animations/bipedPushBroom.upa"/>
+			<animation name="sow_seeds" file="models/character/animations/bipedSowSeeds.upa"/>
+			
+			<animation name="forage_1OU_start" file="models/character/animations/bipedForage1OUStart.upa" loop="false"/>
+			<animation name="forage_1OU_loop" file="models/character/animations/bipedForage1OULoop.upa"/>
+			<animation name="forage_1OU_end" file="models/character/animations/bipedForage1OUEnd.upa" loop="false"/>
+		 
+			<animation name="forage_ground_start" file="models/character/animations/bipedForageGroundStart.upa" loop="false"/>
+			<animation name="forage_ground_loop" file="models/character/animations/bipedForageGroundLoop.upa"/>
+			<animation name="forage_ground_end" file="models/character/animations/bipedForageGroundEnd.upa" loop="false"/>
+			
+			<animation name="butcher_ground" file="models/character/animations/bipedChopGround.upa"/>
+			
+			<animation name="writing_standingdesk" file="models/character/animations/bipedWritingStandingdesk.upa" loop="true"/>
+			
+			<animation name="workbench_generic" file="models/character/animations/bipedWorkbenchGeneric.upa"/>
+			<animation name="workbench_hammer" file="models/character/animations/bipedWorkbenchHammer.upa"/>
+			<animation name="workbench_saw" file="models/character/animations/bipedWorkbenchSaw.upa" loop="true"/>
+			
+			<animation name="hammer1OU_start" file="models/character/animations/bipedHammering1OUStart.upa" loop="false"/>
+			<animation name="hammer1OU_loop" file="models/character/animations/bipedHammering1OULoop.upa"/>
+			<animation name="hammer1OU_end" file="models/character/animations/bipedHammering1OUEnd.upa" loop="false"/>
+			
+			<animation name="hammer2OU_start" file="models/character/animations/bipedHammering2OUStart.upa" loop="false"/>
+			<animation name="hammer2OU_loop" file="models/character/animations/bipedHammering2OULoop.upa"/>
+			<animation name="hammer2OU_end" file="models/character/animations/bipedHammering2OUEnd.upa" loop="false"/>
+			
+			<animation name="hammerHalfOU_start" file="models/character/animations/bipedHammeringHalfOUStart.upa" loop="false"/>
+			<animation name="hammerHalfOU_loop" file="models/character/animations/bipedHammeringHalfOULoop.upa"/>
+			<animation name="hammerHalfOU_end" file="models/character/animations/bipedHammeringHalfOUEnd.upa" loop="false"/>
+			
+			<animation name="hammerAnvil_start" file="models/character/animations/bipedHammeringAnvilStart.upa" loop="false"/>
+			<animation name="hammerAnvil_loop" file="models/character/animations/bipedHammeringAnvilLoop.upa"/>
+			<animation name="hammerAnvil_end" file="models/character/animations/bipedHammeringAnvilEnd.upa" loop="false"/>
+			
+			<animation name="stir_start" file="models/character/animations/bipedStirringStart.upa" loop="false"/>
+			<animation name="stir_loop" file="models/character/animations/bipedStirringLoop.upa"/>
+			<animation name="stir_end" file="models/character/animations/bipedStirringEnd.upa" loop="false"/>
+			
+			<animation name="chop_start" file="models/character/animations/bipedChopTreeStart.upa" loop="false"/>
+			<animation name="chop_end" file="models/character/animations/bipedChopTreeEnd.upa" loop="false"/>
+			<animation name="chop_loop" file="models/character/animations/bipedChopTreeLoop.upa"/>
+			
+			<animation name="mine_node_start" file="models/character/animations/bipedPickOreNodeStart.upa" loop="false"/>
+			<animation name="mine_node_loop" file="models/character/animations/bipedPickOreNodeLoop.upa" />
+			<animation name="mine_node_end" file="models/character/animations/bipedPickOreNodeEnd.upa" loop="false"/>
+			
+			<animation name="shoveling_start" file="models/character/animations/bipedShovelingStart.upa" loop="false"/>
+			<animation name="shoveling_loop" file="models/character/animations/bipedShovelingLoop.upa" loop="true"/>
+			<animation name="shoveling_end" file="models/character/animations/bipedShovelingEnd.upa" loop="false"/>
+			
+			<animation name="survey" file="models/character/animations/bipedSurvey.upa"/>
+			
+			<animation name="hoe_start" file="models/character/animations/bipedHoeingStart.upa" loop="false"/>
+			<animation name="hoe_loop" file="models/character/animations/bipedHoeingLoop.upa"/>
+			<animation name="hoe_end" file="models/character/animations/bipedHoeingEnd.upa" loop="false"/>
+			
+			<animation name="fishing_start" file="models/character/animations/bipedFishingStart.upa" loop="false"/>
+			<animation name="fishing_loop" file="models/character/animations/bipedFishingLoop.upa"/>
+			<animation name="fishing_result_failure" file="models/character/animations/bipedFishingResultFailure.upa" loop="false"/>
+			<animation name="fishing_result_success" file="models/character/animations/bipedFishingResultSuccess.upa" loop="false"/>
+			
+			<animation name="oversee" file="models/character/animations/bipedOverseerOrder.upa"/>
+			<animation name="oversee_angry" file="models/character/animations/bipedOverseerAngryL.upa"/>
+			<animation name="oversee_big" file="models/character/animations/bipedOverseerBigL.upa"/>
+			<animation name="oversee_crossarms" file="models/character/animations/bipedOverseerCrossarmsBookend.upa"/>
+			<animation name="oversee_crossarms_selfloop" file="models/character/animations/bipedOverseerCrossarmsLoop.upa"/>
+			<animation name="oversee_haughty" file="models/character/animations/bipedOverseerHaughtyL.upa"/>
+			<animation name="oversee_drunk" file="models/character/animations/bipedOverseerSillyL.upa"/>
+			
+			<animation name="bless" file="models/character/animations/bipedBless.upa" loop="false"/>
+			<animation name="pray" file="models/character/animations/bipedPray.upa" loop="false"/>
+			<animation name="preach" file="models/character/animations/bipedPreach.upa"/>
+		
+		<!-- Section: Food and Drink -->
+			<animation name="eat" file="models/character/animations/bipedEatBowl.upa" />
+			<animation name="eat_commodity" file="models/character/animations/bipedCommodEat.upa" />
+			<animation name="eat_meat_commodity" file="models/character/animations/bipedEatMeat.upa" />
+			<animation name="eat_off_ground" file="models/character/animations/bipedEatGround.upa" />
+			<animation name="drink_short" file="models/character/animations/bipedDrinkShort.upa" />
+			<animation name="drink" file="models/character/animations/bipedDrinkLong.upa" loop="false"/>
+		
+		<!-- Section: Interacting with Decorations -->
+			<animation name="examine_bookshelf" file="models/character/animations/bipedExamineBookshelf.upa"/>
+			<animation name="examine_painting_neutral" file="models/character/animations/bipedExaminePaintingNeutral.upa"/>
+			<animation name="examine_painting_moved" file="models/character/animations/bipedExaminePaintingMoved.upa"/>
+			<animation name="examine_painting_dismiss" file="models/character/animations/bipedExaminePaintingDismiss.upa"/>
+			<animation name="examine_painting_shrug" file="models/character/animations/bipedExaminePaintingShrug.upa"/>	
+		
+		
+		<!-- Section: Emoting and Talking -->
+			<animation name="insanity_worship" file="models/character/animations/bipedInsanityWorship.upa"/>
+			<animation name="cry" file="models/character/animations/bipedCrying.upa" loop="false"/>
+			<animation name="sad_subtle" file="models/character/animations/bipedSubtleSad.upa"/>
+			<animation name="stretch" file="models/character/animations/bipedStretch.upa" loop="false"/>	
+			<animation name="chat" file="models/character/animations/bipedChatting.upa"/>
+			<animation name="chat2" file="models/character/animations/bipedChattingAlt.upa"/>
+			<animation name="chat3" file="models/character/animations/bipedChattingAlt2.upa"/>
+			<animation name="express_hunger" file="models/character/animations/bipedHungry.upa" loop="false"/>
+			<animation name="listen" file="models/character/animations/bipedListening.upa"/>
+			<animation name="listen2" file="models/character/animations/bipedListeningAlt.upa"/>
+			<animation name="listen3" file="models/character/animations/bipedListeningAlt2.upa"/>
+			<animation name="dust_self_off" file="models/character/animations/bipedDust.upa" loop="false"/>
+			<animation name="dust_self_off_exaggerated" file="models/character/animations/bipedDustMega.upa" loop="false"/>
+			<animation name="eureka" file="models/character/animations/bipedEureka.upa" loop="false"/>
+			<animation name="huzzah" file="models/character/animations/bipedEureka.upa" loop="false"/>
+			<animation name="salute" file="models/character/animations/bipedSalute.upa" loop="false"/>
+			<animation name="scared" file="models/character/animations/bipedScared1.upa" loop="false"/>
+			<animation name="scared_stumble_back" file="models/character/animations/bipedScared2Move.upa" loop="false"/>
+			<animation name="winded" file="models/character/animations/bipedTired.upa"/>
+			<animation name="vomit" file="models/character/animations/bipedVomit.upa" loop="false"/>
+			<animation name="who_me" file="models/character/animations/bipedWhoMe.upa" loop="false"/>
+			<animation name="freak_out" file="models/character/animations/bipedFreakOut.upa" loop="false"/>
+			<animation name="anger" file="models/character/animations/bipedGenericAnger.upa"/>
+			<animation name="stomp_something" file="models/character/animations/bipedStomp.upa"  loop="false"/>
+			<animation name="stomp_enthusiastically" file="models/character/animations/bipedAltStomp.upa"  loop="false"/>
+			
+			
+			<animation name="pushup_start" file="models/character/animations/bipedPushupStart.upa" loop="false"/>
+			<animation name="pushup_loop" file="models/character/animations/bipedPushupLoop.upa" loop="true"/>
+			<animation name="pushup_end" file="models/character/animations/bipedPushupEnd.upa" loop="false"/>
+				
+			<!-- Subsection: Paired Animations -->
+				<animation name="blaming" file="models/character/animations/bipedBlamingBlamer.upa" loop="false"/>
+				<animation name="blaming_o" file="models/character/animations/bipedBlamingBlamed.upa" loop="false"/>
+				
+				<animation name="comforting" file="models/character/animations/bipedComfortingComforted.upa" loop="false"/>
+				<animation name="comforting_o" file="models/character/animations/bipedComfortingComforter.upa" loop="false"/>
+				
+				<animation name="hugging" file="models/character/animations/bipedHuggingHugged.upa" loop="false"/>
+				<animation name="hugging_o" file="models/character/animations/bipedHuggingHugger.upa" loop="false"/>
+				
+				<animation name="kissing" file="models/character/animations/bipedKissingKissed.upa" loop="false"/>
+				<animation name="kissing_o" file="models/character/animations/bipedKissingKisser.upa" loop="false"/>
+				
+				<animation name="slapping" file="models/character/animations/bipedSlappingSlapper.upa" loop="false"/>
+				<animation name="slapping_o" file="models/character/animations/bipedSlappingSlapped.upa" loop="false"/>
+				
+				<animation name="whispering" file="models/character/animations/bipedWhisperingWhispered.upa" loop="false"/>
+				<animation name="whispering_o" file="models/character/animations/bipedWhisperingWhisperer.upa" loop="false"/>
+				
+				<animation name="axemurder" file="models/character/animations/bipedAxeMurderer.upa" loop="false"/>
+				<animation name="axemurder_o" file="models/character/animations/bipedAxeMurdered.upa" loop="false"/>
+		
+		<!-- Section: Interaction with Commodities -->
+			<animation name="idle_with_item" file="models/character/animations/bipedCommodityIdlePlaceholder.upa"/>
+			<animation name="walk_with_item" file="models/character/animations/bipedCommodityWalkPlaceholder.upa"/>
+			<animation name="talk_with_item" file="models/character/animations/bipedCommodTalk.upa" loop="false"/>
+			<animation name="say_yes_with_item" file="models/character/animations/bipedCommodTalkNod.upa" loop="false"/>
+			<animation name="say_no_with_item" file="models/character/animations/bipedCommodTalkShakeHead.upa" loop="false"/>
+			
+			<animation name="lift_item_h0_p1" file="models/character/animations/bipedCommodityLiftH0P1.upa" loop="false"/>
+			<animation name="lift_item_h0_p2" file="models/character/animations/bipedCommodityLiftH0P2.upa" loop="false"/>
+			<animation name="lift_item_h1_p1" file="models/character/animations/bipedCommodityLiftH1P1.upa" loop="false"/>
+			<animation name="lift_item_h1_p2" file="models/character/animations/bipedCommodityLiftH1P2.upa" loop="false"/>
+			<animation name="lift_item_h2_p1" file="models/character/animations/bipedCommodityLiftH2P1.upa" loop="false"/>
+			<animation name="lift_item_h2_p2" file="models/character/animations/bipedCommodityLiftH2P2.upa" loop="false"/>
+			<animation name="lift_item_h3_p1" file="models/character/animations/bipedCommodityLiftH3P1.upa" loop="false"/>
+			<animation name="lift_item_h3_p2" file="models/character/animations/bipedCommodityLiftH3P2.upa" loop="false"/>
+			<animation name="lift_item_h4_p1" file="models/character/animations/bipedCommodityLiftH4P1.upa" loop="false"/>
+			<animation name="lift_item_h4_p2" file="models/character/animations/bipedCommodityLiftH4P2.upa" loop="false"/>
+			
+			<animation name="drop_item_h0_p1" file="models/character/animations/bipedCommodityPlaceH0P1.upa" loop="false"/>
+			<animation name="drop_item_h0_p2" file="models/character/animations/bipedCommodityPlaceH0P2.upa" loop="false"/>
+			<animation name="drop_item_h1_p1" file="models/character/animations/bipedCommodityPlaceH1P1.upa" loop="false"/>
+			<animation name="drop_item_h1_p2" file="models/character/animations/bipedCommodityPlaceH1P2.upa" loop="false"/>
+			<animation name="drop_item_h2_p1" file="models/character/animations/bipedCommodityPlaceH2P1.upa" loop="false"/>
+			<animation name="drop_item_h2_p2" file="models/character/animations/bipedCommodityPlaceH2P2.upa" loop="false"/>
+			<animation name="drop_item_h3_p1" file="models/character/animations/bipedCommodityPlaceH3P1.upa" loop="false"/>
+			<animation name="drop_item_h3_p2" file="models/character/animations/bipedCommodityPlaceH3P2.upa" loop="false"/>
+			<animation name="drop_item_h4_p1" file="models/character/animations/bipedCommodityPlaceH4P1.upa" loop="false"/>
+			<animation name="drop_item_h4_p2" file="models/character/animations/bipedCommodityPlaceH4P2.upa" loop="false"/>
+			
+			<animation name="place_item_on_table_p1" file="models/character/animations/bipedCommodityPlaceTableP1.upa" loop="false"/>
+			<animation name="place_item_on_table_p2" file="models/character/animations/bipedCommodityPlaceTableP2.upa" loop="false"/>
+			<animation name="pick_up_item_from_table_p1" file="models/character/animations/bipedCommodityLiftTableP1.upa" loop="false"/>
+			<animation name="pick_up_item_from_table_p2" file="models/character/animations/bipedCommodityLiftTableP2.upa" loop="false"/>
+			
+			<animation name="insert_commod_p1" file="models/character/animations/bipedInsertCommodP1.upa" loop="false"/>
+			<animation name="insert_commod_p2" file="models/character/animations/bipedInsertCommodP2.upa" loop="false"/>
+			<animation name="remove_commod_p1" file="models/character/animations/bipedRemoveCommodP1.upa" loop="false"/>
+			<animation name="remove_commod_p2" file="models/character/animations/bipedRemoveCommodP2.upa" loop="false"/>
+		
+		<!-- Section: Interaction with Props -->
+			<animation name="pickup_tool_1" file="models/character/animations/bipedPropLiftP1.upa" loop="false"/>
+			<animation name="pickup_tool_2" file="models/character/animations/bipedPropLiftP2.upa" loop="false"/>
+			<animation name="pickup_tool_table_1" file="models/character/animations/bipedPropLiftTableP1.upa" loop="false"/>
+			<animation name="pickup_tool_table_2" file="models/character/animations/bipedPropLiftTableP2.upa" loop="false"/>
+			<animation name="pickup_tool_workbench_1" file="models/character/animations/bipedPropLiftWorkbenchP1.upa" loop="false"/>
+			<animation name="pickup_tool_workbench_2" file="models/character/animations/bipedPropLiftWorkbenchP2.upa" loop="false"/>
+			
+			<animation name="drop_tool_1" file="models/character/animations/bipedPropDropP1.upa" loop="false"/>
+			<animation name="drop_tool_2" file="models/character/animations/bipedPropDropP2.upa" loop="false"/>
+			<animation name="drop_tool_table_1" file="models/character/animations/bipedPropDropTableP1.upa" loop="false"/>
+			<animation name="drop_tool_table_2" file="models/character/animations/bipedPropDropTableP2.upa" loop="false"/>
+			<animation name="drop_tool_workbench_1" file="models/character/animations/bipedPropDropWorkbenchP1.upa" loop="false"/>
+			<animation name="drop_tool_workbench_2" file="models/character/animations/bipedPropDropWorkbenchP2.upa" loop="false"/>
+			
+			<animation name="chat_prop" file="models/character/animations/bipedChatProp.upa" loop="false"/>
+			<animation name="chat_prop_2" file="models/character/animations/bipedAnimatedChatProp.upa" loop="false"/>
+		
+		<!-- Section: Sitting -->
+			<animation name="sitting_chair_idle" file="models/character/animations/bipedSittingIdle.upa"/>
+			<animation name="sitting_chair_drink_hand" file="models/character/animations/bipedSittingDrinkHand.upa" loop="false"/>
+			<animation name="sitting_chair_drink_table" file="models/character/animations/bipedSittingDrinkTable.upa" loop="false"/>
+			<animation name="sitting_chair_eat" file="models/character/animations/bipedSittingEatNoTable.upa" />
+			<animation name="sitting_table_eat_p1" file="models/character/animations/bipedSittingEatP1.upa" loop="false"/>
+			<animation name="sitting_table_eat_p2" file="models/character/animations/bipedSittingEatP2.upa" loop="false"/>
+			<animation name="sitting_chair_idleLC" file="models/character/animations/bipedSittingIdleLC.upa" loop="true"/>
+			<animation name="sitting_chair_idleMC" file="models/character/animations/bipedSittingIdleMC.upa" loop="true"/>
+			<animation name="sitting_chair_idleUC" file="models/character/animations/bipedSittingIdleUC.upa" loop="true"/>
+			<animation name="sitting_chair_listening" file="models/character/animations/bipedSittingListening.upa"/>
+			<animation name="sitting_chair_reading" file="models/character/animations/bipedSittingReading.upa"/>
+			<animation name="sitting_chair_surprised" file="models/character/animations/bipedSittingSurprised.upa" loop="false"/>
+			<animation name="sitting_chair_talking" file="models/character/animations/bipedSittingTalking.upa"/>
+			<animation name="sitting_chair_writing" file="models/character/animations/bipedSittingWriting.upa"/>
+			<animation name="sitting_chair_working" file="models/character/animations/bipedSittingWorking.upa"/>
+			<animation name="sitting_chair_die" file="models/character/animations/bipedSittingDying.upa" loop="false"/>
+		
+		<!-- Section: Vehicles -->
+			
+			<!-- Subsection: Steam Crawler Riding -->
+				<animation name="steamcrawler_idle_off" file="models/character/animations/bipedCrawlerSittingIdle.upa"/>
+				<animation name="steamcrawler_idle_on" file="models/character/animations/bipedCrawlerSittingIdleOn.upa"/>
+				
+				<animation name="steamcrawler_idle_forward_begin" file="models/character/animations/bipedCrawlerSittingForwardStart.upa" loop="false"/>
+				<animation name="steamcrawler_idle_forward" file="models/character/animations/bipedCrawlerSittingForward.upa"/>
+				<animation name="steamcrawler_idle_forward_halt" file="models/character/animations/bipedCrawlerSittingForwardStop.upa" loop="false"/>
+				
+				<animation name="steamcrawler_idle_backward_begin" file="models/character/animations/bipedCrawlerSittingBackwardStart.upa" loop="false"/>
+				<animation name="steamcrawler_idle_backward" file="models/character/animations/bipedCrawlerSittingBackward.upa"/>
+				<animation name="steamcrawler_idle_backward_halt" file="models/character/animations/bipedCrawlerSittingBackwardStop.upa" loop="false"/>
+			
+			<!-- Subsection: Mounted Gun Riding -->
+				<animation name="gun_sitting_transition_to_firing_position" file="models/character/animations/bipedGunSittingToFiring.upa" loop="false"/>
+				<animation name="gun_sitting_transition_from_firing_position" file="models/character/animations/bipedGunSittingFromFiring.upa" loop="false"/>
+				<animation name="gun_sitting_aiming" file="models/character/animations/bipedGunSittingAiming.upa"/>
+				<animation name="gun_sitting_reloading" file="models/character/animations/bipedGunSittingReloading.upa" loop="false" />
+				<animation name="gun_sitting_firing" file="models/character/animations/bipedGunSittingFiring.upa"/>
+				<animation name="gun_sitting_hit" file="models/character/animations/bipedGunSittingAiming.upa"/>
+				<animation name="gun_sitting_die_part_1" file="models/character/animations/bipedGunSittingDieSlump.upa"  loop="false"/>
+				<animation name="gun_sitting_die_part_2" file="models/character/animations/bipedGunSittingDieFall.upa"  loop="false"/>
+				
+			<!-- Subsction: Steam Knight Boading / Disembarking -->
+				<animation name="board_steamknight" file="models/character/animations/bipedSKEntering.upa" loop="false"/>
+				<animation name="disembark_steamknight" file="models/character/animations/bipedSKExiting.upa" loop="false"/>
+		
+		<!-- Section: Miscellany --> 
+			<animation name="triforce" file="models/character/animations/bipedHoldUp.upa" loop="false"/>
+			<animation name="dance" file="models/character/animations/bipedJig.upa"/>
+			<animation name="rhino_beetle_affection_paired_anim" file="models/character/animations/bipedAffectionRhinoBeetle.upa" loop="false"/>
+			
+			<animation name="grabbed_by_geometer" file="models\\character\\animations\\bipedGeometerGrab.upa"/>
+			<animation name="carried_by_geometer" file="models\\character\\animations\\bipedGeometerCarry.upa"/>
+			<animation name="dropped_by_geometer" file="models\\character\\animations\\bipedGeometerDrop.upa"/>
+			
+			<animation name="lesser_transform_p1" file="models/character/animations/bipedLesserTransformP1.upa" loop="false"/>
+			<animation name="lesser_transform_p2" file="models/character/animations/bipedLesserTransformP2.upa" loop="false"/>
+			
+			<animation name="stare_at_sea" file="models/character/animations/bipedStareAtSea.upa" loop="false"/>
+			
+			<animation name="macroscope_lookat_loop_start" file="models/character/animations/bipedMacroscopeLook.upa" loop="false"/>
+			<animation name="macroscope_lookat_loop" file="models/character/animations/bipedMacroscopeLooking.upa"/>
+			<animation name="macroscope_lookat_loop_end" file="models/character/animations/bipedMacroscopeUnLook.upa" loop="false"/>
+			<animation name="macroscope_freakout" file="models/character/animations/bipedMacroscopeFlipOut.upa" loop="false"/>
+			
+			<animation name="horror_explode" file="models/character/animations/bipedExplode.upa" loop="false"/>
+			
+			<animation name="grabbed_by_obeliskian" file="models/character/animations/bipedObileskianGrab.upa" loop="false"/>
+			<animation name="carried_by_obeliskian" file="models/character/animations/bipedObileskianCarry.upa"/>
+			<animation name="dropped_by_obeliskian" file="models/character/animations/bipedObileskianDrop.upa" loop="false"/>
+			
+			<animation name="corpse_lifted" file="models/character/animations/bipedCorpseLifted.upa" loop="false"/>
+			<animation name="corpse_carried" file="models/character/animations/bipedCorpseCarried.upa" />
+			<animation name="corpse_dropped" file="models/character/animations/bipedCorpseDropped.upa" loop="false"/>
+			
+			<!-- Subsection: These are meant for use by fishpeople. They should work with all bipeds, though. -->
+				<animation name="worshipping_start" file="models/character/animations/bipedWorshipStart.upa" loop="false"/>
+				<animation name="worshipping_loop" file="models/character/animations/bipedWorshipLoop.upa"/>
+				<animation name="worshipping_end" file="models/character/animations/bipedWorshipEnd.upa" loop="false"/>
+				<animation name="freakout" file="models/character/animations/bipedFreakOut.upa" loop="false"/>
+				<animation name="walk_rampage_run" file="models/character/animations/bipedRunScary.upa"/>
+				<animation name="walk_rampage_walk" file="models/character/animations/bipedWalkScary.upa"/>
+				<animation name="fishperson_atk" file="models/character/animations/bipedFishAtk.upa" loop="false"/>
+			
+		
+	    <!-- DEPRECATED. Left in for compatibility only! -->
+			<animation name="pickup_item_p1" file="models/character/animations/bipedCommodityLiftP1.upa" loop="false"/>
+			<animation name="pickup_item_p2" file="models/character/animations/bipedCommodityLiftP2.upa" loop="false"/>
+			<animation name="drop_item_1" file="models/character/animations/bipedCommodityDropP1.upa" loop="false"/>
+			<animation name="drop_item_2" file="models/character/animations/bipedCommodityDropP2.upa" loop="false"/>
+		
+	    <!-- Section: Class specific animations -->
+			<!--Safety defaults. -->
+			<animation name="idle" file="models/character/animations/bipedIdleLC.upa"/>
+			<animation name="walk" file="models/character/animations/bipedWalkLC.upa"/>
+			<animation name="angry" file="models/character/animations/bipedAngerLC.upa" loop="false"/>
+			
+			<animationset name="bipedLC">
+				<animation name="idle" file="models/character/animations/bipedIdleLC.upa"/>
+				<animation name="walk" file="models/character/animations/bipedWalkLC.upa"/>
+				<animation name="angry" file="models/character/animations/bipedAngerLC.upa" loop="false"/>
+				<animation name="laugh" file="models/character/animations/bipedLaughLC.upa" loop="false"/>
+				<animation name="cough" file="models/character/animations/bipedCoughingLC.upa" loop="false"/>
+				<animation name="snub" file="models/character/animations/bipedSnubLC.upa" loop="false"/>
+				<animation name="wave" file="models/character/animations/bipedWaveHelloLC.upa" loop="false"/>
+			</animationset>
+				
+			<animationset name="bipedMC">
+				<animation name="idle" file="models/character/animations/bipedIdleMC.upa"/>
+				<animation name="walk" file="models/character/animations/bipedWalkMC.upa"/>
+				<animation name="angry" file="models/character/animations/bipedAngerLC.upa" loop="false"/>
+				<animation name="laugh" file="models/character/animations/bipedLaughLC.upa" loop="false"/>
+				<animation name="cough" file="models/character/animations/bipedCoughingLC.upa" loop="false"/>
+				<animation name="snub" file="models/character/animations/bipedSnubLC.upa" loop="false"/>
+				<animation name="wave" file="models/character/animations/bipedWaveHelloLC.upa" loop="false"/>
+			</animationset>
+			
+			<animationset name="bipedUC">
+				<animation name="idle" file="models/character/animations/bipedIdleUC.upa"/>
+				<animation name="walk" file="models/character/animations/bipedWalkUC.upa"/>
+				<animation name="angry" file="models/character/animations/bipedAngerUC.upa" loop="false"/>
+				<animation name="laugh" file="models/character/animations/bipedLaughUC.upa" loop="false"/>
+				<animation name="cough" file="models/character/animations/bipedCoughingUC.upa" loop="false"/>
+				<animation name="snub" file="models/character/animations/bipedSnubUC.upa" loop="false"/>
+				<animation name="wave" file="models/character/animations/bipedWaveHelloUC.upa" loop="false"/>
+			</animationset>
+			
+	</animationset>
+
+	<animationset name="dress">
+		<!-- Section: Idles -->
+			<animation name="idle_alt1" file="models/character/animations/dressIdleAlt1.upa"/>
+			<animation name="idle_alt2" file="models/character/animations/dressIdleAlt2.upa"/>
+			<animation name="idle_alt3" file="models/character/animations/dressIdleAlt3.upa"/>
+			<animation name="idle_angry" file="models/character/animations/dressIdleAngry.upa"/>
+			<animation name="idle_celebrate" file="models/character/animations/dressIdleCelebrate.upa"/>
+			<animation name="idle_happy" file="models/character/animations/dressIdleHappy.upa"/>
+			<animation name="idle_hungry" file="models/character/animations/dressIdleHungry.upa"/>
+			<animation name="idle_insane" file="models/character/animations/dressIdleInsane.upa"/>
+			<animation name="idle_murderous" file="models/character/animations/dressIdleMurderous.upa"/>
+			<animation name="idle_sad" file="models/character/animations/dressIdleSad.upa"/>
+			<animation name="idle_shellshocked" file="models/character/animations/dressIdleShellshocked.upa"/>
+	    
+		<!-- Section: Movement -->
+			<animation name="walk_run" file="models/character/animations/dressRun.upa"/>
+			<animation name="walk_fleeing" file="models/character/animations/dressFlee.upa"/>
+			<animation name="walk_angry" file="models/character/animations/dressWalkAngry.upa"/>
+			<animation name="walk_hungry" file="models/character/animations/dressWalkHungry.upa"/>
+			<animation name="walk_insane" file="models/character/animations/dressWalkInsane.upa"/>
+			<animation name="walk_murderous" file="models/character/animations/dressWalkMurderous.upa"/>
+			<animation name="walk_sad" file="models/character/animations/dressWalkSad.upa"/>
+			<animation name="walk_skip" file="models/character/animations/dressWalkSkip.upa"/>
+			<animation name="walk_doublebounce" file="models/character/animations/dressWalkDoublebounce.upa"/>
+			<animation name="walk_captured_front" file="models/character/animations/dressWalkCapturedF.upa"/>
+			<animation name="walk_captured_back" file="models/character/animations/dressWalkCapturedB.upa"/>
+			<animation name="walk_capturing" file="models/character/animations/dressWalkCapturing.upa"/>
+			<animation name="walk_straitjacket_normal" file="models/character/animations/dressWalkStraitjacketN.upa"/>
+			<animation name="walk_straitjacket_insane" file="models/character/animations/dressWalkStraitjacketI.upa"/>
+			<animation name="walk_fishy" file="models/character/animations/dressWalkFishy.upa"/>
+	    
+		<!-- Section: Art appreciation. -->
+			<animation name="inspect_painting_neutral" file="models/character/animations/dressExaminePaintingNeutral.upa"/>
+			<animation name="inspect_painting_dislike" file="models/character/animations/dressExaminePaintingDismiss.upa"/>
+			<animation name="inspect_painting_moved" file="models/character/animations/dressExaminePaintingMoved.upa"/>
+			<animation name="inspect_painting_shrug" file="models/character/animations/dressExaminePaintingShrug.upa"/>
+			
+		<!-- Section: Combat -->
+			<animation name="fire_handgun" file="models/character/animations/dressPistolFire.upa" loop="false"/>
+			<animation name="fire_leyden_pistol" file="models/character/animations/dressPistolFireLeyden.upa" loop="false"/>
+			<animation name="fire_fish_handgun" file="models/character/animations/dressPistolFishFire.upa" loop="false"/>
+			<animation name="fire_longarm" file="models/character/animations/dressFireRifle.upa" loop="false"/>
+			<animation name="fire_longarm_jezail" file="models/character/animations/dressFireJezail.upa" loop="false"/>
+			<animation name="attack" file="models/character/animations/dressPunch.upa" />
+			<animation name="attack_with_prop" file="models/character/animations/dressAtkProp.upa" />
+			<animation name="attack_wildly_prop" file="models/character/animations/dressAtkWild.upa" />
+			<animation name="attack_slash_prop" file="models/character/animations/dressAtkSlash.upa" />
+			<animation name="attack_overhead_prop" file="models/character/animations/dressAtkOverhead.upa" />
+			<animation name="punch_blocked" file="models/character/animations/dressPunchBlocked.upa" loop="false"/>
+			<animation name="throw" file="models/character/animations/dressThrow.upa" loop="false"/>
+			<animation name="bayonet" file="models/character/animations/dressBayonet.upa" loop="false"/>
+			<animation name="hit" file="models/character/animations/dressHit.upa" loop="false"/>
+			<animation name="hit1" file="models/character/animations/dressGetHit1.upa" loop="false"/>
+			<animation name="hit2" file="models/character/animations/dressGetHit2.upa" loop="false"/>
+			<animation name="hit3" file="models/character/animations/dressGetHit3.upa" loop="false"/>
+			<animation name="hit4" file="models/character/animations/dressGetHit4.upa" loop="false"/>
+			<animation name="blown_back" file="models/character/animations/dressExploded.upa" loop="false"/>
+			
+			<animation name="walk_injured" file="models/character/animations/dressInjuredWalk.upa"/>
+			<animation name="idle_injured" file="models/character/animations/dressInjuredIdle.upa"/>
+		    
+		    
+			<!-- Standing at attention anims are not made and won't be unless we ABSOLUTELY need me to make them. -->
+			<!-- Subsection: Combat Stance Standing -->
+				<animation name="combat_stand_bayonet" file="models/character/animations/dressCombatStandBayonet.upa" loop="false"/>
+				<animation name="combat_stand_fire_rifle" file="models/character/animations/dressCombatStandFireRifle.upa" loop="false"/>
+				<animation name="combat_stand_flinch" file="models/character/animations/dressCombatStandFlinch.upa" loop="false"/>
+				<animation name="combat_stand_idle" file="models/character/animations/dressCombatStandIdle.upa"/>
+				<animation name="combat_stand_idle_with_rifle" file="models/character/animations/dressCombatStandIdleRifle.upa"/>
+				<animation name="combat_stand_reload_pistol" file="models/character/animations/dressCombatStandPistolReload.upa"/> <!-- loop="true" -->
+				<animation name="combat_stand_reload_pistol_long" file="models/character/animations/dressCombatStandPistolReloadSlow.upa" />
+				<animation name="combat_stand_reload_longgun" file="models/character/animations/dressCombatStandRifleReload.upa"/> <!-- loop="true" -->
+				<animation name="combat_stand_reload_longgun_long" file="models/character/animations/dressCombatStandReloadSlow.upa" />
+				<animation name="combat_stand_throw" file="models/character/animations/dressCombatStandThrow.upa" loop="false"/>
+				<animation name="combat_stand_transition_to_crouch" file="models/character/animations/dressCombatStandToCrouch.upa" loop="false"/>
+				<animation name="combat_stand_walk" file="models/character/animations/dressCombatStandWalk.upa"/>
+				
+				<animation name="combat_stand_rifle_away_p1" file="models/character/animations/dressCombatStandRifleAwayP1.upa" loop="false"/>
+				<animation name="combat_stand_rifle_away_p2" file="models/character/animations/dressCombatStandRifleAwayP2.upa" loop="false"/>
+				<animation name="combat_stand_rifle_out_p1" file="models/character/animations/dressCombatStandRifleOutP1.upa" loop="false"/>
+				<animation name="combat_stand_rifle_out_p2" file="models/character/animations/dressCombatStandRifleOutP2.upa" loop="false"/>
+				<animation name="combat_stand_pistol_out_p1" file="models/character/animations/dressCombatStandPistolOutP1.upa" loop="false"/>
+				<animation name="combat_stand_pistol_out_p2" file="models/character/animations/dressCombatStandPistolOutP2.upa" loop="false"/>
+				<animation name="combat_stand_pistol_away_p1" file="models/character/animations/dressCombatStandPistolAwayP1.upa" loop="false"/>
+				<animation name="combat_stand_pistol_away_p2" file="models/character/animations/dressCombatStandPistolAwayP2.upa" loop="false"/>
+				
+			    
+			<!-- Subsection: Crouching -->
+				<animation name="crouch_die" file="models/character/animations/dressCombatCrouchDie.upa" loop="false"/>
+				<animation name="crouch_fire rifle" file="models/character/animations/dressCombatCrouchFireRifle.upa" loop="false"/>
+				<animation name="crouch_flinch" file="models/character/animations/dressCombatCrouchFlinch.upa" loop="false"/>
+				<animation name="crouch_hit" file="models/character/animations/dressCombatCrouchHit.upa" loop="false"/>
+				<animation name="crouch_idle" file="models/character/animations/dressCombatCrouchIdle.upa"/>
+				<animation name="crouch_idle_with_rifle" file="models/character/animations/dressCombatCrouchIdleRifle.upa"/>
+				<animation name="crouch_fire_pistol" file="models/character/animations/dressCombatCrouchPistol.upa" loop="false"/>
+				<animation name="crouch_reload_pistol" file="models/character/animations/dressCombatCrouchPistolReload.upa"/>
+				<animation name="crouch_reload_longgun" file="models/character/animations/dressCombatCrouchRifleReload.upa"/>
+				<animation name="crouch_transition_to_prone" file="models/character/animations/dressCombatCrouchToProne.upa" loop="false"/>
+				<animation name="crouch_dive_to_prone" file="models/character/animations/dressCombatCrouchToProneFlop.upa" loop="false"/>
+				<animation name="crouch_transition_to_combat_standing" file="models/character/animations/dressCombatCrouchToStand.upa" loop="false"/>
+				<animation name="crouch_walk" file="models/character/animations/dressCombatCrouchWalk.upa"/>
+			    
+			<!-- Subsection: Prone -->
+				<animation name="prone_crawl_high" file="models/character/animations/dressCombatProneCrawlHigh.upa"/>
+				<animation name="prone_crawl_low" file="models/character/animations/dressCombatProneCrawlLow.upa"/>
+				<animation name="prone_die" file="models/character/animations/dressCombatProneDie.upa" loop="false"/>
+				<animation name="prone_fire_rifle" file="models/character/animations/dressCombatProneFireRifle.upa" loop="false"/>
+				<animation name="prone_flinch" file="models/character/animations/dressCombatProneFlinch.upa" loop="false"/>
+				<animation name="prone_hit" file="models/character/animations/dressCombatProneHit.upa" loop="false"/>
+				<animation name="prone_idle" file="models/character/animations/dressCombatProneIdle.upa"/>
+				<animation name="prone_idle_with_rifle" file="models/character/animations/dressCombatProneIdleRifle.upa"/>
+				<animation name="prone_fire_pistol" file="models/character/animations/dressCombatPronePistol.upa" loop="false"/>
+				<animation name="prone_reload_pistol" file="models/character/animations/dressCombatPronePistolReload.upa" />
+				<animation name="prone_reload_longgun" file="models/character/animations/dressCombatProneRifleReload.upa" />
+				<animation name="prone_transition_to_crouch" file="models/character/animations/dressCombatProneToCrouch.upa" loop="false"/>
+			
+	    <!-- Section: Death -->
+		    <animation name="death" file="models/character/animations/dressDie.upa" loop="false"/>
+		    <animation name="death1" file="models/character/animations/dressDieAlt1.upa" loop="false"/>
+		    <animation name="death2" file="models/character/animations/dressDieAlt2.upa" loop="false"/>
+		    <animation name="death3" file="models/character/animations/dressDieAlt3.upa" loop="false"/>
+		    <animation name="deathHeadfalloff" file="models/character/animations/dressDieHeadFallOff.upa" loop="false"/>
+		    <animation name="death_brainmelt" file="models/character/animations/dressDieBrainMelt.upa" loop="false"/>
+		    <animation name="death_choke" file="models/character/animations/dressDieChoke.upa" loop="false"/>
+		    <animation name="death_while_fleeing" file="models/character/animations/dressDieFleeing.upa" loop="false"/>
+		    <animation name="death_on_fire" file="models/character/animations/dressDieOnFire.upa" loop="false"/>
+		    <animation name="death_platoon" file="models/character/animations/dressDiePlatoon.upa" loop="false"/>
+		    <animation name="death_poet" file="models/character/animations/dressDiePoet.upa" loop="false"/>
+		    <animation name="death_shot" file="models/character/animations/dressDieShot.upa" loop="false"/>
+		    <animation name="death_bulletriddled" file="models/character/animations/dressDieBulletRiddled.upa" loop="false"/>
+	    
+	    <!-- Section: Sleeping -->
+		    <animation name="KO" file="models/character/animations/dressKO.upa" loop="false"/>
+		    <animation name="sleep_start" file="models/character/animations/dressSleepGroundStart.upa" loop="false"/>
+		    <animation name="sleep_stop" file="models/character/animations/dressSleepGroundEnd.upa" loop="false"/>
+		    <animation name="sleep_loop" file="models/character/animations/dressSleepGroundLoop.upa"/>
+		    <animation name="sleep_sleeping_to_injured_trans" file="models/character/animations/dressSleepGroundSleepingToInjured.upa"/>
+		    <animation name="sleep_injured_to_sleeping_trans" file="models/character/animations/dressSleepGroundInjuredToSleeping.upa"/>
+		    <animation name="sleep_injured_loop" file="models/character/animations/dressSleepGroundInjuredLoop.upa"/>
+		    <animation name="sleep_die" file="models/character/animations/dressSleepGroundInjuredDie.upa"/>
+	    
+		    <animation name="sleep_bed_l_start" file="models/character/animations/dressSleepOnBedL.upa" loop="false"/>
+		    <animation name="sleep_bed_l_stop" file="models/character/animations/dressSleepOutBedL.upa" loop="false"/>
+		    <animation name="sleep_bed_l_loop" file="models/character/animations/dressSleepBedLoopL.upa"/>
+		    <animation name="sleep_bed_l_sleeping_to_injured_trans" file="models/character/animations/dressOnBedLSleepingToInjured.upa" loop="false"/>
+		    <animation name="sleep_bed_l_injured_to_sleeping_trans" file="models/character/animations/dressOnBedLInjuredToSleeping.upa" loop="false"/>
+		    <animation name="sleep_bed_l_injured_loop" file="models/character/animations/dressOnBedLInjuredLoop.upa"/>
+		    <animation name="sleep_bed_l_die" file="models/character/animations/dressOnBedLDie.upa" loop="false"/>
+			
+		    <animation name="sleep_bed_r_start" file="models/character/animations/dressSleepOnBedR.upa" loop="false"/>
+		    <animation name="sleep_bed_r_stop" file="models/character/animations/dressSleepOutBedR.upa" loop="false"/>
+		    <animation name="sleep_bed_r_loop" file="models/character/animations/dressSleepBedLoopR.upa"/>
+		    <animation name="sleep_bed_r_sleeping_to_injured_trans" file="models/character/animations/dressOnBedRSleepingToInjured.upa" loop="false"/>
+		    <animation name="sleep_bed_r_injured_to_sleeping_trans" file="models/character/animations/dressOnBedRInjuredToSleeping.upa" loop="false"/>
+		    <animation name="sleep_bed_r_injured_loop" file="models/character/animations/dressOnBedRInjuredLoop.upa"/>
+		    <animation name="sleep_bed_r_die" file="models/character/animations/dressOnBedRDie.upa" loop="false"/>
+		    
+		    <!-- Old depreciated anims for sleeping on cots. -->
+			<animation name="sleep_cot_l" file="models/character/animations/dressSleepCotL.upa"/>
+			<animation name="sleep_cot_r" file="models/character/animations/dressSleepCotR.upa"/>
+			
+	    <!-- Section: Working -->
+		    <animation name="generic_ground_interaction" file="models/character/animations/dressHitGround.upa"/>
+		    <animation name="harvesting" file="models/character/animations/dressPunch.upa" loop="false"/>
+		    <animation name="inspiration_success" file="models/character/animations/dressInspirationSuccess.upa"/>
+		    <animation name="inspiration_failure" file="models/character/animations/dressInspirationFailure.upa"/>
+		    <animation name="hammer" file="models/character/animations/dressHammer.upa"/>
+		    <animation name="hoe" file="models/character/animations/dressHoeing.upa"/>
+		    <animation name="chop" file="models/character/animations/dressChopTree.upa"/>
+		    <animation name="shoveling" file="models/character/animations/dressShoveling.upa"/>
+		    <animation name="pick_survey" file="models/character/animations/dressPickSurvey.upa"/>
+		    <animation name="mine_node" file="models/character/animations/dressPickOreNode.upa"/>
+		    <animation name="hit_ground" file="models/character/animations/dressHitGround.upa"/>
+		    <animation name="sweep" file="models/character/animations/dressPushBroom.upa"/>
+		    <animation name="sow_seeds" file="models/character/animations/dressSowSeeds.upa"/>
+		    
+		    <animation name="forage_1OU_start" file="models/character/animations/dressForage1OUStart.upa" loop="false"/>
+		    <animation name="forage_1OU_loop" file="models/character/animations/dressForage1OULoop.upa"/>
+		    <animation name="forage_1OU_end" file="models/character/animations/dressForage1OUEnd.upa" loop="false"/>
+		
+		    <animation name="forage_ground_start" file="models/character/animations/dressForageGroundStart.upa" loop="false"/>
+		    <animation name="forage_ground_loop" file="models/character/animations/dressForageGroundLoop.upa"/>
+		    <animation name="forage_ground_end" file="models/character/animations/dressForageGroundEnd.upa" loop="false"/>
+		    
+		    <animation name="butcher_ground" file="models/character/animations/dressChopGround.upa"/>
+		    
+		    <animation name="writing_standingdesk" file="models/character/animations/dressWritingStandingdesk.upa" loop="true"/>
+		    
+		    <animation name="workbench_generic" file="models/character/animations/dressWorkbenchGeneric.upa"/>
+		    <animation name="workbench_hammer" file="models/character/animations/dressWorkbenchHammer.upa"/>
+		    <animation name="workbench_saw" file="models/character/animations/dressWorkbenchSaw.upa" loop="true"/>
+		    
+		    <animation name="hammer1OU_start" file="models/character/animations/dressHammering1OUStart.upa" loop="false"/>
+		    <animation name="hammer1OU_loop" file="models/character/animations/dressHammering1OULoop.upa"/>
+		    <animation name="hammer1OU_end" file="models/character/animations/dressHammering1OUEnd.upa" loop="false"/>
+		    
+		    <animation name="hammer2OU_start" file="models/character/animations/dressHammering2OUStart.upa" loop="false"/>
+		    <animation name="hammer2OU_loop" file="models/character/animations/dressHammering2OULoop.upa"/>
+		    <animation name="hammer2OU_end" file="models/character/animations/dressHammering2OUEnd.upa" loop="false"/>
+		    
+		    <animation name="hammerHalfOU_start" file="models/character/animations/dressHammeringHalfOUStart.upa" loop="false"/>
+		    <animation name="hammerHalfOU_loop" file="models/character/animations/dressHammeringHalfOULoop.upa"/>
+		    <animation name="hammerHalfOU_end" file="models/character/animations/dressHammeringHalfOUEnd.upa" loop="false"/>
+		    
+		    <animation name="hammerAnvil_start" file="models/character/animations/dressHammeringAnvilStart.upa" loop="false"/>
+		    <animation name="hammerAnvil_loop" file="models/character/animations/dressHammeringAnvilLoop.upa"/>
+		    <animation name="hammerAnvil_end" file="models/character/animations/dressHammeringAnvilEnd.upa" loop="false"/>
+		    
+		    <animation name="stir_start" file="models/character/animations/dressStirringStart.upa" loop="false"/>
+		    <animation name="stir_loop" file="models/character/animations/dressStirringLoop.upa"/>
+		    <animation name="stir_end" file="models/character/animations/dressStirringEnd.upa" loop="false"/>
+		    
+		    <animation name="chop_start" file="models/character/animations/dressChopTreeStart.upa" loop="false"/>
+		    <animation name="chop_end" file="models/character/animations/dressChopTreeEnd.upa" loop="false"/>
+		    <animation name="chop_loop" file="models/character/animations/dressChopTreeLoop.upa"/>
+		    
+		    <animation name="mine_node_start" file="models/character/animations/dressPickOreNodeStart.upa" loop="false"/>
+		    <animation name="mine_node_loop" file="models/character/animations/dressPickOreNodeLoop.upa" />
+		    <animation name="mine_node_end" file="models/character/animations/dressPickOreNodeEnd.upa" loop="false"/>
+		    
+		    <animation name="shoveling_start" file="models/character/animations/dressShovelingStart.upa" loop="false"/>
+		    <animation name="shoveling_loop" file="models/character/animations/dressShovelingLoop.upa"/>
+		    <animation name="shoveling_end" file="models/character/animations/dressShovelingEnd.upa" loop="false"/>
+		    
+		    <animation name="survey" file="models/character/animations/dressSurvey.upa"/>
+		    
+		    <animation name="hoe_start" file="models/character/animations/dressHoeingStart.upa" loop="false"/>
+		    <animation name="hoe_loop" file="models/character/animations/dressHoeingLoop.upa"/>
+		    <animation name="hoe_end" file="models/character/animations/dressHoeingEnd.upa" loop="false"/>
+		    
+		    <animation name="fishing_start" file="models/character/animations/dressFishingStart.upa" loop="false"/>
+		    <animation name="fishing_loop" file="models/character/animations/dressFishingLoop.upa"/>
+		    <animation name="fishing_result_failure" file="models/character/animations/dressFishingResultFailure.upa" loop="false"/>
+		    <animation name="fishing_result_success" file="models/character/animations/dressFishingResultSuccess.upa" loop="false"/>
+		    
+		    <animation name="oversee" file="models/character/animations/dressOverseerOrder.upa"/>
+		    <animation name="oversee_angry" file="models/character/animations/dressOverseerAngryL.upa"/>
+		    <animation name="oversee_big" file="models/character/animations/dressOverseerBigL.upa"/>
+		    <animation name="oversee_crossarms" file="models/character/animations/dressOverseerCrossarmsBookend.upa"/>
+		    <animation name="oversee_crossarms_selfloop" file="models/character/animations/dressOverseerCrossarmsLoop.upa"/>
+		    <animation name="oversee_haughty" file="models/character/animations/dressOverseerHaughtyL.upa"/>
+		    <animation name="oversee_drunk" file="models/character/animations/dressOverseerSillyL.upa"/>
+		    
+		    <animation name="bless" file="models/character/animations/dressBless.upa"/>
+		    <animation name="pray" file="models/character/animations/dressPray.upa"/>
+		    <animation name="preach" file="models/character/animations/dressPreach.upa"/>
+	    
+	    <!-- Section: Food and Drink -->
+		    <animation name="eat" file="models/character/animations/dressEatBowl.upa"/>
+		    <animation name="eat_commodity" file="models/character/animations/dressCommodEat.upa"/>
+		    <animation name="eat_meat_commodity" file="models/character/animations/dressEatMeat.upa"/>
+		    <animation name="eat_off_ground" file="models/character/animations/dressEatGround.upa"/>
+		    <animation name="drink_short" file="models/character/animations/dressDrinkShort.upa"/>
+		    <animation name="drink" file="models/character/animations/dressDrinkLong.upa"/>
+	    
+		    <!-- Section: Interacting with Decorations -->
+				<animation name="examine_bookshelf" file="models/character/animations/dressExamineBookshelf.upa"/>
+				<animation name="examine_painting_neutral" file="models/character/animations/dressExaminePaintingNeutral.upa"/>
+				<animation name="examine_painting_moved" file="models/character/animations/dressExaminePaintingMoved.upa"/>
+				<animation name="examine_painting_dismiss" file="models/character/animations/dressExaminePaintingDismiss.upa"/>
+				<animation name="examine_painting_shrug" file="models/character/animations/dressExaminePaintingShrug.upa"/>	
+	    
+	    <!-- Section: Emoting and Talking -->
+		    <animation name="insanity_worship" file="models/character/animations/dressInsanityWorship.upa"/>
+		    <animation name="cry" file="models/character/animations/dressCrying.upa"/>
+		    <animation name="sad_subtle" file="models/character/animations/dressSubtleSad.upa"/>
+		    <animation name="stretch" file="models/character/animations/dressStretch.upa"/>	
+		    <animation name="chat" file="models/character/animations/dressChatting.upa" />
+		    <animation name="chat2" file="models/character/animations/dressChattingAlt.upa"/>
+		    <animation name="chat3" file="models/character/animations/dressChattingAlt2.upa"/>
+		    <animation name="express_hunger" file="models/character/animations/dressHungry.upa"/>
+		    <animation name="listen" file="models/character/animations/dressListening.upa"/>
+		    <animation name="listen2" file="models/character/animations/dressListeningAlt.upa"/>
+		    <animation name="listen3" file="models/character/animations/dressListeningAlt2.upa"/>
+		    <animation name="dust_self_off" file="models/character/animations/dressDust.upa"/>
+		    <animation name="dust_self_off_exaggerated" file="models/character/animations/dressDustMega.upa"/>
+		    <animation name="eureka" file="models/character/animations/dressEureka.upa" loop="false"/>
+		    <animation name="huzzah" file="models/character/animations/dressEureka.upa" loop="false"/>
+		    <animation name="salute" file="models/character/animations/dressSalute.upa" loop="false"/>
+		    <animation name="scared" file="models/character/animations/dressScared1.upa" loop="false"/>
+		    <animation name="scared_stumble_back" file="models/character/animations/dressScared2Move.upa" loop="false"/>
+		    <animation name="winded" file="models/character/animations/dressTired.upa"/>
+		    <animation name="vomit" file="models/character/animations/dressVomit.upa" loop="false"/>
+		    <animation name="who_me" file="models/character/animations/dressWhoMe.upa" loop="false"/>
+		    <animation name="anger" file="models/character/animations/dressGenericAnger.upa"/>
+		    <animation name="stomp_something" file="models/character/animations/dressAltStomp.upa"  loop="false"/>
+		    <animation name="stomp_enthusiastically" file="models/character/animations/dressStomp.upa"  loop="false"/>
+		    <animation name="freak_out" file="models/character/animations/dressFreakOut.upa" loop="false"/>
+		    
+		    <animation name="pushup_start" file="models/character/animations/dressPushupStart.upa" loop="false"/>
+		    <animation name="pushup_loop" file="models/character/animations/dressPushupLoop.upa"/>
+		    <animation name="pushup_end" file="models/character/animations/dressPushupEnd.upa" loop="false"/>
+		    
+			<!-- Subsection: Paired Animations -->
+			<animation name="blaming" file="models/character/animations/dressBlamingBlamer.upa" loop="false"/>
+			<animation name="blaming_o" file="models/character/animations/dressBlamingBlamed.upa" loop="false"/>
+			
+			<animation name="comforting" file="models/character/animations/dressComfortingComforted.upa" loop="false"/>
+			<animation name="comforting_o" file="models/character/animations/dressComfortingComforter.upa" loop="false"/>
+			
+			<animation name="hugging" file="models/character/animations/dressHuggingHugged.upa" loop="false"/>
+			<animation name="hugging_o" file="models/character/animations/dressHuggingHugger.upa" loop="false"/>
+			
+			<animation name="kissing" file="models/character/animations/dressKissingKissed.upa" loop="false"/>
+			<animation name="kissing_o" file="models/character/animations/dressKissingKisser.upa" loop="false"/>
+			
+			<animation name="slapping" file="models/character/animations/dressSlappingSlapper.upa" loop="false"/>
+			<animation name="slapping_o" file="models/character/animations/dressSlappingSlapped.upa" loop="false"/>
+			
+			<animation name="whispering" file="models/character/animations/dressWhisperingWhisperer.upa" loop="false"/>
+			<animation name="whispering_o" file="models/character/animations/dressWhisperingWhispered.upa" loop="false"/>
+			
+			<animation name="axemurder" file="models/character/animations/dressAxeMurderer.upa" loop="false"/>
+			<animation name="axemurder_o" file="models/character/animations/dressAxeMurdered.upa" loop="false"/>
+	    
+	    <!-- Section: Interaction with Commodities -->
+			<animation name="idle_with_item" file="models/character/animations/dressCommodityIdlePlaceholder.upa"/>
+			<animation name="walk_with_item" file="models/character/animations/dressCommodWalk.upa"/>
+			<animation name="talk_with_item" file="models/character/animations/dressCommodTalk.upa"/>
+			<animation name="say_yes_with_item" file="models/character/animations/dressCommodTalkNod.upa"/>
+			<animation name="say_no_with_item" file="models/character/animations/dressCommodTalkShakeHead.upa" />
+			
+			<animation name="lift_item_h0_p1" file="models/character/animations/dressCommodityLiftH0P1.upa" loop="false" />
+			<animation name="lift_item_h0_p2" file="models/character/animations/dressCommodityLiftH0P2.upa" loop="false"/>
+			<animation name="lift_item_h1_p1" file="models/character/animations/dressCommodityLiftH1P1.upa" loop="false"/>
+			<animation name="lift_item_h1_p2" file="models/character/animations/dressCommodityLiftH1P2.upa" loop="false"/>
+			<animation name="lift_item_h2_p1" file="models/character/animations/dressCommodityLiftH2P1.upa" loop="false"/>
+			<animation name="lift_item_h2_p2" file="models/character/animations/dressCommodityLiftH2P2.upa" loop="false"/>
+			<animation name="lift_item_h3_p1" file="models/character/animations/dressCommodityLiftH3P1.upa" loop="false"/>
+			<animation name="lift_item_h3_p2" file="models/character/animations/dressCommodityLiftH3P2.upa" loop="false"/>
+			<animation name="lift_item_h4_p1" file="models/character/animations/dressCommodityLiftH4P1.upa" loop="false"/>
+			<animation name="lift_item_h4_p2" file="models/character/animations/dressCommodityLiftH4P2.upa" loop="false"/>
+			
+			<animation name="drop_item_h0_p1" file="models/character/animations/dressCommodityPlaceH0P1.upa" loop="false"/>
+			<animation name="drop_item_h0_p2" file="models/character/animations/dressCommodityPlaceH0P2.upa" loop="false"/>
+			<animation name="drop_item_h1_p1" file="models/character/animations/dressCommodityPlaceH1P1.upa" loop="false"/>
+			<animation name="drop_item_h1_p2" file="models/character/animations/dressCommodityPlaceH1P2.upa" loop="false"/>
+			<animation name="drop_item_h2_p1" file="models/character/animations/dressCommodityPlaceH2P1.upa" loop="false"/>
+			<animation name="drop_item_h2_p2" file="models/character/animations/dressCommodityPlaceH2P2.upa" loop="false"/>
+			<animation name="drop_item_h3_p1" file="models/character/animations/dressCommodityPlaceH3P1.upa" loop="false"/>
+			<animation name="drop_item_h3_p2" file="models/character/animations/dressCommodityPlaceH3P2.upa" loop="false"/>
+			<animation name="drop_item_h4_p1" file="models/character/animations/dressCommodityPlaceH4P1.upa" loop="false"/>
+			<animation name="drop_item_h4_p2" file="models/character/animations/dressCommodityPlaceH4P2.upa" loop="false"/>
+			
+			<animation name="place_item_on_table_p1" file="models/character/animations/dressCommodityPlaceTableP1.upa" loop="false"/>
+			<animation name="place_item_on_table_p2" file="models/character/animations/dressCommodityPlaceTableP2.upa" loop="false"/>
+			<animation name="pick_up_item_from_table_p1" file="models/character/animations/dressCommodityLiftTableP1.upa" loop="false"/>
+			<animation name="pick_up_item_from_table_p2" file="models/character/animations/dressCommodityLiftTableP2.upa" loop="false"/>
+			
+			<animation name="insert_commod_p1" file="models/character/animations/dressInsertCommodP1.upa" loop="false"/>
+			<animation name="insert_commod_p2" file="models/character/animations/dressInsertCommodP2.upa" loop="false"/>
+			<animation name="remove_commod_p1" file="models/character/animations/dressRemoveCommodP1.upa" loop="false"/>
+			<animation name="remove_commod_p2" file="models/character/animations/dressRemoveCommodP2.upa" loop="false"/>
+	    
+	    <!-- Section: Interaction with Props -->
+			<animation name="pickup_tool_1" file="models/character/animations/dressPropLiftP1.upa" loop="false"/>
+			<animation name="pickup_tool_2" file="models/character/animations/dressPropLiftP2.upa" loop="false"/>
+			<animation name="pickup_tool_table_1" file="models/character/animations/dressPropLiftTableP1.upa" loop="false"/>
+			<animation name="pickup_tool_table_2" file="models/character/animations/dressPropLiftTableP2.upa" loop="false"/>
+			<animation name="pickup_tool_workbench_1" file="models/character/animations/dressPropLiftWorkbenchP1.upa" loop="false"/>
+			<animation name="pickup_tool_workbench_2" file="models/character/animations/dressPropLiftWorkbenchP2.upa" loop="false"/>
+			
+			<animation name="drop_tool_1" file="models/character/animations/dressPropDropP1.upa" loop="false"/>
+			<animation name="drop_tool_2" file="models/character/animations/dressPropDropP2.upa" loop="false"/>
+			<animation name="drop_tool_table_1" file="models/character/animations/dressPropDropTableP1.upa" loop="false"/>
+			<animation name="drop_tool_table_2" file="models/character/animations/dressPropDropTableP2.upa" loop="false"/>
+			<animation name="drop_tool_workbench_1" file="models/character/animations/dressPropDropWorkbenchP1.upa" loop="false"/>
+			<animation name="drop_tool_workbench_2" file="models/character/animations/dressPropDropWorkbenchP2.upa" loop="false"/>
+			
+			<animation name="chat_prop" file="models/character/animations/dressChatProp.upa" loop="false"/>
+			<animation name="chat_prop_2" file="models/character/animations/dressAnimatedChatProp.upa" loop="false"/>
+	    
+	    <!-- Section: Sitting -->
+			<animation name="sitting_chair_idle" file="models/character/animations/dressSittingIdle.upa"/>
+			<animation name="sitting_chair_drink_table" file="models/character/animations/dressSittingDrinkTable.upa" loop="false"/>
+			<animation name="sitting_chair_drink_hand" file="models/character/animations/dressSittingDrinkHand.upa" loop="false"/>
+			<animation name="sitting_chair_eat" file="models/character/animations/dressSittingEatNoTable.upa" />
+			<animation name="sitting_table_eat_p1" file="models/character/animations/dressSittingEatP1.upa" loop="false"/>
+			<animation name="sitting_table_eat_p2" file="models/character/animations/dressSittingEatP2.upa" loop="false"/>
+			<animation name="sitting_chair_idleLC" file="models/character/animations/dressSittingIdleLC.upa" loop="true"/>
+			<animation name="sitting_chair_idleMC" file="models/character/animations/dressSittingIdleMC.upa" loop="true"/>
+			<animation name="sitting_chair_idleUC" file="models/character/animations/dressSittingIdleUC.upa" loop="true"/>
+			<animation name="sitting_chair_listening" file="models/character/animations/dressSittingListening.upa"/>
+			<animation name="sitting_chair_reading" file="models/character/animations/dressSittingReading.upa"/>
+			<animation name="sitting_chair_surprised" file="models/character/animations/dressSittingSurprised.upa" loop="false"/>
+			<animation name="sitting_chair_talking" file="models/character/animations/dressSittingTalking.upa"/>
+			<animation name="sitting_chair_listening" file="models/character/animations/dressSittingListening.upa"/>
+			<animation name="sitting_chair_writing" file="models/character/animations/dressSittingWriting.upa"/>
+			<animation name="sitting_chair_working" file="models/character/animations/dressSittingWorking.upa"/>
+			<animation name="sitting_chair_die" file="models/character/animations/dressSittingDying.upa" loop="false"/>
+		
+	    <!-- Section: Vehicles -->
+	    
+		    <!-- Subsection: Steam Crawler Riding -->
+				<animation name="steamcrawler_idle_off" file="models/character/animations/dressCrawlerSittingIdle.upa"/>
+				<animation name="steamcrawler_idle_on" file="models/character/animations/dressCrawlerSittingIdleOn.upa"/>
+				
+				<animation name="steamcrawler_idle_forward_begin" file="models/character/animations/dressCrawlerSittingForwardStart.upa" loop="false"/>
+				<animation name="steamcrawler_idle_forward" file="models/character/animations/dressCrawlerSittingForward.upa"/>
+				<animation name="steamcrawler_idle_forward_halt" file="models/character/animations/dressCrawlerSittingForwardStop.upa" loop="false"/>
+				
+				<animation name="steamcrawler_idle_backward_begin" file="models/character/animations/dressCrawlerSittingBackwardStart.upa" loop="false"/>
+				<animation name="steamcrawler_idle_backward" file="models/character/animations/dressCrawlerSittingBackward.upa"/>
+				<animation name="steamcrawler_idle_backward_halt" file="models/character/animations/dressCrawlerSittingBackwardStop.upa" loop="false"/>
+		    
+		    <!-- Subsection: Mounted Gun Riding -->
+				<animation name="gun_sitting_transition_to_firing_position" file="models/character/animations/dressGunSittingToFiring.upa" loop="false"/>
+				<animation name="gun_sitting_transition_from_firing_position" file="models/character/animations/dressGunSittingFromFiring.upa" loop="false"/>
+				<animation name="gun_sitting_aiming" file="models/character/animations/dressGunSittingAiming.upa"/>
+				<animation name="gun_sitting_reloading" file="models/character/animations/dressGunSittingReloading.upa" loop="false"/>
+				<animation name="gun_sitting_firing" file="models/character/animations/dressGunSittingFiring.upa"/>
+				<animation name="gun_sitting_hit" file="models/character/animations/dressGunSittingAiming.upa"/>
+				<animation name="gun_sitting_die_part_1" file="models/character/animations/dressGunSittingDieSlump.upa" loop="false"/>
+				<animation name="gun_sitting_die_part_2" file="models/character/animations/dressGunSittingDieFall.upa" loop="false"/>
+	    
+	    <!-- Section: Miscellany --> 
+			<animation name="triforce" file="models/character/animations/dressHoldUp.upa"/>
+			<animation name="dance" file="models/character/animations/dressJig.upa"/>
+			<animation name="rhino_beetle_affection_paired_anim" file="models/character/animations/dressAffectionRhinoBeetle.upa"/>
+			
+			<animation name="grabbed_by_geometer" file="models\\character\\animations\\dressGeometerGrab.upa"/>
+			<animation name="carried_by_geometer" file="models\\character\\animations\\dressGeometerCarry.upa"/>
+			<animation name="dropped_by_geometer" file="models\\character\\animations\\dressGeometerDrop.upa"/>
+			
+			<animation name="lesser_transform_p1" file="models/character/animations/dressLesserTransformP1.upa" loop="false"/>
+			<animation name="lesser_transform_p2" file="models/character/animations/dressLesserTransformP2.upa" loop="false"/>
+			
+			<animation name="stare_at_sea" file="models/character/animations/dressStareAtSea.upa" loop="false"/>
+			
+			
+			<animation name="macroscope_lookat_loop_start" file="models/character/animations/dressMacroscopeLook.upa" loop="false"/>
+			<animation name="macroscope_lookat_loop" file="models/character/animations/dressMacroscopeLooking.upa"/>
+			<animation name="macroscope_lookat_loop_end" file="models/character/animations/dressMacroscopeUnLook.upa"/>
+			<animation name="macroscope_freakout" file="models/character/animations/dressMacroscopeFlipOut.upa"/>
+			
+			<animation name="horror_explode" file="models/character/animations/dressExplode.upa" loop="false"/>
+			
+			<animation name="grabbed_by_obeliskian" file="models/character/animations/dressObileskianGrab.upa" loop="false"/>
+			<animation name="carried_by_obeliskian" file="models/character/animations/dressObileskianCarry.upa"/>
+			<animation name="dropped_by_obeliskian" file="models/character/animations/dressObileskianDrop.upa" loop="false"/>
+			
+			<animation name="corpse_lifted" file="models/character/animations/dressCorpseLifted.upa" loop="false"/>
+			<animation name="corpse_carried" file="models/character/animations/dressCorpseCarried.upa" loop="false"/>
+			<animation name="corpse_dropped" file="models/character/animations/dressCorpseDropped.upa" loop="false"/>
+			
+			<animation name="worshipping_start" file="models/character/animations/dressWorshipStart.upa" loop="false"/>
+			<animation name="worshipping_loop" file="models/character/animations/dressWorshipLoop.upa"/>
+			<animation name="worshipping_end" file="models/character/animations/dressWorshipEnd.upa" loop="false"/>
+	
+		<!-- DEPRECATED. Used for compatibility only! -->
+			<animation name="pickup_item_p1" file="models/character/animations/dressCommodityLiftP1.upa" loop="false"/>
+			<animation name="pickup_item_p2" file="models/character/animations/dressCommodityLiftP2.upa" loop="false"/>
+			<animation name="drop_item_1" file="models/character/animations/dressCommodityDropP1.upa" loop="false"/>
+			<animation name="drop_item_2" file="models/character/animations/dressCommodityDropP2.upa" loop="false"/>
+	
+		<!-- Section: Class specific animations -->
+			<animationset name="dressLC">
+				<animation name="idle" file="models/character/animations/dressIdleLC.upa"/>
+				<animation name="walk" file="models/character/animations/dressWalkLC.upa"/>
+				<animation name="angry" file="models/character/animations/dressAngerLC.upa"/>
+				<animation name="laugh" file="models/character/animations/dressLaughLC.upa"/>
+				<animation name="cough" file="models/character/animations/dressCoughingLC.upa"/>
+				<animation name="snub" file="models/character/animations/dressSnubLC.upa" loop="false"/>
+				<animation name="wave" file="models/character/animations/dressWaveHelloLC.upa" loop="false"/>
+			</animationset>
+    
+			<animationset name="dressMC">
+				<animation name="idle" file="models/character/animations/dressIdleMC.upa"/>
+				<animation name="walk" file="models/character/animations/dressWalkMC.upa"/>
+				<animation name="angry" file="models/character/animations/dressAngerLC.upa"/>
+				<animation name="laugh" file="models/character/animations/dressLaughLC.upa"/>
+				<animation name="cough" file="models/character/animations/dressCoughingLC.upa"/>
+				<animation name="snub" file="models/character/animations/dressSnubLC.upa" loop="false"/>
+				<animation name="wave" file="models/character/animations/dressWaveHelloLC.upa" loop="false"/>
+			</animationset>
+		  
+			<animationset name="dressUC">
+				<animation name="idle" file="models/character/animations/dressIdleUC.upa"/>
+				<animation name="walk" file="models/character/animations/dressWalkUC.upa"/>
+				<animation name="angry" file="models/character/animations/dressAngerUC.upa"/>
+				<animation name="laugh" file="models/character/animations/dressLaughUC.upa"/>
+				<animation name="cough" file="models/character/animations/dressCoughingUC.upa"/>
+				<animation name="snub" file="models/character/animations/dressSnubUC.upa" loop="false"/>
+				<animation name="wave" file="models/character/animations/dressWaveHelloUC.upa" loop="false"/>
+			</animationset>
+			
+	</animationset>
+
+  <!-- aurochs. Basically, chickens with more animations. -->
+
+     <animationset name="aurochs">
+          <animation name="idle" file="models/character/animations/aurochsIdle.upa" />
+          <animation name="walk" file="models/character/animations/aurochsWalk.upa" />
+          <animation name="walk_run" file="models/character/animations/aurochsRun.upa" />
+          <animation name="eat" file="models/character/animations/aurochsGraze.upa" />
+          <animation name="attack" file="models/character/animations/aurochsAtk.upa" loop="false"/>
+          <animation name="death" file="models/character/animations/aurochsDie.upa"  loop="false" />
+          <animation name="charge" file="models/character/animations/aurochsCharge.upa" />
+          <animation name="gore_halt" file="models/character/animations/aurochsGoreHalt.upa" loop="false"/>
+          <animation name="gore_through" file="models/character/animations/aurochsGoreThru.upa" loop="false"/>    
+     </animationset>
+
+	<animationset name="aurochsWooly">
+		<animation name="idle" file="models/character/animations/aurochsWoolyIdle.upa" />
+		<animation name="walk" file="models/character/animations/aurochsWoolyWalk.upa" />
+		<animation name="walk_run" file="models/character/animations/aurochsWoolyRun.upa" />
+		<animation name="eat" file="models/character/animations/aurochsWoolyGraze.upa" />
+		<animation name="death" file="models/character/animations/aurochsWoolyDie.upa" loop="false" />
+		<animation name="charge" file="models/character/animations/aurochsWoolyCharge.upa" />
+		<animation name="gore_halt" file="models/character/animations/aurochsWoolyGoreHalt.upa" loop="false"/>
+		<animation name="gore_through" file="models/character/animations/aurochsWoolyGoreThru.upa" loop="false"/>
+	</animationset>
+
+     <animationset name="chicken">
+		<animation name="idle" file="models/character/animations/chickenIdle.upa" />
+		<animation name="walk" file="models/character/animations/chickenWalk.upa" />
+		<animation name="walk_run" file="models/character/animations/chickenRun.upa" />
+		<animation name="eat" file="models/character/animations/chickenPeck.upa" />
+		<animation name="hit" file="models/character/animations/chickenIdle.upa" />
+		<animation name="death" file="models/character/animations/chickenDie.upa" loop="false"/>
+		<animation name="attack" file="models/character/animations/chickenPeck.upa" />
+		<animation name="nest_start" file="models/character/animations/chickenSit.upa" />
+		<animation name="nest_loop" file="models/character/animations/chickenIdle.upa" />
+		<animation name="nest_end" file="models/character/animations/chickenStandUp.upa" />
+     </animationset>
+  
+	<animationset name="deerM">
+		<animation name="idle" file="models/character/animations/deerMIdle.upa" />
+		<animation name="walk" file="models/character/animations/deerMWalk.upa" />
+		<animation name="walk_run" file="models/character/animations/deerMRun.upa" />
+		<animation name="eat" file="models/character/animations/deerMEat.upa" />
+		<animation name="surprised" file="models/character/animations/deerMStartle.upa" loop="false"/>
+		<animation name="death" file="models/character/animations/deerMDie.upa" loop="false"/>
+		<animation name="death2" file="models/character/animations/deerMDieAlt.upa" loop="false"/>
+		<animation name="attack" file="models/character/animations/deerMAtk.upa" />
+	</animationset>
+
+	<animationset name="deerF">
+		<animation name="idle" file="models/character/animations/deerFIdle.upa" />
+		<animation name="walk" file="models/character/animations/deerFWalk.upa" />
+		<animation name="walk_run" file="models/character/animations/deerFRun.upa" />
+		<animation name="eat" file="models/character/animations/deerFEat.upa" />
+		<animation name="surprised" file="models/character/animations/deerFStartle.upa" />
+		<animation name="death" file="models/character/animations/deerFDie.upa" loop="false"/>
+		<animation name="death2" file="models/character/animations/deerFDieAlt.upa" loop="false"/>
+		<animation name="attack" file="models/character/animations/deerFAtk.upa" />
+	</animationset>
+  
+	<animationset name="dodo">
+		<animation name="idle" file="models/character/animations/dodoIdle.upa" />
+		<animation name="walk" file="models/character/animations/dodoWalk.upa" />
+		<animation name="walk_run" file="models/character/animations/dodoRun.upa" />
+		<animation name="eat" file="models/character/animations/dodoEat.upa" />
+		<animation name="hit" file="models/character/animations/dodoHurt.upa" loop="false"/>
+		<animation name="death" file="models/character/animations/dodoDie.upa" loop="false"/>
+		<animation name="attack" file="models/character/animations/dodoAtk.upa" />
+		<animation name="nest_start" file="models/character/animations/dodoNestIn.upa" loop="false"/>
+		<animation name="nest_loop" file="models/character/animations/dodoNestLoop.upa" />
+		<animation name="nest_end" file="models/character/animations/dodoNestOut.upa" loop="false"/>
+	</animationset>
+	
+	<animationset name="deathwurm">
+          <animation name="idle" file="models/character/animations/deathwurmIdle.upa" />
+          <animation name="walk" file="models/character/animations/deathwurmMove.upa" />
+          <animation name="walk_run" file="models/character/animations/deathwurmMove.upa" />
+          <animation name="eat" file="models/character/animations/deathwurmEatSmall.upa" loop="false" />
+		<animation name="eat2" file="models/character/animations/deathwurmEatLarge.upa" loop="false"/>
+          <animation name="attack" file="models/character/animations/deathwurmAtk.upa" loop="false"/>
+          <animation name="death" file="models/character/animations/deathwurmDie.upa"  loop="false" />
+          <animation name="burrow" file="models/character/animations/deathwurmDisappear.upa" loop="false" />
+          <animation name="unburrow" file="models/character/animations/deathwurmAppear.upa" loop="false"/>
+          <animation name="hole_poke_unburrow" file="models/character/animations/deathwurmPokeUp.upa" loop="false"/>
+		<animation name="hole_poke_burrow" file="models/character/animations/deathwurmPokeDown.upa" loop="false"/>
+		<animation name="hole_poke_leap" file="models/character/animations/deathwurmPokeLeap.upa" loop="false"/>
+		<animation name="hole_poke_idle" file="models/character/animations/deathwurmPokeLook.upa" loop="false"/>
+		<animation name="hole_poke_spit" file="models/character/animations/deathwurmPokeSpit.upa" loop="false"/>
+		<animation name="hole_poke_die" file="models/character/animations/deathwurmPokeDie.upa" loop="false"/>  
+     </animationset>
+
+
+	<animationset name="beetle">
+		<animation name="idle" file="models/character/animations/beetleIdle.upa" />
+		<animation name="walk" file="models/character/animations/beetleWalk.upa" />
+		<animation name="walk_run" file="models/character/animations/beetleRun.upa" />
+		<animation name="eat" file="models/character/animations/beetleEat.upa" />
+		<animation name="attack" file="models/character/animations/beetleAtk.upa" />
+		<animation name="burrow" file="models/character/animations/beetleAtk.upa" />
+		<animation name="unburrow" file="models/character/animations/beetleAtk.upa" />
+		<animation name="death" file="models/character/animations/beetleDie.upa" loop="false"/>
+		<animation name="hit" file="models/character/animations/beetleHit.upa" />
+		<animation name="pounce" file="models/character/animations/beetlePounce.upa" loop="false"/>
+	</animationset>
+   
+	<animationset name="beetle_small">
+		<animation name="walk" file="models/character/animations/beetleSmallRun.upa" />
+		<animation name="walk_run" file="models/character/animations/beetleSmallRunFancy.upa" />    <!-- for runs over long distances, for long times -->
+		<animation name="death" file="models/character/animations/beetleSmallDie.upa" loop="false"/>
+		<animation name="unburrow" file="models/character/animations/beetleSmallDigUp.upa" loop="false"/>
+		<animation name="burrow" file="models/character/animations/beetleSmallDigDown.upa" loop="false"/>
+		<animation name="idle" file="models/character/animations/beetleSmallIdle.upa" />
+		<animation name="hurt" file="models/character/animations/beetleSmallDig.upa" />
+		<animation name="attack" file="models/character/animations/beetleSmallDig.upa" />
+		<animation name="eat" file="models/character/animations/beetleSmallDig.upa" />
+	</animationset>
+   
+	<animationset name="beetleGiant">
+		<animation name="affection" file="models/character/animations/rhinoBeetleAffection.upa" loop="false"/>
+		<animation name="idle" file="models/character/animations/rhinoBeetleIdle.upa" />
+		<animation name="walk" file="models/character/animations/rhinoBeetleWalk.upa" />
+		<animation name="walk_run" file="models/character/animations/rhinoBeetleRun.upa" />
+		<animation name="eat" file="models/character/animations/rhinoBeetleEat.upa" />
+		<animation name="hurt" file="models/character/animations/rhinoBeetleHit.upa" />
+		<animation name="death" file="models/character/animations/rhinoBeetleDieShort.upa"  loop="false" />
+		<animation name="death2" file="models/character/animations/rhinoBeetleDieLong.upa"  loop="false" />
+		<animation name="charge" file="models/character/animations/rhinoBeetleChargeAtk.upa" loop="false"/>
+		<animation name="attack" file="models/character/animations/rhinoBeetleAtk.upa" />
+		<animation name="sleep" file="models/character/animations/rhinoBeetleSleepLoop.upa" />
+		<animation name="sleep_start" file="models/character/animations/rhinoBeetleSleepStart.upa" loop="false"/>
+		<animation name="sleep_end" file="models/character/animations/rhinoBeetleSleepEnd.upa" loop="false"/>
+	</animationset>
+   
+	<animationset name="capybara">
+		<animation name="walk" file="models/character/animations/capyWalk.upa" />
+		<animation name="walk_run" file="models/character/animations/capyRun.upa"/>
+		<animation name="attack" file="models/character/animations/capyAtk.upa" />
+		<animation name="death" file="models/character/animations/capyDie.upa" loop="false"/>
+		<animation name="hit" file="models/character/animations/capyGethit.upa" />
+		<animation name="idle" file="models/character/animations/capyIdle.upa" />
+		<animation name="sleep" file="models/character/animations/capySleep.upa" />
+		<animation name="root" file="models/character/animations/capyRooting.upa" />
+		<animation name="sniff" file="models/character/animations/capySniff.upa" />
+		<animation name="eat" file="models/character/animations/capyRooting.upa" />
+	</animationset>
+	
+	<animationset name="snail">
+		<animation name="walk" file="models/character/animations/snailWalk.upa" />
+		<animation name="walk_run" file="models/character/animations/snailRun.upa"/>
+		<animation name="attack" file="models/character/animations/snailAtk.upa" />
+		<animation name="death" file="models/character/animations/snailDie.upa" loop="false"/>
+		<animation name="hit" file="models/character/animations/snailHit.upa" />
+		<animation name="idle" file="models/character/animations/snailIdle.upa" />
+		<animation name="eat" file="models/character/animations/snailEat.upa" />
+	</animationset>
+	
+	<animationset name="landDragon">
+		<animation name="walk" file="models/character/animations/landDragonWalk.upa" />
+		<animation name="walk_run" file="models/character/animations/landDragonRun.upa"/>
+		<animation name="attack" file="models/character/animations/landDragonAtk.upa" />
+		<animation name="death" file="models/character/animations/landDragonDie.upa" loop="false"/>
+		<animation name="hit" file="models/character/animations/landDragonHit.upa" />
+		<animation name="idle" file="models/character/animations/landDragonIdle.upa" />
+		<animation name="eat" file="models/character/animations/landDragonEat.upa" />
+	</animationset>
+	
+	<animationset name="echidna">
+		<animation name="walk" file="models/character/animations/echidnaWalk.upa" />
+		<animation name="walk_run" file="models/character/animations/echidnaRun.upa" />
+		<animation name="idle" file="models/character/animations/echidnaIdle.upa" />
+		<animation name="hit" file="models/character/animations/echidnaHit.upa" />
+		<animation name="eat" file="models/character/animations/echidnaEat.upa" />
+		<animation name="die" file="models/character/animations/echidnaDie.upa" loop="false"/>
+		<animation name="ball_spines" file="models/character/animations/echidnaBallSpines.upa" />
+		<animation name="out_ball" file="models/character/animations/echidnaBallOut.upa" loop="false"/>
+		<animation name="ball_knux" file="models/character/animations/echidnaBallKnx.upa" loop="false"/>
+		<animation name="into_ball" file="models/character/animations/echidnaBallInto.upa" loop="false"/>
+		<animation name="ball_idle" file="models/character/animations/echidnaBallIdle.upa" />
+	</animationset>
+   
+	<animationset name="fox">
+		<animation name="idle" file="models/character/animations/foxIdle.upa" />
+		<animation name="walk" file="models/character/animations/foxWalk.upa" />    
+		<animation name="walk_run" file="models/character/animations/foxRun.upa" />    
+		<animation name="eat" file="models/character/animations/foxEat.upa" />
+		<animation name="sniff" file="models/character/animations/foxSniff.upa" />
+		<animation name="stare" file="models/character/animations/foxStareAt.upa" />  
+		<animation name="attack" file="models/character/animations/foxSnap.upa" />      
+		<animation name="death" file="models/character/animations/foxDie.upa"  loop="false" />
+		<animation name="hit" file="models/character/animations/foxSnap.upa" />
+		<animation name="barf" file="models/character/animations/foxBarf.upa" loop="false"/>    
+		<animation name="sleepingStart" file="models/character/animations/foxSleep.upa"  loop="false" />
+		<animation name="sleepingLoop" file="models/character/animations/foxSleepLoop.upa" />
+		<animation name="sleepingEnd" file="models/character/animations/foxWakeup.upa"  loop="false" />
+	</animationset>
+    
+	<animationset name="tapir">
+		<animation name="walk" file="models/character/animations/tapirWalk.upa"/>
+		<animation name="walk_run" file="models/character/animations/tapirRun.upa"/>
+		<animation name="attack" file="models/character/animations/tapirAtk.upa"/>
+		<animation name="death" file="models/character/animations/tapirDie.upa" loop="false"/>
+		<animation name="hit" file="models/character/animations/tapirHit.upa"/>
+		<animation name="idle" file="models/character/animations/tapirIdle.upa"/>
+		<animation name="root" file="models/character/animations/tapirRooting.upa"/>
+		<animation name="sleep" file="models/character/animations/tapirSleep.upa"/>
+		<animation name="sniff" file="models/character/animations/tapirSniff.upa"/>
+		<animation name="eat" file="models/character/animations/tapirRooting.upa"/>
+	</animationset>
+	
+	<animationset name="tortoise">
+		<animation name="walk" file="models/character/animations/tortoiseWalk.upa"/>
+		<animation name="walk_run" file="models/character/animations/tortoiseWalk.upa"/>
+		<animation name="death" file="models/character/animations/tortoiseDie.upa" loop="false"/>
+		<animation name="eat" file="models/character/animations/tortoiseEat.upa"/>
+		<animation name="idle" file="models/character/animations/tortoiseIdle.upa"/>
+		<animation name="pop_out" file="models/character/animations/tortoisePopOut.upa" loop="false"/>
+		<animation name="retract" file="models/character/animations/tortoiseRetract.upa" loop="false"/>
+		<animation name="sleep" file="models/character/animations/tortoiseSleep.upa"/>
+	</animationset>
+   
+	<animationset name="horseshoecrabGiant">
+		<animation name="attack" file="models/character/animations/horseshoeCrabLGAtk.upa"/>
+		<animation name="eat" file="models/character/animations/horseshoeCrabLGAtk.upa"/>
+		<animation name="walk" file="models/character/animations/horseshoeCrabLGWalk.upa" />
+		<animation name="walk_run" file="models/character/animations/horseshoeCrabLGRun.upa" />
+		<animation name="death" file="models/character/animations/horseshoeCrabLGDie.upa" loop="false"/>
+		<animation name="dig_up" file="models/character/animations/horseshoeCrabLGSurface.upa" loop="false"/>
+		<animation name="dig_down" file="models/character/animations/horseshoeCrabLGDig.upa" loop="false"/>
+		<animation name="hurt" file="models/character/animations/horseshoeCrabLGHurt.upa" />
+		<animation name="idle" file="models/character/animations/horseshoeCrabLGIdle.upa" />
+		<animation name="surprise" file="models/character/animations/horseshoeCrabLGSurprised.upa" loop="false"/>
+	</animationset>
+   
+	<animationset name="horseshoecrab">
+		<animation name="attack" file="models/character/animations/horseshoeCrabSMAtk.upa"/>
+		<animation name="eat" file="models/character/animations/horseshoeCrabSMAtk.upa"/>
+		<animation name="walk" file="models/character/animations/horseshoeCrabSMWalk.upa" />
+		<animation name="run" file="models/character/animations/horseshoeCrabSMWalk.upa" />
+		<animation name="death" file="models/character/animations/horseshoeCrabSMDie.upa" loop="false"/>
+		<animation name="dig_up" file="models/character/animations/horseshoeCrabSMSurface.upa" />
+		<animation name="dig_down" file="models/character/animations/horseshoeCrabSMBury.upa" />
+		<animation name="dig" file="models/character/animations/horseshoeCrabSMBury.upa" />
+		<animation name="hurt" file="models/character/animations/horseshoeCrabSMHurt.upa" />
+		<animation name="idle" file="models/character/animations/horseshoeCrabSMIdle.upa" />
+		<animation name="surprise" file="models/character/animations/horseshoeCrabSMSurprised.upa" />
+	</animationset>
+   
+	<animationset name="frog">
+		<animation name="walk" file="models/character/animations/frogWalk.upa" />
+		<animation name="walk_run" file="models/character/animations/frogWalk.upa" />
+		<animation name="hop" file="models/character/animations/frogHop.upa" />
+		<animation name="idle" file="models/character/animations/frogIdle.upa" />
+		<animation name="eat" file="models/character/animations/frogIdle.upa" />
+		<animation name="swim" file="models/character/animations/frogSwim.upa" />
+	</animationset>
+	
+	<animationset name="manOWar">
+		<animation name="eat" file="models/character/animations/manOWarNibble.upa" />
+		<animation name="attack" file="models/character/animations/manOWarNibble.upa" /> <!--placeholder-->
+		<animation name="walk" file="models/character/animations/manOWarMove.upa" />
+		<animation name="run" file="models/character/animations/manOWarMove.upa" /> <!--placeholder, maybe. Do they even need to run?-->
+		<animation name="idle" file="models/character/animations/manOWarIdle.upa" />
+		<animation name="hit" file="models/character/animations/manOWarHit.upa" />
+		<animation name="die" file="models/character/animations/manOWarDie.upa" loop="false"/>
+	</animationset>
+   
+	<animationset name="trilobite">
+		<animation name="idle" file="models/character/animations/trilobiteIdle.upa" />
+		<animation name="walk" file="models/character/animations/trilobiteRun.upa" />
+		<animation name="walk_fancy" file="models/character/animations/trilobiteRunFancy.upa" />
+		<animation name="walk_run" file="models/character/animations/trilobiteRun.upa" />
+		<animation name="swim" file="models/character/animations/trilobiteSwim.upa" />
+		<animation name="swim_to_land" file="models/character/animations/trilobiteSwimToLand.upa" loop="false"/>
+		<animation name="land_to_swim" file="models/character/animations/trilobiteSwimToLand.upa" loop="false"/>
+		<animation name="dig" file="models/character/animations/trilobiteDig.upa" />
+		<animation name="eat" file="models/character/animations/trilobiteDig.upa" />
+		<animation name="dig_up" file="models/character/animations/trilobiteDigUp.upa" />
+		<animation name="dig_down" file="models/character/animations/trilobiteDigDown.upa" />
+		<animation name="death" file="models/character/animations/trilobiteDie.upa" loop="false"/>
+	</animationset>
+	
+	<animationset name="urchinSmall">
+		<animation name="wiggle" file="models/character/animations/urchinSmallWiggle.upa" />
+		<animation name="point" file="models/character/animations/urchinSmallPoint.upa" />
+		<animation name="mystery" file="models/character/animations/urchinSmallMystery.upa" />
+		<animation name="die" file="models/character/animations/urchinSmallDie.upa" loop="false"/>
+	</animationset>
+	    
+	<animationset name="urchinLarge">
+		<animation name="wiggle" file="models/character/animations/urchinLargeWiggle.upa" />
+		<animation name="point" file="models/character/animations/urchinLargePoint.upa" />
+		<animation name="mystery" file="models/character/animations/urchinLargeMystery.upa" />
+		<animation name="die" file="models/character/animations/urchinLargeDie.upa" loop="false"/>
+	</animationset>
+	   
+	<animationset name="polyp">    
+		<animation name="wiggle" file="models/character/animations/polypWiggle.upa" />
+		<animation name="idle" file="models/character/animations/polypIdle.upa" />
+		<animation name="hurt" file="models/character/animations/polypHurt.upa" loop="false"/>
+		<animation name="die" file="models/character/animations/polypDie.upa" loop="false"/>
+	</animationset>
+	   
+	<animationset name="anemone_tall">    
+		<animation name="wiggle" file="models/character/animations/anemoneTallWiggle.upa" />
+		<animation name="walk" file="models/character/animations/anemoneTallWiggle.upa" />
+		<animation name="idle" file="models/character/animations/anemoneTallIdle.upa" />
+		<animation name="hurt" file="models/character/animations/anemoneTallHurt.upa" loop="false"/>
+		<animation name="die" file="models/character/animations/anemoneTallDie.upa" loop="false"/>
+	</animationset>
+	   
+	<animationset name="anemone_sm">    
+		<animation name="wiggle" file="models/character/animations/anemoneSmWiggle.upa" />
+		<animation name="walk" file="models/character/animations/anemoneSmWiggle.upa" />
+		<animation name="idle" file="models/character/animations/anemoneSmIdle.upa" />
+		<animation name="hurt" file="models/character/animations/anemoneSmHurt.upa" loop="false"/>
+		<animation name="die" file="models/character/animations/anemoneSmDie.upa" loop="false"/>
+	</animationset>
+	   
+	<animationset name="anemone_huge">    
+		<animation name="wiggle" file="models/character/animations/anemoneHugeWiggle.upa" />
+		<animation name="walk" file="models/character/animations/anemoneHugeWiggle.upa" />
+		<animation name="idle" file="models/character/animations/anemoneHugeIdle.upa" />
+		<animation name="hurt" file="models/character/animations/anemoneHugeHurt.upa" loop="false"/>
+		<animation name="die" file="models/character/animations/anemoneHugeDie.upa" loop="false"/>
+	</animationset>
+  
+  
+  <!--Birds and fish are not currently used due to needing proper movement systems. -->
+  
+	<animationset name="tuna">
+		<animation name="swim" file="models/character/animations/tunaSwim.upa" />
+		<animation name="swim_fancy" file="models/character/animations/tunaSwimFancy.upa" />
+		<animation name="on_line" file="models/character/animations/tunaLine.upa" />
+		<animation name="hooked" file="models/character/animations/tunaHooked.upa" />
+		<animation name="flopping" file="models/character/animations/tunaFlopping.upa" />
+		<animation name="die" file="models/character/animations/tunaDead.upa" loop="false"/>
+		<animation name="bite" file="models/character/animations/tunaBite.upa" />
+	</animationset>
+	
+	<animationset name="salmon">
+		<animation name="swim" file="models/character/animations/salmonSwim.upa" />
+		<animation name="swim_fancy" file="models/character/animations/salmonSwimFancy.upa" />
+		<animation name="on_line" file="models/character/animations/salmonLine.upa" />
+		<animation name="hooked" file="models/character/animations/salmonHooked.upa" />
+		<animation name="flopping" file="models/character/animations/salmonFlopping.upa" />
+		<animation name="die" file="models/character/animations/salmonDead.upa" loop="false"/>
+		<animation name="bite" file="models/character/animations/salmonBite.upa" />
+	</animationset>
+	
+	<animationset name="dragonfly">
+		<animation name="perched" file="models/character/animations/dragonflyPerched.upa" />
+		<animation name="ground_die" file="models/character/animations/dragonflyGroundDie.upa" loop="false"/>
+		<animation name="flying" file="models/character/animations/dragonflyFlying.upa" />
+		<animation name="air_die" file="models/character/animations/dragonflyAirDie.upa" loop="false"/>
+	</animationset>
+  
+	<animationset name="buzzard">
+		<animation name="perched_walk" file="models/character/animations/buzzardPWalk.upa" />
+		<animation name="perched_preen" file="models/character/animations/buzzardPPreen.upa" />
+		<animation name="perched_eat" file="models/character/animations/buzzardPEat.upa" />
+		<animation name="perched_die" file="models/character/animations/buzzardPDie.upa" loop="false"/>
+		<animation name="air_soar" file="models/character/animations/buzzardASoar.upa" />
+		<animation name="air_land" file="models/character/animations/buzzardALand.upa" />
+		<animation name="air_flap" file="models/character/animations/buzzardAFlap.upa" />
+		<animation name="air_die" file="models/character/animations/buzzardADie.upa" loop="false"/>
+    </animationset>
+	
+	<animationset name="butterfly">
+		<animation name="flap_in_place" file="models/character/animations/butterflyFlapInPlace.upa" />
+		<animation name="flap_around" file="models/character/animations/butterflyFlapAround.upa" />
+		<animation name="die" file="models/character/animations/butterflyDie.upa" loop="false"/>
+	</animationset>
+	
+	<animationset name="bird_small">
+		<animation name="perched_walk" file="models/character/animations/birdSmallPWalk.upa" />
+		<animation name="perched_preen" file="models/character/animations/birdSmallPPreen.upa" />
+		<animation name="perched_peck" file="models/character/animations/birdSmallPPeck.upa" />
+		<animation name="perched_hop" file="models/character/animations/birdSmallPHop.upa" />
+		<animation name="perched_die" file="models/character/animations/birdSmallPDie.upa" loop="false"/>
+		<animation name="flying_soar" file="models/character/animations/birdSmallFSoar.upa" />
+		<animation name="flying_land" file="models/character/animations/birdSmallFLand.upa" />
+		<animation name="flying_flap" file="models/character/animations/birdSmallFFlap.upa" />
+		<animation name="flying_die" file="models/character/animations/birdSmallFDie.upa" loop="false"/>
+	</animationset>
+  
+
+  <!-- MONSTERS! -->
+  
+	<animationset name="obeliskian_guardian">
+          <animation name="vibrate"            file="models/character/animations/oGuardianVibrate.upa" />
+          <animation name="idle"               file="models/character/animations/oGuardianIdle.upa" />
+          <animation name="idle_rotating"      file="models/character/animations/oGuardianIdleRot.upa" />
+          <animation name="idle_rotating_fast" file="models/character/animations/oGuardianIdleRotFast.upa" />
+          <animation name="walk"          file="models/character/animations/oGuardianMove.upa" />
+          <animation name="walk_rotating" file="models/character/animations/oGuardianMoveRot.upa" />
+          <animation name="go_dormant"    file="models/character/animations/oGuardianDormant.upa" loop="false"/> <!-- Dormant/Non-dormant are basically "playing dead" after being attacked. -->
+		<animation name="dormant_idle"  file="models/character/animations/oGuardianDormantIdle.upa" loop="false"/> 
+          <animation name="dormant_wake"  file="models/character/animations/oGuardianUnDormant.upa" loop="false"/>
+          <animation name="hit"           file="models/character/animations/oGuardianHit.upa" />
+          <animation name="die"           file="models/character/animations/oGuardianDie.upa" loop="false"/>
+          <animation name="ascend"        file="models/character/animations/oGuardianAscend.upa" loop="false"/>
+          <animation name="descend"       file="models/character/animations/oGuardianDescend.upa"/> <!-- Ascend/Descend are used for non hostile dormancy, much like other obleskians' enter/exit nest anims. -->
+          <animation name="charge_atk"    file="models/character/animations/oGuardianChargeAtk.upa" loop="false"/>
+		<animation name="attack"    	file="models/character/animations/oGuardianChargeAtk.upa" loop="false"/> <!-- shouldn't be used. -->
+	</animationset>
+
+     <animationset name="obeliskian_servitor">
+          <animation name="idle"            file="models/character/animations/oServitorIdle.upa" />
+          <animation name="walk"            file="models/character/animations/oServitorMove.upa" />
+          <animation name="walk_run"        file="models/character/animations/oServitorMove.upa" />
+          <animation name="eat"             file="models/character/animations/oServitorCommodityGrab.upa" /> <!-- placeholder -->
+          <animation name="attack"          file="models/character/animations/oServitorAtk.upa" />
+          <animation name="startle"         file="models/character/animations/oServitorStartle.upa" loop="false"/>
+          <animation name="die"           file="models/character/animations/oServitorDie.upa" loop="false"/>
+          <animation name="hit"             file="models/character/animations/oServitorHit.upa" />
+          <animation name="grab_human"      file="models/character/animations/oServitorPersonGrab.upa" loop="false"/>
+          <animation name="carry_human"     file="models/character/animations/oServitorPersonHold.upa" />
+          <animation name="drop_human"      file="models/character/animations/oServitorPersonDrop.upa" loop="false"/>
+          <animation name="grab_commodity"  file="models/character/animations/oServitorCommodityGrab.upa" loop="false"/>
+          <animation name="walk_carry_commodity" file="models/character/animations/oServitorCommodityHold.upa" />
+          <animation name="drop_commodity"  file="models/character/animations/oServitorCommodityDrop.upa" loop="false"/>
+          <animation name="enter_nest"      file="models/character/animations/oServitorNestEnter.upa" loop="false"/>
+		<animation name="idle_nest"      file="models/character/animations/oServitorNestIdle.upa"/>
+          <animation name="exit_nest"       file="models/character/animations/oServitorNestExit.upa" loop="false"/>
+     </animationset>
+  
+	 <animationset name="obeliskian_master">
+		<animation name="attack"  file="models/character/animations/oMasterAtk.upa" />
+		<animation name="idle"    file="models/character/animations/oMasterIdle.upa" />
+		<animation name="walk"    file="models/character/animations/oMasterWalk.upa" />
+		<animation name="run"     file="models/character/animations/oMasterWalk.upa" />
+		<animation name="startle" file="models/character/animations/oMasterStartle.upa"/>
+		<animation name="eat"     file="models/character/animations/oMasterAtk.upa" />
+		<animation name="gesture" file="models/character/animations/oMasterGesture.upa" />
+		<animation name="sit"     file="models/character/animations/oMasterSit.upa" />
+		<animation name="die"   file="models/character/animations/oMasterDie.upa" loop="false"/>
+		<animation name="hit"     file="models/character/animations/oMasterHit.upa" />
+		<animation name="enter_nest" file="models/character/animations/oMasterNestEnter.upa" loop="false"/>
+		<animation name="idle_nest"  file="models/character/animations/oMasterNestIdle.upa"/>
+		<animation name="exit_nest"  file="models/character/animations/oMasterNestExit.upa" loop="false"/>
+	</animationset>
+
+
+	<animationset name="selenian_spore">    
+		<animation name="writhe" file="models\\character\\animations\\horrorSelSporeWrithe.upa" />
+		<animation name="dormant" file="models\\character\\animations\\horrorSelSporeDormant.upa" />
+		<animation name="wakeup" file="models\\character\\animations\\horrorSelSporeWakeup.upa" loop="false" />
+		<animation name="tf_out" file="models\\character\\animations\\horrorSelSporeTFOut.upa" loop="false" />
+		<animation name="look_at" file="models\\character\\animations\\horrorSelSporeLookat.upa" />
+		<animation name="look_around" file="models\\character\\animations\\horrorSelSporeLookAround.upa" />
+		<animation name="float_around" file="models\\character\\animations\\horrorSelSporeFloataround.upa" />
+		<animation name="walk" file="models\\character\\animations\\horrorSelSporeFloataround.upa" />
+		<animation name="walk_run" file="models\\character\\animations\\horrorSelSporeFloataround.upa" />
+		<animation name="idle" file="models\\character\\animations\\horrorSelSporeFloataround.upa" />
+		<animation name="death" file="models\\character\\animations\\horrorSelSporeDormant.upa" loop="false" />
+	</animationset>
+	
+	<animationset name="selenian_slug">    
+		<animation name="idle" file="models\\character\\animations\\horrorSelSlugIdle.upa" />
+		<animation name="walk" file="models\\character\\animations\\horrorSelSlugMove.upa" />
+		<animation name="walk_run" file="models\\character\\animations\\horrorSelSlugMove.upa" />
+		<animation name="examine" file="models\\character\\animations\\horrorSelSlugExamine.upa" />
+		<animation name="situp" file="models\\character\\animations\\horrorSelSlugSitup.upa" />
+		<animation name="hit" file="models\\character\\animations\\horrorSelSlugHit.upa" />
+		<animation name="death" file="models\\character\\animations\\horrorSelSlugDie.upa" loop="false"/>
+		<animation name="pounce_part1" file="models\\character\\animations\\horrorSelSlugPounce1.upa" loop="false" />
+		<animation name="pounce_part2" file="models\\character\\animations\\horrorSelSlugPounce2.upa" loop="false" />
+		<animation name="pounce_part3" file="models\\character\\animations\\horrorSelSlugPounce3.upa" loop="false" />
+	</animationset>
+	
+	<animationset name="selenian_juvenile">    <!-- aka "stalk" -->
+		<animation name="tf_to_fruit" file="models\\character\\animations\\horrorSelJuvToFruit.upa" />
+		<animation name="tf_from_slug" file="models\\character\\animations\\horrorSelJuvFromSlug.upa" />
+		<animation name="idle" file="models\\character\\animations\\horrorSelJuvIdle.upa" />
+		<animation name="hit" file="models\\character\\animations\\horrorSelJuvHit.upa" />
+		<animation name="death" file="models\\character\\animations\\horrorSelJuvDie.upa" loop="false"/>
+	</animationset>
+	
+	<animationset name="selenian_fruit">    
+		<animation name="writhe" file="models\\character\\animations\\horrorSelFruitWrithe.upa" />
+		<animation name="idle" file="models\\character\\animations\\horrorSelFruitWrithe.upa" />
+		<animation name="tf_to_spore" file="models\\character\\animations\\horrorSelFruitToSpore.upa" loop="false"/>
+		<animation name="shoot_spores" file="models\\character\\animations\\horrorSelFruitSporeshot.upa" />
+		<animation name="hit" file="models\\character\\animations\\horrorSelFruitHit.upa" />
+		<animation name="tf_from_juv" file="models\\character\\animations\\horrorSelFruitFromJuv.upa" loop="false"/>
+		<animation name="flip" file="models\\character\\animations\\horrorSelFruitFlip.upa" />
+		<animation name="death" file="models\\character\\animations\\horrorSelFruitDie.upa" loop="false" />
+	</animationset>
+
+	<animationset name="geometer_observator">
+		<animation name="unfold" file="models\\character\\animations\\geomObservUnfold.upa" />
+		<animation name="walk" file="models\\character\\animations\\geomObservMove.upa" />
+		<animation name="look_down" file="models\\character\\animations\\geomObservLookdown.upa" />
+		<animation name="look_at" file="models\\character\\animations\\geomObservLookAt.upa" />
+		<animation name="look_around" file="models\\character\\animations\\geomObservLookAround.upa" />
+		<animation name="idle" file="models\\character\\animations\\geomObservIdle.upa" />
+		<animation name="hit" file="models\\character\\animations\\geomObservHit.upa" />
+		<animation name="fold" file="models\\character\\animations\\geomObservFold.upa" />
+		<animation name="walk_fleeing" file="models\\character\\animations\\geomObservFlee.upa" />
+		<animation name="walk_run" file="models\\character\\animations\\geomObservFlee.upa" />
+		<animation name="die" file="models\\character\\animations\\geomObservDie.upa" />
+	</animationset>
+	
+	<animationset name="geometer">
+		<animation name="idle" file="models\\character\\animations\\geomBasicIdle.upa" />
+		<animation name="walk" file="models\\character\\animations\\geomBasicWalk.upa" />
+		<animation name="walk_run" file="models\\character\\animations\\geomBasicFlee.upa" />
+		<animation name="walk_fleeing" file="models\\character\\animations\\geomBasicFlee.upa" />
+		<animation name="hit" file="models\\character\\animations\\geomBasicHit.upa" />
+		<animation name="look_up" file="models\\character\\animations\\geomBasicLookUp.upa" />
+		<animation name="look_down" file="models\\character\\animations\\geomBasicLookDown.upa" />
+		<animation name="pickup_item" file="models\\character\\animations\\geomBasicCommodPick.upa" />
+		<animation name="carry_item" file="models\\character\\animations\\geomBasicCommodWalk.upa" />
+		<animation name="place_item" file="models\\character\\animations\\geomBasicCommodPlace.upa" />
+		<animation name="panic_drop_item" file="models\\character\\animations\\geomBasicCommodDrop.upa" />
+		<animation name="death" file="models\\character\\animations\\geomBasicDie.upa" loop="false"/>
+	</animationset>
+	
+	<animationset name="geometer_mech">
+		<animation name="attack" file="models\\character\\animations\\geomMechAtk.upa" loop="false"/>
+		<animation name="idle" file="models\\character\\animations\\geomMechIdle.upa" />
+		<animation name="observe" file="models\\character\\animations\\geomMechObserve.upa" />
+		<animation name="look_down" file="models\\character\\animations\\geomMechLookDown.upa" />
+		<animation name="walk" file="models\\character\\animations\\geomMechRun.upa" />
+		<animation name="hit" file="models\\character\\animations\\geomMechHit.upa" />
+		<animation name="death" file="models\\character\\animations\\geomMechDie.upa" loop="false" />
+		<animation name="grab_commodity" file="models\\character\\animations\\geomMechCommodGrab.upa" />
+		<animation name="carry_commodity" file="models\\character\\animations\\geomMechCommodWalk.upa" />
+		<animation name="drop_commodity_surprised" file="models\\character\\animations\\geomMechCommodDrop.upa" />
+	</animationset>
+	
+	<animationset name="geometer_disguised">
+		<animation name="attack" file="models\\character\\animations\\geomDisguiseAtk.upa" loop="false"/>
+		<animation name="idle" file="models\\character\\animations\\geomDisguiseIdle.upa" />
+		<animation name="look_down" file="models\\character\\animations\\geomDisguiseLookDown.upa" />
+		<animation name="walk" file="models\\character\\animations\\geomDisguiseWalk.upa" />
+		<animation name="sneak" file="models\\character\\animations\\geomDisguiseSneak.upa" />
+		<animation name="lure_human" file="models\\character\\animations\\geomDisguiseLure.upa" />
+		<animation name="chat_with_human" file="models\\character\\animations\\geomDisguiseChat.upa" />
+		<animation name="run" file="models\\character\\animations\\geomDisguiseRun.upa" />
+		<animation name="flee" file="models\\character\\animations\\geomDisguiseFlee.upa" />
+		<animation name="hit" file="models\\character\\animations\\geomDisguiseHit.upa" />
+		<animation name="discovered" file="models\\character\\animations\\geomDisguiseDiscHat.upa" />
+		<animation name="discovered_lose_hat" file="models\\character\\animations\\geomDisguiseDiscNohat.upa" />
+		<animation name="death" file="models\\character\\animations\\geomDisguiseDie.upa" loop="false" />
+		<animation name="grab_commodity" file="models\\character\\animations\\geomDisguiseCommodGrab.upa" />
+		<animation name="carry_commodity" file="models\\character\\animations\\geomDisguiseCommodWalk.upa" />
+		<animation name="drop_commodity" file="models\\character\\animations\\geomDisguiseCommodPlace.upa" />
+		<animation name="grab_person" file="models\\character\\animations\\geomDisguisePersonGrab.upa" />
+		<animation name="carry_person" file="models\\character\\animations\\geomDisguisePersonWalk.upa" />
+		<animation name="drop_person" file="models\\character\\animations\\geomDisguisePersonDrop.upa" />
+	</animationset>
+	
+	<animationset name="geometer_measurator">
+		<animation name="active" file="models\\character\\animations\\geomMeasuratorActive.upa" />
+		<animation name="idle" file="models\\character\\animations\\geomMeasuratorIdle.upa" />
+		<animation name="fold" file="models\\character\\animations\\geomMeasuratorFold.upa" loop="false" />
+		<animation name="unfold" file="models\\character\\animations\\geomMeasuratorUnfold.upa" loop="false" />
+	</animationset>
+	
+	<animationset name="geometer_trap">
+		<animation name="fold" file="models\\character\\animations\\geomTrapFold.upa" loop="false" />
+		<animation name="unfold" file="models\\character\\animations\\geomTrapUnfold.upa" loop="false" />
+		<animation name="teleport" file="models\\character\\animations\\geomTrapTeleport.upa" loop="false" />
+		<animation name="idle" file="models\\character\\animations\\geomTrapIdle.upa" />
+	</animationset>
+	
+	<animationset name="geometer_portal">
+		<animation name="charge" file="models\\character\\animations\\geomPortalCharge.upa" loop="false" />
+		<animation name="die" file="models\\character\\animations\\geomPortalDie.upa" loop="false" />
+		<animation name="fold" file="models\\character\\animations\\geomPortalFold.upa" loop="false" />
+		<animation name="unfold" file="models\\character\\animations\\geomPortalUnfold.upa" loop="false" />
+		<animation name="hit" file="models\\character\\animations\\geomPortalHit.upa" />
+		<animation name="idle" file="models\\character\\animations\\geomPortalIdle.upa" />
+		<animation name="open_begin" file="models\\character\\animations\\geomPortalOpenBegin.upa" loop="false" />
+		<animation name="open_end" file="models\\character\\animations\\geomPortalOpenEnd.upa" loop="false" />
+		<animation name="open_loop" file="models\\character\\animations\\geomPortalOpenLoop.upa" />
+		<animation name="open_twitch" file="models\\character\\animations\\geomPortalOpenTwitch.upa" />
+	</animationset>
+  
+	<animationset name="quaggaroth">
+		<animation name="eruption" file="models/character/animations/quaggarothEruption.upa" loop="false"/>
+		<animation name="idle" file="models/character/animations/quaggarothIdle.upa" />
+		<animation name="idle_angry" file="models/character/animations/quaggarothIdleAngry.upa" />
+		<animation name="walk" file="models/character/animations/quaggarothWalkFixed.upa" />
+		<animation name="walk_angry" file="models/character/animations/quaggarothWalkAngry.upa" />
+		<animation name="examine_below" file="models/character/animations/quaggarothExamineBelow.upa" />
+		<animation name="hurt" file="models/character/animations/quaggarothHurt.upa" />
+		
+		<animation name="attack" file="models/character/animations/quaggarothAtk.upa" loop="false"/>
+		<animation name="flick_attack" file="models/character/animations/quaggarothFlick.upa" loop="false"/>
+		<animation name="pound_attack" file="models/character/animations/quaggarothAtk.upa" loop="false"/>
+		
+		<animation name="eyelaser" file="models/character/animations/quaggarothEyelaserFixed.upa" loop="false"/>
+		<animation name="squish_eat" file="models/character/animations/quaggarothSquishEat.upa" loop="false"/>
+		<animation name="death" file="models/character/animations/quaggarothHurt.upa" loop="false"/>
+	</animationset>
+  
+  <!-- Vehicles -->
+	<animationset name="steam_crawler">
+		<animation name="backward_start" file="models/vehicles/animations/steamcrawlerBackwardStart.upa" loop="false"/>
+		<animation name="backward" file="models/vehicles/animations/steamcrawlerBackward.upa" />
+		<animation name="backward_stop" file="models/vehicles/animations/steamcrawlerBackwardStop.upa" loop="false"/>
+		<animation name="forward_start" file="models/vehicles/animations/steamcrawlerForwardStart.upa" loop="false"/>
+		<animation name="forward" file="models/vehicles/animations/steamcrawlerForward.upa" />
+		<animation name="forward_stop" file="models/vehicles/animations/steamcrawlerForwardStop.upa" loop="false"/>
+		<animation name="off_idle" file="models/vehicles/animations/steamcrawlerIdleOff.upa" />
+		<animation name="on_idle" file="models/vehicles/animations/steamcrawlerIdleOn.upa" />
+	</animationset>
+  
+
+
+  <!-- Noble citizen of the Empire; this controls everything that basic human beings need to do. -->
+  <!-- I contend that people of the Empire should be "subjects" rather than "citizens" do to the monarchical basis of the society - dgb -->
+  
+	<class name="Citizen" displayName="Citizen" type="citizen">
+		<head male="citizen,head,male" female="citizen,head,female" />
+		<torso male="citizen,torso,male" female="citizen,torso,female" />
+		<hair male="citizen,hair,male" female="citizen,hair,female" male_baldness="10" female_baldness="10" />
+		<job name="Eat (Regular)"/>
+		<job name="Eat (Starving)"/>
+	</class>
+
+	<!-- The Classes -->
+		<class name="Lower Class" displayName="Lower Class" type="citizen" inherits="Citizen">
+			<head unisex="lower_class"/>
+			<torso unisex="lower_class"/>
+			<hair unisex="lower_class"/>
+		</class>
+  
+		<class name="Middle Class" displayName="Middle Class" type="citizen" inherits="Citizen">
+			<head unisex="middle_class"/>
+			<torso unisex="middle_class"/>
+			<hair unisex="middle_class" female_baldness="0" />
+		</class>
+
+		<class name="Upper Class" displayName="Upper Class" type="citizen" inherits="Citizen">
+			<head unisex="upper_class"/>
+			<torso unisex="upper_class"/>
+			<hair unisex="upper_class" female_baldness="0" male_baldness="0"/>
+		</class>
+
+	<!-- Lower Class Occupations -->
+		<class name="Farmer" displayname="Farmer" type="citizen" inherits="Lower Class" playable="1">
+			<torso unisex="farmer"/>  
+		</class>
+  
+		<class name="Forester" displayname="Farmer" type="citizen" inherits="Lower Class" playable="1">
+			<torso unisex="forester"/>  
+		</class>
+
+		<class name="Footsoldier" displayname="Footsoldier" type="citizen" inherits="Lower Class" playable="1">
+			<torso unisex="footsoldier"/>  
+		</class>
+
+		<class name="Militia Footsoldier" displayname="Militia Footsoldier" type="citizen" inherits="Lower Class" playable="1">
+			<torso unisex="militia_footsoldier"/>  
+		</class>
+  
+		<class name="Metalworker" displayname="Metalworker" type="citizen" inherits="Lower Class" playable="1">
+			<torso unisex="metalworker"/>  
+		</class>
+	  
+		<class name="Miner" displayname="Miner" type="citizen" inherits="Lower Class" playable="1">
+			<torso unisex="miner"/>  
+		</class>
+		
+		<class name="Laboratory Assistant" displayname="Laboratory Assistant" type="citizen" inherits="Lower Class" playable="1">
+			<torso unisex="lab_assistant"/>  
+		</class>
+		
+		<class name="Learning Assistant" displayname="Learning Assistant" type="citizen" inherits="Lower Class" playable="1">
+			<torso unisex="lab_assistant"/>  
+		</class>
+
+		<class name="Labourer" displayname="Labourer" type="citizen" inherits="Lower Class" playable="1">
+			<torso unisex="labourer"/>  
+		</class>
+		
+		<class name="Congregant" displayname="Congregant" type="citizen" inherits="Lower Class" playable="1">
+			<torso unisex="congregant"/>
+		</class>
+   <class name="Metalworker" displayname="Metalworker" type="citizen" inherits="Lower Class" playable="1">
+      <torso unisex="metalworker"/>  
+   </class>
+
+	<class name="Miner" displayname="Miner" type="citizen" inherits="Lower Class" playable="1">
+		<torso unisex="miner"/>  
+	</class>
+   
+	<class name="Labourer" displayname="Labourer" type="citizen" inherits="Lower Class" playable="1">
+		<torso unisex="labourer"/>  
+	</class>
+	<class name="Prisoner" displayname="Prisoner" type="citizen" inherits="Lower Class" playable="1">
+		<torso unisex="prisoner"/>  
+	</class>
+	
+   <class name="Congregant" displayname="Congregant" type="citizen" inherits="Lower Class" playable="1">
+     <torso unisex="congregant"/>
+   </class>
+  
+	<!-- Middle Class Occupations -->
+
+		<class name="Occult Inspector" displayname="Occult Inspector" type="citizen" inherits="Citizen" playable="1">
+			<torso unisex="occultinspector"/>
+			<head unisex="inspector"/>
+			<hair unisex="inspector" male_baldness="100" female_baldness="100"/>
+		</class>
+	  
+		<class name="Occult Sergeant" displayname="Occult Sergeant" type="citizen" inherits="Citizen" playable="1">
+			<torso unisex="occultsergeant"/>
+			<head unisex="inspector"/>
+			<hair unisex="inspector" male_baldness="100" female_baldness="100"/>
+		</class>
+	  
+		<class name="Naturalist" displayname="Naturalist" type="citizen" inherits="Middle Class" playable="1">
+			<torso unisex="naturalist"/>  
+		</class>
+		
+		  <class name="Vicar" displayname="Vicar" type="citizen" inherits="Middle Class" playable="1">
+			<torso unisex="vicar"/>  
+		  </class>
+		  
+		<class name="Trainee" displayname="Trainee" type="citizen" inherits="Middle Class" playable="1">
+		   <torso unisex="trainee"/>  
+		</class>
+		
+		<class name="Overseer" displayname="Overseer" type="citizen" inherits="Middle Class" playable="1">
+			<torso unisex="overseer"/>  
+		</class>
+	  
+		<class name="NCO" displayname="NCO" type="citizen" inherits="Middle Class" playable="1">
+			<torso unisex="nco"/>  
+		</class>
+	  
+		<class name="Militia NCO" displayname="Militia NCO" type="citizen" inherits="Middle Class" playable="1">
+			<torso unisex="militia_nco"/>  
+		</class>
+	
+		
+		<class name="Scientist" displayname="Scientist" type="citizen" inherits="Middle Class" playable="1">
+			<torso unisex="scientist"/>  
+		</class>
+	  
+		<class name="Barber" displayname="Barber" type="citizen" inherits="Middle Class" playable="1">
+			<torso unisex="barber"/>
+		</class>
+	  
+		<class name="Artisan" displayname="Artisan" type="citizen" inherits="Middle Class" playable="1">
+			<torso unisex="artisan"/>
+		</class>
+	
+		<class name="Industrial Artisan" displayname ="Industrial Artisan" type="citizen" inherits="Middle Class" playable="1">
+			<torso unisex="artisan_industrial"/>
+		</class>
+	  
+		<class name="Clerk" displayname="Clerk" type="citizen" inherits="Middle Class" playable="1">
+			<torso unisex="clerk"/>
+		</class>
+		
+		<class name="Chemist" displayname="Chemist" type="citizen" inherits="Middle Class" playable="1">
+			<torso unisex="chemist"/>
+		</class>
+		
+		<class name="Barkeep" displayname="Barkeep" type="citizen" inherits="Middle Class" playable="1">
+			<torso unisex="clerk"/>
+		</class>
+		
+		<class name="Diplomat" displayname ="Diplomat" type="citizen" inherits ="Middle Class" playable ="1">
+			<torso unisex="clerk"/>
+		</class>
+	
+		<class name="Prisoner Overseer" displayname="Prison Overseer" type="citizen" inherits="Middle Class" playable="1">
+			<torso unisex="overseer"/>  
+		</class>
+		
+		
+		<class name="Colonial Ministry Bureaucrat" displayname="Colonial Ministry Bureaucrat" type="citizen" inherits="Middle Class" playable="1">
+			<torso unisex="clerk"/>
+		</class>
+		<class name="Frontier Doctor" displayname="Frontier Doctor" type="citizen" inherits="Middle Class" playable="1">
+			<torso unisex="chemist"/>
+		</class>
+		<class name="Clockworkian Merchant" displayname="Clockworkian Merchant" type="citizen" inherits="Middle Class" playable="1">
+			<torso unisex="clerk"/>
+		</class>
+
+	<!-- Upper Class Occupations -->
+
+		<class name="Poet" displayname="Poet" type="citizen" inherits="Upper Class" playable="1">
+			<torso unisex="poet"/>  
+		</class>
+	    
+		<class name="Capitalist" displayname="Capitalist" type="citizen" inherits="Upper Class" playable="1">
+			<torso unisex="capitalist"/>  
+		</class>
+	  
+		<class name="Aristocrat" displayname="Aristocrat" type="citizen" inherits="Upper Class" playable="1">
+			<torso unisex="aristocrat"/>
+		</class>
+
+	<!-- cultists do their own thing. -->
+  
+		<class name="Cultist" displayname="Cultist" type="citizen" inherits="citizen" playable="1">
+			<torso unisex="cultist"/>
+			<hair unisex="cultist" male_baldness="100" female_baldness="100"/>
+		</class>
+		
+		<class name="Cultist Priest" displayname="Cultist Priest" type="citizen" inherits="Cultist" playable="1">
+			<torso unisex="cultistpriest"/>
+			<head unisex="cultistpriest"/>
+			<hair unisex="cultist" male_baldness="100" female_baldness="100"/>
+		</class>
+	   
+		<class name="Cultist Minion" displayname="Cultist Minion" type="citizen" inherits="Cultist" playable="1">
+			<torso unisex="cultistminion"/>
+			<head unisex="cultist"/>
+			<hair unisex="cultist" male_baldness="100" female_baldness="100"/>
+		 </class>
+	   
+		<!-- ned kelly bandits -->
+		<!-- todo: armoured bandit -->
+		<class name="Bandit" displayname="Bandit" type="bandit" inherits="Lower Class" playable="0">
+		    <torso unisex="bandit"/>
+		</class>
+		
+	<!-- Republique -->
+	
+		<class name="Republique Civilian" displayname="Republique Civilian"
+			type="foreigner" inherits="Lower Class" playable="0">
+			<torso unisex="republique_conscript"/>
+		</class>
+		
+		<class name="Republique Artist" displayname="Republique Artist"
+			type="foreigner" inherits="Upper Class" playable="0">
+			<torso unisex="poet"/>
+		</class>
+		
+		<class name="Empire Columnist" displayname="Empire Columnist"
+			type="outsider" inherits="Middle Class" playable="0">
+			<torso unisex="clerk"/>
+		</class>
+		
+		
+		
+		<class name="Republique Merchant" displayname="Republique Merchant"
+			type="foreigner" inherits="Middle Class" playable="0">
+			<torso unisex="republique_nco"/>
+		</class>
+		
+		<class name="Republique Conscript" displayname="Conscrit de la Republique"
+			  type="foreigner" inherits="Lower Class" playable="0">
+		    <torso unisex="republique_conscript"/>
+		</class>
+		<class name="Republique NCO" displayname="Republique Sergent"
+			  type="foreigner" inherits="Middle Class" playable="0">
+		    <torso unisex="republique_nco"/>
+		</class>
+
+	<!-- Novorus -->
+		<class name="Novorus Agitator" displayname="Novorusian Agitator"
+			type="foreigner" inherits="Lower Class" playable="0">
+			<torso unisex="labourer"/>
+		</class>
+	
+		<class name="Novorus Civilian" displayname="Novorusian Civilian"
+			type="foreigner" inherits="Lower Class" playable="0">
+			<torso unisex="novorus_levy"/>
+		</class>
+		<class name="Novorus Merchant" displayname="Novorusian Merchant"
+			type="foreigner" inherits="Middle Class" playable="0">
+			<torso unisex="novorus_nco"/>
+		</class>
+
+		<class name="Novorus Levy" displayname="Novorusian Levy"
+			  type="citizen" inherits="Lower Class" playable="0">
+			<torso unisex="novorus_levy"/>
+		</class>
+		<class name="Novorus NCO" displayname="Novorusian Desyatnik"
+			  type="citizen" inherits="Middle Class" playable="0">
+			<torso unisex="novorus_nco"/>
+		</class>
+		
+	<!-- Stahlmarkians -->
+	
+		<class name="Stahlmark Civilian" displayname="Stahlmark Civilian"
+				type="foreigner" inherits="Lower Class" playable="0">
+			<torso unisex="stahlmark_trupp"/>
+		</class>
+		<class name="Stahlmark Merchant" displayname="Stahlmark Merchant"
+				type="foreigner" inherits="Middle Class" playable="0">
+			<torso unisex="stahlmark_nco"/>
+		</class>
+		
+		<class name="Stahlmark Trupp" displayname="Stahlmarkian Trupp"
+			  type="foreigner" inherits="Lower Class" playable="0">
+			<torso unisex="stahlmark_trupp"/>
+		</class>
+		<class name="Stahlmark NCO" displayname="Stahlmarkian Unteroffizier"
+			  type="foreigner" inherits="Middle Class" playable="0">
+			<torso unisex="stahlmark_nco"/>
+		</class>
+
+
+
+</characters>
