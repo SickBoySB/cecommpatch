@@ -117,7 +117,7 @@ butcher_to_stack = {
 		-- Create new item
 		local entityName = targetData.butcherOutput
 		if not entityName then
-			send(tag.target, "despawn")
+			--send(tag.target, "despawn")
 			return "final"
 		end
 		local entityCount = targetData.numCommodityOutput
@@ -214,7 +214,7 @@ butcher_to_stack = {
 			--end
 		end
 		
-		send(tag.target, "despawn")
+		--send(tag.target, "despawn")
 		return "picking_up"
 	end,
 
@@ -274,6 +274,8 @@ butcher_to_stack = {
 				send(results[1], "hearExclamation", "detectFishpersonButcher", SELF, nil)
 			end
 		end
+		
+		send(tag.target, "despawn")
 	end,
 
 	["abort"] = function(state, tag	)
