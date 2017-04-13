@@ -113,6 +113,13 @@ gameobject "ai_agent" inherit "renderableobject" inherit "ai_damage"
 			if not SELF.tags["buriedandhidden"] then
 				SELF.tags["buriedandhidden"] = true
 				
+				-- puff some smoke for kicks
+				send("rendCommandManager",
+					"odinRendererCreateParticleSystemMessage",
+					"DustPuffLarge",
+					state.AI.position.x,
+					state.AI.position.y+1) -- +1 for laziness in finding the spot
+				
 				-- screw it, just delete the damn thing... isn't used for anything anyways, and this fixes a TON of problems
 				send(SELF,"despawn")
 			end
