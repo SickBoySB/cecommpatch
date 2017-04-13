@@ -1223,7 +1223,7 @@ gameobject "fishperson" inherit "ai_agent"
 				assignment = query("gameBlackboard",
 							"gameObjectNewAssignmentMessage",
 							SELF,
-							"Burial Duty",
+							"Burial",
 							"",
 							"")[1]
 			end
@@ -1269,7 +1269,7 @@ gameobject "fishperson" inherit "ai_agent"
 				assignment = query("gameBlackboard",
 							"gameObjectNewAssignmentMessage",
 							SELF,
-							"Burial Duty",
+							"Dump Corpse",
 							"",
 							"")[1]
 			end
