@@ -5565,6 +5565,12 @@ gameobject "citizen" inherit "ai_agent"
 					send(SELF,"HandleInteractiveMessage","Bury Corpse (player order)",nil)
 				end
 			end
+			
+			-- shift 7 is the only one that has stuff that the dead would use in it
+			if shiftNumber == 7 then
+				send(SELF,"Nightfall")
+			end
+			
 			return
 		end
 
@@ -5773,8 +5779,7 @@ gameobject "citizen" inherit "ai_agent"
 	receive Nightfall()
 	<<
 		-- It's transitioning to nighttime! Do stuff you'd do at night.
-		if SELF.tags["dead"] and not SELF.tags.last_rites_performed then
-			
+		if SELF.tags.dead and not SELF.tags.last_rites_performed then
 			local ghostChance = 2
 			
 			if state.murderer and SELF.tags.murder_avenged then
@@ -5788,7 +5793,7 @@ gameobject "citizen" inherit "ai_agent"
 				ghostChance = ghostChance + 5
 			end
 			
-			if rand(1,100) < ghostChance then
+			if rand(1,100) < ghostChance then  -- rand(1,100)
 					
 				-- maybe spawn a ghost.
 				-- ghostgoals
@@ -6525,7 +6530,7 @@ gameobject "citizen" inherit "ai_agent"
 			send("gameSpatialDictionary", "gridRemoveObject", SELF)
 			send("rendOdinCharacterClassHandler", "odinRendererDeleteCharacterMessage", state.renderHandle)
 			send("gameBlackboard", "gameObjectRemoveTargetingJobs", SELF, nil)
-			destroyfromjob(SELF, ji)
+			--destroyfromjob(SELF, ji) -- DO NOT USE THIS or soooo much will break event-wise
 			return
 		end
 		
