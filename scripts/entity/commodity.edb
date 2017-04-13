@@ -1125,7 +1125,7 @@ Entity {
 	display_name = "Scrap Iron",
 	display_compound_name = "scrap iron",
 	type = "commodity",
-	trade_value=0,	
+	trade_value=100,	
 	ground_model = "models\\commodities\\bushelScrapIron.upm",
 	hand_model = "models\\commodities\\bushelScrapIron.upm",
 	icon_name="bushel_scrap_iron",
@@ -1143,7 +1143,7 @@ Entity {
 	display_name = "Science Crate",
 	display_compound_name = "science crate",
 	type = "commodity",
-	trade_value=0,
+	trade_value=750,
 	ground_model = "models\\commodities\\genericParcel.upm",
 	hand_model = "models\\commodities\\genericParcel.upm",
 	icon_name="crate_generic",
@@ -1546,7 +1546,7 @@ Entity {
 	display_name = "Power Lathe",
 	display_compound_name = "boxed power lathe",
 	type = "commodity",
-	trade_value=10,	--placeholder
+	trade_value=7190,	--placeholder
 	ground_model = "models\\commodities\\flatpackCrateMetalworking.upm",
 	hand_model = "models\\commodities\\flatpackCrateMetalworking.upm",
 	icon_skin="orderIcons2.xml",
