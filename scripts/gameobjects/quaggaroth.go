@@ -271,7 +271,14 @@ gameobject "quaggaroth" inherit "ai_agent"
 
      receive Update()
      <<
-		if not state or not state.AI or state.dead then
+		if not state or not state.AI or state.dead or SELF.tags.dead or SELF.tags.dead_quaggaroth then
+			if SELF.tags.dead_quaggaroth or SELF.tags.dead or state.dead then
+				state.timer = state.timer +1
+				if state.timer % 100 == 0 then
+					send(SELF,"despawn")
+				end
+			end
+			
 			return
 		end
 		
@@ -303,7 +310,7 @@ gameobject "quaggaroth" inherit "ai_agent"
 			end
 		end
 		
-		if not SELF.tags.dead and SELF.tags.trampling then
+		if not SELF.tags.dead and not SELF.tags.dead_quaggaroth and SELF.tags.trampling then
 			if rand(1,5) == 1 then
 				-- do AOE!
 				-- DustPuffMassive
@@ -486,9 +493,20 @@ gameobject "quaggaroth" inherit "ai_agent"
 		--	"DestroySelf",
 		--	state.AI.curJobInstance )
 		
-		send("rendOdinCharacterClassHandler", "odinRendererDeleteCharacterMessage", state.renderHandle)
-		send("gameSpatialDictionary", "gridRemoveObject", SELF)
-		destroyfromjob(SELF,ji)
+		send("rendOdinCharacterClassHandler",
+			"odinRendererDeleteCharacterMessage",
+			state.renderHandle)
+		
+		send("gameSpatialDictionary",
+			"gridRemoveObject",
+			SELF)
+		
+		send("gameBlackboard",
+			"gameObjectRemoveTargetingJobs",
+			SELF,
+			nil)
+		
+		destroyfromjob(SELF, ji)
 	>>
 
 	receive deathBy( gameObjectHandle damagingObject, string damageType )
@@ -539,24 +557,8 @@ gameobject "quaggaroth" inherit "ai_agent"
 		
 		send(handle,
 			"GameObjectPlace",
-			state.AI.position.x + rand(-3,3),
-			state.AI.position.y + rand(-3,3) )
-		
-		
-		send("rendOdinCharacterClassHandler",
-			"odinRendererDeleteCharacterMessage",
-			state.renderHandle)
-		
-          send("gameSpatialDictionary",
-			"gridRemoveObject",
-			SELF)
-		
-          send("gameBlackboard",
-			"gameObjectRemoveTargetingJobs",
-			SELF,
-			ji)
-		
-		destroyfromjob(SELF, nil)
+			state.AI.position.x + rand(-6,6),
+			state.AI.position.y + rand(-6,6) )
 	>>
 	
 	receive HarvestMessageNoProduct( gameObjectHandle harvester, gameSimJobInstanceHandle ji )
@@ -589,7 +591,7 @@ gameobject "quaggaroth" inherit "ai_agent"
 		local handle = query("scriptManager",
 						"scriptCreateGameObjectRequest",
 						"objectcluster",
-						{legacyString = "Obeliskian Gibs",})[1]
+						{legacyString = "Obeliskian Gibs"})[1]
 			
 		send(handle,
 			"GameObjectPlace",
@@ -599,7 +601,7 @@ gameobject "quaggaroth" inherit "ai_agent"
 
      receive hearExclamation( string name, gameObjectHandle exclaimer, gameObjectHandle subject )
 	<<
-		if SELF.tags.dead then
+		if SELF.tags.dead or SELF.tags.dead_quaggaroth then
 			return
 		end
 		--[[

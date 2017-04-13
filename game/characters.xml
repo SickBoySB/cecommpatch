@@ -1742,7 +1742,7 @@
 		
 		<animation name="eyelaser" file="models/character/animations/quaggarothEyelaserFixed.upa" loop="false"/>
 		<animation name="squish_eat" file="models/character/animations/quaggarothSquishEat.upa" loop="false"/>
-		<animation name="death" file="models/character/animations/quaggarothHurt.upa" loop="false"/>
+		<animation name="death" file="models/character/animations/quaggarothHurt.upa" loop="true"/>
 	</animationset>
   
   <!-- Vehicles -->
