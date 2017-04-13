@@ -551,6 +551,61 @@ gameobject "bandit" inherit "ai_agent"
 			end
 			
 		end
+		
+		if SELF.tags.dead and not SELF.tags.buried then
+			if not state.assignment then
+			
+				send("rendInteractiveObjectClassHandler",
+						"odinRendererAddInteractions",
+					state.renderHandle,
+							 "Give " .. state.AI.name .. " a Proper Burial",
+							 "Bury Corpse (player order)",
+							 "Bury Corpses", --"Bury Corpses",
+							 "Bury Corpse (player order)", --"Bury Corpse (player order)",
+							"graveyard",
+							"",
+							"Dirt",
+							false,true)
+				
+				send("rendInteractiveObjectClassHandler",
+						"odinRendererAddInteractions",
+					state.renderHandle,
+							 "Dump the Corpse of " .. state.AI.name,
+							 "Dump Corpse (player order)",
+							 "Dump Corpses", -- "Dump Corpses",
+							 "Dump Corpse (player order)", --"Dump Corpse (player order)",
+							"graveyard",
+							"",
+							"Dirt",
+							false,true)
+			else
+				send("rendInteractiveObjectClassHandler",
+						"odinRendererAddInteractions",
+					state.renderHandle,
+							 "Cancel orders for corpse of " .. state.AI.name,
+							 "Cancel corpse orders",
+							 "Cancel corpse orders", --"Cancel corpse orders",
+							 "Cancel corpse orders", -- "Cancel corpse orders",
+							"graveyard",
+							"",
+							"Dirt",
+							false,true)				
+			end
+		else
+			if not SELF.tags.hostile_agent and not SELF.tags.dead and not SELF.tags.buried and not state.assignment then
+				send("rendInteractiveObjectClassHandler",
+						"odinRendererAddInteractions",
+						state.renderHandle,
+						"Shoot Bandits",
+						"Shoot Bandits",
+						"", --"Shoot Bandits",
+						"", --"Shoot Bandits",
+						"",
+						"",
+						"click",
+						true,true)
+			end
+		end
 	>>
 
 	receive InteractiveMessage( string messagereceived )
@@ -663,6 +718,7 @@ gameobject "bandit" inherit "ai_agent"
 		elseif messagereceived == "Cancel corpse orders" and
 			state.assignment and
 			SELF.tags.dead then
+			
 			send("gameBlackboard",
 				"gameObjectRemoveTargetingJobs",
 				SELF,
@@ -672,7 +728,10 @@ gameobject "bandit" inherit "ai_agent"
 			send(SELF,"resetInteractions")
 			state.attempt_auto_corpse_handling = false
 			
-		elseif messagereceived == "Shoot Bandits" then
+		elseif messagereceived == "Shoot Bandits" and
+			not state.assignment and
+			not SELF.tags.dead then
+			
 			-- it's go time!
 			local banditFaction = query("gameSession","getSessiongOH","Bandits")[1]
 			

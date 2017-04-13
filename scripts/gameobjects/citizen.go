@@ -6203,7 +6203,9 @@ gameobject "citizen" inherit "ai_agent"
 			state.assignment = assignment
 			
 		elseif messagereceived == "Cancel corpse orders" and
+			state.assignment and
 			SELF.tags.dead then
+			
 			send("gameBlackboard",
 				"gameObjectRemoveTargetingJobs",
 				SELF,
@@ -6286,34 +6288,45 @@ gameobject "citizen" inherit "ai_agent"
 				"odinRendererClearInteractions",
 				state.renderHandle)
 		
-		if SELF.tags.dead and
-			not SELF.tags.buried and
-			not state.assignment then
+		if SELF.tags.dead and not SELF.tags.buried then
+			if not state.assignment then
 			
-			send("rendInteractiveObjectClassHandler",
-                    "odinRendererAddInteractions",
-				state.renderHandle,
-                         "Give " .. state.AI.name .. " a Proper Burial",
-                         "Bury Corpse (player order)",
-                         "Bury Corpses", --"Bury Corpses",
-                         "Bury Corpse (player order)", --"Bury Corpse (player order)",
-						"graveyard",
-						"",
-						"Dirt",
-						false,true)
-			
-			send("rendInteractiveObjectClassHandler",
-                    "odinRendererAddInteractions",
-				state.renderHandle,
-                         "Dump the Corpse of " .. state.AI.name,
-                         "Dump Corpse (player order)",
-                         "Dump Corpses", -- "Dump Corpses",
-                         "Dump Corpse (player order)", --"Dump Corpse (player order)",
-						"graveyard",
-						"",
-						"Dirt",
-						false,true)
-			
+				send("rendInteractiveObjectClassHandler",
+						"odinRendererAddInteractions",
+					state.renderHandle,
+							 "Give " .. state.AI.name .. " a Proper Burial",
+							 "Bury Corpse (player order)",
+							 "Bury Corpses", --"Bury Corpses",
+							 "Bury Corpse (player order)", --"Bury Corpse (player order)",
+							"graveyard",
+							"",
+							"Dirt",
+							false,true)
+				
+				send("rendInteractiveObjectClassHandler",
+						"odinRendererAddInteractions",
+					state.renderHandle,
+							 "Dump the Corpse of " .. state.AI.name,
+							 "Dump Corpse (player order)",
+							 "Dump Corpses", -- "Dump Corpses",
+							 "Dump Corpse (player order)", --"Dump Corpse (player order)",
+							"graveyard",
+							"",
+							"Dirt",
+							false,true)
+			else
+				send("rendInteractiveObjectClassHandler",
+						"odinRendererAddInteractions",
+					state.renderHandle,
+							 "Cancel orders for corpse of " .. state.AI.name,
+							 "Cancel corpse orders",
+							 "Cancel corpse orders", --"Cancel corpse orders",
+							 "Cancel corpse orders", -- "Cancel corpse orders",
+							"graveyard",
+							"",
+							"Dirt",
+							false,true)				
+			end
 		end
 	>>
 

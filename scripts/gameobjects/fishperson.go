@@ -1031,7 +1031,7 @@ gameobject "fishperson" inherit "ai_agent"
 		send("rendInteractiveObjectClassHandler",
 			"odinRendererRemoveInteraction",
 			state.renderHandle,
-			"Cancel Fishperson orders")
+			"Cancel corpse orders")
 
 		state.assignment = nil
 		send(SELF,"resetInteractions")
@@ -1093,7 +1093,7 @@ gameobject "fishperson" inherit "ai_agent"
 			-- jobs will take it from here.
 			SELF.tags.bad_fishperson = true
 			
-			setCancelInteraction = true
+			setCancelInteraction = false -- true
 			
 		--[[elseif message == "Share Food With Fishpeople" and
 			not SELF.tags.invited_to_dinner then
@@ -1148,7 +1148,7 @@ gameobject "fishperson" inherit "ai_agent"
 				"odinRendererClearInteractions",
 				state.renderHandle)
 			
-			setCancelInteraction = true
+			setCancelInteraction = false -- true
 			state.assignment = assignment
 			
 		elseif messagereceived == "Butcher Fishperson Corpse (player order)"  and
@@ -1195,7 +1195,7 @@ gameobject "fishperson" inherit "ai_agent"
 				"odinRendererClearInteractions",
 				state.renderHandle)
 			
-			setCancelInteraction = true
+			setCancelInteraction = false -- true
 			state.assignment = assignment
 	
 		elseif messagereceived == "Bury Corpse (player order)" and
@@ -1292,7 +1292,7 @@ gameobject "fishperson" inherit "ai_agent"
 			setCancelInteraction = true
 			state.assignment = assignment
 			
-		elseif messagereceived == "Cancel Fishperson orders" and
+		--[[elseif messagereceived == "Cancel Fishperson orders" and
 			state.assignment and
 			SELF.tags.dead then
 			
@@ -1303,21 +1303,47 @@ gameobject "fishperson" inherit "ai_agent"
 			
 			state.assignment = nil
 			send(SELF,"resetInteractions")
-			SELF.tags.bad_fishperson = false -- hacky.
+			SELF.tags.bad_fishperson = false -- hacky.]]--
+			
+		elseif messagereceived == "Cancel corpse orders" and
+			state.assignment and
+			SELF.tags.dead then
+			
+			send("gameBlackboard",
+				"gameObjectRemoveTargetingJobs",
+				SELF,
+				nil)
+			
+			send(SELF,"resetInteractions")
+			state.assignment = nil
 		end
 		
 		if setCancelInteraction then
-			send("rendInteractiveObjectClassHandler",
-                    "odinRendererAddInteractions",
-				state.renderHandle,
-                         "Cancel orders regarding " .. state.AI.name,
-                         "Cancel Fishperson orders",
-                         "", --"Cancel Fishperson orders",
-                         "", --"Cancel Fishperson orders",
-						"",
-						"",
-						"",
-						false,true)
+			--if SELF.tags.dead then
+				send("rendInteractiveObjectClassHandler",
+						"odinRendererAddInteractions",
+					state.renderHandle,
+							 "Cancel orders for corpse of " .. state.AI.name,
+							 "Cancel corpse orders",
+							 "Cancel corpse orders", --"Cancel corpse orders",
+							 "Cancel corpse orders", --"Cancel corpse orders",
+							"graveyard",
+							"",
+							"Dirt",
+							false,true)
+			--[[else
+				send("rendInteractiveObjectClassHandler",
+						"odinRendererAddInteractions",
+					state.renderHandle,
+							 "Cancel orders regarding " .. state.AI.name,
+							 "Cancel Fishperson orders",
+							 "Cancel Fishperson orders", --"Cancel Fishperson orders",
+							 "Cancel Fishperson orders", --"Cancel Fishperson orders",
+							"",
+							"",
+							"",
+							false,true)
+			end]]--
 		end
 	>>
 	
@@ -1332,47 +1358,58 @@ gameobject "fishperson" inherit "ai_agent"
 		--local denial =	query("gameSession","getSessionBool","fishpeoplePolicyDenial")[1]
 		--local friendly = query("gameSession","getSessionBool","fishpeoplePolicyFriendly")[1]
 		
-		if SELF.tags.dead and
-			not state.assignment then
-			
-			if SELF.tags.meat_source then 
-				send("rendInteractiveObjectClassHandler",
-					"odinRendererAddInteractions",
-					state.renderHandle,
-					"Butcher Fishperson",
-					"Butcher Fishperson Corpse (player order)",
+		if SELF.tags.dead and not SELF.tags.buried then
+			if not state.assignment then
+				if SELF.tags.meat_source then 
+					send("rendInteractiveObjectClassHandler",
+						"odinRendererAddInteractions",
+						state.renderHandle,
+						"Butcher Fishperson",
+						"Butcher Fishperson Corpse (player order)",
 						"Butcher Fishpeople", --"Butcher Fishpeople",
 						"Butcher Fishperson Corpse (player order)", --"Butcher Fishperson Corpse (player order)",
 							"butcher_icon",
 							"",
 							"Flesh Crack",
 							false,true)
-				
-				send("rendInteractiveObjectClassHandler",
-					"odinRendererAddInteractions",
-					state.renderHandle,
-					"Have Naturalist Dissect Fishperson",
-					"Study Horror (fishperson)",
+					
+					send("rendInteractiveObjectClassHandler",
+						"odinRendererAddInteractions",
+						state.renderHandle,
+						"Have Naturalist Dissect Fishperson",
+						"Study Horror (fishperson)",
 						"Dissect Fishpeople",
 						"Study Horror (fishperson)",
 							"",
 							"",
 							"click",
 							true,true)
+				end
+				
+				send("rendInteractiveObjectClassHandler",
+						"odinRendererAddInteractions",
+					state.renderHandle,
+							 "Dump Fishperson Corpse",
+							 "Dump Corpse (player order)",
+							 "Dump Corpses", --"Dump Corpses",
+							 "Dump Corpse (player order)", --"Dump Corpse (player order)",
+							"graveyard",
+							"",
+							"Dirt",
+							false,true)
+			else
+				send("rendInteractiveObjectClassHandler",
+						"odinRendererAddInteractions",
+					state.renderHandle,
+							 "Cancel orders for corpse of " .. state.AI.name,
+							 "Cancel corpse orders",
+							 "Cancel corpse orders", --"Cancel corpse orders",
+							 "Cancel corpse orders", -- "Cancel corpse orders",
+							"graveyard",
+							"",
+							"Dirt",
+							false,true)				
 			end
-			
-			send("rendInteractiveObjectClassHandler",
-                    "odinRendererAddInteractions",
-				state.renderHandle,
-                         "Dump Fishperson Corpse",
-                         "Dump Corpse (player order)",
-                         "Dump Corpses", --"Dump Corpses",
-                         "Dump Corpse (player order)", --"Dump Corpse (player order)",
-						"graveyard",
-						"",
-						"Dirt",
-						false,true)
-			
 		elseif not SELF.tags.dead then
 			
 			-- not dead.
