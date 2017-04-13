@@ -737,7 +737,7 @@ gameobject "ai_damage"
 	receive IgniteMessage()
 	<<		
 		-- CECOMMPATCH bugfix. Spores that die while on fire cause a crash, so do nothing if ignite attempted
-		if SELF.tags["selenian_spore"] then
+		if SELF.tags["selenian_spore"] or SELF.tags["obeliskian"] then
 			send(SELF,"invisFire")
 			return
 		end
