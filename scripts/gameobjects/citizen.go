@@ -4472,6 +4472,7 @@ gameobject "citizen" inherit "ai_agent"
 	
 	receive deathBy( gameObjectHandle damagingObject, string damageType )
 	<<
+		send("rendUIManager", "uiRemoveColonist", SELF.id)
 		send("rendOdinCharacterClassHandler", "removeCombatPanel", SELF.id)
 
 --[[
