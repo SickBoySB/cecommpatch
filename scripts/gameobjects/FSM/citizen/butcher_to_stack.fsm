@@ -214,6 +214,18 @@ butcher_to_stack = {
 			--end
 		end
 		
+		if tag.target.tags["fishperson"] or tag.target.tags["human"] then
+			
+			send( "rendOdinCharacterClassHandler",
+				"odinRendererSetCharacterGeometry", 
+				tag.target.id,
+				"models\\character\\body\\bipedSkeleton.upm", 
+				"models\\character\\heads\\headSkull.upm",
+				"none",
+				"biped",
+				"idle_dead")
+		end
+		
 		--send(tag.target, "despawn")
 		return "picking_up"
 	end,
@@ -274,8 +286,15 @@ butcher_to_stack = {
 				send(results[1], "hearExclamation", "detectFishpersonButcher", SELF, nil)
 			end
 		end
+		-- TODO: turn into skeleton if human or fishperson, don't despawn
 		
-		send(tag.target, "despawn")
+		
+		
+		if tag.target.tags["fishperson"] or tag.target.tags["human"] then				
+			tag.target.tags["meat_source"] = false
+		else
+			send(tag.target, "despawn")
+		end
 	end,
 
 	["abort"] = function(state, tag	)
