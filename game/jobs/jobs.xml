@@ -6344,6 +6344,8 @@
 		<require_character_has_no_tag tag="upper_class" />
 		<!--<on_abort behaviour="yield"/>-->
 		
+		<on_abort behaviour="yield"/>
+		
 		<utility max="1599">
 			<base_job_utility weight="500"/>
 			<!--<any_civilization input="corpse" weight="1000" />
@@ -6376,6 +6378,8 @@
 		<require_character_has_no_tag tag="militia" />
 		<require_character_has_no_tag tag="upper_class"/>
 		<!--<on_abort behaviour="yield"/>-->
+		
+		<on_abort behaviour="yield"/>
 		 
 		<utility max="1599">
 			<base_job_utility weight="30"/>
@@ -6412,6 +6416,8 @@
 		<require_not_sitting/>
 		<require_character_has_no_tag tag="military" />
 		<require_character_has_no_tag tag="upper_class" />
+		
+		<on_abort behaviour="yield"/>
 
 		<utility max="1599">
 			<base_job_utility weight="900"/>
