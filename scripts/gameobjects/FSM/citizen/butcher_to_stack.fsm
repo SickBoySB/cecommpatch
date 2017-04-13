@@ -1,0 +1,287 @@
+butcher_to_stack = {
+	["start"] = function(state,tag,name)
+	
+		if not tag.target then
+			return "abort",true
+		end
+		
+		if tag.target.deleted then
+			return "abort", true
+		end
+		
+		if not tag.target.tags.meat_source then
+			return "abort", true
+		end
+			
+		state.AI.bools["canBeSocial"] = false
+		
+		send("rendOdinCharacterClassHandler",
+			"odinRendererCharacterWieldTemporaryToolMessage",
+			state.renderHandle,
+			"models\\props\\huntingknifeH.upm")
+		
+		send("rendOdinCharacterClassHandler",
+			"odinRendererSetCharacterAnimationMessage",
+			state.renderHandle,
+			"butcher_ground",
+			false)
+
+		state.AI.animationTickCount = animationLength(state.animSet, "butcher_ground")
+		
+		return "butchering"
+	end,
+
+	["butchering"] = function(state,tag,name)
+
+		state.AI.animationTickCount = state.AI.animationTickCount - 1
+		
+		if state.AI.animationTickCount == 10 then
+			send("rendInteractiveObjectClassHandler",
+				"odinRendererPlaySFXOnInteractive",
+				state.renderHandle,
+				"Flesh Crack")
+			
+		end
+
+		if state.AI.animationTickCount <= 0 then
+			send( "rendOdinCharacterClassHandler",
+				"odinRendererCharacterDropTemporaryToolMessage",
+				state.renderHandle)
+			
+			local resultPos = query(tag.target, "gridGetPosition")[1]
+			if resultPos then
+				send("rendCommandManager",
+					"odinRendererCreateParticleSystemMessage",
+					"BloodSplashCentered",
+					resultPos.x,
+					resultPos.y)
+			end
+			
+			state.AI.curJobInstance.doNotRestartOnAbort = true
+			
+			return "sequence_end"
+		end
+		return "butchering"
+	end,
+	
+	["sequence_end"] = function(state,tag,name)
+          state.AI.animationTickCount = state.AI.animationTickCount -1
+          if state.AI.animationTickCount <= 0 then
+			
+			send("rendOdinCharacterClassHandler",
+				"odinRendererCharacterDropTemporaryToolMessage",
+				state.renderHandle)
+			
+               return "pickup_item"
+          end
+		return "sequence_end"
+	end,
+
+	["pickup_item"] = function(state,tag,name)
+		state.AI.canTestForInterrupts = false
+		
+		local targetAI = query(tag.target,"getAIBlock")[1]
+		local targetData = EntityDB[ targetAI.strs.citizenClass ]
+		
+		-- bones, gibs, cleanup first
+		-- BONES
+		if targetData.bonesOutput then
+			local handle = query("scriptManager",
+							"scriptCreateGameObjectRequest",
+							"forageSource",
+							{ legacyString = targetData.bonesOutput } )[1]
+			
+			send( handle, "GameObjectPlace", targetAI.position.x, targetAI.position.y  )
+		end
+		
+		-- objectcluster?
+		if targetData.harvest_objectcluster_output then
+			local handle = query("scriptManager",
+							"scriptCreateGameObjectRequest",
+							"objectcluster",
+							{ legacyString = targetData.bonesOutput } )[1]
+			
+			send( handle, "GameObjectPlace", targetAI.position.x, targetAI.position.y  )
+		end
+		
+		-- make a mess.
+		send("rendCommandManager",
+			"odinRendererCreateParticleSystemMessage",
+			"BloodSplashCentered",
+			targetAI.position.x,
+			targetAI.position.y)
+		
+          send(tag.target, "spawnGibs")
+		incMusic(3,10)
+		
+		-- Create new item
+		local entityName = targetData.butcherOutput
+		if not entityName then
+			send(tag.target, "despawn")
+			return "final"
+		end
+		local entityCount = targetData.numCommodityOutput
+		
+		local entityData = EntityDB[ entityName ]
+		if not entityData then
+			printl("FSM", "ERROR attempting to make " ..  tostring(entityName) .. " !@#!")
+			return "abort"
+		end
+		
+		if not entityCount then
+			entityCount = 3
+		end
+		
+		local tier = -1
+		if entityData.tier then
+			tier = entityData.tier
+		end
+		
+		local resultObject = false
+		local resultObjects = {}
+		for i=1,entityCount do
+			resultObject = query("scriptManager",
+							 "scriptCreateGameObjectRequest",
+							 "item",
+							 {legacyString = entityName })
+			
+			send(resultObject[1],"ClaimItem")
+			resultObjects[#resultObjects+1] = resultObject[1]
+
+			if tier ~= -1 then
+				local tiername = "tier" .. tier .. "produced"
+				send("gameSession", "incSessionInt", tiername, 1)
+			end
+		end
+
+		if #resultObjects > 1 then
+			-- create container, put everything into container
+			local initTable = { legacyString = "crate", container_parent = entityName }
+			
+			local container = query("scriptManager",
+								"scriptCreateGameObjectRequest",
+								"container",
+								initTable )
+			
+			local handle = container[1]
+			send(handle,"ClaimItem")
+			send(handle,"ContainerSetStackMode",entityName)
+			for k,v in pairs(resultObjects) do
+				send(handle, "ContainerAddItem", v)
+			end
+			resultObject = handle
+		else
+			resultObject = resultObjects[1]
+		end
+
+		local pickupItemString = "lift_item_h1"
+
+		-- Pick up new item
+		state.AI.possessedObjects["curPickedUpItem"] = resultObject
+
+		local resultROH = query(state.AI.possessedObjects["curPickedUpItem"], "ROHQueryRequest")
+		local h_model = query(state.AI.possessedObjects["curPickedUpItem"], "HandModelQueryRequest")
+
+		send("rendOdinCharacterClassHandler", 
+			"odinRendererCharacterPickupItemMessage",
+			state.renderHandle,
+			resultROH[1],
+			"R_ItemAttach",
+			h_model[1],
+			pickupItemString)		
+
+		state.AI.animationTickCount = animationLength(state.animSet, pickupItemString.. "_p1") + animationLength(state.animSet, pickupItemString.. "_p2")
+		
+		-- extra item output?
+
+		if targetData.extraOutput then
+			local handle = query("scriptManager",
+							"scriptCreateGameObjectRequest",
+							"item",
+							{ legacyString = targetData.extraOutput } )[1]
+			
+			send( handle, "GameObjectPlace", state.AI.position.x, state.AI.position.y  )
+			
+			local civ = query("gameSpatialDictionary",
+						"gridGetCivilization",
+						state.AI.position)[1]
+		  
+			--if civ < 10 then
+			-- can assume a player did this butchery job due to it being a stack. So there you go!
+				send(handle,"ClaimItem")
+			--else
+			--	send(handle,"ForbidItem")
+			--end
+		end
+		
+		send(tag.target, "despawn")
+		return "picking_up"
+	end,
+
+	["picking_up"] = function(state,tag,name)
+		state.AI.animationTickCount = state.AI.animationTickCount - 1
+		if state.AI.animationTickCount <= 0 then 
+			return "final"
+		end
+		return "picking_up"
+	end,
+
+	["final"] = function(state,tag,name)
+		state.AI.canTestForInterrupts = true
+		state.AI.bools["canBeSocial"] = true
+		
+		send("rendOdinCharacterClassHandler",
+               "odinRendererIdleCharacterMessage",
+               state.renderHandle)
+
+		if tag.target.tags.human and
+			tag.target.tags.dead and
+			(not SELF.tags.fishy_state) then
+			
+			incMusic(5,60) -- well, this just got real.
+			send(SELF,"makeMemory","Butchered A Human Corpse",nil,nil,nil,nil)
+			
+			local results = query("gameSpatialDictionary",
+							  "allObjectsInRadiusWithTagRequest",
+							  state.AI.position,
+							  10,
+							  "citizen",
+							  true)
+			
+			if results then
+				send(results[1], "hearExclamation", "cannibalistic_butchery", SELF, tag.target)
+			end
+		end
+		
+		if tag.target.tags["fishperson"] == true then
+			if SELF.tags["citizen"] then
+				incMusic(5,5)
+			end
+			if state.AI.traits["cannibal"] then
+				--You don't care!
+			elseif state.AI.traits["Fishy Behaviour"] == true then
+				incMusic(5,5)
+				send(SELF,"makeMemory","Butchered A Fishperson Corpse (fishy)",nil,nil,nil,nil)
+			else
+				send(SELF,"makeMemory","Butchered A Fishperson Corpse",nil,nil,nil,nil)
+			end
+			
+			local results = query("gameSpatialDictionary",
+						 "allObjectsInRadiusWithTagRequest",
+						 state.AI.position,
+						 6, "citizen", true)
+			if results then
+				send(results[1], "hearExclamation", "detectFishpersonButcher", SELF, nil)
+			end
+		end
+	end,
+
+	["abort"] = function(state, tag	)
+		state.AI.bools["canBeSocial"] = true
+		send( "rendOdinCharacterClassHandler",
+			"odinRendererCharacterDropTemporaryToolMessage",
+			state.renderHandle)
+		
+		return
+	end
+}
