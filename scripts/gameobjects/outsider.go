@@ -600,6 +600,11 @@ gameobject "outsider" inherit "ai_agent"
 		-- TODO flesh out handling of damagingObject and damageType into interesting descriptions.
 
 		SELF.tags.meat_source = true
+		
+		-- explode into meats if blown up
+		if damageType == "explosion" or damageType == "shrapnel" then
+			meat_splosion()
+		end
 
 		local animName = bipedDeathAnimSmart(damageType) -- func in ai_agent.go
 		

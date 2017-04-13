@@ -452,6 +452,11 @@ gameobject "fishperson" inherit "ai_agent"
 		SELF.tags["hostile_horror"] = nil
 		SELF.tags.meat_source = true
 		
+		-- explode into meats if blown up
+		if damageType == "explosion" or damageType == "shrapnel" then
+			meat_splosion()
+		end
+
 		send("gameSpatialDictionary","gameObjectRemoveBit",SELF,10)
 		
 		local animName = bipedDeathAnimSmart(damageType) -- func in ai_agent.go

@@ -809,6 +809,11 @@ gameobject "bandit" inherit "ai_agent"
 	<<
 		SELF.tags.meat_source = true
 		
+		-- explode into meats if blown up
+		if damageType == "explosion" or damageType == "shrapnel" then
+			meat_splosion()
+		end
+
 		-- you're not a bandit anymore:
 		send("gameSpatialDictionary","gameObjectRemoveBit",SELF,14) 
 

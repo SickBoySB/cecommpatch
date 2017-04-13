@@ -4514,6 +4514,11 @@ gameobject "citizen" inherit "ai_agent"
 			SELF.tags["meat_source"] = nil
 		end
 		
+		-- explode into meats if blown up
+		if damageType == "explosion" or damageType == "shrapnel" then
+			meat_splosion()
+		end
+		
 		if SELF.tags["military"] or SELF.tags["militia"] then
 			send("gameSession", "incSessionInt", "militaryCount", -1)
 		end

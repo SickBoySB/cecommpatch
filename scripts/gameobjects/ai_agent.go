@@ -97,6 +97,11 @@ gameobject "ai_agent" inherit "renderableobject" inherit "ai_damage"
 				"death_platoon", -- long kneel reach towards sky
 				"death_poet", -- long dramatic kneeling one handed grab
 				}
+			elseif damageType == "explosion" or damageType == "shrapnel" then
+				deathAnims = {
+					"death_while_fleeing", -- short leap forward
+					"deathHeadfalloff"
+					}
 			else
 			-- give a 1/100 chance to pop the head off for non-starvation deaths
 				if rand(0,100) == 100 then
@@ -122,6 +127,109 @@ gameobject "ai_agent" inherit "renderableobject" inherit "ai_damage"
 				
 				-- screw it, just delete the damn thing... isn't used for anything anyways, and this fixes a TON of problems
 				send(SELF,"despawn")
+			end
+		end
+		
+		function meat_splosion()
+		-- CECOMMPATCH function - this is a way to uniquely handle folks that are killed by explosions
+		-- meat is spawned and the corpse is skeleton-ized. exploded corpses also only use a few different animations, to keep it interesting
+		-- with this method, skeletons will go through the death animation. this is intentional
+		-- the spawned meat *may* be destroyed in secondary explosions. again, this is intentional
+		
+			local meat_selection = ""
+			local continue = true
+				
+			-- give shrapnel kills less of a chance for this effect
+			if damageType == "shrapnel" then
+				if rand(1,3) == 1 then
+					-- abort if the dice weren't in favor of meats, the fools
+					continue = false
+				end
+			end
+				
+			if SELF.tags["human"] then
+				meat_selection = "long_pork"
+			elseif SELF.tags["fishperson"] then
+				meat_selection = "raw_fishperson_steak"
+			else
+				-- not a valid type, aboooooort!
+				continue = false
+			end
+			
+			if continue then
+				
+				send("rendCommandManager",
+					"odinRendererCreateParticleSystemMessage",
+					"BloodSplashCentered",
+					state.AI.position.x,
+					state.AI.position.y)
+				
+				-- spawn the meats!
+				local numSteaks = 2
+				for s=1, numSteaks do
+						
+					local results = false
+					
+					-- give a chance for burned meats.. they *did* explode, after all
+					if rand(1,4) == 1 then
+						meat_selection = "charred_meat"
+					end
+					
+					-- if armoured, give a chance for metal drops
+					if SELF.tags["armoured"] then
+						if rand(1,2) == 1 then
+							meat_selection = "iron_plates"
+						end
+					end
+					
+					results = query("scriptManager",
+								 "scriptCreateGameObjectRequest",
+								 "item",
+								 {legacyString = meat_selection} )
+					
+					local handle = results[1]
+					if not handle then 
+						printl("CECOMMPATCH - meat_splosion creation failed")
+						--return
+					else 
+						local positionResult = query("gameSpatialDictionary",
+										   "nearbyEmptyGridSquare",
+										   state.AI.position,
+										   4)
+						-- no need to force spawning through a nearbyEmptyGridSquare loop, just don't spawn if it's not possible
+						if positionResult then
+							if positionResult[1].onGrid then
+								send( handle, "GameObjectPlace", positionResult[1].x, positionResult[1].y  )
+							else
+								send( handle, "GameObjectPlace", state.AI.position.x, state.AI.position.y  )
+							end
+							
+							local civ = query("gameSpatialDictionary", "gridGetCivilization", state.AI.position )[1]
+							if civ == 0 then
+								send(handle,"ClaimItem")
+							else
+								send(handle, "ForbidItem")
+							end	
+						end
+					end
+				end
+			
+				-- set necessary tags so our insta-skeleton doesn't screw anything up
+				SELF.tags.meat_source = nil
+				state.AI.bools["rotted"] = true
+				state.AI.bools["onFire"] = false
+				SELF.tags["burning"] = false
+				
+				send( "rendOdinCharacterClassHandler",
+					"odinRendererSetCharacterGeometry", 
+					state.renderHandle,
+					"models\\character\\body\\bipedSkeleton.upm", 
+					"models\\character\\heads\\headSkull.upm",
+					"none",
+					"biped",
+					"idle_dead")
+				
+				send(SELF,"resetInteractions")
 			end
 		end
 	>>
