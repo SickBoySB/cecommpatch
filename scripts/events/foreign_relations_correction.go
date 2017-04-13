@@ -50,7 +50,7 @@ event "foreign_relations_correction"
 				}
 					
 				if dominant_short_name[dominant] then
-					printl("CECOMMPATCH - dominant faction shortname correction")
+					--printl("CECOMMPATCH - dominant faction shortname correction")
 					dominant = dominant_short_name[dominant]
 				end
 				-- /hack

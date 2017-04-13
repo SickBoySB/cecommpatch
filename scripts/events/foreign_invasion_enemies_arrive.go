@@ -143,6 +143,24 @@ event "foreign_invasion_enemies_arrive"
 			local numUnits = rand(3,4)
 			
 			local dominant = query("gameSession","getSessionString", "dominantFaction")[1]
+			
+			-- CECOMMPATCH more effing hacks for dominant not using the right name
+			local dominant_short_name = {
+				["Grossherzoginnentum von Stahlmark"] = "Stahlmark",
+				["Novorus Imperiya"] = "Novorus",
+				["Republique Mecanique"] = "Republique",
+				-- not sure if any of the below is ever used, but just to be safe..
+				["The Clockwork Empire"] = "Empire",
+				["Fishpeople"] = "Fishpeople",
+				["Bandits"] = "Bandits"
+			}
+				
+			if dominant_short_name[dominant] then
+				--printl("CECOMMPATCH - dominant faction shortname correction")
+				dominant = dominant_short_name[dominant]
+			end
+			-- /hack
+			
 			if state.invader == dominant then
 				numUnits = numUnits + rand(1,2)
 			end
