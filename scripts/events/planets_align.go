@@ -103,7 +103,7 @@ event "planets_align"
 				newLoc.y = spawnLoc.y
 				local civ = query( "gameSpatialDictionary", "gridGetCivilization", newLoc )[1]
 				local iswater = query( "gameSpatialDictionary", "gridHasSpatialTag", newLoc, "water" )[1]
-				printl("events", "planets_align checking if civ or water at pos: " .. tostring(newLoc.x) .. ", " .. tostring(newLoc.y) .. " and civ/water == " .. tostring(civ) .. " / " .. tostring(iswater) )
+				printl("events", "planets_align checking if civ or water at pos: " .. tostring(newLoc.x) .. ", " .. tostring(newLoc.y) .. " and civ/water == " .. tostring(civ) .. " / " .. tostring(iswater).."  ivalue: "..i )
 				if civ < 10*10 then
 					-- no! respawn!
 					-- make really sure this never tries to spawn off the map.
@@ -124,6 +124,9 @@ event "planets_align"
 					spawnValid = true
 					printl("events", "planets_align : found valid spawn location, placing obeliskians at " .. tostring(spawnLoc.x) .. ", " .. tostring(spawnLoc.y) )
 				end
+				
+				-- GG forgot to iterated, infinite loop fix
+				i = i + 1
 			end
 			
                local numEnemies = rand(3,7)
