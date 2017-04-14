@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>CECOMMPATCH - 0.9.4 - README</title>
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="-1">
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<style>
+			/*
+				CSS Reset by Eric Meyer - Released under Public Domain
+			http://meyerweb.com/eric/tools/css/reset/
+				modified by SB to remove ul/ol/li resets
+			*/
+			html, body, div, span, applet, object, iframe,
+			h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+			a, abbr, acronym, address, big, cite, code,
+			del, dfn, em, font, img, ins, kbd, q, s, samp,
+			small, strike, strong, sub, sup, tt, var,
+			b, u, i, center, dl, dt, dd, 
+			fieldset, form, label, legend, table, 
+			caption, tbody, tfoot, thead, tr, th, td 
+			{margin: 0;padding: 0;border: 0;outline: 0;
+			font-size: 100%;vertical-align: baseline;
+			background: transparent;}
+			body{line-height: 1;}
+			blockquote, q {quotes: none;}
+			blockquote:before, blockquote:after,
+			q:before, q:after {content: '';	content: none;}
+			:focus{outline: 0;}
+			ins {text-decoration: none;}
+			del {text-decoration: line-through;}
+			table {border-collapse: collapse;border-spacing: 0;}
+
+			html {
+				background-image: url("images/page-bg.jpg");
+				background-repeat: repeat;
+			}
+
+			html, body {
+				width: 100%;
+				height: 100%;
+				color: #ff0000;
+				background: url("ui/loadingscreens/titleScreen8.png") #111;
+				background-position: top center;
+				background-attachment: fixed;
+			}
+
+			#univ {
+				min-width: 700px;
+				margin: 0 auto;
+				font-family: monospace;
+				font-size: 12px;
+				color: #AAA;
+			}
+			
+			
+			#topper {
+				display: table;
+				margin: 0 auto;
+				height: 175px;
+				z-index: 999;
+			}
+			
+			#cont {
+				position: relative;
+				top: -50px;
+				margin: 0 auto;
+				padding-left: 20px;
+				padding-right: 20px;
+				width: 70%;
+				min-width: 700px;
+				height: auto;
+				box-shadow: 0px 0px 20px 5px #000000;
+				z-index: 999;
+				border-radius: 20px;
+				background: rgb(1, 1, 1); /* older ie fallback */
+				background: rgba(1,1,1,0.8);
+				border: 1px solid #000;
+			}
+			
+			pre {
+				color: #fff0b8;
+				text-shadow: 0 0 20px #F8491C, 0 0 10px #F8491C, 0 0 20px #F8491C;
+				white-space: pre-wrap;       /* css-3 */
+				white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+				white-space: -pre-wrap;      /* Opera 4-6 */
+				white-space: -o-pre-wrap;    /* Opera 7 */
+				word-wrap: break-word;       /* Internet Explorer 5.5+ */
+			}
+			
+			#mst3k > pre {
+				color: #555;
+				text-shadow: 0 0 0px;
+			}
+			
+			ol {
+				padding-left: 20px;
+			}
+			
+			ul {
+				padding-left: 10px;
+			}
+			
+			li {
+				padding-bottom: 5px;
+			}
+			
+			p {
+				padding-bottom: 10px;
+			}
+			
+			#cont > div {
+				padding-top: 20px;
+				margin: 0 auto;
+				display: table;
+			}
+			
+			#cont > div > span {
+				display: table;
+				margin: 0 auto;
+				color: #ddb777;
+			}
+			
+			#logo > img {
+				height: 150px;
+				margin: 0 auto;
+			}
+			
+			#version {
+				color: #ff0000;
+			}
+			
+			#warning {
+				color: #ff0000;
+				margin: 0 auto;
+				display: table;
+			}
+			
+			a {
+				color: #ddb777;
+			}
+			
+			a:hover {
+				color: #ff0000;
+			}
+			
+			#lright, #lleft, #lcenter {
+				display: block;
+				float: left;
+				height: 150px;
+			}
+			
+			#lright, #lleft {
+				width: 191px;
+				background: url("ui/ce_crest_painted2.png");
+				background-size: 100% 100%;
+			}
+			#lcenter {
+				width: 300px;
+				height: 150px;
+				background: url("ui/ce_title_text_painted.png");
+				background-size: 100% 100%;
+			}
+			
+			#lleft {
+				-moz-transform: scaleX(-1);
+				-o-transform: scaleX(-1);
+				-webkit-transform: scaleX(-1);
+				transform: scaleX(-1);
+				filter: FlipH;
+				-ms-filter: "FlipH";
+			}
+		</style>
+	</head>
+	<body>
+		<div id="univ">
+			<div id="topper">
+				<div id="logo">
+					<div id="lright"></div>
+					<div id="lcenter"></div>
+					<div id="lleft"></div>
+				</div>
+			</div>
+			<div id="cont">
+				<div><pre>
+   _____ ______ _____ ____  __  __ __  __ _____     _______ _____ _    _ 
+  / ____|  ____/ ____/ __ \|  \/  |  \/  |  __ \ /\|__   __/ ____| |  | |
+ | |    | |__ | |   | |  | | \  / | \  / | |__) /  \  | | | |    | |__| |
+ | |    |  __|| |   | |  | | |\/| | |\/| |  ___/ /\ \ | | | |    |  __  |
+ | |____| |___| |___| |__| | |  | | |  | | |  / ____ \| | | |____| |  | |
+  \_____|______\_____\____/|_|  |_|_|  |_|_| /_/    \_\_|  \_____|_|  |_|
+				</pre><span>Clockwork Empires Community Patch - <span id="version">Version: 0.9.4</span></span><span>Clockwork Empires, all code, assets, etc. are (c) Gaslamp Games</span></div><br>
+<p>Welcome to the Clockwork Empires Community Patch (CECOMMPATCH)! This project is an effort to continue development of the game Clockwork Empires that was made by Gaslamp Games. All changes are done to the exposed game files, *not* the engine itself. Decompiling the executable to gain access to those parts of the code is not part of this project, so engine-related limitations exist. Fortunately, Gaslamp Games made their engine in such a way that the vast majority of the game is moddable so it's rare to run into hardcoded issues.</p>
+
+<p>The first priority of CECOMMPATCH is to fix any outstanding bugs that the game has. Great progress has been made so far, and the list of bugs is ever decreasing. After the majority are fixed, the next step will be to implement features that were removed/unfinished. A huge amount of unused 3D models, events, and gameplay features are still in the game files, and we plan to utilize as much as possible.</p>
+
+<p>After that stage, completely new content will be considered. The intent of this project is not to create a "total conversion", so all custom content will be themed in a way that fits with the established style.</p>
+				<div><pre>
+  _____ _   _  _____ _______       _      _      
+ |_   _| \ | |/ ____|__   __|/\   | |    | |     
+   | | |  \| | (___    | |  /  \  | |    | |     
+   | | | . ` |\___ \   | | / /\ \ | |    | |     
+  _| |_| |\  |____) |  | |/ ____ \| |____| |____ 
+ |_____|_| \_|_____/   |_/_/    \_\______|______|
+				</pre><span>INSTALL</span></div>
+<span id="warning">THIS IS FOR THE "1.0D - Experimental" VERSION OF THE GAME ONLY!</span>
+<ol>
+<li>BUY Clockwork Empires from Steam! <a href="http://store.steampowered.com/app/224740/" target="_blank">http://store.steampowered.com/app/224740/</a></li>
+
+<li>Download the "Experimental Branch" (1.0D) version of Clockwork Empires from Steam
+	<ol>
+	<li>Install the game normally</li>
+	<li>Right click the game in your Steam Library</li>
+	<li>Click "Properties"</li>
+	<li>Click the "BETAS" tab</li>
+	<li>Choose "experimental-" from the dropdown</li>
+	<li>Close the pop-up and allow the game to update</li>
+	<li>The game should now be called "Clockwork Empires [experimental]" in your library</li>
+	</ol>
+</li>
+
+<li>Download the newest CECOMMPATCH from <a href="https://github.com/SickBoySB/cecommpatch/releases/latest" target="_blank">https://github.com/SickBoySB/cecommpatch/releases/latest</a> (if you're reading this you probably already have it)</li>
+
+<li>Unzip the contents of this zip file into your game folder (which should be located wherever Steam installed it, typically "C:\Program Files (x86)\Steam\steamapps\common\Clockwork Empires")</li>
+
+<li>When prompted to overwrite the files, say "YES"</li>
+
+<li>You're done! It is highly recommended to use a new save with this patch. While initial versions should work okay with other 1.0D saves, as new content is added there will likely be problems.</li>
+</ol>
+
+<p>You'll know you've installed the patch correctly if this readme has an image-based background (assuming you moved the readme as well... which isn't necessary, but recommended).</p>
+
+<p>To uninstall this patch all you need to do is "verify integrity of game files" on Steam. The original files will be redownloaded and the mod will be overwritten.</p>
+				<div><pre>
+  _  ___   _  ______          ___   _   _____  _____ _____ _    _ ______  _____ 
+ | |/ / \ | |/ __ \ \        / / \ | | |_   _|/ ____/ ____| |  | |  ____|/ ____|
+ | ' /|  \| | |  | \ \  /\  / /|  \| |   | | | (___| (___ | |  | | |__  | (___  
+ |  < | . ` | |  | |\ \/  \/ / | . ` |   | |  \___ \\___ \| |  | |  __|  \___ \ 
+ | . \| |\  | |__| | \  /\  /  | |\  |  _| |_ ____) |___) | |__| | |____ ____) |
+ |_|\_\_| \_|\____/   \/  \/   |_| \_| |_____|_____/_____/ \____/|______|_____/ 
+				</pre><span>KNOWN ISSUES</span></div>
+<ul>
+<li>Only ~5 alerts are shown without scrolling. This is a tradeoff to fix alerts pushing the buttons off the screen.</li>
+
+<li>When swapping from one save to another the alerts menu disappears until a new alert occurs (or an old one goes away). This ONLY happens when swapping between saves, and a full restart of the application will not have this problem. This is a tradeoff to fix alerts pushing the buttons off the screen.</li>
+
+<li>The "Bottoms Up" and "Who You Gonna Call" achievements will not visually progress in Steam, but the achievement DOES work as intended now. The stat/progress portion is impossible to fix because the variable is unknown and all educated guesses didn't work.</li>
+
+<li>When workshop/office/etc. menus are open, there is a "dead zone" below it that doesn't register clicks. This is a hardcoded issue only made obvious because of visual changes to the UI. The default game actually does this with the "Factions" menu, but now it's a bit more obvious. Closing a window before clicking will mitigate the problem.</li>
+
+<li>The Trade Office menu isn't very pretty. Most of that menu is hardcoded and a good solution hasn't yet been found.</li>
+</ul>
+				<div><pre>
+  _      _____ _   _ _  __ _____ 
+ | |    |_   _| \ | | |/ // ____|
+ | |      | | |  \| | ' /| (___  
+ | |      | | | . ` |  <  \___ \ 
+ | |____ _| |_| |\  | . \ ____) |
+ |______|_____|_| \_|_|\_\_____/ 
+				</pre><span>LINKS</span></div>
+<ul>
+<li>Steam Group: <a href="http://steamcommunity.com/groups/cecommpatch" target="_blank">http://steamcommunity.com/groups/cecommpatch</a><br>
+<i>The Steam Group is the ideal place to keep up to date with the project, as well as discuss changes and report bugs. It's a public group, so no invite is necessary. Please adhere to the rules set in place though, as this is *not* the place to bash Gaslamp Games or troll.</i></li>
+
+<li>Official Thread: <a href="https://community.gaslampgames.com/threads/community-patch.20992/" target="_blank">https://community.gaslampgames.com/threads/community-patch.20992/</a><br>
+<i>This is the official thread created on the Gaslamp Games forum. There is no telling how long they will stay online, so it's probably better to stay in touch via Steam.</i></li>
+
+<li>GitHub: <a href="https://github.com/SickBoySB/cecommpatch/tree/v1" target="_blank">https://github.com/SickBoySB/cecommpatch/tree/v1</a><br>
+<i>Feel free to fork the code, contribute your own changes, make your own patch, etc.</i></li>
+
+<li>Current Issues/Features: <a href="https://github.com/SickBoySB/cecommpatch/issues" target="_blank">https://github.com/SickBoySB/cecommpatch/issues</a><br>
+<i>The current list of issues, features, etc. being tracked and worked on. This is not necessarily a comprehensive list, but it's a pretty good indication of what's on the to-do list.</i></li>
+</ul>
+				<div><pre>
+   _____ _    _          _   _  _____ ______ _      ____   _____ 
+  / ____| |  | |   /\   | \ | |/ ____|  ____| |    / __ \ / ____|
+ | |    | |__| |  /  \  |  \| | |  __| |__  | |   | |  | | |  __ 
+ | |    |  __  | / /\ \ | . ` | | |_ |  __| | |   | |  | | | |_ |
+ | |____| |  | |/ ____ \| |\  | |__| | |____| |___| |__| | |__| |
+  \_____|_|  |_/_/    \_\_| \_|\_____|______|______\____/ \_____|
+				</pre><span>CHANGELOG</span></div>
+				<pre>
+         __     ___     ___  
+        /  \   / _ \   / _ \ 
+       (  0 )_ \__  )_(__  (   0.9.4 (NEW SAVE RECOMMNEDED)
+        \__/(_)(___/(_) (__/ 
+				</pre>
+<ul>
+<li>FIX: Script error - Foreign Intervention event</li>
+<li>FIX: Script error - Foreign Relations Correction event</li>
+<li>FIX: Script error - Foreign Attack Bandits event</li>
+<li>FIX: Script error - Foreign Invasion Enemies Arrive event</li>
+<li>FIX: Buried corpses can be queued to be re-dumped/buried</li>
+<li>FIX: Buried corpses have a tooltip</li>
+<li>FIX: Buried overseer corpses show nametag</li>
+<li>FIX: Dead labourers show in the population menu</li>
+<li>FIX: Buried corpses sometimes don't disappear</li>
+<li>FIX: Wrong tooltip when loading a save - Bandits</li>
+<li>FIX: Wrong tooltip when loading a save - Foreigners</li>
+<li>FIX: Wrong tooltip when loading a save - Occult Inspectors</li>
+<li>FIX: Wrong tooltip when loading a save - Visiting Clockworkians</li>
+<li>FIX: Wrong tooltip when loading a save - Spectres</li>
+<li>FIX: Wrong tooltip when loading a save - Steam Knights</li>
+<li>FIX: Wrong tooltip when loading a save - Fishpeople</li>
+<li>FIX: Wrong tooltip when dead - Bandits</li>
+<li>FIX: Wrong tooltip when dead - Foreigners</li>
+<li>FIX: Wrong tooltip when dead - Occult Inspectors</li>
+<li>FIX: Wrong tooltip when dead - Visiting Clockworkians</li>
+<li>FIX: Wrong tooltip when dead - Spectres</li>
+<li>FIX: Wrong tooltip when dead - Steam Knights</li>
+<li>FIX: Wrong tooltip when dead - Fishpeople</li>
+<li>FIX: A duplicate, inactive Steam Knight is spawned and stuck at 0,0 for every SK spawned</li>
+<li>FIX: Scrap Iron is a trade good but doesn't have a trade value</li>
+<li>FIX: Science Crate is a trade good but doesn't have a trade value</li>
+<li>FIX: Power Lathe has an extremely low trade value</li>
+<li>FIX: Dumping fishpeople corpses uses the wrong job</li>
+<li>FIX: Corpses queued for auto-burial don't have the proper radial menu options</li>
+<li>FIX: Memories aren't created for human/fishpeople butchering</li>
+<li>FIX: Obeliskians on fire when they die crash the game</li>
+<li>FIX: Quaggaroth crashes the game on death</li>
+<li>FIX: Dead colonists (without last rites) aren't triggering spectre-spawning chances properly</li>
+<li>FIX: Spectres instantly despawn even if their 'goal' conditions aren't met</li>
+<li>FIX: Planets Align event can potentially go into an infinite loop</li>
+<li>CHANGE: Added 3 new "despair" tier icons</li>
+<li>CHANGE: Added 3 new "anger" tier icons</li>
+<li>CHANGE: Added 3 new "fear" tier icons</li>
+<li>CHANGE: Thought bubble graphic made a bit more thought-bubbley</li>
+<li>CHANGE: Added regularly triggered "emote" thought bubbles for negative moods and severely un-met needs</li>
+<li>CHANGE: 5 new death animations - Colonists</li>
+<li>CHANGE: 5 new death animations - Bandits</li>
+<li>CHANGE: 5 new death animations - Foreigners</li>
+<li>CHANGE: 5 new death animations - Occult Inspectors</li>
+<li>CHANGE: 5 new death animations - Visiting Clockworkians</li>
+<li>CHANGE: 5 new death animations - Fishpeople</li>
+<li>CHANGE: Increased hat-wearing chance from 40->50%</li>
+<li>CHANGE: Increased special hat-wearing chance from 10->35%</li>
+<li>CHANGE: All corpses can now be queued for burial or dumping by cursor select box</li>
+<li>CHANGE: Buried bodies are now much more reliably removed from the game</li>
+<li>CHANGE: Forbidden items can be claimed with cursor select box</li>
+<li>CHANGE: New set of tooltips - Bandits</li>
+<li>CHANGE: New set of tooltips - Foreigners</li>
+<li>CHANGE: New set of tooltips - Occult Inspectors</li>
+<li>CHANGE: New set of tooltips - Visiting Clockworkians</li>
+<li>CHANGE: New set of tooltips - Spectres</li>
+<li>CHANGE: New set of tooltips - Steam Knights</li>
+<li>CHANGE: New set of tooltips - Fishpeople</li>
+<li>CHANGE: Dead colonists given new tooltip</li>
+<li>CHANGE: Steam Knights explode (twice) on death now</li>
+<li>CHANGE: Explosion kills now insta-skeleton and drop meat - Colonists</li>
+<li>CHANGE: Explosion kills now insta-skeleton and drop meat - Bandits</li>
+<li>CHANGE: Explosion kills now insta-skeleton and drop meat - Foreigners</li>
+<li>CHANGE: Explosion kills now insta-skeleton and drop meat - Occult Inspectors</li>
+<li>CHANGE: Explosion kills now insta-skeleton and drop meat - Visiting Clockworkians</li>
+<li>CHANGE: Explosion kills now insta-skeleton and drop meat - Fishpeople</li>
+<li>CHANGE: Quaggaroth given a convulsing death animation (hacky crashfix, but also pretty neat)</li>
+<li>CHANGE: Quaggaroth has a better chance of properly spawning obeliskians on death</li>
+<li>CHANGE: Butchered fishpeople leave behind a skeleton</li>
+<li>CLEANUP: Fancier readme... just because</li>
+<li>CLEANUP: thoughtIcons00 has an inconsistent grey version</li>
+</ul>
+
+	
+				<pre>
+         __     ___     ____ 
+        /  \   / _ \   ( __ \
+       (  0 )_ \__  )_  (__ (   0.9.3
+        \__/(_)(___/(_)(____/
+				</pre>
+<ul>
+<li>FIX: Exterior Lamp (Lamp 00) not giving +1 quality</li>
+<li>FIX: Exterior Lamp (Lamp 01) not giving +1 quality</li>
+<li>FIX: Exterior Lamp (Lamp 02) not giving +1 quality</li>
+<li>FIX: Exterior Lamp (Lamp 03) not giving +1 quality</li>
+<li>FIX: Exterior Lamp (Lamp 04) not giving +1 quality</li>
+<li>FIX: Barometer not giving +1 quality</li>
+<li>FIX: Large Pipe and Valve not giving +1 quality</li>
+<li>FIX: Vent not giving +1 quality</li>
+<li>FIX: Pipe Cluster not giving +1 quality</li>
+<li>FIX: Pipe Cluster only needing 1x width when the model needs 2x</li>
+<li>FIX: Exterior decor placed higher than ghosted version when built</li>
+<li>FIX: Trade office showing the "overseer needed" icon</li>
+<li>FIX: Craters have a large, dark square around them</li>
+<li>FIX: Iron oven door animates opening and closing infinitely when not in use</li>
+<li>CHANGE: Farms and Zones/Constructions (menus) positions swapped to be more logical</li>
+<li>CHANGE: New "Commands" menu created</li>
+<li>CHANGE: Chop, forage, mine, clear, dismantle objects, and flatten commands moved into new "Commands" menu</li>
+<li>CHANGE: "Rally Troops" command created and added to new "Commands" menu</li>
+<li>CHANGE: 16 new paintings (unused GG assets) have been added to the game</li>
+<li>CHANGE: Slight rearrangement of module filters</li>
+<li>CHANGE: "All Art" module filter added</li>
+<li>CHANGE: New paintings added to the "All Decor" and various housing module filters</li>
+<li>CHANGE: The "Republicain Artist" event rewards have been reworked, adding in the new paintings and the mounted beetle head</li>
+<li>CHANGE: Novorus trader item pool given 'common' tier of paintings</li>
+<li>CHANGE: Stahlmark trader item pool given 'uncommon' tier of paintings</li>
+<li>CHANGE: Republique trader item pool given 'rare' tier of paintings</li>
+<li>CHANGE: All trader item pools given the mounted-head items</li>
+<li>CHANGE: Mounted-head items' trade value increased to appropriate amount</li>
+<li>CHANGE: Replay creation turned off to save a bit of processing (only impacts new games)</li>
+<li>CHANGE: Rally Squad timer increased from 20 to 40 seconds</li>
+<li>CHANGE: ALARMS RE-ENABLED!!!</li>
+<li>CHANGE: Steam Knights won't respond to alarms (temp fix for critical performance issue)</li>
+</ul>
+				<pre>
+         __     ___     ____ 
+        /  \   / _ \   (___ \
+       (  0 )_ \__  )_  / __/   0.9.2
+        \__/(_)(___/(_)(____)
+				</pre>
+<ul>
+<li>FIX: Trade confirmation/cancel buttons off the screen at 720p</li>
+<li>FIX: Commodities menu off the screen at 720p</li>
+<li>FIX: Jobs menu off the screen at 720p</li>
+<li>FIX: Population menu off the screen at 720p</li>
+<li>FIX: Population menu has useless bar at the top</li>
+<li>FIX: Farms can't be demolished (0.9.0-caused)</li>
+<li>FIX: Major performance drain when colonists set an 'alarm' on an enemy</li>
+<li>FIX: TAG - Brass Cogs aren't used in the chapel</li>
+<li>FIX: Gravestones aren't aligned properly</li>
+<li>FIX: Chapel uses old demolish text</li>
+<li>CHANGE: Stockpiles are freeform. Maximum of 7x7 for each stockpile (hardcoded)</li>
+<li>CHANGE: "Well-Fed" changed to "Well-Fed But Unsated" to reduce confusion</li>
+<li>CHANGE: UI - Reskin - Commodities menu</li>
+<li>CHANGE: UI - Reskin - Jobs menu</li>
+<li>CHANGE: UI - Reskin - Faction menu</li>
+<li>CHANGE: UI - Reskin - Population menu</li>
+<li>CHANGE: 11 new gravestones (mostly unused fence posts)</li>
+<li>CHANGE: Graves are randomly rotated (slightly), to give some variation</li>
+<li>CHANGE: Graves have a tooltip</li>
+<li>CHANGE: Graves state who is buried there in the tooltip</li>
+<li>CHANGE: Gravestones are randomly selected based on social class, citizenship, and whether they were military or not</li>
+<li>CHANGE: Graves have 37 (and growing) different epitaphs that can be chosen from, shown in the tooltip and based on various factors of the deceased</li>
+</ul>
+				<pre>
+         __     ___     __  
+        /  \   / _ \   /  \ 
+       (  0 )_ \__  )_(_/ /   0.9.1
+        \__/(_)(___/(_)(__) 
+				</pre>
+<ul>
+<li>FIX: "Overseer Needed" icon not showing on offices</li>
+<li>FIX: Beetles (large) don't always produce Raw Beetle Steak when butchered</li>
+<li>FIX: Aurochs don't produce Raw Auroch Steak when butchered</li>
+<li>FIX: ICON - Steam Knight Manufactory doesn't show iron ingot icon while building</li>
+<li>CHANGE: UI - "Ghosted" modules under construction now state what they are in the tooltip</li>
+<li>CHANGE: RECIPE - Wall-Mounted Aurochs Head is now buildable via the carpentry workshop's decor workbench</li>
+<li>CHANGE: RECIPE - Wall-Mounted Beetle Head is now buildable via the carpentry workshop's decor workbench</li>
+<li>CHANGE: Wall-Mounted Auroch Heads are now +3 quality, up from +1</li>
+<li>CHANGE: Wall-Mounted Beetle Heads are now +3 quality, up from +1</li>
+<li>CHANGE: New launcher background image for CECOMMPATCH-related info</li>
+</ul>
+				<pre>
+         __     ___     __    
+        /  \   / _ \   /  \   
+       (  0 )_ \__  )_(  0 )   0.9.0
+        \__/(_)(___/(_)\__/   
+				</pre>
+<ul>
+<li>!!!MAJOR CHANGE!!! - Office, workshop, farm, and housing menus have been completely reskinned!</li>
+<li>FIX: UI - Chapel isn't reporting being out of cogs in its menu</li>
+<li>FIX: UI - Being out of laudanum isn't sending the appropriate warning text in the Public House menu</li>
+<li>CHANGE: UI - Reskin - Workcrew menu</li>
+<li>CHANGE: UI - Reskin - Housing menus</li>
+<li>CHANGE: UI - Reskin - Barracks menu</li>
+<li>CHANGE: UI - Reskin - Workshops menus</li>
+<li>CHANGE: UI - Reskin - Farm menu</li>
+<li>CHANGE: UI - Reskin - Mine menu</li>
+<li>CHANGE: UI - Reskin - Public House menu</li>
+<li>CHANGE: UI - Reskin - Barbershop menu</li>
+<li>CHANGE: UI - Reskin - Chapel menu</li>
+<li>CHANGE: UI - Reskin - Laboratory menu</li>
+<li>CHANGE: UI - Reskin - Foreign Office menu</li>
+<li>CHANGE: UI - Reskin - Naturalist Office menu</li>
+<li>CHANGE: UI - Reskin - Academy menu</li>
+<li>CHANGE: UI - Chapel menu "jobs" section removed until consistency in usage can be done</li>
+<li>CHANGE: UI - Barbershop menu "jobs" section removed until consistency in usage can be done</li>
+<li>CHANGE: UI - Less sensitive scrolling - House choice</li>
+<li>CHANGE: UI - Less sensitive scrolling - Office choice</li>
+<li>CHANGE: UI - Less sensitive scrolling - Workshop choice</li>
+<li>CHANGE: UI - Farm "focus on" button removed since it isn't working</li>
+<li>CHANGE: UI - House "focus on" button removed since it isn't working</li>
+<li>CHANGE: UI - Made "Focus on Building" and "Destroy Building" wording consistent across the board</li>
+<li>CHANGE: UI - Combined warning/status text - Public House</li>
+<li>CHANGE: UI - Combined warning/status text - Barbershop</li>
+<li>CHANGE: UI - Combined warning/status text - Chapel</li>
+<li>CHANGE: UI - Combined warning/status text - Mine</li>
+<li>CHANGE: UI - Combined warning/status text - Barracks</li>
+<li>CHANGE: UI - Combined warning/status text - Laboratory</li>
+<li>CHANGE: UI - Combined warning/status text - Naturalist Office</li>
+<li>CHANGE: UI - Combined warning/status text - Academy</li>
+<li>CHANGE: UI - Combined warning/status text - Foreign Office</li>
+</ul>
+				<pre>
+         __     ____     ____ 
+        /  \   / _  \   (___ \
+       (  0 )_ ) _  ( _  / __/   0.8.2
+        \__/(_)\____/(_)(____)
+				</pre>
+<ul>
+<li>FIX: UI - Colonist job progress bar shows snippet of another image</li>
+<li>FIX: UI - Trade office building icon broken (by 0.8.1)</li>
+<li>FIX: UI - Housing menu "demolish building" icon inconsistently sized</li>
+<li>CHANGE: UI - Assignments button and container spruced up</li>
+<li>CHANGE: UI - New border for most windows</li>
+<li>CHANGE: UI - New scrollbar</li>
+<li>CHANGE: UI - New small workcrew backgrounds with workshop-related image to lower confusion</li>
+<li>CHANGE: UI - House "zoom to house" button hidden since it isn't working</li>
+</ul>
+				<pre>
+         __     ____     __   
+        /  \   / _  \   /  \  
+       (  0 )_ ) _  ( _(_/ /    0.8.1
+        \__/(_)\____/(_)(__)  
+				</pre>
+<ul>
+<li>FIX: UI - Laboratory projects state "Already Completed" after swapping to another category</li>
+<li>FIX: UI - Resetting laboratory projects in a non-selected group doesn't update until re-selected</li>
+<li>CHANGE: UI - "Jobs" button changed to the fancy version</li>
+<li>CHANGE: UI - "Factions" button change to the fancy version</li>
+<li>CHANGE: UI - Population/workplace cap top menu item has been spruced up</li>
+<li>CHANGE: UI - Disturbance points top menu item has been spruced up</li>
+<li>CHANGE: UI - Provisions top menu item has been spruced up</li>
+<li>CHANGE: UI - Toggle building view button changed to a fancy version</li>
+<li>CHANGE: UI - Pause button changed to a fancy version</li>
+<li>CHANGE: UI - Time of day image moved, ugly (pointless) border removed</li>
+</ul>
+				<pre>
+         __     ____     __  
+        /  \   / _  \   /  \ 
+       (  0 )_ ) _  ( _(  0 )   0.8.0
+        \__/(_)\____/(_)\__/ 
+				</pre>
+<ul>
+<li>!!!MAJOR CHANGE!!! - Male colonists now have a chance to wear (intelligently) randomized hats!</li>
+<li>FIX: UI - Blueprint requirements for timber are showing in red when there is amble timber</li>
+<li>FIX: UI - "Ornate Table and Chair Set" is not showing up in the module placement menus</li>
+<li>FIX: ICON - "MK-1 Steam Knight" uses prototype version's icon</li>
+<li>CHANGE: UI - "All Decor" filter reimplemented</li>
+<li>CHANGE: UI - "All Modules" filter reimplemented</li>
+<li>CHANGE: UI - "All Doors/Windows" filter added</li>
+<li>CHANGE: UI - "All Furniture" filter added</li>
+<li>CHANGE: TAG - Farming added to Lacquer</li>
+<li>CHANGE: TAG - Farming added to Bamboo</li>
+<li>CHANGE: TAG - Icon for "Used in Workshops" changed to general workshop icon</li>
+</ul>
+
+				<pre>
+         __    ____   __
+        /  \  (__  ) /  \
+       (  0 )_  / /_(  0 )   0.7.0   (previous changelogs combined)
+        \__/(_)(_/(_)\__/
+				</pre>
+<ul>
+<li>!!!MAJOR CHANGE!!! - Simplification and standardization of item names. Nearly every item is impacted!</li>
+<li>!!!MAJOR CHANGE!!! - Tooltip tags have had a total overhaul in how they are used. EVERY item/recipe tooltip impacted!</li>
+<li>FIX: CRASH - Selenian Spores killed while on fire. See "known issues" for info on the tradeoff</li>
+<li>FIX: ACHIEVEMENT - "Bottoms Up" not triggering. See "known issues" for info on the tradeoff</li>
+<li>FIX: ACHIEVEMENT - "Who You Gonna Call" not triggering. See "known issues" for info on the tradeoff</li>
+<li>FIX: ACHIEVEMENT - "Tidy Estates" not triggering</li>
+<li>FIX: UI - Icons pushed off the screen when there are too many alerts. See "known issues" for info on the tradeoff</li>
+<li>FIX: UI - Icons pushed off the screen at low resolutions. See "known issues" for info on the tradeoff</li>
+<li>FIX: UI - Decor/Module menu cutoff at the bottom. See "known issues" for info on the tradeoff</li>
+<li>FIX: UI - Main menu cutoff at low resolutions</li>
+<li>FIX: ICON - "MK-1 Machine Gun" wrong</li>
+<li>FIX: ICON - "MK-1 Steam Knight Chassis" wrong</li>
+<li>FIX: ICON - "MK-1 Steam Knight Oculars" wrong</li>
+<li>FIX: ICON - "Ammo Autoloader" wrong</li>
+<li>FIX: ICON - Gray "Mine Shorings" missing completely</li>
+<li>FIX: ICON - Gray "MK-1 Steam Knight Oculars" missing completely</li>
+<li>FIX: ICON - Gray "MK-1 Steam Knight Chassis" missing completely</li>
+<li>FIX: ICON - Gray "Auto Ammoloader" missing completely</li>
+<li>FIX: ICON - Gray "MK-1 Machine Gun" missing completely</li>
+<li>FIX: ICON - Some gray versions are slightly misaligned compared to the color version</li>
+<li>FIX: ICON - Gray "Prototype SK Oculars" incorrectly mapped</li>
+<li>FIX: ICON - Gray "Prototype SK Chassis" incorrectly mapped</li>
+<li>FIX: ICON - Gray "Contruction Frame" incorrectly mapped</li>
+<li>FIX: ICON - Gray "Any Distilled Spirits" not mapped</li>
+<li>FIX: ICON - Gray "Leaf Fossil" not mapped</li>
+<li>FIX: ICON - parcel_generic incorrectly mapped</li>
+<li>FIX: EVENT - One of the fishpeople spawning events triggers an alert sound with no actual alert</li>
+<li>FIX: EVENT - "Empire Times" script error</li>
+<li>FIX: EVENT - "Creepy Night" causes many duplicates of the same memory</li>
+<li>FIX: WORKSHOP - Mine shoring supplies consumed even on failed attempts</li>
+<li>FIX: WORKSHOP - Premature "No Door" alert for the barracks</li>
+<li>FIX: RECIPE - Caninha isn't flammable</li>
+<li>FIX: RECIPE - "Wheat" missing all tags, impacts all recipes with it</li>
+<li>FIX: RECIPE - research required - "Make Bottle of Sulphur Tonic" - chem/adv workbench - missing "Tonic Healing"</li>
+<li>FIX: RECIPE - research required - "Make Bucket of Molasses" - kitchen/adv workbench - missing "Temperate/Desert"</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Roast Coffee Beans"</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Make Charcoal" - metal/brick char kiln</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Make MK1 Machine Gun" - metal/smithing forge</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Make Landmine" - metal/smith forge</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Brew Beer" - kitchen/brewing vat</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Make Prototype SK Chassis"</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Make Steam Knight Forge"</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Make Power Core Dynamo"</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Make Ammo Autoloader"</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Make Grenade Launcher Locker"</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Make Charcoal" - iron charcoal kiln</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Make Bucket of Lacquer" - chem workbench</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Make Reactive Catalyst" - chem workbench</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Make Reactive Catalyst" - adv workbench</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Make Prototype SK Oculars" - adv workbench</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Make Brick Charcoal Kiln" - adv workbench</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Make Dewatering Pump" - adv workbench</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Make Standing Desk" - adv workbench</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Make Bookshelf" - adv workbench</li>
+<li>FIX: RECIPE - "#x item needed" warning - "Make Refined Food" - kitchen/iron oven</li>
+<li>FIX: RECIPE - tooltip items/amounts - "Make Ammo Autoloader"</li>
+<li>FIX: RECIPE - tooltip items/amounts - "Make SK-MK1 Chassis"</li>
+<li>FIX: RECIPE - tooltip items/amounts - "Make Reactive Catalyst"</li>
+<li>FIX: RECIPE - tooltip items/amounts - "Make Bucket of Lacquer"</li>
+<li>FIX: RECIPE - tooltip items/amounts - "Make SK-MK1 Oculars"</li>
+<li>FIX: RECIPE - tooltip items/amounts - "Make Jezail Rifle Locker"</li>
+<li>FIX: RECIPE - tooltip items/amounts - "Make Carbine Locker"</li>
+<li>FIX: RECIPE - tooltip items/amounts - "Make SK-MK1 Chassis"</li>
+<li>FIX: RECIPE - tooltip items/amounts - "Make Grenade Launcher Locker"</li>
+<li>FIX: RECIPE - tooltip items/amounts - "Make Power Core Dynamo"</li>
+<li>FIX: RECIPE - tooltip items/amounts - "Make Tin Exotic Caviar"</li>
+<li>FIX: RECIPE - tooltip items/amounts - "Make Prototype SK Oculars" - adv workbench</li>
+<li>FIX: RECIPE - tooltip items/amounts - "Make Standing Desk" - adv workbench</li>
+<li>FIX: RECIPE - tooltip items/amounts - "Make Bookshelf" - adv workbench</li>
+<li>FIX: RECIPE - tooltip items/amounts - "Make Fancy Bookshelf" - adv workbench</li>
+<li>FIX: RECIPE - tooltip items/amounts - "Make Charcoal" - metalworks/ind kiln</li>
+<li>FIX: RECIPE - tooltip items/amounts - "Make Refined Food" - kitchen/iron oven</li>
+<li>FIX: RECIPE - tooltip items/amounts - "Make SK-MK1 Oculars" - ceram/ceram workbench</li>
+<li>FIX: RECIPE - actual items/amounts usage - "Make Ornate Bed" - too few Gold Ingots used</li>
+<li>FIX: RECIPE - actual items/amounts usage - "Make Ornate Table and Chair Set" - too few Glass Panes used</li>
+<li>FIX: RECIPE - actual items/amounts usage - "Make Brick Ceramics Kiln" - too few Bricks used</li>
+<li>FIX: RECIPE - actual items/amounts usage - "Make Ceramics Press" - too many Brass Cogs used</li>
+<li>FIX: RECIPE - actual items/amounts usage - "Make Stone Altar" - too few Stone used</li>
+<li>FIX: RECIPE - actual items/amounts usage - "Make Iron Ceramics Kiln" - too few Iron Pipes used</li>
+<li>FIX: RECIPE - actual items/amounts usage - "Make Jezail Rifle Locker" - Iron Ingots instead of Iron Plates used</li>
+<li>FIX: RECIPE - actual items/amounts usage - "Make Stained Glass Window" - too few Bric-a-brac used</li>
+<li>FIX: RECIPE - actual items/amounts usage - "Make Bucket of Lacquer" - adv workbench - too few yield</li>
+<li>FIX: RECIPE - actual items/amounts usage - "Make Leyden Jars" - too many Copper Ingots used</li>
+<li>FIX: RECIPE - actual items/amounts usage - "Make Cabbage Stew" - steam oven - wildly wrong cost</li>
+<li>FIX: RECIPE - actual items/amounts usage - "Grind Stone Into Ore" - too many Stone used</li>
+<li>FIX: TEXT - "Bricks (5)" references instead of "Bricks"</li>
+<li>FIX: TEXT - "Steam Knight MK1" references instead of "MK-1 Steam Knight"</li>
+<li>FIX: TEXT - Several "peice" vs "piece" typos</li>
+<li>FIX: TEXT - Phased out "Basic Food" referenced instead of "Cooked Meat"</li>
+<li>CHANGE: UI - More tooltips scale with the content, preventing huge (mostly empty) tooltips</li>
+<li>CHANGE: ICON - "Any Timber" icon (color+gray) created</li>
+<li>CHANGE: ICON - "Any Fuel" icon (color+gray) created</li>
+<li>CHANGE: ICON - "Ore" category icon (color+gray) created</li>
+<li>CHANGE: ICON - Recipes using "Any Distilled Spirits" now show the appropriate icon</li>
+<li>CHANGE: ICON - Recipes using "Any Timber" now show the new icon</li>
+<li>CHANGE: ICON - Recipes using "Any Fuel" now show the new icon</li>
+<li>CHANGE: RECIPE - "Fungus" changed to "Any Fungus"</li>
+<li>CHANGE: TEXT - Recipes referencing logs now state "Any Timber"</li>
+<li>CHANGE: TEXT - Recipes referencing coal or charcoal now state "Any Fuel"</li>
+<li>CHANGE: TEXT - Recipes referencing raw meat now state "Any Raw Meat"</li>
+<li>CHANGE: TEXT - Recipes referencing vegetables now state "Any Vegetable"</li>
+<li>CHANGE: TEXT - Recipes referencing fruit now state "Any Fruit"</li>
+<li>CHANGE: EVENT - Some fishpeople spawning events have been given the chance to remain mysterious</li>
+<li>CLEANUP: Removed redundant "Make Steam Oven" job code</li>
+<li>CLEANUP: Removed redundant "Make Maize Chowder" job code</li>
+</ul>
+
+				<div id="mst3k"><pre>
+                                          ,
+                                          ;\   It's my incessent
+                                         /  \  droning, isn't it?
+                       Please, God,      `.  ]          ,^^--.      Are we dead, Mike?
+                       say "The End". __   [  \        /      \              ,',^-_
+                                     /   \ !   \       |       |            / /   /
+                                     \   /  \   \      |       ;      ,__. |    ,'
+                                      < |    \   `.    |      /      (    `   __>
+                                    ,_| |_.   \    `-__>      >.      `---'\ /
+                                   /,.   ..\   `.               `.         | |
+                                   U |   | U     `.               \    ,--~   ~--.
+   _--~~~~--_       _--~~~~--_       _--~~~~--_    \  _--~~~~--_   \  /_--~~~~~--_\
+ ,'          `.   ,'          `.   ,'          `.  |,'          `.  \,'           `.
+/              \ /              \ /              \ /              \ /               \
+				</pre></div>	
+			</div>
+		</div>
+	</body>
+</html>
