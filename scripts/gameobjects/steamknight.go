@@ -150,6 +150,8 @@ gameobject "steamknight" inherit "ai_agent"
 		--state.animSet = entityData.animationSet
 		state.animSet = entityData.animationSet
 		 
+		--[[
+		-- CECOMMPATCH - disabling, this is causing a model to exist at 0,0 for some reason
 		send("rendOdinCharacterClassHandler",
 			"odinRendererCreateCharacter", 
 			SELF,
@@ -157,6 +159,7 @@ gameobject "steamknight" inherit "ai_agent"
 			state.animSet,
 			0,
 			0 )
+			]]--
 		
 		send("rendOdinCharacterClassHandler",
 			"odinRendererFaceCharacter", 
@@ -396,7 +399,7 @@ gameobject "steamknight" inherit "ai_agent"
 		
 		--send(SELF,"resetInteractions")
 	>>
-
+	
 	respond seatingRequest()
 	<<
 		-- DEPRECATED
@@ -437,11 +440,41 @@ gameobject "steamknight" inherit "ai_agent"
 
 	receive Update()
 	<<
+		tooltip_refresh_from_save()
+		
 		if state.AI.thinkLocked then
                return
           end
 		
 		if state.AI.bools["dead"] or state.AI.bools["disabled"] then
+			if not SELF.tags["sk_exploded"] then
+				if state.AI.ints["corpse_timer"] then
+					state.AI.ints["corpse_timer"] = state.AI.ints["corpse_timer"] - 1
+					
+					if state.AI.ints["corpse_timer"] <= 0 then
+						-- makes sense for SKs to explode, right?
+						-- yes, this is the second explosion trigger (first in deathBy).. it's intentional
+						local results = query("scriptManager",
+									"scriptCreateGameObjectRequest",
+									"explosion",
+									{ legacyString="Ammo Explosion" } )
+					
+						if results and results[1] then
+							 send(results[1],
+							"GameObjectPlace",
+							state.AI.position.x,
+							state.AI.position.y )
+						end 
+						
+						SELF.tags["sk_exploded"] = true
+						
+						--send(SELF,"despawn") -- disabling for now... can't figure out how to get rid of the weapon
+					end
+				else
+					state.AI.ints["corpse_timer"] = 20
+				end
+			end
+			
 			return
 		end
 		
@@ -640,7 +673,20 @@ gameobject "steamknight" inherit "ai_agent"
 	>>
   
 	receive deathBy( gameObjectHandle damagingObject, string damageType )
-	<<
+	<<		
+		-- makes sense for SKs to explode, right?
+		local results = query("scriptManager",
+					"scriptCreateGameObjectRequest",
+					"explosion",
+					{ legacyString="Medium Explosion" } )
+	
+		if results and results[1] then
+			 send(results[1],
+			"GameObjectPlace",
+			state.AI.position.x,
+			state.AI.position.y )
+		end 
+		
 		-- remove self from collection
 		local collection = query("gameObjectManager", "gameObjectCollectionRequest", "steamKnights")[1]
 		for k, v in pairs(collection) do
@@ -674,7 +720,12 @@ gameobject "steamknight" inherit "ai_agent"
 				state.renderHandle,
 				"die_back", false);
 		end
-
+		
+		send("rendOdinCharacterClassHandler",
+			"odinRendererSetCharacterCustomTooltipMessage",
+			SELF.id,
+			"ui\\tooltips\\steamknightDeadTooltip.xml")
+				
 		--SELF.tags["human"] = false
 		--SELF.tags["corpse"] = true
 		incMusic(4,30); -- ???
@@ -752,7 +803,8 @@ gameobject "steamknight" inherit "ai_agent"
 	<<
 		-- remove me from world, take carried objects with me.
 		-- if carrying a body (for some reason), leave it behind.
-
+		
+		send("gameBlackboard", "gameObjectRemoveTargetingJobs", SELF, nil)
 		send("rendOdinCharacterClassHandler", "odinRendererDeleteCharacterMessage", state.renderHandle)
 		send("gameSpatialDictionary", "gridRemoveObject", SELF)
 		destroyfromjob(SELF,ji)

@@ -1,0 +1,3 @@
+<tooltip width="0" height="0" mouseRestDelay="10250" followCursor="0" skin="ui/styles/styleTooltip.xml">
+    <container name="lankbox" type="vertbox" hsp="fixed" vsp="fixed" fixed_height="0" fixed_width="0" width="0" height="0" solidfill="0" />
+</tooltip>

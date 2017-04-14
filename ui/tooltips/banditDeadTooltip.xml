@@ -1,0 +1,6 @@
+<tooltip width="280" height="1" mouseRestDelay="250" followCursor="0" skin="ui/styles/styleTooltip.xml">
+    <container name="charactervertboxblank" type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+      <label name="buttonTooltipLabel" text=" Dead Bandit" vsp="minimum" hap="center" state="tooltip_neutral_text" />
+	  <paragraph name="descriptionLabel" text="The only good bandit is a dead one, and this one looks to be quite corpsey. Better poke it to be sure..." vsp="minimum"  state="tooltip_text"/>
+    </container>
+</tooltip>

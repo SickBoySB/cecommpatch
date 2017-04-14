@@ -3,6 +3,8 @@ gameobject "citizen" inherit "ai_agent"
 
 	local
 	<<
+		local is_it_nighttime = false
+	
 		function makeMemory(memoryName, memoryDescription, otherName, otherObject, otherObjectKey)
 			
 			if SELF.tags.selenian_infested then
@@ -536,11 +538,87 @@ gameobject "citizen" inherit "ai_agent"
 		send("rendOdinCharacterClassHandler",
 				"odinRendererSetDescriptionParagraph",
 				state.renderHandle,
-				parsedParagraph)
+				parsedParagraph)		
 		tmLeave()
 
 	end
+	
+	function check_for_night_optimized(v)
+		-- this is a weird function. my intention is to only allow the live folks to trigger shift info, and only once without using a ton of queries
+		-- function is triggered by LIVING colonists only, in newWorkShift
+		is_it_nighttime = v
+	end
+	
+	function character_doSpectreCheck()
 
+		--tmEnter("character three second update")
+						
+		-- let's try doing spectres here instead
+		if SELF.tags.dead and not SELF.tags.last_rights_performed then
+		
+			if is_it_nighttime and not SELF.tags.did_spectre_check then
+				SELF.tags.did_spectre_check = true
+				local ghostChance = 2
+				
+				if state.murderer and SELF.tags.murder_avenged then
+					ghostChance = ghostChance +1
+				elseif state.murderer and not SELF.tags.murder_avenged then
+					ghostchance = ghostChance + 8
+				end
+				
+				if not SELF.tags.buried or
+					SELF.tags.occult_mark_death then
+					ghostChance = ghostChance + 5
+				end
+				
+				if rand(1,100) < ghostChance then  -- rand(1,100)
+						
+					-- maybe spawn a ghost.
+					-- ghostgoals
+					-- ghostchance
+					-- unburied
+					-- if murdered
+					-- (and killer still alive)
+					
+					local goal = "haunting"
+					if state.murderer and
+						not SELF.tags.murder_avenged then
+						goal = "vengeance"
+					elseif not SELF.tags.buried then
+						goal = "burial"
+					end
+					
+					local spawnTable = {legacyString = "Spectre",
+									name = state.AI.name,
+									goal = goal }
+					
+					local handle = query( "scriptManager",
+										"scriptCreateGameObjectRequest",
+										"spectre",
+										spawnTable )[1]
+								
+					send(handle,
+						"GameObjectPlace",
+						state.AI.position.x,
+						state.AI.position.y  )
+					
+					state.mySpectre = handle
+					send(state.mySpectre,"registerOwner",SELF)
+					if goal == "vengeance" and state.murderer then
+						send(state.mySpectre,"registerHauntingTarget",state.murderer)
+					end
+				end
+			else
+				if not is_it_nighttime then
+					SELF.tags.did_spectre_check = nil
+				end
+			end
+		end
+		
+		--tmLeave()
+	end
+	
+	
 	-- This update occurs once per game second.
 	function character_doSecondUpdate()
 		
@@ -589,6 +667,9 @@ gameobject "citizen" inherit "ai_agent"
 				"odinRendererSetDescriptionParagraph",
 				state.renderHandle,
 				parsedParagraph)
+		
+		--state.AI.ints["emoteTimer"] = state.AI.ints["emoteTimer"] + 1
+		emote()
 		
 		tmLeave()
 	end
@@ -1974,13 +2055,13 @@ gameobject "citizen" inherit "ai_agent"
 			-- male-only because 1) to prevent a lot of bald females, and 2) because females already have hats attached to head models.
 			if state.AI.strs["gender"] == "male" then
 				-- chance to have a hat at all
-				if rand(1,100) <= 40 then
+				if rand(1,100) <= 50 then
 					-- artistocrats wouldn't be caught dead in headwear below their class
 					if entityName == "Aristocrat" then
 						hatchoice = rand(18,20)
 					else
 						-- should we split by social class, or use the pilgrim hat?
-						if rand(1,100) <= 10 then
+						if rand(1,100) <= 35 then
 							if entityName == "Overseer" then
 								hatchoice = rand(7,17)
 							else
@@ -3353,7 +3434,25 @@ gameobject "citizen" inherit "ai_agent"
 		if state.AI.bools["dead"] then
 			if not SELF.tags["buried"] then
 				send(SELF,"corpseUpdate")
+			else
+				disable_buried_corpses() -- ai_agent.go function
 			end
+			
+			if not SELF.tags.last_rites_performed then
+				-- double check that the dead's updateTimer is still running
+				if state.AI.ints.updateTimer then
+					state.AI.ints.updateTimer = state.AI.ints.updateTimer +1
+				else
+					state.AI.ints.updateTimer = rand(1,9)
+				end
+			
+				if state.AI.ints.updateTimer % 30 == 0 then
+					--printl("CECOMMPATCH - doSpectreCheck")
+					character_doSpectreCheck()
+					state.AI.ints.updateTimer = 0
+				end
+			end
+			
 			return
 		end
 		
@@ -4092,6 +4191,13 @@ gameobject "citizen" inherit "ai_agent"
 	
 	receive corpseUpdate()
 	<<
+		tooltip_refresh_from_save() -- colonists don't need this UNLESS they're dead
+		
+		if not SELF.tags["corpse_interact"] then
+			send(SELF, "resetInteractions")
+			SELF.tags["corpse_interact"] = true
+		end
+		
 		--[[if state.AI.bools["rotted"] then
 			state.AI.ints["corpse_timer"] = state.AI.ints["corpse_timer"] + 1
 
@@ -4449,6 +4555,7 @@ gameobject "citizen" inherit "ai_agent"
 	
 	receive deathBy( gameObjectHandle damagingObject, string damageType )
 	<<
+		send("rendUIManager", "uiRemoveColonist", SELF.id)
 		send("rendOdinCharacterClassHandler", "removeCombatPanel", SELF.id)
 
 --[[
@@ -4489,6 +4596,11 @@ gameobject "citizen" inherit "ai_agent"
 		if damageType == "eldritch_transformation" then
 			removeFlesh = true
 			SELF.tags["meat_source"] = nil
+		end
+		
+		-- explode into meats if blown up
+		if damageType == "explosion" or damageType == "shrapnel" then
+			meat_splosion()
 		end
 		
 		if SELF.tags["military"] or SELF.tags["militia"] then
@@ -4844,22 +4956,7 @@ gameobject "citizen" inherit "ai_agent"
 					state.AI.position.y)
 			end
 		else
-			local animName = false
-			local deathAnims = {
-				"death",
-				"death",
-				"death1",
-				"death2",
-				"death3",
-				"death_brainmelt",
-				"death_choke",
-				"death_shot", }
-			
-			if rand(0,100) == 100 then
-				animName = "deathHeadfalloff"
-			else
-				animName = deathAnims[ rand(1,8) ]
-			end
+			local animName = bipedDeathAnimSmart(damageType) -- func in ai_agent.go
 			
 			if animName then
 				if removeFlesh then
@@ -4953,6 +5050,11 @@ gameobject "citizen" inherit "ai_agent"
 				"")
 		end
 		
+		send("rendOdinCharacterClassHandler",
+			"odinRendererSetCharacterCustomTooltipMessage",
+			SELF.id,
+			"ui\\tooltips\\colonistDeadTooltip.xml")
+		
 		send(SELF,"resetInteractions")
 		SELF.tags.attempt_autoburial = true
 		
@@ -5004,16 +5106,19 @@ gameobject "citizen" inherit "ai_agent"
 	>>
 	
 	receive emoteThought()
-	<<
+	<<				
 		thought = ""
 		-- here we decide what to emote to the world.
 		
 		local humanstats = EntityDB["HumanStats"]
 		local worldstats = EntityDB["WorldStats"]
+		local do_bubble = false
+		local mood_thought = false
 		
 		-- combat, life, death, majorly unhealthy status effects
 		if SELF.tags["fishy_state"] then
 			thought = "sea"
+			do_bubble = true
 		elseif SELF.tags["burning"] and state.AI.strs["lastThought"] ~= "i_am_on_fire" then
 			--if testThoughtVsLast("i_am_on_fire") then thought = "i_am_on_fire" end
 			thought = "i_am_on_fire"
@@ -5026,24 +5131,81 @@ gameobject "citizen" inherit "ai_agent"
 			thought = "affliction" 
 		elseif state.AI.ints["hunger"] >= humanstats.hungerWarningDays then -- * 10 then
 			thought = "hungry"	
-		elseif state.AI.ints["tiredness"] >= humanstats.tirednessWarningDays then
+			do_bubble = true
+		elseif state.AI.ints["tiredness"] >= 2 then -- humanstats.tirednessWarningDays
 			thought = "bed"
+			do_bubble = true
 		elseif SELF.tags["has_plague"] then
 			thought = "sick"
+			do_bubble = true
 		else
+			
 			thought = state.AI.strs["mood"]
+			
+			-- some icon usage seems weird... this is due to the ultra limited space available in the thoughtIcons
+			
+			if state.AI.strs["mood"] == "angry" then
+				if state.AI.ints["anger"] >= 60 then
+					mood_thought = "angry4"
+				elseif state.AI.ints["anger"] >= 50 then
+					mood_thought = "angry3"
+				elseif state.AI.ints["anger"] >= 30 then
+					mood_thought = "angry5"
+				elseif state.AI.ints["anger"] >= 15 then
+					mood_thought = "angry2"
+				end
+				
+				if state.AI.ints["anger"] >= 15 then 
+					do_bubble = true
+				end
+			elseif state.AI.strs["mood"] == "despair" then
+				if state.AI.ints["despair"] >= 60 then
+					mood_thought = "despair_face4"
+				elseif state.AI.ints["despair"] >= 50 then
+					mood_thought = "despair"
+				elseif state.AI.ints["despair"] >= 30 then
+					mood_thought = "despair_face2"
+				elseif state.AI.ints["despair"] >= 15 then
+					mood_thought = "despair_face1"
+				end
+				
+				if state.AI.ints["despair"] >= 15 then 
+					do_bubble = true
+				end
+			elseif state.AI.strs["mood"] == "afraid" then
+				if state.AI.ints["fear"] >= 60 then
+					mood_thought = "fear_face4"
+				elseif state.AI.ints["fear"] >= 50 then
+					mood_thought = "afraid"
+				elseif state.AI.ints["fear"] >= 30 then
+					mood_thought = "fear_face2"
+				elseif state.AI.ints["fear"] >= 15 then
+					mood_thought = "fear_face1"
+				end
+				
+				if state.AI.ints["fear"] >= 15 then 
+					do_bubble = true
+				end
+			end
+		
 		end
+
+		state.AI.strs["lastThought"] = thought
 		
 		-- OUR MOMENT OF GLORY
 		
-		send("rendOdinCharacterClassHandler",
-			"odinRendererCharacterExpression",
-			state.renderHandle,
-			"thought",
-			thought,
-			false )
+		if SELF.tags["sleeping"] or SELF.tags["dead"] or SELF.tags["fleeing"] then
+			do_bubble = false
+		end
 		
-		state.AI.strs["lastThought"] = thought
+		if do_bubble then
+			if mood_thought then
+				send(SELF,"attemptEmote",mood_thought,5,true)
+			else
+				send(SELF,"attemptEmote",thought,5,true)
+			end
+		end
+		
 	>>
 	
 	receive ConsumeFood( gameObjectHandle food )
@@ -5493,9 +5655,10 @@ gameobject "citizen" inherit "ai_agent"
 		if SELF.tags.middle_class then
 			recalcShiftLength()
 		end
-
+		
 		-- Do time-based updates.
 		if shiftNumber == 1 then
+			check_for_night_optimized(false)
 			send(SELF,"ToSunrise")
 			
 			if state.AI.ints.tiredness > 0 and state.lastSleepDay < query("gameSession","getSessionInt","dayCount")[1] then
@@ -5503,20 +5666,25 @@ gameobject "citizen" inherit "ai_agent"
 			end
 		
 		elseif shiftNumber == 2 then
+			check_for_night_optimized(false)
 			-- might as well do this more often.
 			send(SELF,"updateSafetyQoL")
 		elseif shiftNumber == 3 then
+			check_for_night_optimized(false)
 			-- noon!
 			send(SELF,"updateWorkQoL")
 		elseif shiftNumber == 4 then
+			check_for_night_optimized(false)
 			if state.AI.strs["citizenClass"] == "Vicar" then
 				SELF.tags["can_preach"] = true
 			end
 		elseif shiftNumber == 6 then
+			check_for_night_optimized(false)
 			send(SELF,"ToDusk")
 			-- dusk? why not.
 			send(SELF,"updateSafetyQoL")
 		elseif shiftNumber == 7 then
+			check_for_night_optimized(true)
 			send(SELF,"Nightfall")
 			send(SELF,"updateWorkQoL")
 		elseif shiftNumber == 8 then
@@ -5695,8 +5863,7 @@ gameobject "citizen" inherit "ai_agent"
 	receive Nightfall()
 	<<
 		-- It's transitioning to nighttime! Do stuff you'd do at night.
-		if SELF.tags["dead"] and not SELF.tags.last_rites_performed then
-			
+		if SELF.tags.dead and not SELF.tags.last_rites_performed then
 			local ghostChance = 2
 			
 			if state.murderer and SELF.tags.murder_avenged then
@@ -5710,7 +5877,7 @@ gameobject "citizen" inherit "ai_agent"
 				ghostChance = ghostChance + 5
 			end
 			
-			if rand(1,100) < ghostChance then
+			if rand(1,100) < ghostChance then  -- rand(1,100)
 					
 				-- maybe spawn a ghost.
 				-- ghostgoals
@@ -6125,7 +6292,9 @@ gameobject "citizen" inherit "ai_agent"
 			state.assignment = assignment
 			
 		elseif messagereceived == "Cancel corpse orders" and
+			state.assignment and
 			SELF.tags.dead then
+			
 			send("gameBlackboard",
 				"gameObjectRemoveTargetingJobs",
 				SELF,
@@ -6143,8 +6312,8 @@ gameobject "citizen" inherit "ai_agent"
 				state.renderHandle,
                          "Cancel orders for corpse of " .. state.AI.name,
                          "Cancel corpse orders",
-                         "", --"Cancel corpse orders",
-                         "", -- "Cancel corpse orders",
+                         "Cancel corpse orders", --"Cancel corpse orders",
+                         "Cancel corpse orders", -- "Cancel corpse orders",
 						"graveyard",
 						"",
 						"Dirt",
@@ -6208,34 +6377,45 @@ gameobject "citizen" inherit "ai_agent"
 				"odinRendererClearInteractions",
 				state.renderHandle)
 		
-		if SELF.tags.dead and
-			not SELF.tags.buried and
-			not state.assignment then
+		if SELF.tags.dead and not SELF.tags.buried then
+			if not state.assignment then
 			
-			send("rendInteractiveObjectClassHandler",
-                    "odinRendererAddInteractions",
-				state.renderHandle,
-                         "Give " .. state.AI.name .. " a Proper Burial",
-                         "Bury Corpse (player order)",
-                         "", --"Bury Corpses",
-                         "", --"Bury Corpse (player order)",
-						"graveyard",
-						"",
-						"Dirt",
-						false,true)
-			
-			send("rendInteractiveObjectClassHandler",
-                    "odinRendererAddInteractions",
-				state.renderHandle,
-                         "Dump the Corpse of " .. state.AI.name,
-                         "Dump Corpse (player order)",
-                         "", -- "Dump Corpses",
-                         "", --"Dump Corpse (player order)",
-						"graveyard",
-						"",
-						"Dirt",
-						false,true)
-			
+				send("rendInteractiveObjectClassHandler",
+						"odinRendererAddInteractions",
+					state.renderHandle,
+							 "Give " .. state.AI.name .. " a Proper Burial",
+							 "Bury Corpse (player order)",
+							 "Bury Corpses", --"Bury Corpses",
+							 "Bury Corpse (player order)", --"Bury Corpse (player order)",
+							"graveyard",
+							"",
+							"Dirt",
+							false,true)
+				
+				send("rendInteractiveObjectClassHandler",
+						"odinRendererAddInteractions",
+					state.renderHandle,
+							 "Dump the Corpse of " .. state.AI.name,
+							 "Dump Corpse (player order)",
+							 "Dump Corpses", -- "Dump Corpses",
+							 "Dump Corpse (player order)", --"Dump Corpse (player order)",
+							"graveyard",
+							"",
+							"Dirt",
+							false,true)
+			else
+				send("rendInteractiveObjectClassHandler",
+						"odinRendererAddInteractions",
+					state.renderHandle,
+							 "Cancel orders for corpse of " .. state.AI.name,
+							 "Cancel corpse orders",
+							 "Cancel corpse orders", --"Cancel corpse orders",
+							 "Cancel corpse orders", -- "Cancel corpse orders",
+							"graveyard",
+							"",
+							"Dirt",
+							false,true)				
+			end
 		end
 	>>
 
@@ -6399,6 +6579,44 @@ gameobject "citizen" inherit "ai_agent"
 	receive despawn() override
 	<<
 		printl("ai_agent", state.AI.name .. "received despawn")
+
+		if SELF.tags["buriedandhidden"] then
+			FSM.abort( state, "Despawning.")
+			if state.AI.possessedObjects then
+				local holdingChar = false
+				for key,value in pairs(state.AI.possessedObjects) do
+					if key == "curPickedUpCharacter" then
+						send("rendOdinCharacterClassHandler", "odinRendererCharacterDetachCharacter", state.renderHandle, value.id, "Bones_Group");
+						send(value, "DropItemMessage", state.AI.position.x, state.AI.position.y)
+						send(value, "GameObjectPlace", state.AI.position.x, state.AI.position.y)
+						send("rendOdinCharacterClassHandler",
+							"odinRendererSetCharacterAnimationMessage",
+							value.id,
+							"corpse_dropped", false)
+						
+						holdingChar = true
+					elseif key then
+						send(value, "DestroySelf", state.AI.curJobInstance )
+					end
+				end
+			end
+			
+			if state.AI.possessedObjects["curCarriedTool"] then
+				send(state.AI.possessedObjects["curCarriedTool"], "DestroySelf", state.AI.curJobInstance )
+			end
+			
+			if state.AI.possessedObjects["curPickedUpItem"] then
+				send(state.AI.possessedObjects["curPickedUpItem"], "DestroySelf", state.AI.curJobInstance )
+			end
+			send(SELF,"AICancelJob", "despawning")
+			send(SELF,"ForceDropEverything")
+			send("rendUIManager", "uiRemoveColonist", SELF.id)
+			send("gameSpatialDictionary", "gridRemoveObject", SELF)
+			send("rendOdinCharacterClassHandler", "odinRendererDeleteCharacterMessage", state.renderHandle)
+			send("gameBlackboard", "gameObjectRemoveTargetingJobs", SELF, nil)
+			--destroyfromjob(SELF, ji) -- DO NOT USE THIS or soooo much will break event-wise
+			return
+		end
 		
 		FSM.abort( state, "Despawning.")
 
