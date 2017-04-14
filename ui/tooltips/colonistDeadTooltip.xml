@@ -1,0 +1,6 @@
+<tooltip width="280" height="1" mouseRestDelay="250" followCursor="0" skin="ui/styles/styleTooltip.xml">
+    <container name="charactervertboxblank" type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+      <label name="buttonTooltipLabel" text=" Dead Colonist" vsp="minimum" hap="center" state="tooltip_neutral_text" />
+	  <paragraph name="descriptionLabel" text="A fallen friend and subject. Such a sha... oh no my farms aren't symmetrical!" vsp="minimum"  state="tooltip_text"/>
+    </container>
+</tooltip>

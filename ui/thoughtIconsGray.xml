@@ -1,0 +1,359 @@
+<skin name="Thought and Emotion icons" texture="ui/icons/thoughtIconsGray00.png">
+  
+  <element name="image"  scale="exact">
+    
+    <state name="job_icon_holder32_highlight" x="438" y="956" w="50" h="66" />
+    
+    <state name="job_icon_holder32" x="817" y="956" w="50" h="66" />
+    <state name="machine_thought32" x="867" y="956" w="50" h="66" />
+    <state name="thought_bubble32"  x="971" y="956" w="50" h="66" />
+    <state name="speech_bubble32"   x="919" y="956" w="50" h="66" />
+    
+    <state name="job_icon_holder" x="489" y="911" w="82" h="110" />
+    <state name="machine_thought" x="571" y="911" w="82" h="110" />
+    <state name="thought_bubble"  x="653" y="911" w="82" h="110" />
+    <state name="speech_bubble"   x="735" y="911" w="82" h="110" />
+    
+    <state name="job_icon_holder64" x="489" y="911" w="82" h="110" />
+    <!-- <state name="machine_thought64" x="571" y="911" w="82" h="110" /> -->
+    <state name="machine_thought64" x="489" y="911" w="82" h="110" />
+    
+    <state name="thought_bubble64"  x="653" y="911" w="82" h="110" />
+    <state name="speech_bubble64"   x="735" y="911" w="82" h="110" />
+ 
+	<!-- start row 1 --> 
+	<state name="cloud_rain" w="64" h="64" x="0" y="0" />
+	<state name="cloud_lightning" w="64" h="64" x="64" y="0" />
+	<state name="sun_smiling" w="64" h="64" x="128" y="0" />
+	<state name="sun" w="64" h="64" x="192" y="0" /> 
+	<state name="fist_upheld" w="64" h="64" x="256" y="0" />
+	<state name="questionmark" w="64" h="64" x="320" y="0" /> 
+	<state name="moon" w="64" h="64" x="384" y="0" />  
+	<state name="bomb" w="64" h="64" x="448" y="0" />
+	<state name="sad" w="64" h="64" x="512" y="0" />
+	<state name="sick" w="64" h="64" x="576" y="0" />
+	<state name="shock" w="64" h="64" x="640" y="0" />
+	<state name="afraid" w="64" h="64" x="640" y="0" />
+	<state name="fearful" w="64" h="64" x="640" y="0" />
+	
+	
+	<state name="happy" w="64" h="64" x="704" y="0" />
+	<state name="angry" w="64" h="64" x="768" y="0" />
+	<state name="madness" w="64" h="64" x="832" y="0" />
+	<state name="mad" w="64" h="64" x="832" y="0" /> 
+	<state name="madness_extreme" w="64" h="64" x="896" y="0" />
+	<state name="cannibalism" w="64" h="64" x="960" y="0" />
+  
+	<!-- row 2 -->
+	<state name="heart" w="64" h="64" x="0" y="64" />
+	<state name="heart_broken" w="64" h="64" x="64" y="64" />
+	<state name="exclamation" w="64" h="64" x="128" y="64" />
+	<state name="question" w="64" h="64" x="192" y="64" />
+	<state name="fist_upheld_red" w="64" h="64" x="256" y="64" />
+	<state name="lightbulb_off" w="64" h="64" x="320" y="64" />
+	<state name="lightbulb_on" w="64" h="64" x="384" y="64" />
+	<state name="bomb_lit" w="64" h="64" x="448" y="64" />
+	<state name="compass" w="64" h="64" x="512" y="64" />
+	<!--<state name="eldritch" w="64" h="64" x="576" y="64" />-->
+	
+	<state name="map" w="64" h="64" x="640" y="64" />
+	<state name="bandage_and_blood_drop" w="64" h="64" x="704" y="64" />
+  
+	<!-- row 3 -->
+	<state name="eldritch" w="64" h="64" x="0" y="128" />
+	<state name="broken_cog" w="64" h="64" x="64" y="128" />
+	
+	<state name="open_book" w="64" h="64" x="256" y="128" />
+	<state name="thumbs_up" w="64" h="64" x="320" y="128" />
+	<state name="thumbs_down" w="64" h="64" x="384" y="128" />
+	<state name="finger_point" w="64" h="64" x="448" y="128" />
+	<state name="i_am_on_fire" w="64" h="64" x="512" y="128" />
+	
+	<state name="explosion" w="64" h="64" x="576" y="128" />
+	
+	<state name="on_fire" w="64" h="64" x="576" y="192" />
+	
+	<state name="fire" w="64" h="64" x="576" y="192" />
+	
+	<state name="cloud_light" w="64" h="64" x="640" y="192" />
+	<state name="cloud_dark" w="64" h="64" x="704" y="192" />
+	<state name="haze" w="64" h="64" x="768" y="192" />
+	
+	<state name="beer_mug" w="64" h="64" x="576" y="256" />
+	
+	<state name="despair_face1" w="64" h="64" x="640" y="256" />
+	<state name="despair_face2" w="64" h="64" x="704" y="256" />
+	<state name="despair_face4" w="64" h="64" x="768" y="256" />
+	
+	<state name="strike" w="64" h="64" x="512" y="384" />
+	<state name="holy_cog" w="64" h="64" x="576" y="384" />
+  
+  <!-- row 6 -->
+	<state name="lower_class_hat" w="64" h="64" x="0" y="320"/>	
+	<state name="middle_class_hat" w="64" h="64" x="64" y="320"/>	
+	<state name="upper_class_hat" w="64" h="64" x="128" y="320"/>
+	<state name="constable_hat" w="64" h="64" x="192" y="320"/>	
+	<state name="eldritch_fade" w="64" h="64" x="256" y="320"/>
+	
+	<state name="indifferent" w="64" h="64" x="640" y="320" />
+	<state name="mineshaft" w="64" h="64" x="704" y="320" />
+	
+	<state name="star" w="64" h="64" x="0" y="256" />
+	<state name="royalty" w="64" h="64" x="64" y="256" />
+	<state name="communism" w="64" h="64" x="128" y="256" />
+	<state name="arrow_to_bed" w="64" h="64" x="192" y="256" />
+	
+	<state name="lower_class hat" w=" 64" h="64" x="0" y="320"/>	
+	<state name="middle_class hat" w="64" h="64" x="64" y="320"/>	
+	<state name="upper_class hat" w="64" h="64" x="128" y="320"/>
+	<state name="constable_hat" w="64" h="64" x="192" y="320"/>	
+	
+	<state name="lower_class home" w="64" h="64" x="0" y="384" />
+	<state name="middle_class home" w="64" h="64" x="64" y="384" />
+	<state name="upper_class home" w="64" h="64" x="128" y="384" />
+
+	<state name="upper_class" w="64" h="64" x="192" y="384" />
+	<state name="middle_class" w="64" h="64" x="256" y="384" />
+	<state name="lower_class" w="64" h="64" x="320" y="384" />
+	<state name="war" w="64" h="64" x="384" y="384" />
+	<state name="palmerstoke" w="64" h="64" x="448" y="384" />
+    
+    <state name="hungry" x="512" y="192" w="64" h="64" />
+    
+	<state name="food_plate" x="448" y="192" w="64" h="64" />
+	<state name="food_bad" x="320" y="768" w="64" h="64" />
+	<state name="food_okay" x="320" y="832" w="64" h="64" />
+    
+     <state name="black_tree" x="128" y="576" w="64" h="64" />
+    
+    
+<!-- religious doctrines -->
+
+	<state name="ecumenism" w="64" h="64" x="0" y="704" />
+	<state name="deism" w="64" h="64" x="64" y="704" />
+	<state name="muscularism" w="64" h="64" x="128" y="704" />
+	<state name="mechanism" w="64" h="64" x="192" y="704" />
+    
+    
+<!-- climate / biome icons -->
+
+	<state name="cold" w="64" h="64" x="256" y="704" />
+	<state name="desert" w="64" h="64" x="320" y="704" />
+	<state name="tropical" w="64" h="64" x="384" y="704" />
+	<state name="temperate" w="64" h="64" x="448" y="704" />
+    
+    
+    <state name="despair" w="64" h="64" x="128" y="768" />
+    
+<!-- temporary defs for job icons -->
+ 
+     <state name="hammer" x="128" y="640" w="64" h="64" />
+     <state name="jobfarm" x="192" y="640" w="64" h="64" />
+     <state name="jobshovel" x="256" y="640" w="64" h="64" />
+     <state name="jobaxe" x="320" y="640" w="64" h="64" />
+     <state name="house" x="384" y="640" w="64" h="64" />
+     <state name="homeless" x="448" y="640" w="64" h="64" />
+     <state name="pain" x="512" y="640" w="64" h="64" />
+     <state name="jobhand" x="576" y="640" w="64" h="64" /> <!-- no jokes. -->
+     <state name="jobpickaxe" x="640" y="640" w="64" h="64" />
+     <state name="jobtree" x="704" y="640" w="64" h="64" />
+     <state name="job_carpentry" x="768" y="640" w="64" h="64" />
+	
+     <state name="affliction" w="64" h="64" x="512" y="704" />
+     <state name="doomed" w="64" h="64" x="576" y="704" />
+     <state name="cosmic_horror" w="64" h="64" x="640" y="704" />
+    
+	<state name="soldiers" w="64" h="64" x="128" y="896" />
+    
+    <state name="prisoner_hat" w="64" h="64" x="384" y="832" />
+    
+<!-- despair 1-5 (whereas 1 is low, 5 is high) -->
+
+	<state name="despair1" w="64" h="64" x="448" y="832" />
+	<state name="despair2" w="64" h="64" x="512" y="832" />
+	<state name="despair3" w="64" h="64" x="576" y="832" />
+	<state name="despair4" w="64" h="64" x="640" y="832" />
+	<state name="despair5" w="64" h="64" x="704" y="832" />
+	
+	<state name="black_cog" w="64" h="64" x="768" y="832" />
+	
+<!-- morale 1-5 (whereas 1 is low, 5 is high) -->
+
+	<state name="morale1" w="64" h="64" x="256" y="960" />
+	<state name="morale2" w="64" h="64" x="320" y="960" />
+	<state name="morale3" w="64" h="64" x="192" y="896" />
+	<state name="morale4" w="64" h="64" x="256" y="896" />
+	<state name="morale5" w="64" h="64" x="320" y="896" />
+	
+	<state name="fear_face4" w="64" h="64" x="384" y="896" />
+	
+<!-- foreigners -->
+	<state name="factions" w="64" h="64" x="320" y="320" />
+	<state name="republique_troops" w="64" h="64" x="384" y="256" />
+	<state name="novorus_troops" w="64" h="64" x="448" y="256" />
+	<state name="stahlmark_troops" w="64" h="64" x="512" y="256" />
+	<state name="republique_flag" w="64" h="64" x="384" y="320" />
+	<state name="novorus_flag" w="64" h="64" x="448" y="320" />
+	<state name="stahlmark_flag" w="64" h="64" x="512" y="320" />   
+    
+	<state name="frontier_justice" x="704" y="704" w="64" h="64"/>
+	<state name="butcher" x="768" y="704" w="64" h="64"/>
+	
+	<state name="spectre" x="960" y="704" w="64" h="64"/>   
+    
+	<state name="obeliskian" w="64" h="64" x="768" y="64" />
+	<state name="invisible_geometer" w="64" h="64" x="832" y="64" />
+	<state name="selenian_polyp_night" w="64" h="64" x="896" y="64" />
+	<state name="cannibalism_extreme" w="64" h="64" x="960" y="64" />
+
+	<state name="cultist" w="64" h="64" x="768" y="128" />
+	<state name="cultist_glowing" w="64" h="64" x="832" y="128" />
+	<state name="cultist_dagger" w="64" h="64" x="896" y="128" />
+	<state name="cultist_shrine" w="64" h="64" x="960" y="128" />
+    
+	<state name="watcher" w="64" h="64" x="832" y="192" />
+	<state name="geomech" w="64" h="64" x="896" y="192" />
+	<state name="cultist_kneeling" w="64" h="64" x="960" y="192" />
+	
+	<state name="landmine" w="64" h="64" x="832" y="256" />
+	<state name="shot_at" w="64" h="64" x="960" y="256" />
+	<state name="retreat" w="64" h="64" x="896" y="256" />
+    
+	<state name="sad response" x="256" y="0" w="32" h="32" />
+	<state name="shocked response" x="320" y="0" w="32" h="32" />
+	<state name="happy response" x="160" y="64" w="32" h="32" />
+	<state name="angry response" x="192" y="64" w="32" h="32" />
+	
+	<state name="smash" w="64" h="64" x="128" y="448" />
+	<state name="cower" w="64" h="64" x="192" y="448" />
+	
+	<state name="explore" w="64" h="64" x="256" y="448" />
+	<state name="empire_flag" w="64" h="64" x="320" y="448" />
+
+	<state name="despair_brain1" w="64" h="64" x="384" y="448" />
+	<state name="despair_brain2" w="64" h="64" x="448" y="448" />
+	<state name="despair_brain3" w="64" h="64" x="512" y="448" />
+	<state name="despair_brain4" w="64" h="64" x="576" y="448" />
+	<state name="despair_brain5" w="64" h="64" x="640" y="448" />
+
+     <state name="criminal" w="64" h="64" x="320" y="512" />    
+
+	<!-- point this somewhere invisible-->
+	<state name="invisible" x="960" y="768" w="64" h="64" />
+
+	<state name="placeholder" w="64" h="64" x="960" y="512" />
+	<state name="fear_face2" w="64" h="64" x="960" y="512" />
+    
+     <state name="question" x1="96" y1="32" x2="128" y2="64"/>
+     
+     <state name="cog_orange" w="64" h="64" x="0" y="192" />
+     <state name="cog_gray" w="64" h="64" x="64" y="192" />
+     <state name="murder_stab" w="64" h="64" x="128" y="192" />
+     <state name="bed" w="64" h="64" x="192" y="192" />
+	
+	<state name="happy1" w="64" h="64" x="640" y="320" /> <!-- dupes "indifferent" -->
+	<state name="happy2" w="64" h="64" x="256" y="192" />
+	<state name="happy3" w="64" h="64" x="320" y="192" />
+	<state name="happy4" w="64" h="64" x="384" y="192" />
+	<state name="happy5" w="64" h="64" x="704" y="0" /> <!-- dupes "happy"-->
+	
+	<state name="angry1" w="64" h="64" x="640" y="320" /> <!-- dupes "indifferent" -->
+	<state name="angry2" w="64" h="64" x="0" y="384" />
+	<state name="angry3" w="64" h="64" x="64" y="384" />
+	<state name="angry4" w="64" h="64" x="128" y="384" />
+	<state name="angry5" w="64" h="64" x="768" y="0" /> <!-- dupes "angry"-->
+	
+	<state name="need_sleep" w="64" h="64" x="192" y="256" />
+	<state name="xenophobic" w="64" h="64" x="256" y="256" />
+	<state name="skillup" w="64" h="64" x="320" y="256" />
+     
+     <state name="prestige_star" w="64" h="64" x="0" y="256" />
+     <state name="monarchy" w="64" h="64" x="64" y="256" />
+     <state name="red_communism" w="64" h="64" x="128" y="256" />
+
+     <state name="reloading" w="64" h="64" x="576" y="576" />
+     <state name="spoiled_crops" w="64" h="64" x="640" y="576" />
+     <state name="exotic_wilderness" w="64" h="64" x="704" y="576" />
+     <state name="work" x="0" y="640" w="64" h="64"/>
+     <state name="not_work" x="64" y="640" w="64" h="64"/>
+	
+     <state name="overseer" x="448" y="768" w="64" h="64"/>
+	
+	<state name="affliction_headwound" x="448" y="768" w="64" h="64"/>
+	<state name="affliction_burns" x="448" y="768" w="64" h="64"/>
+	<state name="affliction_infection" x="448" y="768" w="64" h="64"/>
+	<state name="affliction_cracked_carapace" x="448" y="768" w="64" h="64"/>
+	
+	<state name="flatten_icon" x="768" y="768" w="64" h="64"/>
+    
+    <state name="leeches" x1="32" y1="224" x2="64" y2="256"/>
+    <state name="science_fail" x="320" y="64" w="64" h="64"/>
+    <state name="science" x="384" y="64" w="64" h="64"/>
+    
+    <state name="confused" x1="128" y1="32" x2="160" y2="64"/>
+
+    <state name="anchor" x1="0" y1="288" x2="32" y2="320"/>
+    
+     <state name="snowflake" x="640" y="128" w="64" h="64" />
+	<state name="sea" x="704" y="128" w="64" h="64" />
+
+    <state name="occult" x="0" y="128" w="64" h="64"/>
+    
+    <state name="wedding" w="64" h="64" x="192" y="576" />
+    <state name="wedding_same_class" w="64" h="64" x="192" y="576" />
+    <state name="wedding_mixed_class" w="64" h="64" x="256" y="576" />
+    <state name="wedding_mixed_class_disapprove" w="64" h="64" x="320" y="576" />
+    <state name="hunting" w="64" h="64" x="384" y="576" />
+    
+    <state name="cultist_no" w="64" h="64" x="768" y="320" />
+    <state name="uc_skull" w="64" h="64" x="832" y="320" />
+    <state name="madness_complete" w="64" h="64" x="896" y="320" />
+    <state name="factions" w="64" h="64" x="960" y="320" /> <!-- placeholder, replaced with fear_face1 -->
+	<state name="fear_face1" w="64" h="64" x="960" y="320" />
+    
+    <state name="bee" w="64" h="64" x="832" y="384" />
+    <state name="beetle" w="64" h="64" x="896" y="384" />
+    <state name="fishpeople_attack" w="64" h="64" x="960" y="384" />
+    
+    <state name="mushroom" w="64" h="64" x="768" y="448" />
+    
+    <state name="skull_lovedone" w="64" h="64" x="832" y="448" />
+    <state name="skull" w="64" h="64" x="832" y="512" />
+    
+	<state name="fishperson_surprised" w="64" h="64" x="832" y="640" />
+    <state name="fishperson_angry" w="64" h="64" x="896" y="448" />
+    <state name="act_of_murder" w="64" h="64" x="960" y="448" />
+    <state name="fishperson" w="64" h="64" x="896" y="512" />
+    <state name="journal_icon" w="64" h="64" x="448" y="512" />
+    <state name="thought_bubble_icon" w="64" h="64" x="512" y="512" />
+    
+    <state name="fishperson_dead" w="64" h="64" x="768" y="576" />
+    <state name="aurochs" w="64" h="64" x="832" y="576" />
+    <state name="dodo" w="64" h="64" x="896" y="576" />
+    <state name="pigeon" w="64" h="64" x="960" y="576" />
+    
+    <state name="fishperson_bloody" w="64" h="64" x="896" y="640" />
+    <state name="fishperson_smile" w="64" h="64" x="960" y="640" />
+    
+	<state name="prop" w="64" h="64" x="0" y="512" />
+	<state name="negative_prestige" w="64" h="64" x="64" y="512" />
+	<state name="black_crown" w="64" h="64" x="128" y="512" />
+	<state name="black_skull" w="64" h="64" x="192" y="512" />
+
+     <state name="mysterious_figures" w="64" h="64" x="384" y="768" />
+	
+	<state name="wrench" w="64" h="64" x="0" y="896" />
+	<state name="cup_of_tea" w="64" h="64" x="64" y="896" />
+	
+	<state name="people" w="64" h="64" x="0" y="960" />
+	<state name="logo" w="64" h="64" x="64" y="960" />
+	
+	<!--<state name="module_needs_orders" w="64" h="64" x="128" y="960" />-->
+	<state name="module_needs_orders" w="64" h="64" x="320" y="0" />
+    
+	<state name="sleep_outside_angry" w="64" h="64" x="128" y="832" />
+	<state name="sleep_outside" w="64" h="64" x="192" y="832" />
+	<state name="sleep_on_floor" w="64" h="64" x="256" y="832" />
+  </element>
+   
+</skin>

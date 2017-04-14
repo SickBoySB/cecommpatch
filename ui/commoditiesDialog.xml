@@ -1,0 +1,69 @@
+<container type="vertbox" hsp="expand" vsp="expand" > <!-- solidfill="1" solidfillname="window"> NOOO. -->
+	<container type="vertbox" hsp="fixed" fixed_width="450" vsp="fixed" fixed_height="675">
+	<container type="vertbox" hsp="fixed" fixed_width="400" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommTopGlass" />
+    <container type="horizbox" hsp="expand" vsp="minimum" horizontal_padding="2" name="commodity_filter_holder">
+
+      <!--
+      
+      <imagebutton name="allcommodities" sfx="paper02" text="All Commodities" imageSkin="ui/commodityIcons.xml" image="stockpile_category" hsp="minimum" vsp="minimum">
+        <tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+          <container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark"> 
+            <label name="buttonTooltipLabel" text="Show/hide all commodities" vsp="center" state="tooltip_text"/>
+          </container>
+        </tooltip>
+      </imagebutton>
+      
+      <imagebutton name="buildingmaterial" sfx="paper01" text="Building Materials" imageSkin="ui/commodityIcons.xml" image="building_materials_category" hsp="minimum" vsp="minimum">
+        <tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+          <container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+            <label name="buttonTooltipLabel" text="Show building materials" vsp="center" state="tooltip_text"/>
+          </container>
+        </tooltip>
+      </imagebutton>
+      
+      <imagebutton name="fooddrink" sfx="paper00" text="Food And Drink" imageSkin="ui/commodityIcons.xml" image="food_and_drink_category" hsp="minimum" vsp="minimum">
+        <tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+          <container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+            <label name="buttonTooltipLabel" text="Show food and drink" vsp="center" state="tooltip_text"/>
+          </container>
+        </tooltip>
+      </imagebutton>
+      
+      <imagebutton name="raw" sfx="paper04" text="Raw Resources" imageSkin="ui/commodityIcons.xml" image="raw_resources_category" hsp="minimum" vsp="minimum">
+        <tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+          <container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+            <label name="buttonTooltipLabel" text="Show raw resources" vsp="center" state="tooltip_text"/>
+          </container>
+        </tooltip>
+      </imagebutton>
+      
+      <imagebutton name="refined" sfx="paper05" text="Refined And Manufactured Goods" imageSkin="ui/commodityIcons.xml" image="refined_manufactured_category" hsp="minimum" vsp="minimum">
+        <tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+          <container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+            <label name="buttonTooltipLabel" text="Show refined resources and manufactured goods" vsp="center" state="tooltip_text"/>
+          </container>
+        </tooltip>
+      </imagebutton>
+      
+      <imagebutton name="tool" sfx="paper03" text="Tools and Weapons" imageSkin="ui/commodityIcons.xml" image="tools_category" hsp="minimum" vsp="minimum">
+        <tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+          <container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+            <label name="buttonTooltipLabel" text="Show tools and weapons" vsp="center" state="tooltip_text"/>
+          </container>
+        </tooltip>
+      </imagebutton>
+      
+      <imagebutton name="other" sfx="paper00" text="Other Stuff" imageSkin="ui/commodityIcons.xml" image="generic_category" hsp="minimum" vsp="minimum">
+        <tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+          <container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+            <label name="buttonTooltipLabel" text="Show 'other' commodities" vsp="center" state="tooltip_text"/>
+          </container>
+        </tooltip>
+      </imagebutton>
+      -->
+    </container>
+
+    <container type="scrollablevertbox" hsp="expand" vsp="minimum" name="commoditiesVB" skin="ui/styles/default.xml" horizontal_padding="8" vertical_padding="8"  solidfill="1" solidfillname="cecommWorkcrew"/>
+	<container type="vertbox" hsp="fixed" fixed_width="400" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommBottomGlass" />
+	</container>
+</container>

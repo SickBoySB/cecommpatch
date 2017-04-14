@@ -1,0 +1,35 @@
+<container type="vertbox" hsp="expand" vsp="expand" name="exterior_work_party_dialog_container" >
+  
+	<!-- Unassigned workers container -->
+	<container type="horizbox" hsp="fixed" fixed_width="350" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" horizontal_padding="4" solidfill="1" solidfillname="cecommTopGlass">
+
+	</container>
+	<container type="horizbox"
+			hsp="expand" vsp="fixed"
+			horizontal_margin="10"
+			solidfill="1" solidfillname="cecommPaperRoundInsideNoBottom"
+			vertical_padding="5" hap="center" fixed_height="64">
+		<container type="horizbox" vap="center" hap="center" vsp="minimum" hsp="minimum">
+			
+			<container type="horizbox" hsp="minimum" vsp="minimum" hap="center" name="unassignedWorkersExteriorGlassPane" vap="center">
+				<container type="horizbox" hsp="minimum" vsp="minimum" name="unassigned_workers" />
+				
+			</container>
+			
+			<container type="vertbox" hsp="minimum" vsp="minimum" hap="right" vap="center" horizontal_margin="20" vertical_padding="5" vertical_gutter="2" name="helpBox"/>
+		</container>
+	</container>
+	<!-- Two pane worker panel and work group panel-->
+	
+	<container type="vertbox" hsp="expand" vsp="expand" solidfill="1" solidfillname="cecommWorkcrew" vertical_padding="6" vertical_gutter="3" horizontal_padding="4">
+		<container type="scrollablevertbox"
+				 name="work_parties"
+				 hsp="expand" vsp="expand"
+				 horizontal_padding="4" vertical_padding="4"
+				 wheelScrollSpeed="60">
+
+		</container>
+	</container>
+	
+	<container type="horizbox" hsp="fixed" fixed_width="350" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommBottomGlass" />
+</container>

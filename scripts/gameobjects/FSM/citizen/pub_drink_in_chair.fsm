@@ -1,0 +1,271 @@
+pub_drink_in_chair = {
+	["start"] = function(state,tag,name) 
+
+		if tag == nil or tag.target == nil then
+			return "abort", true
+		end
+
+		if VALUE_STORE["showFSMDebugConsole"] then printl("FSM", "FSM: " .. FSMName() ) end
+
+		
+		state.AI.bools["pathToObject"] = true 
+		state.AI.bools["pathToPosition"] = false
+		state.AI.objs["pathingObject"] = tag.target
+		state.AI.bools["walkToAdjacent"] = false
+		state.AI.bools["pathingFollowObject"] = false
+		state.AI.bools["pathingWeakFollow"] = false
+		state.AI.bools["pathingMajorAxisFacing"] = true
+		state.AI.strs["pathfindingOriginFSM"] = "walk_to_module"
+
+		return "pathing_start", true
+		
+	end,
+
+	["pathing_start"] = pathing_base["pathing_start"],
+	["pathing_wait"] = pathing_base["pathing_wait"],
+	["pathing_repath"] = pathing_base["pathing_repath"],
+	["pathing_walking"] = pathing_base["pathing_walking"],
+	["on_pathing_changecell"] = pathing_base["on_pathing_changecell"],
+	["pathing_changecell"] = pathing_base["pathing_changecell"],
+	["pathing_changecellresult"] = pathing_base["pathing_changecellresult"],
+	["pathing_final"] = pathing_base["pathing_final"],
+	["pathing_abort"] = pathing_base["pathing_abort"],
+	
+	["after_pathing"] = function(state,tag,name)
+		state.AI.bools["canBeSocial"] = false
+		-- move to chair position
+		if tag.target == nil then
+			return "abort"
+		end
+		
+		local pos = query( tag.target, "gridReportPosition" )[1]
+
+		if tag.target.tags["occupied"] == true then
+			state.AI.abortJobMessage = "Chair already occupied."
+			return "abort"
+		end
+		
+		if query(tag.target,"getTags")[1].table then 
+
+			-- flip sign to get my ass into the chair
+			if pos.orientationX ~= 0 then
+				send("rendOdinCharacterClassHandler", 
+					"odinRendererTeleportCharacterMessage", 
+					state.renderHandle, 
+					pos.x + (pos.orientationY *-1),
+					pos.y + (pos.orientationX *-1) )
+				
+				send("rendOdinCharacterClassHandler",
+					"odinRendererFaceCharacter", 
+					state.renderHandle, 
+					pos.orientationY , 
+					pos.orientationX )
+			else
+				send("rendOdinCharacterClassHandler", 
+					"odinRendererTeleportCharacterMessage", 
+					state.renderHandle, 
+					pos.x + (pos.orientationY),
+					pos.y + (pos.orientationX) )
+				
+				send("rendOdinCharacterClassHandler",
+					"odinRendererFaceCharacter", 
+					state.renderHandle, 
+					pos.orientationY *-1 , 
+					pos.orientationX )-- *-1 )
+
+			end
+		else
+			send("rendOdinCharacterClassHandler", 
+				"odinRendererTeleportCharacterMessage", 
+				state.renderHandle, 
+				pos.x,
+				pos.y )
+			
+			send("rendOdinCharacterClassHandler",
+				"odinRendererFaceCharacter", 
+				state.renderHandle, 
+				pos.orientationX , 
+				pos.orientationY )
+		end
+		
+		-- play sit animation
+		send("rendOdinCharacterClassHandler",
+		   "odinRendererSetCharacterAnimationMessage",
+		   state.renderHandle,
+		   "sitting_chair_idleLC",
+		   false)
+		
+		state.AI.boolAttributes["sitting"] = true
+		send(tag.target, "SetSittingIn", SELF)
+		state.AI.gOHAttributes["occupied_chair"] = tag.target
+	
+		state.AI.bools["canBeSocial"] = false
+		
+		state.AI.animationTickCount = 0
+	
+		send("rendOdinCharacterClassHandler",
+			"odinRendererSetCharacterAnimationMessage",
+			state.renderHandle,
+			"sitting_chair_drink_hand",
+			false)
+		
+		state.AI.animationTickCount = animationLength(state.animSet, "sitting_chair_drink_hand")
+		
+		return "animating", true
+	end,
+
+	["animating"] = function(state,tag,name)
+		state.AI.animationTickCount = state.AI.animationTickCount - 1
+
+		if state.AI.animationTickCount <= 0 then
+			state.lastDrinkDay = query("gameSession","getSessionInt","dayCount")[1]
+			
+			local pb = query(tag.target,"getParentBuilding")[1]
+			
+			local drinktype = false
+			if state.AI.curJobInstance.name == "Cure Despair With Laudanum" then
+				drinktype = "laudanum"
+			else
+				drinktype = query(pb,"getPubDrinkType")[1]
+			end
+			
+			if drinktype then
+			
+				-- CECOMMPATCH - fix for Bottoms Up achievement
+				if drinktype ~= "laudanum" then
+					send("gameSession","incSessionInt","bottomsUp", 1)
+					local num = query("gameSession","getSessionInt","bottomsUp")[1]
+					if not query("gameSession","getSessionBool","bottomsUp")[1] and num >= 500 then
+						send("gameSession", "setSessionBool", "bottomsUp", true)
+						send("gameSession", "setSteamAchievement", "bottomsUp")
+					end
+					-- There is no way to find out what the necessary steam stat variable is
+					-- send("gameSession", "incSteamStat", "stat_bottomsUp", 1)
+				end
+				
+				if drinktype == "spirits" then
+					if SELF.tags.despair_state then
+						send(SELF,"makeMemory","Drank Spirits In Despair",nil,nil,nil,nil)
+					elseif state.AI.traits["Drunkard"] then
+						send(SELF,"makeMemory","Enjoyed a Bottle of Spirits",nil,nil,nil,nil)
+					else
+						send(SELF,"makeMemory","Drank a Bottle of Spirits",nil,nil,nil,nil)
+						
+					end
+					state.AI.ints["inebriation"] = state.AI.ints["inebriation"] + 10
+					
+					-- add new record
+					table.insert(state.drinkrecord, 1, 3 )
+					-- and kill last record.
+					table.remove(state.drinkrecord, #state.drinkrecord) 
+					SELF.tags.drank_today = true
+					
+				elseif drinktype == "laudanum" then
+					if SELF.tags.despair_state then
+						send(SELF,"makeMemory","Drank Laudanum In Despair",nil,nil,nil,nil)
+					else
+						send(SELF,"makeMemory","Drank a Bottle of Laudanum",nil,nil,nil,nil)
+					end
+					
+					state.AI.ints["inebriation"] = state.AI.ints["inebriation"] + 15
+					state.lastDrinkType = "laudanum"
+					
+					if not state.AI.traits["Laudanum Fiend"] and
+						rand(1,500) == 1 then
+						
+						local tickerText = "Oh no, " .. state.AI.name .. " has become a Laudanum Fiend due to too much self-medication!"
+						send("rendCommandManager",
+							"odinRendererTickerMessage",
+							parseDescription(tickerText),
+							"laudanum_bottle",
+							"ui\\commodityIcons.xml")
+						
+						state.AI.traits["Laudanum Fiend"] = true
+						
+						send("rendOdinCharacterClassHandler",
+							"odinRendererSetCharacterTraitMessage",
+							state.renderHandle,
+							"Laudanum Fiend",1,false)
+						
+						send("rendCommandManager",
+							"odinRendererStubMessage",
+							"ui\\commodityIcons.xml", -- iconskin
+							"laudanum_bottle", -- icon
+							"Laudanum Fiend", -- header text
+							"Oh no, " .. state.AI.name .. " has become a Laudanum Fiend due to too much self-medication!", -- text description
+							"Left-click to zoom. Right-click to dismiss.", -- action string
+							"laudanumWarning", -- alert type (for stacking)
+							"ui//eventart//tasty_pickles.png", -- imagename for bg
+							"low", -- importance: low / high / critical
+							state.renderHandle, -- object ID
+							30 * 1000, -- duration in ms
+							0, -- "snooze" time if triggered multiple times in rapid succession
+							n) -- gameobjecthandle of director, null if none
+					end
+				else
+					-- drank brew.
+					if SELF.tags.despair_state then
+						send(SELF,"makeMemory","Drank a Jar of Brew In Despair",nil,nil,nil,nil)
+					elseif state.AI.traits["Drunkard"] then
+						send(SELF,"makeMemory","Enjoyed a Jar of Brew",nil,nil,nil,nil)
+					else
+						send(SELF,"makeMemory","Drank a Jar of Brew",nil,nil,nil,nil)
+					end
+					state.AI.ints["inebriation"] = state.AI.ints["inebriation"] + 5
+					
+					-- add new record
+					table.insert(state.drinkrecord, 1, 2 )
+					-- and kill last record.
+					table.remove(state.drinkrecord, #state.drinkrecord) 
+					SELF.tags.drank_today = true
+				end
+			end
+			
+			send("rendOdinCharacterClassHandler",
+				"odinRendererCharacterDropTemporaryToolMessage",
+				state.renderHandle)
+			
+			local animName = "sitting_chair_idleLC"
+			if SELF.tags.middle_class then
+				animName = "sitting_chair_idleMC"
+			elseif SELF.tags.upper_class then
+				animName = "sitting_chair_idleUC"
+			end
+			
+			state.AI.animationTickCount = animationLength(state.animSet, animName)
+			send("rendOdinCharacterClassHandler",
+				"odinRendererQueueCharacterAnimationMessage",
+				state.renderHandle,
+				animName)
+			
+			return "animating2"
+		end
+
+		return "animating"
+	end,
+	
+	["animating2"] = function(state,tag,name)
+		state.AI.animationTickCount = state.AI.animationTickCount - 1
+
+		if state.AI.animationTickCount <= 0 then
+			return "final", true
+		end
+	
+		return "animating2"	
+	end,
+	
+	["final"] = function(state,tag,name) 
+		state.AI.bools["canBeSocial"] = true
+		state.AI.animationTickCount = 0
+		return 
+	end,
+
+	["abort"] = function(state, tag,name)
+		state.AI.bools["canBeSocial"] = true
+		send("rendOdinCharacterClassHandler",
+			"odinRendererCharacterDropTemporaryToolMessage",
+			state.renderHandle)
+
+		return
+	end
+}

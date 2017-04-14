@@ -1,0 +1,460 @@
+
+Entity {
+	name="WorldStats",
+	type="stats",
+	dayTimeTenthSeconds=6*60*10, --6*60*10,
+	dayTimeSeconds = 6*60, --6*60,
+	nightTimeTenthSeconds=2*60*10, --2*60*10,
+	nightTimeSeconds = 2*60,
+	shiftLengthTenthSeconds = 60*10,
+	dayNightCycleTenthSeconds = 8*60*10, -- 8*60*10
+	dayNightCycleSeconds = 8*60, --  8*60,
+	nightLightColour = {30, 45, 220, 25, 40, 90},
+	dayLightColour = {255, 245, 235, 55, 60, 65},
+	bloodAwesomeNightLightColour = {200, 40, 200, 200, 35, 80},
+	overseerGoalChart = {45, 100, 160, 230, 310, 410, 520, 640, 810, 1020, 1280, 1590, 1910, 2240, 2580, 2930, 3300, 3700, 4120},
+	artifactFindChance = 500, -- 1/X
+	bonusOreChance = 15, -- 1/X
+	treeGrowChancePercent = 10,
+	arcPointDripDefaultEldritch = 1,
+	arcPointDripDefaultMundane = 1,
+	baseModuleUsesBeforeDamage = 30, --30
+	baseModuleUsesBeforeInoperative = 40, -- 40,
+	wakeRadiusExplosion = 20,
+	wakeRadiusGunshot = 14,
+	wakeRadiusMelee = 6,
+	wakeRadiusBreakingThing = 4,
+	buildingShiftsUntilUpkeep = 8 * 5, --1,
+	buildingShiftsUntilShutdown = 8, -- 2,
+	numberOfShiftsInDay = 8,
+	itemForbiddenTint = { 245, 50, 10, 55 },
+	itemTradeTint = {130, 215, 110, 55},
+	lc_house_pop_cap_increase = 2,
+	mc_house_pop_cap_increase = 1,
+	uc_house_pop_cap_increase = 1,
+	maintanence_fail_time_mult = 8,
+	buildingDebrisList = { "Brick Debris, Small","Wooden Debris, Small","Random Rubbish","Paper Rubbish",
+						"Machine Rubbish","Broken Glass","Small Crater","Medium Crater",},
+	dayShifts = {
+		sunrise = {
+			shift_number = 1,
+			display_name = "Sunrise",
+			icon_name = "time_sunrise",
+			colors = {165,140,125,  30,40,90}, -- deprecate this.
+			colourPerClimateZone = {
+				desert = {118,79,75,   38,27,53},
+				cold = {111,90,59,   93,83,69},
+				temperate = {165,140,125,   30,40,90},
+				tropical = {126,132,183,   33,37,82},
+				event_test = { 20,20,20,	20,20,20,}, --For event arcs. Check frameupdate -> setUpLightingTransition for the code that makes this toggle on.
+				selenian_cloud = { 146,112,153,	104,56,113,}, 
+			},
+			isNight = false,
+		},
+		morning = {
+			shift_number = 2,
+			display_name = "Morning",
+			icon_name = "time_morning",
+			--colors = {200, 40, 200, 200, 35, 80} ,
+			colors = {180,190,195,
+					65,85,105},
+			colourPerClimateZone = {
+				desert = {170,151,132, 47,48,77},
+				cold = {134,149,158, 93,107,120},
+				temperate = {180,190,195, 65,85,105},
+				tropical = {148,205,214, 43,47,95},
+				event_test = { 20,20,20,	20,20,20,},
+			},
+			isNight = false,
+		},
+		noon = {
+			shift_number = 3,
+			display_name = "Noon",
+			icon_name = "time_noon",
+			--colors = {255, 245, 235, 55, 60, 65},
+			colors = {195,220,235,  100,120,150},
+			colourPerClimateZone = {
+				desert = {216,198,176,  88,101,116},
+				cold = {198,212,216,  130,142,159},
+				temperate = {195,220,235,  100,120,150},
+				tropical = {187,239,216,  60,64,115},
+				event_test = { 20,20,20,	20,20,20,},
+				sunny_weather = { 225,242,248,	121,144,178,},
+				cloudy_weather = { 131,139,144,	79,85,94,},
+				blasting_weather = { 229,214,191,	75,91,112,},
+				freezing_weather = { 123,126,127,	84,87,90,},
+			},
+			isNight = false,
+		},
+		afternoon = {
+			shift_number = 4,
+			display_name = "Tea Time",
+			icon_name = "time_afternoon",
+			--colors = {255, 245, 235, 55, 60, 65},
+			colors = {
+				205,210,195,  65,75,130
+			},
+			colourPerClimateZone = {
+				desert = {229,205,175,  67,81,95},
+				cold = {212,228,237,  128,125,145},
+				temperate = {205,210,195,  130,142,159},
+				tropical = {201,230,156,  60,64,115},
+				event_test = { 20,20,20,	20,20,20,},
+				sunny_weather = { 234,236,226,	78,91,155,},
+				cloudy_weather = { 131,132,128,	59,62,79,},
+				blasting_weather = { 240,220,190,	52,66,86,},
+				freezing_weather = { 133,137,139,	81,80,84,},
+			},
+			isNight = false,
+		},
+		evening = {
+			shift_number = 5,
+			display_name = "Evening",
+			icon_name = "time_evening",
+			--colors = {255, 245, 235, 55, 60, 65},
+			colors = {
+				215,195,160,
+				120,75,100
+			},
+			colourPerClimateZone = {
+				desert = {228,196,136,		87,70,93},
+				cold = {189,176,199,	92,104,97},
+				temperate = {215,195,160,	120,75,100},
+				tropical = {219,163,61,		63,43,95},
+				event_test = { 20,20,20,	20,20,20,},
+				sunny_weather = { 239,226,197,	143,90,120,},
+				cloudy_weather = { 129,123,114,	76,62,70,},
+				blasting_weather = { 239,212,141,	75,54,82,},
+				freezing_weather = { 115,112,117,	58,60,59,},
+			},
+			isNight = false,
+		},
+		dusk = {
+			shift_number = 6,
+			display_name = "Dusk",
+			icon_name = "time_dusk",
+			--colors = {200, 40, 200, 200, 35, 80},
+			colors = { 230,170,145,	85,45,40,	},
+			colourPerClimateZone = {
+				desert = { 183,137,88,	53,35,60,	},
+				cold = { 156,124,110,	92,62,44,	},
+				temperate = { 230,170,145,	85,45,40,	},
+				tropical = { 158,86,28,	68,23,68,	},
+				event_test = { 20,20,20,	20,20,20,},
+				selenian_cloud = { 168,65,169,	68,23,68,	},
+			},
+			isNight = false,
+		},
+		early_night = {
+			shift_number = 7,
+			display_name = "Early Night",
+			icon_name = "time_early_night",
+			--colors = {30, 45, 220, 25, 40, 90},
+			colors = { 35,45,65,	25,35,60,},
+			colourPerClimateZone = {
+				desert = { 85,31,67,	12,18,32,},
+				cold = { 80,91,99,	67,71,72,},
+				temperate = { 35,45,65,	25,35,60,},
+				tropical = { 40,58,94,	3,7,48,},
+				event_test = { 20,20,20,	20,20,20,},
+				selenian_cloud = { 122,22,118,	22,6,38,},
+			},
+			isNight = true,
+		},
+		late_night = {
+			shift_number = 8,
+			display_name = "Late Night",
+			icon_name = "time_late_night",
+			--colors = {30, 45, 220, 25, 40, 90},
+			colors = { 30,45,55,	30,30,55,	},
+			colourPerClimateZone = {
+				desert = { 55,29,54,	4,8,18,	},
+				cold = { 61,71,78,	52,55,56,	},
+				temperate = { 30,45,55,	30,30,55,	},
+				tropical = { 34,43,75,	3,7,48,	},
+				event_test = { 20,20,20,	20,20,20,},
+				selenian_cloud = { 112,12,108,	22,6,38,},
+			},
+			isNight = true,
+		}
+	},
+	climateInfoPerBiome = {
+		tropical = {
+			cropTable = {
+				["Green Bamboo Plant"] = { unlocked = false, growthModifier = 100 }, 
+                    ["Sugarcane Plant"] = 	{ unlocked = true, growthModifier = 100 }, 
+                    ["Opium Poppy"] = 		{ unlocked = false, growthModifier = 100 }, 
+                    ["Chilli Pepper Plant"]= { unlocked = true, growthModifier = 100 }, 
+                   -- ["Flax Plant"] = 		{ unlocked = true, growthModifier = 100 }, 
+                    ["Maize Plant"] =		{ unlocked = true, growthModifier = 100 },
+				
+				["Domestic Coconut Palm"] ={ unlocked = false, growthModifier = 100 },
+				["Coffee Plant"] =		{ unlocked = true, growthModifier = 100 },
+			},
+			animals = {
+				"Giant Beetle",
+				"Scrub Tortoise",
+				"Land Dragon",
+				"Scintillating Beetle",
+				"Scintillating Beetle",
+				"Scintillating Beetle",
+				"Junglefowl",
+				"Junglefowl",
+				"Junglefowl",
+			}
+		},
+		temperate = {
+			cropTable = {
+				["Cabbage Plant"] =     { unlocked = false, growthModifier = 100 }, -- TEST: removed for 47B
+                    ["Pumpkin Vine"] = 	    { unlocked = true, growthModifier = 100 },
+				["Domestic Lacquer Plant"] ={ unlocked = true, growthModifier = 100 },
+                    ["Opium Poppy"] = 		{ unlocked = false, growthModifier = 100 }, 
+                    ["Wheat"]=              { unlocked = true, growthModifier = 100 }, 
+				-- ["Flax Plant"] = 		{ unlocked = true, growthModifier = 100 }, 
+                    ["Maize Plant"] =		{ unlocked = true, growthModifier = 100 },
+				["Green Bamboo Plant"] = { unlocked = false, growthModifier = 100 },
+				
+				["Grape Vine"] =		{ unlocked = false, growthModifier = 100 },
+				["Lingonberry Plant"] =	{ unlocked = false, growthModifier = 100 },
+				["Saskatoonberry Plant"] ={ unlocked = false, growthModifier = 100 },
+				["Tea Plant"] =		{ unlocked = false, growthModifier = 100 },
+				["Tobacco Plant"] =		{ unlocked = false, growthModifier = 100 },
+			},
+			animals = {
+				"Aurochs",
+				"Fox",
+				"Beetle",
+				"Beetle",
+				"Deer",
+				"Deer",
+				"Dodo",
+				"Dodo",
+				"Dodo",
+			}
+		},
+		desert = {
+			cropTable = {
+				["Green Bamboo Plant"] = { unlocked = false, growthModifier = 100 }, 
+                    --["Sugarcane Plant"] = 	{ unlocked = true, growthModifier = 100 }, 
+                    ["Opium Poppy"] = 		{ unlocked = false, growthModifier = 100 }, 
+                    ["Chilli Pepper Plant"]= { unlocked = true, growthModifier = 100 }, 
+				-- ["Flax Plant"] = 		{ unlocked = true, growthModifier = 100 }, 
+                    ["Maize Plant"] =		{ unlocked = true, growthModifier = 100 },
+				
+				["Domestic Coconut Palm"] ={ unlocked = false, growthModifier = 100 },
+				["Coffee Plant"] =		{ unlocked = true, growthModifier = 100 },
+			},
+			animals = {
+				"Desert Fox",
+				"Desert Tortoise",
+				"Beetle",
+				"Beetle",
+				"Beetle",
+			}
+		},
+		cold = {
+			cropTable = {
+				["Cabbage Plant"] =     { unlocked = false, growthModifier = 100 }, -- TEST: removed for 47B
+                    ["Pumpkin Vine"] = 	    { unlocked = true, growthModifier = 100 },
+				["Domestic Lacquer Plant"] ={ unlocked = true, growthModifier = 100 },
+                    ["Opium Poppy"] = 		{ unlocked = false, growthModifier = 100 }, 
+                    ["Wheat"]=              { unlocked = true, growthModifier = 100 }, 
+				-- ["Flax Plant"] = 		{ unlocked = true, growthModifier = 100 }, 
+                    ["Maize Plant"] =		{ unlocked = true, growthModifier = 100 },
+				["Green Bamboo Plant"] = { unlocked = false, growthModifier = 100 },
+				
+				["Grape Vine"] =		{ unlocked = false, growthModifier = 100 },
+				["Lingonberry Plant"] =	{ unlocked = false, growthModifier = 100 },
+				["Saskatoonberry Plant"] ={ unlocked = false, growthModifier = 100 },
+				["Tea Plant"] =		{ unlocked = false, growthModifier = 100 },
+				["Tobacco Plant"] =		{ unlocked = false, growthModifier = 100 },
+			},
+			animals = {
+				"Wooly Aurochs",
+				"Snow Fox",
+				"Arctic Dodo",
+				"Arctic Dodo",
+				"Arctic Dodo",
+				"Arctic Dodo",
+			}
+		},
+	},
+}
+
+
+
+--nightLightColour = {20, 40, 200, 20, 35, 80},
+
+Entity {
+	name="Ore Veins",
+	type="stats",
+	exclusion_radius = 32,
+}
+
+-- Waypoints
+
+Entity {
+	name="Alarm Beacon",
+	type="waypoint",
+	visible=false,
+	lifetimeInSeconds=6,
+	tags={"alarm_waypoint"},
+}
+
+Entity {
+	name="Camera Waypoint",
+	type="waypoint",
+	visible=false,
+	lifetimeInSeconds=30,
+	tags={"camera_waypoint"},
+}
+
+Entity {
+	name="Rally Squad",
+	type="waypoint",
+	visible=true,
+	lifetimeInSeconds=40,
+	tags={"alarm_waypoint","rally_waypoint"},
+}
+
+Entity {
+	name="Alert Zoom Marker",
+	type="waypoint",
+	visible=false,
+	lifetimeInSeconds=60,
+	tags={ "alert_zoom_marker" },
+}
+
+Entity {
+	name="Path Marker",
+	type="waypoint",
+	visible=false,
+	lifetimeInSeconds=-1,
+	tags={ "path_marker" },
+}
+
+Entity {
+	name="Explore",
+	type="waypoint",
+	visible=true,
+	lifetimeInSeconds=-1,
+	tags={ "explore_waypoint" },
+}
+
+Entity {
+	name="Event",
+	type="waypoint",
+	visible=true,
+	lifetimeInSeconds=-1,
+	tags={ "event_waypoint" },
+}
+
+Entity {
+	name="Sound Test 1",
+	type="waypoint",
+	visible=true,
+	lifetimeInSeconds=30,
+	tags={"sound_test"},
+}
+
+Entity {
+	name="Sound Test 2",
+	type="waypoint",
+	visible=true,
+	lifetimeInSeconds=30,
+	tags={"sound_test"},
+}
+
+Entity {
+	name="Dev Marker",
+	type="waypoint",
+	visible=true,
+	lifetimeInSeconds=30,
+	tags={"dev_marker"},
+}
+
+Entity {
+	name="Mining Info",
+	type="waypoint",
+	visible=true,
+	lifetimeInSeconds=-1,
+	tags={"mine_info"},
+}
+
+Entity {
+	name="Selenian Info",
+	type="stats",
+	memoryDescriptions={
+		-- TODO
+	},
+}
+
+Entity {
+	name = "Fey Mood Products",
+	type="stats",
+	commodity_names = {
+		"fishy_idol",
+		"dormant_spore",
+		"glowing_spore",
+		"geometer_canopic_jar",
+		"idol_of_quaggaroth",
+		"obeliskian_seal",
+		"grimoire",
+		"boxed_steam_oven",
+		"boxed_small_iron_oven",
+		"boxed_iron_charcoal_kiln",
+		"boxed_power_lathe",
+		"boxed_iron_smelting_crucible",
+		"boxed_ceramics_press",
+		"boxed_grinder",
+		"boxed_still",
+		"boxed_stone_altar",
+		"boxed_large_stone_altar",
+		"boxed_candelabra",
+		"boxed_church_banner",
+		"boxed_middle_class_single_bed",
+		"boxed_upper_class_bed",
+		"boxed_upper_class_chair",
+		"boxed_uc_cabinet",
+		"boxed_stained_glass_window",
+		"boxed_steam_radiator",
+		"boxed_jezail_rifle_locker",
+		"boxed_revolver_locker",
+		"boxed_grenade_launcher_locker",
+		"boxed_leyden_pistol_locker",
+		"boxed_leyden_rifle_locker",
+		"bottle_of_laudanum",
+		"bottle_of_sulphur_tonic",
+		"cube_of_flesh",
+		"boxed_rare_painting",
+		"boxed_rare_painting",
+		"boxed_rare_painting",
+	},
+}
+
+Entity {
+	name = "MineInfo",
+	type="stats",
+	tagToProduct = {
+		mine_stone = {commodity = "rough_stone_block", icon = "rough_stone_block_icon" },
+		mine_peat = {commodity = "peat", icon = "peat_icon" },
+		mine_coal = {commodity = "coal", icon = "coal_chunk" },
+		mine_hematite = {commodity = "hematite", icon = "hematite_icon" },
+		mine_malachite = {commodity = "malachite", icon = "malachite_icon" },
+		mine_sphalerite = {commodity = "sphalerite", icon ="sphalerite_icon" },
+		mine_clay = {commodity = "cube_of_clay", icon = "clay_icon" },
+		mine_sand = {commodity = "bushel_of_sand", icon = "sand_bushel_icon" },
+		mine_sulphur = {commodity = "sulphur", icon = "sulphur_lump" },
+		mine_chalk = {commodity = "chalk", icon = "chalk_icon" },
+		mine_gold = {commodity = "native_gold", icon = "native_gold_icon" },
+		--mine_obeliskian = "Fun"
+	},
+	workPointsNeededToSurvey = 5,
+	timeIncreasePerOperation = 1,
+	rareItems = {"bushel_of_bones","bushel_of_scrap_iron","leaf_fossil","serpent_bell",
+			   "obeliskian_block","boxed_rare_painting"},
+	lowQualityProductTable = {"sulphur","coal","chalk"},
+	highQualityProductTable = {"hematite","malachite","sphalerite","native_gold"},
+	SSRQualityProductTable = {"logs"},
+}
+	

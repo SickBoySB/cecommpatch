@@ -1,0 +1,388 @@
+<skin name="CE Order Icons" texture="ui/icons/orderIcons00.png">
+	<element name="image" scale="exact">
+	
+<!-- row 1, y="0" -->
+
+	<state name="beacon_category_icon" 	x="0" y="0" w="64" h="64" />
+	<state name="farming_icon"    		x="64"  y="0" w="64" h="64" />
+	<state name="dig_icon"        		x="128" y="0" w="64" h="64" />
+	<state name="exploration_plus_naturalism" x="192" y="0" w="64" h="64" />
+	<state name="chop_tree_icon"  		x="256" y="0" w="64" h="64" />
+	<state name="explore_icon"    		x="320" y="0" w="64" h="64" />
+	<state name="naturalism_icon" 		x="384" y="0" w="64" h="64" />
+	<state name="flatten_icon"    		x="448" y="0" w="64" h="64" />
+	<state name="pickaxe_icon"    		x="512" y="0" w="64" h="64" />
+	<state name="butcher_icon"    		x="576" y="0" w="64" h="64" />
+	<state name="carpentry_icon"  		x="640" y="0" w="64" h="64" />
+	<state name="hammer_icon"     		x="704" y="0" w="64" h="64" />
+	<state name="broken_wrench"     		x="768" y="0" w="64" h="64" />
+	<state name="airdrop_crate"     		x="832" y="0" w="64" h="64" />
+	<state name="wrench"     			x="896" y="0" w="64" h="64" />
+	<state name="intentionally_blank"   	x="960" y="0" w="64" h="64" />
+	
+	<state name="farm_image" 			x="64" y="0" w="64" h="64"/>
+	<state name="flatten_image" x="128" y="0" w="64" h="64"/>
+	<state name="survey_image" x="192" y="0" w="64" h="64"/>
+	<state name="choptree_image" x="256" y="0" w="64" h="64"/>
+    
+<!-- row 2, y="64" -->
+
+	<state name="dynamics_category_icon" 	x="0" y="64" w="64" h="64" />
+	<state name="water_image"    			x="64"  y="64" w="64" h="64" />
+	<state name="gears_image"    			x="128" y="64" w="64" h="64" />
+	<state name="steam_image"    			x="192" y="64" w="64" h="64" />
+	<state name="voltaics_image" 			x="256" y="64" w="64" h="64" />
+	<state name="steamIO" 				x="576" y="64" w="64" h="64"/>
+	<state name="steamCommodity" 			x="640" y="64" w="64" h="64"/>
+	<state name="workcrew_inside" 		x="704" y="64" w="64" h="64"/>
+	<state name="workcrew_outside" 		x="768" y="64" w="64" h="64"/>
+	<state name="chevron_up"     			x="832" y="64" w="64" h="64" />
+	<state name="chevron_down"     		x="896" y="64" w="64" h="64" />
+	
+<!-- row 3, y="128" -->
+
+	<state name="icon_refinery"      x="64"  y="128" w="64" h="64" />
+	<state name="icon_metalworks"    x="128" y="128" w="64" h="64" />
+	<state name="icon_ceramicsshop"  x="192" y="128" w="64" h="64" />
+	<state name="icon_carpentryshop" x="256" y="128" w="64" h="64" />
+	
+<!-- row 4, y="192" -->
+
+	<state name="zones_image" 		x="0" y="192" w="64" h="64" />
+	<state name="workplaces"  		x="64" y="192" w="64" h="64" />
+	<state name="graveyard"  		x="128" y="192" w="64" h="64" />
+	<state name="stockpile"		 	x="192" y="192" w="64" h="64" />  
+	<state name="stockpile_image" 	x="192" y="192" w="64" h="64" />
+	
+<!-- row 5, y="256" -->
+	
+	<state name="left_mouse" x="896" y="256" w="64" h="64"/>
+	
+<!-- row 6, y="320" -->
+	
+	<state name="right_mouse" x="896" y="320" w="64" h="64"/>
+	
+<!-- row 7, y="384" -->
+
+	<state name="center_mouse" x="896" y="384" w="64" h="64"/>
+	
+<!-- row 8, y="448" -->
+
+	<state name="pocketwatch" x="972" y="459" w="40" h="41" />
+	
+<!-- row 9, y="512" -->
+	
+	<state name="names" x="960" y="512" w="64" h="64" />
+	
+
+	
+	<state name="pneumatic_pipe" x="896" y="768" w="64" h="64" />
+
+	<state name="mechanicalIO" x="384" y="64" w="64" h="64"/>
+	<state name="mechanicalCommodity" x="320" y="64" w="64" h="64"/>
+
+	<state name="trade_office" w="64" h="64" x="448" y="64" />
+	
+	<state name="factory_icon" x="0" y="128" w="64" h="64" />
+	<state name="workshops_category" x="0" y="128" w="64" h="64" />
+	
+	<state name="academy_image" x="768" y="640" w="64" h="64" />
+	
+	<state name="refinery_image" x="64" y="128" w="64" h="64" />
+	<state name="forge_image" x="128" y="128" w="64" h="64" />
+	<state name="kiln_image" x="192" y="128" w="64" h="64" />
+	<state name="carpenters_image" x="256" y="128" w="64" h="64" />
+	<state name="mineshaft_image" x="320" y="128" w="64" h="64" />
+    
+    <state name="brewery" x="384" y="128" w="64" h="64" />
+    <state name="bakery" x="448" y="128" w="64" h="64" />
+    <state name="icon_kitchen" x="448" y="128" w="64" h="64" />
+    
+	<state name="icon_chemist" x="512" y="128" w="64" h="64" />
+	<state name="barbershop_image" x="576" y="128" w="64" h="64" />
+	<state name="clerks_image" x="640" y="128" w="64" h="64" />
+	<state name="icon_arsenal" x="704" y="128" w="64" h="64" />
+	<state name="laboratory_image" x="768" y="128" w="64" h="64" />
+	<state name="laboratory" x="768" y="128" w="64" h="64" />
+	<state name="garage_image" x="832" y="128" w="64" h="64" />
+	<state name="offices_category" x="896" y="128" w="64" h="64" />
+	
+	<state name="module_move" x="448" y="192" w="64" h="64" />
+	<state name="phrenologist_icon" x="512" y="192" w="64" h="64" />
+	<state name="population_icon" x="576" y="192" w="64" h="64" />
+    
+    <state name="buildings_icon" x="0" y="256" w="64" h="64" />
+    <state name="housing" x="0" x2="63" y="256" w="64" h="64" />
+    <state name="lowerclasshouse" x="64" y="256" w="64" h="64" />
+    <state name="middleclasshouse" x="128" y="256" w="64" h="64" />
+    <state name="upperclasshouse" x="192" y="256" w="64" h="64" />
+    
+    <state name="remove_stockpile" x="640" y="192" w="64" h="64" />
+    <state name="cement_factory" x="704" y="192" w="64" h="64" />
+    <state name="foreign_office" x="768" y="192" w="64" h="64" />
+    
+    <state name="big_stockpile" x="640" y="256" w="64" h="64" />
+    <state name="small_stockpile" x="704" y="256" w="64" h="64" />
+    
+    <state name="plant_grass" x="832" y="192" w="64" h="64" />
+    <state name="plant_shrubbery" x="832" y="256" w="64" h="64" />
+    <state name="plant_flowers" x="832" y="320" w="64" h="64" />
+    
+    <state name="modules_category" w="64" h="64" x="256" y="256" />
+    <state name="chapel" x="320" y="256" w="64" h="64" />
+    <state name="police" x="384" y="256" w="64" h="64" />
+    <state name="investigators" x="448" y="256" w="64" h="64" />
+    
+    <state name="decor_category" x="64" y="640" w="64" h="64" />
+    <state name="special_category" x="256" y="192" w="64" h="64" />
+    <state name="textiles_workshop" x="320" y="192" w="64" h="64" />
+    <state name="barracks" x="384" y="192" w="64" h="64" />
+    
+    
+    <state name="icon_return_to_stockpile" w="64" h="64" x="512" y="256" />
+    <state name="lone_guy" w="64" h="64" x="640" y="256" />
+    <state name="tools_and_cog" w="64" h="64" x="704" y="256" />
+
+    <state name="stakes_image" x="0" y="320" w="64" h="64"/>
+    <state name="gabion_high_image" x="64" y="320" w="64" h="64"/>
+    <state name="barbed_wire_rolled_image" x="128" y="320" w="64" h="64"/>
+    <state name="barbed_wire_fence_image" x="192" y="320" w="64" h="64"/>
+    <state name="fence_white_picket_image" x="256" y="320" w="64" h="64"/>
+    <state name="fence_wooden_image" x="320" y="320" w="64" h="64"/>
+    <state name="fence_brick_wall_image" x="384" y="320" w="64" h="64"/>
+    <state name="module_delete" x="448" y="320" w="64" h="64"/>
+    <state name="gabion_half_image" x="64" y="384" w="64" h="64"/>
+    
+    <state name="railroad_image" x="0" y="384" w="64" h="64"/>
+    
+    <state name="road_image" x="128" y="384" w="64" h="64"/>
+    <state name="building_upgrade" x="192" y="384" w="64" h="64"/>
+    
+    <state name="brick_charcoal_kiln" x="256" y="384" w="64" h="64"/>
+    <state name="iron_charcoal_kiln" x="320" y="384" w="64" h="64"/>
+    
+    <state name="brick_kiln" x="256" y="384" w="64" h="64"/>
+    <state name="iron_kiln" x="320" y="384" w="64" h="64"/>
+    <state name="stone_crucible" x="384" y="384" w="64" h="64"/>
+    <state name="stone_kiln" x="448" y="384" w="64" h="64"/>
+    
+    <state name="windmill"                x="0" y="448" w="64" h="64"/>
+    <state name="messhall"                x="64" y="448" w="64" h="64"/>
+    <state name="minum_turret_icon"       x="128" y="448" w="64" h="64"/>
+    <state name="mining_ventilation_icon" x="192" y="448" w="64" h="64"/>
+    <state name="bureaucrat_desk_icon"    x="256" y="448" w="64" h="64"/>
+    <state name="bureaucrat_cabinet_icon" x="320" y="448" w="64" h="64"/>
+    <state name="powerstamper_icon"       x="384" y="448" w="64" h="64"/>
+    <state name="kiln_ceramics_brick"       x="448" y="448" w="64" h="64"/>
+    
+    <state name="hunting"                x="832" y="640" w="64" h="64"/>
+    <state name="icon_nedbandit"         x="960" y="640" w="64" h="64"/>
+    <state name="bandit" 				x="960" y="640" w="64" h="64"/>
+    <state name="icon_fishpeople"        x="896" y="640" w="64" h="64"/>
+    <state name="icon_fishpeople2"       x="896" y="704" w="64" h="64"/>
+    
+    <state name="carpentry_workbench_icon" x="0" y="512" w="64" h="64"/>
+    <state name="power_saw_icon" x="64" y="512" w="64" h="64"/>
+    <state name="smithing_forge_icon" x="128" y="512" w="64" h="64"/>
+    <state name="small_oven_icon" x="192" y="512" w="64" h="64"/>
+    <state name="industrial_kiln_icon" x="256" y="512" w="64" h="64"/>
+    <state name="boiler_icon" x="320" y="512" w="64" h="64" />
+    <state name="chemistry_workbench_icon" x="384" y="512" w="64" h="64" />
+    <state name="kiln_ceramics_iron" x="448" y="512" w="64" h="64" />
+    
+    <state name="stone_oven" x="384" y="640" w="64" h="64"/>
+    <state name="steam_oven" x="448" y="640" w="64" h="64"/>
+    
+    <state name="artisan_icon" x="576" y="320" w="64" h="64"/>
+    <state name="overseer_icon" x="576" y="384" w="64" h="64"/>
+    <state name="everyone_icon" x="576" y="256" w="64" h="64"/>
+    <state name="unassign_workcrew_icon" x="640" y="384" w="64" h="64"/>
+    <state name="broom_icon" x="704" y="384" w="64" h="64"/>
+    <state name="idle_icon" x="768" y="384" w="64" h="64"/>
+    <state name="arm_icon" x="832" y="384" w="64" h="64"/>
+    
+   <state name="assign_to_crew_icon" x="640" y="320" w="64" h="64"/>
+   <state name="assign_to_pool_icon" x="704" y="320" w="64" h="64"/>
+   <state name="labourers_icon" x="768" y="320" w="64" h="64"/>
+    
+  <state name="guard_workcrew_icon" x="512" y="320" w="64" h="64"/>
+  <state name="guard_building_icon" x="512" y="384" w="64" h="64"/>
+  <state name="guard_area_icon" x="512" y="448" w="64" h="64"/>
+  <state name="icon_rally" x="512" y="512" w="64" h="64"/>
+  <state name="nco_command_icon" x="512" y="576" w="64" h="64"/>
+  
+  <state name="landmine" x="704" y="512" w="64" h="64"/>
+  	<state name="bullets" x="768" y="512" w="64" h="64"/>
+	<state name="lock" x="832" y="512" w="64" h="64"/>
+  
+    <state name="march_image" x="576" y="448" w="64" h="64"/>
+    <state name="cannon_fire" x="640" y="448" w="64" h="64"/>
+    <state name="fortify" x="704" y="448" w="64" h="64"/>
+    <state name="patrolcycle" x="768" y="448" w="64" h="64"/>
+    <state name="fortify2" x="832" y="448" w="64" h="64"/>
+    
+	<state name="on_shift" x="896" y="448" w="64" h="64"/>
+	<state name="off_shift" x="896" y="512" w="64" h="64"/>
+	
+    <state name="cannon" x="640" y="512" y1="256" y2="319"/>
+    
+	<state name="military_training" x="448" y="576" w="64" h="64"/>
+	<state name="military_assault" x="512" y="576" w="64" h="64"/>
+    
+	<state name="frontier_justice" x="768" y="704" w="64" h="64"/>
+	<state name="redx_image" x="576" y="576" w="64" h="64"/>
+	<state name="greenarrow_image" x="640" y="576" w="64" h="64"/>
+	<state name="cycle_image" x="704" y="576" w="64" h="64"/>
+	<state name="remove_construction" x="768" y="576" w="64" h="64"/>
+	<state name="retreat_image" x="832" y="576" w="64" h="64"/>
+	<state name="guns_image" x="896" y="576" w="64" h="64"/>
+	<state name="ellipsis" x="960" y="576" w="64" h="64"/>
+   
+	<!-- UI arrow things --> 
+	<state name="arrowdown_yellow_icon" x="576" y="640" w="64" h="64" />
+	<state name="arrowup_yellow_icon" x="640" y="640" w="64" h="64" />
+	<state name="x_red_icon" x="702" y="640" w="64" h="64" />
+	
+	<state name="arrowdown_blue_icon" x="576" y="704" w="64" h="64" />
+	<state name="arrowup_blue_icon" x="640" y="704" w="64" h="64" />
+	<state name="x_black_icon" x="702" y="704" w="64" h="64" />
+	
+	<state name="arrowdown_black_icon" x="576" y="768" w="64" h="64" />
+	<state name="arrowup_black_icon" x="640" y="768" w="64" h="64" />
+	
+	<state name="arrowup_green_icon" x="576" y="832" w="64" h="64" />
+	<state name="arrowdown_green_icon" x="576" y="896" w="64" h="64" />
+	<state name="arrowdown_amber_icon" x="640" y="832" w="64" h="64" />
+	<state name="arrowdown_amber_icon" x="576" y="896" w="64" h="64" />
+	
+	<state name="arrow_right" x="704" y="832" w="64" h="64" />
+
+	<state name="plus" x="640" y="896" w="64" h="64" />
+	<state name="minus" x="704" y="896" w="64" h="64" />
+	
+	<state name="writing_in_book" x="512" y="640" w="64" h="64"/>
+	
+	<state name="badge_upperclass_image" x="832" y="960" w="64" h="64" />
+	<state name="badge_middleclass_image" x="896" y="960" w="64" h="64" />
+	<state name="badge_lowerclass_image" x="960" y="960" w="64" h="64" />
+
+    <state name="lower_class_door_icon" x="0" y="576" w="64" h="64" />
+    <state name="generic_workbench_icon" x="64" y="576" w="64" h="64" />
+    <state name="ceramics_workbench_icon" x="128" y="576" w="64" h="64" />
+    <state name="mixing_tank_icon" x="192" y="576" w="64" h="64" />
+    <state name="crucible_icon"    x="256" y="576" w="64" h="64" />
+    <state name="turbine_icon" x="320" y="576" w="64" h="64" />
+    <state name="waterpump_icon" x="384" y="576" w="64" h="64" />
+   
+  <state name="decor_uc_icon" x="0" y="640" w="64" h="64" />
+  <state name="decor_mc_icon" x="64" y="640" w="64" h="64" />
+  <state name="decor_lc_icon" x="128" y="640" w="64" h="64" />
+  
+     <state name="simple_mixing_vat" x="128" y="704" w="64" h="64" />
+     
+  <state name="icon_boozevat" x="192" y="704" w="64" h="64" />
+  <state name="icon_airshiptower1" x="256" y="704" w="64" h="64" />
+  <state name="icon_steamknight" x="320" y="704" w="64" h="64" />
+  
+	<state name="iron_smelter" x="256" y="384" w="64" h="64" />
+	<state name="brick_smelter" x="320" y="384" w="64" h="64" />
+  
+  
+  <state name="icon_loadingbaymetal" x="192" y="768" w="64" h="64" />
+  <state name="icon_loadingbaywood" x="256" y="768" w="64" h="64" />
+  
+	<state name="door_mc" x="320" y="768" w="64" h="64" />
+	<state name="door_uc" x="384" y="768" w="64" h="64" />
+	
+	<state name="furniture_category" x="448" y="768" w="64" h="64" />
+	<state name="workbench_advanced" x="512" y="768" w="64" h="64" />
+	
+	<state name="still_icon" x="192" y="640" w="64" h="64" />
+	<state name="standing_desk_icon" x="256" y="640" w="64" h="64" />
+	<state name="ceramics_press_icon" x="320" y="640" w="64" h="64" />
+    
+  <state name="uc_chair_icon" x="0" y="832" w="64" h="64" />
+  <state name="mc_chair_icon" x="64" y="832" w="64" h="64" />
+  <state name="lc_chair_icon" x="128" y="832" w="64" h="64" />
+  
+	<state name="lc_window_icon" x="192" y="832" w="64" h="64" />
+	<state name="mc_window_icon" x="256" y="832" w="64" h="64" />
+	<state name="radiator" x="320" y="832" w="64" h="64" />
+	<state name="uc_carpet" x="384" y="832" w="64" h="64" />
+	<state name="mc_carpet" x="448" y="832" w="64" h="64" />
+	
+	<state name="wall_plaque01" x="512" y="832" w="64" h="64" />
+	
+	<state name="uc_table_icon" x="0" y="896" w="64" h="64" />
+	<state name="mc_table_icon" x="64" y="896" w="64" h="64" />
+	<state name="lc_table_icon" x="128" y="896" w="64" h="64" />
+	
+	<state name="lc_window_icon2" x="192" y="896" w="64" h="64" />
+	<state name="signboard" x="256" y="896" w="64" h="64" />
+	
+	<state name="icon_uc_cabinet" x="0" y="768" w="64" h="64" />
+	<state name="icon_mc_cabinet" x="64" y="768" w="64" h="64" />
+	<state name="icon_lc_cabinet" x="128" y="768" w="64" h="64" />
+	
+	<state name="uc_bed_icon" x="0" y="960" w="64" h="64" />
+	<state name="mc_bed_icon" x="64" y="960" w="64" h="64" />
+	<state name="lc_bed_icon" x="128" y="960" w="64" h="64" />
+	<state name="cot_icon" x="192" y="960" w="64" h="64" />
+	<state name="lc_rug" x="256" y="960" w="64" h="64" />
+  <state name="hanging_pots" w="64" h="64" x="320" y="896" />
+  <state name="spice_rack" w="64" h="64" x="384" y="896" />
+  <state name="wall_plaque02" w="64" h="64" x="448" y="896" />
+  <state name="wall_plaque00" w="64" h="64" x="512" y="896" />
+    
+  <state name="icon_lamp00" x="320" y="960" w="64" h="64" />
+  <state name="icon_lamp01" x="384" y="960" w="64" h="64" />
+  <state name="icon_lamp02" x="448" y="960" w="64" h="64" />
+  <state name="icon_lamp03" x="512" y="960" w="64" h="64" />
+  <state name="icon_lamp04" x="576" y="960" w="64" h="64" />
+  
+	<state name="bandit_peace" x="640" y="960" w="64" h="64" />
+	<state name="bandit_war" x="704" y="960" w="64" h="64" />
+	<state name="bandit_attack" x="768" y="960" w="64" h="64" />
+  
+  <state name="icon_bookshelf_uc" w="64" h="64" x="0"  y="704" />
+  <state name="icon_bookshelf_mc" w="64" h="64" x="64" y="704" />
+  
+  <state name="show_exteriors_only" w="40" h="41" x="844" y="908" />
+  <state name="show_interior_hover" w="40" h="41" x="908" y="908" />
+  <state name="show_all_interiors" w="40" h="41" x="972" y="908" />
+  
+	<state name="walls_down" w="40" h="41" x="972" y="715" />
+	<state name="walls_down_glow" w="64" h="64" x="960" y="768" />
+	
+  <state name="promote_to_overseer" x="576" y="384" w="64" h="64"/>
+    
+  <state name="ui_list_collapsed" x="512" y="704" w="64" h="64"/>
+  <state name="ui_list_expanded" x="512" y="768" w="64" h="64"/>
+
+  <state name="demolish_building" w="64" h="64" x="768" y="832" />
+    
+  <state name="placeholder" w="64" h="64" x="768" y="896" />
+  <state name="empty_icon" w="64" h="64" x="960" y="0" />
+  
+  <state name="done" w="64" h="64" x="768" y="768" />
+	<state name="uc_window" w="64" h="64" x="832" y="768" />
+  <state name="return_arrow" w="64" h="64" x="704" y="768" />
+  
+	<!--<state name="skill0" w="64" h="64" x="960" y="64" />
+	<state name="skill1" w="64" h="64" x="960" y="128" />-->
+	<state name="skill1" w="64" h="64" x="960" y="64" />
+	
+	<state name="skill2" w="64" h="64" x="960" y="192" />
+	<state name="skill3" w="64" h="64" x="960" y="256" />
+	<state name="skill4" w="64" h="64" x="960" y="320" />
+	<state name="skill5" w="64" h="64" x="960" y="384" />
+	
+	
+	<state name="mine_deeper" w="64" h="64" x="512" y="704" />
+	
+	
+	<state name="buildings_services"    x="512" y="64" w="64" h="64" />
+	<state name="buildings_foreign"    x="704" y="320" w="64" h="64" />
+	<state name="buildings_exploitation"    x="640" y="320" w="64" h="64"/>
+	</element>
+</skin>

@@ -1,0 +1,54 @@
+     <container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="2"> <!-- solidfill="1" solidfillname="window"> -->
+	<container type="vertbox" hsp="fixed" fixed_width="640" vsp="fixed" fixed_height="675">
+	<container type="vertbox" hsp="fixed" fixed_width="600" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommTopGlass" />
+          <!--<container type="horizbox" hsp="expand" vsp="minimum" horizontal_padding="2" vertical_padding="2" solidfill="1" solidfillname="glassBrassBorder">
+               <spacer/>
+                    <imagebutton text="Discovery Jobs" imageSkin="ui/orderIcons.xml" sfx="paper05" image="explore_icon" hsp="minimum" vsp="minimum">
+                      <tooltip width="200" height="45" mouseRestDelay="0" followCursor="1">
+                        <container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" >
+                          <label name="buttonTooltipLabel" text="Show Discovery Jobs" vsp="center" state="tooltip_text"/>
+                        </container>
+                      </tooltip>
+                    </imagebutton>
+                    <imagebutton text="Resource Jobs" imageSkin="ui/orderIcons.xml" sfx="paper04" image="chop_tree_icon" hsp="minimum" vsp="minimum">
+                      <tooltip width="200" height="45" mouseRestDelay="0" followCursor="1">
+                        <container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" >
+                          <label name="buttonTooltipLabel" text="Show Resource Jobs" vsp="center" state="tooltip_text"/>
+                        </container>
+                      </tooltip>
+                    </imagebutton>
+                     <imagebutton text="Construction Jobs" imageSkin="ui/orderIcons.xml" sfx="paper03" image="carpentry_icon" hsp="minimum" vsp="minimum">
+                      <tooltip width="200" height="45" mouseRestDelay="0" followCursor="1">
+                        <container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" >
+                          <label name="buttonTooltipLabel" text="Show Construction Jobs" vsp="center" state="tooltip_text"/>
+                        </container>
+                      </tooltip>
+                    </imagebutton>
+                    <imagebutton text="Industrial Jobs" imageSkin="ui/orderIcons.xml" sfx="paper00" image="factory_icon" hsp="minimum" vsp="minimum">
+                      <tooltip width="200" height="45" mouseRestDelay="0" followCursor="1">
+                        <container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" >
+                          <label name="buttonTooltipLabel" text="Show Industrial Jobs" vsp="center" state="tooltip_text"/>
+                        </container>
+                      </tooltip>
+                    </imagebutton>
+                    <imagebutton text="Military Jobs" imageSkin="ui/orderIcons.xml" sfx="paper01" image="march_image" hsp="minimum" vsp="minimum">
+                      <tooltip width="200" height="45" mouseRestDelay="0" followCursor="1">
+                        <container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" >
+                          <label name="buttonTooltipLabel" text="Show Military Jobs" vsp="center" state="tooltip_text"/>
+                        </container>
+                      </tooltip>
+                    </imagebutton>
+                    <imagebutton text="All Jobs" imageSkin="ui/orderIcons.xml" sfx="paper02" image="everyone_icon" hsp="minimum" vsp="minimum">
+                      <tooltip width="200" height="45" mouseRestDelay="0" followCursor="1">
+                        <container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" >
+                          <label name="buttonTooltipLabel" text="Show All Jobs" vsp="center" state="tooltip_text"/>
+                        </container>
+                      </tooltip>
+                    </imagebutton>
+          </container>-->
+    <container type="vertbox" hsp="expand" solidfill="1" solidfillname="cecommWorkcrew" horizontal_padding="8" vertical_padding="12">
+    <container type="scrollablevertbox" hsp="expand" vsp="minimum" name="jobs_vertbox" skin="ui/styles/default.xml" solidfill="1" horizontal_padding="4" vertical_padding="4" />
+	</container>
+	<container type="vertbox" hsp="fixed" fixed_width="600" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommBottomGlass" />
+	</container>
+  </container>

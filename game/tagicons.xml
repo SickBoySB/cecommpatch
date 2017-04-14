@@ -1,0 +1,713 @@
+<tag_icons>
+
+<!-- REQUIRED FOR BLUEPRINT UI!!!!! Use visibility="0" to hide elsewhere -->
+	<tag		icon_name="logs"        
+			display_name="Timber"
+			visibility="0"
+			tags="timber"
+			icon_skin="commodityIcons.xml" />
+
+	<tag		icon_name="rough_stone_block_icon"        
+			display_name="Stone"
+			visibility="0"
+			tags="stone_masonry"
+			icon_skin="commodityIcons.xml" />
+
+	<tag		icon_name="planks_icon"        
+			display_name="Planks"
+			visibility="0"
+			tags="planks"
+			icon_skin="commodityIcons.xml" />
+
+	<tag		icon_name="bricks_pallet_icon"        
+			display_name="Bricks"
+			visibility="0"
+			tags="brick_masonry"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="planks_lacquered"        
+			display_name="Lacquered Planks"
+			visibility="0"
+			tags="lacquered_planks"
+			icon_skin="orderIcons.xml" />
+
+	<tag		icon_name="glass_panes_pallet_icon"        
+			display_name="Glass Panes"
+			visibility="0"
+			tags="glass_panes"
+			icon_skin="commodityIcons.xml" />
+
+	<tag		icon_name="iron_pipe_icon"        
+			display_name="Iron Pipes"
+			visibility="0"
+			tags="iron_pipes"
+			icon_skin="commodityIcons.xml" />
+
+	<tag		icon_name="copper_plate_icon"        
+			display_name="Copper Plates"
+			visibility="0"
+			tags="copper_plates"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="iron_ingots_icon"        
+			display_name="An ingot of iron."
+			visibility="0"
+			tags="ingot_of_iron"
+			icon_skin="commodityIcons.xml" />
+			
+<!-- other UI stuff, flavor text, etc -->
+	<tag	display_name="Harvest with 'Mine Surface Nodes'"
+		visibility="1"
+		tags="ore_node"
+		icon_name="pickaxe_icon"        
+		icon_skin="orderIcons.xml" />
+	
+	<tag	display_name="Produces Copper Ore"
+		visibility="1"
+		tags="source_of_copper"
+		icon_name="malachite_icon"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Produces Iron Ore"
+		visibility="1"
+		tags="source_of_iron"
+		icon_name="hematite_icon"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Produces Stone"
+		visibility="1"
+		tags="source_of_stone"
+		icon_name="rough_stone_block_icon"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Produces Clay"
+		visibility="1"
+		tags="source_of_clay"
+		icon_name="clay_icon"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Produces Sand"
+		visibility="1"
+		tags="source_of_sand"
+		icon_name="sand_bushel_icon"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Produces Peat"
+		visibility="1"
+		tags="source_of_peat"
+		icon_name="peat_icon"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Produces Sulphur"
+		visibility="1"
+		tags="source_of_sulphur"
+		icon_name="sulphur_lump"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Produces Chalk"
+		visibility="1"
+		tags="source_of_chalk"
+		icon_name="chalk_icon"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Produces Gold Ore"
+		visibility="1"
+		tags="source_of_gold"
+		icon_name="native_gold_icon"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Produces coal"
+		visibility="1"
+		tags="source_of_coal"
+		icon_name="coal_chunk"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Produces Zinc Ore"
+		visibility="1"
+		tags="source_of_zinc"
+		icon_name="sphalerite_icon"        
+		icon_skin="commodityIcons.xml" />
+
+	<tag	display_name="Harvest with 'Chop Trees'"
+		visibility="1"
+		tags="tree"
+		icon_name="chop_tree_icon"        
+		icon_skin="orderIcons.xml" />
+	
+	<tag	display_name="Harvest with 'Forage'"
+		visibility="1"
+		tags="forage_source"
+		icon_name="jobhand"        
+		icon_skin="thoughtIcons.xml" />
+	
+	<tag	display_name="Remove with 'Clear Terrain'"
+		visibility="1"
+		tags="clearable"
+		icon_name="jobshovel"        
+		icon_skin="thoughtIcons.xml" />
+	
+	
+	<tag	display_name="Soldiers ordered to rally here"
+		visibility="1"
+		tags="rally_waypoint"
+		icon_name="icon_rally"        
+		icon_skin="orderIcons.xml" />
+	
+	<tag	display_name="Area of interest to a special event"
+		visibility="1"
+		tags="event_waypoint"
+		icon_name="exclamation"        
+		icon_skin="othoughtIcons.xml" />
+	
+	<tag	display_name="Nearby Mines output valuable minerals"
+		visibility="1"
+		tags="mine_info"
+		icon_name="mineshaft_image"        
+		icon_skin="orderIcons.xml" />
+	
+	<tag	display_name="Requires Naturalist survey"
+		visibility="1"
+		tags="requires_mineralogy_report"
+		icon_name="naturalism_icon"        
+		icon_skin="orderIcons.xml" />
+	
+	
+	<tag	display_name="Nearby Mines produce iron ore"
+		visibility="1"
+		tags="vein_hematite"
+		icon_name="hematite_icon"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Nearby Mines produce copper ore"
+		visibility="1"
+		tags="vein_malachite"
+		icon_name="malachite_icon"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Nearby Mines produce stone"
+		visibility="1"
+		tags="vein_stone"
+		icon_name="rough_stone_block_icon"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Nearby Mines produce zinc ore"
+		visibility="1"
+		tags="vein_sphalerite"
+		icon_name="sphalerite_icon"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Nearby Mines produce sulphur"
+		visibility="1"
+		tags="vein_sulphur"
+		icon_name="sulphur_lump"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Nearby Mines produce gold ore"
+		visibility="1"
+		tags="vein_gold"
+		icon_name="native_gold_icon"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Nearby Mines produce chalk"
+		visibility="1"
+		tags="vein_chalk"
+		icon_name="chalk_icon"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Nearby Mines produce peat"
+		visibility="1"
+		tags="vein_peat"
+		icon_name="peat_icon"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Nearby Mines produce coal"
+		visibility="1"
+		tags="vein_coal"
+		icon_name="coal_chunk"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Nearby Mines produce clay"
+		visibility="1"
+		tags="vein_clay"
+		icon_name="clay_icon"        
+		icon_skin="commodityIcons.xml" />
+	
+	<tag	display_name="Nearby Mines produce sand"
+		visibility="1"
+		tags="vein_sand"
+		icon_name="sand_bushel_icon"        
+		icon_skin="commodityIcons.xml" />
+
+	<tag		icon_name="steam_image"        
+			display_name="Produces Aetheric Energies"
+			visibility="1"
+			tags="steam_power"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="voltaics_image"        
+			display_name="Emits Voltaic Energies"
+			visibility="1"
+			tags="voltaic"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="eldritch_fade"        
+			display_name="Forbidden Artifact"
+			visibility="1"
+			tags="artifact"
+			icon_skin="thoughtIcons.xml" />
+	
+	<tag		icon_name="quaggaroth_idol"        
+			display_name="It vibrates eerily..."
+			visibility="1"
+			tags="obeliskian_artifact"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="icon_fishyidol"        
+			display_name="It feels wet to the touch..."
+			visibility="1"
+			tags="fishy_idol"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="strange_spore"        
+			display_name="It seems to pulse in your hands..."
+			visibility="1"
+			tags="spore"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="geometer_canopic_jar"        
+			display_name="It folds and refolds in impossible ways..."
+			visibility="1"
+			tags="geometer_artifact"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="grimoire"        
+			display_name="Covered in eerie runes..."
+			visibility="1"
+			tags="black_magic_artifact"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="parcel_generic"        
+			display_name="A Strange Crate from Lord Palmerstoke"
+			visibility="1"
+			tags="science_crate"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="pitchblende"        
+			display_name="Strange Republicain Ore"
+			visibility="1"
+			tags="pitchblende"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="uranium_ingots"        
+			display_name="Uranium? What's that?"
+			visibility="1"
+			tags="uranium"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="icon_rawlongpork"        
+			display_name="This food seems dubious, somehow..."
+			visibility="1"
+			tags="exotic"
+			icon_skin="commodityIcons.xml" />
+
+	<tag		icon_name="bandit"        
+			display_name="Stolen Goods. Best be rid of this quickly."
+			visibility="1"
+			tags="stolen"
+			icon_skin="orderIcons.xml" />
+	
+<!--
+CECOMM NEW VISUAL-ONLY TAGS
+
+
+Use icons in the following order, for consistency.
+Maximum of 6 tags per item.
+
+cecomm_mined
+cecomm_foraged
+cecomm_grown
+cecomm_chopped
+cecomm_cooked
+
+cecomm_decor
+cecomm_ammo
+cecomm_building_mat
+
+cecomm_trade
+
+cecomm_raw_decor
+cecomm_raw_meat
+cecomm_raw_vegetable
+cecomm_raw_fruit
+cecomm_raw_fungus
+cecomm_raw_ore
+cecomm_fuel
+cecomm_timber
+cecomm_smelted
+
+cecomm_raw_food
+
+cecomm_brewing_ingredient
+cecomm_distilled_spirit
+cecomm_brewed_alcohol
+
+cecomm_medicinal
+
+cecomm_workmod
+
+cecomm_kitchen
+cecomm_barracks
+cecomm_lab
+cecomm_trade_office
+cecomm_mine
+cecomm_lc_house
+cecomm_mc_house
+cecomm_uc_house
+cecomm_pub
+cecomm_chapel
+cecomm_metalwork
+cecomm_ceramics
+cecomm_carpentry
+cecomm_chemical
+cecomm_foreign
+cecomm_barber
+cecomm_miscws
+cecomm_academy
+cecomm_naturalist
+cecomm_skmanu
+
+cecomm_lc_pref
+cecomm_mc_pref
+cecomm_uc_pref
+
+cecomm_ign_32
+cecomm_ign_64
+cecomm_ign_128
+cecomm_ign_256
+
+cecomm_explosive
+
+cecomm_boxed
+
+-->		
+			
+
+	<tag		icon_name="pickaxe_icon"        
+			display_name="Harvested with Mining"
+			visibility="1"
+			tags="cecomm_mined"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="arm_icon"        
+			display_name="Harvested with Foraging"
+			visibility="1"
+			tags="cecomm_foraged"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="farming_icon"        
+			display_name="Harvested with Farming"
+			visibility="1"
+			tags="cecomm_grown"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="chop_tree_icon"        
+			display_name="Harvested with Chopping"
+			visibility="1"
+			tags="cecomm_chopped"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="basic_cooked_food_category"        
+			display_name="Cooked Food"
+			visibility="1"
+			tags="cecomm_cooked"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="uc_frame_cluster"        
+			display_name="Decor Module"
+			visibility="1"
+			tags="cecomm_decor"
+			icon_skin="orderIcons2.xml" />
+	
+	<tag		icon_name="bullets"        
+			display_name="Ammunition"
+			visibility="1"
+			tags="cecomm_ammo"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="building_materials_category"        
+			display_name="Construction Material"
+			visibility="1"
+			tags="cecomm_building_mat"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="parcel_generic"        
+			display_name="Trade Good"
+			visibility="1"
+			tags="cecomm_trade"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="bricabrac_icon"        
+			display_name="Decor Construction Material"
+			visibility="1"
+			tags="cecomm_raw_decor"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="raw_meat_category"        
+			display_name="Raw Meat"
+			visibility="1"
+			tags="cecomm_raw_meat"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="raw_vegetables_category"        
+			display_name="Raw Vegetable"
+			visibility="1"
+			tags="cecomm_raw_vegetable"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="raw_berries_category"        
+			display_name="Raw Fruit"
+			visibility="1"
+			tags="cecomm_raw_fruit"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="raw_fungus_category"        
+			display_name="Fungus"
+			visibility="1"
+			tags="cecomm_raw_fungus"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="ore_cat"        
+			display_name="Raw Ore"
+			visibility="1"
+			tags="cecomm_raw_ore"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="fuel_category"        
+			display_name="Fuel"
+			visibility="1"
+			tags="cecomm_fuel"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="timber_category"        
+			display_name="Timber"
+			visibility="1"
+			tags="cecomm_timber"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="iron_smelter"        
+			display_name="Smelted from Ore"
+			visibility="1"
+			tags="cecomm_smelted"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="basic_raw_food_category"        
+			display_name="Raw Food"
+			visibility="1"
+			tags="cecomm_raw_food"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="basic_raw_brew_category"        
+			display_name="Brewing Ingredient"
+			visibility="1"
+			tags="cecomm_brewing_ingredient"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="distilled_spirits_category"        
+			display_name="Distilled Spirit"
+			visibility="1"
+			tags="cecomm_distilled_spirit"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="basic_brew_category"        
+			display_name="Brewed Alcohol"
+			visibility="1"
+			tags="cecomm_brewed_alcohol"
+			icon_skin="commodityIcons.xml" />
+	
+	<tag		icon_name="sick"        
+			display_name="'Medicinal'"
+			visibility="1"
+			tags="cecomm_medicinal"
+			icon_skin="thoughtIcons.xml" />
+	
+	<tag		icon_name="cog_gray"        
+			display_name="Useful Module"
+			visibility="1"
+			tags="cecomm_workmod"
+			icon_skin="thoughtIcons.xml" />
+	
+	<tag		icon_name="icon_kitchen"        
+			display_name="Used by Kitchen"
+			visibility="1"
+			tags="cecomm_kitchen"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="barracks"        
+			display_name="Used by Barracks"
+			visibility="1"
+			tags="cecomm_barracks"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="laboratory"        
+			display_name="Used by Laboratory"
+			visibility="1"
+			tags="cecomm_lab"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="trade_office"        
+			display_name="Used by Trade Office"
+			visibility="1"
+			tags="cecomm_trade_office"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="mineshaft_image"        
+			display_name="Used by Mine"
+			visibility="1"
+			tags="cecomm_mine"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="lowerclasshouse"        
+			display_name="Used by Labourer Home"
+			visibility="1"
+			tags="cecomm_lc_house"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="middleclasshouse"        
+			display_name="Used by Overseer Home"
+			visibility="1"
+			tags="cecomm_mc_house"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="upperclasshouse"        
+			display_name="Used by Aristocrat Home"
+			visibility="1"
+			tags="cecomm_uc_house"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="messhall"        
+			display_name="Used by Public House"
+			visibility="1"
+			tags="cecomm_pub"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="chapel"        
+			display_name="Used by Chapel"
+			visibility="1"
+			tags="cecomm_chapel"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="icon_metalworks"        
+			display_name="Used by Metalworks"
+			visibility="1"
+			tags="cecomm_metalwork"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="icon_ceramicsshop"        
+			display_name="Used by Ceramics Workshop"
+			visibility="1"
+			tags="cecomm_ceramics"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="icon_carpentryshop"        
+			display_name="Used by Carpentry Workshop"
+			visibility="1"
+			tags="cecomm_carpentry"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="icon_chemist"        
+			display_name="Used by Chemical Works"
+			visibility="1"
+			tags="cecomm_chemical"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="foreign_office"        
+			display_name="Used by Foreign Office"
+			visibility="1"
+			tags="cecomm_foreign"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="barbershop_image"        
+			display_name="Used by Barbershop"
+			visibility="1"
+			tags="cecomm_barber"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="workshops_category"        
+			display_name="Used by Workshops"
+			visibility="1"
+			tags="cecomm_miscws"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="academy_image"        
+			display_name="Used by Training Academy"
+			visibility="1"
+			tags="cecomm_academy"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="naturalism_icon"        
+			display_name="Used by Naturalist Office"
+			visibility="1"
+			tags="cecomm_naturalist"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="icon_steamknight"        
+			display_name="Used by Steam Knight Manufactory"
+			visibility="1"
+			tags="cecomm_skmanu"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="badge_lowerclass_image"        
+			display_name="Labourer Preferred"
+			visibility="1"
+			tags="cecomm_lc_pref"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="badge_middleclass_image"        
+			display_name="Overseer Preferred"
+			visibility="1"
+			tags="cecomm_mc_pref"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="badge_upperclass_image"        
+			display_name="Artistocrat Preferred"
+			visibility="1"
+			tags="cecomm_uc_pref"
+			icon_skin="orderIcons.xml" />
+	
+	<tag		icon_name="fire"        
+			display_name="Extreme Flammability"
+			visibility="1"
+			tags="cecomm_ign_32"
+			icon_skin="thoughtIcons.xml" />
+	
+	<tag		icon_name="fire"        
+			display_name="High Flammability"
+			visibility="1"
+			tags="cecomm_ign_64"
+			icon_skin="thoughtIcons.xml" />
+	
+	<tag		icon_name="fire"        
+			display_name="Moderate Flammability"
+			visibility="1"
+			tags="cecomm_ign_128"
+			icon_skin="thoughtIcons.xml" />
+	
+	<tag		icon_name="fire"        
+			display_name="Low Flammability"
+			visibility="1"
+			tags="cecomm_ign_256"
+			icon_skin="thoughtIcons.xml" />
+	
+	<tag		icon_name="explosion"        
+			display_name="Explosive"
+			visibility="1"
+			tags="cecomm_explosive"
+			icon_skin="thoughtIcons.xml" />
+	
+	<tag		icon_name="flatpack-placeholder"        
+			display_name="Boxed - Assembly Required"
+			visibility="1"
+			tags="cecomm_boxed"
+			icon_skin="commodityIcons.xml" />
+	
+</tag_icons>

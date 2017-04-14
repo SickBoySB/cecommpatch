@@ -1,0 +1,144 @@
+vicar_confront_spectre = {
+	["start"] = function(state,tag,name)
+	
+		-- check if building has supplies at all AGAIN; abort if not. Consume if yes.
+		local overseer = false
+		if state.AI.strs["socialClass"] == "lower" then
+			overseer = query("gameBlackboard","gameObjectGetOverseerMessage",state.AI.currentWorkParty)[1]
+		else
+			overseer = SELF
+		end
+		
+		if not overseer then
+			return "abort", true
+		end
+			
+		local building = query(overseer,"getClaimedWorkBuilding")[1]
+		if building then
+			local building_tags = query(building,"getTags")[1]
+			if building_tags.no_supplies1 == true then
+				printl("ai_agent", "WARNING 2: " .. state.AI.name .. " attempted to do preaching but office was out of supplies")
+				return "abort", true
+			else
+				send(building,"consumeSupplies",1,1) -- tier / count
+			end
+		else
+			printl("ai_agent", "WARNING 2: " .. state.AI.name .. " attempted to do preaching but office was out of supplies")
+			return "abort", true
+		end
+		
+		
+		state.AI.bools["canBeSocial"] = false
+		state.AI.lastSocialTarget = tag.target
+		local animName = "bless" --"blaming"
+		local animOtherName = "scared"
+		
+		send("rendOdinCharacterClassHandler",
+			"odinRendererCharacterWieldTemporaryToolMessage",
+			state.renderHandle,
+			"models\\props\\bookCogBibleH.upm")
+
+		-- Lock and set animations
+		send(tag.target, "thinkLockMessage", SELF, true)
+		send("rendOdinCharacterClassHandler", "odinRendererPushCharacterAnimations", tag.target.id)
+		send("rendOdinCharacterClassHandler", "odinRendererCharacterPauseMovement", tag.target.id, true)
+		send("rendOdinCharacterClassHandler", "odinRendererCharacterFaceModel", tag.target.id, state.renderHandle)
+		send("rendOdinCharacterClassHandler","odinRendererCharacterFaceModel", state.renderHandle, tag.target.id)
+		
+		send("rendOdinCharacterClassHandler",
+				"odinRendererSetCharacterAnimationMessage",
+				state.renderHandle,
+				animName,
+				true)
+		
+		send("rendOdinCharacterClassHandler",
+				"odinRendererSetCharacterAnimationMessage",
+				tag.target.id,
+				animOtherName,
+				true)
+		
+		state.AI.animationTickCount = animationLength( state.animSet, animName )
+		
+		send( SELF, "resetEmoteTimer" )
+		
+		return "animating"
+	end,
+
+	["animating"] = function(state,tag,name)
+		state.AI.animationTickCount = state.AI.animationTickCount - 1
+		if state.AI.animationTickCount <= 0 then
+			
+			send(tag.target,"Sunrise")
+			
+			local animName = "pray"
+			send("rendOdinCharacterClassHandler",
+				"odinRendererSetCharacterAnimationMessage",
+				state.renderHandle,
+				animName,
+				true)
+			
+			state.AI.animationTickCount = animationLength( state.animSet, animName )
+			
+			send("rendCommandManager",
+                    "odinRendererTickerMessage",
+                    state.AI.name .. " banished a haunting spectre!",
+                    "spectre",
+                    "ui\\thoughtIcons.xml")
+					
+			-- CECOMMPATCH - "Who You Gonna Call" achievement fix
+				
+			send("gameSession","incSessionInt","spectresBanished", 1)
+				
+			local num = query("gameSession","getSessionInt","spectresBanished")[1]
+			if not query("gameSession","getSessionBool","whoYouGonnaCall")[1] and num >= 50 then
+				send("gameSession", "setSessionBool", "whoYouGonnaCall", true)
+				send("gameSession", "setSteamAchievement", "whoYouGonnaCall")
+			end
+			
+			-- There is no way to find out what the necessary steam stat variable is
+			-- send("gameSession", "incSteamStat", "stat_whoYouGonnaCall", specnum)			
+			
+			return "animating2"
+		end
+		return "animating"
+	end,
+	
+	["animating2"] = function(state,tag,name)
+		state.AI.animationTickCount = state.AI.animationTickCount - 1
+		if state.AI.animationTickCount <= 0 then
+			return "final"
+		end
+		return "animating2"
+	end,
+
+	["final"] = function(state,tag,name)
+		send("rendOdinCharacterClassHandler",
+			"odinRendererCharacterDropTemporaryToolMessage",
+			state.renderHandle)
+		
+		send("rendOdinCharacterClassHandler",
+		     "odinRendererIdleCharacterMessage",
+		     state.renderHandle)
+		
+		send("rendOdinCharacterClassHandler",
+		     "odinRendererIdleCharacterMessage",
+		     tag.target.id)
+			
+		state.AI.bools["canBeSocial"] = true
+		send(tag.target, "thinkLockMessage", SELF, false)
+		send("rendOdinCharacterClassHandler", "odinRendererCharacterPauseMovement", tag.target.id, false)
+		send("rendOdinCharacterClassHandler", "odinRendererPopCharacterAnimations", tag.target.id)
+	end,
+
+	["abort"] = function(state, tag)
+		send("rendOdinCharacterClassHandler",
+			"odinRendererCharacterDropTemporaryToolMessage",
+			state.renderHandle)
+	
+		state.AI.bools["canBeSocial"] = true
+          send(tag.target, "thinkLockMessage", SELF, false) 
+		send("rendOdinCharacterClassHandler", "odinRendererCharacterPauseMovement", tag.target.id, false)
+		send("rendOdinCharacterClassHandler", "odinRendererPopCharacterAnimations", tag.target.id)
+		return
+	end
+}

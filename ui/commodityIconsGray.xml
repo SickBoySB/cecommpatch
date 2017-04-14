@@ -1,0 +1,319 @@
+<skin name="commodity icons" texture="ui/icons/commodityIconsGray00.png">
+     <element name="image" scale="exact">
+     
+     <state name="large_bomb" x="0" y="0" w="64" h="64" />
+     <!--<state name="raw_clay" x="64" y="0" w="64" h="64" />-->
+     <state name="bricks_pallet" x="128" y="0" w="64" h="64" />
+     <state name="bread" x="192" y="0" w="64" h="64" />
+     <state name="logs" x="384" y="320" w="64" h="64" />
+     
+     <state name="planks" x="0" y="512" w="64" h="64" /> <!-- deprecate! -->
+     
+     <state name="pumpkin" x="384" y="0" w="64" h="64" />
+     <!--state name="hematite" x="448" y="0" w="64" h="64" />-->
+     <state name="ammo_box2" x="512" y="0" w="64" h="64" />
+     <state name="rope_spool" x="576" y="0" w="64" h="64" />
+     <state name="leg_of_meat" x="640" y="0" w="64" h="64" />
+     <!--<state name="iron_ingots" x="704" y="0" w="64" h="64" />-->
+     <state name="steamball" x="832" y="0" w="64" h="64" />
+     <!--<state name="" x="832" y="0" w="64" h="64" />-->
+     <state name="landmine" x="896" y="0" w="64" h="64" />
+     <!--<state name="" x="960" y="0" w="64" h="64" />-->
+ 
+    <state name="steak" x="0" y="64" w="64" h="64" />
+    <state name="raw_fish" x="64" y="64" w="64" h="64" />
+    <state name="coal_chunk" x="128" y="64" w="64" h="64" />
+    <!-- OLD <state name="cog_bucket" x="192" y="64" w="64" h="64" /> -->
+    <state name="sulphur_bag" x="256" y="64" w="64" h="64" />
+    <state name="salt_bag" x="320" y="64" w="64" h="64" />
+    <state name="wine_crate" x="384" y="64" w="64" h="64" />
+    <state name="coconut_crate" x="448" y="64" w="64" h="64" />
+    <state name="coffee_bag" x="512" y="64" w="64" h="64" />
+    <state name="ammo_box" x="576" y="64" w="64" h="64" />
+    <state name="grain_crate" x="640" y="64" w="64" h="64" />
+    <state name="icon_rawbird" x="704" y="64" w="64" h="64" />
+    <state name="icon_rawfishsteak" x="768" y="64" w="64" h="64" />
+    <state name="icon_rawlongpork" x="832" y="64" w="64" h="64" />
+    <state name="icon_rawsteak" x="896" y="64" w="64" h="64" />
+    <state name="icon_fleshcube" x="960" y="64" w="64" h="64" />
+
+    <!--<<state name="apples bushel" x="0" y="128" w="64" h="64" />-->
+    <state name="lingonberries_bushel" x="64" y="128" w="64" h="64" />
+    <state name="saskatoonberries_bushel" x="128" y="128" w="64" h="64" />
+    <!--<state name="sausages_bushel" x="384" y="384" w="64" h="64" />-->
+    <state name="dynamite_crate" x="256" y="128" w="64" h="64" />
+    <state name="charcoal_bushel" x="320" y="128" w="64" h="64" />
+    <state name="maize_bushel" x="384" y="128" w="64" h="64" />
+    <state name="grain_sack" x="448" y="128" w="64" h="64" />
+    <state name="grain_sack 2" x="512" y="128" w="64" h="64" />
+    <state name="tinned_food_crate" x="576" y="128" w="64" h="64" />
+    <state name="spring-loaded_power_core" x="640" y="128" w="64" h="64" />
+    <state name="medical_bag" x="704" y="128" w="64" h="64" />
+    <state name="icon_leydenjar" x="768" y="128" w="64" h="64" />
+    <state name="icon_bushelbonemeal" x="832" y="128" w="64" h="64" />
+    <state name="icon_bushelbones" x="896" y="128" w="64" h="64" />
+    <state name="bushel_scrap_iron" x="960" y="128" w="64" h="64" />
+    
+     <state name="gunpowder_barrel" x="0" y="192" w="64" h="64" />
+     <state name="grenades_crate" x="64" y="192" w="64" h="64" />
+     <state name="parcel_generic" x="192" y="128" w="64" h="64" />
+     <state name="crate_generic" x="192" y="192" w="64" h="64" />
+     <state name="burlap_sack_generic" x="256" y="192" w="64" h="64" />
+ 
+     <state name="wine_barrel" x="384" y="192" w="64" h="64" />
+     <state name="beer_barrel" x="448" y="192" w="64" h="64" />
+     <state name="molten_metal_bucket" x="512" y="192" w="64" h="64" />
+     <state name="water_bucket" x="576" y="192" w="64" h="64" />
+     <state name="clay_pot_generic" x="640" y="192" w="64" h="64" />
+     <state name="strange_spore" x="704" y="192" w="64" h="64" />
+     <state name="strange_seal" x="768" y="192" w="64" h="64" />
+     <state name="icon_clothbolt" x="832" y="192" w="64" h="64" />
+     <!--<state name="" x="896" y="192" w="64" h="64" />-->
+     <state name="strange_spore_glowing" x="960" y="192" w="64" h="64" />
+
+     <!--<state name="" x="0" y="256" w="64" h="64" />-->
+     <!--<state name="" x="64" y="256" w="64" h="64" />-->
+     <state name="glass_panes_pallet_icon" x="128" y="256" w="64" h="64" />
+     <state name="crate_of_stoneware_beer" x="192" y="256" w="64" h="64" />
+     <state name="crate_of_stoneware_empty" x="256" y="256" w="64" h="64" />
+     <state name="crate_of_bottles_whisky" x="320" y="256" w="64" h="64" />
+     <state name="crate_of_bottles_empty_icon" x="384" y="256" w="64" h="64" />
+     <state name="prickly_pear_fruit" x="448" y="256" w="64" h="64" />
+	<state name="paperBundle" x="512" y="256" w="64" h="64" />
+	<state name="bucketInk" x="576" y="256" w="64" h="64" />
+	
+	<state name="ammo_stone" x="512" y="320" w="64" h="64" />
+	<state name="cabbage_bushel" x="576" y="320" w="64" h="64" />
+	<state name="grapes_bushel" x="640" y="256" w="64" h="64" />
+    
+	<state name="strange_spore" x="704" y="192" w="64" h="64" />
+	<state name="apples_bushel" x="704" y="256" w="64" h="64" />
+	<state name="raw_opium_bucket" x="768" y="256" w="64" h="64" />
+	<state name="tea_leaves_bushel" x="832" y="256" w="64" h="64" />
+	<state name="bamboo_poles" x="896" y="256" w="64" h="64" />
+	<!--<state name="" x="960" y="256" w="64" h="64" />-->
+	
+	<state name="tobacco_leaves_bushel" x="832" y="320" w="64" h="64" />
+	<state name="flax_straw" x="896" y="320" w="64" h="64" />
+	<state name="sulphur_lump" x="0" y="256" w="64" h="64" />
+    
+     <state name="uranium_ingots" x="0" y="320" w="64" h="64" />
+     <state name="native_gold_icon" x="64" y="320" w="64" h="64" />
+     <state name="pitchblende" x="128" y="320" w="64" h="64" />
+     <state name="hematite_icon" x="192" y="320" w="64" h="64" />
+     <state name="sphalerite_icon" x="256" y="320" w="64" h="64" />
+     <state name="malachite_icon" x="320" y="320" w="64" h="64" />
+    
+    <state name="steel_ingots_icon" x="0" y="384" w="64" h="64" />
+    <state name="gold_ingots_icon" x="64" y="384" w="64" h="64" />
+    <state name="brass_ingots_icon" x="128" y="384" w="64" h="64" />
+    <state name="iron_ingots_icon" x="192" y="384" w="64" h="64" />
+    <state name="zinc_ingots_icon" x="256" y="384" w="64" h="64" />
+    <state name="copper_ingots_icon" x="320" y="384" w="64" h="64" />
+    
+    <state name="sausages_bushel" x="384" y="384" w="64" h="64" />
+    <state name="saskatoonberries_jar_crate" x="448" y="384" w="64" h="64" />
+    <state name="lingonberries_jar_crate" x="512" y="384" w="64" h="64" />
+    <state name="blackcupfungus_jar_crate" x="576" y="384" w="64" h="64" />
+    <state name="tinned_corned_beef" x="640" y="384" w="64" h="64" />
+    <state name="tinned_exotic_caviar" x="704" y="384" w="64" h="64" />
+    <state name="maize_chowder" x="768" y="384" w="64" h="64" />
+    <state name="curry_coconut" x="832" y="384" w="64" h="64" />
+    <state name="coffee_fruit_bushel" x="896" y="384" w="64" h="64" />
+    
+    <state name="chalk_icon" x="0" y="448" w="64" h="64" />
+    <state name="clay_icon" x="64" y="448" w="64" h="64"  />
+    <state name="peat_icon" x="128" y="448" w="64" h="64"  />
+    <state name="icon_bushel_blackcupfungus" x="192" y="448" w="64" h="64"  />
+    <state name="icon_bushel_exotic_caviar" x="256" y="448" w="64" h="64"  />
+    
+    <state name="stew_chillies" x="320" y="448" w="64" h="64"  />
+    <state name="stew_vegetables" x="384" y="448" w="64" h="64"  />
+    
+    <state name="icon_rawdodobird" x="704" y="64" w="64" h="64"  />
+    
+    <state name="bushel_organs" x="640" y="448" w="64" h="64" />
+     <state name="sulphur_fertiliser" x="704" y="448" w="64" h="64" />
+     <state name="orangecup_fungus_jarcrate" x="448" y="448" w="64" h="64" />
+     <state name="whitecup_fungus_jarcrate" x="512" y="448" w="64" h="64" />
+     <state name="chillies_jarcrate" x="576" y="448" w="64" h="64" />
+    
+     <state name="planks_icon" x="0" y="512" w="64" h="64" />
+     <state name="bricks_pallet_icon" x="64" y="512" w="64" h="64" />
+     <state name="charcoal_bushel_icon" x="128" y="512" w="64" h="64" />
+     <state name="sand_bushel_icon" x="192" y="512" w="64" h="64" />
+     <state name="bricabrac_icon" x="256" y="512" w="64" h="64" />
+     <state name="stew_fungus" x="320" y="512" w="64" h="64"  />
+     <state name="stew_coconut" x="384" y="512" w="64" h="64"  />
+     <state name="orangecup_fungus_bushel" x="448" y="512" w="64" h="64" />
+     <state name="whitecup_fungus_bushel" x="512" y="512" w="64" h="64" />
+     <state name="chillies_bushel" x="576" y="512" w="64" h="64" />a
+     <state name="cement_sack" x="640" y="512" w="64" h="64" />
+    
+     <state name="rough_stone_block_icon" x="0" y="576" w="64" h="64" />
+     <state name="stone_bricks_pallet_icon" x="64" y="576" w="64" h="64" />
+     
+     <state name="steel_pipe_icon" x="128" y="576" w="64" h="64" />
+     <state name="iron_pipe_icon" x="192" y="576" w="64" h="64" />
+     <state name="copper_pipe_icon" x="256" y="576" w="64" h="64" />
+	<state name="cog_bucket" x="320" y="576" w="64" h="64" />
+	<state name="cog_bucket_iron" x="384" y="576" w="64" h="64" />
+     <state name="saskatoonberry_pie" x="448" y="576" w="64" h="64" />
+     <state name="lingonberry_pie" x="512" y="576" w="64" h="64" />
+     <state name="fish_pie" x="576" y="576" w="64" h="64" />
+     <state name="meat_pie" x="640" y="576" w="64" h="64" />
+     <state name="longpork_pie" x="704" y="576" w="64" h="64" />
+     <state name="pumpkin_pie" x="768" y="576" w="64" h="64" />
+     
+      <state name="charredmeat" x="896" y="576" w="64" h="64" />
+      <state name="ore_cat" x="960" y="576" w="64" h="64" />
+    
+     <state name="planks_lacquered" x="0" y="640" w="64" h="64" />
+     <state name="lacquer_bucket" x="64" y="640" w="64" h="64" />
+     
+     <state name="steel_plate_icon" x="128" y="640" w="64" h="64" />
+     <state name="iron_plate_icon" x="192" y="640" w="64" h="64" />
+     <state name="copper_plate_icon" x="256" y="640" w="64" h="64" />
+    
+	<state name="mine_shoring" x="384" y="640" w="64" h="64" />
+     <state name="upkeepTrunk1" x="448" y="640" w="64" h="64" />
+     <state name="upkeepTrunk2" x="512" y="640" w="64" h="64" />
+     <state name="upkeepTrunk3" x="576" y="640" w="64" h="64" />
+     <state name="upkeepTrunk4" x="640" y="640" w="64" h="64" />
+     <state name="bone_fertiliser" x="704" y="640" w="64" h="64" />
+	<state name="sk_head" w="64" h="64" y="640" x="768" />
+	<state name="sk_torso" w="64" h="64" y="640" x="832" />
+	<state name="sk_frame" w="64" h="64" y="640" x="896" />
+	<state name="sk_torso_mk2" w="64" h="64" y="640" x="960" />
+	<state name="sk_head_mk2" w="64" h="64" y="768" x="960" />
+	
+	<state name="sk_packedgun" w="64" h="64" y="704" x="896" />
+	<state name="sk_ammofeeder" w="64" h="64" y="704" x="960" />
+	
+		
+     <state name="icon_stew" x="640" y="320" w="64" h="64" />
+     <state name="icon_stew_cabbage" x="704" y="320" w="64" h="64" />
+     <state name="icon_stew_pumpkin" x="768" y="320" w="64" h="64" />
+     
+     <state name="cooked_whole_bird" x="704" y="512" w="64" h="64" />
+     <state name="cooked_fish_steak" x="768" y="512" w="64" h="64" />
+     <state name="cooked_longpork_steak" x="832" y="512" w="64" h="64" />
+     <state name="cooked_aurochs_steak" x="896" y="512" w="64" h="64" />
+
+     <state name="bushel_yellow_disc_fungus" x="960" y="512" w="64" h="64" />
+    
+    <!-- tools & weapons -->
+    
+    <state name="icon_hoe"          w="64" h="64" x="0"   y="704" />
+    <state name="icon_shovel"       w="64" h="64" x="64"  y="704" />
+    <state name="icon_axe"          w="64" h="64" x="128" y="704" />
+    <state name="icon_pickaxe"      w="64" h="64" x="192" y="704" />
+    <state name="icon_cleaver"      w="64" h="64" x="256" y="704" />     
+    <state name="icon_razor"        w="64" h="64" x="320" y="704" />
+    <state name="icon_hammer"       w="64" h="64" x="384" y="704" />
+    <state name="icon_sledgehammer" w="64" h="64" x="448" y="704" />
+    <state name="icon_saw"          w="64" h="64" x="512" y="704" />
+    <state name="icon_huntingknife" w="64" h="64" x="576" y="704" />
+    <state name="icon_net"          w="64" h="64" x="640" y="704" />
+    <state name="icon_machete"      w="64" h="64" x="704" y="704" />
+    <state name="icon_nightstick"   w="64" h="64" x="768" y="704" />
+    <state name="icon_grenadelauncher"   w="64" h="64" x="832" y="704" />
+    
+    <state name="icon_musket"        w="64" h="64" x="0"   y="768" />
+    <state name="icon_pistol"        w="64" h="64" x="64"  y="768" />
+    <state name="icon_tripistol"     w="64" h="64" x="128" y="768" />
+    <state name="icon_leydenpistol"  w="64" h="64" x="192" y="768" />
+    <state name="icon_carbine"       w="64" h="64" x="256" y="768" />     
+    <state name="icon_leydenrifle"   w="64" h="64" x="320" y="768" />
+    <state name="icon_sabre"         w="64" h="64" x="384" y="768" />
+    <state name="icon_broom"         w="64" h="64" x="448" y="768" />
+    <state name="icon_jezail"        w="64" h="64" x="512" y="768" />
+    <state name="icon_handgrenade"   w="64" h="64" x="576" y="768" />
+    <state name="icon_blunderbuss"   w="64" h="64" x="640" y="768" />
+    <state name="steamknight_grenade_launcher" w="64" h="64" x="704" y="768" />
+    <state name="cultist_dagger" w="64" h="64" x="768" y="768" />
+    <state name="icon_revolver" w="64" h="64" x="832" y="768" />
+    
+    <state name="bottle" w="64" h="64" x="0" y="832" />
+    <state name="sulphur_tonic_bottle" w="64" h="64" x="64" y="832" />
+    <state name="laudanum_bottle" w="64" h="64" x="128"  y="832" />
+    <state name="whisky_bottle" w="64" h="64" x="196"  y="832" />
+    <state name="jar_of_beer" w="64" h="64" x="448"  y="832" />
+    
+     <state name="chicha_bottle" x="512" y="832" w="64" h="64" />
+     <state name="chicha_crate" x="512" y="832" w="64" h="64" />
+     <state name="moonshine_bottle" x="384" y="832" w="64" h="64" />
+     <state name="moonshine_crate" x="320" y="832" w="64" h="64" />
+    
+     <state name="bottle_of_rum" w="64" h="64" x="576" y="832" />
+     <state name="guarapo_jar" w="64" h="64" x="640" y="832" /> <!-- not used, feel free to pave. -->
+     <state name="pulque_jar" w="64" h="64" x="704" y="832" />
+     <state name="bottle_of_wine" w="64" h="64" x="768" y="832" />
+     <state name="bottle_of_caninha" w="64" h="64" x="832" y="832" />
+     <state name="bottle_of_guarapo" w="64" h="64" x="896" y="832" />
+     <state name="bottle_of_vodka" w="64" h="64" x="960" y="832" />
+     
+     <state name="bottle_of_mezcal" w="64" h="64" x="896" y="768" />
+     
+    <!-- TODO -->
+    <state name="crate_of_rum_bottles" w="64" h="64" x="576" y="832" />
+    
+    <!-- categories -->
+          
+     <state name="raw_fungus_category" x="0" y="896" w="64" h="64" />
+     <state name="raw_meat_category" x="64" y="896" w="64" h="64" />
+     <state name="raw_berries_category" x="128" y="896" w="64" h="64" />
+     <state name="raw_vegetables_category" x="192" y="896" w="64" h="64" />
+     <state name="armaments_category" x="256" y="896" w="64" h="64" />
+     <state name="processed_category" x="320" y="896" w="64" h="64" />
+     <state name="metalworks_category" x="384" y="896" w="64" h="64" />
+     <state name="finished_category" x="448" y="896" w="64" h="64" />
+     
+     <state name="refined_cooked_food_category" x="512" y="896" w="64" h="64" />
+          
+     <state name="generic_category" x="0" y="960" w="64" h="64" />
+     <state name="building_materials_category" x="64" y="960" w="64" h="64" />
+     <state name="food_and_drink_category" x="128" y="960" w="64" h="64" />
+     <state name="raw_resources_category" x="192" y="960" w="64" h="64" />
+     <state name="refined_manufactured_category" x="256" y="960" w="64" h="64" />
+     <state name="stockpile_category" x="320" y="960" w="64" h="64" />
+     <state name="tools_category" x="384" y="960" w="64" h="64" />
+     <state name="basic_raw_food_category" x="448" y="960" w="64" h="64" />
+     <state name="basic_cooked_food_category" x="512" y="960" w="64" h="64" />
+     <state name="basic_raw_brew_category" x="576" y="960" w="64" h="64" />
+     <state name="basic_brew_category" x="640" y="960" w="64" h="64" />
+     
+     <state name="fuel_category" x="320" y="640" w="64" h="64" />
+	<state name="timber_category" x="576" y="896" w="64" h="64" />
+	<state name="distilled_spirits_category" x="640" y="896" w="64" h="64" />
+     <state name="leaf_fossil" x="704" y="896" w="64" h="64" />
+     <state name="obeliskian_block" x="768" y="896" w="64" h="64" />
+     <state name="obeliskian_bricks" x="832" y="896" w="64" h="64" />
+     <state name="grimoire" x="896" y="896" w="64" h="64" />
+	<state name="serpent_bell" x="960" y="896" w="64" h="64" />
+     
+     <state name="geometer_canopic_jar" x="704" y="960" w="64" h="64" />
+     <state name="quaggaroth_idol" x="768" y="960" w="64" h="64" />
+     <state name="obeliskian_seal" x="832" y="960" w="64" h="64" />
+     <state name="icon_fishyidol" x="896" y="960" w="64" h="64" />
+     <state name="placeholder" x="960" y="960" w="64" h="64" />
+
+    <!-- sort these -->
+    
+     <state name="sugarloaf" x="768" y="448" w="64" h="64" />
+     <state name="raw_beetlesteak" x="832" y="448" w="64" h="64" />
+     <state name="cooked_beetlesteak" x="896" y="448" w="64" h="64" />
+
+     <state name="coffee_crate" x="960" y="448" w="64" h="64" />
+     <state name="molasses_bucket" x="896" y="192" w="64" h="64" />
+     <state name="agave_syrup_bucket" x="896" y="192" w="64" h="64" />
+     <state name="sugarcane_raw" x="960" y="256" w="64" h="64" />
+     
+     <state name="urchin_grenade" x="384" y="960" w="64" h="64" />
+     <state name="bone_knife" x="384" y="960" w="64" h="64" />
+     <state name="coral_club" x="384" y="960" w="64" h="64" />
+     <state name="fish_pistol" x="384" y="960" w="64" h="64" />
+	
+	<state name="flatpack-placeholder" x="192" y="192" w="64" h="64" />
+     </element>
+</skin>

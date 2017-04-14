@@ -1,0 +1,249 @@
+<container type="vertbox" hsp="expand" vsp="expand"  skin="ui/styles/styleGlass.xml" name="contentsVB" vertical_gutter="5">
+	
+	<!-- Basic office controls & title. -->
+	<container type="horizbox" hsp="expand" vsp="minimum" horizontal_padding="2" vertical_padding="2" solidfill="1" solidfillname="miniPaperBrassLight" >
+		<imagebutton name="BuildingIcon" text="Building Icon" hsp="minimum" vsp="minimum"
+			imageSkin="ui/orderIcons.xml" image="chapel">
+			
+			<tooltip width="240" height="45" mouseRestDelay="0" followCursor="1">
+				<container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" >
+					<label name="buttonTooltipLabel" text="Focus on Building" vsp="center" state="tooltip_text"/>
+				</container>
+			</tooltip>
+		</imagebutton>
+		
+		<container type="vertbox" hsp="expand" vsp="expand" name="demolishBox">
+			<container type="vertbox" hsp="expand" vsp="minimum" name="buildingFancyName" hap="center" horizontal_padding="2" vertical_padding="2" solidfill="1" solidfillname="miniPaper"/>
+			<!--<combobox name="office" />-->
+			<container type="vertbox" hsp="expand" vsp="expand" name="workCrewSelectionBoxContainer"/>
+		</container>
+		
+		<imagebutton name="DemolishBuildingButton" text="Demolish Building" sfx="button_pneumatic" hsp="minimum" vsp="minimum"
+			imageSkin="ui/orderIcons.xml" image="demolish_building">
+			
+			<tooltip width="240" height="45" mouseRestDelay="0" followCursor="1">
+				<container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" >
+					<label name="buttonTooltipLabel" text="Demolish Building" vsp="center" state="tooltip_text"/>
+				</container>
+			</tooltip>        
+		</imagebutton>     
+	</container>
+	<container name="workshiftContainer" type="vertbox" hsp="minimum" vsp="minimum" hap="center" vertical_padding="3" horizontal_padding="3"/>
+	
+	<!-- Chapel controls -->
+	<container type="vertbox" hsp="expand" vsp="minimum" hap="left" vertical_padding="3" horizontal_padding="3" vertical_gutter="3" solidfill="1" solidfillname="label_background_grayer">
+		<container type="vertbox" hsp="expand" vsp="expand" hap="left" vertical_gutter="3" vertical_padding="5" horizontal_padding="10" name="empireVertBox2">
+			<container type="vertbox" hsp="expand" vsp="expand" hap="center" vertical_gutter="3" vertical_padding="5" solidfill="1" solidfillname="miniPaperBrassLight" >
+				<label text="Training Selection" hap="center" font="medium" />
+				<container type="vertbox" hsp="minimum" vsp="minimum" name="doctrineTipBox" hap="center" />
+			</container>
+		</container>
+		<!-- Doctrines -->
+		<container type="horizbox" hsp="expand" vsp="minimum" vertical_gutter="3" vertical_padding="5" horizontal_gutter="5" horizontal_padding="6" solidfill="1" horizontal_margin="3" solidfillname="miniPaperLight" >  
+			<container type="vertbox" hsp="expand" vsp="minimum"  horizontal_padding="6" >
+				<container type="vertbox" hsp="minimum" vsp="minimum" hap="center" name="skill1ButtonContainer" />
+			</container>
+			<container type="vertbox" hsp="expand" vsp="minimum"  horizontal_padding="6" >
+				<container type="vertbox" hsp="minimum" vsp="minimum" hap="center" name="skill2ButtonContainer" />
+			</container>
+			<container type="vertbox" hsp="expand" vsp="minimum"  horizontal_padding="6" >
+				<container type="vertbox" hsp="minimum" vsp="minimum" hap="center" name="skill3ButtonContainer" />
+			</container>
+			<container type="vertbox" hsp="expand" vsp="minimum"  horizontal_padding="6" >
+				<container type="vertbox" hsp="minimum" vsp="minimum" hap="center" name="skill4ButtonContainer" />
+			</container>
+			<container type="vertbox" hsp="expand" vsp="minimum"  horizontal_padding="6" >
+				<container type="vertbox" hsp="minimum" vsp="minimum" hap="center" name="skill5ButtonContainer" />
+			</container>
+			<container type="vertbox" hsp="expand" vsp="minimum"  horizontal_padding="6" >
+				<container type="vertbox" hsp="minimum" vsp="minimum" hap="center" name="skill6ButtonContainer" />
+			</container>
+			<container type="vertbox" hsp="expand" vsp="minimum"  horizontal_padding="6" >
+				<container type="vertbox" hsp="minimum" vsp="minimum" hap="center" name="skill7ButtonContainer" />
+			</container>
+		</container>
+		  
+	</container>
+	
+	
+<!-- Quality & Upkeep display container. -->
+	<container type="vertbox"
+			 hsp="expand" vsp="minimum"
+			 hap="center"
+			 horizontal_padding="4"
+			 horizontal_margin="4"
+			 vertical_margin="4"
+			 vertical_padding="3"
+			 solidfill="1" solidfillname="miniPaperBrassLight" >
+		
+		<!-- row 1 -->
+		<container type="horizbox" hsp="minimum" vsp="minimum" hap="center" horizontal_gutter="6">
+			
+			<!-- HP display -->
+			<container type="horizbox" hsp="minimum" vsp="minimum"
+					 horizontal_gutter="2"
+					 horizontal_padding="2"
+					 vertical_padding="2" vap="center" >
+				
+				<label text="HP:" vap="center" />
+				<container type="horizbox"
+						 hsp="minimum" vsp="minimum"
+						 horizontal_padding="5" vertical_padding="5"
+						 solidfill="1" solidfillname="label_background_grayer">
+					
+					<container name="HPNumberContainer" type="horizbox" hsp="minimum" vsp="minimum"/>
+					<label text="/"/>
+					<container name="HPMaxContainer" type="horizbox" hsp="minimum" vsp="minimum"/>
+				</container>
+				
+				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+					<container type="vertbox" hsp="fixed" fixed_width="200"
+							horizontal_padding="5" vertical_padding="5"
+							solidfill="1" solidfillname="glassBrassBorderDark" >
+						
+						<label text="Building Hitpoints" state="tooltip_text" hap="center"/>
+						<paragraph text="When a building reaches 0 HP, it is destroyed. Repair jobs are automatically created when a building is damaged and will be carried out by available Overseers." alignment="left" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			 </container>
+			
+			<!-- Quality display container. -->
+			<container type="horizbox" hsp="minimum" vsp="minimum" horizontal_padding="2" vertical_padding="2" vap="center" >
+				<label text="Quality:" vap="center" />
+				
+				<container type="vertbox" hsp="minimum" vsp="minimum"
+						 name="qualityLabelStaticTextContainer"
+						 horizontal_padding="2" vertical_padding="2" />
+				
+				<container type="vertbox" hsp="minimum" vsp="minimum"
+						 name="qualityDescriptionContainer"
+						 horizontal_padding="5" vertical_padding="5" vap="center"
+						 solidfill="1" solidfillname="label_background_grayer"/>
+				
+				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+					<container type="vertbox" hsp="fixed" fixed_width="200" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+						<container type="horizbox" hsp="minimum" vsp="minimum">
+							<label text="Quality:" state="text" />
+							<container name="qualityNumberContainer"
+									 type="horizbox" hsp="minimum" vsp="minimum"
+									 vertical_padding="2" horizontal_padding="4"
+									 vap="center"
+									 solidfill="1" solidfillname="label_background"/>
+							
+						</container> 
+						<container type="vertbox" hsp="fixed" fixed_width="200">
+							<paragraph text="- Workshop Quality can range from -6 to +6" alignment="left" state="tooltip_text"/>
+							<paragraph text="- Work modules and beds reduce quality, while decor modules increase quality" alignment="left" state="tooltip_text"/>
+							<paragraph text="- High workplace quality makes colonists happy." alignment="left" state="tooltip_text"/>
+						</container>
+					</container>
+				</tooltip>
+			</container>
+			
+			<!-- Chair count display -->
+			<container type="horizbox" hsp="minimum" vsp="minimum"
+					 horizontal_gutter="3" horizontal_padding="3"
+					 vertical_padding="5">
+				
+				<label text="Chairs:" vap="center" state="small"/>
+				<container type="horizbox"
+						 hsp="minimum" vsp="minimum"
+						 name="chairsNumberContainer"
+						 horizontal_gutter="3" horizontal_padding="4" vertical_padding="4"
+						 solidfill="1" solidfillname="label_background_grayer"/>
+				
+				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+					<container type="vertbox"
+							 hsp="fixed" fixed_width="300"
+							 horizontal_padding="5" vertical_padding="4"
+							 vertical_gutter="4"
+							 solidfill="1" solidfillname="glassBrassBorderDark">
+						
+						<container type="vertbox" hsp="fixed" fixed_width="200">
+							<paragraph text="Bookshelves are necessary for overseers to do proper study. Fancy bookshelves may yield better results." alignment="left" state="tooltip_text"/>
+						</container>
+					</container>
+				</tooltip>
+			</container>
+			
+		</container>
+	
+		<!-- row 2 -->
+		<container type="vertbox" hsp="expand" vsp="minimum" hap="center"
+				horizontal_margin="2" vertical_margin="2"
+				horizontal_padding="2" vertical_padding="0"
+				solidfill="1" solidfillname="thin_border_gold">
+		
+			<container type="horizbox" hsp="minimum" vsp="minimum" hap="center" >
+				
+				<label text="Upkeep per 5 days:" vap="center" />
+				
+				<container type="horizbox"
+						 hsp="minimum" vsp="minimum"
+						 horizontal_gutter="3"
+						 horizontal_padding="2" vertical_padding="2"
+						 vap="center">
+					
+					<!--<label text="Upkeep:" vap="center" /> -->
+					
+					<container type="horizbox"
+							 hsp="minimum" vsp="minimum"
+							 horizontal_padding="7" vertical_padding="2"
+							 solidfill="1" solidfillname="label_background_grayer">
+						
+						<image name="upkeep_decor1" hsp="minimum" vsp="minimum" scale="50" skin="ui\\commodityIcons.xml" image="upkeepTrunk1"/>
+						<label text="x" vap="center"/>
+						<container name="upkeep1label" type="horizbox" hsp="minimum" vsp="minimum" vap="center"/>
+					</container>
+					
+					<container type="horizbox"
+							 hsp="minimum" vsp="minimum"
+							 horizontal_padding="7" vertical_padding="2"
+							 solidfill="1" solidfillname="label_background_grayer">
+						
+						<image name="upkeep_decor2" hsp="minimum" vsp="minimum" scale="50" skin="ui\\commodityIcons.xml" image="upkeepTrunk2"/>
+						<label text="x" vap="center"/>
+						<container name="upkeep2label" type="horizbox" hsp="minimum" vsp="minimum" vap="center"/>
+					</container>
+					
+					<container type="horizbox"
+							 hsp="minimum" vsp="minimum"
+							 horizontal_padding="7" vertical_padding="2"
+							 solidfill="1" solidfillname="label_background_grayer">
+						
+						<image name="upkeep_decor3" hsp="minimum" vsp="minimum" scale="50" skin="ui\\commodityIcons.xml" image="upkeepTrunk3"/>
+						<label text="x" vap="center"/>
+						<container name="upkeep3label" type="horizbox" hsp="minimum" vsp="minimum" vap="center"/>
+					</container>
+					
+					<container type="horizbox"
+							 hsp="minimum" vsp="minimum"
+							 horizontal_padding="7" vertical_padding="2"
+							 solidfill="1" solidfillname="label_background_grayer">
+						
+						<image name="upkeep_decor4" hsp="minimum" vsp="minimum" scale="50" skin="ui\\commodityIcons.xml" image="upkeepTrunk4"/>
+						<label text="x" vap="center"/>
+						<container name="upkeep4label" type="horizbox" hsp="minimum" vsp="minimum" vap="center"/>
+					</container>
+					
+				 </container>
+				
+				<tooltip width="300" height="140" mouseRestDelay="0" followCursor="0">
+					<container type="vertbox"
+							 hsp="expand"
+							 vsp="minimum"
+							 horizontal_padding="6" vertical_padding="6"
+							 solidfill="1" solidfillname="glassBrassBorderDark" >
+						
+						<label text="Upkeep Requirements per Week" hap="center" state="tooltip_text"/>
+						<paragraph text="Every five days - the length of the Clockworkian week since the weekend was abolished as 'Communist nonsense' - building modules require upkeep based on their level. Build upkeep trunks to pay for upkeep in your workshops. If upkeep is not performed, workshops will be shut down." state="tooltip_small"/>
+						
+					</container>
+				</tooltip>
+			</container>
+			
+			<container name="upkeepDescription" type="horizbox" hsp="minimum" vsp="minimum" vertical_margin="1" hap="right" horizontal_margin="8"/>
+			
+		</container>
+	</container>	
+</container>

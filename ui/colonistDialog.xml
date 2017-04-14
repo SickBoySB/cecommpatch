@@ -1,0 +1,51 @@
+     <container type="vertbox" hsp="expand" vsp="expand" horizontal_padding="2"> <!-- solidfill="1" solidfillname="window"> -->
+	<container type="vertbox" hsp="fixed" fixed_width="600" vsp="fixed" fixed_height="675">
+	<container type="vertbox" hsp="fixed" fixed_width="580" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommTopGlass" />
+
+    <!-- <container type="horizbox" hsp="expand" vsp="minimum" horizontal_padding="5" vertical_padding="5" horizontal_gutter="3" solidfill="1" solidfillname="glassBrassBorder">-->
+          <!--<spacer/>-->
+          <!--<container type="horizbox" hsp="expand" vsp="expand" horizontal_padding="10" vertical_padding="15" solidfillname="miniPaper" solidfill="1">
+			<label text="An Overview of our Colonists" vap="center" hap="center" /> --><!--font="large"--><!--
+		</container>-->
+                    
+          <!--<imagebutton name="upperclasscolonistbutton" sfx="paper02" text="Upper Class Colonists" imgPctX="75" imgPctY="75" imageSkin="ui/orderIcons.xml" image="badge_upperclass_image" hsp="minimum" vsp="minimum" vap="center">
+		<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+			<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+                         <label name="buttonTooltipLabel" text="Show Upper Class Colonists" vsp="center" state="tooltip_text"/>
+                    </container>
+               </tooltip>
+          </imagebutton>
+          
+          <imagebutton name="middleclasscolonistbutton" sfx="paper01" text="Middle Class Colonists" imgPctX="75" imgPctY="75" imageSkin="ui/orderIcons.xml" image="badge_middleclass_image" hsp="minimum" vsp="minimum" vap="center">
+		<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+			<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+                         <label name="buttonTooltipLabel" text="Show Middle Class Colonists" vsp="center" state="tooltip_text"/>
+                    </container>
+               </tooltip>
+          </imagebutton>
+          
+          <imagebutton name="lowerclasscolonistbutton" sfx="paper04" text="Lower Class Colonists" imgPctX="75" imgPctY="75" imageSkin="ui/orderIcons.xml" image="badge_lowerclass_image" hsp="minimum" vsp="minimum" vap="center">
+		<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+			<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+                         <label name="buttonTooltipLabel" text="Show Lower Class Colonists" vsp="center" state="tooltip_text"/>
+                    </container>
+               </tooltip>
+          </imagebutton>
+          
+          <imagebutton name="allcolonistbutton" sfx="paper02" text="All Colonists" imgPctX="75" imgPctY="75" imageSkin="ui/orderIcons.xml" image="everyone_icon" hsp="minimum" vsp="minimum" vap="center">
+		<tooltip width="1" height="1" mouseRestDelay="0" followCursor="1">
+			<container type="vertbox" hsp="minimum" vsp="minimum" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+                         <label name="buttonTooltipLabel" text="Show All Colonists" vsp="center" state="tooltip_text"/>
+                    </container>
+               </tooltip>
+          </imagebutton>-->
+          
+     <!--</container>-->
+     
+	 <container type="vertbox" hsp="expand" solidfill="1" solidfillname="cecommWorkcrew" horizontal_padding="8" vertical_padding="12">
+     <container type="scrollablevertbox" hsp="expand" vsp="expand" name="colonists_vertbox" solidfill="1"/>
+	 </container>
+     
+	<container type="vertbox" hsp="fixed" fixed_width="580" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommBottomGlass" />
+	</container>
+</container>
