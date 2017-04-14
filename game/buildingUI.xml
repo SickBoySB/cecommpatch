@@ -1,0 +1,1238 @@
+<buildingUIDB>
+	<!-- this file stores UI information, of a very specific sort, for offices. Essentially, higher-level glue which gets boiled into Illusion widgets. -->
+
+  <!-- ???
+  <building name="Town Hall">
+    <label name="buildingFanName" parentContainer="buildingFancyName" officeStringAttrib="buildingFancyName"/>
+
+    <label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
+    <label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
+  </building>
+  
+	-->
+  
+<!-- Offices -->
+
+	<building name="Barracks">
+		<label name="buildingFanName" parentContainer="buildingFancyName" officeStringAttrib="buildingFancyName"/>
+		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP"/>
+		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax"/>
+		
+		<label name="noOverseerWarning"  parentContainer="warningContainer" officeStringAttrib="noOverseerWarning" font="small" color="red" />
+		<label name="noSuppliesWarning"  parentContainer="warningContainer" officeStringAttrib="noSuppliesWarning" font="small" color="red" />
+
+		<label name="workPoints1" parentContainer="workPoints1Container" officeIntAttrib="workPoints1"/>
+		<label name="workPoints2" parentContainer="workPoints2Container" officeIntAttrib="workPoints2"/>
+		<label name="workPoints3" parentContainer="workPoints3Container" officeIntAttrib="workPoints3"/>
+		<label name="workPoints4" parentContainer="workPoints4Container" officeIntAttrib="workPoints4"/>
+		<label name="workPointsStatus"  parentContainer="workPointsStatusContainer" officeStringAttrib="workPointsStatus" font="small" color="black" />
+		
+		<label text="Using:" parentContainer="weaponNameContainerText" font="medium" color="black_faded"/>
+		<label name="weaponName" parentContainer="weaponNameContainer" officeStringAttrib="weaponName" font="medium" color="black"/>
+
+		<icon_selector_detached name="supply" display_name="Supply Mode" type="only_one_of">
+			<icon_detached name="on" display_name="Supply On" default="1"
+				description="Supply this Barracks with ammo."
+				parentContainer="supplyControlContainer1"
+				icon_skin="ui\\orderIcons.xml" icon="icon_return_to_stockpile"
+				icon_skin_off="ui\orderIconsGray.xml" icon_off="icon_return_to_stockpile"
+				size="small"/>
+			
+			<icon_detached name="off" display_name="Supply Off" default="0"
+				description="Stop supplying this Barracks with ammo."
+				parentContainer="supplyControlContainer2"
+				icon_skin="ui\\orderIcons.xml" icon="x_red_icon"
+				icon_skin_off="ui\\orderIconsGray.xml" icon_off="x_red_icon"
+				size="small"/>
+			
+		</icon_selector_detached>
+
+		<icon_selector_detached name="DayOrNight"  display_name="Day/Night Shift" type="only_one_of">
+	
+			<icon_detached name="button1" display_name="Day Shift" default="1"
+					icon_skin="ui\\orderIcons2.xml" icon="time_sunrise"
+					icon_skin_off="ui\\orderIconsGray2.xml" icon_off="time_sunrise"
+					description="Assign this squad to the day shift."
+					parentContainer="dayShiftButtonContainer"
+					size="small"/>
+	
+			<icon_detached name="button2" display_name="Night Shift" default="0"
+					icon_skin="ui\\orderIcons2.xml" icon="time_evening"
+					icon_skin_off="ui\\orderIconsGray2.xml" icon_off="time_evening"
+					description="Assign this squad to the night shift."
+					parentContainer="nightShiftButtonContainer"
+					size="small"/>
+			
+		</icon_selector_detached>
+		
+	<icon_selector_detached name="Loadout" display_name="Loadout" type="only_one_of">
+		<icon_detached name="Pistol" display_name="Pistol"
+				default="1"
+				icon_skin="ui\\commodityIcons.xml" icon="icon_pistol"
+				icon_skin_off="ui\\commodityIconsGray.xml" icon_off="icon_pistol"
+				description="Soldiers assigned to this barracks will use Pistols."
+				parentContainer="pistolButtonContainer"
+				/>
+		
+		<icon_detached name="Musket" display_name="Improvised Musket"
+				default="0"
+				icon_skin="ui\\commodityIcons.xml" icon="icon_musket"
+				icon_skin_off="ui\\commodityIconsGray.xml" icon_off="icon_musket"
+				description="Soldiers assigned to this barracks will use Improvised Muskets."
+				isEnabledString="musketEnabled"
+				ifDisabledTooltipString="Requires installation of a Improvised Musket Locker."
+				parentContainer="musketButtonContainer"
+				/>
+		
+		<icon_detached name="Blunderbuss" display_name="Blunderbuss"
+				default="0"
+				icon_skin="ui\\commodityIcons.xml" icon="icon_blunderbuss"
+				icon_skin_off="ui\\commodityIconsGray.xml" icon_off="icon_blunderbuss"
+				description="Soldiers assigned to this barracks will use Blunderbusses."
+				isEnabledString="blunderbussEnabled"
+				ifDisabledTooltipString="Requires installation of a Blunderbuss Locker."
+				parentContainer="blunderbussButtonContainer"
+				/>
+		
+		<icon_detached name="Jezail" display_name="Jezail"
+				default="0"
+				icon_skin="ui\\commodityIcons.xml" icon="icon_jezail"
+				icon_skin_off="ui\\commodityIconsGray.xml" icon_off="icon_jezail"
+				description="Soldiers assigned to this barracks will use Jezail Rifles."
+				isEnabledString="jezailEnabled"
+				ifDisabledTooltipString="Requires installation of a Jezail Locker."
+				parentContainer="jezailButtonContainer"
+				/>
+		
+		<icon_detached name="Tripistol" display_name="Ceramic Tripistol"
+				default="0"
+				icon_skin="ui\\commodityIcons.xml" icon="icon_tripistol"
+				icon_skin_off="ui\\commodityIconsGray.xml" icon_off="icon_tripistol"
+				description="Soldiers assigned to this barracks will use Ceramic Tripistols."
+				isEnabledString="tripistolEnabled"
+				ifDisabledTooltipString="Requires installation of a Ceramic Tripistol Locker."
+				parentContainer="tripistolButtonContainer"
+				/>
+		
+		<icon_detached name="Revolver" display_name="Revolver"
+				default="0"
+				icon_skin="ui\\commodityIcons.xml" icon="icon_revolver"
+				icon_skin_off="ui\\commodityIconsGray.xml" icon_off="icon_revolver"
+				description="Soldiers assigned to this barracks will use Revolvers."
+				isEnabledString="revolverEnabled"
+				ifDisabledTooltipString="Requires installation of a Revolver Locker."
+				parentContainer="revolverButtonContainer"
+				/>
+		
+		<icon_detached name="Carbine" display_name="Carbine"
+				default="0"
+				icon_skin="ui\\commodityIcons.xml" icon="icon_carbine"
+				icon_skin_off="ui\\commodityIconsGray.xml" icon_off="icon_carbine"
+				description="Soldiers assigned to this barracks will use Carbines."
+				isEnabledString="carbineEnabled"
+				ifDisabledTooltipString="Requires installation of a Carbine Locker."
+				parentContainer="carbineButtonContainer"
+				/>
+		
+		<icon_detached name="Grenade Launcher" display_name="Grenade Launcher"
+				default="0"
+				icon_skin="ui\\commodityIcons.xml" icon="icon_grenadelauncher"
+				icon_skin_off="ui\\commodityIconsGray.xml" icon_off="icon_grenadelauncher"
+				description="Soldiers assigned to this barracks will use Grenade Launchers."
+				isEnabledString="grenadelauncherEnabled"
+				ifDisabledTooltipString="Requires installation of a Grenade Launcher Locker."
+				parentContainer="grenadelauncherButtonContainer"
+				/>
+		
+		<icon_detached name="Leyden Pistol" display_name="Leyden Pistol"
+				default="0"
+				icon_skin="ui\\commodityIcons.xml" icon="icon_leydenpistol"
+				icon_skin_off="ui\\commodityIconsGray.xml" icon_off="icon_leydenpistol"
+				description="Soldiers assigned to this barracks will use Leyden Pistols."
+				isEnabledString="leydenpistolEnabled"
+				ifDisabledTooltipString="Requires installation of a Leyden Pistol Locker."
+				parentContainer="leydenpistolButtonContainer"
+				/>
+		
+		<icon_detached name="Leyden Rifle" display_name="Leyden Rifle"
+				default="0"
+				icon_skin="ui\\commodityIcons.xml" icon="icon_leydenrifle"
+				icon_skin_off="ui\\commodityIconsGray.xml" icon_off="icon_leydenrifle"
+				description="Soldiers assigned to this barracks will use Leyden Rifles."
+				isEnabledString="leydenrifleEnabled"
+				ifDisabledTooltipString="Requires installation of a Leyden Rifle Locker."
+				parentContainer="leydenrifleButtonContainer"
+				/>
+		
+	</icon_selector_detached>
+
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
+
+		<command_button name="Rally Squad"
+					display_name="Rally Squad"
+					default="1"
+					icon_skin="ui\\orderIcons.xml" icon="icon_rally"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="icon_rally"
+					description="Rally a military squad to the chosen location."
+					parentContainer="barracksCommandHolder"
+					size="small"/>
+	
+	</building>
+
+	<building name="Trade Office">
+		<label name="buildingFancyName" parentContainer="buildingFancyName" officeStringAttrib="buildingFancyName"/>
+		
+    <!--		<label text="Workshop Quality:" parentContainer="qualityLabelStaticTextContainer"/>	
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer"/>
+		<label name="buildingQuality"  parentContainer="qualityNumberContainer"/>
+    -->
+		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
+		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
+		
+		<label name="condition1todoTextLabel" parentContainer="condition1todoContainerText" officeStringAttrib="condition1todoText" font="small"  color="black"/>
+		<label name="condition1todoIntLabel"  parentContainer="condition1todoContainerInt" officeStringAttrib="condition1todoInt" font="small"  color="black"/>
+		<label name="condition2todoTextLabel" parentContainer="condition2todoContainerText" officeStringAttrib="condition2todoText"  font="small"  color="black"/>
+		<label name="condition2todoIntLabel"  parentContainer="condition2todoContainerInt" officeStringAttrib="condition2todoInt" font="small"  color="black"/>
+		<label name="condition3todoTextLabel" parentContainer="condition3todoContainerText" officeStringAttrib="condition3todoText" font="small"  color="black"/>
+		<label name="condition3todoIntLabel"  parentContainer="condition3todoContainerInt" officeStringAttrib="condition3todoInt" font="small"  color="black"/>
+		<label name="condition4todoTextLabel" parentContainer="condition4todoContainerText" officeStringAttrib="condition4todoText" font="small" color="black"/>
+		<label name="condition4todoIntLabel"  parentContainer="condition4todoContainerInt" officeStringAttrib="condition4todoInt" font="small" color="black"/>
+		
+		<label name="condition1DoneTextLabel" parentContainer="condition1doneContainerText" officeStringAttrib="condition1DoneText" font="small" color="bone"/>
+		<label name="condition1DoneIntLabel"  parentContainer="condition1doneContainerInt" officeStringAttrib="condition1DoneInt" font="small" color="bone"/>
+		<label name="condition2DoneTextLabel" parentContainer="condition2doneContainerText" officeStringAttrib="condition2DoneText" font="small" color="bone"/>
+		<label name="condition2DoneIntLabel"  parentContainer="condition2doneContainerInt" officeStringAttrib="condition2DoneInt" font="small" color="bone"/>
+		<label name="condition3DoneTextLabel" parentContainer="condition3doneContainerText" officeStringAttrib="condition3DoneText" font="small" color="bone"/>
+		<label name="condition3DoneIntLabel"  parentContainer="condition3doneContainerInt" officeStringAttrib="condition3DoneInt" font="small" color="bone"/>
+		<label name="condition4DoneTextLabel" parentContainer="condition4doneContainerText" officeStringAttrib="condition4DoneText" font="small" color="bone"/>
+		<label name="condition4DoneIntLabel"  parentContainer="condition4doneContainerInt" officeStringAttrib="condition4DoneInt" font="small" color="bone"/>
+		
+		<label name="traderAmountLabel1" parentContainer="traderAmountHolder1" officeStringAttrib="traderAmountPointsText1" font="large" color="black" />
+		
+		<label text="Traders attracted by this office:" font="small" parentContainer="traderAmountTextContainer"/>
+		<trade_window/>
+	</building>
+  
+	<building name="Naturalist's Office">
+		
+		<label name="noOverseerWarning"  parentContainer="warningContainer" officeStringAttrib="noOverseerWarning" font="small" color="red" />
+		<label name="noSuppliesWarning"  parentContainer="warningContainer" officeStringAttrib="noSuppliesWarning" font="small" color="red" />
+		<label name="workPoints1" parentContainer="workPoints1Container" officeIntAttrib="workPoints1"/>
+		<label name="workPoints2" parentContainer="workPoints2Container" officeIntAttrib="workPoints2"/>
+		<label name="workPointsStatus"  parentContainer="workPointsStatusContainer" officeStringAttrib="workPointsStatus" font="small" color="black" />
+		
+		<icon_selector_detached name="supply" display_name="Supply Mode" type="only_one_of">
+			<icon_detached name="on" display_name="Supply On" default="1"
+				description="Supply this Naturalist's Office."
+				parentContainer="supplyControlContainer1"
+				icon_skin="ui\\orderIcons.xml" icon="icon_return_to_stockpile"
+				icon_skin_off="ui\\orderIconsGray.xml" icon_off="icon_return_to_stockpile"
+				size="small"/>
+			
+			<icon_detached name="off" display_name="Supply Off" default="0"
+				description="Stop supplying this Naturalist's Office."
+				parentContainer="supplyControlContainer2"
+				icon_skin="ui\\orderIcons.xml" icon="x_red_icon"
+				icon_skin_off="ui\\orderIconsGray.xml" icon_off="x_red_icon"
+				size="small"/>
+			
+		</icon_selector_detached>
+		
+		<label name="buildingFancyName" parentContainer="buildingFancyName" officeStringAttrib="buildingFancyName"/>
+		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" />
+		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" />
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
+
+		<label name="modeLabel"  parentContainer="modeLabelContainer" officeStringAttrib="modeLabel" />
+		
+		<label name="horrorPolicyLabel"  parentContainer="horrorPolicyLabelContainer" officeStringAttrib="horrorPolicyLabel" />
+		
+		<icon_selector_detached name="horror_policy" display_name="Horror Policy" type="only_one_of">
+			
+			<icon_detached name="dump" display_name="Hide The Bodies" default="1"
+				description="Dump or destroy the remains of unnatural beings and pretend they don't exist."
+				parentContainer="horrorPolicyContainer1"
+				icon_skin="ui\\orderIcons.xml" icon="x_red_icon"
+				icon_skin_off="ui\\orderIconsGray.xml" icon_off="x_red_icon"
+				size="large"/>
+			
+			<icon_detached name="harvest" display_name="Harvest For Resources" default="0"
+				description="Harvest the remains of unnatural beings for resources."
+				parentContainer="horrorPolicyContainer2"
+				icon_skin="ui\\thoughtIcons.xml" icon="butcher"
+				icon_skin_off="ui\\thoughtIconsGray.xml" icon_off="butcher"
+				size="large"/>
+			
+			<icon_detached name="study" display_name="Study For Science" default="0"
+				description="Study the remains of unnatural beings to assist Science and to improve our Standing in the Empire and amongst other Nations."
+				parentContainer="horrorPolicyContainer3"
+				icon_skin="ui\\thoughtIcons.xml" icon="science"
+				icon_skin_off="ui\\thoughtIconsGray.xml" icon_off="science"
+				size="large"/>
+			
+		</icon_selector_detached>
+
+		
+		<icon_selector_detached name="mode"
+						    display_name="Mode"
+						    type="only_one_of"
+						    parentContainer="modeSelectorWindow">
+			
+			<icon_detached name="scout" display_name="Scout Area"
+					default="1"
+					icon_skin="ui\\orderIcons.xml" icon="explore_icon"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="explore_icon"
+					description="Explore: The Naturalist will scout the local area with greatly increased sight radius."
+					parentContainer="modeControlsContainer1"/>
+			
+			<icon_detached name="survey" display_name="Mineral Survey"
+					default="0"
+					icon_skin="ui\\orderIcons.xml" icon="mineshaft_image"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="mineshaft_image"
+					description="Mineral Survey: The Naturalist and workcrew will survey designated ore veins to reveal their contents, or will survey randomly if left to their own devices."
+					ifDisabledTooltipString="Minerological Surveys require installation of a Standing Desk."
+					isEnabledString="surveyEnabled"
+					parentContainer="modeControlsContainer2"/>
+			
+			<icon_detached name="hunt" display_name="Hunting Expedition"
+					default="0" 
+					icon_skin="ui\\orderIcons.xml" icon="hunting"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="hunting"
+					description="Hunting: The Naturalist and workcrew will hunt nearby wildlife. If they cannot find any animals to hunt, they will attempt to flush out wild game."
+					ifDisabledTooltipString="Hunting requires installation of an Improvised Musket Locker."
+					isEnabledString="huntEnabled"
+					parentContainer="modeControlsContainer3"/>
+			
+			<!-- TODO?
+			<icon_detached name="forestry" display_name="Forestry"
+					default="0"
+					icon_skin="ui\\orderIcons.xml" icon="naturalism_icon"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="naturalism_icon"
+					description=""
+					parentContainer="modeControlsContainer4"/>
+			
+			<icon_detached name="discovery" display_name="Discovery"
+					default="0"
+					icon_skin="ui\\orderIcons.xml" icon="naturalism_icon"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="naturalism_icon"
+					description=""
+					parentContainer="modeControlsContainer5"/>	
+					-->
+			
+		</icon_selector_detached>
+		
+		<command_button name="Explore"
+					default="1"
+					icon_skin="ui\\orderIcons.xml" icon="explore_icon"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="explore_icon"
+					description="Select particular locations to target for exploring. Requires that the Naturalist have Scouting selected."
+					parentContainer="naturalistCommandHolder1"
+					scale="50"/>
+	
+		<command_button name="Conduct Mineralogical Survey (player order)"
+					default="1"
+					icon_skin="ui\\orderIcons.xml" icon="mineshaft_image"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="mineshaft_image"
+					description="Select a particular Ore Beacon for a mineralogical survey to be performed. Requires that the Naturalist have Mineralogical Surveying selected."
+					parentContainer="naturalistCommandHolder2"
+					scale="50"/>
+		
+		<command_button name="Hunt Animals"
+					default="1"
+					icon_skin="ui\\orderIcons.xml" icon="hunting"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="hunting"
+					description="Select particular animals to target for hunting. Requires that the Naturalist have Hunting selected."
+					parentContainer="naturalistCommandHolder3"
+					scale="50"/>
+
+  </building>
+  
+	<building name="Barbershop">
+		
+		<label name="noOverseerWarning"  parentContainer="warningContainer" officeStringAttrib="noOverseerWarning" font="small" color="red" />
+		<label name="noSuppliesWarning"  parentContainer="warningContainer" officeStringAttrib="noSuppliesWarning" font="small" color="red" />
+		<label name="noChairWarning"  parentContainer="warningContainer" officeStringAttrib="noChairWarning" font="small" color="red" />
+		
+		<label name="workPoints1" parentContainer="workPoints1Container" officeIntAttrib="workPoints1"/>
+		<label name="workPoints2" parentContainer="workPoints2Container" officeIntAttrib="workPoints2"/>
+		<label name="workPointsStatus"  parentContainer="workPointsStatusContainer" officeStringAttrib="workPointsStatus" font="small" color="black" />
+		
+		<icon_selector_detached name="supply" display_name="Supply Mode" type="only_one_of">
+			<icon_detached name="on" display_name="Supply On" default="1"
+				description="Supply this Barbershop."
+				parentContainer="supplyControlContainer1"
+				icon_skin="ui\\orderIcons.xml" icon="icon_return_to_stockpile"
+				icon_skin_off="ui\\orderIconsGray.xml" icon_off="icon_return_to_stockpile"
+				size="small"/>
+			
+			<icon_detached name="off" display_name="Supply Off" default="0"
+				description="Stop supplying this Barbershop."
+				parentContainer="supplyControlContainer2"
+				icon_skin="ui\\orderIcons.xml" icon="x_red_icon"
+				icon_skin_off="ui\\orderIconsGray.xml" icon_off="x_red_icon"
+				size="small"/>
+			
+		</icon_selector_detached>
+		
+		<label name="buildingFancyName" parentContainer="buildingFancyName" officeStringAttrib="buildingFancyName"/>
+		
+		<!--<jobs_list name="Incoming Patients"/>-->
+		
+		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
+		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
+
+		<label name="chairsPresent"  parentContainer="chairNumberContainer" officeIntAttrib="chairsPresent"/>
+	</building>
+
+	<building name="Demolished">
+		<label text="Scheduled for Demolition"/>
+	</building>
+	
+	<building name="Public House">
+		<label name="buildingFancyName" parentContainer="buildingFancyName" officeStringAttrib="buildingFancyName"/>
+		
+		<label name="noBoozeVatWarning"  parentContainer="warningContainer" officeStringAttrib="noBoozeVatWarning" font="small" color="red" />
+		<label name="noChairsWarning"  parentContainer="warningContainer" officeStringAttrib="noChairsWarning" font="small" color="red" />
+		<label name="noOverseerWarning"  parentContainer="warningContainer" officeStringAttrib="noOverseerWarning" font="small" color="red" />
+		<label name="noBoozeWarning"  parentContainer="warningContainer" officeStringAttrib="noBoozeWarning" font="small" color="red" />
+		
+		<label name="workPointsStatus"  parentContainer="workPointsStatusContainer" officeStringAttrib="workPointsStatus" font="small" color="black" />
+		
+		<label name="boozeMode"  parentContainer="distributionModeContainer" officeStringAttrib="boozeMode" font="small" color="black" />
+		<label name="laudanumMode"  parentContainer="laudanumModeContainer" officeStringAttrib="laudanumMode" font="small" color="black" />
+		<!--<label name="boozeModeTooltip"  parentContainer="distributionModeTooltipContainer" officeStringAttrib="boozeModeTooltip" font="tooltip_text" color="black" />
+		-->
+		<icon_selector_detached name="mode"
+						    display_name="Mode"
+						    type="only_one_of"
+						    parentContainer="modeControlsContainer">
+			
+			<icon_detached name="button1" display_name="Brew"
+					default="1"
+					icon_skin="ui\\orderIcons2.xml" icon="booze_brewed_on"
+					icon_skin_off="ui\\orderIconsGray2.xml" icon_off="booze_brewed_on"
+					description="Serve brewed booze such as beer, wine, and chicha to improve mood in the colony."
+					parentContainer="modeControlsContainer1"/>
+			
+			<icon_detached name="button2" display_name="Spirits"
+					default="0"
+					icon_skin="ui\\orderIcons2.xml" icon="booze_spirits_on"
+					icon_skin_off="ui\\orderIconsGray2.xml" icon_off="booze_spirits_on"
+					description="Serve high-alchohol spirits such as whisky to help colonists forget their troubles."
+					parentContainer="modeControlsContainer2"/>
+			
+		</icon_selector_detached>
+		
+		<icon_selector_detached name="laudanum_mode"
+						    display_name="Laudanum Mode"
+						    type="only_one_of"
+						    parentContainer="modeControlsContainer">
+		
+			<icon_detached name="button1" display_name="Distribute Laudanum"
+				default="1"
+				icon_skin="ui\\orderIcons2.xml" icon="booze_laudanum_on"
+				icon_skin_off="ui\\orderIconsGray2.xml" icon_off="booze_laudanum_on"
+				description="Serve extremely potent Laudanum to your colonists to make them forget their pain, troubles, despair, and any will to resist your orders."
+				parentContainer="laudanumControlsContainer1"/>
+			
+			<icon_detached name="button2" display_name="No Laudanum"
+				default="0"
+				icon_skin="ui\\orderIcons2.xml" icon="booze_laudanum_off"
+				icon_skin_off="ui\\orderIconsGray2.xml" icon_off="booze_laudanum_off"
+				description="Stop serving Laudanum to your colonists."
+				parentContainer="laudanumControlsContainer2"/>
+			
+		</icon_selector_detached>
+		
+		<label text="Available Booze Vats: " parentContainer="vatCountContainerText" font="medium" color="black_faded" />
+		<label name="vatCount" parentContainer="vatCountContainer" officeIntAttrib="vatCount" font="medium" color="black" />
+		
+		<label name="brewQuantity" parentContainer="brewQuantityContainer" officeIntAttrib="brewQuantity"/>
+		<label name="spiritsQuantity" parentContainer="spiritsQuantityContainer" officeIntAttrib="spiritsQuantity"/>
+		<label name="laudanumQuantity" parentContainer="laudanumQuantityContainer" officeIntAttrib="laudanumQuantity"/>
+		
+		<label name="brewCapacity" parentContainer="brewCapacityContainer" officeIntAttrib="brewCapacity"/>
+		<label name="spiritsCapacity" parentContainer="spiritsCapacityContainer" officeIntAttrib="spiritsCapacity"/>
+		<label name="laudanumCapacity" parentContainer="laudanumCapacityContainer" officeIntAttrib="laudanumCapacity"/>
+		
+		<label name="lastGroupSpecialTreatment"  parentContainer="lastGroupSpecialTreatment" officeStringAttrib="lastGroupSpecialTreatment" font="clarendonTitle" color="black"/>
+		
+		<!--<jobs_list/>-->
+		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
+		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
+		
+	</building>
+	
+	<building name="Mine">
+		<label name="noOverseerWarning"  parentContainer="warningContainer" officeStringAttrib="noOverseerWarning" font="small" color="red" />
+		<label name="noSuppliesWarning"  parentContainer="warningContainer" officeStringAttrib="noSuppliesWarning" font="small" color="red" />
+		<label name="noShaftWarning"  parentContainer="warningContainer" officeStringAttrib="noShaftWarning" font="small" color="red" />
+		
+		<label name="workPoints1" parentContainer="workPoints1Container" officeIntAttrib="workPoints1"/>
+		<!--<label name="workPoints2" parentContainer="workPoints2Container" officeIntAttrib="workPoints2"/>-->
+		<label name="workPointsStatus"  parentContainer="workPointsStatusContainer" officeStringAttrib="workPointsStatus" font="small" color="black" />
+		
+		<label name="workshopTechModifier" parentContainer="workshopTechModifier" officeStringAttrib="workshopTechModifier"/>
+		
+		<icon_selector_detached name="supply" display_name="Supply Mode" type="only_one_of">
+			<icon_detached name="on" display_name="Supply On" default="1"
+				description="Supply this Mine with shorings."
+				parentContainer="supplyControlContainer1"
+				icon_skin="ui\\orderIcons.xml" icon="icon_return_to_stockpile"
+				icon_skin_off="ui\orderIconsGray.xml" icon_off="icon_return_to_stockpile"
+				size="small"/>
+			
+			<icon_detached name="off" display_name="Supply Off" default="0"
+				description="Stop supplying this Mine with shorings."
+				parentContainer="supplyControlContainer2"
+				icon_skin="ui\\orderIcons.xml" icon="x_red_icon"
+				icon_skin_off="ui\\orderIconsGray.xml" icon_off="x_red_icon"
+				size="small"/>
+			
+		</icon_selector_detached>
+		
+		<label name="buildingFancyName" parentContainer="buildingFancyName" officeStringAttrib="buildingFancyName"/>
+		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
+		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
+		
+		<label name="mineDepthLabel" parentContainer="mineDepthHolder" officeStringAttrib="mineDepth" font="small" color="black"/>
+		<label text="Local Products:" parentContainer="localProductsHolderText" font="medium" color="black_faded"/>
+		<label name="localProducts" parentContainer="localProductsHolder" officeStringAttrib="localProducts" font="medium" color="black"/>
+		
+		<label name="strata1products" parentContainer="strata1productsHolder" color="green" officeStringAttrib="strata1products"/>
+		<label name="strata2products" parentContainer="strata2productsHolder" color="green" officeStringAttrib="strata2products"/>
+		<label name="strata3products" parentContainer="strata3productsHolder" color="green" officeStringAttrib="strata3products"/>
+		<label name="strata4products" parentContainer="strata4productsHolder" color="green" officeStringAttrib="strata4products"/>
+		<label name="strata5products" parentContainer="strata5productsHolder" color="green" officeStringAttrib="strata5products"/>
+		
+		<label name="strata1enabledString" parentContainer="strata1enabledStringHolder" color="red" officeStringAttrib="strata1enabledString"/>
+		<label name="strata2enabledString" parentContainer="strata2enabledStringHolder" color="red" officeStringAttrib="strata2enabledString"/>
+		<label name="strata3enabledString" parentContainer="strata3enabledStringHolder" color="red" officeStringAttrib="strata3enabledString"/>
+		<label name="strata4enabledString" parentContainer="strata4enabledStringHolder" color="red" officeStringAttrib="strata4enabledString"/>
+		<label name="strata5enabledString" parentContainer="strata5enabledStringHolder" color="red" officeStringAttrib="strata5enabledString"/>
+		
+		<icon_selector_detached name="MineStrata"
+						    display_name="Strata"
+						    type="only_one_of"
+						    parentContainer="doctrineSelectorWindow">
+			
+			<icon_detached name="button1" display_name="Increase Mineshaft Depth"
+					default="0"
+					scale="50"
+					icon_skin="ui\\orderIcons.xml" icon="mine_deeper"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="mine_deeper"
+					parentContainer="mining1ButtonContainer"/>
+			
+			<icon_detached name="button2" display_name="Surface Strata"
+					default="1"
+					scale="50"
+					icon_skin="ui\\hugeUIButtons.xml" icon="mine_button1"
+					icon_skin_off="ui\\hugeUIButtons.xml" icon_off="mine_button1_off"
+					parentContainer="mining2ButtonContainer"/>
+			
+			<icon_detached name="button3" display_name="Shallow Mixed Strata"
+					default="0"
+					scale="50"
+					isEnabledString="shallowMixedEnabled"
+					icon_skin="ui\\hugeUIButtons.xml" icon="mine_button2"
+					icon_skin_off="ui\\hugeUIButtons.xml" icon_off="mine_button2_off"
+					parentContainer="mining3ButtonContainer"/>
+			
+			<icon_detached name="button4" display_name="Core Vein Strata"
+					default="0"
+					scale="50"
+					isEnabledString="coreVeinEnabled"
+					icon_skin="ui\\hugeUIButtons.xml" icon="mine_button3"
+					icon_skin_off="ui\\hugeUIButtons.xml" icon_off="mine_button3_off"
+					parentContainer="mining4ButtonContainer"/>
+			
+			<icon_detached name="button5" display_name="Deep Vein Strata"
+					default="0"
+					scale="50"
+					isEnabledString="deepVeinEnabled"
+					icon_skin="ui\\hugeUIButtons.xml" icon="mine_button4"
+					icon_skin_off="ui\\hugeUIButtons.xml" icon_off="mine_button4_off"
+					parentContainer="mining5ButtonContainer"/>
+			
+			<icon_detached name="button6" display_name="The Far Reaches"
+					default="0"
+					scale="50"
+					isEnabledString="farReachesEnabled"
+					icon_skin="ui\\hugeUIButtons.xml" icon="mine_button5"
+					icon_skin_off="ui\\hugeUIButtons.xml" icon_off="mine_button5_off"
+					parentContainer="mining6ButtonContainer"/>
+			
+		</icon_selector_detached>
+		
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
+		
+	</building>
+
+	<building name="Laboratory">
+		
+		<label name="noOverseerWarning"  parentContainer="warningContainer" officeStringAttrib="noOverseerWarning" font="small" color="red" />
+		<label name="noEquipmentWarning"  parentContainer="warningContainer" officeStringAttrib="noEquipmentWarning" font="small" color="red" />
+		<label name="noSuppliesWarning"  parentContainer="warningContainer" officeStringAttrib="noSuppliesWarning" font="small" color="red" />
+		
+		<label name="workPoints1" parentContainer="workPoints1Container" officeIntAttrib="workPoints1"/>
+		<!--<label name="workPoints2" parentContainer="workPoints2Container" officeIntAttrib="workPoints2"/> -->
+		<label name="workPointsStatus"  parentContainer="workPointsStatusContainer" officeStringAttrib="workPointsStatus" font="small" color="black" />
+		
+		<label name="scienceSkillDescriptor" parentContainer="scienceSkillDescriptorContainer" officeStringAttrib="scienceSkillDescriptor"/>
+		
+		<icon_selector_detached name="supply" display_name="Supply Mode" type="only_one_of">
+			<icon_detached name="on" display_name="Supply On" default="1"
+				description="Supply this Laboratory."
+				parentContainer="supplyControlContainer1"
+				icon_skin="ui\\orderIcons.xml" icon="icon_return_to_stockpile"
+				icon_skin_off="ui\orderIconsGray.xml" icon_off="icon_return_to_stockpile"
+				size="small"/>
+			
+			<icon_detached name="off" display_name="Supply Off" default="0"
+				description="Stop supplying this Laboratory."
+				parentContainer="supplyControlContainer2"
+				icon_skin="ui\\orderIcons.xml" icon="x_red_icon"
+				icon_skin_off="ui\\orderIconsGray.xml" icon_off="x_red_icon"
+				size="small"/>
+			
+		</icon_selector_detached>
+		
+		<label name="buildingFancyName" parentContainer="buildingFancyName" officeStringAttrib="buildingFancyName"/>
+		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
+		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
+		
+		<label name="condition1todoTextLabel" parentContainer="condition1todoContainerText" officeStringAttrib="condition1todoText" font="small"  color="black"/>
+		<label name="condition1todoIntLabel"  parentContainer="condition1todoContainerInt" officeStringAttrib="condition1todoInt" font="small"  color="black"/>
+		<label name="condition2todoTextLabel" parentContainer="condition2todoContainerText" officeStringAttrib="condition2todoText"  font="small"  color="black"/>
+		<label name="condition2todoIntLabel"  parentContainer="condition2todoContainerInt" officeStringAttrib="condition2todoInt" font="small"  color="black"/>
+		<label name="condition3todoTextLabel" parentContainer="condition3todoContainerText" officeStringAttrib="condition3todoText" font="small"  color="black"/>
+		<label name="condition3todoIntLabel"  parentContainer="condition3todoContainerInt" officeStringAttrib="condition3todoInt" font="small"  color="black"/>
+		<label name="condition4todoTextLabel" parentContainer="condition4todoContainerText" officeStringAttrib="condition4todoText" font="small" color="black"/>
+		<label name="condition4todoIntLabel"  parentContainer="condition4todoContainerInt" officeStringAttrib="condition4todoInt" font="small" color="black"/>
+		
+		<label name="condition1DoneTextLabel" parentContainer="condition1doneContainerText" officeStringAttrib="condition1DoneText" font="small" color="bone"/>
+		<label name="condition1DoneIntLabel"  parentContainer="condition1doneContainerInt" officeStringAttrib="condition1DoneInt" font="small" color="bone"/>
+		<label name="condition2DoneTextLabel" parentContainer="condition2doneContainerText" officeStringAttrib="condition2DoneText" font="small" color="bone"/>
+		<label name="condition2DoneIntLabel"  parentContainer="condition2doneContainerInt" officeStringAttrib="condition2DoneInt" font="small" color="bone"/>
+		<label name="condition3DoneTextLabel" parentContainer="condition3doneContainerText" officeStringAttrib="condition3DoneText" font="small" color="bone"/>
+		<label name="condition3DoneIntLabel"  parentContainer="condition3doneContainerInt" officeStringAttrib="condition3DoneInt" font="small" color="bone"/>
+		<label name="condition4DoneTextLabel" parentContainer="condition4doneContainerText" officeStringAttrib="condition4DoneText" font="small" color="bone"/>
+		<label name="condition4DoneIntLabel"  parentContainer="condition4doneContainerInt" officeStringAttrib="condition4DoneInt" font="small" color="bone"/>
+		
+		<label name="scienceGainLabel1" parentContainer="scienceGainHolder1" officeStringAttrib="scienceGainPointsText1" font="medium" color="black" />
+		
+		<label text="Accumulation Rate:" font="medium" color="black_faded" parentContainer="scienceSkillTextContainer"/>
+		<label text="x" font="medium" parentContainer="scienceSkillPlusContainer"/>
+		
+		<label name="agriculturePointsLabel" parentContainer="agriculturePointsNumberContainer" officeIntAttrib="researchPointsagriculture" hap="left" font="clarendonTitle"/>
+		<label name="agriculturePointsMaxLabel" parentContainer="agriculturePointsMaxContainer" officeIntAttrib="agriculturePointsMax" hap="left" font="clarendonTitle"/>
+		<researchProjectsContainer program="agriculture" parentContainer="agricultureProjectsContainer"/>
+		
+		<label name="colonyProductionPoints" parentContainer="colonyProductionPointsNumberContainer" hap="left" font="clarendonTitle" officeIntAttrib="researchPointscolonyProduction"/>
+		<label name="colonyProductionPointsMaxLabel" parentContainer="colonyProductionPointsMaxContainer" officeIntAttrib="colonyProductionPointsMax" hap="left" font="clarendonTitle"/>
+		<researchProjectsContainer program="colonyProduction" parentContainer="colonyProductionProjectsContainer"/>
+		
+		<label name="militaryPoints" parentContainer="militaryPointsNumberContainer" hap="left" font="clarendonTitle" officeIntAttrib="researchPointsmilitary"/>
+		<label name="militaryPointsMaxLabel" parentContainer="militaryPointsMaxContainer" officeIntAttrib="militaryPointsMax" hap="left" font="clarendonTitle"/>
+		<researchProjectsContainer program="military" parentContainer="militaryProjectsContainer"/>
+		
+		<!--<label text="Mission options reset daily." hap="center" font="small" parentContainer="empireVertBox2"/>-->
+		<!--
+		<label name="fundamentalsPoints" parentContainer="fundamentalsPointsNumberContainer" hap="left" font="clarendonTitle" officeIntAttrib="researchPointsfundamentals"/>
+		<label text="/20" parentContainer="fundamentalsPointsNumberContainer" hap="left" font="clarendonTitle"/>
+		<researchProjectsContainer program="fundamentals" parentContainer="fundamentalsProjectsContainer"/>
+-->
+		
+		<icon_selector_detached name="ResearchProgram" display_name="Research Program" type="only_one_of" parentContainer="factionSelectorWindow">
+			<icon_detached name="agriculture" display_name="Agriculture and Food"
+					default="0"
+					icon_skin="ui\\orderIcons.xml" icon="farming_icon"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="farming_icon"
+					description="Focus on the research of new Crops and Cooking Methods."
+					parentContainer="agricultureButtonContainer"/>
+			
+			<icon_detached name="colonyProduction" display_name="Colony Production"
+					default="1"
+					icon_skin="ui\\orderIcons.xml" icon="modules_category"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="modules_category"
+					description="Focus on the research of New Modules and methods of production, including Advanced Technologies."
+					parentContainer="colonyProductionButtonContainer"
+					/>
+			
+			<icon_detached name="military" display_name="Military Technology"
+					default="0"
+					icon_skin="ui\\orderIcons.xml" icon="icon_rally"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="icon_rally"
+					description="Focus on developing new Weaponry and enhance your Military Personnel."
+					parentContainer="militaryButtonContainer"
+					/>
+			<!--
+			<icon_detached name="fundamentals" display_name="Base Principles"
+					default="0"
+					icon_skin="ui\\orderIcons.xml" icon="laboratory"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="laboratory"
+					description="Technology which affects basically everything."
+					parentContainer="fundamentalsButtonContainer"
+					/>-->
+			
+		</icon_selector_detached>
+	</building>
+	
+	<building name="Foreign Office">
+		
+		<label name="noOverseerWarning"  parentContainer="warningContainer" officeStringAttrib="noOverseerWarning" font="small" color="red" />
+		<label name="noSuppliesWarning"  parentContainer="warningContainer" officeStringAttrib="noSuppliesWarning" font="small" color="red" />
+		<label name="noDeskWarning"  parentContainer="warningContainer" officeStringAttrib="noDeskWarning" font="small" color="red" />
+		
+		<label name="workPoints1" parentContainer="workPoints1Container" officeIntAttrib="workPoints1"/>
+		<label name="workPointsStatus"  parentContainer="workPointsStatusContainer" officeStringAttrib="workPointsStatus" font="small" color="black" />
+		
+		<icon_selector_detached name="supply" display_name="Supply Mode" type="only_one_of">
+			<icon_detached name="on" display_name="Supply On" default="1"
+				description="Supply this Foreign Office with Crates of Paperwork."
+				parentContainer="supplyControlContainer1"
+				icon_skin="ui\\orderIcons.xml" icon="icon_return_to_stockpile"
+				icon_skin_off="ui\orderIconsGray.xml" icon_off="icon_return_to_stockpile"
+				size="small"/>
+			
+			<icon_detached name="off" display_name="Supply Off" default="0"
+				description="Stop supplying this Foreign Office with Crates of Paperwork."
+				parentContainer="supplyControlContainer2"
+				icon_skin="ui\\orderIcons.xml" icon="x_red_icon"
+				icon_skin_off="ui\\orderIconsGray.xml" icon_off="x_red_icon"
+				size="small"/>
+			
+		</icon_selector_detached>
+		
+		<label name="buildingFancyName" parentContainer="buildingFancyName" officeStringAttrib="buildingFancyName"/>
+		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
+		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
+		<label name="desksPresent"  parentContainer="deskNumberContainer" officeIntAttrib="desksPresent"/>
+		
+		<label name="empirePoints" parentContainer="empirePointsNumberContainer" hap="left" font="clarendonTitle" officeIntAttrib="Diplomacy_Points_Empire"/>
+		<label text="/20" parentContainer="empirePointsNumberContainer" hap="left" font="clarendonTitle"/>
+		
+		<standing_indicator name="empireStandingWidget" factionName="Empire" parentContainer="empireStandingStaticTextContainer"/>
+		<label text="Standing:" parentContainer="empireStandingTooltipHorizbox" hap="left" color="cream"/>
+		<label name="empireStanding" parentContainer="empireStandingTooltipHorizbox" hap="left" color="cream" worldIntAttrib="EmpireRelations"/>
+		
+		<missionContainer faction="Empire" parentContainer="empireMissionButtonContainer"/>
+		<label text="Diplomatic actions reset daily." hap="center" font="small" parentContainer="empireVertBox2"/>
+
+		<label name="banditsPoints" parentContainer="banditsPointsNumberContainer" hap="left" font="clarendonTitle" officeIntAttrib="Diplomacy_Points_Bandits"/>
+		<label text="/20" parentContainer="banditsPointsNumberContainer" hap="left" font="clarendonTitle"/>
+
+		<standing_indicator name="banditsStandingWidget" factionName="Bandits" parentContainer="banditsStandingStaticTextContainer"/>
+		<label text="Standing:" parentContainer="banditsStandingTooltipHorizbox" hap="left" color="cream"/>
+		<label name="banditsStanding" parentContainer="banditsStandingTooltipHorizbox" hap="left" color="cream" worldIntAttrib="BanditsRelations"/>
+		
+		<missionContainer faction="Bandits" parentContainer="banditsMissionContainer"/>
+		<label text="Diplomatic actions reset daily." hap="center" font="small" parentContainer="banditsVertBox2"/>
+
+		
+		<label name="StahlmarkPoints" parentContainer="StahlmarkPointsNumberContainer" hap="left" font="clarendonTitle" officeIntAttrib="Diplomacy_Points_Stahlmark"/>
+		<label text="/20" parentContainer="StahlmarkPointsNumberContainer" hap="left" font="clarendonTitle"/>
+
+		<standing_indicator name="StahlmarkStandingWidget" factionName="Stahlmark" parentContainer="StahlmarkStandingStaticTextContainer"/>
+		<label text="Standing:" parentContainer="StahlmarkStandingTooltipHorizbox" hap="left" color="cream"/>
+		<label name="StahlmarkStanding" parentContainer="StahlmarkStandingTooltipHorizbox" hap="left" color="cream" worldIntAttrib="StahlmarkRelations"/>
+		
+		<missionContainer faction="Stahlmark" parentContainer="stahlmarkMissionContainer"/>
+		<label text="Diplomatic actions reset daily." hap="center" font="small" parentContainer="StahlmarkVertBox2"/>
+
+		<label name="RepubliquePoints" parentContainer="RepubliquePointsNumberContainer" hap="left" font="clarendonTitle" officeIntAttrib="Diplomacy_Points_Republique"/>
+		<label text="/20" parentContainer="RepubliquePointsNumberContainer" hap="left" font="clarendonTitle"/>
+
+		<standing_indicator name="RepubliqueStandingWidget" factionName="Republique" parentContainer="RepubliqueStandingStaticTextContainer"/>
+		<label text="Standing:" parentContainer="RepubliqueStandingTooltipHorizbox" hap="left" color="cream"/>
+		<label name="RepubliqueStanding" parentContainer="RepubliqueStandingTooltipHorizbox" hap="left" color="cream" worldIntAttrib="RepubliqueRelations"/>
+		
+		<missionContainer faction="Republique" parentContainer="republiqueMissionContainer"/>
+		<label text="Diplomatic actions reset daily." hap="center" font="small" parentContainer="RepubliqueVertBox2"/>
+
+		<label name="NovorusPoints" parentContainer="NovorusPointsNumberContainer" hap="left" font="clarendonTitle" officeIntAttrib="Diplomacy_Points_Novorus"/>
+		<label text="/20" parentContainer="NovorusPointsNumberContainer" hap="left" font="clarendonTitle"/>
+
+		<standing_indicator name="NovorusStandingWidget" factionName="Novorus" parentContainer="NovorusStandingStaticTextContainer"/>
+		<label text="Standing:" parentContainer="NovorusStandingTooltipHorizbox" hap="left" color="cream"/>
+		<label name="NovorusStanding" parentContainer="NovorusStandingTooltipHorizbox" hap="left" color="cream" worldIntAttrib="NovorusRelations"/>
+		
+		<missionContainer faction="Novorus" parentContainer="novorusMissionContainer"/>
+		<label text="Diplomatic actions reset daily." hap="center" font="small" parentContainer="NovorusVertBox2"/>
+
+		
+		<icon_selector_detached name="Faction" display_name="Faction" type="only_one_of" parentContainer="factionSelectorWindow">
+			<icon_detached name="Empire" display_name="Clockwork Empire"
+					default="1"
+					icon_skin="ui\\thoughtIcons.xml" icon="empire_flag"
+					icon_skin_off="ui\\thoughtIconsGray.xml" icon_off="empire_flag"
+					description="Focus efforts on the Clockwork Empire, whose rolling hills, smoking factories, and wise Queen we all know and love with all our being."
+					parentContainer="empireButtonContainer"
+					/>
+			<icon_detached name="Stahlmark" display_name="Stahlmark"
+					default="0"
+					icon_skin="ui\\thoughtIcons.xml" icon="stahlmark_flag"
+					icon_skin_off="ui\\thoughtIconsGray.xml" icon_off="stahlmark_flag"
+					description="Focus efforts on Stahlmark, those strictly disciplined lovers of beer and sauerkraut."
+					parentContainer="StahlmarkButtonContainer"
+					/>
+			<icon_detached name="Novorus" display_name="Novorus"
+					default="0"
+					icon_skin="ui\\thoughtIcons.xml" icon="novorus_flag"
+					icon_skin_off="ui\\thoughtIconsGray.xml" icon_off="novorus_flag"
+					description="Focus efforts on Novorus, rich in resources, ruled by their autocratic Tzar from his fortress-train."
+					parentContainer="NovorusButtonContainer"
+					/>
+			<icon_detached name="Republique" display_name="Republique"
+					default="0"
+					icon_skin="ui\\thoughtIcons.xml" icon="republique_flag"
+					icon_skin_off="ui\\thoughtIconsGray.xml" icon_off="republique_flag"
+					description="Focus efforts on the Republique Mecanique, a land of republican revolution ruled by a thinking machine."
+					parentContainer="RepubliqueButtonContainer"
+					/>
+			<icon_detached name="Bandits" display_name="Local Bandits"
+					default="0"
+					icon_skin="ui\\orderIcons.xml" icon="bandit"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="bandit"
+					description="Focus efforts on the local Bandits, because maybe we can convince them not to be so awful."
+					parentContainer="banditsButtonContainer"
+					/>
+		</icon_selector_detached>
+
+	</building>
+	
+	<building name="Training Academy">
+		
+		<label name="noOverseerWarning"  parentContainer="warningContainer" officeStringAttrib="noOverseerWarning" font="small" color="red" />
+		<label name="noSuppliesWarning"  parentContainer="warningContainer" officeStringAttrib="noSuppliesWarning" font="small" color="red" />
+		<label name="noBookshelvesWarning"  parentContainer="warningContainer" officeStringAttrib="noBookshelvesWarning" font="small" color="red" />
+		
+		<label name="workPoints1" parentContainer="workPoints1Container" officeIntAttrib="workPoints1"/>
+		<label name="workPoints2" parentContainer="workPoints2Container" officeIntAttrib="workPoints2"/>
+		<label name="workPointsStatus"  parentContainer="workPointsStatusContainer" officeStringAttrib="workPointsStatus" font="small" color="black" />
+		
+		<icon_selector_detached name="supply" display_name="Supply Mode" type="only_one_of">
+			<icon_detached name="on" display_name="Supply On" default="1"
+				description="Supply this Academy."
+				parentContainer="supplyControlContainer1"
+				icon_skin="ui\\orderIcons.xml" icon="icon_return_to_stockpile"
+				icon_skin_off="ui\orderIconsGray.xml" icon_off="icon_return_to_stockpile"
+				size="small"/>
+			
+			<icon_detached name="off" display_name="Supply Off" default="0"
+				description="Stop supplying this Academy."
+				parentContainer="supplyControlContainer2"
+				icon_skin="ui\\orderIcons.xml" icon="x_red_icon"
+				icon_skin_off="ui\\orderIconsGray.xml" icon_off="x_red_icon"
+				size="small"/>
+			
+		</icon_selector_detached>
+		
+		<label name="buildingFancyName" parentContainer="buildingFancyName" officeStringAttrib="buildingFancyName"/>
+		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
+		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
+
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
+
+		<label name="bookshelvesPresent"  parentContainer="bookshelvesNumberContainer" officeIntAttrib="bookshelvesPresent"/>
+		
+		<icon_selector_detached name="Skill"
+						    display_name="Skill"
+						    type="only_one_of"
+						    parentContainer="skillSelectorWindow">
+			
+			<icon_detached name="button1" display_name="Carpentry"
+					default="1"
+					icon_skin="ui\\orderIcons.xml" icon="icon_carpentryshop"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="icon_carpentryshop"
+					description="Carpentry skill improves work speed in the Carpentry Workshops."
+					parentContainer="skill1ButtonContainer" />
+			
+			<icon_detached name="button2" display_name="Naturalism"
+					default="0"
+					icon_skin="ui\\orderIcons.xml" icon="naturalism_icon"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="naturalism_icon"
+					description="Naturalism skill makes your overseers better at Naturalist's Office jobs as well as standard foraging/chopping."
+					parentContainer="skill2ButtonContainer" />
+			
+			<icon_detached name="button3" display_name="Smithing"
+					default="0"
+					icon_skin="ui\\orderIcons.xml" icon="icon_metalworks"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="icon_metalworks"
+					description="Smithing skill improves the speed of smelting and forging activities done in the Metalworks."
+					parentContainer="skill3ButtonContainer" />
+			
+			<icon_detached name="button4" display_name="Stoneworking"
+					default="0"
+					icon_skin="ui\\orderIcons.xml" icon="icon_ceramicsshop"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="icon_ceramicsshop"
+					description="Stoneworking improves the speed of Ceramics Workshop crafting as well as both surface and underground mining."
+					parentContainer="skill4ButtonContainer" />
+			
+			<icon_detached name="button5" display_name="Cooking"
+					default="0"
+					icon_skin="ui\\orderIcons.xml" icon="icon_kitchen"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="icon_kitchen"
+					description="Cooking increases the speed at which your Kitchen workers produce food."
+					parentContainer="skill5ButtonContainer"
+					/>
+			<icon_detached name="button6" display_name="Science"
+					default="0"
+					icon_skin="ui\\orderIcons.xml" icon="laboratory_image"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="laboratory_image"
+					description="Science skill improves the ability of an Overseer to research new Technologies in the Laboratory."
+					parentContainer="skill6ButtonContainer"
+					/>
+			<icon_detached name="button7" display_name="Farming"
+					default="0"
+					icon_skin="ui\\orderIcons.xml" icon="farm_image"
+					icon_skin_off="ui\\orderIconsGray.xml" icon_off="farm_image"
+					description="Farming skill improves an Overseer's farming speed."
+					parentContainer="skill7ButtonContainer"
+					/>
+		</icon_selector_detached>
+	</building>
+	
+	<building name="Chapel">
+		
+		<label name="noOverseerWarning"  parentContainer="warningContainer" officeStringAttrib="noOverseerWarning" font="small" color="red" />
+		<label name="noSuppliesWarning"  parentContainer="warningContainer" officeStringAttrib="noSuppliesWarning" font="small" color="red" />
+		<label name="noAltarWarning"  parentContainer="warningContainer" officeStringAttrib="noAltarWarning" font="small" color="red" />
+		
+		<label name="workPoints1" parentContainer="workPoints1Container" officeIntAttrib="workPoints1"/>
+		<!-- <label name="workPoints2" parentContainer="workPoints2Container" officeIntAttrib="workPoints2"/> -->
+		<label name="workPointsStatus"  parentContainer="workPointsStatusContainer" officeStringAttrib="workPointsStatus" font="small" color="black" />
+		
+		<icon_selector_detached name="supply1" display_name="Supply Mode" type="only_one_of">
+			<icon_detached name="on" display_name="Supply On" default="1"
+				description="Supply this Chapel with devotional cogs."
+				parentContainer="supplyControlContainer1"
+				icon_skin="ui\\orderIcons.xml" icon="icon_return_to_stockpile"
+				icon_skin_off="ui\orderIconsGray.xml" icon_off="icon_return_to_stockpile"
+				size="small"/>
+			
+			<icon_detached name="off" display_name="Supply Off" default="0"
+				description="Stop supplying this Chapel with devotional cogs."
+				parentContainer="supplyControlContainer2"
+				icon_skin="ui\\orderIcons.xml" icon="x_red_icon"
+				icon_skin_off="ui\\orderIconsGray.xml" icon_off="x_red_icon"
+				size="small"/>
+		</icon_selector_detached>
+		
+		<label name="buildingFancyName" parentContainer="buildingFancyName" officeStringAttrib="buildingFancyName"/>
+		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
+		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
+		
+		<!--<jobs_list/>-->
+
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
+		<label name="altarsPresent"  parentContainer="altarsNumberContainer" officeIntAttrib="altarsPresent"/>
+
+		<icon_selector_detached name="Doctrine"
+						    display_name="Doctrine"
+						    type="only_one_of"
+						    parentContainer="doctrineSelectorWindow">
+			<!-- Clockworkian Ecumenism -->
+			<icon_detached name="button1" display_name="Clockworkian Ecumenism"
+					default="1"
+					icon_skin="ui\\thoughtIcons.xml" icon="ecumenism"
+					icon_skin_off="ui\\thoughtIconsGray.xml" icon_off="ecumenism"
+					description="Clockworkian Ecumenism involves avoiding strong opinions while awkwardly apologizing whenever controvery arises - its pleasing platitudes lack focus but are considered comforting by all sorts."
+					parentContainer="doctrine1ButtonContainer"
+					/>
+			<!-- "Unreformed Episcopal Deism" -->
+			<icon_detached name="button2" display_name="Unreformed Episcopal Deism"
+					default="0"
+					icon_skin="ui\\thoughtIcons.xml" icon="deism"
+					icon_skin_off="ui\\thoughtIconsGray.xml" icon_off="deism"
+					description="The Unreformed Episcopal Deists are a hierarchical, disciplined sect that praise the virtue of physical suffering and the rational ordering of Creation. Their fatalistic, authoritarian creed is popular in military camps."
+					parentContainer="doctrine2ButtonContainer"
+					/>
+			<!-- "Muscular Ecclesiasticism" -->
+			<icon_detached name="button3" display_name="Muscular Ecclesiasticism"
+					default="0"
+					icon_skin="ui\\thoughtIcons.xml" icon="muscularism"
+					icon_skin_off="ui\\thoughtIconsGray.xml" icon_off="muscularism"
+					description="The Muscular Ecclesiasticists promote hard labor and attention to detail as devotional acts to the Creator. Their monologues stir overseers to hone their craft, but take a toll on the mind."
+					parentContainer="doctrine3ButtonContainer"
+					/>
+			<!-- Predestinational Mechanists -->
+			<icon_detached name="button4" display_name="Predestinational Mechanists"
+					default="0"
+					icon_skin="ui\\thoughtIcons.xml" icon="mechanism"
+					icon_skin_off="ui\\thoughtIconsGray.xml" icon_off="mechanism"
+					description="The Predestinational Mechanist sect espouses the virtues of the pursuit of rational knowledge and the intrinsic, self-evident nobility which results from already being noble. Their recitations assure diplomats, scientists, and upper class that their superiority is the only possible logical result of the first conditions of Creation."
+					parentContainer="doctrine4ButtonContainer"
+					/>
+		</icon_selector_detached>
+	</building>
+
+
+<!-- Workshops -->
+
+	<building name="Carpentry Workshop">
+		<label name="buildingFancyName" parentContainer="buildingFancyName" officeStringAttrib="buildingFancyName"/>
+		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" />
+		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" />
+		<label name="workshopTechModifier" parentContainer="workshopTechModifier" officeStringAttrib="workshopTechModifier"/>	
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
+	</building>
+	
+	<building name="Kitchen">
+		<label name="buildingFancyName" parentContainer="buildingFancyName" officeStringAttrib="buildingFancyName"/>
+		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" />
+		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" />
+		<label name="workshopTechModifier" parentContainer="workshopTechModifier" officeStringAttrib="workshopTechModifier"/>	
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
+	</building>
+
+	<building name="Ceramics Workshop">
+		<label name="buildingFancyName" parentContainer="buildingFancyName" officeStringAttrib="buildingFancyName"/>
+		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" />
+		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" />
+		<label name="workshopTechModifier" parentContainer="workshopTechModifier" officeStringAttrib="workshopTechModifier"/>	
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
+	</building>
+
+	<building name="Steam Knight Manufactory">
+		<label name="buildingFancyName" parentContainer="buildingFancyName" officeStringAttrib="buildingFancyName"/>
+		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" />
+		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" />
+		<label name="workshopTechModifier" parentContainer="workshopTechModifier" officeStringAttrib="workshopTechModifier"/>	
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
+	</building>
+	
+	<building name="Metalworks">
+		<label name="buildingFancyName" parentContainer="buildingFancyName" officeStringAttrib="buildingFancyName"/>
+		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" />
+		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" />
+		<label name="workshopTechModifier" parentContainer="workshopTechModifier" officeStringAttrib="workshopTechModifier"/>	
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
+	</building>
+
+	<building name="Chemical Works">
+		<label name="buildingFancyName" parentContainer="buildingFancyName" officeStringAttrib="buildingFancyName"/>
+		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" />
+		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" />
+		<label name="workshopTechModifier" parentContainer="workshopTechModifier" officeStringAttrib="workshopTechModifier"/>	
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
+	</building>
+
+<!-- Houses -->
+
+	<building name="Lower Class House">
+		<label name="houseDescriptionLabel" parentContainer="houseDescriptionLabelContainer" officeStringAttrib="houseDescription" font="small"  color="black"/>
+		
+		<label name="condition1todoTextLabel" parentContainer="condition1todoContainerText" officeStringAttrib="condition1todoText" font="medium"  color="black"/>
+		<label name="condition1todoIntLabel"  parentContainer="condition1todoContainerInt" officeStringAttrib="condition1todoInt" font="medium"  color="black"/>
+		<label name="condition2todoTextLabel" parentContainer="condition2todoContainerText" officeStringAttrib="condition2todoText"  font="medium"  color="black"/>
+		<label name="condition2todoIntLabel"  parentContainer="condition2todoContainerInt" officeStringAttrib="condition2todoInt" font="medium"  color="black"/>
+		<label name="condition3todoTextLabel" parentContainer="condition3todoContainerText" officeStringAttrib="condition3todoText" font="medium"  color="black"/>
+		<label name="condition3todoIntLabel"  parentContainer="condition3todoContainerInt" officeStringAttrib="condition3todoInt" font="medium"  color="black"/>
+		
+		<label name="condition1DoneTextLabel" parentContainer="condition1doneContainerText" officeStringAttrib="condition1DoneText" font="medium" color="bone"/>
+		<label name="condition1DoneIntLabel"  parentContainer="condition1doneContainerInt" officeStringAttrib="condition1DoneInt" font="medium" color="bone"/>
+		<label name="condition2DoneTextLabel" parentContainer="condition2doneContainerText" officeStringAttrib="condition2DoneText" font="medium" color="bone"/>
+		<label name="condition2DoneIntLabel"  parentContainer="condition2doneContainerInt" officeStringAttrib="condition2DoneInt" font="medium" color="bone"/>
+		<label name="condition3DoneTextLabel" parentContainer="condition3doneContainerText" officeStringAttrib="condition3DoneText" font="medium" color="bone"/>
+		<label name="condition3DoneIntLabel"  parentContainer="condition3doneContainerInt" officeStringAttrib="condition3DoneInt" font="medium" color="bone"/>
+		<label name="condition4DoneTextLabel" parentContainer="condition4doneContainerText" officeStringAttrib="condition4DoneText" font="medium" color="bone"/>
+		<label name="condition4DoneIntLabel"  parentContainer="condition4doneContainerInt" officeStringAttrib="condition4DoneInt" font="medium" color="bone"/>
+		
+		<label name="popCapBonusTitle"  parentContainer="popCapBonusTitleContainer" officeStringAttrib="popCapBonusTitle" font="medium" color="black_faded"/>
+		<label name="popcapTooltip"  parentContainer="popcapTooltip" officeStringAttrib="popcapTooltip" font="small" color="cream"/>
+		<label name="popCapBonusLabel1"  parentContainer="popCapBonusHolder1" officeStringAttrib="popCapBonusText1" font="medium" color="black" />
+		<label text="/"  parentContainer="popCapBonusHolder1Slash" font="medium" color="black" />
+		<label name="popCapBonusLabel2"  parentContainer="popCapBonusHolder2" officeStringAttrib="popCapBonusText2" font="medium" color="black" />
+		
+		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
+		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
+	</building>
+	
+	<building name="Middle Class House">
+		<label name="houseDescriptionLabel" parentContainer="houseDescriptionLabelContainer" officeStringAttrib="houseDescription" font="small"  color="black"/>
+		
+		<label name="condition1todoTextLabel" parentContainer="condition1todoContainerText" officeStringAttrib="condition1todoText" font="medium"  color="black"/>
+		<label name="condition1todoIntLabel"  parentContainer="condition1todoContainerInt" officeStringAttrib="condition1todoInt" font="medium"  color="black"/>
+		<label name="condition2todoTextLabel" parentContainer="condition2todoContainerText" officeStringAttrib="condition2todoText"  font="medium"  color="black"/>
+		<label name="condition2todoIntLabel"  parentContainer="condition2todoContainerInt" officeStringAttrib="condition2todoInt" font="medium"  color="black"/>
+		<label name="condition3todoTextLabel" parentContainer="condition3todoContainerText" officeStringAttrib="condition3todoText" font="medium"  color="black"/>
+		<label name="condition3todoIntLabel"  parentContainer="condition3todoContainerInt" officeStringAttrib="condition3todoInt" font="medium"  color="black"/>
+		
+		<label name="condition1DoneTextLabel" parentContainer="condition1doneContainerText" officeStringAttrib="condition1DoneText" font="medium" color="bone"/>
+		<label name="condition1DoneIntLabel"  parentContainer="condition1doneContainerInt" officeStringAttrib="condition1DoneInt" font="medium" color="bone"/>
+		<label name="condition2DoneTextLabel" parentContainer="condition2doneContainerText" officeStringAttrib="condition2DoneText" font="medium" color="bone"/>
+		<label name="condition2DoneIntLabel"  parentContainer="condition2doneContainerInt" officeStringAttrib="condition2DoneInt" font="medium" color="bone"/>
+		<label name="condition3DoneTextLabel" parentContainer="condition3doneContainerText" officeStringAttrib="condition3DoneText" font="medium" color="bone"/>
+		<label name="condition3DoneIntLabel"  parentContainer="condition3doneContainerInt" officeStringAttrib="condition3DoneInt" font="medium" color="bone"/>
+		<label name="condition4DoneTextLabel" parentContainer="condition4doneContainerText" officeStringAttrib="condition4DoneText" font="medium" color="bone"/>
+		<label name="condition4DoneIntLabel"  parentContainer="condition4doneContainerInt" officeStringAttrib="condition4DoneInt" font="medium" color="bone"/>
+		
+		<label name="popCapBonusTitle"  parentContainer="popCapBonusTitleContainer" officeStringAttrib="popCapBonusTitle" font="medium" color="black_faded"/>
+		<label name="popcapTooltip"  parentContainer="popcapTooltip" officeStringAttrib="popcapTooltip" font="small" color="cream"/>
+		<label name="popCapBonusLabel1"  parentContainer="popCapBonusHolder1" officeStringAttrib="popCapBonusText1" font="medium" color="black" />
+		<label text="/"  parentContainer="popCapBonusHolder1Slash" font="medium" color="black" />
+		<label name="popCapBonusLabel2"  parentContainer="popCapBonusHolder2" officeStringAttrib="popCapBonusText2" font="medium" color="black" />
+		
+		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
+		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
+	</building>
+	
+	<building name="Upper Class House">
+		<label name="houseDescriptionLabel" parentContainer="houseDescriptionLabelContainer" officeStringAttrib="houseDescription" font="small"  color="black"/>
+
+		<label name="condition1todoTextLabel" parentContainer="condition1todoContainerText" officeStringAttrib="condition1todoText" font="medium"  color="black"/>
+		<label name="condition1todoIntLabel"  parentContainer="condition1todoContainerInt" officeStringAttrib="condition1todoInt" font="medium"  color="black"/>
+		<label name="condition2todoTextLabel" parentContainer="condition2todoContainerText" officeStringAttrib="condition2todoText"  font="medium"  color="black"/>
+		<label name="condition2todoIntLabel"  parentContainer="condition2todoContainerInt" officeStringAttrib="condition2todoInt" font="medium"  color="black"/>
+		<label name="condition3todoTextLabel" parentContainer="condition3todoContainerText" officeStringAttrib="condition3todoText" font="medium"  color="black"/>
+		<label name="condition3todoIntLabel"  parentContainer="condition3todoContainerInt" officeStringAttrib="condition3todoInt" font="medium"  color="black"/>
+		
+		<label name="condition1DoneTextLabel" parentContainer="condition1doneContainerText" officeStringAttrib="condition1DoneText" font="medium" color="bone"/>
+		<label name="condition1DoneIntLabel"  parentContainer="condition1doneContainerInt" officeStringAttrib="condition1DoneInt" font="medium" color="bone"/>
+		<label name="condition2DoneTextLabel" parentContainer="condition2doneContainerText" officeStringAttrib="condition2DoneText" font="medium" color="bone"/>
+		<label name="condition2DoneIntLabel"  parentContainer="condition2doneContainerInt" officeStringAttrib="condition2DoneInt" font="medium" color="bone"/>
+		<label name="condition3DoneTextLabel" parentContainer="condition3doneContainerText" officeStringAttrib="condition3DoneText" font="medium" color="bone"/>
+		<label name="condition3DoneIntLabel"  parentContainer="condition3doneContainerInt" officeStringAttrib="condition3DoneInt" font="medium" color="bone"/>
+		<label name="condition4DoneTextLabel" parentContainer="condition4doneContainerText" officeStringAttrib="condition4DoneText" font="medium" color="bone"/>
+		<label name="condition4DoneIntLabel"  parentContainer="condition4doneContainerInt" officeStringAttrib="condition4DoneInt" font="medium" color="bone"/>
+		
+		<label name="popCapBonusTitle"  parentContainer="popCapBonusTitleContainer" officeStringAttrib="popCapBonusTitle" font="medium" color="black_faded"/>
+		<label name="popcapTooltip"  parentContainer="popcapTooltip" officeStringAttrib="popcapTooltip" font="small" color="cream"/>
+		<label name="popCapBonusLabel1"  parentContainer="popCapBonusHolder1" officeStringAttrib="popCapBonusText1" font="medium" color="black" />
+		<label text="/"  parentContainer="popCapBonusHolder1Slash" font="medium" color="black" />
+		<label name="popCapBonusLabel2"  parentContainer="popCapBonusHolder2" officeStringAttrib="popCapBonusText2" font="medium" color="black" />
+		
+		<label name="buildingHP"  parentContainer="HPNumberContainer" officeIntAttrib="buildingHP" state="tooltip_text"/>
+		<label name="buildingHPMax"  parentContainer="HPMaxContainer" officeIntAttrib="buildingHPMax" state="tooltip_text"/>
+		<label name="buildingQualityDescription" parentContainer="qualityDescriptionContainer" officeStringAttrib="buildingQualityDescription" font="default" color="cream_light"/>
+		<label name="buildingQualityBad" 		parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityBad" 	font="large" color="red"/>
+		<label name="buildingQualityNeutral"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityNeutral" font="large" color="black"/>
+		<label name="buildingQualityGood"  	parentContainer="qualityNumberContainer" officeStringAttrib="buildingQualityGood" 	font="large" color="green_dark"/>
+	</building>
+	
+<!-- Zones -->
+	
+	<building name="farm">
+		
+		<label text="Field Crop Type"
+			  parentContainer="cropGrowingStaticTextContainer"/>
+		<label name="cropGrowingDescription"
+			  parentContainer="cropGrowingTextContainer"
+			  officeStringAttrib="cropGrowingDescription"/>
+		
+		<label text="Field Status"
+			  parentContainer="fieldStatusStaticTextContainer"/>
+		<label name="fieldStatusDescription"
+			  parentContainer="fieldStatusTextContainer"
+			  officeStringAttrib="fieldStatusDescription"/>
+		
+		<label text="Harvest Labour"
+			  parentContainer="harvestLabourStaticTextContainer"/>
+		<label name="harvestLabourDescription"
+			  parentContainer="harvestLabourTextContainer"
+			  officeStringAttrib="harvestLabourDescription"/>
+		
+		<label text="Harvest Output"
+			  parentContainer="harvestAmountStaticTextContainer"/>
+		<label name="harvestAmountDescription"
+			  parentContainer="harvestAmountTextContainer"
+			  officeStringAttrib="harvestAmountDescription"/>
+		
+		<!--<label text="Avg. Labour Per Day"
+			  parentContainer="labourPerDayStaticTextContainer"/>
+		<label name="labourPerDayDescription"
+			  parentContainer="labourPerDayTextContainer"
+			  officeStringAttrib="labourPerDayDescription"/>
+		
+		<label text="Avg. Days Per Harvest"
+			  parentContainer="daysPerHarvestStaticTextContainer"/>
+		<label name="daysPerHarvestDescription"
+			  parentContainer="daysPerHarvestTextContainer"
+			  officeStringAttrib="daysPerHarvestDescription"/>-->
+		
+		<!--
+		<icon_selector_detached name="fertilizeChoices" display_name="Fertilization Policy" type="only_one_of" parentContainer="fertilizeContainer">
+			
+			<icon_detached name="fertilizeOff"
+						display_name="Do Not Use Fertilizer"
+					default="1"
+					icon_skin="ui\\orderIcons2.xml" icon="fertilize_off"
+					icon_skin_off="ui\\orderIconsGray2.xml" icon_off="fertilize_off"
+					description="Do not waste valuable fertilizer on these plants."
+					parentContainer="fertilizeContainer"/>
+			
+			<icon_detached name="fertilizeOn"
+						display_name="Use Fertilizer"
+					default="0"
+					icon_skin="ui\\orderIcons2.xml" icon="fertilize"
+					icon_skin_off="ui\\orderIconsGray2.xml" icon_off="fertilize"
+					description="Use lots of fertilizer to make these plants grow faster!"
+					parentContainer="fertilizeContainer"/>
+			
+		</icon_selector_detached>
+		-->
+	</building>
+
+</buildingUIDB>

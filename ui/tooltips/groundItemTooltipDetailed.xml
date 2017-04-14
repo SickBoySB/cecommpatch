@@ -1,0 +1,4 @@
+<tooltip width="350" height="100" mouseRestDelay="0" followCursor="0" skin="ui/styles/styleTooltip.xml">
+	<container name="outerContainer" type="vertbox" hsp="expand" vsp="expand" horizontal_padding="10" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark"  >
+	</container>
+</tooltip>

@@ -1,0 +1,6 @@
+<tooltip width="280" height="1" mouseRestDelay="250" followCursor="0" skin="ui/styles/styleTooltip.xml">
+    <container name="charactervertboxblank" type="vertbox" hsp="expand" vsp="expand" horizontal_padding="4" vertical_padding="4" solidfill="1" solidfillname="glassBrassBorderDark" >
+      <label name="buttonTooltipLabel" text=" Bandit" vsp="minimum" hap="center" state="tooltip_neutral_text" />
+	  <paragraph name="descriptionLabel" text="Not an enemy or friend, just a bipedal humanoid going about their business." vsp="minimum"  state="tooltip_text"/>
+    </container>
+</tooltip>

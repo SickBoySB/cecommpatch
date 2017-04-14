@@ -1,0 +1,436 @@
+<container type="vertbox" hsp="expand" vsp="expand" name="contentsVB">
+	
+	
+	<container type="horizbox"
+			hsp="expand" vsp="minimum"
+			horizontal_margin="15"
+			solidfill="1" solidfillname="cecommPaperRoundInsideNoBottom"
+			vertical_padding="0">
+		<container type="horizbox" vap="center" hap="center" vsp="minimum" hsp="minimum">
+			<imagebutton name="BuildingIcon" text="Building Icon"
+					   hsp="minimum" vsp="minimum"
+					   imageSkin="ui/orderIcons.xml" image="foreign_office" imgPctX="80" imgPctY="80" vertical_margin="8">
+				
+				<tooltip width="120" height="1" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_padding="4" vertical_padding="4"
+							 solidfill="1" solidfillname="glassBrassBorderDark">
+						
+						<label name="buttonTooltipLabel" text="Focus on Building" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</imagebutton>
+			
+			<container type="vertbox" hsp="expand" vsp="expand" name="demolishBox" vertical_margin="4" horizontal_margin="5">
+				<container type="vertbox" hsp="expand" vsp="minimum"
+						 name="buildingFancyName" hap="center"
+						 horizontal_padding="2"/>
+						
+				<container type="vertbox" hsp="expand" vsp="minimum" name="workCrewSelectionBoxContainer"/>
+			</container>
+			
+			<imagebutton name="DemolishBuildingButton"
+					   text="Demolish Building"
+					   sfx="button_pneumatic"
+					   hsp="minimum" vsp="minimum" 
+				imageSkin="ui/orderIcons.xml" image="demolish_building" imgPctX="80" imgPctY="80" vertical_margin="8">
+				
+				<tooltip width="115" height="1" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_padding="4" vertical_padding="4"
+							 solidfill="1" solidfillname="glassBrassBorderDark">
+						
+						<label name="buttonTooltipLabel" text="Demolish Building" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>        
+			</imagebutton>
+		</container>
+	</container>
+	
+	
+	<container type="vertbox" hsp="expand" vsp="minimum" solidfill="1" solidfillname="cecommWorkcrew">
+		<container type="vertbox" hsp="expand" vsp="fixed" fixed_height="12"/>
+		<container type="vertbox" hsp="fixed" vsp="fixed" fixed_height="45" fixed_width="300" hap="center" solidfill="1" solidfillname="cecommTopGlassLight">
+			<container name="workshiftContainer" type="vertbox"
+					hsp="fixed" fixed_width="279"
+					hap="center" vertical_padding="10" horizontal_padding="10" />
+		</container>
+		
+		<container type="vertbox"
+				 hsp="fixed" vsp="fixed"
+				 hap="center"
+				 horizontal_padding="4" vertical_padding="10"
+				 solidfill="1" solidfillname="cecommDarkRoundPaper" fixed_width="400" fixed_height="90" >
+			
+			
+			<container type="horizbox" hsp="expand" vsp="expand" hap="center">
+					
+				<container type="vertbox" hsp="expand" vsp="minimum" hap="left"
+						vertical_padding="4" horizontal_padding="4"
+						horizontal_gutter="1" vap="center" >
+				</container>
+					
+				<container type="horizbox"	vsp="expand" hap="center" vap="center">
+					
+					<container type="vertbox" hap="center" vap="center" vsp="expand">
+						<container name="warningContainer" type="vertbox" hsp="minimum" vsp="minimum" vap="top" hap="center" />
+						<container type="vertbox" hap="center" vap="center" vsp="minimum">
+							<container type="horizbox" hap="center">
+							
+								<container type="horizbox" hsp="minimum" vsp="minimum"
+										 horizontal_padding="4" horizontal_margin="1"
+										 vertical_padding="4" vertical_margin="2"
+										 solidfill="1" solidfillname="miniPaperLighter"
+										 vap="center">
+									
+									<label text="Bureaucratic Forms:" vap="center" horizontal_margin="4"/>
+									<image hsp="minimum" vsp="minimum" scale="50"
+										  skin="ui\\commodityIcons.xml" image="paperBundle" vap="center"/>
+									<label text="x" vap="center"/>
+									<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints1Container" vap="center"/>
+									
+									<tooltip width="310" height="1" mouseRestDelay="0" followCursor="1">
+										<container type="vertbox" hsp="expand" vsp="minimum"
+												 horizontal_padding="6" vertical_padding="6"
+												 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
+											
+											<label text="Paper Bundles" hap="center" state="tooltip_text"/>
+											<paragraph text="Paper Bundles, made in a Carpentry Workshop, are required to perform work in a Foreign Office. Resupplying an Office will increase its work points and allow the assigned overseer to perform office jobs." state="tooltip_small"/>
+										</container>
+									</tooltip>
+								</container>
+								
+							</container>
+						</container>
+						<container name="workPointsStatusContainer" type="vertbox" hsp="fixed" fixed_width="150" vsp="minimum" vap="bottom" hap="center" />
+					</container>
+					
+				</container>
+				
+				<container type="vertbox" hsp="minimum" vsp="minimum"
+						vertical_padding="0" horizontal_padding="2"
+						horizontal_gutter="2" vertical_margin="-2"
+						hap="right">
+					
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="supplyControlContainer1" />
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="supplyControlContainer2" />
+				</container>
+				
+			</container>
+			
+		</container>
+		
+		<container type="vertbox" hsp="expand" vsp="fixed" fixed_height="10"/>  
+		<container type="scrollablevertbox" hsp="expand" vsp="fixed" fixed_height="294" vertical_gutter="0" vertical_padding="0" horizontal_gutter="0" horizontal_padding="8" horizontal_margin="0" > 
+		
+			<!-- Empire interactions -->
+			<container type="horizbox" hsp="expand" vsp="minimum" vertical_gutter="3" vertical_padding="2" horizontal_gutter="0" horizontal_padding="6" horizontal_margin="3" >  
+				<container type="vertbox" hsp="minimum" vsp="expand" hap="left" vertical_gutter="0" vertical_padding="0" >
+					<container type="horizbox" hsp="minimum" vsp="minimum" name="empireButtonContainer" />
+					<container type="horizbox" hsp="minimum" vsp="minimum"  hap="center" name="empirePointsNumberContainer" vertical_padding="5" horizontal_padding="10" solidfill="1" solidfillname="cecommDarkRoundPaper" >
+						<tooltip width="175" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+							<container type="vertbox" hsp="fixed" fixed_width="175" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque">
+								<container type="vertbox" hsp="minimum" vsp="minimum">
+									<label text="Empire Diplomacy Points" state="tooltip_text"/>
+								</container>
+							</container>
+						</tooltip>
+					</container>
+				</container>
+
+				<container type="vertbox" hsp="expand" vsp="expand" hap="left" vertical_gutter="3" vertical_padding="5" horizontal_padding="10" name="empireVertBox2" solidfill="1" solidfillname="miniPaper">
+					<container type="vertbox" hsp="expand" vsp="expand" hap="center" vertical_gutter="3" vertical_padding="5" solidfill="1" solidfillname="cecommDarkRoundPaper" >
+						<label text="The Clockwork Empire" hap="center" font="medium" />
+					</container>
+					<container type="horizbox" hsp="minimum" vsp="minimum" hap="center" horziontal_gutter="3" horizontal_padding="3" vertical_padding="5">
+						<container type="vertbox" hsp="minimum" vsp="minimum" name="empireStandingStaticTextContainer" >
+							<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+								<container type="vertbox" hsp="fixed" fixed_width="200" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+									<container name="empireStandingTooltip" type="vertbox" hsp="fixed" fixed_width="200" vsp="minimum">
+										<container name="empireStandingTooltipHorizbox" type="horizbox" vsp="minimum" hsp="minimum"/>
+										<paragraph text="The Empire will be more or less helpful depending on your standing." state="tooltip_text" />
+										<!--<label text="0 and above - Empire is Neutral" state="tooltip_text"/>
+										<label text="Below 0 - Empire is Neutral" state="tooltip_text"/>-->
+									</container>
+								</container>
+							</tooltip>
+						</container>
+						<container type="vertbox" hsp="minimum" vsp="minimum" name="empireStandingNumberContainer" />
+					</container> 
+					<container name="empireMissionContainer" type="vertbox" hsp="expand" vsp="minimum" horizontal_gutter="3" horizontal_padding="5" vertical_gutter="3"/>
+				</container>
+			</container>
+			  
+			<!-- Bandit interactions -->
+			<container type="horizbox" hsp="expand" vsp="minimum" vertical_gutter="3" vertical_padding="2" horizontal_gutter="0" horizontal_padding="6" horizontal_margin="3">  
+				<container type="vertbox" hsp="minimum" vsp="expand" hap="left" vertical_gutter="0" vertical_padding="0" >
+					<container type="horizbox" hsp="minimum" vsp="minimum" name="banditsButtonContainer" />
+					<container type="horizbox" hsp="minimum" vsp="minimum"  hap="center" name="banditsPointsNumberContainer" vertical_padding="5" horizontal_padding="10" solidfill="1" solidfillname="cecommDarkRoundPaper">
+						<tooltip width="170" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+							<container type="vertbox" hsp="fixed" fixed_width="170" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+								<container type="vertbox" hsp="minimum" vsp="minimum">
+									<label text="Bandit Diplomacy Points" state="tooltip_text"/>
+								</container>
+							</container>
+						</tooltip>
+					</container>
+				</container>
+				<container type="vertbox" hsp="expand" vsp="expand" hap="left" vertical_gutter="3" vertical_padding="5" horizontal_padding="10" name="banditsVertBox2" solidfill="1" solidfillname="miniPaper">
+					<container type="vertbox" hsp="expand" vsp="expand" hap="center" horizontal_padding="3" vertical_padding="3" solidfill="1" solidfillname="cecommDarkRoundPaper" >
+						<label text="The Local Bandits" hap="center" font="medium" />
+					</container>
+					<container type="horizbox" hsp="minimum" vsp="minimum" hap="center" horziontal_gutter="3" horizontal_padding="3" vertical_padding="5">
+						<container type="horizbox" hsp="minimum" vsp="minimum" name="banditsStandingStaticTextContainer" >
+							<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+								<container type="vertbox" hsp="fixed" fixed_width="220" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+									<container name="banditsStandingTooltipHorizbox" type="horizbox" vsp="minimum" hsp="minimum"/>
+									<container type="vertbox" hsp="minimum" vsp="minimum">
+										<label text="Above 33: Bandits are friendly" state="tooltip_text"/>
+										<label text="Below -33: Bandits are hostile" state="tooltip_text"/>
+									</container>
+								</container>
+						</tooltip>
+						</container>
+						<container type="vertbox" hsp="minimum" vsp="minimum" name="banditsStandingNumberContainer" />
+					</container> 
+					<container name="banditsMissionContainer" type="vertbox" hsp="expand" vsp="minimum" horizontal_gutter="3" horizontal_padding="5" vertical_gutter="3" />
+				</container>
+			</container>
+			
+			<!-- Stahlmark interactions --> 
+			<container type="horizbox" hsp="expand" vsp="minimum" vertical_gutter="3" vertical_padding="2" horizontal_gutter="0" horizontal_padding="6" horizontal_margin="3">  	
+				<container type="vertbox" hsp="minimum" vsp="expand" hap="left" vertical_gutter="0" vertical_padding="0" >
+					<container type="horizbox" hsp="minimum" vsp="minimum" name="StahlmarkButtonContainer" />
+					<container type="horizbox" hsp="minimum" vsp="minimum"  hap="center" name="StahlmarkPointsNumberContainer" vertical_padding="5" horizontal_padding="10" solidfill="1" solidfillname="cecommDarkRoundPaper">
+						<tooltip width="195" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+							<container type="vertbox" hsp="fixed" fixed_width="195" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+								<container type="vertbox" hsp="minimum" vsp="minimum">
+									<label text="Stahlmark Diplomacy Points" state="tooltip_text"/>
+								</container>
+							</container>
+						</tooltip>
+					</container>
+				</container>
+				<container type="vertbox" hsp="expand" vsp="expand" hap="left" vertical_gutter="3" vertical_padding="5" horizontal_padding="10" name="StahlmarkVertBox2" solidfill="1" solidfillname="miniPaper">
+					<container type="vertbox" hsp="expand" vsp="expand" hap="center" horizontal_padding="3" vertical_padding="3" solidfill="1" solidfillname="cecommDarkRoundPaper" >
+						<label text="Stahlmark" hap="center" font="medium" />
+					</container>
+					<container type="horizbox" hsp="minimum" vsp="minimum" hap="center" horziontal_gutter="3" horizontal_padding="3" vertical_padding="5">
+						<container type="horizbox" hsp="minimum" vsp="minimum" name="StahlmarkStandingStaticTextContainer" >
+							<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+								<container type="vertbox" hsp="fixed" fixed_width="220" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+									<container name="StahlmarkStandingTooltipHorizbox" type="horizbox" vsp="minimum" hsp="minimum"/>
+									<container type="vertbox" hsp="minimum" vsp="minimum">
+										<label text="Above 33: Stahlmark is friendly" state="tooltip_text"/>
+										<label text="Below -33: Stahlmark is hostile" state="tooltip_text"/>
+									</container>
+								</container>
+							</tooltip>
+						</container>
+						<container type="vertbox" hsp="minimum" vsp="minimum" name="StahlmarkStandingNumberContainer" />
+					</container> 
+					<container name="stahlmarkMissionContainer" type="vertbox" hsp="expand" vsp="minimum" horizontal_gutter="3" horizontal_padding="5" vertical_gutter="3" />
+				</container>
+			</container>
+		
+			<!-- Novorus interactions-->
+			<container type="horizbox" hsp="expand" vsp="minimum" vertical_gutter="3" vertical_padding="2" horizontal_gutter="0" horizontal_padding="6" horizontal_margin="3">  	
+				<container type="vertbox" hsp="minimum" vsp="expand" hap="left" vertical_gutter="0" vertical_padding="0" >
+					<container type="horizbox" hsp="minimum" vsp="minimum" name="NovorusButtonContainer" />
+					<container type="horizbox" hsp="minimum" vsp="minimum"  hap="center" name="NovorusPointsNumberContainer" vertical_padding="5" horizontal_padding="10" solidfill="1" solidfillname="cecommDarkRoundPaper">
+						<tooltip width="185" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+							<container type="vertbox" hsp="fixed" fixed_width="185" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+								<container type="vertbox" hsp="minimum" vsp="minimum">
+									<label text="Novorus Diplomacy Points" state="tooltip_text"/>
+								</container>
+							</container>
+						</tooltip>
+					</container>
+				</container>
+				<container type="vertbox" hsp="expand" vsp="expand" hap="left" vertical_gutter="3" vertical_padding="5" horizontal_padding="10" name="NovorusVertBox2" solidfill="1" solidfillname="miniPaper">
+					<container type="vertbox" hsp="expand" vsp="expand" hap="center" horizontal_padding="3" vertical_padding="3" solidfill="1" solidfillname="cecommDarkRoundPaper" >
+						<label text="Novorus" hap="center" font="medium" />
+					</container>
+					<container type="horizbox" hsp="minimum" vsp="minimum" hap="center" horziontal_gutter="3" horizontal_padding="3" vertical_padding="5">
+						<container type="horizbox" hsp="minimum" vsp="minimum" name="NovorusStandingStaticTextContainer" >
+							<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+								<container type="vertbox" hsp="fixed" fixed_width="210" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+									<container name="NovorusStandingTooltipHorizbox" type="horizbox" vsp="minimum" hsp="minimum"/>
+									<container type="vertbox" hsp="minimum" vsp="minimum">
+										<label text="Above 33: Novorus is friendly" state="tooltip_text"/>
+										<label text="Below -33: Novorus is hostile" state="tooltip_text"/>
+									</container>
+								</container>
+							</tooltip>
+						</container>
+						<container type="vertbox" hsp="minimum" vsp="minimum" name="NovorusStandingNumberContainer" />
+					</container> 
+					<container name="novorusMissionContainer" type="vertbox" hsp="expand" vsp="minimum" horizontal_gutter="3" horizontal_padding="5" vertical_gutter="3" />
+				</container>
+			</container>	
+	  
+			<!-- Republique interactions-->
+			<container type="horizbox" hsp="expand" vsp="minimum" vertical_gutter="3" vertical_padding="2" horizontal_gutter="0" horizontal_padding="6" horizontal_margin="3">  	
+				<container type="vertbox" hsp="minimum" vsp="expand" hap="left" vertical_gutter="0" vertical_padding="0" >
+					<container type="horizbox" hsp="minimum" vsp="minimum" name="RepubliqueButtonContainer" />
+					<container type="horizbox" hsp="minimum" vsp="minimum"  hap="center" name="RepubliquePointsNumberContainer" vertical_padding="5" horizontal_padding="10" solidfill="1" solidfillname="cecommDarkRoundPaper">
+						<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+							<container type="vertbox" hsp="fixed" fixed_width="200" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+								<container type="vertbox" hsp="minimum" vsp="minimum">
+									<label text="Republique Diplomacy Points" state="tooltip_text"/>
+								</container>
+							</container>
+						</tooltip>
+					</container>
+				</container>
+				<container type="vertbox" hsp="expand" vsp="expand" hap="left" vertical_gutter="3" vertical_padding="5" horizontal_padding="10" name="RepubliqueVertBox2" solidfill="1" solidfillname="miniPaper">
+					<container type="vertbox" hsp="expand" vsp="expand" hap="center" horizontal_padding="3" vertical_padding="3" solidfill="1" solidfillname="cecommDarkRoundPaper" >
+						<label text="Republique" hap="center" font="medium" />
+					</container>
+					<container type="horizbox" hsp="minimum" vsp="minimum" hap="center" horziontal_gutter="3" horizontal_padding="3" vertical_padding="5">
+						<container type="horizbox" hsp="minimum" vsp="minimum" name="RepubliqueStandingStaticTextContainer" >
+							<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+								<container type="vertbox" hsp="fixed" fixed_width="240" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+									<container name="RepubliqueStandingTooltipHorizbox" type="horizbox" vsp="minimum" hsp="minimum"/>
+									<container type="vertbox" hsp="minimum" vsp="minimum">
+										<label text="Above 33: Republique are friendly" state="tooltip_text"/>
+										<label text="Below -33: Republique are hostile" state="tooltip_text"/>
+									</container>
+								</container>
+							</tooltip>
+						</container>
+						<container type="vertbox" hsp="minimum" vsp="minimum" name="RepubliqueStandingNumberContainer" />
+					</container> 
+					<container name="republiqueMissionContainer" type="vertbox" hsp="expand" vsp="minimum" horizontal_gutter="3" horizontal_padding="5" vertical_gutter="3" />
+				</container>
+			</container>	
+		
+		</container>
+		
+	</container>
+	
+	
+	<container type="horizbox" vsp="fixed" fixed_height="50" hsp="expand" horizontal_margin="15" solidfill="1" solidfillname="cecommPaperRoundInsideNoTop" vertical_padding="0" horizontal_padding="5" >
+		
+		<!-- row 1 -->
+		<container type="horizbox" hsp="expand" vsp="expand"
+				 horizontal_gutter="6"
+				 horizontal_margin="2" vertical_margin="0"
+				 horizontal_padding="6" vertical_padding="2">
+		
+			<!-- HP display -->
+			<container type="horizbox" hsp="minimum" vsp="expand"
+					 horizontal_padding="2"
+					 vertical_padding="2"
+					 vap="center" >
+				
+				<label text="HP:" vap="center"/>
+
+				<container type="horizbox"
+						 hsp="minimum" vsp="minimum"
+						  horizontal_padding="8"
+						  horizontal_margin="4" 
+						   vertical_padding="4"
+						   vertical_margin="8"
+						 solidfill="1" solidfillname="miniPaperRound">
+					
+					<container name="HPNumberContainer" type="horizbox" hsp="minimum" vsp="minimum" vap="center"/>
+					<label text="/" vap="center" />
+					<container name="HPMaxContainer" type="horizbox" hsp="minimum" vsp="minimum" vap="center"/>
+					
+				</container>
+				
+				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+					<container type="vertbox" hsp="fixed" fixed_width="200"
+							horizontal_padding="5" vertical_padding="5"
+							solidfill="1" solidfillname="glassBrassBorderDark" >
+						
+						<label text="Building Hitpoints" state="tooltip_text" hap="center"/>
+						<paragraph text="When a building reaches 0 HP, it is destroyed. Repair jobs are automatically created when a building is damaged and will be taken up by available Overseers." alignment="left" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</container>
+			
+			<!-- Altar count display -->
+			
+			<container type="horizbox" hsp="minimum" vsp="expand"
+					 horizontal_padding="2"
+					 vertical_padding="2"
+					 vap="center" >
+				
+				<label text="Desks:" vap="center"/>
+
+				<container type="horizbox"
+						 hsp="minimum" vsp="minimum"
+						  horizontal_padding="8"
+						  horizontal_margin="4" 
+						   vertical_padding="4"
+						   vertical_margin="8"
+						 solidfill="1" solidfillname="miniPaperRound">
+					
+					<container name="deskNumberContainer" type="horizbox" hsp="minimum" vsp="minimum" vap="center"/>
+					
+				</container>
+				
+				
+				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+					<container type="vertbox"
+							 hsp="fixed" fixed_width="200"
+							 horizontal_padding="5" vertical_padding="4"
+							 vertical_gutter="4"
+							 solidfill="1" solidfillname="glassBrassBorderDark">
+						
+						<container type="vertbox" hsp="fixed" fixed_width="200">
+							<paragraph text="Each worker in a Foreign Office needs a standing desk to work at." alignment="left" state="tooltip_text"/>
+						</container>
+					</container>
+				</tooltip>
+			</container>
+			
+		</container>
+		
+		<!-- Quality -->
+		<container type="horizbox"
+				 hsp="minimum" vsp="expand"
+				 horizontal_margin="8" vertical_margin="0"
+				 horizontal_padding="0" vertical_padding="0">
+			
+			<container type="vertbox" hsp="minimum" vsp="minimum" vap="center"
+					 horizontal_padding="8"
+					 hap="left">
+				
+				<label text="Quality:" vap="center" />
+			</container>
+			
+			<container type="vertbox" hsp="minimum" vsp="minimum" vap="center"
+						horizontal_padding="10" vertical_padding="4"
+						solidfill="1"  solidfillname="miniPaperRound">
+			
+				<container type="vertbox" hsp="minimum" vsp="minimum"
+						 vap="center"
+						 name="qualityNumberContainer" />
+						 
+			</container>
+	
+			<tooltip width="260" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+				<container type="vertbox" hsp="fixed" fixed_width="250" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+					<container type="horizbox" hsp="minimum" vsp="minimum">
+						<label text="Quality:" state="text" />
+						<container name="qualityDescriptionContainer"
+								 type="horizbox" hsp="minimum" vsp="minimum"
+								 vertical_padding="2" horizontal_padding="4"
+								 vap="center" />
+						
+					</container> 
+					<container type="vertbox" hsp="fixed" fixed_width="250">
+						<paragraph text="- Building Quality can range from -6 to +6" alignment="left" state="tooltip_text"/>
+						<paragraph text="- Work Modules reduce quality, while decor modules increase quality" alignment="left" state="tooltip_text"/>
+						<paragraph text="- High workplace quality makes colonists happy." alignment="left" state="tooltip_text"/>
+					</container>
+				</container>
+			</tooltip>
+		</container>
+	</container>
+	<container type="vertbox" hsp="fixed" fixed_width="400" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommBottomGlass" />
+
+</container>

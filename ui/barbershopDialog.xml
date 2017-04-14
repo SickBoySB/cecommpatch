@@ -1,0 +1,262 @@
+<container type="vertbox" hsp="expand" vsp="minimum" name="contentsVB">
+
+	<container type="horizbox"
+			hsp="expand" vsp="minimum"
+			horizontal_margin="15"
+			solidfill="1" solidfillname="cecommPaperRoundInsideNoBottom"
+			vertical_padding="0">
+		<container type="horizbox" vap="center" hap="center" vsp="minimum" hsp="minimum">
+			<imagebutton name="BuildingIcon" text="Building Icon"
+					   hsp="minimum" vsp="minimum"
+					   imageSkin="ui/orderIcons.xml" image="barbershop_image" imgPctX="80" imgPctY="80" vertical_margin="8">
+				
+				<tooltip width="120" height="1" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_padding="4" vertical_padding="4"
+							 solidfill="1" solidfillname="glassBrassBorderDark">
+						
+						<label name="buttonTooltipLabel" text="Focus on Building" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</imagebutton>
+			
+			<container type="vertbox" hsp="expand" vsp="expand" name="demolishBox" vertical_margin="4" horizontal_margin="5">
+				<container type="vertbox" hsp="expand" vsp="minimum"
+						 name="buildingFancyName" hap="center"
+						 horizontal_padding="2"/>
+						
+				<container type="vertbox" hsp="expand" vsp="minimum" name="workCrewSelectionBoxContainer"/>
+			</container>
+			
+			<imagebutton name="DemolishBuildingButton"
+					   text="Demolish Building"
+					   sfx="button_pneumatic"
+					   hsp="minimum" vsp="minimum" 
+				imageSkin="ui/orderIcons.xml" image="demolish_building" imgPctX="80" imgPctY="80" vertical_margin="8">
+				
+				<tooltip width="115" height="1" mouseRestDelay="0" followCursor="1">
+					<container type="vertbox" hsp="expand" vsp="expand"
+							 horizontal_padding="4" vertical_padding="4"
+							 solidfill="1" solidfillname="glassBrassBorderDark">
+						
+						<label name="buttonTooltipLabel" text="Demolish Building" vsp="center" state="tooltip_text"/>
+					</container>
+				</tooltip>        
+			</imagebutton>
+		</container>
+	</container>	
+	
+	<container type="vertbox" hsp="expand" vsp="minimum" solidfill="1" solidfillname="cecommWorkcrew">
+		<container type="vertbox" hsp="expand" vsp="fixed" fixed_height="12"/>
+		<container type="vertbox" hsp="fixed" vsp="fixed" fixed_height="45" fixed_width="300" hap="center" solidfill="1" solidfillname="cecommTopGlassLight">
+			<container name="workshiftContainer" type="vertbox"
+					hsp="fixed" fixed_width="279"
+					hap="center" vertical_padding="10" horizontal_padding="10" />
+		</container>
+		
+		<container type="vertbox"
+				 hsp="fixed" vsp="fixed"
+				 hap="center"
+				 horizontal_padding="4" vertical_padding="10"
+				 solidfill="1" solidfillname="cecommDarkRoundPaper" fixed_width="400" fixed_height="90" >
+			
+			<container type="horizbox" hsp="expand" vsp="expand" hap="center">
+					
+				<container type="vertbox" hsp="expand" vsp="minimum" hap="left"
+						vertical_padding="4" horizontal_padding="4"
+						horizontal_gutter="1" vap="center" >
+				</container>
+					
+				<container type="horizbox"	vsp="expand" hap="center" vap="center">
+					
+					<container type="vertbox" hap="center" vap="center" vsp="expand">
+						<container name="warningContainer" type="vertbox" hsp="minimum" vsp="minimum" vap="top" hap="center" />
+						<container type="vertbox" hap="center" vap="center" vsp="minimum">
+							<container type="horizbox" hap="center">
+							
+								<container type="horizbox" hsp="minimum" vsp="minimum"
+										 horizontal_padding="4" horizontal_margin="1"
+										 vertical_padding="4" vertical_margin="2"
+										 solidfill="1" solidfillname="miniPaperLighter"
+										 vap="center">
+									
+									<label text="Medical:" vap="center" horizontal_margin="4"/>
+									<image hsp="minimum" vsp="minimum" scale="50"
+										  skin="ui\\commodityIcons.xml" image="medical_bag" vap="center"/>
+									<label text="x" vap="center"/>
+									<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints1Container" vap="center"/>
+									
+									<tooltip width="300" height="1" mouseRestDelay="0" followCursor="1">
+										<container type="vertbox" hsp="expand" vsp="minimum"
+												 horizontal_padding="6" vertical_padding="6"
+												 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
+											
+											<label text="Medical Supply Uses" hap="center" state="tooltip_text"/>
+											<paragraph text="Medical Supplies, made in a Chemical Works, are required to perform healing. This number shows how times the Barber can heal people. Workers will resupply the Barbershop if supplies run low." state="tooltip_small"/>
+										</container>
+									</tooltip>
+								</container>
+								
+								<container type="horizbox" hsp="minimum" vsp="minimum"
+										 horizontal_padding="4" horizontal_margin="1"
+										 vertical_padding="4" vertical_margin="2"
+										 solidfill="1" solidfillname="miniPaperLighter"
+										 vap="center">
+									
+									<label text="Tonic:" vap="center" horizontal_margin="4"/>
+									<image hsp="minimum" vsp="minimum" scale="50"
+										  skin="ui\\commodityIcons.xml" image="sulphur_tonic_bottle" vap="center"/>
+									<label text="x" vap="center"/>
+									<container type="horizbox" hsp="minimum" vsp="minimum" name="workPoints2Container" vap="center"/>
+									
+									<tooltip width="300" height="140" mouseRestDelay="0" followCursor="1">
+										<container type="vertbox" hsp="expand" vsp="minimum"
+												 horizontal_padding="6" vertical_padding="6"
+												 solidfill="1" solidfillname="glassBrassBorderDarkMoreOpaque" >
+											
+											<label text="Sulphur Tonic Uses" hap="center" state="tooltip_text"/>
+											<paragraph text="Sulphur Tonic, made in a Chemical Works, doubles the Barber's healing power and makes the healing process pleasant (rather than painful). Sulphur Tonic is not required for the Barber to work, it just makes the experience better for all involved. Workers will resupply the office if these run low." state="tooltip_small"/>
+										</container>
+									</tooltip>
+								</container>
+							
+							</container>
+						</container>
+						<container name="workPointsStatusContainer" type="vertbox" hsp="fixed" fixed_width="150" vsp="minimum" vap="bottom" hap="center" />
+					</container>
+					
+				</container>
+				
+				<container type="vertbox" hsp="minimum" vsp="minimum"
+						vertical_padding="0" horizontal_padding="2"
+						horizontal_gutter="2" vertical_margin="-2"
+						hap="right">
+					
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="supplyControlContainer1" />
+					<container type="vertbox" hsp="minimum" vsp="minimum" name="supplyControlContainer2" />
+				</container>
+				
+			</container>
+			
+		</container>
+		
+	</container>
+	
+	<container type="horizbox" vsp="fixed" fixed_height="50" hsp="expand" horizontal_margin="15" solidfill="1" solidfillname="cecommPaperRoundInsideNoTop" vertical_padding="0" horizontal_padding="5" >
+		
+		<!-- row 1 -->
+		<container type="horizbox" hsp="expand" vsp="expand"
+				 horizontal_gutter="6"
+				 horizontal_margin="2" vertical_margin="0"
+				 horizontal_padding="6" vertical_padding="2">
+		
+			<!-- HP display -->
+			<container type="horizbox" hsp="minimum" vsp="expand"
+					 horizontal_padding="2"
+					 vertical_padding="2"
+					 vap="center" >
+				
+				<label text="HP:" vap="center"/>
+
+				<container type="horizbox"
+						 hsp="minimum" vsp="minimum"
+						  horizontal_padding="8"
+						  horizontal_margin="4" 
+						   vertical_padding="4"
+						   vertical_margin="8"
+						 solidfill="1" solidfillname="miniPaperRound">
+					
+					<container name="HPNumberContainer" type="horizbox" hsp="minimum" vsp="minimum" vap="center"/>
+					<label text="/" vap="center" />
+					<container name="HPMaxContainer" type="horizbox" hsp="minimum" vsp="minimum" vap="center"/>
+					
+				</container>
+				
+				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+					<container type="vertbox" hsp="fixed" fixed_width="200"
+							horizontal_padding="5" vertical_padding="5"
+							solidfill="1" solidfillname="glassBrassBorderDark" >
+						
+						<label text="Building Hitpoints" state="tooltip_text" hap="center"/>
+						<paragraph text="When a building reaches 0 HP, it is destroyed. Repair jobs are automatically created when a building is damaged and will be taken up by available Overseers." alignment="left" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</container>
+			
+			<!-- Chair count display -->
+			
+			<container type="horizbox" hsp="minimum" vsp="expand"
+					 horizontal_padding="2"
+					 vertical_padding="2"
+					 vap="center" >
+				
+				<label text="Chairs:" vap="center"/>
+
+				<container type="horizbox"
+						 hsp="minimum" vsp="minimum"
+						  horizontal_padding="8"
+						  horizontal_margin="4" 
+						   vertical_padding="4"
+						   vertical_margin="8"
+						 solidfill="1" solidfillname="miniPaperRound">
+					
+					<container name="chairNumberContainer" type="horizbox" hsp="minimum" vsp="minimum" vap="center"/>
+					
+				</container>
+				
+				<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+					<container type="vertbox" hsp="fixed" fixed_width="200"
+							horizontal_padding="5" vertical_padding="5"
+							solidfill="1" solidfillname="glassBrassBorderDark" >
+						<paragraph text="The Barbershop requires that patients have chairs to sit in while undergoing treatment." alignment="left" state="tooltip_text"/>
+					</container>
+				</tooltip>
+			</container>
+			
+		</container>
+		
+		<!-- Quality -->
+		<container type="horizbox"
+				 hsp="minimum" vsp="expand"
+				 horizontal_margin="8" vertical_margin="0"
+				 horizontal_padding="0" vertical_padding="0">
+			
+			<container type="vertbox" hsp="minimum" vsp="minimum" vap="center"
+					 horizontal_padding="8"
+					 hap="left">
+				
+				<label text="Quality:" vap="center" />
+			</container>
+			
+			<container type="vertbox" hsp="minimum" vsp="minimum" vap="center"
+						horizontal_padding="10" vertical_padding="4"
+						solidfill="1"  solidfillname="miniPaperRound">
+			
+				<container type="vertbox" hsp="minimum" vsp="minimum"
+						 vap="center"
+						 name="qualityNumberContainer" />
+						 
+			</container>
+	
+			<tooltip width="260" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
+				<container type="vertbox" hsp="fixed" fixed_width="250" horizontal_padding="4" vertical_padding="4" vertical_gutter="4" solidfill="1" solidfillname="glassBrassBorderDark">
+					<container type="horizbox" hsp="minimum" vsp="minimum">
+						<label text="Building Quality:" state="text" />
+						<container name="qualityDescriptionContainer"
+								 type="horizbox" hsp="minimum" vsp="minimum"
+								 vertical_padding="2" horizontal_padding="4"
+								 vap="center" />
+						
+					</container> 
+					<container type="vertbox" hsp="fixed" fixed_width="250">
+						<paragraph text="- Building Quality can range from -6 to +6" alignment="left" state="tooltip_text"/>
+						<paragraph text="- Work Modules reduce quality, while decor modules increase quality" alignment="left" state="tooltip_text"/>
+						<paragraph text="- High workplace quality makes colonists happy." alignment="left" state="tooltip_text"/>
+					</container>
+				</container>
+			</tooltip>
+		</container>
+	</container>
+	<container type="vertbox" hsp="fixed" fixed_width="400" hap="center" vsp="fixed" fixed_height="20" vertical_padding="6" vertical_gutter="3" horizontal_padding="4" solidfill="1" solidfillname="cecommBottomGlass" />
+	
+</container>

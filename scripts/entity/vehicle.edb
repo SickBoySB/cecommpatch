@@ -31,7 +31,7 @@ Entity {
 }
 
 Entity {
-	name = "SK-1 Steam Knight",
+	name = "MK-1 Steam Knight",
 	type = "vehicle",
 	model = "models/vehicles/steamKnight.upm",
 	colours = {"usual"},
