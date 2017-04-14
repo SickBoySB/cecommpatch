@@ -3,6 +3,8 @@ gameobject "citizen" inherit "ai_agent"
 
 	local
 	<<
+		local is_it_nighttime = false
+	
 		function makeMemory(memoryName, memoryDescription, otherName, otherObject, otherObjectKey)
 			
 			if SELF.tags.selenian_infested then
@@ -536,11 +538,87 @@ gameobject "citizen" inherit "ai_agent"
 		send("rendOdinCharacterClassHandler",
 				"odinRendererSetDescriptionParagraph",
 				state.renderHandle,
-				parsedParagraph)
+				parsedParagraph)		
 		tmLeave()
 
 	end
+	
+	function check_for_night_optimized(v)
+		-- this is a weird function. my intention is to only allow the live folks to trigger shift info, and only once without using a ton of queries
+		-- function is triggered by LIVING colonists only, in newWorkShift
+		is_it_nighttime = v
+	end
+	
+	function character_doSpectreCheck()
 
+		--tmEnter("character three second update")
+						
+		-- let's try doing spectres here instead
+		if SELF.tags.dead and not SELF.tags.last_rights_performed then
+		
+			if is_it_nighttime and not SELF.tags.did_spectre_check then
+				SELF.tags.did_spectre_check = true
+				local ghostChance = 2
+				
+				if state.murderer and SELF.tags.murder_avenged then
+					ghostChance = ghostChance +1
+				elseif state.murderer and not SELF.tags.murder_avenged then
+					ghostchance = ghostChance + 8
+				end
+				
+				if not SELF.tags.buried or
+					SELF.tags.occult_mark_death then
+					ghostChance = ghostChance + 5
+				end
+				
+				if rand(1,100) < ghostChance then  -- rand(1,100)
+						
+					-- maybe spawn a ghost.
+					-- ghostgoals
+					-- ghostchance
+					-- unburied
+					-- if murdered
+					-- (and killer still alive)
+					
+					local goal = "haunting"
+					if state.murderer and
+						not SELF.tags.murder_avenged then
+						goal = "vengeance"
+					elseif not SELF.tags.buried then
+						goal = "burial"
+					end
+					
+					local spawnTable = {legacyString = "Spectre",
+									name = state.AI.name,
+									goal = goal }
+					
+					local handle = query( "scriptManager",
+										"scriptCreateGameObjectRequest",
+										"spectre",
+										spawnTable )[1]
+								
+					send(handle,
+						"GameObjectPlace",
+						state.AI.position.x,
+						state.AI.position.y  )
+					
+					state.mySpectre = handle
+					send(state.mySpectre,"registerOwner",SELF)
+					if goal == "vengeance" and state.murderer then
+						send(state.mySpectre,"registerHauntingTarget",state.murderer)
+					end
+				end
+			else
+				if not is_it_nighttime then
+					SELF.tags.did_spectre_check = nil
+				end
+			end
+		end
+		
+		--tmLeave()
+	end
+	
+	
 	-- This update occurs once per game second.
 	function character_doSecondUpdate()
 		
@@ -3356,19 +3434,24 @@ gameobject "citizen" inherit "ai_agent"
 		if state.AI.bools["dead"] then
 			if not SELF.tags["buried"] then
 				send(SELF,"corpseUpdate")
-				
-				--[[
-				-- FOR TESTING
-				if not SELF.tags["deadanddeactive"] then
-				
-					SELF.tags["deadanddeactive"] = true
-					
-				end
-				
-				]]--
 			else
 				disable_buried_corpses() -- ai_agent.go function
-			end			
+			end
+			
+			if not SELF.tags.last_rites_performed then
+				-- double check that the dead's updateTimer is still running
+				if state.AI.ints.updateTimer then
+					state.AI.ints.updateTimer = state.AI.ints.updateTimer +1
+				else
+					state.AI.ints.updateTimer = rand(1,9)
+				end
+			
+				if state.AI.ints.updateTimer % 30 == 0 then
+					--printl("CECOMMPATCH - doSpectreCheck")
+					character_doSpectreCheck()
+					state.AI.ints.updateTimer = 0
+				end
+			end
 			
 			return
 		end
@@ -5566,21 +5649,16 @@ gameobject "citizen" inherit "ai_agent"
 					send(SELF,"HandleInteractiveMessage","Bury Corpse (player order)",nil)
 				end
 			end
-			
-			-- shift 7 is the only one that has stuff that the dead would use in it
-			if shiftNumber == 7 then
-				send(SELF,"Nightfall")
-			end
-			
 			return
 		end
 
 		if SELF.tags.middle_class then
 			recalcShiftLength()
 		end
-
+		
 		-- Do time-based updates.
 		if shiftNumber == 1 then
+			check_for_night_optimized(false)
 			send(SELF,"ToSunrise")
 			
 			if state.AI.ints.tiredness > 0 and state.lastSleepDay < query("gameSession","getSessionInt","dayCount")[1] then
@@ -5588,20 +5666,25 @@ gameobject "citizen" inherit "ai_agent"
 			end
 		
 		elseif shiftNumber == 2 then
+			check_for_night_optimized(false)
 			-- might as well do this more often.
 			send(SELF,"updateSafetyQoL")
 		elseif shiftNumber == 3 then
+			check_for_night_optimized(false)
 			-- noon!
 			send(SELF,"updateWorkQoL")
 		elseif shiftNumber == 4 then
+			check_for_night_optimized(false)
 			if state.AI.strs["citizenClass"] == "Vicar" then
 				SELF.tags["can_preach"] = true
 			end
 		elseif shiftNumber == 6 then
+			check_for_night_optimized(false)
 			send(SELF,"ToDusk")
 			-- dusk? why not.
 			send(SELF,"updateSafetyQoL")
 		elseif shiftNumber == 7 then
+			check_for_night_optimized(true)
 			send(SELF,"Nightfall")
 			send(SELF,"updateWorkQoL")
 		elseif shiftNumber == 8 then

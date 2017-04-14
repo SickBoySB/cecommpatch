@@ -10,8 +10,12 @@ gameobject "spectre" inherit "ai_agent"
 				if not query("gameSession", "getSessionBool", "isNight")[1] then
 					send(SELF,"despawn")
 				elseif state.owner then
-					if query(state.owner,"getTags")[1].buried then
+					if query(state.owner,"getTags")[1].last_rites_performed then
 						send(SELF,"despawn")
+					elseif SELF.tags["spectre_burial"] then
+						if query(state.owner,"getTags")[1].buried then
+							send(SELF,"despawn")
+						end
 					end
 				elseif SELF.tags["spectre_vengeance"] and
 					SELF.tags.spectre_has_haunt_target and
