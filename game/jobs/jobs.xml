@@ -6989,6 +6989,105 @@
 		</fsm>
 	</job>
 
+	<job name="Drink Tea at Home (labourer)"
+		display_name="Drink Tea at Home (Off-shift)"
+			mandatory_eval="1"
+			interruptee_type="2" 
+			interrupter_type="1" 
+			is_social="1"
+			icon_skin="ui\thoughtIcons.xml" 
+			icon="beer_mug">
+
+		<require_not_sitting/>
+		<require_empty_hands/>
+		<require_character_not_on_shift/>
+		<require_character_has_tag tag="lower_class" />
+		<require_character_has_no_tag tag="drank_today" do_not_fill_dependency="1" />
+		
+		<require_building input="building"
+					   tag="lower_class_house"
+					   must_lock="0"/>
+		
+		<require_building_module input="chair"
+							for_building="building"
+							tag="sittable"
+							not_tag="occupied,module_disabled,under_construction"
+							must_lock="1"/>
+    
+		<utility min="0" max="30">
+			<base_job_utility weight="5"/>
+		</utility>
+		<fsm>
+			<house_drink_tea_in_chair input="chair"/>
+		</fsm>
+	</job>
+
+	<job name="Drink Tea at Home (overseer)"
+		display_name="Drink Tea at Home (Off-shift)"
+			mandatory_eval="1"
+			interruptee_type="2" 
+			interrupter_type="1" 
+			is_social="1"
+			icon_skin="ui\thoughtIcons.xml" 
+			icon="beer_mug">
+
+		<require_not_sitting/>
+		<require_empty_hands/>
+		<require_character_not_on_shift/>
+		<require_character_has_tag tag="middle_class" />
+		<require_character_has_no_tag tag="drank_today" do_not_fill_dependency="1" />
+		
+		<require_building input="building"
+					   tag="middle_class_house"
+					   must_lock="0"/>
+		
+		<require_building_module input="chair"
+							for_building="building"
+							tag="sittable"
+							not_tag="occupied,module_disabled,under_construction"
+							must_lock="1"/>
+    
+		<utility min="0" max="30">
+			<base_job_utility weight="5"/>
+		</utility>
+		<fsm>
+			<house_drink_tea_in_chair input="chair"/>
+		</fsm>
+	</job>
+
+	<job name="Drink Tea at Home (aristocrat)"
+		display_name="Drink Tea at Home (Off-shift)"
+			mandatory_eval="1"
+			interruptee_type="2" 
+			interrupter_type="1" 
+			is_social="1"
+			icon_skin="ui\thoughtIcons.xml" 
+			icon="beer_mug">
+
+		<require_not_sitting/>
+		<require_empty_hands/>
+		<require_character_not_on_shift/>
+		<require_character_has_tag tag="upper_class" />
+		<require_character_has_no_tag tag="drank_today" do_not_fill_dependency="1" />
+		
+		<require_building input="building"
+					   tag="upper_class_house"
+					   must_lock="0"/>
+		
+		<require_building_module input="chair"
+							for_building="building"
+							tag="sittable"
+							not_tag="occupied,module_disabled,under_construction"
+							must_lock="1"/>
+    
+		<utility min="0" max="30">
+			<base_job_utility weight="5"/>
+		</utility>
+		<fsm>
+			<house_drink_tea_in_chair input="chair"/>
+		</fsm>
+	</job>
+
 	<job name="Get Tea in Pub"
 		display_name="Get Tea in Pub (Off-shift)"
 			mandatory_eval="1"
