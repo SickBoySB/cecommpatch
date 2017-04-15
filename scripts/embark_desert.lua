@@ -34,22 +34,23 @@ end
 -- need some accessible hunting at game start
 local animals_to_spawn = { [1] = {["legacyString"]="Beetle"}, [2] = {["legacyString"]="Desert Fox"} }
 
-spawnGameobject( 250, 210, "herd", animals_to_spawn[rand(1,#animals_to_spawn)])
-spawnGameobject( 250, 300, "herd", animals_to_spawn[rand(1,#animals_to_spawn)])
-
+--spawnGameobject( 250, 210, "herd", animals_to_spawn[rand(1,#animals_to_spawn)])
+--spawnGameobject( 250, 300, "herd", animals_to_spawn[rand(1,#animals_to_spawn)])
+spawnGameobject( rand(20,235), rand(20,235), "herd", animals_to_spawn[rand(1,#animals_to_spawn)])
+spawnGameobject( rand(20,235), rand(20,235), "herd", animals_to_spawn[rand(1,#animals_to_spawn)])
 
 -- load in some more Obeliskians! Fun fun fun.
 
 local x_max = 255
 local y_max = 255
 
-spawnGameobject( 	rand(8, math.floor(x_max *0.4) - 4),
-				rand(8,y_max - 16),
+spawnGameobject( 	rand(20, math.floor(x_max *0.4) - 4),
+				rand(20,y_max - 20),
 				"objectcluster",
 				{ legacyString="Obeliskian Cluster" } )
 		
-spawnGameobject( 	rand(8,x_max - 16),
-				rand(8, math.floor(y_max *0.4) - 4),
+spawnGameobject( 	rand(20,x_max - 20),
+				rand(20, math.floor(y_max *0.4) - 4),
 				"objectcluster",
 				{ legacyString="Obeliskian Cluster" } )
 

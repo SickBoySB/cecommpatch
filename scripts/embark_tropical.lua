@@ -30,10 +30,12 @@ end
 
 -- need some accessible hunting at game start
 local animals_to_spawn = { [1] = {["legacyString"]="Junglefowl"}, [2] = {["legacyString"]="Giant Beetle"} }
-spawnGameobject( 250, 210, "herd", animals_to_spawn[ rand(1,#animals_to_spawn) ])
-spawnGameobject( 250, 300, "herd", animals_to_spawn[ rand(1,#animals_to_spawn) ])
+--spawnGameobject( 250, 210, "herd", animals_to_spawn[ rand(1,#animals_to_spawn) ])
+--spawnGameobject( 250, 300, "herd", animals_to_spawn[ rand(1,#animals_to_spawn) ])
+spawnGameobject( rand(20,235), rand(20,235), "herd", animals_to_spawn[rand(1,#animals_to_spawn)])
+spawnGameobject( rand(20,235), rand(20,235), "herd", animals_to_spawn[rand(1,#animals_to_spawn)])
 
-local spawnLocs = {
+--[[local spawnLocs = {
 				[1] = {x=255,y=96, w=128, h=32 },
 				[2] = {x=384,y=128, w=32, h=255},
 				[3] = {x=255,y=384, w=128, h=32 },
@@ -45,4 +47,8 @@ for i=1,9 do
 				   y = rand(spawnBox.y, spawnBox.y + spawnBox.h) }
 	
 	spawnGameobject(spawnLoc.x,spawnLoc.y,"animal", {legacyString="Deathwurm"})
+end]]--
+
+for i=1,9 do
+	spawnGameobject(rand(20,235),rand(20,235),"animal", {legacyString="Deathwurm"})
 end

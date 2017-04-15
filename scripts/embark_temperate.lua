@@ -31,6 +31,8 @@ end
 
 -- need some accessible hunting at game start
 local animals_to_spawn = { [1] = {["legacyString"]="Aurochs"}, [2] = {["legacyString"]="Dodo"} }
-spawnGameobject( 250, 210, "herd", animals_to_spawn[rand(1,#animals_to_spawn)])
-spawnGameobject( 250, 300, "herd", animals_to_spawn[rand(1,#animals_to_spawn)])
+--spawnGameobject( 250, 210, "herd", animals_to_spawn[rand(1,#animals_to_spawn)])
+--spawnGameobject( 250, 300, "herd", animals_to_spawn[rand(1,#animals_to_spawn)])
+spawnGameobject( rand(20,235), rand(20,235), "herd", animals_to_spawn[rand(1,#animals_to_spawn)])
+spawnGameobject( rand(20,235), rand(20,235), "herd", animals_to_spawn[rand(1,#animals_to_spawn)])
 send("gameSession", "setSessionBool", "maize_technology_unlocked", true) --gotta manually unlock it!
