@@ -20,6 +20,12 @@ for cropName, stats in pairs( cropTable ) do
 end
 
 function spawnGameobject( x, y, objectType, objectTable )
+	if x > 235 then x = 235 end
+	if x < 20 then x = 20 end
+	
+	if y > 235 then y = 235 end
+	if y < 20 then y = 20 end
+	
 	local createResults = query("scriptManager",
 						   "scriptCreateGameObjectRequest",
 						   objectType,
@@ -44,13 +50,13 @@ spawnGameobject( rand(20,235), rand(20,235), "herd", animals_to_spawn[rand(1,#an
 local x_max = 255
 local y_max = 255
 
-spawnGameobject( 	rand(20, math.floor(x_max *0.4) - 4),
-				rand(20,y_max - 20),
+spawnGameobject( 	rand(20, 98),
+				rand(20,235),
 				"objectcluster",
 				{ legacyString="Obeliskian Cluster" } )
 		
-spawnGameobject( 	rand(20,x_max - 20),
-				rand(20, math.floor(y_max *0.4) - 4),
+spawnGameobject( 	rand(20,235),
+				rand(20, 98),
 				"objectcluster",
 				{ legacyString="Obeliskian Cluster" } )
 

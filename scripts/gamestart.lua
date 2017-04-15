@@ -473,11 +473,11 @@ send("gameSession", "setSessionInt", "UCHousesProduced", 0)
 
 function spawnGameobject( x, y, objectType, objectTable )
 
-	if x > x_max - 4 then x = x_max - 4 end
-	if x < 4 then x = 4 end
+	if x > x_max - 20 then x = x_max - 20 end
+	if x < 20 then x = 20 end
 	
-	if y > y_max - 4 then y = y_max - 4 end
-	if y < 4 then y = 4 end
+	if y > y_max - 20 then y = y_max - 20 end
+	if y < 20 then y = 20 end
 
 	local createResults = query("scriptManager",
 						   "scriptCreateGameObjectRequest",

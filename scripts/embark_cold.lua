@@ -21,6 +21,12 @@ for cropName, stats in pairs( cropTable ) do
 end
 
 function spawnGameobject( x, y, objectType, objectTable )
+	if x > 235 then x = 235 end
+	if x < 20 then x = 20 end
+	
+	if y > 235 then y = 235 end
+	if y < 20 then y = 20 end
+	
 	local createResults = query( "scriptManager", "scriptCreateGameObjectRequest", objectType, objectTable )
 	local handle = createResults[1]
 	if handle ~= nil then
