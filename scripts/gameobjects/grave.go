@@ -283,7 +283,16 @@ gameobject "grave"
                     "ui//tooltips//groundItemTooltipDetailed.xml",
                     tooltipTitle,
                     tooltipDescription)
-
+					
+		if results then
+			state.owner = results[1]
+			if grave_who_tags["citizen"] then
+				SELF.tags["citizen_grave"] = true
+			end
+			if grave_who_tags["last_rites_performed"] then
+				SELF.tags["last_rites_performed"] = true
+			end
+		end	
 	>>
 
 	receive Update()
@@ -313,4 +322,20 @@ gameobject "grave"
 		return "gridReportedPosition", state.position
 	>>
 	
+	receive registerOwner( gameObjectHandle owner)
+	<<
+		state.owner = owner
+	>>
+	
+	receive addTag( string name )
+	<<
+		SELF.tags[name] = true
+	>>
+	
+	receive tagOwner()
+	<<
+		if state.owner then
+			send(state.owner,"addTag", "last_rites_performed")
+		end
+	>>
 >>

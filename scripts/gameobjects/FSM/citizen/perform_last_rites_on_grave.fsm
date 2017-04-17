@@ -1,0 +1,94 @@
+perform_last_rites_on_grave = {
+	["start"] = function(state,tag,name)
+		
+		-- check if building has supplies at all AGAIN; abort if not. Consume if yes.
+		local overseer = false
+		if state.AI.strs["socialClass"] == "lower" then
+			overseer = query("gameBlackboard","gameObjectGetOverseerMessage",state.AI.currentWorkParty)[1]
+		else
+			overseer = SELF
+		end
+		
+		if not overseer then
+			return "abort", true
+		end
+		
+		local building = query(overseer,"getClaimedWorkBuilding")[1]
+		if building then
+			local building_tags = query(building,"getTags")[1]
+			if building_tags.no_supplies1 == true then
+				printl("ai_agent", "WARNING 2: " .. state.AI.name .. " attempted to do preaching but office was out of supplies")
+				return "abort", true
+			else
+				send(building,"consumeSupplies",1,1) -- tier / count
+			end
+		else
+			printl("ai_agent", "WARNING 2: " .. state.AI.name .. " attempted to do preaching but office was out of supplies")
+			return "abort", true
+		end
+		
+		
+		state.AI.bools["canBeSocial"] = false
+		
+		local animName = "bless" 
+		send("rendOdinCharacterClassHandler",
+				"odinRendererSetCharacterAnimationMessage",
+				state.renderHandle,
+				animName,
+				true)
+			-- true) -- for idling at the end of anim
+		
+          state.AI.animationTickCount = animationLength(state.animSet, animName)
+		
+		return "animating1"
+	end,
+
+	["animating1"] = function(state,tag,name)
+		state.AI.animationTickCount = state.AI.animationTickCount - 1
+		if state.AI.animationTickCount <= 0 then
+
+			send(tag.target,"addTag","last_rites_performed")
+			send(tag.target,"tagOwner")
+			
+			local bodyname = "a buried colonist" --query(tag.target,"getName")[1]
+			
+			send(SELF,
+				"makeMemory",
+				"Performed Last Rites",
+				nil,
+				bodyname,
+				nil,
+				nil )
+		
+			local results = query("gameSpatialDictionary",
+							  "allObjectsInRadiusWithTagRequest",
+							  state.AI.position,
+							  8,
+							  "citizen",
+							  true)
+			if results then	
+				send(results[1],
+					"makeMemory",
+					"Witnessed Last Rites Performed",
+					nil,
+					bodyname,
+					nil,
+					nil )
+			end
+			
+			return "final"
+		end
+		
+		return "animating1"
+	end,
+
+	["final"] = function(state,tag,name) 
+		state.AI.bools["canBeSocial"] = true
+
+	end,
+
+	["abort"] = function(state, tag	)
+	   	state.AI.bools["canBeSocial"] = true
+		return
+	end
+}

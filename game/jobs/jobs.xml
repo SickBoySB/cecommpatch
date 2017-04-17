@@ -2260,6 +2260,40 @@
 				<perform_last_rites input="body" />
 			</fsm>
 		</job>
+		
+		<job name="Perform Last Rites (grave)"
+			display_name="Perform Last Rites"
+			mandatory_eval="1"
+			interruptee_type="1" interrupter_type="0"
+			icon_skin="ui\orderIcons.xml"
+			icon="chapel"
+			filter="workshop">
+
+			<require_not_sitting/>
+			<require_empty_hands/>
+			<require_character_on_shift/>
+			
+			<require_work_building input="building"
+							   failure_reason="Requires work building."
+							   not_tag="no_supplies1"
+							   must_lock="0" />
+			
+			<require_gameobject range="30"
+							tag="grave,citizen_grave"
+							not_tag="last_rites_performed"
+							input="grave"
+							closest="1"
+							failure_reason="Requires available body."
+							must_lock="0"/>
+			
+			<utility>
+				<base_job_utility weight="20"/>
+			</utility>
+			<fsm>
+				<walk_to input="grave"/>
+				<perform_last_rites_on_grave input="grave" />
+			</fsm>
+		</job>
 
 		<job name="Wander in Chapel" display_name="Wander in Chapel"
 			mandatory_eval="1"
