@@ -7048,8 +7048,8 @@
 							not_tag="occupied,module_disabled,under_construction"
 							must_lock="1"/>
     
-		<utility min="0" max="30">
-			<base_job_utility weight="5"/>
+		<utility min="0" max="10">
+			<base_job_utility weight="3"/>
 		</utility>
 		<fsm>
 			<house_drink_tea_in_chair input="chair"/>
@@ -7081,8 +7081,8 @@
 							not_tag="occupied,module_disabled,under_construction"
 							must_lock="1"/>
     
-		<utility min="0" max="30">
-			<base_job_utility weight="5"/>
+		<utility min="0" max="10">
+			<base_job_utility weight="3"/>
 		</utility>
 		<fsm>
 			<house_drink_tea_in_chair input="chair"/>
@@ -7114,8 +7114,8 @@
 							not_tag="occupied,module_disabled,under_construction"
 							must_lock="1"/>
     
-		<utility min="0" max="30">
-			<base_job_utility weight="5"/>
+		<utility min="0" max="10">
+			<base_job_utility weight="3"/>
 		</utility>
 		<fsm>
 			<house_drink_tea_in_chair input="chair"/>

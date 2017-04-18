@@ -132,7 +132,7 @@ house_drink_tea_in_chair = {
 			--local pb = query(tag.target,"getParentBuilding")[1]
 			--local drinktype = query(pb,"getPubDrinkType")[1]
 			
-			send(SELF,"makeMemory","Had a Cup of Tea",nil,nil,nil,nil)
+			send(SELF,"makeMemory","Had a Cuppa",nil,nil,nil,nil)
 			
 			-- add new record
 			table.insert(state.drinkrecord, 1, 1 )
