@@ -38,39 +38,106 @@ gameobject "flatten_zone"
 		state.position.x = originX
 		state.position.y = originY
 		
-		state.targetHeight = query("gameSpatialDictionary", "gridGetHeight", state.position)[1];
-
-		state.flattenSquares = {};
-
-		local results = query("gameBlackboard",
-					 "gameObjectNewAssignmentMessage",
-					 SELF,
-					 "Flatten Terrain",
-					 "flattening",
-					 "construction")
+		-- CECOMMPATCH 
+		-- this block fixes crashes from flattening terrain on the edge of the map by preventing flattening jobs from occurring there
+		-- some intelligent resizing of the job occurs so that only valid areas are selected (rather than just refusing the job entirely)
 		
-		state.assignment = results[1]		
-		state.renderHandle = SELF.id;
-		send("gameBlackboard", "SetAssignmentFlatteningInformation", state.assignment, x, y, w, h, state.targetHeight);
+		local l_min = 5
+		local l_max = 250
+		
+		local newsx = state.x
+		local newsy = state.y
+		local newx = x
+		local newy = y
+		local neww = w
+		local newh = h
 
-		send("rendBeaconClassHandler",
-			"CreateAssignmentBeacon",
-			state.assignment,
-			"flatten_icon",
-			"ui\\thoughtIcons.xml",
-			"ui\\thoughtIconsGray.xml",
-			4)
-				 
-		for i = 0,w do
-			for j = 0,h do
-				gp = gameGridPosition:new()
-				gp.x = state.x + i
-				gp.y = state.y + j
+		-- change x if needed
+		if state.x < l_min then
+			newsx = l_min
+			newx = l_min
+		elseif state.x > l_max then
+			newsx = l_max
+			newx = l_max
+		end
+		
+		neww = w - (math.abs(state.x - newsx))
+		
+		if newsx + neww > l_max then
+			neww = l_max - newsx
+		end
+		
+		-- now do the same for y
+		if state.y < l_min then
+			newsy = l_min
+			newy = l_min
+		elseif state.y > l_max then
+			newsy = l_max
+			newy = l_max
+		end
+		
+		newh = h - (math.abs(state.y - newsy))
+		
+		if newsy + newh > l_max then
+			newh = l_max - newsy
+		end
+		
+		
+		if (newsx > state.x + w) or 
+			(newsx + neww > state.x + w) or
+			(neww < 1) then
+			neww = 0 -- no valid spots
+		end
+		
+		if (newsy > state.y + h) or 
+			(newsy + newh > state.y + h) or
+			(newh < 1) then
+			 newh = 0 -- no valid spots
+		end
+		
+		state.x = newsx
+		state.y = newsy
+		x = newx
+		y = newy
+		w = neww
+		h = newh
+		-- /CECOMMPATCH FIX
+		if neww > 0 and newh > 0 then
+		
+			state.targetHeight = query("gameSpatialDictionary", "gridGetHeight", state.position)[1];
 
-				send("rendBeaconClassHandler",
-					"AddPositionToAssignmentBeacon",
-					state.assignment,
-					gp.x,gp.y)
+			state.flattenSquares = {};
+
+			local results = query("gameBlackboard",
+						 "gameObjectNewAssignmentMessage",
+						 SELF,
+						 "Flatten Terrain",
+						 "flattening",
+						 "construction")
+			
+			state.assignment = results[1]		
+			state.renderHandle = SELF.id;
+			send("gameBlackboard", "SetAssignmentFlatteningInformation", state.assignment, x, y, w, h, state.targetHeight);
+
+			send("rendBeaconClassHandler",
+				"CreateAssignmentBeacon",
+				state.assignment,
+				"flatten_icon",
+				"ui\\thoughtIcons.xml",
+				"ui\\thoughtIconsGray.xml",
+				4)
+					 
+			for i = 0,w do
+				for j = 0,h do
+					gp = gameGridPosition:new()
+					gp.x = state.x + i
+					gp.y = state.y + j
+
+					send("rendBeaconClassHandler",
+						"AddPositionToAssignmentBeacon",
+						state.assignment,
+						gp.x,gp.y)
+				end
 			end
 		end
 	>>
