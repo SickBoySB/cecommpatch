@@ -182,9 +182,9 @@ are already contained within other buildings. Consider those a placeholder for l
                upkeep_quantity="-1"
              >
 		
-		<module_requirement tag="timber" art="timber_category" amount="3" />
-		<module_requirement tag="planks" art="planks_icon" amount="4"/>
-		<module_requirement tag="iron_plates" art="iron_plate_icon" amount="1"/>
+		<module_requirement tag="timber" art="timber_category" amount="1" />
+		<module_requirement tag="planks" art="planks_icon" amount="2"/>
+		<module_requirement tag="masonry" art="bricks_pallet_icon" amount="4"/>
 	</module>
 	
 	<!-- Dynamics / Conduit modules (STANDALONE) -->

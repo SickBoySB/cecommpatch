@@ -20,7 +20,7 @@
 			generate_dynamics="0"
 			entityName="airship_mast"
 			ghost="models\constructions\airshipMooringTower.upm"
-			job="Assemble Construction"
+			job="Assemble Airship Mast"
 			use_assignment="1"
 			assignment_name="Construct Airship Mast"/>
 
