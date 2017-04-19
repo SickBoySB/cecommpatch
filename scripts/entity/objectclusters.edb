@@ -1,0 +1,1496 @@
+-- OBJECTCLUSTERS
+
+Entity {
+	name="Starting Building Materials",
+     type="objectcluster",
+     magnitude = 0,
+	pfx = "CeramicsStamperPoof",
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "planks", amount=4},
+		[2] = { entityType = "item", entityName = "bricks", amount=3},
+		[3] = { entityType = "item", entityName = "rough_stone_block", amount=3},
+	},
+}
+
+Entity {
+	name="Starting Machine Parts",
+     type="objectcluster",
+     magnitude = 0,
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "iron_plates", amount=5},
+		[2] = { entityType = "item", entityName = "copper_plates", amount=2},
+		[3] = { entityType = "item", entityName = "iron_pipes", amount=2},
+		[4] = { entityType = "item", entityName = "copper_pipes", amount=2},
+		[5] = { entityType = "item", entityName = "brass_cogs", amount=1},
+	},
+	pfx = "CeramicsStamperPoof",
+}
+
+-- for testing
+
+Entity {
+	name="Starting Food",
+     type="objectcluster",
+     magnitude = 0,
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "bushel_of_sausages", amount=12},
+		[2] = { entityType = "item", entityName = "loaf_of_bread", amount=12},
+	},
+	pfx = "DustPuffLarge",
+}
+
+Entity {
+	name="Starting Defense Armaments",
+     type="objectcluster",
+     clusterSpawnRadius = 4,
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "landmine", amount=2 },
+		[2] = { entityType = "item", entityName = "landmine", amount=1 },
+		[3] = { entityType = "item", entityName = "landmine", amount=1 },
+		[4] = { entityType = "item", entityName = "landmine", amount=1 },
+		[5] = { entityType = "item", entityName = "boxed_musket_locker", amount=1},
+	},
+	pfx = "DustPuffLarge",
+}
+
+Entity {
+	name="Starting Materials - Starter",
+     type="objectcluster",
+     magnitude = 0,
+	pfx = "CeramicsStamperPoof",
+     clusterSpawnRadius = 3,
+	player_owned = true,
+     clusterContents={ },
+	stackItems = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "logs", amount=6},
+		[2] = { entityType = "item", entityName = "rough_stone_block", amount=6},
+		[3] = { entityType = "item", entityName = "planks", amount=7},
+	},
+}
+
+Entity {
+	name="Starting Materials 2 - Starter",
+     type="objectcluster",
+     magnitude = 0,
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "cube_of_clay", amount=3},
+		[2] = { entityType = "item", entityName = "bushel_of_sand", amount=2},
+		[3] = { entityType = "item", entityName = "ammo1", amount=2},
+	},
+	pfx = "CeramicsStamperPoof",
+}
+
+Entity {
+	name="Starting Food - Starter",
+     type="objectcluster",
+     magnitude = 0,
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "bushel_of_sausages", amount=30}, --these were 12 each but I upped em for the new tutorial
+		[2] = { entityType = "item", entityName = "loaf_of_bread", amount=30},
+	},
+	pfx = "DustPuffLarge",
+}
+
+Entity {
+	name="Starting Materials - Advanced",
+     type="objectcluster",
+     magnitude = 0,
+	pfx = "CeramicsStamperPoof",
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "planks", amount=6},
+		[2] = { entityType = "item", entityName = "bricks", amount=6},
+		[3] = { entityType = "item", entityName = "ammo1", amount=2},
+	},
+}
+
+Entity {
+	name="Starting Materials 2 - Advanced",
+     type="objectcluster",
+     magnitude = 0,
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "glass_panes", amount=3},
+	},
+	pfx = "CeramicsStamperPoof",
+}
+
+Entity {
+	name="Starting Food - Advanced",
+     type="objectcluster",
+     magnitude = 0,
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "bushel_of_sausages", amount=15},
+		[2] = { entityType = "item", entityName = "loaf_of_bread", amount=15},
+	},
+	pfx = "DustPuffLarge",
+}
+
+Entity {
+	name="Starting Materials - Faststart",
+     type="objectcluster",
+     magnitude = 0,
+	pfx = "CeramicsStamperPoof",
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "logs", amount=10},
+		[2] = { entityType = "item", entityName = "rough_stone_block", amount=10},
+	},
+}
+
+Entity {
+	name="Starting Food - Faststart",
+     type="objectcluster",
+     magnitude = 0,
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "bushel_of_sausages", amount=7},
+		[2] = { entityType = "item", entityName = "loaf_of_bread", amount=6},
+		[3] = { entityType = "item", entityName = "ammo1", amount=2},
+	},
+	pfx = "DustPuffLarge",
+}
+
+Entity {
+	name="Starting Materials - Skills",
+     type="objectcluster",
+     magnitude = 0,
+	pfx = "CeramicsStamperPoof",
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "logs", amount=7},
+	},
+}
+
+Entity {
+	name="Starting Food - Skills",
+     type="objectcluster",
+     magnitude = 0,
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "bushel_of_sausages", amount=10},
+		[2] = { entityType = "item", entityName = "loaf_of_bread", amount=10},
+	},
+	pfx = "DustPuffLarge",
+}
+
+Entity {
+	name="Starting Materials - Metalworking", --this is no longer metalworking but a naturalism build. I don't feel like dealing with renaming it right now.
+     type="objectcluster",
+     magnitude = 0,
+	pfx = "CeramicsStamperPoof",
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "bricks", amount=7},
+		[2] = { entityType = "item", entityName = "planks", amount=7},
+		[3] = { entityType = "item", entityName = "boxed_workbench", amount=1},
+		[4] = { entityType = "item", entityName = "boxed_standing_desk", amount=1},
+		[5] = { entityType = "item", entityName = "boxed_mineshaft_module", amount=1},
+	},
+}
+--[[
+Entity {
+	name="Starting Materials 2 - Metalworking", 
+     type="objectcluster",
+     magnitude = 0,
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "hematite", amount=2},
+		[2] = { entityType = "item", entityName = "malachite", amount=2},
+		[3] = { entityType = "item", entityName = "coal", amount=4},
+	},
+	pfx = "CeramicsStamperPoof",
+}
+
+Entity {
+	name="Starting Food - Metalworking",
+     type="objectcluster",
+     magnitude = 0,
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "bushel_of_sausages", amount=2},
+		[2] = { entityType = "item", entityName = "loaf_of_bread", amount=2},
+	},
+	pfx = "DustPuffLarge",
+}
+]]
+Entity {
+	name="Starting Materials - Defense",
+     type="objectcluster",
+     magnitude = 0,
+	pfx = "CeramicsStamperPoof",
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "logs", amount=40},
+		[2] = { entityType = "item", entityName = "rough_stone_block", amount=6},
+		[3] = { entityType = "item", entityName = "ammo1", amount=4},
+		[4] = { entityType = "item", entityName = "ammo2", amount=2},
+	},
+}
+
+Entity {
+	name="Starting Food - Defense",
+     type="objectcluster",
+     magnitude = 0,
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "bushel_of_sausages", amount=7},
+		[2] = { entityType = "item", entityName = "loaf_of_bread", amount=7},
+	},
+	pfx = "DustPuffLarge",
+}
+
+Entity {
+	name="Starting Food - Food",
+     type="objectcluster",
+     magnitude = 0,
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "bushel_of_sausages", amount=70},
+		[2] = { entityType = "item", entityName = "loaf_of_bread", amount=70},
+	},
+	pfx = "DustPuffLarge",
+}
+
+Entity {
+	name="Starting Materials - Science",
+     type="objectcluster",
+     magnitude = 0,
+	pfx = "CeramicsStamperPoof",
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "planks", amount=6},
+		[2] = { entityType = "item", entityName = "bricks", amount=6},
+	},
+}
+
+Entity {
+	name="Starting Materials 2 - Science",
+     type="objectcluster",
+     magnitude = 0,
+     clusterSpawnRadius = 3,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		[1] = { entityType = "item", entityName = "boxed_macroscope", amount=1},
+		[2] = { entityType = "item", entityName = "chest_of_science_materials", amount=3},
+	},
+	pfx = "CeramicsStamperPoof",
+}
+
+Entity {
+     name="Gabion Gibs",
+     type="objectcluster",
+     clusterSpawnRange = { ["min"]=1, ["max"]=2 },
+     clusterSpawnRadius = 1,
+	 player_owned = false,
+     clusterContents={
+          clearable = { "Wooden Debris, Small" },
+     },
+}
+
+Entity {
+     name="Brick Fence Gibs",
+     type="objectcluster",
+     clusterSpawnRange = { ["min"]=1, ["max"]=2 },
+     clusterSpawnRadius = 1,
+	 player_owned = false,
+     clusterContents={
+          clearable = { "Brick Debris, Small" },
+     }
+}
+
+Entity {
+     name="Wrecked Airdrop Debris Cluster",
+     type="objectcluster",
+     clusterSpawnRange = { ["min"]=3, ["max"]=5 },
+     clusterSpawnRadius = 3,
+	player_owned = false,
+     clusterContents={
+          clearable = { "Random Rubbish" , "Wrecked Airdrop Debris" },
+          forageSource = { "Salvagable Wrecked Airdrop Crate" },
+     }
+}
+
+Entity {
+     name="Coconut Palm Cluster",
+     type="objectcluster",
+     clusterSpawnRange = { ["min"]=2, ["max"]=3 },
+     clusterSpawnRadius = 4,
+	 player_owned = false,
+     clusterContents={
+          forageSource = { "Coconut Palm" },
+     }
+}
+
+Entity {
+     name="Lacquer Plant Cluster",
+     type="objectcluster",
+     clusterSpawnRange = { ["min"]=2, ["max"]=5 },
+     clusterSpawnRadius = 7,
+	 player_owned = false,
+     clusterContents={
+          forageSource = { "Lacquer Plant" },
+     }
+}
+
+Entity {
+	name="Battlefield Decor",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=1, ["max"]=2 },
+	clusterSpawnRadius = 8,
+	player_owned = false,
+	clusterContents={
+	clearable = { "Small Crater", --"Smoking Small Crater",
+			 "Medium Crater",-- "Smoking Medium Crater",
+			 "Large Crater", "Random Rubbish", "Random Rubbish",
+			 "Machine Rubbish", "Human Bones", "Human Bones",
+			 "Human Bones", "Gibs", "Gibs", "Gibs" },
+	}
+}
+
+Entity {
+	name="Coal Nodes",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=1, ["max"]=4 },
+	clusterSpawnRadius = 2,
+    player_owned = false,
+
+	clusterContents={
+		oreNode = { "Coal Node" },
+	},
+}
+
+Entity {
+	name="Hematite Nodes",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=1, ["max"]=4 },
+	clusterSpawnRadius = 2,
+	player_owned = false,
+	clusterContents={
+		oreNode = { "Hematite Node" },
+	},
+}
+
+Entity {
+	name="Malachite Nodes",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=1, ["max"]=4 },
+	clusterSpawnRadius = 2,
+		 player_owned = false,
+
+	clusterContents={
+		oreNode = { "Malachite Node" },
+	},
+	
+}
+
+Entity {
+	name="Chalk Nodes",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=1, ["max"]=4 },
+	clusterSpawnRadius = 2,
+	player_owned = false,
+	clusterContents={
+		oreNode = { "Chalk Node" },
+	},
+}
+
+Entity {
+	name="Sulphur Nodes",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=1, ["max"]=4 },
+	clusterSpawnRadius = 2,
+	player_owned = false,
+	clusterContents={
+		oreNode = { "Sulphur Node" },
+	},
+}
+
+Entity {
+     name="Leafy Gold Shrubs",
+     type="objectcluster",
+     clusterSpawnRange = { ["min"]=2, ["max"]=4 },
+     clusterSpawnRadius = 2,
+	player_owned = false,
+     clusterContents={
+          clearable = { "Leafy Gold Shrub" },
+     }
+}
+
+Entity {
+     name="Leafy Green Shrubs",
+     type="objectcluster",
+	player_owned = false,
+     clusterSpawnRange = { ["min"]=2, ["max"]=4 },
+     clusterSpawnRadius = 2,
+     clusterContents={
+          clearable = { "Leafy Green Shrub" },
+     }
+}
+
+Entity {
+     name="Brackens",
+     type="objectcluster",
+	player_owned = false,
+     clusterSpawnRange = { ["min"]=3, ["max"]=5 },
+     clusterSpawnRadius = 2,
+     clusterContents={
+          clearable = { "Bracken" },
+     }
+}
+
+Entity {
+	name="Sphalerite Nodes",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=2, ["max"]=4 },
+	clusterSpawnRadius = 2,
+	player_owned = false,
+	clusterContents={
+		oreNode = { "Sphalerite Node" },
+	},
+}
+
+Entity {
+	name="Gold Nodes",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=1, ["max"]=4 },
+	clusterSpawnRadius = 2,
+	player_owned = false,
+	clusterContents={
+		oreNode = { "Gold Node" },
+	},
+}
+
+Entity {
+	name="Clay Nodes",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=3, ["max"]=5 },
+	clusterSpawnRadius = 3,
+	player_owned = false,
+	clusterContents={
+		oreNode = { "Clay Node" },
+	},
+}
+
+Entity {
+	name="Stone Boulders",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=3, ["max"]=5 },
+	clusterSpawnRadius = 3,
+	player_owned = false,
+	clusterContents={
+		oreNode = { "Rhyolite Boulder" },
+	},
+}
+
+Entity {
+	name="Stone Outcrops",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=3, ["max"]=5 },
+	clusterSpawnRadius = 3,
+	player_owned = false,
+	clusterContents={
+		oreNode = { "Rhyolite Outcrop" },
+	},
+}
+
+Entity {
+	name="Favour Food",
+     type="objectcluster",
+	clusterSpawnRange = { ["min"]=4, ["max"]=16 },
+     clusterSpawnRadius = 3,
+	player_owned = true,
+     clusterContents={
+		item = {"bushel_of_sausages", "loaf_of_bread"}
+	}, 
+}
+
+Entity {
+	name="Random Commodities",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=10, ["max"]=20 },
+	clusterSpawnRadius = 4,
+	player_owned = true,
+	clusterContents={
+	item = { "planks", "planks", "loaf_of_bread", 
+			"bottle_of_whisky", "bricks", "bricks",
+			"copper_plates", "iron_plates", "iron_pipes", "copper_pipes",
+			"brass_cogs", "logs", "logs", "bag_of_wheat_flour",
+			"crate_of_glass_bottles",
+			"tin_of_meat", "landmine", "glass_panes",
+			"native_gold", "sulphur", "keg_of_black_powder",
+			"brass_ingots", "iron_ingots", "gold_ingots", "copper_ingots", "rough_stone_block", "bushel_of_sand",
+			"malachite","hematite","sphalerite","native_gold","cut_sugarcane", "coal", "lacquered_planks", "bricabrac", "brass_cogs", "steel_ingots",
+			"chalk",},
+	}
+}
+
+Entity {
+	name="Construction Materials",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=10, ["max"]=20 },
+	clusterSpawnRadius = 3,
+	player_owned = true,
+	clusterContents={
+	item = { "planks", "planks", "planks",
+		     "bricks", "bricks",
+			"copper_plates", "iron_plates", "iron_pipes", "copper_pipes",
+			"logs", "logs", "glass_panes",
+			"brass_ingots", "iron_ingots", "gold_ingots", "rough_stone_block", "rough_stone_block", "bushel_of_sand",
+			"lacquered_planks", "lacquered_planks", "bricabrac", "obeliskian_block", },
+	},
+	guaranteedContents={
+		[1] = { entityType = "item", entityName = "planks", amount=4},
+		[2] = { entityType = "item", entityName = "bricks", amount=3},
+		[3] = { entityType = "item", entityName = "rough_stone_block", amount=3},
+	},
+}
+
+Entity {
+	name="Bamboo Shipment",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=10, ["max"]=20 },
+	clusterSpawnRadius = 4,
+	player_owned = true,
+	clusterContents={
+	item = { "logs", "logs", "logs", },
+	}
+}
+
+Entity {
+	name="Random Food",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=10, ["max"]=20 },
+	clusterSpawnRadius = 4,
+	player_owned = true,
+
+  clusterContents={
+  item = { "raw_beetle_steak", "cooked_beetle_steak", "loaf_of_bread", "tin_of_meat",
+            "maize_chowder", "crate_of_coconuts",
+            "stew", "bushel_of_orange_cup_fungus", "loaf_of_bread", "sugar_loaf",
+            "bushel_of_black_cup_fungus", "bushel_of_chillies", "bushel_of_cabbage", "bag_of_wheat_flour",
+		  "tin_of_meat", "pumpkin", "bushel_of_maize",
+		  "bushel_of_grapes", "bushel_of_saskatoonberries", "jar_of_beer",
+		  "bottle_of_laudanum", "bottle_of_sulphur_tonic", "bucket_of_raw_opium", "cube_of_flesh",
+		  "bottle_of_caninha", "bottle_of_guarapo", "raw_fish_steak", "bushel_of_exotic_caviar", "bucket_of_molasses", "bucket_of_agave_syrup" },
+  }
+}
+
+Entity {
+	name="Random Trade Food",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=10, ["max"]=20 },
+	clusterSpawnRadius = 4,
+	player_owned = true,
+
+  clusterContents={
+  item = { "crate_of_saskatoonberry_preserves", "crate_of_pickled_black_cup_fungus", "crate_of_pickled_white_cup_fungus", "tin_of_meat" },
+  }
+}
+
+Entity {
+	name="Steam Knight Supplies",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=10, ["max"]=20 },
+	clusterSpawnRadius = 4,
+	player_owned = true,
+
+  clusterContents={
+  item = { "construction_frame", "power_core", "steam_compressor", "prototype_steam_knight_chassis", "prototype_steam_knight_oculars", "reactive_catalyst", "reactive_catalyst","reactive_catalyst", "glass_panes", "iron_plates", "steel_ingots", "steel_plates", "brass_cogs", "planks", "bucket_of_ink",
+		"mk1_steam_knight_chassis", "mk1_steam_knight_oculars", "mk1_machine_gun","ammo_autoloader"},
+  }
+}
+
+Entity {
+	name="Random Cooked Food",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=10, ["max"]=20 },
+	clusterSpawnRadius = 4,
+	player_owned = true,
+
+  clusterContents={
+  item = { "cooked_beetle_steak", "loaf_of_bread", "stew", "loaf_of_bread",},
+  }
+}
+
+Entity {
+	name="Random Quality Food",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=10, ["max"]=20 },
+	clusterSpawnRadius = 4,
+	player_owned = true,
+
+  clusterContents={
+  item = { "berry_medley_stew", "farmers_stew", "bushel_of_sausages",},
+  }
+}
+
+Entity {
+	name="Random Quality Food",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=10, ["max"]=20 },
+	clusterSpawnRadius = 4,
+	player_owned = true,
+
+  clusterContents={
+  item = { "coconut_curry", "lingonberry_pie", "meat_pie", "fish_pie"},
+  }
+}
+
+Entity {
+     name="Butcher Gore",
+     type="objectcluster",
+     clusterSpawnRange = { ["min"]=1, ["max"]=2 },
+     clusterSpawnRadius = 2,
+	 player_owned = false,
+
+     clusterContents={
+          clearable = { "Gibs" },
+     }
+}
+
+Entity {
+  name="Gore Cluster",
+  type="objectcluster",
+	 player_owned = false,
+  clusterSpawnRange = { ["min"]=1, ["max"]=2 },
+  clusterSpawnRadius = 2,
+  clusterContents={
+    clearable = { "Gibs" },
+  }
+}
+
+Entity {
+  name="Mob of Fishpeople",
+  type="objectcluster",
+  clusterSpawnRange = { ["min"]=4, ["max"]=6 },
+  clusterSpawnRadius = 3,
+	 player_owned = false,
+  clusterContents={
+     fishperson = { "fishperson" },
+  }
+}
+
+Entity {
+     name="Group of Fishpeople",
+     type="objectcluster",
+     clusterSpawnRange = { ["min"]=2, ["max"]=4 },
+     clusterSpawnRadius = 5,
+	 player_owned = false,
+     clusterContents={
+          fishperson = { "fishperson" },
+     }
+}
+
+Entity {
+     name="Obeliskian Servitors",
+     type="objectcluster",
+     clusterSpawnRange = { ["min"]=1, ["max"]=2 },
+     clusterSpawnRadius = 3,
+	 player_owned = false,
+     clusterContents={
+          herd = { "obeliskian_servitor" },
+     }
+}
+
+Entity {
+  name="Flock of Dodos",
+  type="objectcluster",
+  clusterSpawnRange = { ["min"]=1, ["max"]=1 },
+  clusterSpawnRadius = 1,
+	 player_owned = false,
+  clusterContents={
+	herd = { "Dodo" },
+  }
+}
+
+
+
+Entity {
+	name="Herd of Aurochs",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=1, ["max"]=1 },
+	clusterSpawnRadius = 1,
+	 player_owned = false,
+	clusterContents={
+		herd = { "Aurochs" },
+	}
+}
+
+Entity {
+	name="Skulk of Foxes",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=3, ["max"]=6 },
+	clusterSpawnRadius = 5,
+	 player_owned = false,
+	clusterContents={ animal = { "Fox" }, }
+}
+
+Entity {
+	name="Mans o Wars",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=3, ["max"]=6 },
+	clusterSpawnRadius = 5,
+	 player_owned = false,
+	clusterContents={ animal = { "Man-o-war" }, }
+}
+
+Entity {
+	name="beetleCluster",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=6, ["max"]=10 },
+	clusterSpawnRadius = 2,
+	 player_owned = false,
+	clusterContents={ animal = { "Beetle" }, }
+}
+
+Entity {
+	name="Vermin Beetle Spawn",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=8, ["max"]=12 },
+	clusterSpawnRadius = 1,
+	 player_owned = false,
+	clusterContents={ animal = { "Beetle", },
+				  vermin = {  "Tiny Beetle", "Tiny Beetle",
+						   "Tiny Beetle", "Tiny Beetle", },
+				},
+}
+
+Entity {
+	name="Aspen Cluster",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=4, ["max"]=8 },
+	clusterSpawnRadius = 4,
+	player_owned = false,
+	clusterContents={ tree = { "Aspen" }, }
+}
+
+Entity {
+	name="Joshua Trees",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=4, ["max"]=8 },
+	clusterSpawnRadius = 4,
+	 player_owned = false,
+	clusterContents={ tree = { "Joshua Tree" }, }
+}
+
+Entity {
+	name="Mangroves",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=4, ["max"]=8 },
+	clusterSpawnRadius = 4,
+	 player_owned = false,
+	clusterContents={ tree = { "Mangrove" }, }
+}
+
+Entity {
+	name="Gutta Perchas",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=4, ["max"]=8 },
+	clusterSpawnRadius = 4,
+	 player_owned = false,
+	clusterContents={ tree = { "Gutta Percha" }, }
+}
+
+Entity {
+	name="Weeping Willows",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=4, ["max"]=8 },
+	clusterSpawnRadius = 4,
+	 player_owned = false,
+	clusterContents={ tree = { "Weeping Willow" }, }
+}
+
+-- EMPIRE AIRSHIP SUPPLIES
+
+Entity {
+  name="Construction Materials from Supply Ship",
+  type="objectcluster",
+  clusterSpawnRange = { ["min"]=2, ["max"]=5 },
+  clusterSpawnRadius = 4,
+	 player_owned = true,
+  clusterContents={
+    item = { "rough_stone_block", "rough_stone_block", "logs", "logs", "cube_of_clay" },
+  }
+}
+
+Entity {
+     name="Food from Supply Ship",
+     type="objectcluster",
+     clusterSpawnRange = { min=10, max=16 },
+     clusterSpawnRadius = 4,
+	 	 player_owned = true,
+     clusterContents={
+          item = { "loaf_of_bread", "bushel_of_sausages", "loaf_of_bread" },
+     }
+}
+
+Entity {
+	name="Alcohol Shipment",
+	type="objectcluster",
+	clusterSpawnRange = { min=1, max=1 },
+	clusterSpawnRadius = 1,
+	player_owned = true,
+	clusterContents={
+          item = { "bottle_of_whisky" },
+     }
+}
+
+Entity {
+	name="Science Crate Salvage",
+	type="objectcluster",
+	clusterSpawnRange = { min=1, max=3 },
+	clusterSpawnRadius = 2,
+	player_owned = true,
+	tickerString = "Your Science Crate salvaged into the following: ",
+	clusterContents={
+          item = { "hematite", "malachite", "sphalerite", "native_gold", "sulphur", "charcoal", "landmine", "cube_of_flesh", "bricabrac" },
+		animal = {"Beetle", "Fox", "obeliskian_servitor" },
+		tree = { "Weeping Willow" }
+     }
+}
+
+Entity {
+	name="Random Animals",
+	type="objectcluster",
+	clusterSpawnRange = { min=1, max=5 },
+	clusterSpawnRadius = 2,
+	player_owned = true,
+	tickerString = "Your Science Menagerie Crate contains the following: ",
+	clusterContents={
+		animal = {"Beetle", "Fox", "Giant Snail", "Fox", "Land Dragon", "Deathwurm", "Deer", "Beetle", "Capybara", "Scrub Tortoise" }
+     }
+}
+
+Entity {
+	name="Construction Materials looted from from Supply Ship",
+	type="objectcluster",
+	player_owned = true,
+	clusterSpawnRange = { ["min"]=2, ["max"]=5 },
+	clusterSpawnRadius = 3,
+	tickerString = "The bandits drop off some goods: ",
+	clusterContents={
+    item = { "bottle_of_laudanum", "saskatoonberry_pie", "bottle_of_sulphur_tonic", "bucket_of_raw_opium",
+			"lacquer", "sulphur", "chalk", "bricabrac", },
+  }
+}
+
+Entity {
+	name="Construction Materials looted from from Supply Ship (crim)",
+	type="objectcluster",
+	player_owned = true,
+	clusterSpawnRange = { ["min"]=2, ["max"]=5 },
+	clusterSpawnRadius = 3,
+	tickerString = "Your citizen drops off some goods: ",
+	clusterContents={
+    item = { "bottle_of_laudanum", "saskatoonberry_pie", "bottle_of_sulphur_tonic", "bucket_of_raw_opium",
+			"lacquer", "sulphur", "chalk", "bricabrac", },
+  }
+}
+
+Entity {
+  name="Church Supplies",
+  type="objectcluster",
+  	 player_owned = true,
+  clusterSpawnRange = { ["min"]=2, ["max"]=3 },
+  clusterSpawnRadius = 3,
+  clusterContents={
+    item = { "iron_cogs", "iron_cogs", "iron_cogs", "iron_cogs" },
+  }
+}
+
+Entity {
+	name="Construction Materials found by Colonist",
+	type="objectcluster",
+	player_owned = true,
+	clusterSpawnRange = { ["min"]=2, ["max"]=5 },
+	clusterSpawnRadius = 3,
+	tickerString = "The un-accounted-for goods are as follows: ",
+	clusterContents={
+	item = { "bottle_of_laudanum", "saskatoonberry_pie", "bottle_of_sulphur_tonic", "bucket_of_raw_opium",
+			"lacquer", "sulphur", "chalk", "bricabrac", },
+	}
+}
+
+Entity {
+     name="Guns and Ammo from Supply Ship",
+     type="objectcluster",
+	player_owned = true,
+     clusterSpawnRange = { min=2, max=5 },
+     clusterSpawnRadius = 4,
+     clusterContents={
+          item = { "boxed_musket_locker", "boxed_blunderbuss_locker","ammo1", "ammo2", "ammo1", "ammo2", "landmine", "landmine" },},
+     guaranteedContents={ [1] = { entityType = "item", entityName = "ammo1", amount=2},
+					 [2] = { entityType = "item", entityName = "ammo2", amount=1}, },
+}
+
+Entity {
+     name="Armaments Colonial Ministry",
+     type="objectcluster",
+	player_owned = true,
+     clusterSpawnRange = { min=6, max=8 },
+     clusterSpawnRadius = 4,
+     clusterContents={
+          item = { "boxed_musket_locker", "boxed_blunderbuss_locker", "landmine","landmine","landmine","landmine", },
+	},
+     guaranteedContents={	[1] = { entityType = "item", entityName = "boxed_musket_locker", amount=1},
+						[2] = { entityType = "item", entityName = "landmine", amount=1}, },
+}
+
+Entity {
+	name="Obeliskian Cluster",
+	type="objectcluster",
+	player_owned = false,
+	--guaranteedContents={
+	--	[1] = { 	entityType="obeliskian_group",
+	--			entityName="Obeliskian Group",
+	--			amount=1}, },
+	clusterSpawnRange = { min=8, max=10 },
+     clusterSpawnRadius = 6,
+	clusterContents={ clearable = { "Dark Stone Monolith",
+					"Dark Stone Block", "Dark Stone Block", "Dark Stone Block", 
+					"Dark Stone Block", "Dark Stone Block", "Dark Stone Block", },
+	},
+	setpieceContents={
+          [1] = { objectType="objectcluster", objectName="Coal Nodes", spawnChance=20, relativePosition = { x=0, y=0 }, rotation="0" },
+          [2] = { objectType="objectcluster", objectName="Hematite Nodes", spawnChance=20, relativePosition = { x=1, y=1 }, rotation="0" },
+          [3] = { objectType="objectcluster", objectName="Malachite Nodes", spawnChance=20, relativePosition = { x=-1, y=1 }, rotation="0" },
+          [4] = { objectType="objectcluster", objectName="Gold Nodes", spawnChance=20, relativePosition = { x=1, y=-1 }, rotation="0" },
+          [5] = { objectType="objectcluster", objectName="Sulphur Nodes", spawnChance=20, relativePosition = { x=-1, y=-1 }, rotation="0" },
+		[6] = { objectType="obeliskian_group", objectName="Obeliskian Group", spawnChance=50, relativePosition = { x=0, y=0 }, rotation="0" },
+		[7] = { objectType="obeliskian", objectName="Obeliskian Servitor", spawnChance=50, relativePosition = { x=0, y=0 }, rotation="0" },
+		[8] = { objectType="obeliskian", objectName="Obeliskian Servitor", spawnChance=50, relativePosition = { x=0, y=0 }, rotation="0" },
+		[9] = { objectType="obeliskian", objectName="Obeliskian Guardian", spawnChance=50, relativePosition = { x=0, y=0 }, rotation="0" },
+     },
+}
+
+Entity {
+     name="Obeliskian Ruins 00",
+     type="objectcluster",
+	 player_owned = false,
+     setpieceContents={
+          [1] = { objectType="clearable", objectName="Dark Stone Monolith", spawnChance=100, relativePosition = { x=0, y=0 }, rotation="90" },
+          [2] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=100, relativePosition = { x=1, y=1 }, rotation="90" },
+          [3] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=100, relativePosition = { x=-1, y=1 }, rotation="90" },
+          [4] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=100, relativePosition = { x=1, y=-1 }, rotation="90" },
+          [5] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=100, relativePosition = { x=-1, y=-1 }, rotation="90" },
+     }
+}
+
+Entity {
+     name="Obeliskian Ruins 01",
+     type="objectcluster",
+	 player_owned = false,
+     setpieceContents={
+          [1] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=0, y=0 }, rotation="90" },
+		[2] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=0, y=1 }, rotation="90" },
+		[3] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=0, y=2 }, rotation="90" },
+		[4] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=0, y=3 }, rotation="90" },
+		[5] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=0, y=4 }, rotation="90" },
+		[6] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=0, y=5 }, rotation="90" },
+		[7] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=0, y=6 }, rotation="90" },
+		[8] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=0, y=7 }, rotation="90" },
+		[9] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=0, y=8 }, rotation="90" },
+		[10] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=1, y=0 }, rotation="90" },
+		[11] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=1, y=4 }, rotation="90" },
+		[12] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=1, y=8 }, rotation="90" },
+		[13] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=2, y=0 }, rotation="90" },
+		[14] = { objectType="clearable", objectName="Dark Stone Monolith", spawnChance=100, relativePosition = { x=2, y=2 }, rotation="90" },
+		[15] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=2, y=4 }, rotation="90" },
+		[16] = { objectType="clearable", objectName="Dark Stone Monolith", spawnChance=100, relativePosition = { x=2, y=6 }, rotation="90" },
+		[17] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=2, y=8 }, rotation="90" },
+		[18] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=3, y=0 }, rotation="90" },
+		[19] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=3, y=4 }, rotation="90" },
+		[20] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=3, y=8 }, rotation="90" },
+		[21] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=4, y=0 }, rotation="90" },
+		[22] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=4, y=1 }, rotation="90" },
+		[23] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=4, y=2 }, rotation="90" },
+		[24] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=4, y=3 }, rotation="90" },
+		[25] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=4, y=4 }, rotation="90" },
+		[26] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=4, y=5 }, rotation="90" },
+		[27] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=4, y=6 }, rotation="90" },
+		[28] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=4, y=7 }, rotation="90" },
+		[29] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=4, y=8 }, rotation="90" },
+		[30] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=5, y=0 }, rotation="90" },
+		[31] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=5, y=4 }, rotation="90" },
+		[32] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=5, y=8 }, rotation="90" },
+		[33] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=6, y=0 }, rotation="90" },
+		[34] = { objectType="clearable", objectName="Dark Stone Monolith", spawnChance=100, relativePosition = { x=6, y=2 }, rotation="90" },
+		[35] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=6, y=4 }, rotation="90" },
+		[36] = { objectType="clearable", objectName="Dark Stone Monolith", spawnChance=100, relativePosition = { x=6, y=6 }, rotation="90" },
+		[37] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=6, y=8 }, rotation="90" },
+		[38] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=7, y=0 }, rotation="90" },
+		[39] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=7, y=4 }, rotation="90" },
+		[40] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=7, y=8 }, rotation="90" },
+		[41] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=8, y=0 }, rotation="90" },
+		[42] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=8, y=1 }, rotation="90" },
+		[43] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=8, y=2 }, rotation="90" },
+		[44] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=8, y=3 }, rotation="90" },
+		[45] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=8, y=4 }, rotation="90" },
+		[46] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=8, y=5 }, rotation="90" },
+		[47] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=8, y=6 }, rotation="90" },
+		[48] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=8, y=7 }, rotation="90" },
+		[49] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=75, relativePosition = { x=8, y=8 }, rotation="90" },
+     }
+}
+
+Entity {
+     name="Obeliskian Ruins 02",
+     type="objectcluster",
+	 player_owned = false,
+     setpieceContents={
+		[1] = { objectType="clearable", objectName="Giant Dark Stone Monolith", spawnChance=100, relativePosition = { x=0, y=0 }, rotation="90" },
+		[2] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=90, relativePosition = { x=-2, y=-2 }, rotation="90" },
+		[3] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=90, relativePosition = { x=-3, y=-3 }, rotation="90" },
+		[4] = { objectType="clearable", objectName="Dark Stone Monolith", spawnChance=95, relativePosition = { x=-4, y=-4 }, rotation="0" },
+		[5] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=90, relativePosition = { x=2, y=2 }, rotation="90" },
+		[6] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=90, relativePosition = { x=3, y=3 }, rotation="90" },
+		[7] = { objectType="clearable", objectName="Dark Stone Monolith", spawnChance=95, relativePosition = { x=4, y=4 }, rotation="90" },
+		[8] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=90, relativePosition = { x=-2, y=2 }, rotation="90" },
+		[9] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=90, relativePosition = { x=-3, y=3 }, rotation="90" },
+		[10] = { objectType="clearable", objectName="Dark Stone Monolith", spawnChance=95, relativePosition = { x=-4, y=4 }, rotation="180" },
+		[11] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=90, relativePosition = { x=2, y=-2 }, rotation="90" },
+		[12] = { objectType="clearable", objectName="Dark Stone Block", spawnChance=90, relativePosition = { x=3, y=-3 }, rotation="90" },
+		[13] = { objectType="clearable", objectName="Dark Stone Monolith", spawnChance=95, relativePosition = { x=4, y=-4 }, rotation="270" },
+     }
+}
+
+Entity {
+     name="Artifact Dig Site",
+     type="objectcluster",
+	 player_owned = true,
+     magnitude = 1,
+     clusterSpawnRadius = 0,
+     clusterContents={
+          item = { "fishy_idol", "geometer_canopic_jar", "obeliskian_seal", "idol_of_quaggaroth" }, },
+	guaranteedContents={
+		[1] = { entityType = "clearable", entityName = "Large Crater" }, },
+}
+
+Entity {
+     name="Machine Debris",
+     type="objectcluster",
+	player_owned = false,
+     setpieceContents={
+		[1] = { objectType="forageSource", objectName="Salvagable Machine Debris", spawnChance=100, relativePosition = { x=0, y=0 }, rotation="0" },
+		[2] = { objectType="forageSource", objectName="Salvagable Machine Debris", spawnChance=90, relativePosition = { x=-1, y=0 }, rotation="0" },
+		[3] = { objectType="forageSource", objectName="Salvagable Machine Debris", spawnChance=90, relativePosition = { x=-1, y=1 }, rotation="0" },
+		[4] = { objectType="forageSource", objectName="Salvagable Machine Debris", spawnChance=95, relativePosition = { x=-2, y=0 }, rotation="0" },
+     }
+}
+
+
+Entity {
+	name="Random Ores",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=4, ["max"]=7 },
+	clusterSpawnRadius = 2,
+	player_owned = true,
+
+	clusterContents={
+		item = { "malachite","hematite","sphalerite","native_gold","sulphur" },
+	},
+}
+
+Entity {
+	name="Random Ingots",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=2, ["max"]=4 },
+	clusterSpawnRadius = 2,
+	player_owned = true,
+
+	clusterContents={
+		item = { "iron_ingots","copper_ingots","zinc_ingots","gold_ingots", },
+	},
+}
+
+Entity {
+	name="Random Stone Blocks",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=2, ["max"]=4 },
+	clusterSpawnRadius = 2,
+	player_owned = true,
+
+	clusterContents={
+		item = { "rough_stone_block", },
+	},
+}
+
+Entity {
+     name="Obeliskian Gibs",
+	clusterSpawnRange = { ["min"]=1, ["max"]=2 },
+	clusterSpawnRadius = 1,
+     type="objectcluster",
+	player_owned = false,
+     clusterContents={
+		clearable = { "Basalt Debris", }, 
+     }
+}
+
+Entity {
+     name="Obeliskian Harvest",
+	clusterSpawnRange = { ["min"]=1, ["max"]=3 },
+	clusterSpawnRadius = 2,
+     type="objectcluster",
+	player_owned = true,
+     clusterContents={
+		clearable = { "Basalt Debris", },
+		item = { "idol_of_quaggaroth",
+			   "hematite","hematite",
+			   "malachite","malachite",
+			   "sphalerite", "native_gold",
+			   "chalk", "sulphur", "iron_ingots",
+			   "copper_ingots", "zinc_ingots", "brass_ingots", "gold_ingots",
+			   "coal","coal", "cube_of_clay","cube_of_clay",
+			   "bushel_of_sand","bushel_of_sand",
+			   "obeliskian_seal", }, 
+     }
+}
+
+Entity {
+	name="Landmine Supply Drop",
+     type="objectcluster",
+     clusterSpawnRange = { min=4, max=6 },
+     clusterSpawnRadius = 3,
+	stackItems = false,
+	player_owned = true,
+     clusterContents={ item = { "landmine", "landmine", "landmine" }, },
+	pfx = "DustPuffLarge",
+}
+
+
+Entity {
+	name="Module Crates",
+     type="objectcluster",
+     magnitude = 0,
+     clusterSpawnRadius = 5,
+     clusterContents={ },
+	stackItems = true,
+	player_owned = true,
+     guaranteedContents={
+		{ entityType = "item", entityName = "boxed_workbench", amount=3},
+		{ entityType = "item", entityName = "boxed_brick_ceramics_kiln", amount=3},
+		{ entityType = "item", entityName = "boxed_iron_ceramics_kiln", amount=3},
+		{ entityType = "item", entityName = "boxed_workbench", amount=3},
+		{ entityType = "item", entityName = "boxed_stone_charcoal_kiln", amount=3},
+		{ entityType = "item", entityName = "boxed_brick_charcoal_kiln", amount=3},
+		{ entityType = "item", entityName = "boxed_iron_charcoal_kiln", amount=3},
+		{ entityType = "item", entityName = "boxed_small_iron_oven", amount=3},
+		{ entityType = "item", entityName = "boxed_workbench", amount=3},
+		{ entityType = "item", entityName = "boxed_power_lathe", amount=3},
+		{ entityType = "item", entityName = "boxed_iron_smelting_crucible", amount=3},
+		{ entityType = "item", entityName = "boxed_power_saw", amount=3},
+		{ entityType = "item", entityName = "boxed_mixing_tank", amount=3},
+		{ entityType = "item", entityName = "boxed_brewing_vat", amount=3},
+		{ entityType = "item", entityName = "boxed_still", amount=3},
+		{ entityType = "item", entityName = "boxed_workbench", amount=3},
+		{ entityType = "item", entityName = "boxed_workbench", amount=3},
+		{ entityType = "item", entityName = "boxed_chemistry_workbench", amount=3},
+		{ entityType = "item", entityName = "boxed_smithing_forge", amount=3},
+		{ entityType = "item", entityName = "boxed_booze_vat", amount=3},
+		{ entityType = "item", entityName = "boxed_ceramics_workbench", amount = 2},
+		{ entityType = "item", entityName = "boxed_wooden_altar", amount=3},
+		{ entityType = "item", entityName = "boxed_stone_altar", amount=3},
+		{ entityType = "item", entityName = "boxed_large_stone_altar", amount=3},
+		{ entityType = "item", entityName = "boxed_macroscope", amount=3},
+		{ entityType = "item", entityName = "boxed_candelabra", amount=3},
+		{ entityType = "item", entityName = "boxed_church_banner", amount=3},
+		{ entityType = "item", entityName = "boxed_church_pews", amount=3},
+		{ entityType = "item", entityName = "boxed_cot", amount=3},
+		{ entityType = "item", entityName = "boxed_cot", amount=3},
+		{ entityType = "item", entityName = "boxed_cot", amount=3},
+		{ entityType = "item", entityName = "boxed_middle_class_single_bed", amount=3},
+		{ entityType = "item", entityName = "boxed_upper_class_bed", amount=3},
+		{ entityType = "item", entityName = "boxed_upper_class_chair", amount=3},
+		{ entityType = "item", entityName = "boxed_upper_class_table", amount=3},
+		{ entityType = "item", entityName = "boxed_fancy_bookshelf", amount=3},
+		{ entityType = "item", entityName = "boxed_bookshelf", amount=3},
+		{ entityType = "item", entityName = "boxed_lc_cabinet", amount=3},
+		{ entityType = "item", entityName = "boxed_mc_cabinet", amount=3},
+		{ entityType = "item", entityName = "boxed_uc_cabinet", amount=3},
+		{ entityType = "item", entityName = "boxed_bureaucrats_cabinet", amount=3},
+		{ entityType = "item", entityName = "boxed_bureaucrats_desk", amount=3},
+		{ entityType = "item", entityName = "boxed_standing_desk", amount=3},
+		{ entityType = "item", entityName = "boxed_mineshaft_module", amount=3},
+		{ entityType = "item", entityName = "boxed_chalkboard", amount=3},
+		{ entityType = "item", entityName = "boxed_vacuum_chamber", amount=3},
+		{ entityType = "item", entityName = "boxed_lower_class_chair", amount=6},
+		{ entityType = "item", entityName = "boxed_stone_charcoal_kiln", amount = 2},
+		{ entityType = "item", entityName = "boxed_stone_smelting_crucible", amount = 2},
+		{ entityType = "item", entityName = "boxed_hanging_pots", amount = 2},
+		{ entityType = "item", entityName = "boxed_musket_locker", amount = 2},
+		{ entityType = "item", entityName = "boxed_carbine_locker", amount = 2},
+		{ entityType = "item", entityName = "boxed_blunderbuss_locker", amount = 2},
+		{ entityType = "item", entityName = "boxed_jezail_rifle_locker", amount = 2},
+		{ entityType = "item", entityName = "boxed_tripistol_locker", amount = 2},
+		{ entityType = "item", entityName = "boxed_revolver_locker", amount = 2},
+		{ entityType = "item", entityName = "boxed_grenade_launcher_locker", amount = 2},
+		{ entityType = "item", entityName = "boxed_leyden_pistol_locker", amount = 2},
+		{ entityType = "item", entityName = "boxed_leyden_rifle_locker", amount = 2},
+		{ entityType = "item", entityName = "boxed_rare_painting", amount = 2},
+		{ entityType = "item", entityName = "boxed_mineshaft_module", amount = 2},
+		{ entityType = "item", entityName = "boxed_dewatering_pump", amount = 2},
+		{ entityType = "item", entityName = "boxed_ventilation_unit", amount = 2},
+		{ entityType = "item", entityName = "boxed_steam_distributor", amount = 2},
+		{ entityType = "item", entityName = "boxed_power_core_dynamo", amount = 2},
+		{ entityType = "item", entityName = "boxed_steam_knight_forge", amount = 2},
+		{ entityType = "item", entityName = "boxed_rug", amount = 2},
+		{ entityType = "item", entityName = "boxed_carpet", amount = 2},
+		{ entityType = "item", entityName = "boxed_wood_plinth", amount = 2},
+		{ entityType = "item", entityName = "boxed_stone_plinth", amount = 2},
+		{ entityType = "item", entityName = "boxed_stained_glass_window", amount = 2},
+	},
+	pfx = "CeramicsStamperPoof",
+}
+
+Entity {
+     name="Strange Meteor Contents",
+     type="objectcluster",
+     clusterSpawnRange = { ["min"]=8, ["max"]=12 },
+     clusterSpawnRadius = 6,
+	player_owned = true,
+     clusterContents={
+          selenian = { "0" },
+		item = { "dormant_spore" }, 
+		clearable = { "Basalt Debris" }
+     },
+	pfx = "CeramicsStamperPoof",
+}
+
+Entity {
+     name="Selenian Goodies",
+     type="objectcluster",
+     clusterSpawnRange = { ["min"]=1, ["max"]=1 },
+     clusterSpawnRadius = 1,
+	player_owned = true,
+     clusterContents={
+          item = { "dormant_spore","dormant_spore","dormant_spore","glowing_spore" }, 
+     }
+}
+
+Entity {
+     name="Paper Gibs",
+     type="objectcluster",
+     clusterSpawnRange = { ["min"]=4, ["max"]=6 },
+     clusterSpawnRadius = 3,
+	player_owned = false,
+     clusterContents={
+          clearable = { "Paper Rubbish" },
+     },
+}
+
+Entity {
+	name="Stahlmark Supply Drop",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=8, ["max"]=12 },
+	clusterSpawnRadius = 4,
+	player_owned = true,
+	clusterContents={
+	item = {
+		"bushel_of_cabbage", "bushel_of_cabbage", "bushel_of_cabbage", "bushel_of_cabbage",
+		"loaf_of_bread", "loaf_of_bread",
+		"bushel_of_sausages", "bushel_of_sausages",
+		"jar_of_beer", "jar_of_beer", "jar_of_beer",
+		"planks", "planks",
+		"bricks", "bricks",
+		"bushel_of_cabbage", "bushel_of_cabbage", "bushel_of_cabbage", "bushel_of_cabbage",
+		"loaf_of_bread", "loaf_of_bread",
+		"bushel_of_sausages", "bushel_of_sausages",
+		"jar_of_beer", "jar_of_beer", "jar_of_beer",
+		"planks", "planks",
+		"bricks", "bricks",
+		"boxed_carbine_locker",
+		},
+	},
+	guaranteedContents={
+		[1] = { entityType = "item", entityName = "bushel_of_cabbage", amount=1},
+	},
+}
+
+Entity {
+	name="Office Supply Drop",
+	type="objectcluster",
+	clusterSpawnRadius = 4,
+	player_owned = true,
+     clusterContents={ },
+	guaranteedContents={
+		{ entityType = "item", entityName = "ammo1", amount=6},
+		{ entityType = "item", entityName = "ammo2", amount=3},
+		{ entityType = "item", entityName = "ammo3", amount=3},
+		{ entityType = "item", entityName = "crate_of_grenades", amount=3},
+		{ entityType = "item", entityName = "keg_of_black_powder", amount=3},
+		{ entityType = "item", entityName = "stack_of_paper", amount=6},
+		{ entityType = "item", entityName = "bucket_of_ink", amount=3},
+		{ entityType = "item", entityName = "mine_shorings", amount=3},
+		{ entityType = "item", entityName = "leyden_jar", amount=3},
+		{ entityType = "item", entityName = "iron_cogs", amount=3},
+		{ entityType = "item", entityName = "medical_bag", amount=3},
+		{ entityType = "item", entityName = "bottle_of_sulphur_tonic", amount=3},
+		--{ entityType = "item", entityName = "brass_cogs", amount=3},
+		{ entityType = "item", entityName = "chest_of_science_materials", amount=3},
+	},
+}
+
+Entity {
+	name="Science Supply Drop",
+	type="objectcluster",
+	clusterSpawnRadius = 4,
+	player_owned = true,
+     clusterContents={ },
+	guaranteedContents={
+		{ entityType = "item", entityName = "chest_of_science_materials", amount=1},
+		{ entityType = "item", entityName = "chest_of_science_materials", amount=1},
+		{ entityType = "item", entityName = "chest_of_science_materials", amount=1},
+		{ entityType = "item", entityName = "chest_of_science_materials", amount=1},
+		{ entityType = "item", entityName = "chest_of_science_materials", amount=1},
+		{ entityType = "item", entityName = "chest_of_science_materials", amount=1},
+	},
+}
+
+Entity {
+	name="Republique Supply Drop",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=8, ["max"]=12 },
+	clusterSpawnRadius = 4,
+	player_owned = true,
+	clusterContents={
+	item = {
+		"bushel_of_grapes", "bushel_of_grapes",
+		"loaf_of_bread", "loaf_of_bread", "loaf_of_bread",
+		"tin_of_meat", "tin_of_meat",
+		"bottle_of_wine", "bottle_of_wine", "bottle_of_wine", "bottle_of_wine",
+		"planks", "planks",
+		"bricks", "bricks",
+		"bushel_of_grapes", "bushel_of_grapes",
+		"loaf_of_bread", "loaf_of_bread", "loaf_of_bread",
+		"tin_of_meat", "tin_of_meat",
+		"bottle_of_wine", "bottle_of_wine", "bottle_of_wine", "bottle_of_wine",
+		"planks", "planks",
+		"bricks", "bricks",
+		"boxed_blunderbuss_locker",
+		},
+	},
+	guaranteedContents={
+		[1] = { entityType = "item", entityName = "bottle_of_wine", amount=1},
+	},
+}
+
+Entity {
+	name="Republique Pitchblende",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=4, ["max"]=4 },
+	clusterSpawnRadius = 4,
+	player_owned = true,
+	clusterContents={
+	item = {
+		"pitchblende",
+		},
+	},
+}
+
+Entity {
+	name="Novorus Supply Drop",
+	type="objectcluster",
+	clusterSpawnRange = { ["min"]=8, ["max"]=12 },
+	clusterSpawnRadius = 4,
+	player_owned = true,
+	clusterContents={
+		item = {
+			"loaf_of_bread", "loaf_of_bread",
+			"tin_of_meat", "tin_of_meat",
+			"bottle_of_vodka", "bottle_of_vodka", "bottle_of_vodka",
+			"planks", "planks",
+			"bricks", "bricks",
+			"logs", "logs",
+			"rough_stone_block",
+			"loaf_of_bread", "loaf_of_bread",
+			"tin_of_meat", "tin_of_meat",
+			"bottle_of_vodka", "bottle_of_vodka", "bottle_of_vodka",
+			"planks", "planks",
+			"bricks", "bricks",
+			"logs", "logs",
+			"rough_stone_block",
+			"boxed_blunderbuss_locker",
+			},
+	},
+	guaranteedContents={
+		[1] = { entityType = "item", entityName = "bottle_of_vodka", amount=1},
+	},
+}
+
+Entity {
+     name="Rare Painting Drop",
+     type="objectcluster",
+	player_owned = true,
+     clusterSpawnRadius = 4,
+     clusterContents={},
+     guaranteedContents={ [1] = { entityType = "item", entityName = "boxed_rare_painting", amount=1}, },
+}
