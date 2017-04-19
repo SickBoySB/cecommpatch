@@ -1,0 +1,206 @@
+-- EXPLOSIONS
+
+Entity {
+     name = "Landmine Explosion",
+     type = "explosion",
+     damage = 10,
+     shrapnelDamage = 5,
+     pfx = "MidSplosion",
+     sfx = "Explosion Generic",
+     spawnClearableAfter = "Large Crater",
+     secondaryHitName = "Small Explosion",
+     secondaryHitNumber = 3,
+     secondaryHitSpawnTimeMin = 2,
+     secondaryHitSpawnTimeMax = 5,
+     ignition_percent = 30,
+}
+
+Entity {
+     name = "Medium Explosion",
+     type = "explosion",
+     damage = 8,
+     shrapnelDamage = 3,
+     pfx = "MidSplosion",
+     sfx = "Explosion Generic",
+     spawnClearableAfter = "Large Crater",
+     secondaryHitName = "Small Explosion",
+     secondaryHitNumber = 2,
+     secondaryHitSpawnTimeMin = 2,
+     secondaryHitSpawnTimeMax = 4,
+     ignition_percent = 50,
+}
+
+Entity {
+     name = "Strange Meteor Explosion",
+     type = "explosion",
+     damage = 0,
+     shrapnelDamage = 0,
+     pfx = "MidSplosion",
+     sfx = "Explosion Generic",
+     spawnClearableAfter = "Large Crater",
+     ignition_percent = 0,
+}
+
+Entity {
+     name = "Quaggaroth Explosion",
+     type = "explosion",
+     damage = 12,
+     shrapnelDamage = 2,
+     pfx = "DustExplosion",
+     sfx = "Lightning bolt",
+     spawnClearableAfter = "Large Crater",
+     secondaryHitName = "Obeliskian Guardian Explosion",
+     secondaryHitNumber = 13,
+     secondaryHitSpawnTimeMin = 3,
+     secondaryHitSpawnTimeMax = 99,
+     ignition_percent = 10,
+}
+
+Entity {
+     name = "Obeliskian Guardian Explosion",
+     type = "explosion",
+     damage = 12,
+     shrapnelDamage = 2,
+     pfx = "MidNade",
+     sfx = "Lightning bolt",
+     spawnClearableAfter = "Large Crater",
+     secondaryHitName = "Small Eldritch Explosion",
+     secondaryHitNumber = 3,
+     secondaryHitSpawnTimeMin = 3,
+     secondaryHitSpawnTimeMax = 8,
+     ignition_percent = 40,
+}
+
+Entity {
+     name = "Small Eldritch Explosion",
+     type = "explosion",
+     damage = 4,
+     shrapnelDamage = 2,
+     pfx = "QuagSmokePuffGiant",
+     sfx = "Urchin Grenade",
+     spawnClearableAfter = "Small Crater",
+}
+
+Entity {
+     name = "Ammo Explosion",
+     type = "explosion",
+     damage = 1,
+     shrapnelDamage = 4,
+     pfx = "SmallSplosion",
+     sfx = "Grenade Blast",
+     spawnClearableAfter = "Small Crater",
+     secondaryHitName = "Small Explosion",
+     secondaryHitNumber = 4,
+     secondaryHitSpawnTimeMin = 2,
+     secondaryHitSpawnTimeMax = 5,
+     ignition_percent = 30,
+}
+
+Entity {
+     name = "Quaggaroth Trample",
+     type = "explosion",
+     damage = 3,
+     shrapnelDamage = 0,
+     pfx = "DustPuffMassive",
+     sfx = "Blast (Dredmor)",
+     ignition_percent = 0,
+}
+
+Entity {
+     name = "Quaggaroth Beam Hit",
+     type = "explosion",
+     damage = 3,
+     shrapnelDamage = 0,
+     pfx = "FireObject_Spread",
+     sfx = "Blast (Dredmor)",
+     ignition_percent = 20,
+	secondaryHitName = "Quaggaroth Beam Hit Mini",
+     secondaryHitNumber = 8,
+     secondaryHitSpawnTimeMin = 1,
+     secondaryHitSpawnTimeMax = 9,
+	spawnRadius = 5, 
+	spawnClearableAfter = "Medium Crater",
+}
+
+Entity {
+     name = "Quaggaroth Beam Hit Mini",
+     type = "explosion",
+     damage = 2,
+     shrapnelDamage = 0,
+     pfx = "ElecSparker",
+     --sfx = "Blast (Dredmor)",
+     ignition_percent = 10,
+}
+
+Entity {
+     name = "Small Explosion",
+     type = "explosion",
+     damage = 4,
+     shrapnelDamage = 4,
+     pfx = "SmallSplosion",
+     sfx = "Grenade Blast",
+     ignition_percent = 10,
+}
+
+Entity {
+     name = "Minum Burst Hit",
+     type = "explosion",
+     damage = 1,
+     shrapnelDamage = 1,
+     --pfx = "SmallSplosion",
+	pfx = "BigRichochet",
+     sfx = "Grenade Blast",
+     sounds = { "Dirt", "Dirt Thump", "Foliage", "Metal Plate", "stone", "Flesh Pierce"},
+     --ignition_percent = 1,
+     spawnClearableAfter = "Small Crater",
+     secondaryHitName = "Tiny Explosion",
+     secondaryHitNumber = 10,
+     secondaryHitSpawnTimeMin = 2,
+     secondaryHitSpawnTimeMax = 9,
+     spawnRadius = 3, 
+}
+
+Entity {
+     name = "Tiny Explosion",
+     type = "explosion",
+     damage = 1,
+     shrapnelDamage = 1,
+     pfx = "DustPuffV1",
+     sfx = "Grenade Blast",
+     sounds = { "Dirt", "Dirt Thump", "Foliage", "Metal Plate", "stone", "Flesh Pierce"},
+     --ignition_percent = 1,
+}
+
+Entity {
+     name = "Blunderbuss Area Attack",
+     type = "explosion",
+     damage = 1,
+     shrapnelDamage = 2,
+	shrapnelDamageTypeOverride="blunderbuss",
+     pfx = "SmallRicochet",
+     spawnClearableAfter = nil, 
+}
+
+Entity {
+     name = "Selenian Field Effect",
+     type = "explosion",
+     damage = 2,
+     damageTypeOverride="selenian",
+     --shrapnelDamage = 1,
+     pfx = "FishNade",
+     spawnClearableAfter = nil,
+}
+
+Entity {
+     name = "Urchin Grenade Explosion",
+     type = "explosion",
+     damage = 5,
+     shrapnelDamage = 3,
+     pfx = "FishNade",
+     sfx = "Urchin Grenade",
+     spawnClearableAfter = "Small Crater",
+     --secondaryHitName = "Small Miasma Explosion",
+     --secondaryHitNumber = 4,
+     --secondaryHitSpawnTimeMin = 2,
+     --secondaryHitSpawnTimeMax = 5,
+}
