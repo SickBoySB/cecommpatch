@@ -383,12 +383,14 @@ gameobject "airship_mast" inherit "object_damage" inherit "spatialobject"
      receive ClearViolently( gameSimJobInstanceHandle ji, gameObjectHandle damagingObject )
      <<
           -- thunder & noise
+		  --[[
           send("rendCommandManager",
                     "odinRendererCreateParticleSystemMessage",
                     "DustPuffXtraLarge",
                     state.position.x,
                     state.position.y )
-		
+			]]--
+				
           send("rendInteractiveObjectClassHandler",
                     "odinRendererPlaySFXOnInteractive",
                     state.renderHandle,
@@ -397,7 +399,7 @@ gameobject "airship_mast" inherit "object_damage" inherit "spatialobject"
           local handle = query( "scriptManager",
                               "scriptCreateGameObjectRequest",
                               "objectcluster",
-                              {legacyString = "Gabion Gibs"} )[1]
+                              {legacyString = "Wrecked Airship Mast Cluster"} )[1]
 		
 		send(handle, "GameObjectPlace", state.position.x, state.position.y )
           
@@ -452,6 +454,13 @@ gameobject "airship_mast" inherit "object_damage" inherit "spatialobject"
           send("gameBlackboard", "gameObjectRemoveTargetingJobs", SELF, ji)
 		send("rendStaticPropClassHandler", "odinRendererDeleteStaticProp", SELF.id)
 		send("gameSpatialDictionary", "gridRemoveObject", SELF)
+
+		send("rendCommandManager",
+			"odinRendererCreateParticleSystemMessage",
+			"DustPuffMassive",
+			state.position.x,
+			state.position.y)
+				
 		destroyfromjob(SELF,ji)
 	>>
 

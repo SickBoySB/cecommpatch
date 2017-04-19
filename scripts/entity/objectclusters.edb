@@ -380,6 +380,17 @@ Entity {
 }
 
 Entity {
+     name="Wrecked Airship Mast Cluster",
+     type="objectcluster",
+     clusterSpawnRange = { ["min"]=3, ["max"]=5 },
+     clusterSpawnRadius = 3,
+	player_owned = false,
+     clusterContents={
+          clearable = { "Brick Debris, Small" , "Wrecked Airdrop Debris" }
+     }
+}
+
+Entity {
      name="Coconut Palm Cluster",
      type="objectcluster",
      clusterSpawnRange = { ["min"]=2, ["max"]=3 },
