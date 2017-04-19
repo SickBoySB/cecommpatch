@@ -91,7 +91,7 @@ gameobject "airship_mast" inherit "object_damage" inherit "spatialobject"
 		state.position.x = -1
 		state.position.y = -1
 		SELF.tags = { "under_construction" }
-          state.health = 3
+          state.health = 100
           state.addedJob = false
 		state.assignment = nil
 		state.timer = 100
@@ -179,7 +179,7 @@ gameobject "airship_mast" inherit "object_damage" inherit "spatialobject"
 		
           SELF.tags = {"airship_mast", "destructible_wall", "active_airship_mast",}
 		
-          state.health = 20
+          state.health = 40
 
 		send("rendStaticPropClassHandler",
 			"odinRendererCreateStaticPropRequest",
