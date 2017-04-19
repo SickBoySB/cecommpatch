@@ -153,11 +153,26 @@ Entity {
      sounds = { "Dirt", "Dirt Thump", "Foliage", "Metal Plate", "stone", "Flesh Pierce"},
      --ignition_percent = 1,
      spawnClearableAfter = "Small Crater",
-     secondaryHitName = "Tiny Explosion",
+	damageTypeOverride="bullet",
+	shrapnelDamageTypeOverride="bullet",
+     secondaryHitName = "Minum Tiny Explosion",
      secondaryHitNumber = 10,
      secondaryHitSpawnTimeMin = 2,
      secondaryHitSpawnTimeMax = 9,
      spawnRadius = 3, 
+}
+
+Entity {
+     name = "Minum Tiny Explosion",
+     type = "explosion",
+     damage = 1,
+     shrapnelDamage = 1,
+	damageTypeOverride="bullet",
+	shrapnelDamageTypeOverride="bullet",
+     pfx = "DustPuffV1",
+     sfx = "Grenade Blast",
+     sounds = { "Dirt", "Dirt Thump", "Foliage", "Metal Plate", "stone", "Flesh Pierce"},
+     --ignition_percent = 1,
 }
 
 Entity {
@@ -176,6 +191,7 @@ Entity {
      type = "explosion",
      damage = 1,
      shrapnelDamage = 2,
+	damageTypeOverride="bullet",
 	shrapnelDamageTypeOverride="blunderbuss",
      pfx = "SmallRicochet",
      spawnClearableAfter = nil, 
