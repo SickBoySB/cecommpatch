@@ -2255,7 +2255,7 @@
 					min_elevation="0" base_fitness="100">
 				<material_requirement material="3" min="50" max="255" />
                
-				<object name="tree" parameter="Pine" base_range="180" probability="600" max_slope="3"/>
+				<object name="tree" parameter="Snowy Pine" base_range="180" probability="600" max_slope="3"/>
 				<object name="tree" parameter="Snowy Conifer" base_range="150" probability="320" max_slope="3"/>
 				<!-- ores! -->
 				<object name="objectcluster" parameter="Hematite Nodes" base_range="100" probability="1" max_slope="1"/>
@@ -3845,7 +3845,7 @@
 			<forest input_min="15" input_max="90" range_min="80" range_max="340" distribution="noise" octaves="6" frequency="6"
 					min_elevation="0" base_fitness="100">
 				<material_requirement material="3" min="50" max="255" />
-				<object name="tree" parameter="Pine" base_range="150" probability="10" max_slope="1"/>
+				<object name="tree" parameter="Snowy Pine" base_range="150" probability="10" max_slope="1"/>
 			</forest>
 		</forest_layer>
 
@@ -3889,7 +3889,7 @@
 					min_elevation="0" base_fitness="10">				
 				<material_requirement material="2" min="128" max="255" />
 				<material_requirement material="3" min="0" max="64" />
-				<object name="tree" parameter="Pine" base_range="75" max_slope="2" probability="30" />
+				<object name="tree" parameter="Snowy Pine" base_range="75" max_slope="2" probability="30" />
 				<object name="forageSource" parameter="Bones" base_range="100" probability="2" />
 			</forest>
       

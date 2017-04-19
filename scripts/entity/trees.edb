@@ -176,6 +176,39 @@ Entity {
 }
 
 Entity {
+	name = "Snowy Pine",
+	type = "tree",
+	description = "Tending to grow in colder climes, this resinous tree is a good source of timber.",
+	growthStagesTime = { 500, 500, 500, 500 },
+	growthStagesHarvestOutput = { 0, 3, 5, 7 },
+	commodityOutput = "logs",
+     chopLoopsToHarvest = 10,
+	treeModels = {
+		{ "models\\nature\\trees\\saplingPine00.upm",
+		  "models\\nature\\trees\\saplingPine01.upm",
+		  "models\\nature\\trees\\saplingPine02.upm" },
+		{ "models\\nature\\trees\\pineTreeSml00Cold.upm" },
+		{ "models\\nature\\trees\\pineTreeMed00Cold.upm" },
+		{ "models\\nature\\trees\\pineTreeLrg00Cold.upm"  },
+	},
+	stumpModels = {
+		{ false },
+		{ "models\\nature\\trees\\stumpPineTreeSml00.upm",
+		  "models\\nature\\trees\\stumpPineTreeSml01.upm" },
+		{ "models\\nature\\trees\\stumpPineTreeMed00.upm",
+		  "models\\nature\\trees\\stumpPineTreeMed01.upm" },
+		{ "models\\nature\\trees\\stumpPineTreeLrg00.upm",
+		  "models\\nature\\trees\\stumpPineTreeLrg01.upm" },
+	},
+     animLoopsToClear=2,
+	tags = {"tree", "pine"},
+	ambientSoundNameDay = "Ambient Forest Wind",
+	ambientSoundNameDayFitness = 4,
+	ambientSoundNameNight = "Ambient Forest Wind",
+	ambientSoundNameNightFitness = 4,
+}
+
+Entity {
 	name = "Tropical Broadleaf",
 	type = "tree",
 	description = "A verdant, odorous tree of tropical climes.",
