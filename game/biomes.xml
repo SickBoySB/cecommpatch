@@ -2229,7 +2229,7 @@
 			<forest input_min="15" input_max="90" range_min="80" range_max="340" distribution="noise" octaves="6" frequency="6"
 					min_elevation="0" base_fitness="100">
 				<material_requirement material="3" min="50" max="255" />
-				<object name="tree" parameter="Conifer" base_range="150" probability="10" max_slope="1"/>
+				<object name="tree" parameter="Snowy Conifer" base_range="150" probability="10" max_slope="1"/>
 			</forest>
 		</forest_layer>
 
@@ -2256,7 +2256,7 @@
 				<material_requirement material="3" min="50" max="255" />
                
 				<object name="tree" parameter="Pine" base_range="180" probability="600" max_slope="3"/>
-				<object name="tree" parameter="Conifer" base_range="150" probability="320" max_slope="3"/>
+				<object name="tree" parameter="Snowy Conifer" base_range="150" probability="320" max_slope="3"/>
 				<!-- ores! -->
 				<object name="objectcluster" parameter="Hematite Nodes" base_range="100" probability="1" max_slope="1"/>
 				<object name="objectcluster" parameter="Sphalerite Nodes" base_range="100" probability="4" max_slope="1"/>
@@ -3324,7 +3324,7 @@
                
 				<object name="clearable" parameter="Green Grass" base_range="50" probability="40" />
 				<object name="objectcluster" parameter="Lingonberry Bush" base_range="100" probability="5" max_slope="1" />
-				<object name="tree" parameter="Conifer" base_range="160" probability="10" max_slope="2"/>
+				<object name="tree" parameter="Snowy Conifer" base_range="160" probability="10" max_slope="2"/>
 			
 				<object name="objectcluster" parameter="Hematite Nodes" base_range="100" probability="1" max_slope="1" />
 				<object name="objectcluster" parameter="Malachite Nodes" base_range="100" probability="1" max_slope="1"/>
@@ -3418,7 +3418,7 @@
 				<material_requirement material="1" min="1" max="255" />
 
 				<object name="clearable" parameter="Golden Grass" base_range="50" probability="40" />
-				<object name="tree" parameter="Conifer" base_range="150" probability="160" max_slope="1"/>
+				<object name="tree" parameter="Snowy Conifer" base_range="150" probability="160" max_slope="1"/>
 				<object name="objectcluster" parameter="Clay Nodes" base_range="125" probability="4" max_slope="1" />
 			 </forest>
       
@@ -3873,8 +3873,8 @@
 					min_elevation="0" base_fitness="100">
 				<material_requirement material="3" min="50" max="255" />
                
-				<object name="tree" parameter="Conifer" base_range="180" probability="600" max_slope="3"/>
-				<object name="tree" parameter="Conifer" base_range="150" probability="320" max_slope="3"/>
+				<object name="tree" parameter="Snowy Conifer" base_range="180" probability="600" max_slope="3"/>
+				<object name="tree" parameter="Snowy Conifer" base_range="150" probability="320" max_slope="3"/>
 				<!-- ores! -->
 				<object name="objectcluster" parameter="Hematite Nodes" base_range="100" probability="1" max_slope="1"/>
 				<object name="objectcluster" parameter="Sphalerite Nodes" base_range="100" probability="4" max_slope="1"/>
@@ -3992,7 +3992,7 @@
 					min_elevation="0" base_fitness="100">
 				
 				<material_requirement material="2" min="50" max="255" />
-				<object name="tree" parameter="Conifer" base_range="200" probability="10" max_slope="1"/>
+				<object name="tree" parameter="Snowy Conifer" base_range="200" probability="10" max_slope="1"/>
 			</forest>
 		</forest_layer>
 		
@@ -4009,7 +4009,7 @@
 					min_elevation="0" base_fitness="5">
 				
 				<material_requirement material="2" min="1" max="255" />
-				<object name="tree" parameter="Conifer" base_range="75" max_slope="2" probability="4" />
+				<object name="tree" parameter="Snowy Conifer" base_range="75" max_slope="2" probability="4" />
 				<object name="clearable" parameter="Green Grass" base_range="100" probability="5" />
 				<object name="forageSource" parameter="Bones" base_range="100" probability="1" />
 				<object name="objectcluster" parameter="Leafy Green Shrubs" base_range="100" probability="3" max_slope="1" />
@@ -4023,8 +4023,8 @@
 					min_elevation="0" base_fitness="100">
 				<material_requirement material="3" min="50" max="255" />
                
-				<object name="tree" parameter="Conifer" base_range="180" probability="600" max_slope="3"/>
-				<object name="tree" parameter="Conifer" base_range="150" probability="320" max_slope="3"/>
+				<object name="tree" parameter="Snowy Conifer" base_range="180" probability="600" max_slope="3"/>
+				<object name="tree" parameter="Snowy Conifer" base_range="150" probability="320" max_slope="3"/>
 				<!-- ores! -->
 				<object name="objectcluster" parameter="Hematite Nodes" base_range="100" probability="1" max_slope="1"/>
 				<object name="objectcluster" parameter="Sphalerite Nodes" base_range="100" probability="4" max_slope="1"/>

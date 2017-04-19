@@ -29,6 +29,36 @@ Entity {
 }
 
 Entity {
+	name = "Snowy Conifer",
+	type = "tree",
+	description = "Tending to grow in colder climes, this resinous tree is a good source of timber.",
+	growthStagesTime = { 500, 500, 500, 500 },
+	growthStagesHarvestOutput = { 0, 3, 4, 5 },
+     chopLoopsToHarvest = 10,
+	commodityOutput = "logs",
+	treeModels = {
+		{ "models\\nature\\trees\\saplingPine00.upm",
+		  "models\\nature\\trees\\saplingPine01.upm",
+		  "models\\nature\\trees\\saplingPine02.upm", },
+		{ "models\\nature\\trees\\coniferSmallCold.upm",  },
+		{ "models\\nature\\trees\\coniferMediumCold.upm", },
+		{ "models\\nature\\trees\\coniferLargeCold.upm",  },
+	},
+	stumpModels = {
+		{ false, },
+		{ "models\\nature\\trees\\coniferStump.upm", },
+		{ "models\\nature\\trees\\coniferStump.upm", },
+		{ "models\\nature\\trees\\coniferStump.upm", },
+	},
+     animLoopsToClear=2,
+	tags = {"tree", "pine"},
+	ambientSoundNameDay = "Ambient Forest Wind",
+	ambientSoundNameDayFitness = 4,
+	ambientSoundNameNight = "Ambient Forest Wind",
+	ambientSoundNameNightFitness = 4,
+}
+
+Entity {
 	name = "Joshua Tree",
 	type = "tree",
 	description = "Thriving in open grasslands and deserts, this spiny tree is a good source of timber.",
