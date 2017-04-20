@@ -1878,7 +1878,7 @@ Entity
 				iconSkin = "ui//commodityIcons.xml",
 				sessionVarName = "bamboo_technology_unlocked",
 				eventName = "discovery_bamboo",
-				biomes = { desert = true, tropical=true }, 
+				biomes = { desert = true }, 
 			},
 			{
 				name = "opium_technology_desert",
