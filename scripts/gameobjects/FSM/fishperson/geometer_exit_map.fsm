@@ -1,0 +1,68 @@
+geometer_exit_map = {
+	["start"] = function(state,tag,name)
+			
+		local animName = "look_up"
+		if SELF.tags.geometer_observator then
+			animName = fold
+		end
+		
+		send("rendOdinCharacterClassHandler",
+			"odinRendererSetCharacterAnimationMessage",
+			state.renderHandle,
+			animName,
+			true)
+		
+          state.AI.animationTickCount = math.floor( animationLength(state.animSet, animName) *0.6)
+		
+		send("rendCommandManager",
+			"odinRendererCreateParticleSystemMessage",
+			"DustPuffMassiveSlow", --"DustPuffMassive",
+			state.AI.position.x,
+			state.AI.position.y)
+
+		return "animating"
+	end,
+	
+	["animating"] = function(state,tag,name)
+		state.AI.animationTickCount = state.AI.animationTickCount - 1
+		if state.AI.animationTickCount == 8 then
+			
+			send("rendCommandManager",
+				"odinRendererCreateParticleSystemMessage",
+				"TransformPouf",
+				state.AI.position.x,
+				state.AI.position.y )
+			
+			send("rendInteractiveObjectClassHandler",
+				"odinRendererPlaySFXOnInteractive",
+				SELF.id,
+				"Slipgate Open")
+				
+		elseif state.AI.animationTickCount <= 1 then
+			
+			send("rendOdinCharacterClassHandler",
+				"odinRendererHideCharacterMessage",
+				state.renderHandle,
+				true)
+			
+			return "final"
+		
+		end
+		return "animating"
+	end,
+
+	["final"] = function(state,tag,name)
+		--[[send("rendOdinCharacterClassHandler",
+			"odinRendererSetCharacterAnimationMessage",
+			state.renderHandle,
+			"stand",
+			false)]]
+	
+		send(SELF,"despawn")
+		return 
+	end, 
+
+	["abort"] = function(state, tag,name)
+		return
+	end
+}
