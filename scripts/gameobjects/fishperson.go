@@ -770,7 +770,13 @@ gameobject "fishperson" inherit "ai_agent"
 					"none",
 					"biped",
 					"idle_dead")
-                    
+					
+				send("rendCommandManager",
+					"odinRendererCreateParticleSystemMessage",
+					"DustPuffXtraLarge",
+					state.AI.position.x,
+					state.AI.position.y)
+             --[[       
 				send("rendCommandManager",
                          "odinRendererCreateParticleSystemMessage",
                          "MiasmaBurst",
@@ -783,6 +789,7 @@ gameobject "fishperson" inherit "ai_agent"
 				
 				send("gameSpatialDictionary", "gridRemoveObject", SELF)
 				destroy(SELF)
+				]]--
 			end
 		end
 	>>
@@ -953,12 +960,20 @@ gameobject "fishperson" inherit "ai_agent"
 			--destroyfromjob(SELF, ji)
 		else
 			-- disappear in a poof of smoke.
+			--[[
 			send("rendCommandManager",
 				"odinRendererCreateParticleSystemMessage",
 				"CeramicsStamperPoof",
 				state.AI.position.x,
 				state.AI.position.y)
-		
+			]]--
+
+			send("rendCommandManager",
+					 "odinRendererCreateParticleSystemMessage",
+					 "MiasmaBurst",
+				state.AI.position.x,
+				state.AI.position.y)
+			
 			-- remove me from world, take carried objects with me.
 			-- if carrying a body (for some reason), leave it behind.
 			

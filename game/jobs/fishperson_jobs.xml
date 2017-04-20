@@ -714,6 +714,34 @@
           </fsm>
      </job>-->
      
+	<job name="Retrieve Fallen (fishperson)" display_name="Retrieve Fallen"
+		mandatory_eval="1" test_for_interrupts="1"
+		icon_skin="ui\orderIcons.xml" icon="butcher_icon"
+		can_be_social="0"
+		interruptee_type="2" interrupter_type="1">
+		
+          <require_not_sitting/>
+		  <require_empty_hands failure_reason="Character required to have empty hands."/>
+		  <require_random_location range="20" input="dumplocation"/>
+          <require_gameobject input="fishperson_corpse"
+						range="30"
+						tag="fishperson,dead"
+						not_tag="give_proper_burial"
+						failure_reason="Needs a dead fishperson."
+						must_lock="1"/>
+          <utility>
+               <base_job_utility weight="270"/>
+               <character_personal_stat name="morale" weight="5"/> 
+          </utility>
+          <fsm>
+				<walk_to input="fishperson_corpse"/>
+				<pickup_person input="fishperson_corpse"/>
+				<walk_to input="dumplocation"/>
+				<drop_person input="fishperson_corpse"/>
+				<fishperson_remove_fishperson input="fishperson_corpse"/>
+          </fsm>
+     </job>
+     
 	<job name="Butcher Human Corpse (fishperson)" display_name="Butcher Human Corpse"
 		mandatory_eval="1" test_for_interrupts="1"
 		icon_skin="ui\orderIcons.xml" icon="butcher_icon"
