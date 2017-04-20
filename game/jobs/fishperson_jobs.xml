@@ -1,0 +1,1005 @@
+<jobsDB>
+<fishperson>
+	
+     <!-- Let it not be said that we don't create jobs for fishpeople -->
+	
+	<!-- fishpeople combat-related jobs -->
+	<!-- TODO: finish this for fishpeople hunting mission  
+	<job name="Fishperson Melee Hunt" display_name="Hunt (Melee)"
+		mandatory_eval="1" can_interrupt="1" test_for_interrupts="1"
+		interruptee_type="3" interrupter_type="2" >
+		
+          <require_gameobject range="14" tag="huntable" not_tag="dead"
+						input="target" closest="1" must_lock="0"
+						failure_reason="Requires available attack target." />
+		
+		<require_character_has_tag tag="fishy_hunter" />
+          
+		<utility>
+               <base_job_utility weight="500"/>
+          </utility>
+          <fsm>
+               <enemy_alert input="target" />
+               <attack_melee input="target" name="rampage_run" />
+          </fsm>
+     </job>-->
+	
+     <job name="Fishperson Shoot Human" display_name="Fishperson Shoot"
+		icon_skin="ui\orderIcons.xml" icon="guns_image"
+		mandatory_eval="1"
+		can_interrupt="1"
+		test_for_interrupts="1"
+		interruptee_type="3"
+		interrupter_type="2" >
+		
+		<require_character_has_tag tag="hostile_agent,ranged_attack" />
+		<require_empty_hands failure_reason="Character required to have empty hands."/>
+		
+          <require_gameobject range="15"
+						tag="combat_target_for_enemy"
+						not_tag="dead,fishy_state"
+						input="target"
+						closest="1"
+						must_lock="0"
+						failure_reason="Requires available attack target." />
+          
+		<utility>
+               <base_job_utility weight="300"/>
+               <character_personal_stat name="morale" weight="11"/>
+			<has_tag input="target" tag="fleeing" weight="-250"/>
+          </utility>
+          <fsm>
+               <enemy_alert input="target" />
+			<attack_ranged input="target" name="run"/>
+          </fsm>
+          <history importance="100" />
+     </job>
+	
+     <!--<job name="Fishperson Attack Human (Grenade)" display_name="Attack (Grenade)"
+		icon_skin="ui\orderIcons.xml" icon="guns_image"
+		mandatory_eval="1" can_interrupt="1" test_for_interrupts="1"
+		interruptee_type="3" interrupter_type="2" >
+		
+		<require_character_has_tag tag="hostile_agent" />
+          <require_wield_tool tag="grenade_weapon" failure_reason="Requires available weapon."/>
+          <require_gameobject range="15"
+						tag="combat_target_for_enemy"
+						not_tag="dead,fishy_state,fishy_state"
+						input="target"
+						closest="1"
+						must_lock="0"
+						failure_reason="Requires available attack target." />
+		
+          <utility>
+               <base_job_utility weight="300"/>
+               <character_personal_stat name="morale" weight="11"/>
+			<has_tag input="target" tag="fleeing" weight="-250"/>
+          </utility>
+		
+          <fsm>
+               <enemy_alert input="target" />
+               <fishperson_throw_grenade input="target" name="run"/>
+          </fsm>
+		
+          <history importance="100" />
+     </job> -->
+     
+	<job name="Fishperson Retaliate Against Attacker"
+		display_name="Retaliate (Melee)"
+		mandatory_eval="0"
+		can_interrupt="1"
+		test_for_interrupts="1" 
+		interruptee_type="3" interrupter_type="2" >
+		
+		<require_empty_hands failure_reason="Character required to have empty hands."/>
+          <utility>
+               <base_job_utility weight="1000"/>
+          </utility>
+          <fsm>
+               <attack_melee input="enemy" name="rampage_run" />
+          </fsm>
+     </job>
+	
+     <job name="Fishperson Melee Human" display_name="Attack (Melee)"
+		mandatory_eval="1" can_interrupt="1" test_for_interrupts="1" 
+		interruptee_type="3" interrupter_type="2" >
+		
+		<require_character_has_tag tag="hostile_agent" />
+		<require_empty_hands failure_reason="Character required to have empty hands."/>
+          <require_gameobject input="target"
+						tag="combat_target_for_enemy"
+						not_tag="dead,fishy_state,fishy_state"
+						closest="1"
+						range="13"
+						must_lock="0" 
+						failure_reason="Requires available attack target." />
+		
+          <utility>
+               <base_job_utility weight="100"/>
+               <character_personal_stat name="morale" weight="10"/>
+			<has_tag input="target" tag="fleeing" weight="-250"/>
+          </utility>
+          <fsm>
+               <enemy_alert input="target" />
+               <attack_melee input="target" name="rampage_run" />
+          </fsm>
+     </job>
+	
+	<job name="Fishperson Release Transformed"
+		display_name="Release Transformed"
+		mandatory_eval="1"
+		can_interrupt="1"
+		test_for_interrupts="1" 
+		interruptee_type="4" interrupter_type="3" >
+		
+		<require_empty_hands failure_reason="Character required to have empty hands."/>
+          <require_gameobject input="target"
+						tag="citizen,fishy_state"
+						not_tag="dead"
+						closest="1"
+						range="13"
+						must_lock="1" 
+						failure_reason="Requires available attack target." />
+		
+          <utility>
+               <base_job_utility weight="2500"/>
+          </utility>
+          <fsm>
+			<walk_to input="target" name="rampage_run" />
+               <fishperson_transform_target input="target" />
+          </fsm>
+     </job>
+    
+	<!-- fishpeople property destruction jobs -->
+	<job name="Destroy Crops For Fun (Fishperson)"
+		display_name="Destroy Crops For Fun"
+		mandatory_eval="1" can_interrupt="0"
+		test_for_interrupts="1"
+		interruptee_type="1" interrupter_type="0"
+		is_social="1">
+		
+		<require_no_item />
+		<require_session_bool name="fishpeopleVandalismDiscouraged" value="0" />
+		<require_character_personal_stat_geq name="aggression" amount="0" />
+		<require_character_personal_stat_leq name="object_attack_counter" amount="5" />
+          <require_gameobject range="9"
+						tag="crop"
+						not_tag="not_grown_yet"
+						input="target"
+						closest="1"
+						failure_reason="Requires available attack target."
+						must_lock="1"/>
+          
+		<utility>
+               <base_job_utility weight="0"/>
+               <character_personal_stat name="morale" weight="1"/>
+          </utility>
+          <fsm>
+			<set_tag name="bad_fishperson" />
+               <fishperson_attack_object input="target" name="rampage_run" />
+          </fsm>
+     </job>
+	
+	<job name="Destroy Crops (Fishperson)" display_name="Destroy Crops (Raider)"
+		mandatory_eval="1" can_interrupt="1" test_for_interrupts="1"
+		interruptee_type="3" interrupter_type="2">
+		
+		<require_empty_hands failure_reason="Character required to have empty hands."/>
+		<require_character_personal_stat_geq name="aggression" amount="0" />
+		<require_character_personal_stat_leq name="object_attack_counter" amount="5" />
+		<require_character_has_tag tag="hostile_agent" />
+          <require_gameobject range="10"
+						tag="crop"
+						not_tag="not_grown_yet"
+						input="target"
+						closest="1"
+						failure_reason="Requires available attack target."
+						must_lock="0"/>
+          
+		<utility>
+               <base_job_utility weight="50"/>
+               <random value="20" weight="10" />
+               <character_personal_stat name="morale" weight="5"/>
+          </utility>
+          <fsm>
+               <fishperson_attack_object input="target" name="rampage_run" />
+          </fsm>
+     </job> 
+
+     <job name="Destroy Walls (Fishperson)" display_name="Destroy Walls"
+		mandatory_eval="1" can_interrupt="1" test_for_interrupts="1"
+		interruptee_type="2" interrupter_type="1">
+		
+		<require_character_personal_stat_leq name="object_attack_counter" amount="5" />
+		<require_character_personal_stat_geq name="aggression" amount="0" />
+		<require_session_int_leq name="fishpeopleRelations" value="0"/>
+		<require_empty_hands failure_reason="Character required to have empty hands."/>
+          <require_gameobject range="10" tag="destructible_wall"
+						input="target" closest="1"
+						failure_reason="Requires available attack target."
+						must_lock="0"/>
+
+          <utility>
+               <base_job_utility weight="25"/>
+               <random value="10" weight="10" />
+               <character_personal_stat name="morale" weight="5"/>
+          </utility>
+          <fsm>
+               <fishperson_attack_object input="target" name="rampage_run" />
+          </fsm>
+     </job>
+	
+     <job name="Attack Structure (Fishperson)"
+		display_name="Attack Structure"
+		mandatory_eval="1"
+		can_interrupt="1"
+		test_for_interrupts="1"
+		interruptee_type="2"
+		interrupter_type="1">
+		
+		<require_character_personal_stat_leq name="object_attack_counter" amount="5" />
+		<require_empty_hands failure_reason="Character required to have empty hands."/>
+		<require_character_has_tag tag="hostile_agent"/>
+		<require_building input="building"
+						tag="building_attack_target"
+						must_lock="0"
+						failure_reason="Requires available building"
+						range="15"/>
+
+          <utility>
+               <base_job_utility weight="25"/>
+               <random value="10" weight="10" />
+               <character_personal_stat name="morale" weight="5"/>
+          </utility>
+          <fsm>
+			<walk_adjacent_to_building input="building" name="rampage_run"/>
+               <agent_attack_structure input="building" />
+          </fsm>
+     </job>
+	
+	<job name="Destroy Commodity (Fishperson)"
+		display_name="Destroy Goods"
+		mandatory_eval="1"
+		can_interrupt="1"
+		test_for_interrupts="1"
+		interruptee_type="3"
+		interrupter_type="2">
+		
+		<require_character_personal_stat_geq name="aggression" amount="0" />
+		<require_character_personal_stat_leq name="object_attack_counter" amount="5" />
+		<require_character_has_tag tag="hostile_agent" />
+		<require_empty_hands failure_reason="Character required to have empty hands."/>
+          <require_gameobject range="10"
+						tag="commodity"
+						input="target"
+						closest="1"
+						failure_reason="Requires available attack target."
+						must_lock="0"/>
+          
+		<utility>
+               <base_job_utility weight="50"/>
+               <random value="10" weight="10" />
+               <character_personal_stat name="morale" weight="5"/>
+          </utility>
+          <fsm>
+               <fishperson_attack_object input="target" name="rampage_run" />
+          </fsm>
+     </job> 
+	
+	<!-- fishpeople social jobs -->
+	<job name="Idle (Fishperson)" display_name="Idle"
+		mandatory_eval="1" test_for_interrupts="1"
+		icon_skin="ui\orderIcons.xml" icon="idle_icon"
+		interruptee_type="1" interrupter_type="0" is_social="1">
+		
+		<require_character_has_no_tag tag="mission_active" />
+		
+          <utility>
+               <base_job_utility weight="10"/>
+          </utility>
+          <fsm>
+               <animal_idle />
+          </fsm>
+     </job>
+	
+     <job name="Wander (Fishperson)" display_name="Wander"
+		mandatory_eval="1"
+		interruptee_type="1"
+		interrupter_type="0"
+		test_for_interrupts="1"
+		is_social="1">
+		
+		<require_character_has_no_tag tag="mission_active" />
+          <require_random_location range="16" input="destination" failure_reason="Requires available wander destination."/>
+		
+		<utility>
+               <base_job_utility weight="10"/>
+          </utility>
+          <fsm>
+               <walk_to input="destination"/>
+          </fsm>
+     </job>
+	
+	<!-- Fishpeople not allowed to attack but can mess w/ humans -->
+	<job name="Intimidate Human" display_name="Intimidate Human"
+		icon="fishperson_angry" icon_skin="thoughtIcons.xml"
+		can_be_social="1" can_interrupt="0"
+		mandatory_eval="1" test_for_interrupts="1"
+		is_social="1">
+		
+		<require_character_personal_stat_geq name="aggression" amount="1" />
+		<require_character_has_tag tag="neutral_agent" />
+		<require_character_has_no_tag tag="hostile_agent" />
+		
+		<require_gameobject input="human"
+						tag="human"
+						not_tag="dead,food,meat"
+						range="12"
+						must_lock="0"
+						closest="1"
+						failure_reason="Requires hoomon." />
+	
+		<utility>
+			<base_job_utility weight="0"/>
+			<character_personal_stat name="aggression" weight="1"/>
+			<has_tag input="human" tag="fleeing" weight="-8"/>
+		</utility>
+		
+		<fsm>
+			<!-- TODO for real -->
+			<fishperson_intimidate_other input="human" name="freak_out" />
+		</fsm>
+	</job>
+	
+	<job name="Gawk At Human" display_name="Gawk At Human"
+		icon="fishperson" icon_skin="thoughtIcons.xml"
+		can_be_social="1" can_interrupt="0"
+		mandatory_eval="1" is_social="1" test_for_interrupts="1" >
+	
+		<require_character_personal_stat_geq name="aggression" amount="0" />
+		<require_character_has_tag tag="neutral_agent" />
+		<require_character_has_no_tag tag="hostile_agent" />
+		
+		<require_gameobject input="human"
+						tag="human"
+						not_tag="dead,food,meat"
+						range="12"
+						must_lock="0"
+						closest="1"
+						failure_reason="Requires non-hostile human." />
+	
+		<utility>
+			<base_job_utility weight="2"/>
+			<has_tag input="human" tag="fleeing" weight="-5"/>
+		</utility>
+		
+		<fsm>
+			<weak_follow input="human" />
+			<animate_at input="human" name="inspect_painting_shrug" />
+		</fsm>
+	</job>
+		
+	<!--
+	<job name="Talk To Human" display_name="Talk To Human"
+		icon="fishperson" icon_skin="thoughtIcons.xml"
+		can_be_social="1" can_interrupt="0"
+		mandatory_eval="1" is_social="1" test_for_interrupts="1" >
+		
+		<require_character_personal_stat_geq name="aggression" amount="0" />
+		<require_character_has_tag tag="neutral_agent" />
+		<require_character_has_no_tag tag="hostile_agent" />
+		
+		<require_gameobject input="human"
+						tag="citizen,human"
+						not_tag="dead,meat,asleep,food"
+						range="12"
+						must_lock="0"
+						closest="1"
+						failure_reason="Requires non-hostile human." />
+	
+		<utility>
+			<base_job_utility weight="3"/>
+			<character_personal_stat name="aggression" weight="-1"/>
+			<has_tag input="human" tag="fleeing" weight="-5"/>
+		</utility>
+		
+		<fsm>
+			<weak_follow input="human" />
+			<gossip_with input="human" />
+		</fsm>
+	</job>
+	-->
+	<job name="Flee Due To Intimidation" display_name="Flee Due To Intimidation"
+			mandatory_eval="0"
+			can_interrupt="1"
+			icon_skin="ui\thoughtIcons.xml"
+			icon="retreat"
+			interruptee_type="4"
+			interrupter_type="3">
+
+		<require_not_sitting/>
+		<require_not_attending_party/>
+		<require_random_location range="24" input="destination"/>
+		<utility >
+			<base_job_utility weight="-1"/>
+		</utility>
+		<fsm>
+			<set_tag name="fleeing" />
+			<walk_to input="destination" name="run"/>
+			<remove_tag name="fleeing" />
+		</fsm>
+	</job>
+		
+	<job name="Flee from Close Human (skittish)" display_name="Fleeing from Nearby Human"
+		mandatory_eval="1"
+		can_interrupt="1"
+		test_for_interrupts="1"
+		icon_skin="ui\thoughtIcons.xml"
+		icon="afraid"
+		interruptee_type="4"
+		interrupter_type="3">
+		
+		<require_character_personal_stat_leq name="aggression" amount="-1" />
+          <require_gameobject input="enemy"
+						tag="human"
+						not_tag="fishy_state"
+						range="4"
+						must_lock="0"
+						failure_reason="Fleeing requires something horrible to flee from."/>
+          <utility>
+               <character_personal_stat name="morale" weight="-10"/>
+               <base_job_utility weight="1000"/>
+          </utility>
+          <fsm>
+               <set_tag name="fleeing" />
+               <unlock input="enemy"/>
+               <walk_away_from_creature input="enemy" name="fleeing"/>
+               <remove_tag name="fleeing" />
+          </fsm>
+     </job>
+	
+     <job name="Flee from Human (skittish)" display_name="Fleeing from Humans"
+		mandatory_eval="1"
+		can_interrupt="1"
+		test_for_interrupts="1"
+		icon_skin="ui\thoughtIcons.xml"
+		icon="afraid"
+		interruptee_type="4"
+		interrupter_type="3">
+		
+		<require_character_personal_stat_leq name="aggression" amount="-2" />
+          <require_gameobject input="enemy"
+						tag="human"
+						not_tag="fishy_state,meat,food"
+						range="14"
+						must_lock="0"
+						failure_reason="Fleeing requires something horrible to flee from."/>
+          <utility>
+               <character_personal_stat name="morale" weight="-10"/>
+               <base_job_utility weight="1000"/>
+          </utility>
+          <fsm>
+               <set_tag name="fleeing" />
+               <unlock input="enemy"/>
+               <walk_away_from_creature input="enemy" name="fleeing"/>
+               <remove_tag name="fleeing" />
+          </fsm>
+     </job>
+	
+	<job name="Retreat From Combat With Humans"
+		display_name="Fleeing from Combat"
+		mandatory_eval="1"
+		can_interrupt="1"
+		test_for_interrupts="1"
+		icon_skin="ui\thoughtIcons.xml"
+		icon="afraid"
+		interruptee_type="4"
+		interrupter_type="3">
+		
+		<require_character_has_tag tag="hostile_agent" />
+          <require_gameobject input="enemy"
+						tag="human"
+						not_tag="fishy_state,dead,meat,food"
+						range="14"
+						must_lock="0" 
+						failure_reason="Fleeing requires something horrible to flee from."/>
+		
+          <utility>
+               <character_personal_stat name="morale" weight="-15"/> <!-- 0 to -1500 influence -->
+               <base_job_utility weight="1000"/>
+          </utility>
+		
+          <fsm>
+               <set_tag name="fleeing" />
+               <!--<unlock input="enemy"/>-->
+               <walk_away_from_creature input="enemy" name="fleeing"/>
+               <remove_tag name="fleeing" />
+          </fsm>
+     </job>
+	
+	<!-- Obeliskians are super scary to fishpeople -->
+	<job name="Flee from Obeliskian"
+		display_name="Fleeing from Obeliskian"
+		mandatory_eval="1"
+		can_interrupt="1"
+		test_for_interrupts="1"
+		icon_skin="ui\thoughtIcons.xml" icon="afraid"
+		interruptee_type="4"
+		interrupter_type="3">
+		
+          <require_gameobject input="enemy"
+						tag="obeliskian"
+						not_tag="dead,artifact,corpse"
+						range="10"
+						must_lock="0"
+						failure_reason="Fleeing requires an Obeliskian to flee from."/>
+          <utility>
+               <base_job_utility weight="1000"/>
+          </utility>
+          <fsm>
+               <set_tag name="fleeing" />
+               <walk_away_from_creature input="enemy" name="fleeing"/>
+			<walk_away_from_creature input="enemy" name="fleeing"/>
+               <remove_tag name="fleeing" />
+          </fsm>
+	</job>
+     
+     <job name="Angry Wander (Fishperson)" display_name="Angry Wander"
+		mandatory_eval="1" test_for_interrupts="1"
+		interruptee_type="1" interrupter_type="0">
+		
+          <require_random_location range="20"
+							input="destination"
+							failure_reason="Requires available wander destination."/>
+		
+          <require_character_has_tag tag="rampage" />
+		<require_character_has_no_tag tag="mission_active" />
+		
+	     <utility>
+               <base_job_utility weight="200"/>
+          </utility>
+          <fsm>
+               <walk_to input="destination" name="rampage_walk" />
+          </fsm>
+     </job>
+
+     <job name="Freak Out Due To Fire (Fishperson)" display_name="Freak Out (on fire)"
+		mandatory_eval="1"
+		test_for_interrupts="1"
+		interruptee_type="3"
+		interrupter_type="2">
+		
+          <require_random_location range="5"
+							input="destination"
+							failure_reason="Requires available wander destination."/>
+		
+          <require_character_has_tag tag="burning" />
+		
+	     <utility>
+               <base_job_utility weight="2000"/>
+          </utility>
+          <fsm>
+               <walk_to input="destination" name="fleeing" />
+			<animate name="freak_out" />
+          </fsm>
+     </job>
+
+
+     <job name="Inspect Egg Clutch"
+		display_name="Inspect Egg Clutch" 
+		mandatory_eval="1"
+		icon_skin="ui\thoughtIcons.xml" icon="fishperson"
+		interruptee_type="1" interrupter_type="0"
+		test_for_interrupts="1"
+		is_social="1">
+		
+          <require_gameobject input="eggs"
+						tag="fishpeople_eggs"
+						range="10"
+						must_lock="0" />
+		
+          <utility>
+               <base_job_utility weight="5"/>
+          </utility>
+          <fsm>
+               <walk_to_module input="eggs"/>
+               <remove_tag name="rampage" />
+               <fishperson_force_wander />
+          </fsm>
+     </job>
+
+	<job name="Charge Toward Civilization (fishperson)"
+		display_name="React To Plundered Clutch"
+		mandatory_eval="0"
+		icon_skin="ui\thoughtIcons.xml"
+		test_for_interrupts="1"
+		icon="fishperson_angry"
+		interruptee_type="3"
+		interrupter_type="2">
+		
+		<require_closest_civilization_location input="destination"/>
+		
+		<utility>
+               <base_job_utility weight="500"/>
+          </utility>
+		<fsm>
+			<walk_to input="destination" name="rampage_run" />
+		</fsm>
+	</job>
+
+     <job name="React To Plundered Clutch"
+		display_name="React To Plundered Clutch"
+		mandatory_eval="1"
+		icon_skin="ui\thoughtIcons.xml"
+		test_for_interrupts="1"
+		icon="fishperson_angry"
+		interruptee_type="3"
+		interrupter_type="2">
+		
+          <require_gameobject input="eggs"
+						tag="fish_eggs_stolen"
+						range="16"
+						must_lock="1"  />
+		
+          <utility>
+               <base_job_utility weight="500"/>
+          </utility>
+          <fsm>
+               <fishperson_react_to_plundered_clutch input="eggs"/>
+          </fsm>
+     </job>
+     
+     <job name="Rally Into Raiding Party" display_name="Rally Into Raiding Party"
+		mandatory_eval="1"
+		can_interrupt="1"
+		icon_skin="ui\thoughtIcons.xml" icon="fishperson_angry"
+		interruptee_type="3" interrupter_type="2">
+		
+          <require_gameobject input="raid_leader"
+						tag="rallying_raiders"
+						range="18"
+						must_lock="0"  />
+		
+          <utility>
+               <base_job_utility weight="250"/>
+          </utility>
+          <fsm>
+               <walk_to_near_position input="raid_leader" name="run"/>
+               <fishperson_emote name="freakout"/>
+               <fishperson_restore_morale />
+               <fishperson_thought_icon name="fishperson_angry" />
+			<remove_tag_other input="raid_leader" name="rallying_raiders" />
+          </fsm>
+     </job>
+	
+     <!--<job name="Rally Over Caviar" display_name="Rally Over Caviar" mandatory_eval="1" icon_skin="ui\thoughtIcons.xml" icon="fishperson_angry" interruptee_type="2" interrupter_type="1">
+          <require_gameobject input="eggs" tag="raw_caviar" range="20" must_lock="0"  />
+          <require_character_has_tag tag="choleric" />
+          <require_character_has_no_tag tag="raider" />
+          <require_not_sitting/>
+          <utility>
+               <base_job_utility weight="100"/>
+               <random value="10" weight="10" />
+               <distance_from input="eggs" weight="-5" />
+          </utility>
+          <fsm>
+               <walk_to_module input="eggs"/>
+               <feel_freakout/>
+               <set_tag name="rallying_raiders" />
+               <fishperson_thought_icon name="fishpeople_attack" />
+               <fishperson_rally_raiders />
+               <remove_tag name="rallying_raiders" />
+               <set_tag name="raider" />
+          </fsm>
+     </job>
+     
+     <job name="Rally Over The Dead" display_name="Rally Over The Dead" mandatory_eval="1" icon_skin="ui\thoughtIcons.xml" icon="fishperson_angry" interruptee_type="2" interrupter_type="1">
+          <require_gameobject input="dead_fishperson" tag="dead_fishperson" range="20" must_lock="0"  />
+          <require_character_has_tag tag="choleric" />
+          <require_character_has_no_tag tag="raider" />
+          <require_not_sitting/>
+          <utility>
+               <base_job_utility weight="100"/>
+               <random value="10" weight="10" />
+               <distance_from input="dead_fishperson" weight="-5" />
+          </utility>
+          <fsm>
+               <walk_to_module input="dead_fishperson"/>
+               <feel_freakout/>
+               <set_tag name="rallying_raiders" />
+               <fishperson_thought_icon name="fishpeople_attack" />
+               <fishperson_rally_raiders />
+               <remove_tag name="rallying_raiders" />
+               <set_tag name="raider" />
+          </fsm>
+     </job>-->
+     
+	<job name="Butcher Human Corpse (fishperson)" display_name="Butcher Human Corpse"
+		mandatory_eval="1" test_for_interrupts="1"
+		icon_skin="ui\orderIcons.xml" icon="butcher_icon"
+		can_be_social="0"
+		interruptee_type="1" interrupter_type="0">
+		
+          <require_not_sitting/>
+		<require_empty_hands failure_reason="Character required to have empty hands."/>
+          <require_gameobject input="human_corpse"
+						range="15"
+						tag="meat_source,human,dead"
+						failure_reason="Butchering human corpse requires an available human corpse (obviously)."
+						must_lock="1"/>
+          <utility>
+               <base_job_utility weight="270"/>
+               <character_personal_stat name="morale" weight="5"/> 
+          </utility>
+          <fsm>
+               <walk_to input="human_corpse"/>
+               <fishperson_butcher input="human_corpse"/>
+          </fsm>
+          <fills_reqs>
+               <require_gameobject tag="food" amount="1" input="food" range="100"/>
+          </fills_reqs>
+     </job>
+	
+	<job name="Eat Human Flesh" display_name="Eat Human Flesh"
+		mandatory_eval="1" test_for_interrupts="1"
+		interruptee_type="1" interrupter_type="0"
+		is_social="1">
+		
+          <require_not_sitting/>
+		
+          <require_gameobject input="food"
+						tag="human,meat,raw"
+						amount="1"
+						range="15"
+						failure_reason="Requires available food."/>
+		
+          <require_empty_hands failure_reason="Character required to have empty hands."/>
+          <utility>
+               <base_job_utility weight="10"/>
+          </utility>
+          <fsm>
+               <walk_to_adjacent_position input="food"/>
+               <pickup_item input="food"/>
+               <fishperson_consume_food input="food"/>
+          </fsm>
+          <history importance="10" />
+     </job>
+  
+	<!-- jobs to fight back vs. things hostile to fishpeople -->
+	<job name="Shoot at Target (vs hostile_vs_fishpeople)"
+		display_name="Shoot at Target"
+		mandatory_eval="1"
+		can_interrupt="1"
+		interruptee_type="4"
+		interrupter_type="3" >
+
+		<require_character_has_tag tag="has_ranged_attack" />
+		<require_empty_hands failure_reason="Character required to have empty hands."/>
+		<require_gameobject input="target"
+						tag="hostile_vs_fishpeople"
+						not_tag="dead,corpse"
+						range="12"
+						closest="1"
+						failure_reason="Requires available attack target."
+						must_lock="0"/>
+		
+		<require_character_has_no_tag tag="coward" />
+		
+		<utility>
+			<base_job_utility weight="750"/>
+			<character_personal_stat name="morale" weight="11"/>
+			<has_tag input="target" tag="military" weight="1000"/>
+			<has_tag input="target" tag="fleeing" weight="-1500"/>
+		</utility>
+		<fsm>
+			<enemy_alert input="target" />
+			<attack_ranged input="target" name="run"/>
+		</fsm>
+	</job>
+		
+	<job name="Melee Attack With Weapon (vs hostile_vs_fishpeople)"
+		display_name="Melee Attack Target with Weapon"
+		mandatory_eval="1"
+		can_interrupt="1"
+		interruptee_type="4"
+		interrupter_type="3" >
+
+		<require_character_has_tag tag="has_melee_attack" />
+		<require_empty_hands failure_reason="Character required to have empty hands."/>
+		<require_gameobject tag="hostile_vs_fishpeople"
+						not_tag="dead,corpse"
+						input="target"
+						range="10"
+						closest="1"
+						failure_reason="Requires available attack target."
+						must_lock="0"/>
+		
+		<require_character_has_no_tag tag="coward" />
+		
+		<utility>
+			<base_job_utility weight="750"/>
+			<character_personal_stat name="morale" weight="10"/>
+			<has_tag input="target" tag="military" weight="1000"/>
+			<has_tag input="target" tag="fleeing" weight="-1500"/>
+		</utility>
+		<fsm>
+			<enemy_alert input="target" />
+			<attack_melee input="target" name="run"/>
+		</fsm>
+	</job>
+		
+	<job name="Melee Attack (vs hostile_vs_fishpeople)"
+		display_name="Melee Attack Target"
+		mandatory_eval="1"
+		can_interrupt="1"
+		interruptee_type="4"
+		interrupter_type="3" >
+
+		<require_gameobject input="target"
+						tag="hostile_vs_fishpeople"
+						not_tag="dead,corpse"
+						range="10"
+						closest="1"
+						failure_reason="Requires available attack target."
+						must_lock="0"/>
+		
+		<require_character_has_no_tag tag="coward" />
+		<require_character_has_tag tag="has_melee_attack" />
+		<require_empty_hands failure_reason="Character required to have empty hands."/>
+		<utility>
+			<base_job_utility weight="750"/>
+			<character_personal_stat name="morale" weight="10"/>
+			<has_tag input="target" tag="military" weight="1000"/>
+			<has_tag input="target" tag="fleeing" weight="-1500"/>
+		</utility>
+		<fsm>
+			<enemy_alert input="target" />
+			<attack_melee input="target" name="run"/>
+		</fsm>
+	</job>
+		
+	<job name="Melee Attack Adjacent (vs hostile_vs_fishpeople)"
+		display_name="Melee Attack Adjacent Target"
+		mandatory_eval="1"
+		can_interrupt="1"
+		interruptee_type="4"
+		interrupter_type="3" >
+
+		<require_gameobject input="target"
+						tag="hostile_vs_fishpeople"
+						not_tag="dead,corpse,fleeing"
+						range="2"
+						closest="1"
+						failure_reason="Requires available attack target."
+						must_lock="0"/>
+
+		<require_character_has_no_tag tag="coward" />
+		<require_character_has_tag tag="has_melee_attack" />
+		<require_empty_hands failure_reason="Character required to have empty hands."/>
+		<utility>
+			<base_job_utility weight="800"/>
+			<character_personal_stat name="morale" weight="10"/>
+			<has_tag input="target" tag="military" weight="1500"/>
+		</utility>
+		<fsm>
+			<enemy_alert input="target" />
+			<attack_melee input="target" name="run"/>
+		</fsm>
+	</job>
+		
+	<job name="Flee (vs hostile_vs_fishpeople)"
+		display_name="Flee"
+		mandatory_eval="1"
+		can_interrupt="1"
+		interruptee_type="4"
+		interrupter_type="3"
+		icon_skin="ui\thoughtIcons.xml"
+		icon="afraid" >
+		
+		<require_gameobject input="enemy"
+						tag="hostile_vs_fishpeople"
+						not_tag="dead,corpse,fleeing"
+						range="15"
+						closest="1"
+						must_lock="0"
+						failure_reason="Fleeing requires bandit to flee from."/>
+		
+		<require_no_item />
+		<utility>
+			<base_job_utility weight="950"/>
+			<character_personal_stat name="morale" weight="-15"/>
+			<character_personal_stat name="numAfflictions" weight="250"/>
+			<character_personal_stat name="health" weight="-10"/>
+		</utility>
+		<fsm>
+			<set_tag name="fleeing" />
+			<unlock input="enemy"/>
+			<walk_away_from_creature input="enemy" name="fleeing"/>
+			<walk_away_from_creature input="enemy" name="fleeing"/>
+			<walk_away_from_creature input="enemy" name="fleeing"/>
+			<remove_tag name="fleeing" />
+		</fsm>
+	</job>
+		
+	<job name="Construct Nest (fishperson)"
+		display_name="Walk To Nesting Grounds"
+		interrupter_type="1"
+		interruptee_type="2"
+		mandatory_eval="0"
+		test_for_interrupts="1">
+		
+		<utility>
+			<base_job_utility weight="1000"/>
+		</utility>
+		<fsm>
+			<fishperson_nest_at_mission_goal />
+		</fsm>
+		
+	</job>
+		
+	<job name="Collect Eggs (fishperson)"
+		display_name="Collect Eggs"
+		mandatory_eval="1"
+		can_interrupt="1"
+		interruptee_type="4"
+		interrupter_type="3" >
+		
+		<require_character_has_tag tag="mission_collect_eggs" />
+		<require_character_has_no_tag tag="coward" />
+		<require_gameobject input="eggs"
+						tag="fishpeople_eggs"
+						not_tag="dead,corpse"
+						range="20"
+						closest="1"
+						failure_reason="Requires fishpeople_eggs to collect."
+						must_lock="1"/>
+		
+		<utility>
+			<base_job_utility weight="1250"/>
+		</utility>
+		<fsm>
+			<walk_to input="eggs" />
+			<fishperson_collect_eggs input="eggs"/>
+		</fsm>	
+	</job>
+		
+	<job name="Scare Human Away From Eggs"
+		display_name="Scare Human Away From Eggs"
+		mandatory_eval="1"
+		can_interrupt="1"
+		interruptee_type="4"
+		interrupter_type="3" >
+		
+		<require_character_has_no_tag tag="coward" />
+		<require_session_bool name="fishpeoplePolicyHostile" value="0" />
+		<require_character_personal_stat_geq name="emoteTimer" amount="10" failure_reason="Requires time between actions."/>
+		<require_gameobject input="eggs"
+						tag="fishpeople_eggs"
+						not_tag="corpse"
+						range="5"
+						closest="1"
+						failure_reason="Requires eggs to protect."
+						must_lock="1"/>
+		
+		<require_gameobject input="target"
+						tag="citizen"
+						not_tag="dead,fleeing"
+						range="5"
+						closest="1"
+						failure_reason="Requires available attack target."
+						must_lock="0"/>
+		
+		<utility>
+			<base_job_utility weight="750"/>
+			<character_personal_stat name="morale" weight="10"/>
+			<has_tag input="target" tag="military" weight="-250"/>
+			<has_tag input="target" tag="fleeing" weight="-1500"/>
+		</utility>
+		<fsm>
+			<fishperson_intimidate_other input="target"/>
+			<unlock input="target" />
+		</fsm>	
+	</job>
+	
+</fishperson>
+</jobsDB>
