@@ -2,9 +2,9 @@ waste_time = {
 	["start"] = function(state,tag,name)
 	
 		if not state.AI.bools["sitting"] and
-			(SELF.tags["human"] or SELF.tags["fishperson"]) then
+			(SELF.tags["human"] or SELF.tags["fishperson"] or SELF.tags["spectre"]) then
 			
-			if rand(1,100) == 1 then
+			if rand(1,100) == 1 and not SELF.tags["spectre"] then
 				send("rendOdinCharacterClassHandler",
                          "odinRendererSetCharacterAnimationMessage",
                          state.renderHandle,
@@ -17,6 +17,19 @@ waste_time = {
 				local animName = query(SELF, "getIdleAnimQueryRequest")[1]
 				if not animName then -- default value
 					animName = "idle"
+				end
+				
+				-- add some spectre flavor.. they shouldn't just be scratching their asses, after all
+				if SELF.tags["spectre"] then
+					local spectre_anim = rand(1,3)
+					
+					if spectre_anim == 1 then
+						animName = "cry"
+					elseif spectre_anim == 2 then
+						animName = "freak_out"
+					else
+						animName = "anger"
+					end
 				end
 				
 				local animLength = animationLength(state.animSet,animName) 
