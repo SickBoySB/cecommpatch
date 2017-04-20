@@ -211,6 +211,11 @@ gameobject "geometer" inherit "ai_agent"
 
      receive Update()
      <<
+		if SELF.tags["exited_map"] then
+			send(SELF,"beDestroyed") 
+			return
+		end
+		
 		if not state.AI or SELF.deleted then
 			return
 		end

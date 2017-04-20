@@ -3,7 +3,7 @@ geometer_exit_map = {
 			
 		local animName = "look_up"
 		if SELF.tags.geometer_observator then
-			animName = fold
+			animName = "fold"
 		end
 		
 		send("rendOdinCharacterClassHandler",
@@ -58,7 +58,8 @@ geometer_exit_map = {
 			"stand",
 			false)]]
 	
-		send(SELF,"despawn")
+		--send(SELF,"beDestroyed")
+		SELF.tags["exited_map"] = true
 		return 
 	end, 
 

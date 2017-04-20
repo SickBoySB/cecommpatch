@@ -187,6 +187,15 @@ gameobject "geometer_observator" inherit "ai_agent"
 
      receive Update()
      <<
+		if SELF.tags["exited_map"] then
+			send(SELF,"beDestroyed") 
+			return
+		end
+	 
+		if not state.AI or SELF.deleted then
+			return
+		end
+		
 		if SELF.tags.dead then
 			state.corpseTimer = state.corpseTimer + 1
 			if state.corpseTimer == 100 then
