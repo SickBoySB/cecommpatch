@@ -1231,7 +1231,7 @@ Entity {
 				iconSkin="thoughtIcons.xml",
 				duration="short",
 				priority="low"},
-	values = {happiness=1, despair=1}
+	values = {happiness=1, despair=2}
 }
 
 Entity {
