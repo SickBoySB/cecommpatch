@@ -1224,14 +1224,13 @@ Entity {
 Entity {
 	name = "Had a Cuppa",
      type = "emotion",
-	info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had a depressing cup of tea at home, alone, without sugar.",
-		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had a depressing cup of tea at home.",
-			painting_description = "a picture of Her Majesty the Queen with a cup of tea",
+	info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had a slightly depressing cup of tea at home, alone, without sugar.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had a slightly depressing cup of tea at home.",
+			painting_description = "a picture of Her Majesty the Queen with a cup of bland tea",
 				icon="cup_of_tea",
 				iconSkin="thoughtIcons.xml",
 				duration="short",
 				priority="low"},
-	values = {despair=1}
 }
 
 Entity {
