@@ -986,7 +986,7 @@ Entity
 	name = "Upper Class Chair",
 	displayname = "Ornate Chair",
 	type = "chair",
-	description = "A vertiable throne, used by Our Betters. Made in a Carpentry Workshop. Quality: 0",
+	description = "A vertiable throne, used by Our Betters. Made in a Carpentry Workshop. Quality: -1",
 	tags = { "upper_class_module", "chair" },
 	icon_skin = "ui//orderIcons.xml",
 	icon="uc_chair_icon",
