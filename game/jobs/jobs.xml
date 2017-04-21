@@ -2260,6 +2260,40 @@
 				<perform_last_rites input="body" />
 			</fsm>
 		</job>
+		
+		<job name="Perform Last Rites (grave)"
+			display_name="Perform Last Rites"
+			mandatory_eval="1"
+			interruptee_type="1" interrupter_type="0"
+			icon_skin="ui\orderIcons.xml"
+			icon="chapel"
+			filter="workshop">
+
+			<require_not_sitting/>
+			<require_empty_hands/>
+			<require_character_on_shift/>
+			
+			<require_work_building input="building"
+							   failure_reason="Requires work building."
+							   not_tag="no_supplies1"
+							   must_lock="0" />
+			
+			<require_gameobject range="30"
+							tag="grave,citizen_grave"
+							not_tag="last_rites_performed"
+							input="grave"
+							closest="1"
+							failure_reason="Requires available body."
+							must_lock="0"/>
+			
+			<utility>
+				<base_job_utility weight="20"/>
+			</utility>
+			<fsm>
+				<walk_to input="grave"/>
+				<perform_last_rites_on_grave input="grave" />
+			</fsm>
+		</job>
 
 		<job name="Wander in Chapel" display_name="Wander in Chapel"
 			mandatory_eval="1"
@@ -5865,6 +5899,46 @@
 			<history importance="10" />
 		</job>
 
+    <job name="Assemble Airship Mast"
+			display_name="Assemble Airship Mast"
+				mandatory_eval="0" loop="0"
+				icon_skin="ui\orderIcons.xml" 
+				icon="hammer_icon"
+				can_be_social="0"
+				interruptee_type="3" 
+				interrupter_type="1"
+				filter="construction">
+			
+			<require_not_sitting/>
+			<require_character_on_shift/>
+			<require_work_party_filter name="construction"/>
+			<require_character_has_no_tag tag="enraged" do_not_fill_dependency="1" />
+							
+			<require_multiple_gameobjects input="timber" amount="1" use_multiplier="1" range="100" tag="timber" failure_reason="Requires available stone." closest="1" require_owned="1"/>
+			<require_multiple_gameobjects input="planks" amount="2" use_multiplier="1" range="100" tag="planks" failure_reason="Requires available stone." closest="1" require_owned="1"/>
+			<require_multiple_gameobjects input="bricks" amount="4" use_multiplier="1" range="100" tag="masonry" failure_reason="Requires available stone." closest="1" require_owned="1"/>
+
+			<on_abort behaviour="yield"/>
+			<utility min="800" max="1599">
+				<base_job_utility weight="1000"/>
+				<!--<carrying_tool name="shovel" weight="100" />-->
+			</utility>
+			<fsm>
+				<walk_to_adjacent_position_and_pickup_things input="timber"/>
+				<walk_to_adjacent_position input="element_position"/>
+				<building_destroy_item input="timber"/>
+				<walk_to_adjacent_position_and_pickup_things input="planks"/>
+				<walk_to_adjacent_position input="element_position"/>
+				<building_destroy_item input="planks"/>
+				<walk_to_adjacent_position_and_pickup_things input="bricks"/>
+				<walk_to_adjacent_position input="element_position"/>
+				<building_destroy_item input="bricks"/>
+				<walk_to_adjacent_position input="element_position"/>
+				<place_construction input="element_position" name="full"/>
+			</fsm>
+			<history importance="10" />
+		</job>
+
 		<job name="Inspect Painting" display_name="Admire Painting (Off-shift)" 
 				mandatory_eval="1" 
 				icon_skin="ui\orderIcons.xml" 
@@ -6986,6 +7060,105 @@
 			<wait_for_sermon input="building"/>
 			<get_out_of_chair/>
 			<force_wander/>
+		</fsm>
+	</job>
+
+	<job name="Drink Tea at Home (labourer)"
+		display_name="Drink Tea at Home (Off-shift)"
+			mandatory_eval="1"
+			interruptee_type="2" 
+			interrupter_type="1" 
+			is_social="1"
+			icon_skin="ui\thoughtIcons.xml" 
+			icon="beer_mug">
+
+		<require_not_sitting/>
+		<require_empty_hands/>
+		<require_character_not_on_shift/>
+		<require_character_has_tag tag="lower_class" />
+		<require_character_has_no_tag tag="drank_today" do_not_fill_dependency="1" />
+		
+		<require_building input="building"
+					   tag="lower_class_house"
+					   must_lock="0"/>
+		
+		<require_building_module input="chair"
+							for_building="building"
+							tag="sittable"
+							not_tag="occupied,module_disabled,under_construction"
+							must_lock="1"/>
+    
+		<utility min="0" max="10">
+			<base_job_utility weight="3"/>
+		</utility>
+		<fsm>
+			<house_drink_tea_in_chair input="chair"/>
+		</fsm>
+	</job>
+
+	<job name="Drink Tea at Home (overseer)"
+		display_name="Drink Tea at Home (Off-shift)"
+			mandatory_eval="1"
+			interruptee_type="2" 
+			interrupter_type="1" 
+			is_social="1"
+			icon_skin="ui\thoughtIcons.xml" 
+			icon="beer_mug">
+
+		<require_not_sitting/>
+		<require_empty_hands/>
+		<require_character_not_on_shift/>
+		<require_character_has_tag tag="middle_class" />
+		<require_character_has_no_tag tag="drank_today" do_not_fill_dependency="1" />
+		
+		<require_building input="building"
+					   tag="middle_class_house"
+					   must_lock="0"/>
+		
+		<require_building_module input="chair"
+							for_building="building"
+							tag="sittable"
+							not_tag="occupied,module_disabled,under_construction"
+							must_lock="1"/>
+    
+		<utility min="0" max="10">
+			<base_job_utility weight="3"/>
+		</utility>
+		<fsm>
+			<house_drink_tea_in_chair input="chair"/>
+		</fsm>
+	</job>
+
+	<job name="Drink Tea at Home (aristocrat)"
+		display_name="Drink Tea at Home (Off-shift)"
+			mandatory_eval="1"
+			interruptee_type="2" 
+			interrupter_type="1" 
+			is_social="1"
+			icon_skin="ui\thoughtIcons.xml" 
+			icon="beer_mug">
+
+		<require_not_sitting/>
+		<require_empty_hands/>
+		<require_character_not_on_shift/>
+		<require_character_has_tag tag="upper_class" />
+		<require_character_has_no_tag tag="drank_today" do_not_fill_dependency="1" />
+		
+		<require_building input="building"
+					   tag="upper_class_house"
+					   must_lock="0"/>
+		
+		<require_building_module input="chair"
+							for_building="building"
+							tag="sittable"
+							not_tag="occupied,module_disabled,under_construction"
+							must_lock="1"/>
+    
+		<utility min="0" max="10">
+			<base_job_utility weight="3"/>
+		</utility>
+		<fsm>
+			<house_drink_tea_in_chair input="chair"/>
 		</fsm>
 	</job>
 

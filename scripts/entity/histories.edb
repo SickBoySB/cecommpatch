@@ -1,0 +1,3993 @@
+--[[
+
+	Balance notes:
+		* happiness: baseline of 50
+			Values of 25 are assumed to be baseline (so as to fit with the workshift system).
+			Higher than 25 is happier than average, lower is distinctly unhappy.
+			
+		* anger: baseline of 25
+			Values of above 50 will promote destructive behaviour.
+			Anything from 0-49 will actually inhibit destructive behaviour.
+			(Yes, it's a blunt instrument right now)
+			
+		* despair: baseline of 25
+			This combines madness and sadness.
+			
+		* afraid: baseline of 25
+			TODO : will be connected to concept of combat morale
+			
+--]]
+
+Entity {
+	name = "Joined The Colonies",
+	type="emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN is proud to have joined The Colonies!",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN joined The Colonies!",
+			icon="empire_flag", iconSkin="thoughtIcons.xml", 
+			painting_description = "a painting of a beautiful landscape, viewed from above",
+			priority = "high",
+			duration = "long" },
+	values = { anger=-5, happiness=10, fear=-5, despair=-5 },
+}
+
+Entity {
+	name="SeedMemories",
+	type="data",
+	memories = {"Enjoyed Travel",
+			  "Did Not Enjoy Travel",
+			  "Had A Fond Farewell",
+			  "Had A Sad Farewell",
+			  "Fear of Airship Travel",
+			  "Haunted Dreams"}
+}
+
+Entity {
+	name="CriminalSeedMemories",
+	type="data",
+	memories = {"Angry At Being Sent To The Colonies",
+			  "Did Not Enjoy Travel",
+			  "Sad About Their False Sentence",
+			  "Haunted Dreams"}
+}
+
+Entity {
+	name="BanditSeedMemories1",
+	type="data",
+	memories = {"Angry At Being Sent To The Colonies",
+			  "Haunted Dreams",
+			  "Drank a Jar of Brew",
+			  "Sleep Was Interrupted",
+			  "Slept out in the woods", }
+}
+
+Entity {
+	name="BanditSeedMemories2",
+	type="data",
+	memories = { "Feeling Hungry",
+			  "Witnessed Combat",
+			  "Let Off Some Steam",
+			  "Enjoyed Smashing Something Up",
+			  "Damaged", }
+}
+
+Entity {
+	name = "Enjoyed Travel",
+	type="emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN enjoyed the journey to The Frontier; what a view!",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN enjoyed a scenic journey to The Frontier",
+			icon="map", iconSkin="thoughtIcons.xml", 
+			painting_description = "a painting of a beautiful landscape, viewed from above",
+			priority = "medium", duration = "medium" },
+	values = {fear=-1,happiness = 3}
+}
+
+Entity {
+	name = "Did Not Enjoy Travel",
+	type="emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was airsick on the entire airship journey to The Frontier.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was airsick for the trip to The Frontier and did not enjoy it",
+			icon="sick", iconSkin="thoughtIcons.xml", 
+			priority = "medium", duration = "medium",
+			painting_description = "an abstract work on the subject of airsickness"},
+	values = {fear=10, happiness=-3}
+}
+
+Entity {
+	name = "Had A Fond Farewell",
+	type="emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN bid fond farewell to loved ones before joining The Colonies; it's going to be the adventure of a lifetime!",
+			icon="happy", iconSkin="thoughtIcons.xml", 
+			priority = "medium", duration = "medium",
+			painting_description = "a portrait of a family"},
+	values = { happiness = 3}
+}
+
+Entity {
+	name = "Had A Sad Farewell",
+	type="emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN bid sad farewell to loved ones before leaving for The Colonies.",
+			icon="sad", iconSkin="thoughtIcons.xml", 
+			priority = "medium", duration = "medium",
+			painting_description = "a portrait of an unhappy looking family"},
+	values = { happiness=-5}
+}
+
+Entity {
+	name = "Fear of Airship Travel",
+	type="emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had an unpleasant journey due to fear of airship travel.",
+			icon="afraid", iconSkin="thoughtIcons.xml", 
+			priority = "medium", duration = "medium",
+			painting_description = "a picture of terrifying-looking airships"},
+	values = {fear = 5, despair=3, happiness=-5}
+}
+
+Entity {
+	name = "Haunted Dreams",
+	type="emotion",
+	info = {description = "CAPITALIZED_POSSESSIVE_PERSONAL_PRONOUN journey to The Frontier was haunted by strange, dark figures.",
+			icon="invisible_geometer", iconSkin="thoughtIcons.xml", 
+			priority = "medium", duration = "medium",
+			painting_description = "a painting of a mysterious dark figure"},
+	values = {fear=2, despair=10}
+}
+
+
+Entity {
+	name = "Angry At Being Sent To The Colonies",
+	type="emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN is really angry about being sent from prison to the Colonies.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was really angry about being sent from prison to the Colonies.",
+			icon="prisoner_hat", iconSkin="thoughtIcons.xml", 
+			priority = "medium", duration = "long",
+			painting_description = "a picture of humans locked in combat, spilling blood"},
+	values = {anger = 5, fear=2, happiness=-5 }
+}
+Entity {
+	name = "Sad About Their False Sentence",
+	type="emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN is really unhappy about being sent to the Colonies for crimes they didn't commit. Really.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was really unhappy about being sent to the Colonies for crimes they didn't commit. Really.",
+			icon="prisoner_hat", iconSkin="thoughtIcons.xml", 
+			priority = "medium", duration = "long",
+			painting_description = "a picture of a sad-looking person behind prison bars"},
+	values = {despair=5, happiness=-5}
+}
+
+Entity {
+	name="Feeling Hungry",
+	type="emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt hungry recently.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was annoyed about the general lack of food.",
+               icon="hungry", iconSkin="thoughtIcons.xml",
+			painting_description = "a still life of a bowl of apples next to an Aurochs steak",
+			priority = "low", duration = "short"}, 
+	values = {despair= 3, anger = 3,happiness=-3} 
+}
+
+Entity {
+	name="Feeling Really Hungry",
+	type="emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt really hungry recently and willing to eat uncooked food.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN got really worried about the lack of food.",
+               icon="hungry", iconSkin="thoughtIcons.xml",
+			painting_description = "a still life of a bowl of apples next to an Aurochs steak",
+			priority = "medium", duration = "short"}, 
+	values = { despair= 5, anger = 5, happiness=-5 } 
+}
+
+Entity {
+	name="Feeling Desperately Hungry",
+	type="emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt so hungry that SUBJECTIVE_PERSONAL_PRONOUN would eat almost anything.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN got so hungry that SUBJECTIVE_PERSONAL_PRONOUN would eat almost anything.",
+               icon="hungry", iconSkin="thoughtIcons.xml",
+			painting_description = "a still life of a bowl of apples next to an Aurochs steak",
+			priority = "medium", duration = "short"}, 
+	values = { despair= 8, anger = 8, happiness=-8} 
+}
+
+Entity {
+	name="Feeling Starvation",
+	type="emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN is suffering from starvation.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN began to starve to death.",
+               icon="hungry", iconSkin="thoughtIcons.xml",
+			painting_description = "a still life of a bowl of apples next to an Aurochs steak",
+			priority = "high", duration = "short"}, 
+	values = { despair= 10, anger = 10, fear = 10, happiness = -10 } 
+}
+
+Entity {
+	name="Hopelessly Starving",
+	type="emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN is on the verge of starvation.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN nearly succumbed due to lack of food.",
+               icon="hungry", iconSkin="thoughtIcons.xml",
+			painting_description = "a still life of a bowl of apples next to an Aurochs steak",
+			priority = "high", duration = "short"}, 
+	values = {despair= 15, anger = 15, fear = 15, happiness= -15 } 
+}
+
+Entity {
+	name="Murderously Starving",
+	type="emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt so hungry that SUBJECTIVE_PERSONAL_PRONOUN would kill for food... WILL kill for food.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt so hungry that SUBJECTIVE_PERSONAL_PRONOUN began to consider cannibalism.",
+               icon="murder_stab", iconSkin="thoughtIcons.xml",
+			painting_description = "a still life of a bowl of apples next to an Aurochs steak",
+			priority = "high", duration = "short"}, 
+	values = {despair=20,anger=15,fear=-10, happiness=-20} 
+}
+
+Entity {
+	name = "Feeling Tired",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt tired recently.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN lamented the sleeping arrangements in the settlement.",
+               icon="arrow_to_bed", iconSkin="thoughtIcons.xml",
+			painting_description = "a still life of a bedroom",
+			priority = "low", duration = "short"}, 
+	values = {happiness=-1, anger = 3}
+}
+Entity {
+	name = "Discovered A Weird Artifact",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was the first to discover a weird artifact and SUBJECTIVE_PERSONAL_PRONOUN can't stop thinking about it.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN discovered a weird artifact and can't stop thinking about it.",
+               icon="despair", iconSkin="thoughtIcons.xml",
+			painting_description = "a nude figure curled up into a hole dug in the earth",
+			priority = "medium", duration = "medium"}, 
+	values = {fear = 2, happiness=3, despair=5 }
+}
+
+Entity {
+	name = "Repressed Eldritch Visions",
+	type = "emotion",
+	info = {description = "CAPITALIZED_POSSESSIVE_PERSONAL_PRONOUN mind was filled with maddening visions, but SUBJECTIVE_PERSONAL_PRONOUN managed to overcome them.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had a bizarre experience with maddening visions, but managed to overcome them.",
+               icon="eldritch", iconSkin="thoughtIcons.xml",
+			painting_description = "a still life of a bedroom with drawn curtains",
+			priority = "low", iconSkin="thoughtIcons.xml", duration = "low"}, 
+	values = {fear = 1, despair=1}
+}
+Entity {
+	name = "Embraced Eldritch Visions",
+	type = "emotion",
+	info = {description = "CAPITALIZED_POSSESSIVE_PERSONAL_PRONOUN mind was overcome by maddening visions.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was overcome by compelling, maddening visions.",
+               icon="eldritch", iconSkin="thoughtIcons.xml",
+			painting_description = "a still life of a bedroom, but everything is inside-out",
+			priority = "medium", iconSkin="thoughtIcons.xml", duration = "medium"}, 
+	values = {fear = 2, despair=10}
+}
+
+	Entity {
+		name = "Gossiping",
+		type = "emotion",
+		info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had an unremarkable chat with OTHER_NAME.", 
+				priority = "low", duration = "short",
+				icon="people", iconSkin="thoughtIcons.xml", painting_description = "a pair in conversation"},
+		values = {happiness = 4, fear = -2}
+		}
+	
+	Entity {
+		name = "Gossiping (angry response)",
+		type = "emotion",
+		info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had an angry exchange with OTHER_NAME.", 
+				priority = "low", duration = "short",
+				icon="angry", iconSkin="thoughtIcons.xml", painting_description = "a pair in conversation"},
+		values = {anger = 5}
+}
+	
+	Entity {
+		name = "Gossiping (happy response)",
+		type = "emotion",
+		info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had a plesant chat with OTHER_NAME.", 
+				priority = "low", duration = "short",
+				icon="happy", iconSkin="thoughtIcons.xml", painting_description = "a pair in conversation"},
+		values = {happiness = 5}
+		}
+
+	Entity {
+		name = "Gossiping (sad response)",
+		type = "emotion",
+		info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was saddened by a talk with OTHER_NAME.", 
+				priority = "low", duration = "short",
+				icon="sad", iconSkin="thoughtIcons.xml", painting_description = "a pair in conversation"},
+		values = {despair = 5}
+		}
+	
+	Entity {
+		name = "Gossiping (fear response)",
+		type = "emotion",
+		info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was frightened by a discussion with OTHER_NAME.", 
+				priority = "low", duration = "short",
+				icon="fearful", iconSkin="thoughtIcons.xml", painting_description = "a pair in conversation"},
+		values = {fear = 5}
+		}
+
+	Entity {
+		name = "Gossiping (default response)",
+		type = "emotion",
+		info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had a chat.", 
+				priority = "low", duration = "short",
+				icon="indifferent", iconSkin="thoughtIcons.xml", painting_description = "a pair in conversation"},
+		values = {happiness = 2,}
+		}
+
+Entity {
+	name = "Got Poison All Over Face",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN rubbed a poison herb all over POSSESSIVE_PERSONAL_PRONOUN face and feels horrible!", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN rubbed a poison herb all over POSSESSIVE_PERSONAL_PRONOUN face and felt horrible.",
+			priority = "medium", duration = "medium", 
+			painting_description = "a painting of two colonists in each other's faces, shouting red-faced.",
+			icon = "plant_grass", iconSkin="orderIcons.xml"},
+	values = {happiness = -10, despair= 10}
+}
+
+Entity {
+	name = "Enjoyed Medicinal Face Herbs",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN rubbed a medicinal herb all over POSSESSIVE_PERSONAL_PRONOUN face and feels great!", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN rubbed a poison herb all over POSSESSIVE_PERSONAL_PRONOUN face and felt great.",
+			priority = "medium", duration = "medium", 
+			painting_description = "a painting of two colonists in each other's faces, shouting red-faced.",
+			icon = "plant_grass", iconSkin="orderIcons.xml"},
+	values = {happiness = 10, despair= -10}
+}
+
+Entity {
+	name = "Rejuvenated by Medicinal Herbs",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN rubbed a medicinal herb all over POSSESSIVE_PERSONAL_PRONOUN face and feels great!", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN rubbed a poison herb all over POSSESSIVE_PERSONAL_PRONOUN face and felt great.",
+			priority = "medium", duration = "medium", 
+			painting_description = "a painting of two colonists in each other's faces, shouting red-faced.",
+			icon = "plant_grass", iconSkin="orderIcons.xml"},
+	values = {happiness = 20, despair= -20}
+}
+
+Entity {
+	name = "Irritated Rivalry Is Still Occurring",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was highly irritated at the disruptive rivalry between two fellow colonists.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was highly irritated at the disruptive rivalry between two fellow colonists.",
+			priority = "medium", duration = "medium", 
+			painting_description = "a painting of two colonists in each other's faces, shouting red-faced.",
+			icon = "anger5", iconSkin="thoughtIcons.xml"},
+	values = {happiness = -5, despair= 5, anger = 10}
+}
+
+Entity {
+	name = "Happy Annoying Rivalry is Resolved",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was glad the irritating rivalry between two fellow colonists was resolved.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was glad the irritating rivalry between two fellow colonists was resolved",
+			priority = "medium", duration = "medium", 
+			painting_description = "a painting of two colonists turning their backs on each other.",
+			icon = "happy2", iconSkin="thoughtIcons.xml"},
+	values = {happiness = 5, anger = -5}
+}
+
+Entity {
+	name = "Beaten Over Rivalry",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was beaten into submission by OTHER_NAME over a rivalry!", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was beaten into submission by OTHER_NAME over a rivalry.",
+			priority = "high", duration = "medium", 
+			painting_description = "a painting of two colonists under a giant boot.",
+			icon = "anger5", iconSkin="thoughtIcons.xml"},
+	values = {happiness = -10, despair= 10, fear = 5}
+}
+
+Entity {
+	name = "Had a Drink Over Rivalry",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN calmed down about POSSESSIVE_PERSONAL_PRONOUN rivalry with OTHER_NAME after having a good drink.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN calmed down about POSSESSIVE_PERSONAL_PRONOUN rivalry with OTHER_NAME after having a good drink.",
+			priority = "medium", duration = "medium", 
+			painting_description = "a painting of two people glaring at each other over a beer mug.",
+			icon = "happy3", iconSkin="thoughtIcons.xml"},
+	values = {happiness = 5, despair= -10, anger = -10}
+}
+
+Entity {
+	name = "Had a Bar Fight",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN got into a bar fight over POSSESSIVE_PERSONAL_PRONOUN rivalry with OTHER_NAME.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN got into a bar fight over POSSESSIVE_PERSONAL_PRONOUN rivalry with OTHER_NAME.",
+			priority = "high", duration = "medium", 
+			painting_description = "a painting of a shattered beer mug.",
+			icon = "anger5", iconSkin="thoughtIcons.xml"},
+	values = {anger = 10}
+}
+
+Entity {
+	name = "Counseled Over Rivalry By Vicar",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was counseled by a vicar and felt an easing of POSSESSIVE_PERSONAL_PRONOUN rivalry with OTHER_NAME.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was counseled by a vicar and felt an easing of POSSESSIVE_PERSONAL_PRONOUN rivalry with OTHER_NAME.",
+			priority = "medium", duration = "medium", 
+			painting_description = "an abstract oil representation of reconciliation.",
+			icon = "happy5", iconSkin="thoughtIcons.xml"},
+	values = {happiness = 5, despair=-15, anger = -5}
+}
+
+Entity {
+	name = "Brought To Shame By Rousing Colony Leader Speech",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN listened to an incredible speed by the Colony Leader and felt shame over POSSESSIVE_PERSONAL_PRONOUN rivalry with OTHER_NAME.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN listened to an incredible speed by the Colony Leader and felt shame over POSSESSIVE_PERSONAL_PRONOUN rivalry with OTHER_NAME.",
+			priority = "high", duration = "medium", 
+			painting_description = "a shining beacon on the horizon.",
+			icon = "happy5", iconSkin="thoughtIcons.xml"},
+	values = {happiness = 10, despair=-20, anger = -20}
+}
+
+Entity {
+	name = "Irritated by Colony Leader Speech",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was forced to listen to a grumpy speech by the colony leader and hated every moment of it.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was forced to listen to a grumpy speech by the colony leader and hated every moment of it.",
+			priority = "medium", duration = "medium", 
+			painting_description = "a shattered beacon on the horizon.",
+			icon = "anger5", iconSkin="thoughtIcons.xml"},
+	values = {happiness = -5, anger = 5}
+}
+
+Entity {
+	name = "Refused Orders to Protect Friends",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN refused the Colony Manager's orders to protect POSSESSIVE_PERSONAL_PRONOUN friend OTHER_NAME.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN refused the Colony Manager's orders to protect POSSESSIVE_PERSONAL_PRONOUN friend OTHER_NAME.",
+			priority = "high", duration = "medium", 
+			painting_description = "a painting of a soldier walking into the darkness.",
+			icon = "anger5", iconSkin="thoughtIcons.xml"},
+	values = {happiness = -5, despair= 10, fear=15}
+}
+
+
+Entity {
+	name = "Saw Frontier Justice",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw a gruesome and horrifying act of frontier justice recently!", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw a gruesome and horrifying act of frontier justice!",
+			priority = "high", duration = "medium", 
+			painting_description = "a painting of a man being chased, with soldiers behind him firing guns",
+			icon = "frontier_justice", iconSkin="thoughtIcons.xml"},
+	values = {happiness = -5, despair= 10, anger = 5, fear=5}
+}
+Entity {
+	name = "Witnessed the Madness of Frontier Justice",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed the harsh and barbaric 'justice' of the Frontier as OTHER_NAME was executed and is horrified at the brutality.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed the harsh and barbaric 'justice' of the Frontier as OTHER_NAME was executed.",
+			priority="high", duration="medium",
+			painting_description = "a painting of a man being gunned down by armed soldiers of the Empire",
+			icon="frontier_justice", iconSkin="thoughtIcons.xml" },
+	values = {happiness=-10, despair= 15, anger =5}
+}
+Entity {
+	name= "Witnessed Frontier Justice And Approved",
+	type = "emotion",
+	info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed the harsh - but necessary - justice of the Frontier as OTHER_NAME was executed.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed the harsh - but necessary - justice of the Frontier as OTHER_NAME was executed.",
+			priority="high", duration="short", 
+			painting_description = "a painting of Criminal Scum being gunned down by their Betters",
+			icon="frontier_justice", iconSkin="thoughtIcons.xml"},
+			values = { happiness=3, fear=-5}
+			}
+Entity {
+	name = "Saw a cannibal",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw a dead body get turned into food!", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw a dead body get turned into food!",
+			priority = "high", duration = "short", 
+			painting_description = "a painting of one overseer eating another overseer",
+			icon = "cannibalism", iconSkin="thoughtIcons.xml"},
+	values = {happiness = -10, despair= 10, fear=10}
+}
+
+Entity {
+	name = "Saw the corpse of a loved one",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw the dead body of a loved one recently!",	
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw the dead body of a loved one!",
+			priority = "high", duration = "long", 
+			painting_description = "a painting of a weeping lover",
+			icon="heart_broken"},
+	values = {happiness = -10, despair= 10, anger = 5,fear=2}
+}
+
+Entity {
+	name = "Saw the rotted corpse of a loved one",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw the grisly rotted corpse of a loved one recently!",	
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw the grisly rotted corpse of a loved one lying unburied!",
+			priority = "high", duration = "long", 
+			painting_description = "a painting of a weeping lover",
+			icon="heart_broken"},
+	values = {happiness = -15, despair= 15, anger = 10,fear=5}
+}
+
+Entity {
+	name = "Saw a rotted corpse",
+	type = "emotion",
+	info = 	{description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was greatly upset by seeing the rotted corpse of OTHER_NAME.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was greatly upset by seeing the rotted corpse of OTHER_NAME.",
+			priority = "high", duration = "short", 
+			painting_description = "a painting of a rotted corpse, crawling with flies and maggots",
+			icon="skull"}, 
+	values = {happiness = -5, despair= 10, fear=3}
+}
+
+Entity {
+	name = "Saw a corpse",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was upset at seeing the unburied corpse of OTHER_NAME.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was upset at seeing the unburied corpse of OTHER_NAME.",
+		priority = "high",
+		duration = "medium", 
+		painting_descripstion = "a painting of a corpse in repose",
+		icon="skull",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness = -3, despair= 5, anger = 1, fear=3}
+}
+
+Entity {
+	name = "Saw a corpse and liked it",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw a dead body and found it fascinating.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw a dead body and found it fascinating.",
+		priority = "high",
+		duration = "medium", 
+		painting_description = "a painting of a corpse in repose",
+		icon="skull",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness = 6, despair=15 }
+}
+
+Entity {
+	name = "Slept due to Despair",
+     type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank to relieve their depression.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank to relieve their depression.",
+		painting_description = "a picture of a crying man in a bar",
+		icon="bed",
+		iconSkin="thoughtIcons.xml",
+		duration="short",
+		priority="high"},
+	values = {despair= -1 }
+}
+
+Entity {
+	name = "Attended a Party",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN attended a party recently.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN attended a party.",
+			priority = "medium", duration = "short", 
+			painting_description = "a pleasing picture of a jolly party",
+			icon="placeholder",
+			iconSkin="thoughtIcons.xml"}, 
+	values = {happiness = 7}
+}
+
+Entity {
+	name = "Consumed Human Flesh",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate human flesh recently.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate human flesh",
+			priority = "high", duration = "medium", 
+			painting_description = "a self-portrait of the artist with their hands and mouth covered in blood",
+			icon="cannibalism",
+			iconSkin="thoughtIcons.xml"}, 
+	values = { despair = 15, happiness=-5}
+}
+
+Entity {
+	name = "Consumed Delicious Human Flesh",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate some tasty human flesh recently.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate some tasty human flesh",
+			priority = "low", duration = "medium", 
+			painting_description = "a self-portrait of the artist chomping down on a delicious human",
+			icon="cannibalism",
+			iconSkin="thoughtIcons.xml"}, 
+	values = {happiness = 5, despair=20, }
+}
+Entity {
+	name = "Ate Fishperson Flesh",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate fishperson flesh recently. Creepy.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate fishperson flesh.",
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a picture of a scaly chunk of meat",
+		icon="fishperson",
+		iconSkin="thoughtIcons.xml"}, 
+	values = { despair= 10}
+}
+
+Entity {
+	name = "Ate Exotic Caviar",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate some Exotic Caviar! Mm-mm!",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate some Exotic Caviar.",
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a picture of a scaly chunk of meat",
+		icon="food_plate",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness = 4, fear=0, anger = 0, despair= 0}
+}
+
+Entity {
+	name = "Ate Something Exotic",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate some Exotic Food! How.. Strange.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate some Exotic Food. CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN feels eerie.",
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a picture of a scaly chunk of meat",
+		icon="food_plate",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness = 4, despair= 5}
+}
+Entity {
+	name = "Ate Exotic Caviar (fishy)",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate some Exotic Caviar. It felt ... unsettling and sad.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN sadly ate some Exotic Caviar.",
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a picture of a scaly chunk of meat",
+		icon="food_plate",
+		iconSkin="thoughtIcons.xml"}, 
+	values = { happiness=2, fear=0, anger = 0, despair= 5}
+}
+Entity {
+	name = "Ate Fishperson Flesh (fishy)",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was forced to consume fishperson flesh recently and was horrified!",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was forced to consume fishperson flesh and was horrified!",
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a picture of a bloody plate",
+		icon="food_plate",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=-5, fear=0, anger = 0, despair= 15}
+}
+
+Entity {
+	name = "Ate something (Epicurean)",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN throughly enjoyed eating something recently.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN thoroughly enjoyed a culinary delight.",
+			priority = "low", duration = "short", 
+			painting_description = "a picture of a gourmand",
+			icon="food_plate"}, 
+	values = {happiness = 3, fear=0, anger = 0, despair= 0}
+}
+
+Entity {
+	name = "Ate something tasty (Epicurean)",
+	type = "emotion",
+	info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN thoroughly enjoyed eating a wonderfully cooked OTHER_NAME recently. A delight! Delicious!", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN thoroughly enjoyed eating a wonderfully cooked OTHER_NAME.",
+			priority = "low", duration = "short", 
+			painting_description = "a picture of a pleased gourmand",
+			icon="food_plate"}, 
+	values = {happiness = 6, fear=0, anger = 0, despair= 0}
+}
+
+Entity {
+	name = "Ate something delicious (Epicurean)",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate a lovely and sophisticated OTHER_NAME recently. Truly piquant!", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate a lovely and sophisticated OTHER_NAME. Truly piquant!",
+		priority = "low",
+		duration = "short", 
+		painting_description = "a picture of a decadent feast",
+		icon="food_plate",
+		iconSkin="thoughtIcons.xml"  }, 
+	values = {happiness = 8, fear=0, anger = 0, despair= 0}
+}
+
+Entity {
+	name = "Ate something unsatisfying (Epicurean)",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate a OTHER_NAME recently. The food was, frankly, below POSSESSIVE_PERSONAL_PRONOUN refined tastes.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate a OTHER_NAME. The food was somewhat below their refined palate.",
+		priority = "low",
+		duration = "short", 
+		painting_description = "a picture of a moldy toast",
+		icon="food_plate",
+		iconSkin="thoughtIcons.xml"  }, 
+	values = {happiness = 2, fear=0, anger = 0, despair= 0}
+}
+
+Entity {
+	name = "Ate something nasty (Epicurean)",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate a OTHER_NAME recently and found it appallingly undercooked.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate a OTHER_NAME and found it appallingly undercooked.",
+			priority = "low",
+			duration = "short", 
+			painting_description = "a picture of a fat person frowning at a banquet",
+			icon="food_plate"}, 
+	values = {happiness = 0, fear=0, anger = 0, despair= 4}
+}
+
+Entity {
+	name = "Ate something",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate a OTHER_NAME recently.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate a OTHER_NAME.",
+		priority = "low",
+		duration = "short", 
+		painting_description = "a picture of a clean plate",
+		icon="food_plate",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness = 3, fear=0, anger = 0, despair= 0}
+}
+Entity {
+	name = "Ate something tasty",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN thoroughly enjoyed eating a wonderfully cooked OTHER_NAME recently.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN thoroughly enjoyed eating a wonderfully cooked OTHER_NAME.",
+		priority = "low",
+		duration = "short", 
+		painting_description = "a picture of a delicious feast",
+		icon="food_plate",
+		iconSkin="thoughtIcons.xml"  }, 
+	values = {happiness = 4, fear=0, anger = 0, despair= 0}
+}
+
+Entity {
+	name = "Ate Delicious Mushrooms",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN thoroughly enjoyed eating a mushroom-based meal recently, being a mushroom lover. Mm-mm!", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN thoroughly enjoyed eating a mushroom-based meal, being a mushroom lover.",
+		priority = "low",
+		duration = "short", 
+		painting_description = "a picture of a delicious shroomy feast",
+		icon="raw_fungus_category",
+		iconSkin="commodityIcons.xml"  }, 
+	values = {happiness = 8, fear=0, anger = 0, despair= 0}
+}
+Entity {
+	name = "Ate something delicious",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate a thoroughly decadent OTHER_NAME recently. Exquisite!", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate a thoroughly decadent OTHER_NAME. Exquisite!",
+		priority = "low",
+		duration = "short", 
+		painting_description = "a picture of a decadent feast",
+		icon="food_plate",
+		iconSkin="thoughtIcons.xml"  }, 
+	values = {happiness = 6, fear=0, anger = 0, despair= 0}
+}
+Entity {
+	name = "Ate something unsatisfying",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate a OTHER_NAME recently. The food was, frankly, below POSSESSIVE_PERSONAL_PRONOUN refined tastes.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate a OTHER_NAME. The food was somewhat below their refined palate.",
+		priority = "low",
+		duration = "short", 
+		painting_description = "a picture of a moldy toast",
+		icon="food_plate",
+		iconSkin="thoughtIcons.xml"  }, 
+	values = {happiness = 1, fear=0, anger = 0, despair= 0}
+}
+Entity {
+	name = "Ate something nasty",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate a raw OTHER_NAME. Although edible, it was unpleasant.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ate a raw OTHER_NAME; although edible, it was unpleasant.",
+		priority = "low", duration = "short", 
+		painting_description = "a picture of some maggots",
+		icon="food_plate", iconSkin="thoughtIcons.xml"}, 
+	values = {happiness = 1, fear=0, anger = 0, despair= 1}
+}
+
+
+
+
+-- Sleep memories
+
+	Entity {
+		name = "Sleep Was Interrupted",
+		type = "emotion",
+		info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was quite irate at having POSSESSIVE_PERSONAL_PRONOUN sleep disturbed.",	  
+				journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was quite irate at having POSSESSIVE_PERSONAL_PRONOUN sleep disturbed.",	 
+			icon="angry", iconSkin="thoughtIcons.xml",
+			duration="short",
+			priority="low" },
+		values = { happiness=-10, anger =6, despair=2, fear = 4 }
+	}
+
+	Entity {
+		name = "Slept Outside",
+		type = "emotion",
+		info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had to sleep outside recently.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was unhappy about having to sleep outside.",
+				priority = "medium",
+				duration = "medium", 
+				painting_description = "a picture of a campsite",
+				icon="jobtree"},
+		values = { happiness= -10, despair= 5, fear=5, anger = 5 }
+	}
+	
+	Entity {
+		name = "Slept On The Floor",
+		type = "emotion",
+		info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN is discontented due to sleeping on a floor.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN is discontended due to sleeping on a floor.",
+				priority = "medium",
+				duration = "medium", 
+				painting_description = "a picture of a house",
+				icon="jobtree"},
+		values = { happiness= -4, }
+	}
+		
+	Entity {
+		name = "Slept On The Floor (overseer)",
+		type = "emotion",
+		info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN is very upset due to sleeping on a floor like a common Labourer.", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN is very upset due to sleeping on a floor like a common Labourer.",
+				priority = "medium",
+				duration = "medium", 
+				painting_description = "a picture of a house",
+				icon="jobtree"},
+		values = { happiness= -8, anger = 2 }
+	}
+	
+	Entity {
+		name = "Slept On The Floor (aristocrat)",
+		type = "emotion",
+		info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN is extremely upset due to sleeping on the floor like an animal.", 
+				journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN is extremely upset due to sleeping on the floor like an animal.",
+				priority = "medium",
+				duration = "medium", 
+				painting_description = "a picture of a house",
+				icon="jobtree"},
+		values = { happiness= -12, despair= 4, anger=4 }
+	}
+
+	Entity {
+		name = "Slept Appallingly", --"Sleep Tier -6",
+		type = "emotion",
+		info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN slept Appallingly due to the dismal quality of the accommodations.", 
+				priority = "medium", duration = "short", 
+				painting_description = "a picture of the inside of a house",
+				icon="bed", iconSkin="thoughtIcons.xml"},
+		values = {happiness = -6, despair= 3, anger = 3}
+	}
+	
+	Entity {
+		name = "Slept Badly", --"Sleep Tier -4",
+		type = "emotion",
+		info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN slept Badly due to the low quality of the accommodations.", 
+				priority = "low", duration = "short", 
+				painting_description = "a picture of the inside of a house",
+				icon="bed", iconSkin="thoughtIcons.xml"},
+		values = {happiness = -4, despair= 1, anger = 1}
+	}
+	
+	Entity {
+		name = "Slept Poorly", --"Sleep Tier -2",
+		type = "emotion",
+		info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN slept Poorly due to the unsatisfactory quality of the accommodations.", 
+				priority = "low", duration = "short", 
+				painting_description = "a picture of the inside of a house",
+				icon="bed", iconSkin="thoughtIcons.xml"},
+		values = {happiness = -2}
+	}
+	
+	Entity {
+		name = "Slept", --"Sleep Tier 0",
+		type = "emotion",
+		info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had a satisfactory sleep.",
+				priority = "low", duration = "short", 
+				painting_description = "a picture of the inside of a house",
+				icon="bed", iconSkin="thoughtIcons.xml"},
+		values = {happiness = 2, despair= 0, anger = 0}
+	}
+	
+	Entity {
+		name = "Slept Well", --"Sleep Tier 2",
+		type = "emotion",
+		info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN slept well in decent accommodations.",
+				priority = "low", duration = "short", 
+				painting_description = "a picture of the inside of a house",
+				icon="bed", iconSkin="thoughtIcons.xml"},
+		values = {happiness = 4, despair= 0, anger = 0}
+	}
+	
+	Entity {
+		name = "Slept Comfortably", -- "Sleep Tier 4",
+		type = "emotion",
+		info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN slept comfortably in quality accommodations.", 
+				priority = "medium", duration = "short", 
+				painting_description = "a picture of the inside of a house",
+				icon="bed", iconSkin="thoughtIcons.xml"},
+		values = {happiness = 5, despair= 0, anger = 0}
+	}
+	
+	Entity {
+		name = "Slept Lavishly", -- "Sleep Tier 6",
+		type = "emotion",
+		info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN slept lavishly in wonderful accommodations.",
+				priority = "medium", duration = "short", 
+				painting_description = "a picture of the inside of a house",
+				icon="bed", iconSkin="thoughtIcons.xml"},
+		values = {happiness = 6, despair= 0, anger = 0}
+	}
+	
+	
+	
+
+Entity {
+	name = "Fishpeople Menacing",
+	type = "emotion",
+	info = 	{description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was menaced by fishpeople recently!", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was menaced by fishpeople, and it was horrible.",
+			priority = "medium", duration = "short", 
+			painting_description = "a picture of a terrifying fish creature",
+			icon = "fishperson_angry", iconSkin="thoughtIcons.xml" },
+	values = {fear=3,happiness=-1,despair=3}
+}
+Entity {
+	name = "Fishpeople Menacing (fishy)",
+	type = "emotion",
+	info = 	{description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was menaced by POSSESSIVE_PERSONAL_PRONOUN friends, the fishpeople. How terribly upsetting!", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was menaced by POSSESSIVE_PERSONAL_PRONOUN friends, the fishpeople.",
+			priority = "medium", duration = "short", 
+			painting_description = "a picture of a terrifying fish creature",
+			icon = "fishperson_angry", iconSkin="thoughtIcons.xml" },
+	values = {despair=5,happiness=-2}
+}
+Entity {
+	name = "Fishpeople Intimidation Sad",
+	type = "emotion",
+	info = 	{description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was saddened by an intimidating fishperson.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was saddened by an intimidating fishperson.",
+			priority = "medium", duration = "short", 
+			painting_description = "a sad picture of a terrifying fish creature",
+			icon = "fishperson_angry", iconSkin="thoughtIcons.xml" },
+	values = {fear=2,despair=3,happiness=1}
+}
+Entity {
+	name = "Fishpeople Intimidation Angry",
+	type = "emotion",
+	info = 	{description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was angered by a fishperson's ferocious display.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was angered by a fishperson.",
+			priority = "medium", duration = "short", 
+			painting_description = "a picture of an unpleasant fish creature covered in blood",
+			icon = "fishperson_angry", iconSkin="thoughtIcons.xml" },
+	values = {fear=2,anger=3,happiness=1, despair=3}
+}
+Entity {
+	name = "Fishpeople Inimidation Unpleasant",
+	type = "emotion",
+	info = 	{description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was intimidated by a fishperson's ferocious display.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was intimidated by a fishperson.",
+			priority = "medium", duration = "short", 
+			painting_description = "a picture of an unpleasant fish creature",
+			icon = "fishperson_angry", iconSkin="thoughtIcons.xml" },
+	values = {fear=1,anger=1,happiness=1,despair=3}
+}
+
+Entity {
+	name = "Damaged",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was hurt recently.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was injured.",
+			priority = "medium", duration = "short", 
+			painting_description = "an abstract work meant to signify pain and suffering",
+			icon="affliction", iconSkin="thoughtIcons.xml"},
+	values = {fear = 5, anger = 2,happiness=-2}
+}
+
+Entity {
+	name = "Healed",
+	type = "emotion",
+	info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was healed by a Barber. Ow!", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was healed by a Barber. Ow!",
+			priority = "medium", duration = "short", 
+			painting_description = "a bit of a bloody mess",
+			icon="bandage_and_blood_drop", iconSkin="thoughtIcons.xml"},
+	values = { fear = 5, anger = 3, happiness=-4},
+}
+
+Entity {
+	name = "Healed With Tonic",
+	type = "emotion",
+	info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was healed by a Barber and given a healthful Sulphur Tonic. Tip-top!", 
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was healed by a Barber and given a healthful Sulphur Tonic. Tip-top!",
+			priority = "medium", duration = "short", 
+			painting_description = "a bit of a bloody mess",
+			icon="bandage_and_blood_drop", iconSkin="thoughtIcons.xml"},
+	values = { fear = -5, anger = -5, happiness=5},
+}
+
+Entity {
+	name = "Confusing Fishperson Gibberish",
+	type = "emotion",
+	info = 	{description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was confused and a little scared due to being gibbered at by a Fishperson.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was confused and frightened by a fishperson.",
+			priority = "medium", duration = "short", 
+			painting_description = "a picture of a terrifying fish creature",
+			icon = "fishperson_surprised", iconSkin="thoughtIcons.xml" },
+	values = {fear=1,despair=5}
+}
+Entity {
+	name = "Frightening Fishperson Gibberish",
+	type = "emotion",
+	info = 	{description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was frightened by the incomprehensible gibberings of a Fishperson!", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was frightened by a fishperson.",
+			priority = "medium", duration = "short", 
+			painting_description = "a picture of a terrifying fish creature",
+			icon = "fishperson", iconSkin="thoughtIcons.xml" },
+	values = {fear=2,despair=5}
+}
+Entity {
+	name = "Enthralling Fishperson Gibberish",
+	type = "emotion",
+	info = 	{description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was enthralled by sublime but incomprehensible Fishperson speech.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was enthralled by a fishperson.",
+			priority = "medium", duration = "short", 
+			painting_description = "a picture of a terrifying fish creature",
+			icon = "fishperson_smile", iconSkin="thoughtIcons.xml" },
+	values = {happiness=5,despair=10}
+}
+
+Entity {
+	name = "Enthralled by the Call of the Sea",
+	type = "emotion",
+	info = 	{description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was enthralled by hearing the Call of the Sea.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was enthralled by hearing the Call of the Sea",
+			priority = "medium", duration = "short", 
+			painting_description = "a picture of a terrifying fish creature",
+			icon = "sea", iconSkin="thoughtIcons.xml" },
+	values = {happiness=7,despair=16}
+}
+
+Entity {
+	name = "Annoyed by the Call of the Sea",
+	type = "emotion",
+	info = 	{description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was annoyed by hearing OTHER_NAME rant about the Call of the Sea.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was annoyed by OTHER_NAME ranting about the Call of the Sea.",
+			priority = "medium", duration = "short", 
+			painting_description = "a picture of a terrifying fish creature",
+			icon = "sea", iconSkin="thoughtIcons.xml" },
+	values = {anger=1,despair=5}
+}
+
+Entity {
+     name = "Drank a Bottle of Laudanum",
+     type = "emotion",
+     info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank an entire bottle of laudanum and feels very much better now, thank you.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank an entire bottle of laudanum and felt much better.",
+               --icon="laudanum_bottle", iconSkin="commodityIcons.xml", -- DOESNT WORK YET
+			icon="despair1",
+			iconSkin="thoughtIcons.xml",
+			   painting_description = "a plain white square on a plain back background, with MINISTRY-APPROVED ARTWORK stamped on it in large red letters",
+               duration="short", priority="medium" },
+     values = {happiness = 10, fear=-10, anger =-30, despair= -10 }
+}
+Entity {
+     name = "Drank Sulphur Tonic",
+     type = "emotion",
+     info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank an entire bottle of sulphur tonic and swears that SUBJECTIVE_PERSONAL_PRONOUN feels much better.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank an entire bottle of sulphur tonic and swears SUBJECTIVE_PERSONAL_PRONOUN felt much better.",
+               --icon="sulphur_tonic_bottle", iconSkin="commodityIcons.xml",-- DOESNT WORK YET
+			icon="despair1",
+			iconSkin="thoughtIcons.xml",
+			   painting_description = "a plain white square on a plain back background, with MINISTRY-APPROVED ARTWORK stamped on it in large red letters",
+               duration="short",
+			priority="medium" },
+     values = {happiness = 5, fear=-3, anger =-3, despair= -10}
+}
+
+Entity {
+     name = "Drank a Bottle of Spirits",
+     type = "emotion",
+     info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank an entire bottle of spirits.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank an entire bottle of spirits.",
+		painting_description = "sort of hard to make out",
+          --icon="whisky_bottle", iconSkin="commodityIcons.xml",-- doesn't work yet!!
+		icon="beer_mug",
+		iconSkin="thoughtIcons.xml",
+		duration="short",
+		priority="medium" },
+     values = {happiness = 8, fear=-5, anger =-8, despair= -2}
+}
+
+Entity {
+     name = "Enjoyed a Bottle of Spirits",
+     type = "emotion",
+     info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN downed a bottle of spirits and was quite pleased. Another!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN downed a bottle of spirits and was quite pleased.",
+		painting_description = "sort of hard to make out",
+          --icon="whisky_bottle", iconSkin="commodityIcons.xml",-- doesn't work yet!!
+		icon="beer_mug",
+		iconSkin="thoughtIcons.xml",
+		duration="short",
+		priority="medium" },
+     values = {happiness = 12, fear=-5, anger =-12, despair= -2}
+}
+
+Entity {
+	name = "Drank a Jar of Brew",
+     type = "emotion",
+	info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had a nice jar of brewed booze.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had a nice jar of brewed booze.",
+			painting_description = "a picture of a Stahlmarkian Beer-Chamber",
+				icon="beer_mug",
+				iconSkin="thoughtIcons.xml",
+				duration="short",
+				priority="low"},
+	values = {happiness = 6, fear=-3, anger =-5, despair= -3}
+}
+
+Entity {
+	name = "Enjoyed a Jar of Brew",
+     type = "emotion",
+	info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN chugged down a jar of brewed booze. Another!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN chugged down a jar of brewed booze.",
+			painting_description = "a picture of a Stahlmarkian Beer-Chamber",
+				icon="beer_mug",
+				iconSkin="thoughtIcons.xml",
+				duration="short",
+				priority="low"},
+	values = {happiness = 8, fear=-3, anger =-8, despair= -3}
+}
+
+Entity {
+     name = "Drank Spirits In Despair",
+     type = "emotion",
+     info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank an entire bottle of spirits in intense Despair. CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN feels a lot better.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank a bottle of spirits in Despair. CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt a bit better.",
+		painting_description = "sort of hard to make out",
+          --icon="whisky_bottle", iconSkin="commodityIcons.xml",-- doesn't work yet!!
+		icon="beer_mug",
+		iconSkin="thoughtIcons.xml",
+		duration="medium",
+		priority="high" },
+     values = {fear=-5, anger =2, despair= -20}
+}
+
+Entity {
+	name = "Drank a Jar of Brew In Despair",
+     type = "emotion",
+	info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank a jar of brewed booze in intense Despair. CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN feels a bit better.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank a jar of brewed booze in Despair. CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt a bit better.",
+			painting_description = "a picture of a Stahlmarkian Beer-Chamber",
+				icon="beer_mug",
+				iconSkin="thoughtIcons.xml",
+				duration="medium",
+				priority="high"},
+	values = {fear=-3, anger =-1, despair= -10}
+}
+
+Entity {
+     name = "Drank Laudanum In Despair",
+     type = "emotion",
+     info = { 	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank an entire bottle of laudanum in Despair and feels much now, thank you.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank an entire bottle of laudanum in Despair and felt much better.",
+               --icon="laudanum_bottle", iconSkin="commodityIcons.xml", -- DOESNT WORK YET
+			icon="despair1",
+			iconSkin="thoughtIcons.xml",
+			   painting_description = "a plain white square on a plain back background, with MINISTRY-APPROVED ARTWORK stamped on it in large red letters",
+               duration="medium", priority="high" },
+     values = { fear=-10, anger =-30, despair= -30 }
+}
+
+Entity {
+     name = "Was Comforted By Priest",
+     type = "emotion",
+     info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN talked to a priest about their intense despair and felt comforted.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN talked to a priest about their intense despair and felt comforted.",
+			icon="despair1",
+			iconSkin="thoughtIcons.xml",
+			painting_description = "a distant light in a deep, deep darkness",
+               duration="medium", priority="high" },
+     values = {happiness = 5, fear=-5, anger =-5, despair= -20 }
+}
+
+Entity {
+	name = "Had a Cup of Tea",
+     type = "emotion",
+	info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had a nice cup of tea.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had a nice cup of tea.",
+			painting_description = "a picture of Her Majesty the Queen with a cup of tea",
+				icon="cup_of_tea",
+				iconSkin="thoughtIcons.xml",
+				duration="short",
+				priority="low"},
+	values = {happiness = 3, fear=-1, anger =-1, despair= -1}
+}
+
+Entity {
+	name = "Had a Cuppa",
+     type = "emotion",
+	info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had a slightly depressing cup of tea at home, alone, without sugar.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had a slightly depressing cup of tea at home.",
+			painting_description = "a picture of Her Majesty the Queen with a cup of bland tea",
+				icon="cup_of_tea",
+				iconSkin="thoughtIcons.xml",
+				duration="short",
+				priority="low"},
+	values = {happiness=1, despair=2}
+}
+
+Entity {
+	name = "Drank at the Pub",
+     type = "emotion",
+	info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had a pint at the local pub. Good times!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had a pint at the local pub.",
+		painting_description = "a picture of a Stahlmarkian Beer-Chamber",
+				icon="beer_mug", iconSkin="thoughtIcons.xml",
+				duration="short", priority="low"},
+	values = {fear=-3, despair= -2,happiness=5, anger =-7,}
+}
+
+Entity {
+	name = "Drank a Non-Alcoholic Drink",
+     type = "emotion",  
+     info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had a refreshing beverage; it was nice.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had a refreshing beverage.",
+		painting_description = "a picture of a glass of cabbage juice",
+          icon="beer_mug", iconSkin="thoughtIcons.xml",
+		duration="short", priority="low" },
+     values = {anger = -3}
+}
+
+Entity {
+	name = "Drank due to Despair",
+     type = "emotion",
+	info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank to relieve their depression.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank to relieve their despair.",
+		painting_description = "a picture of a crying man in a bar",
+				icon="beer_mug", iconSkin="thoughtIcons.xml",
+				duration="short", priority="low"},
+	values = { fear=-2, despair= -3,happiness=2, anger=-5 }
+}
+
+Entity {
+	name = "Cried over a Gravestone",
+     type = "emotion",
+	info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt despair at the sight of a colonist's gravestone.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt despair at the sight of a colonist's gravestone.",
+		painting_description = "a painting of a crying statue",
+				icon="despair", iconSkin="thoughtIcons.xml", duration="short", priority="low"},
+	values = { despair= 2, happiness=-2 }
+}
+
+Entity {
+	name = "Cried over a Body",
+     type = "emotion",
+	info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt despair at the sight of a colonist's dead body.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt despair at the sight of a colonist's dead body.",
+		painting_description = "a painting of a crying statue",
+				icon="despair", iconSkin="thoughtIcons.xml", duration="short", priority="low"},
+	values = { despair= 2, happiness=-2 }
+}
+
+Entity {
+     name = "Enjoyed Paperwork",
+     type = "emotion",
+     info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had an excellent time filling out paperwork. Now this is what being a bureaucrat is all about!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had an excellent time filling out paperwork.",
+		painting_description = "a picture of a filing cabinet",
+          icon="open_book", iconSkin="thoughtIcons.xml", duration="short", priority="low" },
+     values = {happiness = 3, anger =-1, fear=-1 }
+}
+          
+Entity {
+     name = "Begrudgingly Did Paperwork",
+     type = "emotion",
+     info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN reluctantly did the paperwork required of OBJECTIVE_PERSONAL_PRONOUN, grumbling the entire time.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN reluctantly did paperwork.",
+		painting_description = "a picture of a disorganized filing cabinet",
+          icon="open_book", iconSkin="thoughtIcons.xml", duration="short", priority="low",},
+     values = { anger =1,happiness=-1 }
+}
+
+Entity {
+     name = "Read Poetry",
+     type = "emotion",
+     info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN gave a public reading of POSSESSIVE_PERSONAL_PRONOUN most recent poem.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN gave a public reading of POSSESSIVE_PERSONAL_PRONOUN most recent poem.",
+		painting_description = "a picture of a poet reclining upon a Fainting-Couch, surrounded by admiring followers and Sufficient Opium",
+          icon="open_book", iconSkin="thoughtIcons.xml",duration="medium", priority="low" },
+     values = { happiness = 3 }
+}
+
+Entity {
+     name = "Butchered A Human Corpse",
+     type = "emotion",
+     info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was forced to butcher a human corpse for sustenance!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was forced to butcher a human corpse for food and felt terrible about it!",
+		painting_description = "a ghastly self-portrait of the artist cutting up a human body with a butcher knife",
+          icon="cannibalism",
+		iconSkin="thoughtIcons.xml",
+		duration="medium",
+		priority="high" },
+     values = {  fear=3, despair=5,happiness=-2}		
+}
+Entity {
+     name = "Butchered A Fishperson Corpse",
+     type = "emotion",
+     info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN butchered a fishperson corpse for sustenance!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN butchered a fishperson corpse for food!",
+		painting_description = "a self-portrait of the artist cutting up a fishperson body with a butcher knife",
+          icon="fishperson",
+		iconSkin="thoughtIcons.xml",
+		duration="medium",
+		priority="high" },
+     values = { fear=2,despair=2}		
+}
+Entity {
+     name = "Butchered A Fishperson Corpse (fishy)",
+     type = "emotion",
+     info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was forced to butcher a fishperson corpse for sustenance!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was forced to butcher a fishperson corpse for food and felt terrible about it!",
+		painting_description = "a ghastly abstract of the artist's blood blending together with that of a fishperson",
+          icon="fishperson",
+		iconSkin="thoughtIcons.xml",
+		duration="long",
+		priority="high" },
+     values = {fear=4, anger=2, happiness=1, despair=5}		
+}
+Entity {
+	name = "Witnessed Butchery of a Human Corpse",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN watched in horror as a human corpse was butchered!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN watched a human corpse be butchered for food.",
+		painting_description = "a ghastly picture of a colonist cutting up a human body with a butcher knife",
+		icon="cannibalism",
+		iconSkin="thoughtIcons.xml",
+		duration="medium",
+		priority="high"},
+	values = { fear=4, despair=5,happiness=-3}		
+}
+
+Entity {
+	name = "Witnessed Fishperson Butcher a Human Corpse",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN watched in horror as a human corpse was butchered by a fishperson!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN watched a fishperson butcher a human corpse and was horrified!",
+		painting_description = "a ghastly picture of a fishperson cutting up a human body with a butcher knife",
+		icon="fishperson_bloody",
+		iconSkin="thoughtIcons.xml",
+		duration="medium",
+		priority="high"},
+	values = { fear=4, anger=3 ,happiness=1,despair=3}		
+}
+Entity {
+	name = "Witnessed Fishperson Butcher a Human Corpse (morbid)",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN watched in fascination as a human corpse was butchered by a fishperson!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN watched a fishperson butcher a human corpse and was fascinated.",
+		painting_description = "a ghastly picture of a fishperson cutting up a human body with a butcher knife",
+		icon="fishperson_bloody",
+		iconSkin="thoughtIcons.xml",
+		duration="medium",
+		priority="medium"},
+	values = { happiness=5, despair=10,  }		
+}
+Entity {
+	name = "Witnessed Butchery of a Fishperson Corpse",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was creeped out by the butchery of a Fishperson.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was creeped out by the butchery of a Fishperson.",
+	painting_description = "a ghastly picture of a colonist cutting up a fishperson body with a butcher knife",
+	icon="fishperson", iconSkin="thoughtIcons.xml", duration="medium", priority="medium"},
+	values = { fear=2,happiness=-1,despair=1}		
+}
+Entity {
+	name = "Witnessed Butchery of a Fishperson Corpse (fishy)",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was horrified out by the butchery of a Fishperson!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was horrified by the butchery of a Fishperson.",
+	painting_description = "a ghastly picture of a colonist cutting up a fishperson with a human face",
+	icon="fishperson", iconSkin="thoughtIcons.xml", duration="long", priority="high"},
+	values = { fear=3, anger=2,happiness=-2,despair=10}		
+}
+Entity {
+	name = "Witnessed Consumption of Human Meat",
+	type = "emotion",
+	info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN watched in horror as the cannibal OTHER_NAME ate human flesh!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed OTHER_NAME engage in cannibalism!",
+			painting_description = "a picture of a well-dressed man about to eat a very large pot roast",
+			icon="cannibalism",
+			iconSkin="thoughtIcons.xml",
+			duration="medium",
+			priority="high" },
+	values = {fear=5,happiness=-5,despair=5},		
+}
+Entity {
+	name= "Horrified By Fishperson Corpse", 
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw the horrible corpse of a fishy creature! (OTHER_NAME).",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw the horrible corpse of a fishy creature.",
+	painting_description = "a watercolor depiction of a horrific fishperson corpse",
+	icon="fishperson_dead", iconSkin="thoughtIcons.xml", duration="short", priority="medium"},
+	values = {fear=2, happiness =-3, despair=1}
+}
+Entity {
+	name = "Fascinated By Fishperson Corpse",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw a horrible fishy creature's corpse. How interesting!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw a horrible fishy creature's corpse.",
+	painting_description = "an abstract fresco about what life would be like under the ocean",
+	icon="fishperson_dead", iconSkin="thoughtIcons.xml", duration="short", priority="medium" },
+	values = {happiness = 5, despair=5}
+}
+Entity {
+	name = "Horrified By A Fishperson",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw a horrible fishy creature for the first time. Disgusting!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw a horrible fishy creature for the first time.",
+	painting_description = "a vividly imagined painting of a horrific fishperson corpse",
+	icon="fishperson_surprised", iconSkin="thoughtIcons.xml", duration="short", priority="medium" },
+	values = { fear = 2,happiness=-4, despair=2}
+}
+Entity {
+	name = "Fascinated By A Fishperson",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw a horrible fishy creature, the likes of which SUBJECTIVE_PERSONAL_PRONOUN had never seen before, and was fascinated by it!",
+	painting_description = "a painting, the contents of which have been redacted by the local branch of Her Majesty's Occult Purging Squad",
+	icon="fishperson_smile", iconSkin="thoughtIcons.xml", duration="short", priority="medium" },
+	values = { happiness = 5, despair=2} 
+}
+
+-- Selenians
+
+	Entity {
+		name = "Horrified By A Selenian",
+		type = "emotion",
+		info = {
+			description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw a horrible glowing thing for the first time. How awful!",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw a horrible glowing thing for the first time.",
+			painting_description = "abnormal glowing shapes floating in the night, of no colour from this world",
+			icon="selenian_polyp_night",
+			iconSkin="thoughtIcons.xml",
+			duration="medium",
+			priority="medium" },
+		values = { fear = 10,happiness=-5, despair=8, }
+	}
+	Entity {
+		name = "Fascinated By A Selenian",
+		type = "emotion",
+		info = {
+			description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw a horrible glowing shape, the likes of which SUBJECTIVE_PERSONAL_PRONOUN had never seen before, and was fascinated by it!",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw a horrible yet wonderful glowing thing for the first time.",
+			painting_description = "a picture of glowing lights shining in no colour of this world",
+			icon="selenian_polyp_night",
+			iconSkin="thoughtIcons.xml",
+			duration="medium",
+			priority="medium" },
+		values = { happiness = 5, anger=0, fear=0, despair=5}
+	}
+
+	Entity {
+		name = "Attacked By A Selenian",
+		type = "emotion",
+		info = {
+			description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was injured by an Obeliskian recently!",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was injured by an Obeliskian",
+			painting_description = "a picture of glowing lights shining in no colour of this world",
+			priority = "high",
+			duration = "short", 
+			icon = "obeliskian",
+			iconSkin="thoughtIcons.xml" },
+		values = {fear=8,happiness=-5, despair=3,anger=1}
+	}
+	Entity {
+		name = "Suffered From Selenian Field Effect",
+		type = "emotion",
+		info = 	{
+				description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was harmed by a Selenian field effect recently!", 
+				journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN suffered an attack by a Selenian.",
+				priority = "high", duration = "short", 
+				painting_description = "a picture of glowing lights shining in no colour of this world",
+				icon = "obeliskian", iconSkin="thoughtIcons.xml" },
+		values = {fear=8,happiness=-5, despair=6,anger=0}
+	}
+
+-- Geometers
+
+Entity {
+	name = "Horrified By A Geometer",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw an unnatural little creature for the first time. How awful!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw an unnatural little creature for the first time.",
+		painting_description = "abnormal glowing shapes floating in the night, of no colour from this world",
+		icon="invisible_geometer",
+		iconSkin="thoughtIcons.xml",
+		duration="medium",
+		priority="medium" },
+	values = { fear = 10,happiness=-5, anger=0, despair=10, }
+}
+Entity {
+	name = "Fascinated By A Geometer",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw an unnatural little creature, the likes of which SUBJECTIVE_PERSONAL_PRONOUN had never seen before, and was fascinated by it!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw an unnatural yet wonderful little creature for the first time.",
+		painting_description = "a picture of glowing lights shining in no colour of this world",
+		icon="invisible_geometer",
+		iconSkin="thoughtIcons.xml",
+		duration="medium",
+		priority="medium" },
+	values = { happiness = 10, anger=0, fear=0, despair=15}
+}
+
+-- Obeliskian Memories
+	Entity {
+		name = "Horrified By An Obeliskian",
+		type = "emotion",
+		info = {
+			description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw a horrible living monolith, the likes of which SUBJECTIVE_PERSONAL_PRONOUN had never seen before, and was terrified!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw a horrible living monolith for the first time and was terrified!",
+			painting_description = "a vividly imagined painting of a horrific stone with gaping eyes",
+			icon="obeliskian", iconSkin="thoughtIcons.xml",
+			duration="long",
+			priority="medium" },
+		values = {fear=10,happiness=-3,despair=5}
+	}
+	Entity {
+		name = "Fascinated By An Obeliskian",
+		type = "emotion",
+		info = {
+			description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw a horrible living monolith, the likes of which SUBJECTIVE_PERSONAL_PRONOUN had never seen before, and was fascinated by it!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw a horrible but fascinating living monolith for the first time!",
+			painting_description = "a painting, the contents of which have been redacted by the local branch of Her Majesty's Occult Purging Squad",
+			icon="obeliskian",
+			iconSkin="thoughtIcons.xml",
+			duration="long",
+			priority="medium" },
+		values = {fear=3,happiness=5,despair=10}
+	}
+	Entity {
+		name = "Attacked By An Obeliskian",
+		type = "emotion",
+		info = {
+			description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was injured by an Obeliskian recently!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was injured by an Obeliskian",
+			painting_description = "a picture of a terrifying tentacled monolith",
+			priority = "high",
+			duration = "short", 
+			icon = "obeliskian",
+			iconSkin="thoughtIcons.xml" },
+		values = {fear=8,happiness=-3,despair=5}
+	}
+	Entity {
+		name = "Suffered From Obeliskian Aetheric Attack",
+		type = "emotion",
+		info = 	{description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN suffered attack by Obeliskian aetheric weaponry recently!", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN suffered an attack by an Obeliskian.",
+				priority = "high", duration = "short", 
+				painting_description = "a picture of a terrifying, screaming, flying head carved from stone",
+				icon = "obeliskian", iconSkin="thoughtIcons.xml" },
+		values = {fear=8,happiness=-3,despair=5}
+	}
+
+-- Military Training / Barracks memories.
+	Entity {
+		name = "Engaged In Military Training",
+		type = "emotion",
+		info = {  description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN trained in a soldierly manner and is numbed by the exertion.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN engaged in military training.",
+				priority = "high", duration = "short", 
+				painting_description = "a picture of a terrifying, screaming, flying head carved from stone",
+				icon = "soldiers", iconSkin="thoughtIcons.xml" },
+		values = {fear=-3, anger=-2, despair=-1}
+	}
+
+Entity {
+	name = "Witnessed Construction",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed the construction of a building, for the glory of the Empire! CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt a stirring, patriotic feeling within POSSESSIVE_PERSONAL_PRONOUN breast.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed the construction of a building and was uplifted by it.",
+	painting_description = "a painting of the Capital City of the Clockwork Empires",
+	icon="job_carpentry", iconSkin="thoughtIcons.xml", duration="short", priority="low", inspire ="yes"},
+	values = { happiness = 8, fear=-4,anger=-4,despair=-4 }
+}
+Entity {
+	name = "Inspired by the Proud Military of the Colony",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was comforted by the sight of brave soldiers keeping the colony safe.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was comforted by the sight of active military.",
+		painting_description = "a painting of a smiling squad of redcoats",
+		icon="morale4", iconSkin="thoughtIcons.xml", duration="short", priority="low"},
+	values = { happiness = 3, fear=-3, anger=-1,despair=-1 }
+}
+Entity {
+	name = "Finished Construction of a Building",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN constructed a building, and feels quite good about it!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was pleased to finish construction of a building.",
+	painting_description = "a stylized depiction of a carpenter",
+	icon="job_carpentry", iconSkin="thoughtIcons.xml", duration="medium", priority="medium" },
+	values = { happiness = 4, anger =-1, fear=-1, despair= -1 }
+}
+
+Entity {
+	name = "Angry Due To Hunger",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN hadn't had a meal in ages, and was quite upset about it.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was quite upset about being so hungry.",
+	painting_description = "a picture of a starving labourer",
+	icon="food_plate", iconSkin="thoughtIcons.xml", duration="medium", priority="medium" },
+	values = { happiness = -5, anger =3 }
+}
+Entity {
+	name = "Desperately Hungry",
+	type = "emotion", 
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN is starving. CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN would do almost anything for food!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt desperately hungry.",
+	painting_description = "a painting of a skeleton",
+	icon="act_of_murder", iconSkin="thoughtIcons.xml", duration="short", priority="high" },
+	values = { happiness = -5, fear=6}
+}
+Entity {
+	name = "Killed Some Wild Game",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN killed some wild game and felt rather satisfied about it.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was satisfied to have killed some wild game.",
+		priority = "low", duration = "short", 
+		painting_description = "a picture of a roasting boar",
+		icon="aurochs", iconSkin="thoughtIcons.xml"}, 
+	values = {happiness = 3}
+}
+Entity {
+	name = "Killed for the first time",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN killed someone for the first time. How horrible!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN killed someone for the first time.",
+	painting_description = "a painting of a somewhat confused-looking aurochs",
+	icon="act_of_murder", iconSkin="thoughtIcons.xml", duration="long", priority="high" },
+	values = { happiness = -5, fear=5, despair=10}
+}
+Entity {
+	name = "Killed someone for the first time",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN killed someone for the first time by taking the life of OTHER_NAME. How horrible!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt awful about taking the life of OTHER_NAME.",
+	painting_description = "a painting of a somewhat confused-looking aurochs",
+	icon="act_of_murder", iconSkin="thoughtIcons.xml", duration="long", priority="high" },
+	values = { happiness = -1, fear=3, despair=10}
+}
+Entity {
+	name = "Killed for the first time (friend)",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN killed for the first time - and, horribly, it was their friend OTHER_NAME!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN killed their friend OTHER_NAME and felt repulsive.",
+		painting_description = "a painting of abstract, streaking blue and red lines",
+		icon="heart_broken", iconSkin="thoughtIcons.xml",
+		duration="long",
+		priority="high" },
+	values = { happiness = -20, fear=10, despair=20}
+}
+Entity {
+	name = "Killed for the first time (military)",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN killed another being for the first time. The death of OTHER_NAME was a sad but necessary duty, for the good of the empire.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt grim resignation at having to kill another being, OTHER_NAME.",
+		painting_description = "a painting of a condemned criminal",
+		icon="skull",
+		iconSkin="thoughtIcons.xml",
+		duration="long",
+		priority="high" },
+	values = { happiness = 2, despair=2}
+}
+Entity {
+	name = "Killed for the first time and liked it",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN killed another being for the first time. A sense of dread runs through them at the death of OTHER_NAME.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt satisfied at killing OTHER_NAME for the good of the settlement.",
+		painting_description = "a painting of a gloating criminal",
+		icon="act_of_murder",
+		iconSkin="thoughtIcons.xml",
+		duration="long",
+		priority="high" },
+	values = { happiness = 8, fear=1,despair=2}
+}
+Entity {
+	name = "Killed a fishperson",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN killed OTHER_NAME the fishperson recently.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN killed OTHER_NAME the fishperson.",
+		painting_description = "a painting of a fishperson being shot by a soldier",
+		icon="fishperson_angry",
+		iconSkin="thoughtIcons.xml",
+		duration="short",
+		priority="medium" },
+	values = { fear=-1, happiness=2 }
+}
+Entity {
+	name = "Killed a Bandit",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN killed a bandit recently.",
+	journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN killed a bandit.",
+	painting_description = "a painting of a bandit",
+	icon="placeholder", iconSkin="orderIcons.xml", duration="short", priority="medium" }, -- SHOULD USE "bandit" ICON!!!
+	values = { fear=-1 , happiness=2}
+}
+Entity {
+	name = "Enacted Frontier Justice (military)",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN enacted Frontier Justice, as per orders. The death of OTHER_NAME was a sad but necessary duty.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN enacted Frontier Justice on OTHER_NAME.",
+		painting_description = "a painting of a blindfolded figure facing a firing squad",
+		icon="frontier_justice",
+		iconSkin="thoughtIcons.xml",
+		duration="medium",
+		priority="high" },
+	values = { happiness = -2, despair=1}
+}
+Entity {
+	name = "Witnessed Combat",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed combat recently.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed combat.",
+	painting_description = "a painting of a battlefield",
+	icon="shot_at", iconSkin="thoughtIcons.xml", duration="short", priority="low", },
+	values = { fear=4, happiness=-2,despair=2 }
+}
+
+Entity {
+	name = "Civilian In Combat",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN participated in combat as a civilian recently and was very upset by it.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN participated in combat as a civilian and was very upset by it.",
+	painting_description = "a painting of colonist cowering on a battlefield",
+	icon="shot_at", iconSkin="thoughtIcons.xml", duration="short", priority="low", },
+	values = { fear=8, happiness=-3,despair=3 }
+}
+
+Entity {
+	name = "Civilian In Combat With Horror",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN participated in combat against a horror and was terrified.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUNparticipated in combat against a horror and was terrified.",
+	painting_description = "a painting of colonist cowering on a battlefield",
+	icon="shot_at", iconSkin="thoughtIcons.xml", duration="short", priority="medium", },
+	values = { fear=15, happiness=-5,despair=5 }
+}
+
+Entity {
+	name = "Witnessed Fighting Between Colonists",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed fighting between fellow colonists recently!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed fighting between fellow colonists.",
+		painting_description = "a painting of a battlefield",
+		icon="affliction",
+		iconSkin="thoughtIcons.xml",
+		duration="short",
+		priority="low", },
+	values = { fear=1, anger=1,happiness=-2, despair=1 }
+}
+
+
+Entity {
+	   name = "Horrified At Eating Human Flesh",
+	   type = "emotion",
+	   info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was so hungry, SUBJECTIVE_PERSONAL_PRONOUN was forced to eat human flesh! CAPITALIZED_POSSESSIVE_PERSONAL_PRONOUN  mind recoils from the horrifying experience.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was forced to resort to cannibalism due to starvation!",
+		painting_description = "a colourful abstact work, resembling the scribblings of a Street Urchin",
+	   icon="cannibalism", iconSkin="thoughtIcons.xml", duration="long", priority="high" },
+	   values = { happiness = -8, fear=3, despair=5}
+}
+Entity {
+	   name = "Ate Human Flesh (Epicurean)",
+	   type = "emotion",
+	   info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN consumed the strangest sort of meat, recently. What IS that flavor?",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN consumed an unusual meat dish recently.",
+	   painting_description = "a picture of a man being put into a Sausage-Grinder",
+	   icon="cannibalism", iconSkin="thoughtIcons.xml", duration="medium", priority="high" },
+	   values = { happiness = 4,despair=2}
+}
+Entity {
+	 name = "Enjoyed Eating Human Flesh",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was so hungry, they were forced to eat human flesh... and it was wonderful.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN found out they really like the taste of human flesh.",
+		painting_description = "a picture of an excited-looking man being put into a Sausage-Grinder",
+		icon="cannibalism_extreme", iconSkin="thoughtIcons.xml", duration="medium", priority="high" },
+		values = { happiness = 7,despair=10, }
+}
+Entity {
+	name = "Committed Intentional Murder",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN committed bloody murder of OTHER_NAME!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN committed the murder of OTHER_NAME!",
+		painting_description = "a painting of horrific, bloody streaks across a black canvas",
+		icon="act_of_murder",
+		iconSkin="thoughtIcons.xml",
+		duration="long",
+		priority="high" },
+	values = { fear=5, despair=10, }	
+}
+Entity {
+	name = "Committed Intentional Murder of a Friend",
+	type = "emotion",
+	info = {
+			description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN personally committed bloody murder of one of their own friends!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN committed the murder of one of their own friends!",
+			painting_description = "a painting of horrific, bloody streaks across a black canvas",
+			icon="act_of_murder",
+			iconSkin="thoughtIcons.xml",
+			duration="long", priority="high" },
+	   values = { fear=3, anger =3, despair=15, happiness=-5}	
+}
+Entity {
+	   name = "Attacked By A Murderer",
+	   type = "emotion",
+	   info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was assaulted by a murderer!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was attacked by a murderer!",
+		icon="cower",
+		iconSkin="thoughtIcons.xml",
+		duration="medium",
+		priority="medium" },
+	   values = { fear=10, anger=3,happiness=-5,despair=5 },			
+}
+Entity {
+	   name = "Witnessed Murder",
+	   type = "emotion",
+	   info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed the heinous murder of OTHER_NAME!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed the heinous murder of OTHER_NAME!",
+	   icon="cower", iconSkin="thoughtIcons.xml", duration="long", priority="high" },
+	   values = { fear=10,happiness=-10, anger=5, despair =10},			
+}
+Entity {
+	   name = "Witnessed Murder And Liked It",
+	   type = "emotion",
+	   info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed the murder of OTHER_NAME and found it... strangely appealing.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was actually pretty okay with witnessing the murder of OTHER_NAME.",
+	   icon="act_of_murder", iconSkin="thoughtIcons.xml", duration="long", priority="high" },
+	   values = { happiness=7, anger =1, despair=10 },			
+}
+
+Entity {
+	name = "Witnessed Violent Death",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was horrified to witness the violent death of OTHER_NAME!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed the horrible, violent death of OTHER_NAME!",
+		painting_description = "a paint of bloody hands",
+		icon="act_of_murder",
+		iconSkin="thoughtIcons.xml",
+		duration="long",
+		priority="high" },
+	values = { fear=15,happiness=-10, despair=10},			
+}
+Entity {
+	name = "Witnessed Violent Death And Liked It",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed the violent death of OTHER_NAME and found it... compelling.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was actually pretty okay with witnessing the violent death of OTHER_NAME",
+		painting_description = "a paint of bloody hands",
+		icon="act_of_murder",
+		iconSkin="thoughtIcons.xml",
+		duration="long",
+		priority="high" },
+	values = { happiness=6, anger =1, despair=10 },			
+}
+
+Entity {
+	   name = "Witnessed a Dreadful Poetry Reading",
+	   type = "emotion",
+	   info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed a dreadful poetry reading and was discomfited.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard some terrible poetry.",
+		painting_description = "a painting of an unpleasant looking man giving a poetry reading",
+		icon="open_book",
+		iconSkin="thoughtIcons.xml",
+		duration="short",
+		priority="low" },
+	   values = { anger =3, happiness=-3 }
+}
+Entity {
+	   name= "Witnessed a Maddened Poetry Reading",
+	   type = "emotion",
+	   info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was subjected to the ravings of a mad poet and was greatly unnerved.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was unnerved by the ravings of a mad poet.",
+	   painting_description = "a painting of a wild-eyed man shouting poetry at passers-by",
+	   icon="open_book", iconSkin="thoughtIcons.xml", duration="short", priority="medium" },
+	   values = { fear=2, despair=4 }
+}
+Entity {
+	name = "Witnessed a Poetry Reading",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed a poetry reading and found it tolerable.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed a tolerable poetry reading.",
+	painting_description = "a painting of a bored-looking colonist witnessing Poetry",
+	icon="open_book", iconSkin="thoughtIcons.xml",  duration="short", priority="low" },
+	values = { despair= 1, happiness = 2, }
+}
+Entity {
+	   name = "Enjoyed a Reading of Poetry",
+	   type = "emotion",
+	   info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed, and quite enjoyed, a poetry reading. How unusual!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed a quite enjoyable poetry reading.",
+	   painting_description = "a painting of a poet surrounded by pleased-looking subjects of the Empire",
+	   icon="open_book", iconSkin="thoughtIcons.xml",  duration="short", priority="low" },
+	   values = { happiness = 3, fear=-3, anger =-3, despair = -1 }
+}
+
+Entity {
+	name = "Totally Unequipped To Be A Vicar",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was given a holy text and told to make the best of it!",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was assigned vicar duty in spite of being totally unqualified.",
+	painting_description = "a portrait of an overwhelmed, possibly illiterate priest",
+	icon="thumbs_down", iconSkin="thoughtIcons.xml",  duration="short", priority="medium" },
+	values = { fear=4, anger =2, happiness = -3, despair=1 }
+}
+
+Entity {
+	name = "Thrilled At Being Conscripted",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was thrilled to be conscripted into the military, despite having absolutely no idea what they are doing! How exciting!",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was thrilled to be conscripted into the military.",
+	painting_description = "a portrait of a happy-looking soldier shooting himself in the foot",
+	icon="morale4", iconSkin="thoughtIcons.xml",  duration="short", priority="medium" },
+	values = { happiness = 4 }
+}
+
+Entity {
+	name = "Upset At Being Conscripted",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was forcibly conscripted into the military, despite POSSESSIVE_PERSONAL_PRONOUN lack of training. How very upsetting!",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was forcibly conscripted against POSSESSIVE_PERSONAL_PRONOUN will.",
+	painting_description = "a portrait of an unhappy-looking soldier",
+	icon="morale1", iconSkin="thoughtIcons.xml",  duration="short", priority="medium" },
+	values = { fear=4, anger =2, happiness = 1 }
+}
+
+Entity {
+	   name = "Upset At Being Decomissioned",
+	   type = "emotion",
+	   info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was forcibly decomissioned from the military, despite POSSESSIVE_PERSONAL_PRONOUN military training. How very upsetting!",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was forcibly decomissioned from the military, despite POSSESSIVE_PERSONAL_PRONOUN military training.",
+	   painting_description = "a portrait of an unhappy-looking soldier",
+	   icon="morale1", iconSkin="thoughtIcons.xml",  duration="short", priority="medium" },
+	   values = { anger =3, happiness = 1 }
+}
+Entity {
+	name = "Witnessed Creepy Dance",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw OTHER_NAME performing an ecstatic dance and was unnervered.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw OTHER_NAME performing a strange frenzied dance.",
+		icon="despair2",
+		iconSkin="thoughtIcons.xml",
+		duration="short",
+		priority="medium" },
+	values = { fear=2,happiness=1}
+}
+Entity {
+	name = "Witnessed Creepy Dance (maddened)",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw OTHER_NAME performing an ecstatic dance and was excited.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw OTHER_NAME performing a strangely compelling, frenzied dance.",
+		icon="despair2",
+		iconSkin="thoughtIcons.xml",
+		duration="short",
+		priority="medium" },
+	values = { happiness=3}
+}
+Entity {
+	name = "Did a Dance",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN spontaneously decided to dance and had a great time!",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN danced and felt great.",
+	icon="happy", iconSkin="thoughtIcons.xml",  duration="short", priority="low" },
+	values = { happiness=3 }
+}
+Entity {
+	name = "Talked to An Animal",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN decided to chat up an animal. A good time was had by all.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had a great conversation with an animal.",
+	icon="aurochs", iconSkin="thoughtIcons.xml",  duration="short", priority="medium" },
+	values = { anger=0, despair=0, happiness=3}
+}
+Entity {
+	name = "Witnessed Talking To Animal",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was disturbed to witness OTHER_NAME talking to an animal.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was distressed by OTHER_NAME talking to an animal.",
+		icon="aurochs",
+		iconSkin="thoughtIcons.xml",
+		duration="short",
+		priority="medium" },
+	values = { fear=2,happiness=2 }
+}
+Entity {
+	name = "Talked to A Corpse",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN talked to POSSESSIVE_PERSONAL_PRONOUN friend. A very cold friend. Who maybe wasn't alive.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN talked to POSSESSIVE_PERSONAL_PRONOUN late friend.",
+	icon="skull", iconSkin="thoughtIcons.xml",  duration="short", priority="medium" },
+	values = { anger=0, happiness=4}
+}
+Entity {
+	name = "Witnessed Talking To Corpse",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw OTHER_NAME talking to a corpse and was very disturbed by the sight!",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw OTHER_NAME talking to a corpse.",
+	icon="despair2", iconSkin="thoughtIcons.xml",  duration="short", priority="medium" },
+	values = { fear=3,happiness=1 }
+}
+Entity {
+	name = "Witnessed Happy Freakout",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw OTHER_NAME overcome by manic gyrations from pure joy. This was frightening.",	
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed the manic gyrations of OTHER_NAME.",   
+	icon="despair2", iconSkin="thoughtIcons.xml",  duration="short", priority="medium" },
+	values = { fear=1, happiness = 2 }
+}
+Entity {
+	name = "Made A Friend",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN has a new friend: OTHER_NAME!",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN made a friend of OTHER_NAME.",
+		icon="heart",
+		iconSkin="thoughtIcons.xml",
+		duration="medium",
+		priority="medium" },
+	values = { fear=-5, anger =-5, happiness = 10, despair=-5 }
+}
+
+Entity {
+	name = "Lost A Friend",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN sadly lost OTHER_NAME as a friend.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN lost OTHER_NAME as a friend.",	   
+		icon="heart_broken", iconSkin="thoughtIcons.xml",
+		duration="medium",
+		priority="medium" },
+	values = { anger=2, despair=4, happiness=-10 }
+}
+
+Entity {
+	name = "Made An Enemy",
+	type = "emotion",
+	info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN has a new enemy: OTHER_NAME!",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN made an enemy of OTHER_NAME.",
+			icon="thumbs_down",
+			iconSkin="thoughtIcons.xml",
+			duration="medium",
+			priority="medium" },
+	values = { anger=3, despair=0,happiness=1 }
+}
+
+Entity {
+	name = "Had A Good Cower",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was comforted by having a good cower.",	  
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was comforted by having a good cower.", 
+	icon="fearful", iconSkin="thoughtIcons.xml",  duration="short", priority="low" },
+	values = { fear=0,happiness=2 }
+}
+
+Entity {
+	name = "Fled From Danger",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN fled from danger and feels a little better now.",	
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN fled fromd danger.",   
+	icon="retreat", iconSkin="thoughtIcons.xml",  duration="short", priority="low" },
+	values = { fear=0,happiness=2 }
+}
+
+
+Entity {
+	name = "Forced to Frontier Justice a Friend",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had to brutally kill POSSESSIVE_PERSONAL_PRONOUN friend OTHER_NAME in the name of Frontier Justice. What a horrible turn of events.",	
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had to brutally kill POSSESSIVE_PERSONAL_PRONOUN friend OTHER_NAME in the name of Frontier Justice.",   
+		icon="frontier_justice",
+		iconSkin="thoughtIcons.xml",
+		duration="long",
+		priority="high" },
+	values = { anger =2, happiness = 0 , despair=20}
+}
+Entity {
+	name = "Watched a Friend Die to Frontier Justice",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was forced to watch the murder of POSSESSIVE_PERSONAL_PRONOUN friend - a necessity of the Empire's 'Justice'.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed the murder of POSSESSIVE_PERSONAL_PRONOUN due to Frontier Justice.",
+	icon="frontier_justice", iconSkin="thoughtIcons.xml",  duration="long", priority="high" },
+	values = { despair=10, anger =4, happiness = 0}
+}
+Entity {
+	name = "Watched a Friend Die",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN watched POSSESSIVE_PERSONAL_PRONOUN friend OTHER_NAME die.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN watched POSSESSIVE_PERSONAL_PRONOUN friend OTHER_NAME die.",
+		icon="skull",
+		iconSkin="thoughtIcons.xml",
+		duration="long",
+		priority="high" },
+	values = { fear=3, despair=5,happiness=0}
+}
+
+Entity {
+	name = "Watched a Friend Get Murdered",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw POSSESSIVE_PERSONAL_PRONOUN friend OTHER_NAME get murdered!",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw POSSESSIVE_PERSONAL_PRONOUN friend OTHER_NAME get murdered!",
+		icon="murder_stab",
+		iconSkin="thoughtIcons.xml",
+		duration="long",
+		priority="high" },
+	values = { fear=7,despair=2,happiness=0}
+}
+Entity {
+	name = "Prayed Before Bed",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN prayed before sleeping and rested more peacefully for it.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN prayed before sleeping and rested more peacefully for it.",	   
+	icon="holy_cog", iconSkin="thoughtIcons.xml",  duration="short", priority="low" },
+	values = { fear=-1, anger =-1, happiness = 3, despair=-1}
+}
+Entity {
+	name = "Prayed And Felt Better",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN prayed and felt more at peace with POSSESSIVE_PERSONAL_PRONOUN fate.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN prayed and felt more at peace with POSSESSIVE_PERSONAL_PRONOUN fate.",	   
+	icon="holy_cog", iconSkin="thoughtIcons.xml",  duration="short", priority="low" },
+	values = { fear=-1, anger =-1, happiness = 3, despair=-1}
+}
+
+Entity {
+	name = "Prayed at Wall Shrine",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN prayed at a wall shrine and felt at peace.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN prayed at a wall shrine and felt at peace.",	   
+	icon="holy_cog", iconSkin="thoughtIcons.xml",  duration="short", priority="low" },
+	values = { fear=-1, anger =-1, happiness = 3, despair=-1}
+}
+
+Entity {
+	name = "Gave Confession And Felt Better",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN gave confession to a Vicar and feels much better now.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN gave confession to a Vicar and felt much better.",	   
+		icon="holy_cog",
+		iconSkin="thoughtIcons.xml",
+		duration="short",
+		priority="medium" },
+	values = {fear=-5, happiness = 5, despair=-8, anger=0}
+}
+Entity {
+	name = "Prayed And Spread Despair",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN prayed and spread the True Knowledge of Forbidden Things.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN prayed and spread the True Knowledge of Forbidden Things.",	   
+	icon="cultist_kneeling", iconSkin="thoughtIcons.xml",
+		duration="short", priority="low" },
+	values = { fear=0, anger =0, happiness = 3,despair=3}
+}
+Entity {
+	name = "Preached the End Times",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN preached and spread the news to all that The End Times are near.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN preached and spread the news to all that The End Times are near.",	   
+		icon="cultist_kneeling", iconSkin="thoughtIcons.xml",
+		duration="short", priority="medium" },
+	values = { fear=5, despair=-5}
+}
+Entity {
+	name = "Heard Someone Preaching the End Times",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard OTHER_NAME preaching the End Times and was disturbed.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard OTHER_NAME preaching the End Times and was disturbed.",	   
+	icon="despair2", iconSkin="thoughtIcons.xml",
+		duration="short", priority="medium" },
+	values = { fear=5, despair = 5}
+}
+Entity {
+	name = "Heard Uplifting Prayer Service",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard an Ecumenist prayer service given by OTHER_NAME and felt uplifted.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard an Ecumenist prayer service given by OTHER_NAME and felt uplifted.",
+		icon="holy_cog",
+		iconSkin="thoughtIcons.xml",
+		duration="short",
+		priority="medium" },
+	values = {importance= 15, fear=0, anger =0, despair=-20, happiness = 4 }
+}
+
+Entity {
+	name = "Heard Military Prayer Service",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard an Unreformed Deist prayer service given by OTHER_NAME and felt inspired to perform military feats!",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard an Unreformed Deist prayer service given by OTHER_NAME and felt inspired to perform military feats!",
+		icon="holy_cog",
+		iconSkin="thoughtIcons.xml",
+		duration="short",
+		priority="medium" },
+	values = {importance= 15, fear=0, despair=-20, happiness = 4 }
+}
+
+Entity {
+	name = "Heard Tedious Military Service",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard a tedious Unreformed Deist prayer service given by OTHER_NAME. CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN didn't much understand or appreciate the military overtones.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard a tedious Unreformed Deist prayer service given by OTHER_NAME. CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN didn't much understand or appreciate the military overtones.",
+		icon="holy_cog",
+		iconSkin="thoughtIcons.xml",
+		duration="short",
+		priority="low" },
+	values = {importance= 15, fear=0, despair=-10, happiness=2}
+}
+
+Entity {
+	name = "Heard Worker Prayer Service",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard an oppressive Muscularist prayer service given by OTHER_NAME and felt obligated to work OBJECTIVE_PERSONAL_PRONOUNself to exhaustion.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard an oppressive Muscularist prayer service given by OTHER_NAME and felt obligated to work OBJECTIVE_PERSONAL_PRONOUNself to exhaustion.",
+		icon="holy_cog",
+		iconSkin="thoughtIcons.xml",
+		duration="short",
+		priority="medium" },
+	values = {importance= 15, fear=0, despair=-10, happiness = 2 }
+}
+
+Entity {
+	name = "Heard Bland Worker Service",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard an Muscularist prayer service given by OTHER_NAME and felt glad that SUBJECTIVE_PERSONAL_PRONOUN wasn't required to participate in hard labor.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard an Muscularist prayer service given by OTHER_NAME and felt glad that SUBJECTIVE_PERSONAL_PRONOUN wasn't required to participate in hard labor.",
+		icon="holy_cog",
+		iconSkin="thoughtIcons.xml",
+		duration="short",
+		priority="low" },
+	values = {importance= 15, fear=0, despair=-5, happiness = 2 }
+}
+
+Entity {
+	name = "Heard UC Prayer Service",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard a Predestinational Mechanistic prayer service given by OTHER_NAME and felt satisfaction at POSSESSIVE_PERSONAL_PRONOUN important place in the universe.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard a Predestinational Mechanistic prayer service given by OTHER_NAME and felt satisfaction at POSSESSIVE_PERSONAL_PRONOUN important place in the universe.",
+		icon="holy_cog",
+		iconSkin="thoughtIcons.xml",
+		duration="short",
+		priority="medium" },
+	values = {importance= 15, fear=0, despair=-20,  happiness = 4 }
+}
+
+Entity {
+	name = "Heard Boring UC Service",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard a tedious Predestinational Mechanistic prayer service given by OTHER_NAME and was intensely bored by the endless praise of the nobility.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard a tedious Predestinational Mechanistic prayer service given by OTHER_NAME and was intensely bored by the endless praise of the nobility.",
+		icon="holy_cog",
+		iconSkin="thoughtIcons.xml",
+		duration="short",
+		priority="low" },
+	values = {importance= 15, fear=0, despair=-10, happiness=2}
+}
+
+Entity {
+	name = "Heard A Very Strange Prayer Service",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard a very strange prayer service indeed given by OTHER_NAME.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard a very strange prayer service indeed given by OTHER_NAME.",
+		icon="despair2",
+		iconSkin="thoughtIcons.xml",
+		duration="short",
+		priority="low" },
+	values = { fear=1, happiness = 2 }
+}
+Entity {
+	name= "Slapped Someone",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN slapped OTHER_NAME in anger and felt very satisfied.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN slapped OTHER_NAME in anger and felt very satisfied.",
+	icon = "fist_upheld_red", iconSkin = "thoughtIcons.xml", duration="short", priority = "medium" },
+	values = {anger = -2, happiness=2}
+}
+Entity {
+	name= "Slapped By Another",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was slapped by OTHER_NAME and is very upset by it!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was slapped by OTHER_NAME and was very upset by it!",
+	icon = "angry", iconSkin = "thoughtIcons.xml", duration="medium", priority = "medium" },
+	values = {anger = 2, happiness=-5, despair=2}
+}
+
+Entity {
+	name= "Insulted By Bandit",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was insulted quite rudely by the bandit OTHER_NAME and is very upset by it!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN insulted quite rudely by the bandit OTHER_NAME and is very upset by it!",
+	icon = "angry", iconSkin = "thoughtIcons.xml", duration="medium", priority = "medium" },
+	values = {anger = 2, happiness=1, despair=2}
+}
+
+
+Entity {
+	name= "Hugged A Fishperson",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN shared a cold, wet hug with a Fishperson.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN shared a cold, wet hug with a Fishperson.",
+	icon = "fishperson", iconSkin = "thoughtIcons.xml", duration="short", priority = "low" },
+	values = {despair=1, happiness=6}
+}
+
+Entity {
+	name= "Hugged Someone",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN shared a warm hug with OTHER_NAME.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN shared a warm hug with OTHER_NAME.",
+	icon = "happy", iconSkin = "thoughtIcons.xml", duration="short", priority = "low" },
+	values = {despair=-3, fear=-3, anger=-3, happiness=5}
+}
+Entity {
+	name= "Hugged By Another",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN shared a warm hug with CHARACTER_NAME.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN shared a warm hug with CHARACTER_NAME.",
+	icon = "happy", iconSkin = "thoughtIcons.xml", duration="short", priority = "low" },
+	values = {despair=-3, fear=-3, anger=-3, happiness=5}
+}
+
+Entity {
+	name= "Sadly Hugged Someone",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN hugged OTHER_NAME tight to assuage POSSESSIVE_PERSONAL_PRONOUN own fears.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN hugged OTHER_NAME.",
+	icon = "sad", iconSkin = "thoughtIcons.xml", duration="short", priority = "low" },
+	values = {despair=-3, fear=-3, anger=-3, happiness=5}
+}
+Entity {
+	name= "Sadly Hugged By Another",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN hugged CHARACTER_NAME to make them feel better.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN hugged CHARACTER_NAME to make them feel better.",
+	icon = "sad", iconSkin = "thoughtIcons.xml", duration="short", priority = "low" },
+	values = {despair=-3, fear=-3, anger=-3, happiness=5}
+}
+
+Entity {
+	name= "Hugged Someone Random",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was so incredibly happy that SUBJECTIVE_PERSONAL_PRONOUN suddenly hugged TARGET_NAME.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN hugged TARGET_NAME from intense joy.",
+	icon = "happy", iconSkin = "thoughtIcons.xml", duration="short", priority = "low" },
+	values = { fear=-3, anger=-3, happiness=5}
+}
+
+Entity {
+	name= "Sudden Shift Change",
+	type = "emotion",
+	info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was angered by a sudden change in work schedule.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was angered by a sudden change in work schedule.",
+			icon = "angry",
+			iconSkin = "thoughtIcons.xml",
+			duration="long",
+			priority = "medium" },
+	values = {happiness=-5, anger=5}
+}
+
+Entity {
+	name= "Hugged By Someone They Didn't Like",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was suddenly hugged by CHARACTER_NAME and felt very uncomfortable about it.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was hugged by CHARACTER_NAME and felt very uncomfortable about it.",
+		icon = "angry",
+		iconSkin = "thoughtIcons.xml",
+		duration="medium",
+		priority = "low" },
+	values = {despair=1, anger=2, happiness=-3}
+}
+
+Entity {
+	name = "Witnessed Descent Into Madness",
+	type = "emotion",
+	info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was upset by witnessing OTHER_NAME descend into a state of Madness.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was upset by witnessing OTHER_NAME descend into a state of Madness.",
+	icon = "madness",
+	iconSkin = "thoughtIcons.xml",
+	duration = "medium",
+	priority = "medium"},
+	values = {anger = 0, happiness=-2, despair=4, fear=2}
+} 
+
+Entity {
+	name= "Whispered At Someone",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN whispered weird things to OTHER_NAME.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN whispered weird things to OTHER_NAME.",
+	icon = "despair2", iconSkin = "thoughtIcons.xml", duration="short", priority = "low" },
+	values = {happiness=3}
+}
+Entity {
+	name= "Whispered At By Another",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was creeped out by OTHER_NAME's whisperings.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+	icon = "despair2", iconSkin = "thoughtIcons.xml", duration="short", priority = "low" },
+	values = { fear=1,despair=1,happiness=-1}
+}
+Entity {
+	name = "Was Punched By Another",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was punched by someone who didn't like OBJECTIVE_PERSONAL_PRONOUN!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+	icon = "angry", iconSkin = "thoughIcons.xml", duration = "short", priority = "high" },
+	values = {anger = 3,happiness=-3}
+}
+Entity {
+	name = "Saw Someone Get Punched",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was upset by witnessing a fistfight.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+	icon = "angry",
+	iconSkin = "thoughtIcons.xml",
+	duration = "short",
+	priority = "medium"},
+	values = {anger = 2,happiness=-1}
+} 
+Entity {
+	name = "Punched Someone Else",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN punched someone SUBJECTIVE_PERSONAL_PRONOUN didn't like and felt a bit better.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+	icon = "smash", iconSkin = "thoughtIcons.xml", duration = "short", priority = "medium"},
+	values = {anger = 1,happiness=2}
+} 
+Entity {
+	name= "Blamed Someone",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN blamed POSSESSIVE_PERSONAL_PRONOUN enemy OTHER_NAME for the miserable state of the colony.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+	icon = "finger_point", iconSkin = "thoughtIcons.xml", duration="medium", priority = "medium" },
+	values = { anger=1, fear=0,happiness=3}
+}
+Entity {
+	name= "Blamed By Another",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was blamed for the colony's woes by OTHER_NAME!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+	icon = "finger_point", iconSkin = "thoughtIcons.xml", duration="medium", priority = "medium" },
+	values = { happiness=-3, anger=3}
+}
+
+Entity {
+	name= "Yelled At Someone",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN became so upset that SUBJECTIVE_PERSONAL_PRONOUN yelled at OTHER_NAME.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+	icon = "finger_point", iconSkin = "thoughtIcons.xml", duration="short", priority = "medium" },
+	values = { anger=-1, happiness=2}
+}
+Entity {
+	name= "Yelled At By Another",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was undeservedly yelled at by CHARACTER_NAME!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+	icon = "finger_point", iconSkin = "thoughtIcons.xml", duration="short", priority = "medium" },
+	values = { happiness=-3, despair=2, fear=1}
+}
+
+Entity {
+	name= "Sucked up to someone (positive)",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN sucked up to OTHER_NAME and felt pretty good about it.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+	icon = "happy", iconSkin = "thoughtIcons.xml", duration="short", priority = "medium" },
+	values = { happiness=4, fear=-1}
+}
+Entity {
+	name= "Sucked up to someone (negative)",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN sucked up to OTHER_NAME and was rebuffed!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+	icon = "angry", iconSkin = "thoughtIcons.xml", duration="short", priority = "medium" },
+	values = { happiness=-1, fear=1, despair=1}
+}
+
+Entity {
+	name= "Sucked up to and liked it",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was pleased to be given the respect SUBJECTIVE_PERSONAL_PRONOUN deserves by OTHER_NAME.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+	icon = "happy", iconSkin = "thoughtIcons.xml", duration="short", priority = "medium" },
+	values = {  happiness=4, fear=0}
+}
+
+Entity {
+	name= "Sucked up to and disliked it",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN sucked up to by CHARACTER_NAME and found it very creepy.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+	icon = "angry", iconSkin = "thoughtIcons.xml", duration="short", priority = "medium" },
+	values = {  anger=1, happiness=-1}
+}
+
+Entity {
+	name= "Examined Tasty Food",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN examined some delicious food!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN examined some delicious food!",
+	icon = "food_plate", iconSkin = "thoughtIcons.xml", duration="short", priority = "low" },
+	values = {  happiness=3}
+}
+Entity {
+	name= "Examined Dead Body",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN examined a dead body. Neat!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN examined a dead body. Neat!",
+	icon = "skull", iconSkin = "thoughtIcons.xml", duration="short", priority = "low" },
+	values = { happiness=4, despair=2}
+}
+Entity {
+	name= "Cowered",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN cowered in terror and felt a bit better.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN cowered in terror and felt a bit better.",
+	icon = "afraid", iconSkin = "thoughtIcons.xml", duration="short", priority = "medium" },
+	values = {  fear=-3,happiness=3}
+}
+
+Entity {
+	name= "Cowered In Despair",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN cowered from overwhelming despair and felt a bit better.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN cowered from overwhelming despair and felt a bit better.",
+	icon = "afraid", iconSkin = "thoughtIcons.xml", duration="medium", priority = "high" },
+	values = {  despair=-5,}
+}
+
+Entity {
+	name= "Cowered In Despair (Outside)",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN cowered from overwhelming despair and felt a bit better.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN cowered from overwhelming despair and felt a bit better.",
+	icon = "afraid", iconSkin = "thoughtIcons.xml", duration="medium", priority = "high" },
+	values = {  despair=-3,}
+}
+
+Entity {
+	name= "Stomped Due To Rage",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN stomped on the ground from overwhelming anger and felt a bit better.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN stomped on the ground from overwhelming anger and felt a bit better.",
+		icon = "angry",iconSkin = "thoughtIcons.xml",
+		duration="medium",priority = "high" },
+	values = {  anger=-5,}
+}
+
+Entity {
+	name= "Let Off Some Steam",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN stomped POSSESSIVE_PERSONAL_PRONOUN feet and felt a little better.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN stomped POSSESSIVE_PERSONAL_PRONOUN feet and felt a little better.",
+	icon = "angry", iconSkin = "thoughtIcons.xml", duration="short", priority = "medium" },
+	values = {  anger = -3,happiness=3}
+}
+Entity {
+	name= "Enjoyed Smashing Something Up",
+	type = "emotion",
+	info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN smashed up a thing and felt a lot better.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN smashed up a thing and felt a lot better.",
+	icon = "smash", iconSkin = "thoughtIcons.xml", duration="short", priority = "medium" },
+	values = {  anger = 2, happiness=3}
+}
+
+Entity {
+	name = "Science Failure",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was disappointed by a failed line of inquiry in studies of Science.", 
+			priority = "medium", duration = "medium",
+			painting_description = "a painting depicting a lone, thoughtful figure lit by a single flickering candle, nearly burned out",
+			icon="science_fail"},
+	values = {  despair= 3, fear = 1, happiness=-3}
+}
+Entity {
+	name = "Science Success",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was delighted by a successful study of Science!", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+			priority = "medium", duration = "medium",
+			painting_description = "a painting depicting a lone figure surrounded by books and devices illuminated by a single ray of sunlight",
+			icon="science"},
+	values = {  happiness = 4 }
+}
+Entity {
+	name = "Saw Invisible Geometries",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw the invisible geometries.", 
+			priority = "high", duration = "long", 
+			painting_description = "a painting of a chair seen from the front, sides, and back all at the same time",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+			icon = "invisible_geometer", iconSkin="thoughtIcons.xml"},
+	values = {  despair= 25,  fear=10}
+}
+Entity {
+	name = "Saw A Drowned World",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw visions of a lost and ancient drowned world.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+			priority = "high", duration = "long", 
+			painting_description = "a painting of indistinct figures with pale glowing beckoning from murky water",
+			icon = "cosmic_horror", iconSkin="thoughtIcons.xml"},
+	values = { despair= 25, fear=10}
+}
+Entity {
+	name = "Felt Inhuman Thoughts",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt the thoughts of the Omnipotent Idiot-Constructor.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+			priority = "high", duration = "long", 
+			painting_description = "a painting of endless rows of cubes within cubes within cubes that seem to crawl across the canvas",
+			icon = "obeliskian", iconSkin="thoughtIcons.xml"},
+	values = { despair= 25, anger = -10, fear=15}
+}
+Entity {
+	name = "Felt Spirit Devoured",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt POSSESSIVE_PERSONAL_PRONOUN spirit devoured by The Insatiable Black Monolith Of The Underworld.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+			priority = "high", duration = "long", 
+			painting_description = "a painting of a black monolith above writhing humanoid forms",
+			icon = "cosmic_horror", iconSkin="thoughtIcons.xml"},
+	values = {  happiness = -10, despair= 25, anger = -10, fear=15}
+}
+
+Entity {
+	name= "Terrifying Secret In Family History",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN discovered a terrifying secret about POSSESSIVE_PERSONAL_PRONOUN family genealogy recently!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+	painting_description = "a painting of a row of people stretching back, further and further, into the shadows, their faces becoming increasingly warped over time",
+	icon = "cosmic_horror", iconSkin = "thoughtIcons.xml", duration="long", priority = "high" },
+	values = {  fear = 10, despair = 10,happiness=-10}
+}
+
+Entity {
+	name = "Uneventful Family Research",
+	type="emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN recently researched their family history and were relieved to find it was perfectly normal... as far as they knew.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+			icon="indifferent", iconSkin="thoughtIcons.xml", 
+			painting_description = "a painting of a happy family",
+			priority = "medium", duration = "medium" },
+	values = {  fear=-1,happiness = 2}
+}
+
+Entity {
+	   name = "Discovered a Distant Relative",
+	   type = "emotion",
+	   info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was excited to discover that OTHER_NAME is a distant relative!",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+	   painting_description = "a joyful reuinion between two family members",
+	   icon="heart", iconSkin="thoughtIcons.xml",  duration="medium", priority="high" },
+	   values = {  happiness = 5 }
+}
+
+Entity {
+	   name = "Determined to Make Something of Self",
+	   type = "emotion",
+	   info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was disappointed by a lack of geneaological discoveries and is determined to make a name for OBJECTIVE_PERSONAL_PRONOUNself!",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was disappointed by a lack of geneaological discoveries and determined to make a name for OBJECTIVE_PERSONAL_PRONOUNself",
+	   painting_description = "",
+	   icon="heart", iconSkin="thoughtIcons.xml",  duration="medium", priority="high" },
+	   values = {  happiness = 5 }
+}
+
+Entity {
+	name = "Had An Unsettling Dream (good reaction)",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had an ominous dream recently, and found it very stimulating...", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+			priority = "medium", duration = "medium", 
+			painting_description = "abstract, unnerving shapes and dimly visible figures welcoming the viewer",
+			icon = "eldritch", iconSkin="thoughtIcons.xml"},
+	values = {  happiness = 4, despair=3}
+}
+
+Entity {
+	name = "Had An Unsettling Dream (bad reaction) A",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had an ominous dream about a terrifying Black Pyramid from amongst the stars..", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+			priority = "medium", duration = "medium", 
+			painting_description = "abstract, unnerving shapes and dimly visible figures",
+			icon = "eldritch", iconSkin="thoughtIcons.xml"},
+	values = {  happiness = -3, despair= 5, fear=4}
+}
+
+Entity {
+	name = "Had An Unsettling Dream (bad reaction) B",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had an ominous dream about a mysterious city, lost beneath the waves..", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+			priority = "medium", duration = "medium", 
+			painting_description = "abstract, unnerving shapes and dimly visible figures",
+			icon = "eldritch", iconSkin="thoughtIcons.xml"},
+	values = {  happiness = -3, despair= 5, fear=4}
+}
+
+Entity {
+	name = "Had An Unsettling Dream (bad reaction) C",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had an ominous dream about mysterious lights in the forest..", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+			priority = "medium", duration = "medium", 
+			painting_description = "abstract, unnerving shapes and dimly visible figures",
+			icon = "eldritch", iconSkin="thoughtIcons.xml"},
+	values = {  happiness = -3, despair= 5, fear=4}
+}
+
+Entity {
+	name = "Had An Unsettling Dream (Doomed)",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had an horrifying dream that has scarred OBJECTIVE_PERSONAL_PRONOUN forever.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+			priority = "high", duration = "medium", 
+			painting_description = "abstract, unnerving shapes and dimly visible figures",
+			icon = "eldritch", iconSkin="thoughtIcons.xml"},
+	values = {  happiness = -5, despair= 10, fear=10}
+}
+
+Entity {
+	name = "Planet Dream",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN dreamt that SUBJECTIVE_PERSONAL_PRONOUN heard a wailing from the stars as the sky slowly turned black.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+			priority = "high", duration = "medium", 
+			painting_description = "a terrifying mass of tentacles and mouths",
+			icon = "eldritch", iconSkin="thoughtIcons.xml"},
+	values = {  happiness = -5, fear=10, despair=10}
+}
+
+Entity {
+	name = "Planet Wake",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt a strange terror run through SUBJECTIVE_PERSONAL_PRONOUN as the stars suddenly began to wink out.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+			priority = "high", duration = "medium", 
+			painting_description = "an all-encompassing blackness",
+			icon = "eldritch", iconSkin="thoughtIcons.xml"},
+	values = {  happiness = -5, fear=10, despair=10}
+}
+
+Entity {
+	   name = "Thrilled At Being Able To Send Stolen Goods",
+	   type = "emotion",
+	   info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was thrilled to provide Goods for the Colony, without being asked where they came from.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+	   painting_description = "a group portrait of jolly criminals and happy rogues",
+	   icon="criminal", iconSkin="thoughtIcons.xml",  duration="medium", priority="low" },
+	   values = {  happiness = 5 }
+}
+
+
+Entity {
+	   name = "Upset At Nearby Criminal Endeavours",
+	   type = "emotion",
+	   info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was upset that the Colony is becoming a den of thievery lately!",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+	   painting_description = "a watercolour painting of a vicar being mugged by bandits",
+	   icon="bandit", iconSkin="orderIcons.xml",  duration="medium", priority="low" },
+	   values = {  anger = 3, fear = 2, happiness = -3 }
+}
+
+Entity {
+	name = "Furious at knowledge of Bandit Activities",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was extremely upset to discover the colony manager is working with bandits!",	 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",  
+	painting_description = "an impressionistic painting of laughing, devilish figures around a table",
+	icon="placeholder", iconSkin="orderIcons.xml",  duration="medium", priority="medium" }, -- NOTE: SHOULD USE "bandit" ICON
+	values = {  anger = 5, fear = 2, happiness = -5 }
+}
+
+Entity {
+	name = "Amused at knowledge of Bandit Activities",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN amusedly let the Colony Manager off the hook for trafficking in stolen goods.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+	painting_description = "a print of a scammer being passed money by an accomplice",
+	icon="bandit_peace", iconSkin="orderIcons.xml",  duration="medium", priority="high" },
+	values = {  happiness = 3 }
+}
+Entity {
+	name = "Angered By Destruction Of Shrine",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was angered and upset that POSSESSIVE_PERSONAL_PRONOUN cult's shrine was destroyed.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+	painting_description = "a human figure in a murky field with the face cut out",
+	icon="cultist_shrine", iconSkin="thoughtIcons.xml",
+		duration="medium", priority="medium" },
+	values = {  anger = 6, despair= 1, happiness=-10}
+}
+Entity {
+	name = "Upset At Not Being Able To Send Stolen Goods",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was upset that POSSESSIVE_PERSONAL_PRONOUN generous offer to provide Goods for the Colony was denied, due to the suspect nature of said Goods.",	  
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN", 
+	painting_description = "a portrait of an unhappy-looking criminal in irons",
+	icon="angry", iconSkin="thoughtIcons.xml",  duration="medium", priority="low" },
+	values = { anger = 1, happiness = -1 }
+}
+
+
+Entity {
+	name = "Happy to have studied a Science Crate",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was delighted by the successful study of a Science Crate!", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+			priority = "medium",
+			duration = "medium",
+			painting_description = "a painting depicting a light shining forth from the center of the empire",
+			icon="science"},
+	values = {  happiness = 4 }
+}
+
+Entity {
+	name = "Disappointed to have not studied a Science Crate",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was disappointed by the colony's rejection of a Science Crate.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+			priority = "medium",
+			duration = "medium",
+			painting_description = "a portrait depicting a disapproving-looking Lord Palmerstoke",
+			icon="science_fail"},
+	values = {  despair = 3 }
+}
+
+Entity {
+	name = "Exposure to Science Goo",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt rather unpleasant due to researching Science Goo.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+			priority = "medium",
+			duration = "short",
+			painting_description = "a painting depicting a scientist labouring alone",
+			icon="science_fail"},
+	values = {  despair = 1, },
+}
+
+Entity {
+	name = "Humbled By The Infinite Terror Of The Cosmos",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed the Infinite Terror and Malign Vastness of The Cosmos.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN",
+		icon="cosmic_horror",
+		iconSkin="thoughtIcons.xml",
+		duration="long",
+		priority="high", },
+	values = {   fear=10, despair= 5, },														
+}
+
+Entity {
+     name = "Ecstatic To Have Joined A Cult",
+     type = "emotion",
+     info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN found new purpose and joy in life by joining a cult.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN found new purpose and joy in life by joining a cult.",
+               painting_description = "a circle of robed figures holding hands",
+			icon="cultist",
+			iconSkin="thoughtIcons.xml",
+               duration="long",
+			priority="high" },
+     values = {  happiness = 10, despair=5 }
+}
+
+Entity {
+     name = "Fulfilled By Cult Worship",
+     type = "emotion",
+     info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt devoured by joy due to performing cult worship.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt devoured by joy due to performing cult worship.",
+               painting_description = "a circle of robed figures holding hands",
+			icon="cultist_kneeling",
+			iconSkin="thoughtIcons.xml",
+               duration="medium",
+			priority="medium" },
+     values = {  happiness = 5, despair=5 }
+}
+
+Entity {
+     name = "Grateful to have a Chapel",
+     type = "emotion",
+     info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN is happy to have a colony overseer who understands their spiritual needs.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was happy to have a colony overseer who understands their spiritual needs.",
+               painting_description = "a classical depiction of a soaring chapel",
+			icon="holy_cog",
+			iconSkin="thoughtIcons.xml",
+               duration="medium",
+			priority="medium" },
+     values = {  happiness = 5, fear=-5, anger =-5, despair=-5 }
+}
+
+Entity {
+     name = "Witnessed Last Rites Performed",
+     type = "emotion",
+     info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was pleased to witness the correct rites performed for the body of OTHER_NAME.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was pleased to witness the correct rites performed for the body of OTHER_NAME.",
+               painting_description = "a peaceful grave",
+			icon="holy_cog",
+			iconSkin="thoughtIcons.xml",
+               duration="medium",
+			priority="medium" },
+     values = {  happiness = 5, despair=-8 }
+}
+
+Entity {
+     name = "Performed Last Rites",
+     type = "emotion",
+     info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was pleased to perform the correct rites for the body of OTHER_NAME.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was pleased to perform the correct rites for the body of OTHER_NAME.",
+               painting_description = "a peaceful grave",
+			icon="holy_cog",
+			iconSkin="thoughtIcons.xml",
+               duration="medium",
+			priority="medium" },
+     values = {  happiness = 3, fear=-1, anger =-1, despair=-1 }
+}
+
+Entity {
+     name = "Upset at being Denied a Chapel",
+     type = "emotion",
+     info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was deeply upset by the decision not to build a church.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was deeply upset by the decision not to build a church.",
+               icon="not_work", iconSkin="thoughtIcons.xml",
+			painting_description = "a lonely pilgrim looking for a place to worship",
+               duration="medium", priority="medium" },
+     values = {  happiness = -5, anger =3, despair=3 }
+}
+
+Entity {
+     name = "Felt Understood by The Aristocracy",
+     type = "emotion",
+     info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN is happy to have spoken with an Aristocrat who understood OBJECTIVE_PERSONAL_PRONOUN.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was happy to have spoken with an Aristocrat who understood OBJECTIVE_PERSONAL_PRONOUN.",
+          painting_description = "a sketch of an aristocrat embracing a worker",
+		icon="upper_class",
+		iconSkin="thoughtIcons.xml",
+		duration="medium",
+		priority="medium" },
+     values = {  happiness = 3, fear=-1, anger =-2, despair=-1 }
+}
+
+Entity {
+     name = "Felt Fumbling Condescension of The Aristocracy",
+     type = "emotion",
+     info = {
+			description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN is angred by the arrogance of an Aristocrat who pretended to understand POSSESSIVE_PERSONAL_PRONOUN.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was angred by the arrogance of an Aristocrat who pretended to understand POSSESSIVE_PERSONAL_PRONOUN.",
+			painting_description = "a sketch of an aristocrat spitting on a worker",
+			icon="fist_upheld_red",
+			iconSkin="thoughtIcons.xml",
+               duration="medium",
+			priority="medium" },
+     values = {  anger = 2, happiness=-1 }
+}
+
+Entity {
+     name = "Felt Intense Joy at Being Understood by The Aristocracy",
+     type = "emotion",
+     info = {
+			description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was filled with glee at the chance to speak on equal terms with a member of the Aristocracy.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was filled with glee at the chance to speak on equal terms with a member of the Aristocracy.",
+               painting_description = "a sketch of a worker joyfully shaking the hand of an aristocrat",
+			icon="upper_class",
+			iconSkin="thoughtIcons.xml",
+               duration="medium",
+			priority="medium" },
+     values = {  happiness = 7, fear=-3, anger =-2, despair=-1 }
+}
+
+Entity {
+     name = "Upset at Lazy Colony Manager",
+     type = "emotion",
+     info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN grumbled at governmental promises that never were fufilled.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN grumbled at governmental promises that never were fufilled.",
+               icon="finger_point", iconSkin="thoughtIcons.xml",
+			painting_description = "a cartoonish depiction of a lazy bureaucrat",
+               duration="medium", priority="medium" },
+     values = {  happiness = -3, anger =2 }
+}
+
+Entity {
+     name = "Enraged at an Unfair Fine",
+     type = "emotion",
+     info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was incensed that SUBJECTIVE_PERSONAL_PRONOUN was levied with a fine for protesting.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was incensed that SUBJECTIVE_PERSONAL_PRONOUN was levied with a fine for protesting.",
+               icon="pain", iconSkin="thoughtIcons.xml",
+			painting_description = "an illustration of a beaurecrat stomping on a symbol of justice",
+               duration="medium", priority="medium" },
+     values = {  happiness = -5, anger =6 }
+}
+
+Entity {
+     name = "Subject to Military Brutality",
+     type = "emotion",
+     info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was brutalized by the military in an attempt to stop their protest!",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was brutalized by the military in an attempt to stop their protest!",
+               icon="affliction_headwound", iconSkin="thoughtIcons.xml",
+			painting_description = "a meticuous painting of colonists fleeing the tyrrany of the military",
+               duration="long", priority="medium" },
+     values = {  happiness = -10, despair=8, anger =8, fear=3}
+}
+
+Entity {
+	name = "Slept out in the woods",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had to sleep out in the scary woods recently.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN had to sleep out in the scary woods recently.", 
+			priority = "medium", duration = "medium", 
+			painting_description = "threatening trees",
+			icon="jobtree", iconSkin="thoughtIcons.xml" },
+	values = {  fear=2, despair=4, anger=2, happiness=-5 }
+}
+Entity {
+     name = "Left a Life of Banditry",
+     type = "emotion",
+     info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN left behind the life of an outlaw to become a productive member of society.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN left behind the life of an outlaw to become a productive member of society.",
+          painting_description = "a lonely figure locked behind iron bars",
+		icon="placeholder", -- bandit_peace", -- TODO : need to be able to use orderIcons.xml!!!
+		iconSkin="orderIcons.xml",
+          duration="long",
+		priority="medium" },
+     values = {  happiness = 5, fear=80 }
+}
+
+
+Entity {
+     name = "Lost Faith in Cult",
+     type = "emotion",
+     info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN lost faith in POSSESSIVE_PERSONAL_PRONOUN former cult, and feels only emptiness now.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN lost faith in POSSESSIVE_PERSONAL_PRONOUN former cult, and felt empty.",
+               icon="cultist_no", iconSkin="thoughtIcons.xml",
+			painting_description = "a human figure staring out a window at nothing",
+               duration="long", priority="medium" },
+     values = {  despair=-20, fear=10, happiness=-10 }
+}
+
+Entity {
+     name = "Enjoyed A Conversation About The Occult",
+     type = "emotion",
+     info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN enjoyed hearing all about the Occult.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN enjoyed hearing all about the Occult.",
+               icon="eldritch", iconSkin="thoughtIcons.xml",
+			painting_description = "a strange sigil",
+               duration="medium", priority="low" },
+     values = {  despair = 10, happiness=5  }
+}
+
+Entity {
+     name = "Offended By A Conversation About The Occult",
+     type = "emotion",
+     info = { description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was offended by talk of the Occult.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was offended by talk of the Occult.",
+               icon="cultist_no", iconSkin="thoughtIcons.xml",
+			painting_description = "the holy cog",
+               duration="medium", priority="low" },
+     values = {  anger = 5, happiness=-5, despair=4 }
+}
+
+Entity {
+     name = "Offended By Communist Agitator",
+     type = "emotion",
+     info = { 	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was offended by talk of workers' revolution.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was offended by talk of workers' revolution.",
+               icon="communism", iconSkin="thoughtIcons.xml",
+			painting_description = "loyal labourers working",
+               duration="medium", priority="low" },
+     values = {  anger = 2, happiness=-2, }
+}
+
+Entity {
+	name = "A Day Without Sleep",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN hasn't slept for a day and is feeling rather irritable.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN hadn't slept for a day and felt rather irritable.",	   
+		icon="need_sleep",
+		iconSkin="thoughtIcons.xml",
+		duration="medium",
+		priority="medium" },
+	values = {  anger=4, happiness=-5 }
+}
+
+Entity {
+	name = "Two Days Without Sleep",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN hasn't slept for two days and is starting to lose it.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN started to lose it after not sleeping for two days due to access to a bed.",	   
+		icon="need_sleep",
+		iconSkin="thoughtIcons.xml",
+		duration="medium",
+		priority="medium" },
+	values = {  anger =8, despair=5, happiness=-10 }
+}
+
+Entity {
+	name = "Three Days Without Sleep",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN can't remember the last time SUBJECTIVE_PERSONAL_PRONOUN slept and feels alternately terrible and enraged.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt alternately terrible and enraged due to extreme sleep deprivation.",	   
+		icon="need_sleep",
+		iconSkin="thoughtIcons.xml",
+		duration="medium",
+		priority="medium" },
+	values = {  anger =12, despair=15, happiness=-15 }
+}
+
+
+Entity {
+	name = "Drank Cult Juice",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank some cult juice and now feels really strange.",	
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank some cult juice and felt really strange.",	      
+	icon="despair3", iconSkin="thoughtIcons.xml",
+	duration="long",priority="high" },
+	values={ despair = 80, },
+}
+Entity {
+	name = "Drank Anger Juice",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank some anger juice and now feels really angry.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank some anger juice and felt really angry.",	   
+	icon="despair3", iconSkin="thoughtIcons.xml",
+	duration="long",priority="high" },
+	values={ anger=100, happiness=-100 },
+}
+
+Entity {
+	name = "Drank Happy Juice",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank some happy juice and now feels really happy.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank some happy juice and felt really happy.",	   
+	icon="despair3", iconSkin="thoughtIcons.xml",
+	duration="long",priority="high" },
+	values={ happiness=100 },
+}
+
+Entity {
+	name = "Drank Fish Juice",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank some fish juice and now feels really fishy.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN drank some fish juice and felt really fishy.",	   
+	icon="despair3", iconSkin="thoughtIcons.xml",
+	duration="long",priority="high" },
+	values={  },
+}
+
+Entity {
+	name = "Performed an Obeliskian Dissection",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN dissected an Obeliskian and discovered terrible, unnatural secrets.",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN dissected an Obeliskian and discovered terrible, unnatural secrets.",	   
+		icon="fishperson", iconSkin="thoughtIcons.xml",
+		duration="long",priority="high" },
+	values={ happiness=0, fear=1, despair=5, anger=0},
+}
+
+Entity {
+	name = "Performed a Fishperson Dissection",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN dissected a Fishperson and discovered terrible, unnatural secrets.",	      
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN dissected a Fishperson and discovered terrible, unnatural secrets.",	   
+	icon="fishperson", iconSkin="thoughtIcons.xml",
+	duration="long",priority="high" },
+	values={ happiness=0, fear=1, despair=5, anger=0 },
+}
+
+Entity {
+	name = "Destroyed Monstrous Evidence",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN destroyed evidence of a monstrous eldritch being and will try not to think about it ever again.",	      
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN destroyed evidence of a monstrous eldritch being and will try not to think about it ever again.",	   
+	icon="eldritch", iconSkin="thoughtIcons.xml",
+	duration="long",priority="high" },
+	values={ happiness=0, fear=3, despair=3,anger=0 },
+}
+
+Entity {
+	name = "Witnessed Black Magic",
+	type = "emotion",
+	info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed a terrifying occult ritual!",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed a terrifying occult ritual!",	   
+			icon="eldritch",
+			iconSkin="thoughtIcons.xml",
+			duration="long",
+			priority="medium" },
+	values={ fear=5,despair=10},
+}
+
+Entity {
+	name = "Witnessed Black Magic and Approved",
+	type = "emotion",
+	info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed a delightful occult ritual!",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed a delightful occult ritual!",	   
+			icon="eldritch",
+			iconSkin="thoughtIcons.xml",
+			duration="long",
+			priority="medium" },
+	values={ happiness=5, despair=10},
+}
+
+Entity {
+	name = "Witnessed Eldritch Murder",
+	type = "emotion",
+	info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed a terrifying occult ritual used to murder someone!",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed a terrifying occult ritual used to murder someone!",	   
+			icon="madness_extreme",
+			iconSkin="thoughtIcons.xml",
+			duration="long",
+			priority="medium" },
+	values={ fear=10, happiness=-5, despair=10 },
+}
+
+Entity {
+	name = "Performed Black Magic",
+	type = "emotion",
+	info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN performed a terrifying occult ritual!",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN performed a terrifying occult ritual!",	   
+			icon="eldritch",
+			iconSkin="thoughtIcons.xml",
+			duration="long",
+			priority="medium" },
+	values={ despair=10},
+}
+
+-- Spectres
+
+Entity {
+	name = "Saw a Spectre",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN thought SUBJECTIVE_PERSONAL_PRONOUN saw OTHER_NAME.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN thought SUBJECTIVE_PERSONAL_PRONOUN saw OTHER_NAME.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of a shadow cast on a gravestone",
+		icon="skull",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=-1,fear= 5,  despair=3}
+}
+
+Entity {
+	name = "Saw a Spectre (and liked it)",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN thought SUBJECTIVE_PERSONAL_PRONOUN saw the spirit OTHER_NAME. Neat!", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN thought SUBJECTIVE_PERSONAL_PRONOUN saw the spirit of OTHER_NAME. Neat!",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of a shadow cast on a gravestone",
+		icon="skull",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=5,fear= 2, despair=5}
+}
+
+Entity {
+	name = "Told of Murder (spectre)",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was told by OTHER_NAME of its own terrible murder!", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was told by OTHER_NAME of its own terrible murder!",	   
+		priority = "high",
+		duration = "medium", 
+		painting_description = "a painting of a shadow cast on a gravestone",
+		icon="act_of_murder",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {despair=3,anger=3,fear=4, happiness=0}
+}
+
+Entity {
+	name = "Requested Burial (spectre)",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was told by OTHER_NAME that it wants its body to be given a proper burial.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was told by OTHER_NAME that it wanted its body to be given a proper burial.",	   
+		priority = "high",
+		duration = "medium", 
+		painting_description = "a painting of a shadow cast on a gravestone",
+		icon="skull",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {despair=3,anger=3,fear=4,happiness=1}
+}
+
+Entity {
+	name = "Terrified by a Spectre",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was terrified by OTHER_NAME!", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was terrified by OTHER_NAME!",	   
+		priority = "high",
+		duration = "medium", 
+		painting_description = "a painting of a shadow cast on a gravestone",
+		icon="skull",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=0,fear= 6}
+}
+
+Entity {
+	name = "Eldritch: Howling Void",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard a howling void, a maw of eldritch origin, speak POSSESSIVE_PERSONAL_PRONOUN name and suggest strange ideas.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard a howling void, a maw of eldritch origin, speak POSSESSIVE_PERSONAL_PRONOUN name and suggest strange ideas.",
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of shadows surrounding a lone figure with their hands clamped over their ears",
+		icon="eldritch",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {fear= 10,despair=10}
+}
+
+Entity {
+	name = "Eldritch: Call Of The Sea",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard the call of the sea, to a strange atavistic life beneath the waves...", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard the call of the sea, to a strange atavistic life beneath the waves...",
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of shadows surrounding a lone figure with their hands clamped over their ears",
+		icon="eldritch",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {fear= 10,despair=10}
+}
+
+Entity {
+	name = "Eldritch: Heard Whispers",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard unnatural whispers, but couldn't make sense of anything but POSSESSIVE_PERSONAL_PRONOUN own name.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard unnatural whispers, but couldn't make sense of anything but POSSESSIVE_PERSONAL_PRONOUN own name.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of shadows surrounding a lone figure with their hands clamped over their ears",
+		icon="eldritch",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {fear= 5,despair=10}
+}
+
+Entity {
+	name = "Eldritch: Rune Visions",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw glowing, inhuman sigils when CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN closed POSSESSIVE_PERSONAL_PRONOUN eyes. They changed with every blink until they were gone.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw glowing, inhuman sigils when CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN closed POSSESSIVE_PERSONAL_PRONOUN eyes. They changed with every blink until they were gone.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of shadows surrounding a lone figure with their hands clamped over their ears",
+		icon="eldritch",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {fear= 5, despair=10, }
+}
+
+Entity {
+	name = "Cultist Shrines Ordered Destroyed",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN is extremely angry that cultist shrines have been ordered destroyed!", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was extremely angry that cultist shrines were destroyed!",	   
+		priority = "medium",
+		duration = "high", 
+		painting_description = "a painting of shadows surrounding a lone figure with their hands clamped over their ears",
+		icon="cultist_no",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {anger=7,happiness=0}
+}
+
+
+Entity {
+	name = "The Stars Are Right",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt the stars calling.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt the stars calling.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "twinkling, spiralling stars in the night sky",
+		icon="selenian_polyp_night",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=5,fear=-5,despair=10,anger=-5 }
+}
+
+
+Entity {
+	name = "Skilled Up",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN became more skillful in POSSESSIVE_PERSONAL_PRONOUN trade!",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN became more skillful in POSSESSIVE_PERSONAL_PRONOUN trade.",
+		icon="skillup",
+		iconSkin="thoughtIcons.xml",
+		duration="long",
+		priority="medium" },
+	values = { happiness=7, anger = -3, fear = -3, despair = -3 }
+}
+
+Entity {
+	name = "Angered By Meddling With Idol",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was angered and upset that POSSESSIVE_PERSONAL_PRONOUN idol was meddled with!",	   
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was angered and upset that POSSESSIVE_PERSONAL_PRONOUN idol was meddled with!",	   
+		painting_description = "a human figure in a murky field with the face cut out",
+		icon="cultist_shrine", iconSkin="thoughtIcons.xml",
+		duration="medium", priority="medium" },
+	values = {  anger = 15, despair= 10, happiness=-10, fear=-5}
+}
+Entity {
+	name = "Upset At Loss Of Idol",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was upset that POSSESSIVE_PERSONAL_PRONOUN idol was taken away.",	  
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was upset that POSSESSIVE_PERSONAL_PRONOUN idol was taken away.", 
+		painting_description = "a portrait of an unhappy-looking criminal in irons",
+	icon="cultist_shrine", iconSkin="thoughtIcons.xml",  duration="medium", priority="low" },
+	values = { anger = 5, happiness = -8, despair=5, fear = 5 }
+}
+
+
+
+-- The Memory Hole
+
+	Entity {
+		name = "Got Married",
+		type = "emotion",
+		info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN ", 
+		priority = "high", duration = "long",icon="wedding", painting_description = "a picture of a wedding"},
+		values = {happiness = 7, despair = 0, anger = 0}
+	}
+	
+	Entity {
+		name = "Observed Culturally Acceptable Wedding",
+		type = "emotion",
+		info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN observed a lovely class-appropriate wedding lately", 
+				journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN observed a lovely class-appropriate wedding.",
+			painting_description = "a picture of a class-appropriate wedding",
+				priority = "medium", duration = "medium",icon="wedding"},
+		values = {happiness = 5, despair= 0, anger = 0}
+	}
+	
+	Entity {
+		name = "Observed Culturally Unacceptable Wedding",
+		type = "emotion",
+		info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN observed the tawdry mixing of the social classes lately.", 
+				journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN witnessed a tawdry mixing of the social classes at an ill-advised wedding.",
+				priority = "medium", duration = "medium",
+				painting_description = "a painting depicting the inappropriate mixing of social classes at a wedding",
+				icon="wedding_mixed_class_disapprove"},
+		values = {happiness = 0, despair= 1, anger = 1}
+	}
+	
+	Entity {
+		name = "Observed Wedding",
+		type = "emotion",
+		info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN observed a wedding lately", 
+				journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN observed a wedding.",
+				icon="wedding", 
+				painting_description = "a painting of a wedding",
+				priority = "medium", duration = "medium"}, 
+		values = {happiness = 5, despair= 0, anger = 0}
+	}
+	
+Entity {
+	name = "Eldritch: Beckoning Of The Sea",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN hears the crashing of waves, the embrace of the Sea. Beckoning.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard the crashing of waves, the embrace of the Sea. Beckoning.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of the endless waves of the sea, seen from below",
+		icon="sea",
+		iconSkin="thoughtIcons.xml"}, 
+	values = { happiness=-2,despair=15, anger=5 }
+}
+Entity {
+	name = "Eldritch: RECEIVED INSTRUCTIONS",
+	type = "emotion",
+	info = {
+		description = "RECEIVING INSTRUCTION/ INSTANTIATION ERROR/ QUERY ARCHITECT RETRY", 
+		journalDescription = "RECEIVED INSTRUCTION/ INSTANTIATION ERROR/ QUERY ARCHITECT RETRY",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a diagram for the construction of an impossible building - or machine?",
+		icon="obeliskian",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=-5,despair=15}
+}
+Entity {
+	name = "cultist_selenian",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN can feel the stars winking and moving, almost aligned... ", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt the stars winking and moving, almost aligned... ",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of a starry night, all whorls and movement",
+		icon="selenian_polyp_night",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=2}
+}
+Entity {
+	name = "Eldritch: Gate of Death",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt the infinite void beyond the gate of death.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt the infinite void beyond the gate of death.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of a skull illuminated by shadows",
+		icon="black_skull",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {fear=10, despair=15}
+}
+Entity {
+	name = "Eldritch: Inhuman Sigils",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw glowing, inhuman sigils. They seem to move without moving.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw glowing, inhuman sigils that seemed to move without moving.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of a book, a knife, a goblet, and an orb",
+		icon="cultist_shrine",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {fear=10,happiness=-5,despair=15}
+}
+Entity {
+	name = "Eldritch: Fell Logic",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt nothing but a pure cascade of logic washing away all humanity.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt nothing but a pure cascade of logic washing away all humanity.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of gears within gears within gears",
+		icon="black_cog",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {fear=-10,happiness=-5,despair=15,anger=-10}
+}
+Entity {
+	name = "Eldritch: Whispering Trees",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard the trees whispering POSSESSIVE_PERSONAL_PRONOUN name to each other, and was glad.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard the trees whispering POSSESSIVE_PERSONAL_PRONOUN name to each other, and was glad.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of trees all huddled around, speaking to one another",
+		icon="black_tree",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness= 5, despair=15,}
+}
+Entity {
+	name = "Eldritch: The Fell Queen",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt the majesty of the Queen stir in POSSESSIVE_PERSONAL_PRONOUN chest.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt the majesty of the Queen stir in POSSESSIVE_PERSONAL_PRONOUN chest.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of the Queen, but done all in black; bit hard to see what's going on, really",
+		icon="black_crown",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=2}
+}
+Entity {
+	name = "Eldritch: The Golden City",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw visions of a golden city filled with the dead.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw visions of a golden city filled with the dead.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of the Queen, but done all in black; bit hard to see what's going on, really",
+		icon="black_crown",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {despair=15, fear=10}
+}
+
+Entity {
+	name = "Upset By Foreigner",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was upset by the pressence of a Foreigner in the colony. Who knows what they might do?", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was upset by the recent pressence of a Foreigner in the colony.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of the Union Cog",
+		icon="xenophobic",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {fear=10,happiness=-5,despair=5,anger=8}
+}
+
+Entity {
+	name = "Upset By Breach Of Tradition",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was upset by a gross breach of proper Clockworkian Tradition. What is the world coming to?", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was upset by the recent breach of proper Clockworkian Tradition.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of the Union Cog",
+		icon="empire_flag",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {fear=8,happiness=-5,despair=5,anger=10}
+}
+
+Entity {
+	name = "Sweltered under the Hot Sun",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN worked under the heat of an unusually bright sun and felt rather exhausted.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was exhausted from working under an unusually bright sun.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of the almighty sun",
+		icon="sun",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=-5,anger=5}
+}
+
+Entity {
+	name = "Enjoyed the Warm Sun",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN worked under the pleasant warmth of the sun and felt at ease.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN worked under the pleasant warmth of the sun and felt at ease.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of the almighty sun",
+		icon="sun",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=5,anger=-5}
+}
+
+Entity {
+	name = "Sweltered in the Humid Weather",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt rather sticky due to the humidity of the jungle. Gross.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt rather sticky due to the humidity of the jungle.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of a melting tree",
+		icon="exotic_wilderness",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=-5,despair=5}
+}
+
+Entity {
+	name = "Tormented by Blasting Heat",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN sweltered under an intense desert heat and was miserable.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN sweltered under an intense desert heat and was miserable.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of a melting colonist",
+		icon="spoiled_crops",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=-5,anger=5,despair=10}
+}
+
+Entity {
+	name = "Enjoyed A Respite From Heat",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN enjoyed the coolness of a cloudy desert day.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN enjoyed the coolness of a cloudy desert day.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of a beautiful sunset",
+		icon="cloud_light",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=5,anger=-5}
+}
+
+Entity {
+	name = "Endured the Searing Cold",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN endured terrible chilly winds, and wished desperately for warmth.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN endured terrible chilly winds, and wished desperately for warmth.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of a cold peak",
+		icon="spoiled_crops",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=-10,despair=15}
+}
+Entity {
+	name = "Felt An Odd Presence",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN worked in strange hazy weather and felt as if SUBJECTIVE_PERSONAL_PRONOUN were part of something bigger than OBJECTIVE_PERSONAL_PRONOUNself.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN worked in strange hazy weather and felt as if SUBJECTIVE_PERSONAL_PRONOUN were part of something bigger than OBJECTIVE_PERSONAL_PRONOUNself.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of an eerily smiling face",
+		icon="spoiled_crops",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=30,despair=30}
+}
+
+Entity {
+	name = "Driven to Despair by Eerie Singing",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was forced to bear the eerie singing of the grass and rocks.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was forced to bear the eerie singing of the grass and rocks.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of howling faces in the stone",
+		icon="sun",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=-5,despair=20}
+}
+
+Entity {
+	name = "Struck By Mind Blast",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was overwhelmed by terrible, painful psychic energies.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was overwhelmed by terrible, painful psychic energies.",    
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of howling faces in the stone",
+		icon="eldritch",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=-5,despair=12}
+}
+
+Entity {
+	name = "Driven to Despair by Eerie Spectres",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was tormented by spectres night and day!", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was tormented by malevolent spectres that walked during the day!",	   
+		priority = "medium",
+		duration = "long", 
+		painting_description = "a painting of screaming skulls surrounding the viewer",
+		icon="sun",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=-5,despair=15}
+}
+
+Entity {
+	name = "Unnerved by Howling in the Night",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN is deeply disturbed by strange visions brought about by the unnatural noises in the night.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was deeply disturbed by strange visions brought about by the unnatural noises in the night.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a painting of eyes and teeth",
+		icon="mad",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=-10,despair=10, fear=10}
+}
+
+Entity {
+	name = "Workbench Is Whispering",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN keeps hearing POSSESSIVE_PERSONAL_PRONOUN workbench whispering cryptic instructions to OBJECTIVE_PERSONAL_PRONOUN.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN heard POSSESSIVE_PERSONAL_PRONOUN workbench whispering cryptic instructions to OBJECTIVE_PERSONAL_PRONOUN.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a workbench with a daemonic face, speaking in strange runes",
+		icon="black_cog",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {fear=12,despair=15}
+}
+
+Entity {
+	name = "Summoned Friendly Spectres",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN is proud and a little bit terrified by the process of summoning Dream Spectres to protect the colony.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was proud and a little bit terrified by the process of summoning Dream Spectres to protect the colony.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a workbench with a daemonic face, speaking in strange runes",
+		icon="black_cog",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=15,fear=5,despair=10}
+}
+
+Entity {
+	name = "Aided by Creepy Friendly Spectres",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw the colony being guarded by creepy Dream Spectres.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN saw the colony being guarded by creepy Dream Spectres.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a workbench with a daemonic face, speaking in strange runes",
+		icon="black_cog",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {happiness=15,fear=5,despair=5}
+}
+
+Entity {
+	name = "Summoned Nightmare Spectres",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN accidentally summoned Nightmare Spectres and is horrified!", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN accidentally summoned Nightmare Spectres and was horrified.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a workbench with a daemonic face, speaking in strange runes",
+		icon="black_cog",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {fear=25,despair=25}
+}
+
+Entity {
+	name = "Tormented by Nightmare Spectres",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN has been tormented by horrible Nightmare Spectres.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was tormented by horrible Nightmare Spectres.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a workbench with a daemonic face, speaking in strange runes",
+		icon="black_cog",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {fear=20,despair=15}
+}
+
+Entity {
+	name = "Concerned by Spectre Related Death",
+	type = "emotion",
+	info = {
+		description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN is concerned to hear a citizen died in strange spectre-related circumstances.", 
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was concerned to hear a citizen died in strange spectre-related circumstances.",	   
+		priority = "medium",
+		duration = "medium", 
+		painting_description = "a workbench with a daemonic face, speaking in strange runes",
+		icon="black_cog",
+		iconSkin="thoughtIcons.xml"}, 
+	values = {fear=5}
+}
+
+Entity {
+	name = "Upset By Interrogation",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was upset due to being roughly interrogated.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was upset due to being roughly interrogated.",
+	painting_description = "a picture of a Brutish NCO",
+	icon="morale3", iconSkin="thoughtIcons.xml", duration="medium", priority="medium" },
+	values = { happiness = -6, anger =4, fear=2 }
+}
+
+Entity {
+	name = "Conspired With A Comrade",
+	type = "emotion",
+	info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN conspired against the ruling class with a fellow Communist.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN conspired against the ruling class with a fellow Communist.",
+	painting_description = "workers rising in revolution",
+	icon="red_communism",
+	iconSkin="thoughtIcons.xml",
+	duration="medium", priority="medium" },
+	values = { happiness = -5, anger=10 }
+}
+Entity {
+	name = "Inspired By A Comrade",
+	type = "emotion",
+	info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was inspired toward communistic revolt!",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was inspired toward communistic revolt!",
+	painting_description = "workers rising in revolution",
+	icon="red_communism",
+	iconSkin="thoughtIcons.xml",
+	duration="medium", priority="medium" },
+	values = { happiness = -5, anger=10 }
+}
+
+
+Entity {
+	name = "Listened to Agitator",
+	type = "emotion",
+	info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN listened to the demagoguery of a Communist Agitator.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN listened to the demagoguery of a Communist Agitator.",
+	painting_description = "labourers oppressed by overseers",
+	icon="communism",
+	iconSkin="thoughtIcons.xml",
+	duration="medium", priority="medium" },
+	values = { happiness = -2, anger=5 }
+}
+
+Entity {
+	name = "Strange Interrogation",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN subject to a strange interrogation - it seemed more in support of The Occult than against.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN subject to a strange interrogation - it seemed more in support of The Occult than against.",
+	painting_description = "a picture of a Brutish NCO",
+	icon="cultist_glowing", iconSkin="thoughtIcons.xml", duration="medium", priority="medium" },
+	values = { happiness = -6, despair=5, fear=5 }
+}
+
+Entity {
+	name = "Chilled By The Cold",
+	type = "emotion",
+	info = {description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was chilled to the bone by the cold wind.",
+		journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN was chilled to the bone by the cold wind recently.", 
+			priority = "medium", duration = "medium", 
+			painting_description = "a dire snowscape",
+			icon="snowflake", iconSkin="thoughtIcons.xml" },
+	values = {  fear=2, despair=4, anger=4, happiness=-4 }
+}
+
+Entity {
+	name = "Overheated",
+	type = "emotion",
+	info = {	description = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN feels the oppressive heat wearing OBJECTIVE_PERSONAL_PRONOUN down.",
+			journalDescription = "CAPITALIZED_SUBJECTIVE_PERSONAL_PRONOUN felt the oppressive heat wearing OBJECTIVE_PERSONAL_PRONOUN down recently.", 
+			priority = "medium", duration = "medium", 
+			painting_description = "the sun",
+			icon="sun", iconSkin="thoughtIcons.xml" },
+	values = {  fear=0, despair=3, anger=3, happiness=-3 }
+}

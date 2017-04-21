@@ -1,0 +1,190 @@
+house_drink_tea_in_chair = {
+	["start"] = function(state,tag,name) 
+
+		if tag == nil or tag.target == nil then
+			return "abort", true
+		end
+		
+		if VALUE_STORE["showFSMDebugConsole"] then printl("FSM", "FSM: " .. FSMName() ) end
+		
+		state.AI.bools["pathToObject"] = true 
+		state.AI.bools["pathToPosition"] = false
+		state.AI.objs["pathingObject"] = tag.target
+		state.AI.bools["walkToAdjacent"] = false
+		state.AI.bools["pathingFollowObject"] = false
+		state.AI.bools["pathingWeakFollow"] = false
+		state.AI.bools["pathingMajorAxisFacing"] = true
+		state.AI.strs["pathfindingOriginFSM"] = "walk_to_module"
+
+		return "pathing_start", true
+		
+	end,
+
+	["pathing_start"] = pathing_base["pathing_start"],
+	["pathing_wait"] = pathing_base["pathing_wait"],
+	["pathing_repath"] = pathing_base["pathing_repath"],
+	["pathing_walking"] = pathing_base["pathing_walking"],
+	["on_pathing_changecell"] = pathing_base["on_pathing_changecell"],
+	["pathing_changecell"] = pathing_base["pathing_changecell"],
+	["pathing_changecellresult"] = pathing_base["pathing_changecellresult"],
+	["pathing_final"] = pathing_base["pathing_final"],
+	["pathing_abort"] = pathing_base["pathing_abort"],
+	
+	["after_pathing"] = function(state,tag,name)
+		state.AI.bools["canBeSocial"] = false
+		-- move to chair position
+		if tag.target == nil then
+			return "abort"
+		end
+		
+		local pos = query( tag.target, "gridReportPosition" )[1]
+
+		if tag.target.tags["occupied"] == true then
+			state.AI.abortJobMessage = "Chair already occupied."
+			return "abort"
+		end
+		
+		if query(tag.target,"getTags")[1].table then 
+
+			-- flip sign to get my ass into the chair
+			if pos.orientationX ~= 0 then
+				send("rendOdinCharacterClassHandler", 
+					"odinRendererTeleportCharacterMessage", 
+					state.renderHandle, 
+					pos.x + (pos.orientationY *-1),
+					pos.y + (pos.orientationX *-1) )
+				
+				send("rendOdinCharacterClassHandler",
+					"odinRendererFaceCharacter", 
+					state.renderHandle, 
+					pos.orientationY , 
+					pos.orientationX )
+			else
+				send("rendOdinCharacterClassHandler", 
+					"odinRendererTeleportCharacterMessage", 
+					state.renderHandle, 
+					pos.x + (pos.orientationY),
+					pos.y + (pos.orientationX) )
+				
+				send("rendOdinCharacterClassHandler",
+					"odinRendererFaceCharacter", 
+					state.renderHandle, 
+					pos.orientationY *-1 , 
+					pos.orientationX )-- *-1 )
+
+			end
+		else
+			send("rendOdinCharacterClassHandler", 
+				"odinRendererTeleportCharacterMessage", 
+				state.renderHandle, 
+				pos.x,
+				pos.y )
+			
+			send("rendOdinCharacterClassHandler",
+				"odinRendererFaceCharacter", 
+				state.renderHandle, 
+				pos.orientationX , 
+				pos.orientationY )
+		end
+		
+		-- get your tea out.
+		
+		local drinkModel = "models\\props\\teaCupH.upm"
+		
+		send("rendOdinCharacterClassHandler",
+			"odinRendererCharacterWieldTemporaryToolMessage",
+			state.renderHandle,
+			drinkModel)
+		
+		-- play sit animation
+		send("rendOdinCharacterClassHandler",
+		   "odinRendererSetCharacterAnimationMessage",
+		   state.renderHandle,
+		   "sitting_chair_idleLC",
+		   false)
+		
+		state.AI.boolAttributes["sitting"] = true
+		send(tag.target, "SetSittingIn", SELF)
+		state.AI.gOHAttributes["occupied_chair"] = tag.target
+	
+		state.AI.bools["canBeSocial"] = false
+		
+		state.AI.animationTickCount = 0
+	
+		send("rendOdinCharacterClassHandler",
+			"odinRendererSetCharacterAnimationMessage",
+			state.renderHandle,
+			"sitting_chair_drink_hand",
+			false)
+		
+		state.AI.animationTickCount = animationLength(state.animSet, "sitting_chair_drink_hand")
+		
+		return "animating", true
+	end,
+
+	["animating"] = function(state,tag,name)
+		state.AI.animationTickCount = state.AI.animationTickCount - 1
+
+		if state.AI.animationTickCount <= 0 then
+			
+			state.lastDrinkDay = query("gameSession","getSessionInt","dayCount")[1]
+			
+			--local pb = query(tag.target,"getParentBuilding")[1]
+			--local drinktype = query(pb,"getPubDrinkType")[1]
+			
+			send(SELF,"makeMemory","Had a Cuppa",nil,nil,nil,nil)
+			
+			-- add new record
+			table.insert(state.drinkrecord, 1, 1 )
+			-- and kill last record.
+			table.remove(state.drinkrecord, #state.drinkrecord) 
+			SELF.tags.drank_today = true
+			
+			send("rendOdinCharacterClassHandler",
+				"odinRendererCharacterDropTemporaryToolMessage",
+				state.renderHandle)
+			
+			local animName = "sitting_chair_idleLC"
+			if SELF.tags.middle_class then
+				animName = "sitting_chair_idleMC"
+			elseif SELF.tags.upper_class then
+				animName = "sitting_chair_idleUC"
+			end
+			
+			state.AI.animationTickCount = animationLength(state.animSet, animName)
+			send("rendOdinCharacterClassHandler",
+				"odinRendererQueueCharacterAnimationMessage",
+				state.renderHandle,
+				animName)
+			
+			return "animating2"
+		end
+
+		return "animating"
+	end,
+	
+	["animating2"] = function(state,tag,name)
+		state.AI.animationTickCount = state.AI.animationTickCount - 1
+
+		if state.AI.animationTickCount <= 0 then
+			return "final", true
+		end
+	
+		return "animating2"	
+	end,
+	
+	["final"] = function(state,tag,name) 
+		state.AI.bools["canBeSocial"] = true
+		state.AI.animationTickCount = 0
+		return 
+	end,
+
+	["abort"] = function(state, tag,name)
+		state.AI.bools["canBeSocial"] = true
+		send("rendOdinCharacterClassHandler",
+			"odinRendererCharacterDropTemporaryToolMessage",
+			state.renderHandle)
+
+		return
+	end
+}

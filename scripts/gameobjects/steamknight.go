@@ -468,7 +468,7 @@ gameobject "steamknight" inherit "ai_agent"
 						
 						SELF.tags["sk_exploded"] = true
 						
-						--send(SELF,"despawn") -- disabling for now... can't figure out how to get rid of the weapon
+						send(SELF,"despawn") -- disabling for now... can't figure out how to get rid of the weapon
 					end
 				else
 					state.AI.ints["corpse_timer"] = 20
@@ -804,6 +804,9 @@ gameobject "steamknight" inherit "ai_agent"
 		-- remove me from world, take carried objects with me.
 		-- if carrying a body (for some reason), leave it behind.
 		
+		send("rendOdinCharacterClassHandler",
+			"odinRendererCharacterDropTemporaryToolMessage",
+			state.renderHandle)
 		send("gameBlackboard", "gameObjectRemoveTargetingJobs", SELF, nil)
 		send("rendOdinCharacterClassHandler", "odinRendererDeleteCharacterMessage", state.renderHandle)
 		send("gameSpatialDictionary", "gridRemoveObject", SELF)

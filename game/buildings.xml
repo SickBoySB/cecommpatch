@@ -182,9 +182,9 @@ are already contained within other buildings. Consider those a placeholder for l
                upkeep_quantity="-1"
              >
 		
-		<module_requirement tag="timber" art="timber_category" amount="3" />
-		<module_requirement tag="planks" art="planks_icon" amount="4"/>
-		<module_requirement tag="iron_plates" art="iron_plate_icon" amount="1"/>
+		<module_requirement tag="timber" art="timber_category" amount="1" />
+		<module_requirement tag="planks" art="planks_icon" amount="2"/>
+		<module_requirement tag="masonry" art="bricks_pallet_icon" amount="4"/>
 	</module>
 	
 	<!-- Dynamics / Conduit modules (STANDALONE) -->
@@ -10049,7 +10049,7 @@ are already contained within other buildings. Consider those a placeholder for l
 			icon_skin="ui\orderIcons.xml" icon="lc_table_icon"
 			model="models/buildingProps/tableChairMergedLC00.upm"
 			short_description="Functions the same as a chair."
-			quality="0"
+			quality="-1"
 			upkeep_type="-1" 
 			upkeep_quantity="-1"
 			description="A robust wooden table and chair for the lower classes."
@@ -10068,7 +10068,7 @@ are already contained within other buildings. Consider those a placeholder for l
 	<module name="Middle Class Table and Chair Set" display_name="Practical Table and Chair Set" icon_skin="ui\orderIcons.xml" icon="mc_table_icon"
 			model="models/buildingProps/tableChairMergedMC00.upm"
 			short_description="Improves Overseer Housing. Otherwise acts as any other chair."
-			quality="0"
+			quality="-1"
 			upkeep_type="-1" 
 			upkeep_quantity="-1"
 			description="A practical, well-wrought table and chair."
@@ -10089,7 +10089,7 @@ are already contained within other buildings. Consider those a placeholder for l
 		   icon_skin="ui\orderIcons.xml" icon="uc_table_icon"
 			model="models/buildingProps/tableChairMergedUC00.upm"
 			short_description="Acts as a chair."
-			quality="0"
+			quality="-1"
 			upkeep_type="-1" 
 			upkeep_quantity="-1"
 			description="A lovely table and chair of rich and fabulous construction."
@@ -10129,7 +10129,7 @@ are already contained within other buildings. Consider those a placeholder for l
   <module name="Lower Class Chair" display_name="Simple Chair" icon_skin="ui\orderIcons.xml" icon="lc_chair_icon"
 		model="models/buildingProps/chairLc00.upm"
 			short_description="Used in Chapels, Barbershops and Pubs for drinking/receiving medical attention/etc."
-			quality="0"
+			quality="-1"
 			upkeep_type="-1" 
 			upkeep_quantity="-1"
 		description="A simple, rugged wooden chair."
@@ -10148,7 +10148,7 @@ are already contained within other buildings. Consider those a placeholder for l
   <module name="Middle Class Chair" display_name="Practical Chair" icon_skin="ui\orderIcons.xml" icon="mc_chair_icon"
 		model="models/buildingProps/chairMc00.upm"
 			short_description="Used in Chapels, Barbershops and Pubs for drinking/receiving medical attention/etc."
-			quality="0"
+			quality="-1"
 			upkeep_type="-1" 
 			upkeep_quantity="-1"
 		description="A study, practical chair constructed of fine wood."
@@ -10167,7 +10167,7 @@ are already contained within other buildings. Consider those a placeholder for l
 	<module name="Upper Class Chair" display_name="Ornate Chair" icon_skin="ui\orderIcons.xml" icon="uc_chair_icon"
 		model="models/buildingProps/chairUc00.upm"
 			short_description="Used in Chapels, Barbershops and Pubs for drinking/receiving medical attention/etc."
-			quality="0"
+			quality="-1"
 			upkeep_type="-1" 
 			upkeep_quantity="-1"
 		description="A vertiable throne, used by Our Betters."
@@ -11796,8 +11796,9 @@ are already contained within other buildings. Consider those a placeholder for l
 		<addition type="module" name="Lower Class Door 00" required="1"/>
 		<addition type="module" name="Cot" required="1"/>
 		<!-- <addition type="module" name="Lower Class Window 00" required="0"/> -->
-		<addition type="module" name="Lower Class Table" required="0"/>
 		<addition type="module" name="Lower Class Chair" required="0"/>
+		<addition type="module" name="Lower Class Table and Chair Set" required="0"/>
+		<addition type="module" name="Lower Class Table" required="0"/>
 		<addition type="module" name="LC Cabinet" required="0"/>
 		<addition type="module" name="Lower Class Window 00" required="0"/>
 		<addition type="module" name="Lower Class Window 01" required="0"/>

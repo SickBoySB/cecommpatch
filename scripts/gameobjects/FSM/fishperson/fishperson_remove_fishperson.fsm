@@ -1,0 +1,93 @@
+fishperson_remove_fishperson = {
+	["start"] = function(state,tag,name)
+		state.AI.bools["canBeSocial"] = false
+		local animName = "worshipping_start" 
+		-- better hope we have animName in animSet!
+		-- TODO add check here.
+		
+		-- Face target!
+		
+		local pos = query(tag.target, "gridReportPosition")
+		-- make very, very sure that's a valid pos
+		if not pos then
+			return "abort", true
+		end
+		if not pos[1] then
+			return "abort", true
+		end
+
+		send("rendOdinCharacterClassHandler",
+				"odinRendererSetCharacterAnimationMessage",
+				state.renderHandle,
+				animName,
+				false)
+		
+          state.AI.animationTickCount = animationLength(state.animSet, animName)
+		  
+		return "animating"
+	end,
+
+	["animating"] = function(state,tag,name)
+		state.AI.animationTickCount = state.AI.animationTickCount - 1
+		
+		if state.AI.animationTickCount <= 0 then
+			animName = "worshipping_loop"
+			send("rendOdinCharacterClassHandler",
+					"odinRendererSetCharacterAnimationMessage",
+					state.renderHandle,
+					animName,
+					false)
+			
+			  state.AI.animationTickCount = animationLength(state.animSet, animName)
+			  state.AI.animationTickCount = state.AI.animationTickCount * 5
+			return "animating2"
+		end
+		return "animating"
+	end,
+
+	["animating2"] = function(state,tag,name)
+		state.AI.animationTickCount = state.AI.animationTickCount - 1
+		
+		if state.AI.animationTickCount <= 0 then
+			animName = "worshipping_end"
+			send("rendOdinCharacterClassHandler",
+					"odinRendererSetCharacterAnimationMessage",
+					state.renderHandle,
+					animName,
+					false)
+			
+			  state.AI.animationTickCount = animationLength(state.animSet, animName)
+			return "animating3"
+		end
+		return "animating2"
+	end,
+
+	["animating3"] = function(state,tag,name)
+		state.AI.animationTickCount = state.AI.animationTickCount - 1
+		
+		if state.AI.animationTickCount <= 0 then
+			local tpos = query(tag.target,"gridGetPosition")[1]
+			send("rendCommandManager",
+					"odinRendererCreateParticleSystemMessage",
+					"MiasmaBurst",
+					tpos.x,
+					tpos.y)
+			
+			send(tag.target,"despawn")
+			
+			return "final"
+		end
+		return "animating3"
+	end,
+
+	["final"] = function(state,tag,name)
+		send("rendOdinCharacterClassHandler",
+		     "odinRendererIdleCharacterMessage",
+		     state.renderHandle)
+	end,
+
+	["abort"] = function(state, tag	)
+		state.AI.bools["canBeSocial"] = true
+		return
+	end
+}

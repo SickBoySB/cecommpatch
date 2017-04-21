@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
-		<title>CECOMMPATCH - 0.9.4 - README</title>
+		<title>CECOMMPATCH - 0.9.5 - README</title>
 		<meta http-equiv="Pragma" content="no-cache">
 		<meta http-equiv="Expires" content="-1">
 		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
@@ -47,7 +47,7 @@
 			}
 
 			#univ {
-				min-width: 700px;
+				min-width: 850px;
 				margin: 0 auto;
 				font-family: monospace;
 				font-size: 12px;
@@ -68,8 +68,8 @@
 				margin: 0 auto;
 				padding-left: 20px;
 				padding-right: 20px;
-				width: 70%;
-				min-width: 700px;
+				width: 80%;
+				min-width: 850px;
 				height: auto;
 				box-shadow: 0px 0px 20px 5px #000000;
 				z-index: 999;
@@ -90,6 +90,7 @@
 			}
 			
 			#mst3k > pre {
+				padding-top: 100px;
 				color: #555;
 				text-shadow: 0 0 0px;
 			}
@@ -171,6 +172,162 @@
 				filter: FlipH;
 				-ms-filter: "FlipH";
 			}
+			
+			#searchfields {
+				padding-bottom: 10px;
+			}
+			
+			#searchresults {
+				display: table;
+				margin: 0 auto;
+				width: 835px;
+				font-size: 11px;
+				margin-right: 15px;
+			}
+			
+			#searchcontainer {
+				padding-top: 0px !important;
+				display: inline-block !important;
+				max-height: 400px;
+				width: 850px;
+				overflow-y: auto;
+				overflow-x: hidden;
+				margin: 0 auto;
+			}
+			
+			#searchresults > div {
+				display: table-row;
+				background: rgb(40, 40, 40); /* older ie fallback */
+				background: rgba(40,40,40,0.8);
+			}
+
+			#searchresults > div > span {
+				display: table-cell;
+				border-top: 1px solid #333;
+				border-bottom: 1px solid #000;
+				padding-left: 2px;
+				padding-right: 2px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+
+			.workshop, .module, .research, .biome {
+				width: 50px;
+				text-align: center;
+				vertical-align: middle;
+			}
+			
+			.product, .workshop, .research {
+				background: #333;
+			}
+
+			.product, .materials {
+				width: 200px;
+				vertical-align: middle;
+				white-space: nowrap;
+			}
+			
+			input {
+				background: #333;
+				color: #FFF;
+				border: 1px solid #111;
+				margin-left: 5px;
+				margin-right: 5px;
+				padding: 5px;
+				width: 100px;
+			}
+			
+			#searchtop, #searchtop .product, #searchtop .workshop, #searchtop .module, #searchtop .research, #searchtop .biome, #searchtop .materials {
+				text-align: center;
+				background: rgb(100, 100, 100) !important; /* older ie fallback */
+				background: rgba(100,100,100,0.8) !important;
+				color: #FFF;
+			}
+			
+			#clearsearch {
+				cursor: pointer;
+			}
+			
+			[class^="icon-"]{
+				width: 32px;
+				height: 32px;
+				background-image: url("ui/icons/commodityIcons00.png");
+				float: left;
+				background-position: 1024px 1024px;
+			}
+			
+			.icon-large_bomb {
+				background-position: 0px 0px;
+			}
+			
+			[class^="icon-"]{
+				background-size: 512px 512px;
+			}
+
+			.tree ul, .tree li {
+			 
+			  list-style-type: none;
+			}
+
+			.tree li{
+				padding: 5px;
+				margin-top: 0;
+				margin-bottom: 0;
+				padding-top: 0;
+				padding-bottom: 0;
+				margin-left: 5px;
+				position: relative;
+				padding-right: 0px;
+			}
+
+			.tree > li {
+				width: 700px;
+			}
+
+			.tree div {
+				background: rgb(40, 40, 40); /* older ie fallback */
+				background: rgba(40,40,40,0.8);
+				border-top: 1px solid #333;
+				border-bottom: 1px solid #000;
+				padding: 10px;
+			}
+
+			.tree span{
+				color: #ddb777;
+			}
+
+			.expanded {
+				display: block;
+			}
+
+			.hid {
+				display: none;
+			}
+
+			.canclick {
+				cursor: pointer;
+			}
+
+			.canclick:hover {
+				background: rgb(70, 70, 70); /* older ie fallback */
+				background: rgba(70,70,70,0.8);
+			}
+
+			.ralign {
+				position: absolute;
+				right: 5px;
+				padding-right: 5px;
+			}
+
+			.techname {
+				color: #CCC !important;
+				font-size: 16px !important;
+			}
+
+			.techdesc {
+				font-size: 11px !important;
+				color: #666 !important;
+			}
 		</style>
 	</head>
 	<body>
@@ -190,13 +347,14 @@
  | |    |  __|| |   | |  | | |\/| | |\/| |  ___/ /\ \ | | | |    |  __  |
  | |____| |___| |___| |__| | |  | | |  | | |  / ____ \| | | |____| |  | |
   \_____|______\_____\____/|_|  |_|_|  |_|_| /_/    \_\_|  \_____|_|  |_|
-				</pre><span>Clockwork Empires Community Patch - <span id="version">Version: 0.9.4</span></span><span>Clockwork Empires, all code, assets, etc. are (c) Gaslamp Games</span></div><br>
+				</pre><span>Clockwork Empires Community Patch - <span id="version">Version: 0.9.5</span></span><span>Clockwork Empires, all code, assets, etc. are (c) Gaslamp Games</span><br/><span><a href="#install">Install</a> | <a href="#knownissues">Known Issues</a> | <a href="#links">Links</a> | <a href="#changelog">Changelog</a> | <a href="#tools">Tools</a> | <a href="#credits">Credits</a></span>
+				</div><br>
 <p>Welcome to the Clockwork Empires Community Patch (CECOMMPATCH)! This project is an effort to continue development of the game Clockwork Empires that was made by Gaslamp Games. All changes are done to the exposed game files, *not* the engine itself. Decompiling the executable to gain access to those parts of the code is not part of this project, so engine-related limitations exist. Fortunately, Gaslamp Games made their engine in such a way that the vast majority of the game is moddable so it's rare to run into hardcoded issues.</p>
 
 <p>The first priority of CECOMMPATCH is to fix any outstanding bugs that the game has. Great progress has been made so far, and the list of bugs is ever decreasing. After the majority are fixed, the next step will be to implement features that were removed/unfinished. A huge amount of unused 3D models, events, and gameplay features are still in the game files, and we plan to utilize as much as possible.</p>
 
 <p>After that stage, completely new content will be considered. The intent of this project is not to create a "total conversion", so all custom content will be themed in a way that fits with the established style.</p>
-				<div><pre>
+				<div id="install"><pre>
   _____ _   _  _____ _______       _      _      
  |_   _| \ | |/ ____|__   __|/\   | |    | |     
    | | |  \| | (___    | |  /  \  | |    | |     
@@ -232,7 +390,7 @@
 <p>You'll know you've installed the patch correctly if this readme has an image-based background (assuming you moved the readme as well... which isn't necessary, but recommended).</p>
 
 <p>To uninstall this patch all you need to do is "verify integrity of game files" on Steam. The original files will be redownloaded and the mod will be overwritten.</p>
-				<div><pre>
+				<div id="knownissues"><pre>
   _  ___   _  ______          ___   _   _____  _____ _____ _    _ ______  _____ 
  | |/ / \ | |/ __ \ \        / / \ | | |_   _|/ ____/ ____| |  | |  ____|/ ____|
  | ' /|  \| | |  | \ \  /\  / /|  \| |   | | | (___| (___ | |  | | |__  | (___  
@@ -251,7 +409,7 @@
 
 <li>The Trade Office menu isn't very pretty. Most of that menu is hardcoded and a good solution hasn't yet been found.</li>
 </ul>
-				<div><pre>
+				<div id="links"><pre>
   _      _____ _   _ _  __ _____ 
  | |    |_   _| \ | | |/ // ____|
  | |      | | |  \| | ' /| (___  
@@ -266,13 +424,13 @@
 <li>Official Thread: <a href="https://community.gaslampgames.com/threads/community-patch.20992/" target="_blank">https://community.gaslampgames.com/threads/community-patch.20992/</a><br>
 <i>This is the official thread created on the Gaslamp Games forum. There is no telling how long they will stay online, so it's probably better to stay in touch via Steam.</i></li>
 
-<li>GitHub: <a href="https://github.com/SickBoySB/cecommpatch/tree/v1" target="_blank">https://github.com/SickBoySB/cecommpatch/tree/v1</a><br>
+<li>GitHub: <a href="https://github.com/SickBoySB/cecommpatch/" target="_blank">https://github.com/SickBoySB/cecommpatch/</a><br>
 <i>Feel free to fork the code, contribute your own changes, make your own patch, etc.</i></li>
 
 <li>Current Issues/Features: <a href="https://github.com/SickBoySB/cecommpatch/issues" target="_blank">https://github.com/SickBoySB/cecommpatch/issues</a><br>
 <i>The current list of issues, features, etc. being tracked and worked on. This is not necessarily a comprehensive list, but it's a pretty good indication of what's on the to-do list.</i></li>
 </ul>
-				<div><pre>
+				<div id="changelog"><pre>
    _____ _    _          _   _  _____ ______ _      ____   _____ 
   / ____| |  | |   /\   | \ | |/ ____|  ____| |    / __ \ / ____|
  | |    | |__| |  /  \  |  \| | |  __| |__  | |   | |  | | |  __ 
@@ -281,9 +439,69 @@
   \_____|_|  |_/_/    \_\_| \_|\_____|______|______\____/ \_____|
 				</pre><span>CHANGELOG</span></div>
 				<pre>
+         __     ___      ___ 
+        /  \   / _ \    / __)
+       (  0 )_ \__  )_ (___ \   0.9.5 (NEW SAVE RECOMMENDED)
+        \__/(_)(___/(_)(____/
+ 				</pre>
+<ul>
+<li>FIX: Invalid default animal/herd spawns - Cold Biome</li>
+<li>FIX: Invalid default animal/herd spawns - Temperate Biome</li>
+<li>FIX: Invalid default animal/herd/obeliskian spawns - Desert Biome</li>
+<li>FIX: Invalid default animal/herd/deathwurm spawns - Tropical Biome</li>
+<li>FIX: Minimap has bright white dots around the edges</li>
+<li>FIX: Large animal burrow has dark square around it</li>
+<li>FIX: Small animal burrow has dark square around it</li>
+<li>FIX: Swamp biomes use a missing texture</li>
+<li>FIX: Geometer Observators cause crash if they die when on fire</li>
+<li>FIX: Vicars don't perform last rites on buried bodies</li>
+<li>FIX: Corpses with last rites can still create a spectre</li>
+<li>FIX: Flattening terrain near the edge of the map will crash the game</li>
+<li>FIX: Blunderbuss area of effect attacks can cause meat 'splosions</li>
+<li>FIX: Steam Knight minum gun area of effect attacks can cause meat 'slosions</li>
+<li>FIX: Airship Masts don't use the correct materials in construction</li>
+<li>FIX: Airship Masts don't spawn dust cloud on destruction properly</li>
+<li>FIX: Loud, looping, metallic banging sounds occur in the middle of the map</li>
+<li>FIX: Geometer Observators use an invalid animation when leaving the map</li>
+<li>FIX: Geometer Observators cause script errors after exiting the map</li>
+<li>FIX: Geometers cause script errors after exiting the map</li>
+<li>FIX: Spectres loop walking animation when idling</li>
+<li>FIX: Bamboo Agriculture lab research has a duplicate in tropical biomes</li>
+<li>FIX: Practical Table and Chair Set has a typo</li>
+<li>CHANGE: Unburied colonist corpses have a higher chance to spawn a spectre (5% -> 10%)</li>
+<li>CHANGE: Chance for colonist corpses/graves without last rites spawning a spectre increased by 25%</li>
+<li>CHANGE: Colonists can drink tea in class-appropriate houses with chairs (lower priority than pub drinking)</li>
+<li>CHANGE: Drinking tea at home creates a new, slightly depressing memory</li>
+<li>CHANGE: Minimap given fancy border/graphic</li>
+<li>CHANGE: Flattening terrain near the edge of the map will now be prevented if it's within 5-6 spots (hacky crashfix)</li>
+<li>CHANGE: Steam Knights despawn after their death animation and final explosion</li>
+<li>CHANGE: Airship Mast cost changed</li>
+<li>CHANGE: Airship Mast construction interruption made less sensitive</li>
+<li>CHANGE: Airship Mast health increased from 20 -> 40</li>
+<li>CHANGE: Airship Mast alert regarding missing materials removed</li>
+<li>CHANGE: Airship Mast 'ghost' made less easy to destroy</li>
+<li>CHANGE: Airship Mast destruction leaves more appropriate debris</li>
+<li>CHANGE: Conifer trees in snowy areas given a healthy dusting of snow (all variants)</li>
+<li>CHANGE: Pine trees in snowy areas given a healthy dusting of snow (all variants)</li>
+<li>CHANGE: Fishepople bodies don't disappear automatically anymore</li>
+<li>CHANGE: Fishpeople will now retrieve and "handle" their fallen friends</li>
+<li>CHANGE: Spectres now have a few animations to pick from when idling</li>
+<li>CHANGE: Simple Chair added to Lower Class House module menu</li>
+<li>CHANGE: Simple Chair and Table Set added to Lower Class House module menu</li>
+<li>CHANGE: Simple Chair and Table Set able to be built in Lower Class House</li>
+<li>CHANGE: Chairs now impact quality (-1) - Simple Table and Chair Set</li>
+<li>CHANGE: Chairs now impact quality (-1) - Practical Table and Chair Set</li>
+<li>CHANGE: Chairs now impact quality (-1) - Ornate Table and Chair Set</li>
+<li>CHANGE: Chairs now impact quality (-1) - Simple Chair</li>
+<li>CHANGE: Chairs now impact quality (-1) - Practical Chair</li>
+<li>CHANGE: Chairs now impact quality (-1) - Ornate Chair</li>
+<li>TOOL: Readme now has a recipe searching tool</li>
+<li>TOOL: Readme now has a lab research tree browsing tool</li>
+</ul>
+				<pre>
          __     ___     ___  
         /  \   / _ \   / _ \ 
-       (  0 )_ \__  )_(__  (   0.9.4 (NEW SAVE RECOMMNEDED)
+       (  0 )_ \__  )_(__  (   0.9.4 (NEW SAVE RECOMMENDED)
         \__/(_)(___/(_) (__/ 
 				</pre>
 <ul>
@@ -359,8 +577,6 @@
 <li>CLEANUP: Fancier readme... just because</li>
 <li>CLEANUP: thoughtIcons00 has an inconsistent grey version</li>
 </ul>
-
-	
 				<pre>
          __     ___     ____ 
         /  \   / _ \   ( __ \
@@ -543,7 +759,6 @@
 <li>CHANGE: TAG - Farming added to Bamboo</li>
 <li>CHANGE: TAG - Icon for "Used in Workshops" changed to general workshop icon</li>
 </ul>
-
 				<pre>
          __    ____   __
         /  \  (__  ) /  \
@@ -657,6 +872,57 @@
 <li>CLEANUP: Removed redundant "Make Steam Oven" job code</li>
 <li>CLEANUP: Removed redundant "Make Maize Chowder" job code</li>
 </ul>
+				<div id="tools"><pre>
+  _______ ____   ____  _       _____ 
+ |__   __/ __ \ / __ \| |     / ____|
+    | | | |  | | |  | | |    | (___  
+    | | | |  | | |  | | |     \___ \ 
+    | | | |__| | |__| | |____ ____) |
+    |_|  \____/ \____/|______|_____/ 
+				</pre><span>TOOLS</span></div>
+<div>
+<pre>
+ ==============================================
+-|             Item Recipe Search             |-
+ ==============================================
+</pre>
+</div>
+<div id="searchfields">
+	<input type="text" value="" id="product" placeholder="Product" oninput="itemsQueryTimer()">
+	<input type="text" value="" id="workshop" placeholder="Workshop" oninput="itemsQueryTimer()">
+	<input type="text" value="" id="module" placeholder="Module" oninput="itemsQueryTimer()">
+	<input type="text" value="" id="research" placeholder="Lab Research" oninput="itemsQueryTimer()"><br/>
+	<span id="clearsearch" onclick="clearSearch()">(clear search)</span>
+</div>
+
+<div id="searchcenter">
+<div id="searchcontainer"><div id="searchresults"></div></div>
+</div>
+<div>
+<pre>
+ =============================================
+-|             Lab Research Tree             |-
+ =============================================
+</pre>
+</div>
+<div>
+	<div id="treecontainer" class="treecontainer"></div>
+</div>
+
+
+
+				<div id="credits"><pre>
+   _____ _____  ______ _____ _____ _______ _____ 
+  / ____|  __ \|  ____|  __ \_   _|__   __/ ____|
+ | |    | |__) | |__  | |  | || |    | | | (___  
+ | |    |  _  /|  __| | |  | || |    | |  \___ \ 
+ | |____| | \ \| |____| |__| || |_   | |  ____) |
+  \_____|_|  \_\______|_____/_____|  |_| |_____/ 
+				</pre><span>CREDITS</span></div>
+<ul>
+<li>SickBoy - Project Lead / Developer / Designer</li>
+<li>Teutomatos - Playtester</li>
+</ul>
 
 				<div id="mst3k"><pre>
                                           ,
@@ -676,5 +942,3734 @@
 				</pre></div>	
 			</div>
 		</div>
+<script>
+	
+var techtree = [
+{
+	name: "Agriculture",
+	unlocks: [
+		{
+			name: "Fancy Cooking",
+			description:"Allows the cooking of Pies and Curries, high-end food types that satisfy everyone. Also unlocks further food-related techs.",
+			cost: "20",
+			unlocks: [
+				{
+					name: "Exotic Cooking",
+					description:"Allows the cooking of Unusual ingredients, such as fishpeople or 'Long Pork'.",
+					cost: "20"
+				},
+				{
+					name: "Refined Cooking",
+					description:"Allows access to Refined Food - This Kitchen recipe allows you to combine food and alcohol into an extremely large amount of cooked meals.",
+					cost: "80"
+				}
+			]
+		},
+		{
+			name: "Alcohol Distillation",
+			description:"Allows construction of the Still at a Metalworks - The Still is a Kitchen module with recipes for the distillation of Brewed Drinks into Spirits, which have a much more potent effect on colonists' emotions.",
+			cost: "20"
+		},
+		{
+			name: "Maize Transplanting (desert)",
+			description:"Allows farming of Maize, a food crop with superior yield over Chillies, and can also be brewed into drinks. Also unlocks further Crop Technologies.",
+			cost: "25",
+			unlocks: [
+				{
+					name: "Prickly Pear Farming (desert)",
+					description:"Allows farming of Prickly Pear, the highest-yield food crop in Desert areas.",
+					cost: "40"
+				}
+			]
+		},
+		{
+			name: "Bamboo Agriculture (desert)",
+			description:"Allows farming of Bamboo, a slow-growing but sustainable source of logs. Also unlocks further Crop Technologies.",
+			cost: "35",
+			unlocks: [
+				{
+					name: "Opium Poppy Agriculture (desert)",
+					description:"Allows farming of Opium, a solid cash crop and essential ingredient in Laudanum.",
+					cost: "50"
+				},
+			]
+		},
+		{
+			name: "Bamboo Agriculture (tropical)",
+			description:"Allows farming of Bamboo, a slow-growing but sustainable source of logs.",
+			cost: "30"
+		},
+		{
+			name: "Larch Agriculture (temperate, cold)",
+			description:"Allows farming of The Larch, a slow-growing but sustainable source of logs.",
+			cost: "35"
+		},
+		{
+			name: "Wheat Transplanting (cold)",
+			description:"Allows farming of Wheat, a high-yield food crop which can also be used in brewing. Also unlocks further Crop Technologies.",
+			cost: "40",
+			unlocks: [
+				{
+					name: "Lingonberry Planting (cold)",
+					description:"Allows farming of Lingonberries, the highest-yield food crop in Cold biomes.",
+					cost: "60"
+				}
+			]
+		},
+		{
+			name: "Wheat Transplanting (temperate)",
+			description:"Allows farming of Wheat, a high-yield food crop that can also be used in brewing. Also unlocks further Crop Technologies.",
+			cost: "40",
+			unlocks: [
+				{
+					name: "Pumpkin Mastery (temperate)",
+					description:"Allows farming of Pumpkin, a terrifyingly productive food crop that is unsurpassed by any crop in any biome. It cannot, however, be used to make drinks.",
+					cost: "80"
+				}
+			]
+		},
+		{
+			name: "Tobacco Harvest (temperate)",
+			description:"Allows farming of Tobacco, a cash crop that can be sold to traders for a good price. Also unlocks further Crop Technologies.",
+			cost: "40",
+			unlocks: [
+				{
+					name: "Grape Mastery (temperate)",
+					description:"Allows farming of Grapes, a quality, all-round crop that can be used in cooking or brewed directly into drinkable or sellable Wine.",
+					cost: "40"
+				}
+			]
+		},
+		{
+			name: "Coconut Planting Mastery (tropical)",
+			description:"Allows farming of Coconut, a high-yield food crop that is frequently used in high-quality food recipes.",
+			cost: "40"
+		},
+		{
+			name: "Lacquer Plantation (tropical)",
+			description:"Allows farming of Lacquer, a vital component in the construction material Lacquered Planks. It can also be sold for a good price.",
+			cost: "40"
+		},
+		{
+			name: "Tropical Plant Nursery (tropical)",
+			description:"Allows farming of Coffee Beans, a cash crop that can be sold for good amounts once it has been brewed at a kitchen. Also unlocks further Crop Technologies.",
+			cost: "40",
+			unlocks: [
+				{
+					name: "Opium Poppy Agriculture (tropical)",
+					description:"Allows farming of Opium, a solid cash crop and an essential ingredient in Laudanum.",
+					cost: "60"
+				}
+			]
+		},
+		{
+			name: "Radius Crop Patterning",
+			description:"Increases the growth rate of crops by 5 percent. Also unlocks further Growth Technologies.",
+			cost: "20",
+			unlocks: [
+				{
+					name: "Enhanced Growth Alignment",
+					description:"Stacks with previous techs to increase crop growth rate by a total of 10 percent. Also unlocks further Growth Technologies.",
+					cost: "20",
+					unlocks: [
+						{
+							name: "Modal Labour Management",
+							description:"Stacks with previous techs to increase crop growth rate by a total of 15 percent.",
+							cost: "20"
+						}
+					]
+				}
+			]
+		},
+		{
+			name: "Outdoor Work Initiative",
+			description:"Increases the Quality of Life for outdoor workers, making them happier.",  
+			cost: "30"
+		}
+	]
+},
+{
+	name: "Colony Production",
+	unlocks: [
+		{
+			name: "Advanced Module Research",
+			description:"Unlocks the ability to build the Advanced Workbench, which can produce workbench items in bulk. Also unlocks a number of research options for further upgraded modules.",
+			cost: "20",
+			unlocks: [
+				{
+					name: "Advanced Science",
+					description:"Unlocks the ability to build the Macroscope, an advanced Laboratory module that can increase your scientists' work multiplier.",
+					cost: "40"
+				},
+				{
+					name: "Advanced Bureaucracy",
+					description:"Unlocks the ability to build the Bureaucrat's Desk, an advanced Foreign Office module that allows your diplomats to gain twice as many diplomacy points.",
+					cost: "40"
+				},
+				{
+					name: "Advanced Learning",
+					description:"Unlocks the ability to build the Fancy Bookshelf, an advanced Training Academy module that allows your trainees to gain skill twice as quickly.",
+					cost: "40"
+				}
+			]
+		},
+		{
+			name: "Improved Decor Research",
+			description:"Unlocks the ability to construct rugs and carpets, Decor items that can be placed on the floor and do not block colonists - an efficient use of space! Also unlocks a number of research options for further improved decor.",
+			cost: "20",
+			unlocks: [
+				{
+					name: "Outdoor Decor",
+					description:"Unlocks the ability to construct outdoor decor, Decor items that can be placed on the outer walls of a building, allowing you to improve the Quality of buildings that are otherwise full.",
+					cost: "40"
+				}
+			]
+		},
+		{
+			name: "Steelworking Research",
+			description:"Unlocks the ability to smelt Steel Ingots out of Iron, Coal, and Chalk at a Metalworks. Steel is an advanced metal that can be used to make high-end modules. WARNING: Unlocks a very large number of research options for steel. It is recommended you already have a metalworks constructed.",
+			cost: "40",
+			unlocks: [
+				{
+					name: "Steel Carpentry",
+					description:"Unlocks the ability to construct the Power Saw, a steel-based Carpentry Workshop module that crafts Planks very efficiently.",
+					cost: "60"
+				},
+				{
+					name: "Steel Ceramics",
+					description:"Unlocks the ability to construct the Ceramics Press, a steel-based Ceramics Workshop module that crafts Bricks and Glass very efficiently.",
+					cost: "60"
+				},
+				{
+					name: "Steel Metalworking",
+					description:"Unlocks the ability to construct the Power Lathe and Power Stamper, steel-based Metalworks modules that craft metal Plates and Pipes very efficiently.",
+					cost: "60"
+				},
+				{
+					name: "Mineral Processing",
+					description:"Unlocks the ability to construct the Grinder, a unique steel-based Metalworks module that can grind raw stone into ores.",
+					cost: "60"
+				},
+				{
+					name: "Steel Cooking",
+					description:"Unlocks the ability to construct the Steam Oven, a steel-based Kitchen module that produces food in large batches at once.",
+					cost: "60"
+				},
+				{
+					name: "Steel Mining",
+					description:"Unlocks the ability to construct the Steam Distributor, a steel-based Mine module that will allow you to reach the deepest depths of the world when installed.",
+					cost: "60"
+				},
+				{
+					name: "Steel Science",
+					description:"Unlocks the ability to construct the Vacuum Chamber, a steel-based Laboratory module that will allow you to further increase your science gain multiplier.",
+					cost: "60"
+				},
+				{
+					name: "Steam Knight Tech",
+					description:"Unlocks the ability to construct the components and modules required to get a Steam Knight Manufactory running. Shall we build the Ultimate Weapon?",
+					cost: "80"
+				}
+			]
+		},
+		{
+			name: "Initial Mining Studies",
+			description:"Increases mining speed by 5 percent and unlocks a large number of further tech options for improving mining speed and yield.",
+			cost: "20",
+			unlocks: [
+				{
+					name: "Pick Handling Practices",
+					description:"Increases mining speed to a total of +10 percent. Also unlocks techs for further improvement of mining speed.",
+					cost: "20",
+					unlocks: [
+						{
+							name: "Mine Safety Beetles",
+							description:"Increases mining speed to a total of +15 percent. Also unlocks techs for further improvement of mining speed.",
+							cost: "20",
+							unlocks: [
+								{
+									name: "Enhanced Elevation Protocols",
+									description:"Increases mining speed to a total of +20 percent. ",
+									cost: "20"
+								}
+							]
+						}
+					]
+				},
+				{
+					name: "Ore Extraction Training",
+					description:"Doubles the amount of ore our miners extract when they mine ore.",
+					cost: "40"
+				},
+				{
+					name: "Stone Preservation Training",
+					description:"Doubles the amount of Ore our miners extract when they use a Mine.",
+					cost: "20"
+				},
+				{
+					name: "Sulphur Extraction Tools",
+					description:"Doubles the amount of Sulphur our miners extract when they use a Mine.",
+					cost: "40"
+				},
+				{
+					name: "Sand Extraction Training",
+					description:"Doubles the amount of Sand our miners extract when they use a Mine.",
+					cost: "40"
+				},
+				{
+					name: "Targeted Site Digging",
+					description:"Doubles the chances of receiving Ore rather than any other kind of commodity when Mining.",
+					cost: "40"
+				}
+			]
+		},
+		{
+			name: "Efficient Labour Research",
+			description:"Increases speed of performing Research by 10 percent. Also unlocks many research options for speeding up work in buildings.",
+			cost: "40",
+			unlocks: [
+				{
+					name: "Woodworking Efficiency",
+					description:"Increases speed of Carpentry Shop work by 25 percent.",
+					cost: "60"
+				},
+				{
+					name: "Stoneworking Policies",
+					description:"Increases speed of Ceramics Shop work by 25 percent.",
+					cost: "60"
+				},
+				{
+					name: "Smelting Optimization",
+					description:"Increases speed of Metalworks work by 25 percent.",
+					cost: "60"
+				},
+				{
+					name: "Cook Training",
+					description:"Increases speed of Kitchen work by 25 percent.",
+					cost: "60"
+				},
+				{
+					name: "Diplomatic Planning",
+					description:"Increases speed of Foreign Office work by 25 percent.",
+					cost: "60"
+				}
+			]
+		},
+		{
+			name: "Lacquer Synthesis",
+			description:"Allows the manual creation of Lacquer using a Chemistry Workshop.",
+			cost: "60"
+		},
+	
+	]
+},
+{
+	name: "Military",
+	unlocks: [
+		{
+			name: "Training Practise Research",
+			description:"Increases speed of military redcoat training by 5 percent and unlocks tech options to increase it even further.",
+			cost: "20",
+			unlocks: [
+				{
+					name: "Training Pamphlets",
+					description:"Increases speed of military redcoat training to a total of +15 percent and unlocks tech options to increase it even further.",
+					cost: "40",
+					unlocks: [
+						{
+							name: "Train the Trainers",
+							description:"Increases speed of military redcoat training to a total of +30 percent and unlocks tech options to increase it even further.",
+							cost: "60",
+							unlocks: [
+								{
+									name: "Mandatory Conscription",
+									description:"All colonists receive military training, causing redcoat training to be instantaneous. May have negative effects on your colonists' happiness.",
+									cost: "100"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			name: "Personnel Gear Research",
+			description:"All soldiers receive Damage Resistance (take less damage from all sources). Also unlocks a number of tech options for further soldier improvement.",
+			cost: "20",
+			unlocks: [
+				{
+					name: "Scientific Sharpshooting",
+					description:"Soldiers deal 1 more damage when attacking (in addition to normal weapon damage).",
+					cost: "40"
+				},
+				{
+					name: "Healthy Training Practises",
+					description:"Soldiers can withstand 20 percent more damage before losing a Heart.",
+					cost: "20",
+					unlocks: [
+						{
+							name: "Colony-wide Health",
+							description:"All colonists, not just soldiers, can withstand 20 percent more damage before losing a Heart.",
+							cost: "60"
+						}
+					]
+				},
+				{
+					name: "Dexterity Training",
+					description:"Soldiers reload their guns 25 percent faster. Also unlocks further tech options for improving reload speed.",
+					cost: "20",
+					unlocks: [
+						{
+							name: "Daring Dexterity",
+							description:"Soldiers reload their guns a cumulative 50 percent faster.",
+							cost: "40"
+						}
+					]
+				},
+				{
+					name: "Stiff Upper Lip",
+					description:"Soliders receive a large bonus to Quality of Life, increasing their happiness.",
+					cost: "50"
+				}
+			]
+		},
+		{
+			name: "Advanced Weaponry Research",
+			description:"Unlocks the ability to construct Landmines, a powerful stationary defense item, at the Metalworks. This tech is a prerequisite for a large number of advanced weaponry techs.",
+			cost: "20",
+			unlocks: [
+				{
+					name: "Longarm Manufacturing",
+					description:"Unlocks the ability to construct Jezail Rifles, a powerful long-range weapon, at the Metalworks. Also unlocks further weaponry options.",
+					cost: "40",
+					unlocks: [
+						{
+							name: "Rapid-Fire Gunworks",
+							description:"Unlocks the ability to construct the Carbine, a strong and rapid-fire rifle, at the Metalworks.",
+							cost: "60"
+						}
+					]
+				},
+				{
+					name: "Miniaturized Weapons",
+					description:"Unlocks the ability to construct Revolvers, a powerful multi-shot handgun, at the Metalworks.",
+					cost: "40",
+					unlocks: [
+						{
+							name: "Experimental Gunsmithing",
+							description:"Unlocks the ability to construct the Grenade Launcher, an experimental, dangerous, and incredibly powerful weapon, at the Metalworks.",
+							cost: "80"
+						}
+					]
+				},
+				{
+					name: "Leyden Energy",
+					description:"Initial research into this advanced energy source will allow us to build Leyden Jars, a component of Steam Knights. Unlocks further research to build leyden-based weaponry.",
+					cost: "60",
+					unlocks: [
+						{
+							name: "Basic Leyden Weaponry",
+							description:"Unlocks the ability to construct the Leyden Pistol, a powerful weapon that does not require ammunition, at the Metalworks. Unlocks further research to build leyden-based weaponry.",
+							cost: "80",
+							unlocks: [
+								{
+									name: "Advanced Leyden Weaponry",
+									description:"Unlocks the ability to construct the Leyden Rifle, a powerful weapon that does not require ammunition, at the Metalworks.",
+									cost: "80"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			name: "Tonic Healing",
+			description:"Unlocks the ability to produce Sulphur Tonic, a powerful Barbershop healing item, at the Chemical Works.",
+			cost: "20"
+		}
+	]
+}
+];
+
+function expander(t) {
+	var ns = t.parentNode.childNodes;
+	var i = 0;
+	
+	for (i = 0; ns.length > i; i++) {
+		if (ns[i] != t) {
+			if (ns[i].className == "expanded") {
+				ns[i].className = "hid";
+			} else {
+				ns[i].className = "expanded";
+			}
+		}
+	}
+}
+
+function constructTechTree(arr) {
+	var i = 0;
+	var output = "";
+	
+	for (i = 0; arr.length > i; i++) {
+		output += "<li><div";
+		if (arr[i].unlocks) {
+			output += " onclick='expander(this)' class='canclick'";
+		}
+		output += "><span class='techname'>" + arr[i].name + "</span>";
+		
+		if (arr[i].cost) {
+			output += "<br/><span class='techdesc'>" + arr[i].description + "</span>";
+			output += "<br/> <span class='techcost'>Cost: " + arr[i].cost + " points</span>";
+			
+		}
+		
+		if (arr[i].unlocks) {
+			output += "<span class='ralign'>>>></span>";
+		}
+		
+		output += "</div>";
+		
+		if (arr[i].unlocks) {
+			output += "<ul class='hid'>";
+			output += constructTechTree(arr[i].unlocks);
+			output += "</ul>";
+		}
+		
+		output += "</li>";
+	}
+	
+	return output;
+}
+
+function outputTechTree() {
+	var outputDiv = document.getElementById('treecontainer');
+	var output = "<ul class='tree'>";
+	
+	output += constructTechTree(techtree);
+	
+	output += "</ul>";
+	outputDiv.innerHTML = output;
+}
+
+outputTechTree();
+</script>
+
+<script>
+
+var labels = [
+ {
+   FIELD1: "Product",
+   FIELD2: "Workshop",
+   FIELD3: "Module",
+   FIELD4: "Research Required",
+   FIELD5: "Biome Needed",
+   FIELD7: "YIELD",
+   FIELD8: "Agave Syrup",
+   FIELD9: "Ammo Autoloader",
+   FIELD10: "Any Brewed Alcohol",
+   FIELD11: "Any Distilled Spirits",
+   FIELD12: "Any Fruit",
+   FIELD13: "Any Fuel",
+   FIELD14: "Any Raw Food",
+   FIELD15: "Any Raw Meat",
+   FIELD16: "Any Timber",
+   FIELD17: "Any Vegetable",
+   FIELD18: "Beer",
+   FIELD19: "Berries",
+   FIELD19B: "Bones",
+   FIELD20: "Brass Cogs",
+   FIELD21: "Brass Ingots",
+   FIELD22: "Bric-a-brac",
+   FIELD23: "Bricks",
+   FIELD24: "Cabbages",
+   FIELD25: "Chalk",
+   FIELD26: "Chicha",
+   FIELD27: "Chillies",
+   FIELD28: "Clay",
+   FIELD29: "Coconuts",
+   FIELD30: "Coffee Fruit",
+   FIELD31: "Contruction Frame",
+   FIELD32: "Copper Ingots",
+   FIELD33: "Copper Pipes",
+   FIELD34: "Copper Plates",
+   FIELD35: "Exotic Caviar",
+   FIELD36: "FMJ Ammo",
+   FIELD37: "Any Fungus",
+   FIELD38: "Glass Bottles",
+   FIELD39: "Glass Panes",
+   FIELD40: "Gold Ingot",
+   FIELD41: "Gold Ore",
+   FIELD42: "Grapes",
+   FIELD43: "Guarapo",
+   FIELD44: "Gunpowder",
+   FIELD45: "Hematite Ore",
+   FIELD46: "Iron Ingots",
+   FIELD47: "Iron Pipes",
+   FIELD48: "Iron Plates",
+   FIELD49: "Lacquer",
+   FIELD50: "Lacquered Planks",
+   FIELD51: "Maize",
+   FIELD52: "Malachite Ore",
+   FIELD53: "MK-1 Machine Gun",
+   FIELD54: "MK-1 Steam Knight Chassis",
+   FIELD55: "MK-1 Steam Knight Oculars",
+   FIELD56: "Molasses",
+   FIELD57: "Opium",
+   FIELD58: "Paper",
+   FIELD59: "Pitchblende",
+   FIELD60: "Planks",
+   FIELD61: "Prototype Steam Knight Chassis",
+   FIELD62: "Prototype Steam Knight Oculars",
+   FIELD63: "Pulque",
+   FIELD63B: "Raw Aurochs Steak",
+   FIELD63C: "Raw Beetle Steak",
+   FIELD64: "Raw Fishperson Steak",
+   FIELD65: "Raw Long Pork",
+   FIELD66: "Reactive Catalyst",
+   FIELD67: "Sand",
+   FIELD68: "Sphalerite Ore",
+   FIELD69: "Spring-Loaded Power Core",
+   FIELD70: "Steam Compressor",
+   FIELD71: "Steel Ingots",
+   FIELD72: "Steel Plates",
+   FIELD73: "Stone",
+   FIELD74: "Sugarcane",
+   FIELD75: "Sugarloaf",
+   FIELD76: "Sulphur",
+   FIELD77: "Wheat",
+   FIELD78: "Zinc Ingots"
+ }
+];
+
+var items = [
+ {
+   FIELD1: "Advanced Workbench",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Advanced Module Research",
+   FIELD7: "1",
+   FIELD46: "2",
+   FIELD60: "2"
+ },
+ {
+   FIELD1: "Advanced Workbench",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Advanced Module Research",
+   FIELD7: "5",
+   FIELD46: "10",
+   FIELD60: "10"
+ },
+ {
+   FIELD1: "Airship Mast",
+   FIELD16: "1",
+   FIELD23: "4",
+   FIELD60: "2"
+ },
+ {
+   FIELD1: "Ammo Autoloader",
+   FIELD2: "Steam Knight Manufactory",
+   FIELD3: "Power Core Dynamo",
+   FIELD7: "1",
+   FIELD20: "10",
+   FIELD36: "30",
+   FIELD48: "10"
+ },
+ {
+   FIELD1: "Aristocratic Window",
+   FIELD34: "1",
+   FIELD39: "1",
+   FIELD60: "1"
+ },
+ {
+   FIELD1: "Assembly Workbench",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Carpentry Workbench",
+   FIELD7: "1",
+   FIELD16: "2"
+ },
+ {
+   FIELD1: "Assembly Workbench",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD16: "10"
+ },
+ {
+   FIELD1: "Assemly Workbench",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD16: "2"
+ },
+ {
+   FIELD1: "Ball Cartridge Ammo",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Ceramics Workbench",
+   FIELD7: "1",
+   FIELD44: "2",
+   FIELD73: "8"
+ },
+ {
+   FIELD1: "Ball Cartridge Ammo",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD44: "10",
+   FIELD73: "40"
+ },
+ {
+   FIELD1: "Barbershop Pole",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD7: "1",
+   FIELD22: "1"
+ },
+ {
+   FIELD1: "Barbershop Pole",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD22: "5"
+ },
+ {
+   FIELD1: "Barometer",
+   FIELD2: "Metalworks",
+   FIELD3: "Decor Workbench",
+   FIELD4: "Outdoor Decor",
+   FIELD7: "1",
+   FIELD22: "6"
+ },
+ {
+   FIELD1: "Barometer",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Outdoor Decor",
+   FIELD7: "5",
+   FIELD22: "30"
+ },
+ {
+   FIELD1: "Beer",
+   FIELD2: "Kitchen",
+   FIELD3: "Brewing Vat",
+   FIELD5: "Temperate, Cold",
+   FIELD7: "3",
+   FIELD77: "1"
+ },
+ {
+   FIELD1: "Beer",
+   FIELD2: "Kitchen",
+   FIELD3: "Mechanical Brewing Tank",
+   FIELD5: "Temperate, Cold",
+   FIELD7: "15",
+   FIELD77: "5"
+ },
+ {
+   FIELD1: "Berry Preserves",
+   FIELD2: "Kitchen",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "2",
+   FIELD19: "1",
+   FIELD38: "1"
+ },
+ {
+   FIELD1: "Berry Preserves",
+   FIELD2: "Kitchen",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "10",
+   FIELD19: "5",
+   FIELD38: "5"
+ },
+ {
+   FIELD1: "Blunderbuss Locker",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD46: "2",
+   FIELD60: "6"
+ },
+ {
+   FIELD1: "Blunderbuss Locker",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD46: "10",
+   FIELD60: "30"
+ },
+ {
+   FIELD1: "Bookshelf",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD60: "4"
+ },
+ {
+   FIELD1: "Bookshelf",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "20"
+ },
+ {
+   FIELD1: "Booze Vat",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD60: "4"
+ },
+ {
+   FIELD1: "Booze Vat",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "20"
+ },
+ {
+   FIELD1: "Brass Cogs",
+   FIELD2: "Metalworks",
+   FIELD3: "Smithing Forge",
+   FIELD7: "1",
+   FIELD21: "1"
+ },
+ {
+   FIELD1: "Brass Ignots",
+   FIELD2: "Metalworks",
+   FIELD3: "Stone Smelting Crucible",
+   FIELD7: "1",
+   FIELD13: "1",
+   FIELD32: "1",
+   FIELD78: "1"
+ },
+ {
+   FIELD1: "Brass Ingots",
+   FIELD2: "Metalworks",
+   FIELD3: "Iron Smelting Crucible",
+   FIELD7: "5",
+   FIELD13: "5",
+   FIELD32: "5",
+   FIELD78: "5"
+ },
+ {
+   FIELD1: "Bread",
+   FIELD2: "Kitchen",
+   FIELD3: "Stone Oven",
+   FIELD7: "2",
+   FIELD77: "1"
+ },
+ {
+   FIELD1: "Bread",
+   FIELD2: "Kitchen",
+   FIELD3: "Iron Oven",
+   FIELD7: "10",
+   FIELD77: "5"
+ },
+ {
+   FIELD1: "Bread",
+   FIELD2: "Kitchen",
+   FIELD3: "Steam Oven",
+   FIELD7: "20",
+   FIELD77: "10"
+ },
+ {
+   FIELD1: "Bric-a-brac",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD7: "1",
+   FIELD60: "3"
+ },
+ {
+   FIELD1: "Bric-a-brac",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "15"
+ },
+ {
+   FIELD1: "Bric-a-brac",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Power Saw",
+   FIELD7: "10",
+   FIELD60: "30"
+ },
+ {
+   FIELD1: "Bric-a-brac",
+   FIELD2: "Metalworks",
+   FIELD3: "Decor Workbench",
+   FIELD7: "4",
+   FIELD32: "2"
+ },
+ {
+   FIELD1: "Bric-a-brac",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "20",
+   FIELD32: "10"
+ },
+ {
+   FIELD1: "Bric-a-brac",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD7: "2",
+   FIELD39: "3"
+ },
+ {
+   FIELD1: "Bric-a-brac",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "10",
+   FIELD39: "15"
+ },
+ {
+   FIELD1: "Bric-a-brac",
+   FIELD2: "Metalworks",
+   FIELD3: "Decor Workbench",
+   FIELD7: "4",
+   FIELD40: "1"
+ },
+ {
+   FIELD1: "Bric-a-brac",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "20",
+   FIELD40: "5"
+ },
+ {
+   FIELD1: "Bric-a-brac",
+   FIELD2: "Metalworks",
+   FIELD3: "Decor Workbench",
+   FIELD7: "4",
+   FIELD46: "2"
+ },
+ {
+   FIELD1: "Bric-a-brac",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "20",
+   FIELD46: "10"
+ },
+ {
+   FIELD1: "Bric-a-brac",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD7: "1",
+   FIELD28: "2",
+   FIELD73: "2"
+ },
+ {
+   FIELD1: "Bric-a-brac",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD28: "10",
+   FIELD73: "10"
+ },
+ {
+   FIELD1: "Brick Ceramics Kiln",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD23: "4",
+   FIELD73: "4"
+ },
+ {
+   FIELD1: "Brick Ceramics Kiln",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD23: "20",
+   FIELD73: "20"
+ },
+ {
+   FIELD1: "Brick Charcoal Kiln",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD23: "2",
+   FIELD60: "2"
+ },
+ {
+   FIELD1: "Brick Charcoal Kiln",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD23: "10",
+   FIELD60: "10"
+ },
+ {
+   FIELD1: "Bricks",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Stone Ceramics Kiln",
+   FIELD7: "2",
+   FIELD28: "1"
+ },
+ {
+   FIELD1: "Bricks",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Brick Ceramics Kiln",
+   FIELD7: "10",
+   FIELD28: "5"
+ },
+ {
+   FIELD1: "Bricks",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Iron Ceramics Kiln",
+   FIELD7: "20",
+   FIELD28: "10"
+ },
+ {
+   FIELD1: "Bricks",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Ceramics Press",
+   FIELD7: "60",
+   FIELD28: "30"
+ },
+ {
+   FIELD1: "Bureaucrat's Desk",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Advanced Bureaucracy",
+   FIELD7: "1",
+   FIELD50: "3"
+ },
+ {
+   FIELD1: "Bureaucrat's Desk",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Advanced Bureaucracy",
+   FIELD7: "5",
+   FIELD50: "15"
+ },
+ {
+   FIELD1: "Cabbage Stew",
+   FIELD2: "Kitchen",
+   FIELD3: "Stone Oven",
+   FIELD7: "2",
+   FIELD24: "1"
+ },
+ {
+   FIELD1: "Cabbage Stew",
+   FIELD2: "Kitchen",
+   FIELD3: "Iron Oven",
+   FIELD7: "10",
+   FIELD24: "5"
+ },
+ {
+   FIELD1: "Cabbage Stew",
+   FIELD2: "Kitchen",
+   FIELD3: "Steam Oven",
+   FIELD7: "20",
+   FIELD24: "10"
+ },
+ {
+   FIELD1: "Candelabra",
+   FIELD2: "Metalworks",
+   FIELD3: "Decor Workbench",
+   FIELD7: "1",
+   FIELD22: "1"
+ },
+ {
+   FIELD1: "Candelabra",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD22: "5"
+ },
+ {
+   FIELD1: "Caninha",
+   FIELD2: "Kitchen",
+   FIELD3: "Still",
+   FIELD5: "Tropical",
+   FIELD7: "1",
+   FIELD43: "1"
+ },
+ {
+   FIELD1: "Carbine Locker",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Rapid-Fire Gunworks",
+   FIELD7: "1",
+   FIELD20: "2",
+   FIELD47: "2",
+   FIELD48: "2",
+   FIELD71: "2"
+ },
+ {
+   FIELD1: "Carbine Locker",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Rapid-Fire Gunworks",
+   FIELD7: "5",
+   FIELD20: "10",
+   FIELD47: "10",
+   FIELD48: "10",
+   FIELD71: "10"
+ },
+ {
+   FIELD1: "Carpentry Workbench",
+   FIELD16: "4"
+ },
+ {
+   FIELD1: "Carpet",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD4: "Improved Decor Research",
+   FIELD7: "1",
+   FIELD22: "4"
+ },
+ {
+   FIELD1: "Carpet",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Improved Decor Research",
+   FIELD7: "5",
+   FIELD22: "20"
+ },
+ {
+   FIELD1: "Ceramic Tripistol Locker",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD28: "6",
+   FIELD60: "3",
+   FIELD73: "6"
+ },
+ {
+   FIELD1: "Ceramic Tripistol Locker",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD28: "30",
+   FIELD60: "15",
+   FIELD73: "30"
+ },
+ {
+   FIELD1: "Ceramics Press",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Steel Ceramics",
+   FIELD7: "1",
+   FIELD20: "1",
+   FIELD47: "3",
+   FIELD48: "2",
+   FIELD71: "4"
+ },
+ {
+   FIELD1: "Ceramics Press",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Steel Ceramics",
+   FIELD7: "5",
+   FIELD20: "5",
+   FIELD47: "15",
+   FIELD48: "10",
+   FIELD71: "20"
+ },
+ {
+   FIELD1: "Ceramics Workbench",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD60: "3"
+ },
+ {
+   FIELD1: "Ceramics Workbench",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "15"
+ },
+ {
+   FIELD1: "Chalkboard",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD60: "2"
+ },
+ {
+   FIELD1: "Chalkboard",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "10"
+ },
+ {
+   FIELD1: "Charcoal",
+   FIELD2: "Metalworks",
+   FIELD3: "Brick Charcoal Kiln",
+   FIELD7: "1",
+   FIELD16: "3"
+ },
+ {
+   FIELD1: "Charcoal",
+   FIELD2: "Metalworks",
+   FIELD3: "Iron Charcoal Kiln",
+   FIELD7: "5",
+   FIELD16: "15"
+ },
+ {
+   FIELD1: "Charcoal",
+   FIELD2: "Metalworks",
+   FIELD3: "Industrial Kiln",
+   FIELD7: "15",
+   FIELD16: "45"
+ },
+ {
+   FIELD1: "Chemistry Workbench",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD39: "1",
+   FIELD60: "2"
+ },
+ {
+   FIELD1: "Chemistry Workbench",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD39: "5",
+   FIELD60: "10"
+ },
+ {
+   FIELD1: "Chicha",
+   FIELD2: "Kitchen",
+   FIELD3: "Brewing Vat",
+   FIELD5: "Temperate, Desert",
+   FIELD7: "3",
+   FIELD51: "1"
+ },
+ {
+   FIELD1: "Chicha",
+   FIELD2: "Kitchen",
+   FIELD3: "Mechanical Brewing Tank",
+   FIELD5: "Temperate, Desert",
+   FIELD7: "15",
+   FIELD51: "5"
+ },
+ {
+   FIELD1: "Chilli Stew",
+   FIELD2: "Kitchen",
+   FIELD3: "Stone Oven",
+   FIELD7: "2",
+   FIELD27: "1"
+ },
+ {
+   FIELD1: "Chilli Stew",
+   FIELD2: "Kitchen",
+   FIELD3: "Iron Oven",
+   FIELD7: "10",
+   FIELD27: "5"
+ },
+ {
+   FIELD1: "Chilli Stew",
+   FIELD2: "Kitchen",
+   FIELD3: "Steam Oven",
+   FIELD7: "20",
+   FIELD27: "10"
+ },
+ {
+   FIELD1: "Church Banner",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD7: "1",
+   FIELD22: "1"
+ },
+ {
+   FIELD1: "Church Banner",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD22: "5"
+ },
+ {
+   FIELD1: "Clay Pot",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD7: "1",
+   FIELD22: "1"
+ },
+ {
+   FIELD1: "Clay Pot",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD22: "5"
+ },
+ {
+   FIELD1: "Coconut Curry",
+   FIELD2: "Kitchen",
+   FIELD3: "Stone Oven",
+   FIELD4: "Fancy Cooking",
+   FIELD5: "Tropical",
+   FIELD7: "2",
+   FIELD27: "1",
+   FIELD29: "1",
+   FIELD75: "1"
+ },
+ {
+   FIELD1: "Coconut Curry",
+   FIELD2: "Kitchen",
+   FIELD3: "Iron Oven",
+   FIELD4: "Fancy Cooking",
+   FIELD5: "Tropical",
+   FIELD7: "15",
+   FIELD27: "5",
+   FIELD29: "5",
+   FIELD75: "5"
+ },
+ {
+   FIELD1: "Coconut Curry",
+   FIELD2: "Kitchen",
+   FIELD3: "Steam Oven",
+   FIELD4: "Fancy Cooking",
+   FIELD5: "Tropical",
+   FIELD7: "30",
+   FIELD27: "10",
+   FIELD29: "10",
+   FIELD75: "10"
+ },
+ {
+   FIELD1: "Coconut Stew",
+   FIELD2: "Kitchen",
+   FIELD3: "Stone Oven",
+   FIELD7: "2",
+   FIELD29: "1"
+ },
+ {
+   FIELD1: "Coconut Stew",
+   FIELD2: "Kitchen",
+   FIELD3: "Iron Oven",
+   FIELD7: "10",
+   FIELD29: "5"
+ },
+ {
+   FIELD1: "Coconut Stew",
+   FIELD2: "Kitchen",
+   FIELD3: "Steam Oven",
+   FIELD7: "20",
+   FIELD29: "10"
+ },
+ {
+   FIELD1: "Coffee Beans",
+   FIELD2: "Kitchen",
+   FIELD3: "Stone Oven",
+   FIELD4: "Tropical Plant Nursery",
+   FIELD7: "1",
+   FIELD30: "2"
+ },
+ {
+   FIELD1: "Coffee Beans",
+   FIELD2: "Kitchen",
+   FIELD3: "Iron Oven",
+   FIELD4: "Tropical Plant Nursery",
+   FIELD7: "5",
+   FIELD30: "10"
+ },
+ {
+   FIELD1: "Coffee Beans",
+   FIELD2: "Kitchen",
+   FIELD3: "Steam Oven",
+   FIELD4: "Tropical Plant Nursery",
+   FIELD7: "10",
+   FIELD30: "20"
+ },
+ {
+   FIELD1: "Construction Frame",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Carpentry Workbench",
+   FIELD4: "Steam Knight Tech",
+   FIELD7: "1",
+   FIELD60: "15"
+ },
+ {
+   FIELD1: "Construction Frame",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Steam Knight Tech",
+   FIELD7: "5",
+   FIELD60: "75"
+ },
+ {
+   FIELD1: "Cooked Meat",
+   FIELD2: "Kitchen",
+   FIELD3: "Stone Oven",
+   FIELD7: "4",
+   FIELD15: "1"
+ },
+ {
+   FIELD1: "Cooked Meat",
+   FIELD2: "Kitchen",
+   FIELD3: "Iron Oven",
+   FIELD7: "20",
+   FIELD15: "5"
+ },
+ {
+   FIELD1: "Cooked Meat",
+   FIELD2: "Kitchen",
+   FIELD3: "Steam Oven",
+   FIELD7: "40",
+   FIELD15: "10"
+ },
+ {
+   FIELD1: "Copper Ingots",
+   FIELD2: "Metalworks",
+   FIELD3: "Stone Smelting Crucible",
+   FIELD7: "1",
+   FIELD13: "1",
+   FIELD52: "3"
+ },
+ {
+   FIELD1: "Copper Ingots",
+   FIELD2: "Metalworks",
+   FIELD3: "Iron Smelting Crucible",
+   FIELD7: "5",
+   FIELD13: "5",
+   FIELD52: "15"
+ },
+ {
+   FIELD1: "Copper Pipes",
+   FIELD2: "Metalworks",
+   FIELD3: "Smithing Forge",
+   FIELD7: "1",
+   FIELD32: "2"
+ },
+ {
+   FIELD1: "Copper Pipes",
+   FIELD2: "Metalworks",
+   FIELD3: "Power Lathe",
+   FIELD7: "10",
+   FIELD32: "20"
+ },
+ {
+   FIELD1: "Copper Plates",
+   FIELD2: "Metalworks",
+   FIELD3: "Smithing Forge",
+   FIELD7: "1",
+   FIELD32: "2"
+ },
+ {
+   FIELD1: "Copper Plates",
+   FIELD2: "Metalworks",
+   FIELD3: "Power Stamper",
+   FIELD7: "10",
+   FIELD32: "20"
+ },
+ {
+   FIELD1: "Cot",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD60: "2"
+ },
+ {
+   FIELD1: "Cot",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "10"
+ },
+ {
+   FIELD1: "Decor Workbench",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD60: "2"
+ },
+ {
+   FIELD1: "Decor Workbench",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "10"
+ },
+ {
+   FIELD1: "Dewatering Pump",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD23: "3",
+   FIELD46: "2",
+   FIELD60: "3"
+ },
+ {
+   FIELD1: "Dewatering Pump",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD23: "15",
+   FIELD46: "10",
+   FIELD60: "15"
+ },
+ {
+   FIELD1: "Fancy Bookshelf",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Advanced Learning",
+   FIELD7: "1",
+   FIELD39: "3",
+   FIELD60: "6"
+ },
+ {
+   FIELD1: "Fancy Bookshelf",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Advanced Learning",
+   FIELD7: "5",
+   FIELD39: "15",
+   FIELD60: "30"
+ },
+ {
+   FIELD1: "Fancy Window",
+   FIELD39: "1",
+   FIELD60: "1"
+ },
+ {
+   FIELD1: "Farmers' Stew",
+   FIELD2: "Kitchen",
+   FIELD3: "Stone Oven",
+   FIELD7: "2",
+   FIELD17: "2"
+ },
+ {
+   FIELD1: "Farmers' Stew",
+   FIELD2: "Kitchen",
+   FIELD3: "Iron Oven",
+   FIELD7: "10",
+   FIELD17: "10"
+ },
+ {
+   FIELD1: "Farmers' Stew",
+   FIELD2: "Kitchen",
+   FIELD3: "Steam Oven",
+   FIELD7: "20",
+   FIELD17: "20"
+ },
+ {
+   FIELD1: "Fishperson Pie",
+   FIELD2: "Kitchen",
+   FIELD3: "Stone Oven",
+   FIELD4: "Exotic Cooking",
+   FIELD7: "10",
+   FIELD64: "1",
+   FIELD75: "1",
+   FIELD77: "1"
+ },
+ {
+   FIELD1: "Fishperson Pie",
+   FIELD2: "Kitchen",
+   FIELD3: "Iron Oven",
+   FIELD4: "Exotic Cooking",
+   FIELD7: "50",
+   FIELD64: "5",
+   FIELD75: "5",
+   FIELD77: "5"
+ },
+ {
+   FIELD1: "Fishperson Pie",
+   FIELD2: "Kitchen",
+   FIELD3: "Steam Oven",
+   FIELD4: "Exotic Cooking",
+   FIELD7: "100",
+   FIELD64: "10",
+   FIELD75: "10",
+   FIELD77: "10"
+ },
+ {
+   FIELD1: "Fishperson Steak",
+   FIELD2: "Kitchen",
+   FIELD3: "Stone Oven",
+   FIELD4: "Exotic Cooking",
+   FIELD7: "4",
+   FIELD64: "1"
+ },
+ {
+   FIELD1: "Fishperson Steak",
+   FIELD2: "Kitchen",
+   FIELD3: "Iron Oven",
+   FIELD4: "Exotic Cooking",
+   FIELD7: "20",
+   FIELD64: "5"
+ },
+ {
+   FIELD1: "Fishperson Steak",
+   FIELD2: "Kitchen",
+   FIELD3: "Steam Oven",
+   FIELD4: "Exotic Cooking",
+   FIELD7: "40",
+   FIELD64: "10"
+ },
+ {
+   FIELD1: "FMJ Ammunition",
+   FIELD2: "Metalworks",
+   FIELD3: "Smithing Forge",
+   FIELD7: "1",
+   FIELD44: "4",
+   FIELD46: "3"
+ },
+ {
+   FIELD1: "FMJ Ammunition",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD44: "20",
+   FIELD46: "15"
+ },
+ {
+   FIELD1: "Fruit Medley",
+   FIELD2: "Kitchen",
+   FIELD3: "Stone Oven",
+   FIELD7: "2",
+   FIELD12: "2"
+ },
+ {
+   FIELD1: "Fruit Medley",
+   FIELD2: "Kitchen",
+   FIELD3: "Iron Oven",
+   FIELD7: "10",
+   FIELD12: "10"
+ },
+ {
+   FIELD1: "Fruit Medley",
+   FIELD2: "Kitchen",
+   FIELD3: "Steam Oven",
+   FIELD7: "20",
+   FIELD12: "20"
+ },
+ {
+   FIELD1: "Fungus Stew",
+   FIELD2: "Kitchen",
+   FIELD3: "Stone Oven",
+   FIELD7: "4",
+   FIELD37: "1"
+ },
+ {
+   FIELD1: "Fungus Stew",
+   FIELD2: "Kitchen",
+   FIELD3: "Iron Oven",
+   FIELD7: "20",
+   FIELD37: "5"
+ },
+ {
+   FIELD1: "Fungus Stew",
+   FIELD2: "Kitchen",
+   FIELD3: "Steam Oven",
+   FIELD7: "40",
+   FIELD37: "10"
+ },
+ {
+   FIELD1: "Glass Bottles",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Brick Ceramics Kiln",
+   FIELD7: "4",
+   FIELD39: "1"
+ },
+ {
+   FIELD1: "Glass Bottles",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Iron Ceramics Kiln",
+   FIELD7: "20",
+   FIELD39: "5"
+ },
+ {
+   FIELD1: "Glass Bottles",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Ceramics Press",
+   FIELD7: "60",
+   FIELD39: "15"
+ },
+ {
+   FIELD1: "Glass Panes",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Brick Ceramics Kiln",
+   FIELD7: "4",
+   FIELD67: "1"
+ },
+ {
+   FIELD1: "Glass Panes",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Iron Ceramics Kiln",
+   FIELD7: "20",
+   FIELD67: "5"
+ },
+ {
+   FIELD1: "Glass Planes",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Ceramics Press",
+   FIELD7: "60",
+   FIELD67: "15"
+ },
+ {
+   FIELD1: "Gold Ingots",
+   FIELD2: "Metalworks",
+   FIELD3: "Stone Smelting Crucible",
+   FIELD7: "1",
+   FIELD13: "1",
+   FIELD41: "3"
+ },
+ {
+   FIELD1: "Gold Ingots",
+   FIELD2: "Metalworks",
+   FIELD3: "Iron Smelting Crucible",
+   FIELD7: "5",
+   FIELD13: "5",
+   FIELD41: "15"
+ },
+ {
+   FIELD1: "Grenade Launcher Locker",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Experimental Gunsmithing",
+   FIELD7: "1",
+   FIELD20: "3",
+   FIELD47: "2",
+   FIELD48: "2",
+   FIELD71: "6"
+ },
+ {
+   FIELD1: "Grenade Launcher Locker",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Experimental Gunsmithing",
+   FIELD7: "5",
+   FIELD20: "15",
+   FIELD47: "10",
+   FIELD48: "10",
+   FIELD71: "30"
+ },
+ {
+   FIELD1: "Grenades",
+   FIELD2: "Metalworks",
+   FIELD3: "Smithing Forge",
+   FIELD7: "1",
+   FIELD44: "5",
+   FIELD71: "3"
+ },
+ {
+   FIELD1: "Grenades",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD44: "25",
+   FIELD71: "15"
+ },
+ {
+   FIELD1: "Grinder",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Mineral Processing",
+   FIELD7: "1",
+   FIELD20: "2",
+   FIELD48: "3",
+   FIELD71: "4"
+ },
+ {
+   FIELD1: "Grinder",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Mineral Processing",
+   FIELD7: "5",
+   FIELD20: "10",
+   FIELD48: "15",
+   FIELD71: "20"
+ },
+ {
+   FIELD1: "Guarapo",
+   FIELD2: "Kitchen",
+   FIELD3: "Brewing Vat",
+   FIELD5: "Tropical",
+   FIELD7: "3",
+   FIELD74: "1"
+ },
+ {
+   FIELD1: "Guarapo",
+   FIELD2: "Kitchen",
+   FIELD3: "Mechanical Brewing Tank",
+   FIELD5: "Tropical",
+   FIELD7: "15",
+   FIELD74: "5"
+ },
+ {
+   FIELD1: "Gunpowder",
+   FIELD2: "Chemical Works",
+   FIELD3: "Chemistry Workbench",
+   FIELD7: "2",
+   FIELD13: "1",
+   FIELD76: "1"
+ },
+ {
+   FIELD1: "Gunpowder",
+   FIELD2: "Chemical Works",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "10",
+   FIELD13: "5",
+   FIELD76: "5"
+ },
+ {
+   FIELD1: "Hanging Pots",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD46: "1"
+ },
+ {
+   FIELD1: "Hanging Pots",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD46: "5"
+ },
+ {
+   FIELD1: "Improvised Musket Locker",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD60: "8",
+   FIELD73: "2"
+ },
+ {
+   FIELD1: "Improvised Musket Locker",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "40",
+   FIELD73: "10"
+ },
+ {
+   FIELD1: "Industrial Kiln",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD23: "6",
+   FIELD33: "4",
+   FIELD34: "4",
+   FIELD71: "2"
+ },
+ {
+   FIELD1: "Industrial Kiln",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD23: "30",
+   FIELD33: "20",
+   FIELD34: "20",
+   FIELD71: "10"
+ },
+ {
+   FIELD1: "Ink",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Ceramics Workbench",
+   FIELD7: "1",
+   FIELD13: "10"
+ },
+ {
+   FIELD1: "Ink",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD13: "50"
+ },
+ {
+   FIELD1: "Iron Ceramics Kiln",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD23: "2",
+   FIELD47: "2",
+   FIELD48: "2"
+ },
+ {
+   FIELD1: "Iron Ceramics Kiln",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD23: "10",
+   FIELD47: "10",
+   FIELD48: "10"
+ },
+ {
+   FIELD1: "Iron Charcoal Kiln",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD23: "2",
+   FIELD47: "1",
+   FIELD48: "1"
+ },
+ {
+   FIELD1: "Iron Charcoal Kiln",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD23: "10",
+   FIELD47: "5",
+   FIELD48: "5"
+ },
+ {
+   FIELD1: "Iron Cogs",
+   FIELD2: "Metalworks",
+   FIELD3: "Smithing Forge",
+   FIELD7: "1",
+   FIELD46: "2"
+ },
+ {
+   FIELD1: "Iron Ingots",
+   FIELD2: "Metalworks",
+   FIELD3: "Stone Smelting Crucible",
+   FIELD7: "1",
+   FIELD13: "1",
+   FIELD45: "3"
+ },
+ {
+   FIELD1: "Iron Ingots",
+   FIELD2: "Metalworks",
+   FIELD3: "Iron Smelting Crucible",
+   FIELD7: "5",
+   FIELD13: "5",
+   FIELD45: "15"
+ },
+ {
+   FIELD1: "Iron Pipes",
+   FIELD2: "Metalworks",
+   FIELD3: "Smithing Forge",
+   FIELD7: "1",
+   FIELD46: "2"
+ },
+ {
+   FIELD1: "Iron Pipes",
+   FIELD2: "Metalworks",
+   FIELD3: "Power Lathe",
+   FIELD7: "10",
+   FIELD46: "20"
+ },
+ {
+   FIELD1: "Iron Plates",
+   FIELD2: "Metalworks",
+   FIELD3: "Smithing Forge",
+   FIELD7: "1",
+   FIELD46: "2"
+ },
+ {
+   FIELD1: "Iron Plates",
+   FIELD2: "Metalworks",
+   FIELD3: "Power Stamper",
+   FIELD7: "10",
+   FIELD46: "20"
+ },
+ {
+   FIELD1: "Iron Smelting Crucible",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD20: "1",
+   FIELD23: "4",
+   FIELD47: "2",
+   FIELD48: "2"
+ },
+ {
+   FIELD1: "Iron Smelting Crucible",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD20: "5",
+   FIELD23: "20",
+   FIELD47: "10",
+   FIELD48: "10"
+ },
+ {
+   FIELD1: "Jezail Rifle Locker",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Longarm Manufacturing",
+   FIELD7: "1",
+   FIELD20: "1",
+   FIELD47: "2",
+   FIELD48: "1",
+   FIELD60: "2"
+ },
+ {
+   FIELD1: "Jezail Rifle Locker",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Longarm Manufacturing",
+   FIELD7: "5",
+   FIELD20: "5",
+   FIELD47: "10",
+   FIELD48: "5",
+   FIELD60: "10"
+ },
+ {
+   FIELD1: "Lacquer",
+   FIELD2: "Chemical Works",
+   FIELD3: "Chemistry Workbench",
+   FIELD4: "Lacquer Synthesis",
+   FIELD7: "1",
+   FIELD13: "3",
+   FIELD76: "3"
+ },
+ {
+   FIELD1: "Lacquer",
+   FIELD2: "Chemical Works",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Lacquer Synthesis",
+   FIELD7: "5",
+   FIELD13: "15",
+   FIELD76: "15"
+ },
+ {
+   FIELD1: "Lacquered Planks",
+   FIELD2: "Chemical Works",
+   FIELD3: "Chemistry Workbench",
+   FIELD7: "2",
+   FIELD49: "1",
+   FIELD60: "2"
+ },
+ {
+   FIELD1: "Lacquered Planks",
+   FIELD2: "Chemical Works",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "10",
+   FIELD49: "5",
+   FIELD60: "10"
+ },
+ {
+   FIELD1: "Lamp (Large)",
+   FIELD39: "3",
+   FIELD47: "2"
+ },
+ {
+   FIELD1: "Lamp (Medium)",
+   FIELD39: "2",
+   FIELD60: "4"
+ },
+ {
+   FIELD1: "Lamp (Small)",
+   FIELD16: "3",
+   FIELD39: "1"
+ },
+ {
+   FIELD1: "Landmine",
+   FIELD2: "Metalworks",
+   FIELD3: "Smithing Forge",
+   FIELD4: "Advanced Weaponry Research",
+   FIELD7: "3",
+   FIELD44: "1",
+   FIELD48: "1"
+ },
+ {
+   FIELD1: "Landmine",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Advanced Weaponry Research",
+   FIELD7: "15",
+   FIELD44: "5",
+   FIELD48: "5"
+ },
+ {
+   FIELD1: "Large Pipe and Valve",
+   FIELD2: "Metalworks",
+   FIELD3: "Decor Workbench",
+   FIELD4: "Outdoor Decor",
+   FIELD7: "1",
+   FIELD22: "6"
+ },
+ {
+   FIELD1: "Large Pipe and Valve",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Outdoor Decor",
+   FIELD7: "5",
+   FIELD22: "30"
+ },
+ {
+   FIELD1: "Large Stone Altar",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD40: "2",
+   FIELD73: "6"
+ },
+ {
+   FIELD1: "Large Stone Altar",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD40: "10",
+   FIELD73: "30"
+ },
+ {
+   FIELD1: "Laudanum",
+   FIELD2: "Chemical Works",
+   FIELD3: "Chemistry Workbench",
+   FIELD7: "1",
+   FIELD11: "1",
+   FIELD57: "1"
+ },
+ {
+   FIELD1: "Laudanum",
+   FIELD2: "Chemical Works",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD11: "5",
+   FIELD57: "5"
+ },
+ {
+   FIELD1: "Leyden Jars",
+   FIELD2: "Metalworks",
+   FIELD3: "Smithing Forge",
+   FIELD4: "Leyden Energy",
+   FIELD7: "1",
+   FIELD32: "3",
+   FIELD39: "3"
+ },
+ {
+   FIELD1: "Leyden Jars",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Leyden Energy",
+   FIELD7: "5",
+   FIELD32: "15",
+   FIELD39: "15"
+ },
+ {
+   FIELD1: "Leyden Pistol Locker",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Basic Leyden Weaponry",
+   FIELD7: "1",
+   FIELD34: "1",
+   FIELD39: "2",
+   FIELD47: "1",
+   FIELD60: "1"
+ },
+ {
+   FIELD1: "Leyden Pistol Locker",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Basic Leyden Weaponry",
+   FIELD7: "5",
+   FIELD34: "5",
+   FIELD39: "10",
+   FIELD47: "5",
+   FIELD60: "5"
+ },
+ {
+   FIELD1: "Leyden Rifle Locker",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Advanced Leyden Weaponry",
+   FIELD7: "1",
+   FIELD34: "3",
+   FIELD39: "2",
+   FIELD47: "2",
+   FIELD60: "1"
+ },
+ {
+   FIELD1: "Leyden Rifle Locker",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Advanced Leyden Weaponry",
+   FIELD7: "5",
+   FIELD34: "15",
+   FIELD39: "10",
+   FIELD47: "10",
+   FIELD60: "5"
+ },
+ {
+   FIELD1: "Loading Bay Door",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD60: "3"
+ },
+ {
+   FIELD1: "Loading Bay Door",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "15"
+ },
+ {
+   FIELD1: "Long Clothes Line",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD7: "1",
+   FIELD22: "2"
+ },
+ {
+   FIELD1: "Long Clothes Line",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD22: "10"
+ },
+ {
+   FIELD1: "Long Pork Pie",
+   FIELD2: "Kitchen",
+   FIELD3: "Stone Oven",
+   FIELD4: "Exotic Cooking",
+   FIELD7: "10",
+   FIELD65: "1",
+   FIELD75: "1",
+   FIELD77: "1"
+ },
+ {
+   FIELD1: "Long Pork Pie",
+   FIELD2: "Kitchen",
+   FIELD3: "Iron Oven",
+   FIELD4: "Exotic Cooking",
+   FIELD7: "50",
+   FIELD65: "5",
+   FIELD75: "5",
+   FIELD77: "5"
+ },
+ {
+   FIELD1: "Long Pork Pie",
+   FIELD2: "Kitchen",
+   FIELD3: "Steam Oven",
+   FIELD4: "Exotic Cooking",
+   FIELD7: "100",
+   FIELD65: "10",
+   FIELD75: "10",
+   FIELD77: "10"
+ },
+ {
+   FIELD1: "Long Pork Steak",
+   FIELD2: "Kitchen",
+   FIELD3: "Stone Oven",
+   FIELD4: "Exotic Cooking",
+   FIELD7: "4",
+   FIELD65: "1"
+ },
+ {
+   FIELD1: "Long Pork Steak",
+   FIELD2: "Kitchen",
+   FIELD3: "Iron Oven",
+   FIELD4: "Exotic Cooking",
+   FIELD7: "20",
+   FIELD65: "5"
+ },
+ {
+   FIELD1: "Long Pork Steak",
+   FIELD2: "Kitchen",
+   FIELD3: "Steam Oven",
+   FIELD4: "Exotic Cooking",
+   FIELD7: "40",
+   FIELD65: "10"
+ },
+ {
+   FIELD1: "Macroscope",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Advanced Science",
+   FIELD7: "1",
+   FIELD20: "1",
+   FIELD34: "2",
+   FIELD39: "1"
+ },
+ {
+   FIELD1: "Macroscope",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Advanced Science",
+   FIELD7: "5",
+   FIELD20: "5",
+   FIELD34: "10",
+   FIELD39: "5"
+ },
+ {
+   FIELD1: "Maize Chowder",
+   FIELD2: "Kitchen",
+   FIELD3: "Stone Oven",
+   FIELD7: "2",
+   FIELD51: "1"
+ },
+ {
+   FIELD1: "Maize Chowder",
+   FIELD2: "Kitchen",
+   FIELD3: "Iron Oven",
+   FIELD7: "10",
+   FIELD51: "5"
+ },
+ {
+   FIELD1: "Maize Chowder",
+   FIELD2: "Kitchen",
+   FIELD3: "Steam Oven",
+   FIELD7: "20",
+   FIELD51: "10"
+ },
+ {
+   FIELD1: "Mechanical Brewing Vat",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD20: "1",
+   FIELD48: "1",
+   FIELD60: "2"
+ },
+ {
+   FIELD1: "Mechanical Brewing Vat",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD20: "5",
+   FIELD48: "5",
+   FIELD60: "10"
+ },
+ {
+   FIELD1: "Medical Supplies",
+   FIELD2: "Chemical Works",
+   FIELD3: "Chemistry Workbench",
+   FIELD7: "1",
+   FIELD60: "4"
+ },
+ {
+   FIELD1: "Medical Supplies",
+   FIELD2: "Chemical Works",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "20"
+ },
+ {
+   FIELD1: "Mezcal",
+   FIELD2: "Kitchen",
+   FIELD3: "Still",
+   FIELD5: "Desert",
+   FIELD7: "1",
+   FIELD63: "1"
+ },
+ {
+   FIELD1: "Mine Shorings",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Carpentry Workbench",
+   FIELD7: "1",
+   FIELD60: "4"
+ },
+ {
+   FIELD1: "Mine Shorings",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "20"
+ },
+ {
+   FIELD1: "Mineshaft Module",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD60: "3"
+ },
+ {
+   FIELD1: "Mineshaft Module",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "15"
+ },
+ {
+   FIELD1: "MK-1 Machine Gun",
+   FIELD2: "Metalworks",
+   FIELD3: "Smithing Forge",
+   FIELD7: "1",
+   FIELD9: "1",
+   FIELD47: "20",
+   FIELD48: "10",
+   FIELD60: "10"
+ },
+ {
+   FIELD1: "MK-1 Steam Knight Oculars",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Ceramics Workbench",
+   FIELD4: "Steam Knight Tech",
+   FIELD7: "1",
+   FIELD39: "20",
+   FIELD62: "1",
+   FIELD66: "10",
+   FIELD72: "3"
+ },
+ {
+   FIELD1: "MK-1 Steam Knight Oculars",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Steam Knight Tech",
+   FIELD7: "5",
+   FIELD39: "100",
+   FIELD62: "5",
+   FIELD66: "50",
+   FIELD72: "15"
+ },
+ {
+   FIELD1: "Molasses",
+   FIELD2: "Kitchen",
+   FIELD3: "Assembly Workbench",
+   FIELD5: "Temperate, Desert",
+   FIELD7: "2",
+   FIELD74: "1"
+ },
+ {
+   FIELD1: "Molasses",
+   FIELD2: "Kitchen",
+   FIELD3: "Advanced Workbench",
+   FIELD5: "Temperate, Desert",
+   FIELD7: "10",
+   FIELD74: "5"
+ },
+ {
+   FIELD1: "Moonshine",
+   FIELD2: "Kitchen",
+   FIELD3: "Still",
+   FIELD5: "Temperate, Desert",
+   FIELD7: "1",
+   FIELD26: "1"
+ },
+ {
+   FIELD1: "Ornate Bed",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD40: "1",
+   FIELD50: "4",
+   FIELD60: "8"
+ },
+ {
+   FIELD1: "Ornate Bed",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD40: "5",
+   FIELD50: "20",
+   FIELD60: "40"
+ },
+ {
+   FIELD1: "Ornate Cabinet",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD7: "1",
+   FIELD22: "1"
+ },
+ {
+   FIELD1: "Ornate Cabinet",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD22: "5"
+ },
+ {
+   FIELD1: "Ornate Chair",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD50: "1",
+   FIELD60: "2"
+ },
+ {
+   FIELD1: "Ornate Chair",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD50: "5",
+   FIELD60: "10"
+ },
+ {
+   FIELD1: "Ornate Door",
+   FIELD60: "2"
+ },
+ {
+   FIELD1: "Ornate Table and Chair Set",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD39: "2",
+   FIELD50: "2",
+   FIELD60: "4"
+ },
+ {
+   FIELD1: "Ornate Table and Chair Set",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD39: "10",
+   FIELD50: "10",
+   FIELD60: "20"
+ },
+ {
+   FIELD1: "Ornate Wall Shrine",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD7: "1",
+   FIELD22: "1"
+ },
+ {
+   FIELD1: "Ornate Wall Shrine",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD22: "5"
+ },
+ {
+   FIELD1: "Paper",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Carpentry Workbench",
+   FIELD7: "1",
+   FIELD60: "5"
+ },
+ {
+   FIELD1: "Paper",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "25"
+ },
+ {
+   FIELD1: "Pickled Chillies",
+   FIELD2: "Kitchen",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "2",
+   FIELD27: "1",
+   FIELD38: "1"
+ },
+ {
+   FIELD1: "Pickled Chillies",
+   FIELD2: "Kitchen",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "10",
+   FIELD27: "5",
+   FIELD38: "5"
+ },
+ {
+   FIELD1: "Pickled Fungus",
+   FIELD2: "Kitchen",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "2",
+   FIELD37: "1",
+   FIELD38: "1"
+ },
+ {
+   FIELD1: "Pickled Fungus",
+   FIELD2: "Kitchen",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "10",
+   FIELD37: "5",
+   FIELD38: "5"
+ },
+ {
+   FIELD1: "Pie",
+   FIELD2: "Kitchen",
+   FIELD3: "Stone Oven",
+   FIELD4: "Fancy Cooking",
+   FIELD7: "3",
+   FIELD14: "1",
+   FIELD75: "1",
+   FIELD77: "1"
+ },
+ {
+   FIELD1: "Pie",
+   FIELD2: "Kitchen",
+   FIELD3: "Iron Oven",
+   FIELD4: "Fancy Cooking",
+   FIELD7: "15",
+   FIELD14: "5",
+   FIELD75: "5",
+   FIELD77: "5"
+ },
+ {
+   FIELD1: "Pie",
+   FIELD2: "Kitchen",
+   FIELD3: "Steam Oven",
+   FIELD4: "Fancy Cooking",
+   FIELD7: "30",
+   FIELD14: "10",
+   FIELD75: "10",
+   FIELD77: "10"
+ },
+ {
+   FIELD1: "Pipe Cluster",
+   FIELD2: "Metalworks",
+   FIELD3: "Decor Workbench",
+   FIELD4: "Outdoor Decor",
+   FIELD7: "1",
+   FIELD22: "6"
+ },
+ {
+   FIELD1: "Pipe Cluster",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Outdoor Decor",
+   FIELD7: "5",
+   FIELD22: "30"
+ },
+ {
+   FIELD1: "Planks",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Carpentry Workbench",
+   FIELD7: "2",
+   FIELD16: "1"
+ },
+ {
+   FIELD1: "Planks",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "10",
+   FIELD16: "5"
+ },
+ {
+   FIELD1: "Planks",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Power Saw",
+   FIELD7: "20",
+   FIELD16: "10"
+ },
+ {
+   FIELD1: "Power Core Dynamo",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Steam Knight Tech",
+   FIELD7: "1",
+   FIELD20: "5",
+   FIELD23: "5",
+   FIELD48: "10",
+   FIELD71: "5"
+ },
+ {
+   FIELD1: "Power Core Dynamo",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Steam Knight Tech",
+   FIELD7: "5",
+   FIELD20: "25",
+   FIELD23: "25",
+   FIELD48: "50",
+   FIELD71: "25"
+ },
+ {
+   FIELD1: "Power Lathe",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Steel Metalworking",
+   FIELD7: "1",
+   FIELD20: "2",
+   FIELD47: "3",
+   FIELD48: "2",
+   FIELD71: "4"
+ },
+ {
+   FIELD1: "Power Lathe",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Steel Metalworking",
+   FIELD7: "5",
+   FIELD20: "10",
+   FIELD47: "15",
+   FIELD48: "10",
+   FIELD71: "20"
+ },
+ {
+   FIELD1: "Power Saw",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Steel Carpentry",
+   FIELD7: "1",
+   FIELD20: "1",
+   FIELD48: "4",
+   FIELD50: "6",
+   FIELD71: "2"
+ },
+ {
+   FIELD1: "Power Saw",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Steel Carpentry",
+   FIELD7: "5",
+   FIELD20: "5",
+   FIELD48: "20",
+   FIELD50: "30",
+   FIELD71: "10"
+ },
+ {
+   FIELD1: "Power Stamper",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Steel Metalworking",
+   FIELD7: "1",
+   FIELD20: "1",
+   FIELD48: "6",
+   FIELD71: "4"
+ },
+ {
+   FIELD1: "Power Stamper",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Steel Metalworking",
+   FIELD7: "5",
+   FIELD20: "5",
+   FIELD48: "30",
+   FIELD71: "20"
+ },
+ {
+   FIELD1: "Practical Bed",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD60: "5"
+ },
+ {
+   FIELD1: "Practical Bed",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "25"
+ },
+ {
+   FIELD1: "Practical Cabinet",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD7: "1",
+   FIELD22: "1"
+ },
+ {
+   FIELD1: "Practical Cabinet",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD22: "5"
+ },
+ {
+   FIELD1: "Practical Chair",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD60: "2"
+ },
+ {
+   FIELD1: "Practical Chair",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "10"
+ },
+ {
+   FIELD1: "Practical Door",
+   FIELD60: "1"
+ },
+ {
+   FIELD1: "Practical Table and Chair Set",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD39: "1",
+   FIELD60: "4"
+ },
+ {
+   FIELD1: "Practical Table and Chair Set",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD39: "5",
+   FIELD60: "20"
+ },
+ {
+   FIELD1: "Prototype Steam Knight Chassis",
+   FIELD2: "Metalworks",
+   FIELD3: "Smithing Forge",
+   FIELD4: "Steam Knight Tech",
+   FIELD7: "1",
+   FIELD20: "5",
+   FIELD48: "20",
+   FIELD72: "1"
+ },
+ {
+   FIELD1: "Prototype Steam Knight Oculars",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Ceramics Workbench",
+   FIELD4: "Steam Knight Tech",
+   FIELD7: "1",
+   FIELD20: "3",
+   FIELD39: "20",
+   FIELD48: "5",
+   FIELD66: "5"
+ },
+ {
+   FIELD1: "Prototype Steam Knight Oculars",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Steam Knight Tech",
+   FIELD7: "5",
+   FIELD20: "15",
+   FIELD39: "100",
+   FIELD48: "25",
+   FIELD66: "25"
+ },
+ {
+   FIELD1: "Pulque",
+   FIELD2: "Kitchen",
+   FIELD3: "Brewing Vat",
+   FIELD5: "Desert",
+   FIELD7: "1",
+   FIELD8: "1"
+ },
+ {
+   FIELD1: "Pulque",
+   FIELD2: "Kitchen",
+   FIELD3: "Mechanical Brewing Tank",
+   FIELD5: "Desert",
+   FIELD7: "15",
+   FIELD8: "5"
+ },
+ {
+   FIELD1: "(chance for random ore)",
+   FIELD2: "Metalworks",
+   FIELD3: "Grinder",
+   FIELD7: "1",
+   FIELD73: "5"
+ },
+ {
+   FIELD1: "Reactive Catalyst",
+   FIELD2: "Chemical Works",
+   FIELD3: "Chemistry Workbench",
+   FIELD4: "Steam Knight Tech",
+   FIELD7: "1",
+   FIELD13: "5",
+   FIELD44: "5",
+   FIELD76: "5"
+ },
+ {
+   FIELD1: "Reactive Catalyst",
+   FIELD2: "Chemical Works",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Steam Knight Tech",
+   FIELD7: "5",
+   FIELD13: "25",
+   FIELD44: "25",
+   FIELD76: "25"
+ },
+ {
+   FIELD1: "Refined Food",
+   FIELD2: "Kitchen",
+   FIELD3: "Stone Oven",
+   FIELD4: "Refined Cooking",
+   FIELD7: "8",
+   FIELD10: "1",
+   FIELD14: "1"
+ },
+ {
+   FIELD1: "Refined Food",
+   FIELD2: "Kitchen",
+   FIELD3: "Iron Oven",
+   FIELD4: "Refined Cooking",
+   FIELD7: "40",
+   FIELD10: "5",
+   FIELD14: "5"
+ },
+ {
+   FIELD1: "Refined Food",
+   FIELD2: "Kitchen",
+   FIELD3: "Steam Oven",
+   FIELD4: "Refined Cooking",
+   FIELD7: "80",
+   FIELD10: "10",
+   FIELD14: "10"
+ },
+ {
+   FIELD1: "Revolver Locker",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Miniaturized Weapons",
+   FIELD7: "1",
+   FIELD46: "2",
+   FIELD47: "1",
+   FIELD60: "4"
+ },
+ {
+   FIELD1: "Revolver Locker",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Miniaturized Weapons",
+   FIELD7: "5",
+   FIELD46: "10",
+   FIELD47: "5",
+   FIELD60: "20"
+ },
+ {
+   FIELD1: "Rug",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD4: "Improved Decor Research",
+   FIELD7: "1",
+   FIELD22: "4"
+ },
+ {
+   FIELD1: "Rug",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Improved Decor Research",
+   FIELD7: "5",
+   FIELD22: "20"
+ },
+ {
+   FIELD1: "Rum",
+   FIELD2: "Kitchen",
+   FIELD3: "Still",
+   FIELD5: "Tropical",
+   FIELD7: "1",
+   FIELD56: "1"
+ },
+ {
+   FIELD1: "Sausages",
+   FIELD2: "Metalworks",
+   FIELD3: "Grinder",
+   FIELD7: "2",
+   FIELD15: "2"
+ },
+ {
+   FIELD1: "Sausages",
+   FIELD2: "Kitchen",
+   FIELD3: "Stone Oven",
+   FIELD7: "2",
+   FIELD15: "2"
+ },
+ {
+   FIELD1: "Sausages",
+   FIELD2: "Kitchen",
+   FIELD3: "Iron Oven",
+   FIELD7: "10",
+   FIELD15: "10"
+ },
+ {
+   FIELD1: "Sausages",
+   FIELD2: "Kitchen",
+   FIELD3: "Steam Oven",
+   FIELD7: "20",
+   FIELD15: "20"
+ },
+ {
+   FIELD1: "Science Materials",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Ceramics Workbench",
+   FIELD7: "1",
+   FIELD38: "3",
+   FIELD58: "1"
+ },
+ {
+   FIELD1: "Science Materials",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD38: "15",
+   FIELD58: "5"
+ },
+ {
+   FIELD1: "Simple Cabinet",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD7: "1",
+   FIELD22: "1"
+ },
+ {
+   FIELD1: "Simple Cabinet",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD22: "5"
+ },
+ {
+   FIELD1: "Simple Chair",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD60: "1"
+ },
+ {
+   FIELD1: "Simple Chair",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "5"
+ },
+ {
+   FIELD1: "Simple Closed Window",
+   FIELD60: "1"
+ },
+ {
+   FIELD1: "Simple Door",
+   FIELD16: "1"
+ },
+ {
+   FIELD1: "Simple Open Window",
+   FIELD60: "1"
+ },
+ {
+   FIELD1: "Simple Table and Chair Set",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD60: "3"
+ },
+ {
+   FIELD1: "Simple Table and Chair Set",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "15"
+ },
+ {
+   FIELD1: "Simple Wall Shrine",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD7: "1",
+   FIELD22: "1"
+ },
+ {
+   FIELD1: "Simple Wall Shrine",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD22: "5"
+ },
+ {
+   FIELD1: "Small Clothes Line",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD7: "1",
+   FIELD22: "1"
+ },
+ {
+   FIELD1: "Small Clothes Line",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD22: "5"
+ },
+ {
+   FIELD1: "Small Iron Oven",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD23: "1",
+   FIELD47: "1",
+   FIELD48: "1"
+ },
+ {
+   FIELD1: "Small Iron Oven",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD23: "5",
+   FIELD47: "5",
+   FIELD48: "5"
+ },
+ {
+   FIELD1: "Smithing Forge",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD23: "3",
+   FIELD46: "2"
+ },
+ {
+   FIELD1: "Smithing Forge",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD23: "15",
+   FIELD46: "10"
+ },
+ {
+   FIELD1: "Spice Rack",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD60: "1"
+ },
+ {
+   FIELD1: "Spice Rack",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "5"
+ },
+ {
+   FIELD1: "Spring-Loaded Power Core",
+   FIELD2: "Steam Knight Manufactory",
+   FIELD3: "Power Core Dynamo",
+   FIELD7: "1",
+   FIELD20: "5",
+   FIELD34: "8",
+   FIELD48: "8",
+   FIELD70: "4"
+ },
+ {
+   FIELD1: "Stained Glass Window",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD4: "Outdoor Decor",
+   FIELD7: "1",
+   FIELD22: "6"
+ },
+ {
+   FIELD1: "Stained Glass Window",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Outdoor Decor",
+   FIELD7: "5",
+   FIELD22: "30"
+ },
+ {
+   FIELD1: "Standing Desk",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD60: "2"
+ },
+ {
+   FIELD1: "Standing Desk",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "10"
+ },
+ {
+   FIELD1: "Steam Compressor",
+   FIELD2: "Metalworks",
+   FIELD3: "Smithing Forge",
+   FIELD7: "1",
+   FIELD32: "2",
+   FIELD39: "2",
+   FIELD71: "3"
+ },
+ {
+   FIELD1: "Steam Compressor",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD32: "10",
+   FIELD39: "10",
+   FIELD71: "15"
+ },
+ {
+   FIELD1: "Steam Distributor",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Steel Mining",
+   FIELD7: "1",
+   FIELD20: "1",
+   FIELD33: "2",
+   FIELD34: "2",
+   FIELD71: "4"
+ },
+ {
+   FIELD1: "Steam Distributor",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Steel Mining",
+   FIELD7: "5",
+   FIELD20: "5",
+   FIELD33: "10",
+   FIELD34: "10",
+   FIELD71: "20"
+ },
+ {
+   FIELD1: "Steam Knight Forge",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Steam Knight Tech",
+   FIELD7: "1",
+   FIELD23: "10",
+   FIELD33: "8",
+   FIELD47: "8",
+   FIELD71: "2"
+ },
+ {
+   FIELD1: "Steam Knight Forge",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Steam Knight Tech",
+   FIELD7: "5",
+   FIELD23: "50",
+   FIELD33: "40",
+   FIELD47: "40",
+   FIELD71: "10"
+ },
+ {
+   FIELD1: "Steam Knight MK-1",
+   FIELD2: "Steam Knight Manufactory",
+   FIELD3: "Steam Knight Forge",
+   FIELD7: "1",
+   FIELD31: "2",
+   FIELD54: "1",
+   FIELD55: "1",
+   FIELD69: "4"
+ },
+ {
+   FIELD1: "Steam Knight MK-1 Chassis",
+   FIELD2: "Metalworks",
+   FIELD3: "Smithing Forge",
+   FIELD7: "1",
+   FIELD20: "10",
+   FIELD53: "1",
+   FIELD61: "1",
+   FIELD72: "5"
+ },
+ {
+   FIELD1: "Steam Knight Prototype",
+   FIELD2: "Steam Knight Manufactory",
+   FIELD3: "Steam Knight Forge",
+   FIELD7: "1",
+   FIELD31: "1",
+   FIELD61: "1",
+   FIELD62: "1",
+   FIELD69: "2"
+ },
+ {
+   FIELD1: "Steam Oven",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Steel Cooking",
+   FIELD7: "1",
+   FIELD23: "6",
+   FIELD33: "4",
+   FIELD34: "4",
+   FIELD71: "2"
+ },
+ {
+   FIELD1: "Steam Oven",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Steel Cooking",
+   FIELD7: "5",
+   FIELD23: "30",
+   FIELD33: "20",
+   FIELD34: "20",
+   FIELD71: "10"
+ },
+ {
+   FIELD1: "Steam Radiator",
+   FIELD2: "Metalworks",
+   FIELD3: "Decor Workbench",
+   FIELD7: "1",
+   FIELD22: "1"
+ },
+ {
+   FIELD1: "Steam Radiator",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD22: "5"
+ },
+ {
+   FIELD1: "Steel Ingots",
+   FIELD2: "Metalworks",
+   FIELD3: "Stone Smelting Crucible",
+   FIELD4: "Steelworking Research",
+   FIELD7: "1",
+   FIELD13: "1",
+   FIELD25: "1",
+   FIELD46: "1"
+ },
+ {
+   FIELD1: "Steel Ingots",
+   FIELD2: "Metalworks",
+   FIELD3: "Iron Smelting Crucible",
+   FIELD4: "Steelworking Research",
+   FIELD7: "5",
+   FIELD13: "5",
+   FIELD25: "5",
+   FIELD46: "5"
+ },
+ {
+   FIELD1: "Steel Plates",
+   FIELD2: "Metalworks",
+   FIELD3: "Smithing Forge",
+   FIELD4: "Steam Knight Tech",
+   FIELD7: "1",
+   FIELD71: "5"
+ },
+ {
+   FIELD1: "Steel Plates",
+   FIELD2: "Metalworks",
+   FIELD3: "Power Stamper",
+   FIELD4: "Steam Knight Tech",
+   FIELD7: "10",
+   FIELD71: "50"
+ },
+ {
+   FIELD1: "Still",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Alcohol Distillation",
+   FIELD7: "1",
+   FIELD23: "1",
+   FIELD33: "2",
+   FIELD34: "1"
+ },
+ {
+   FIELD1: "Still",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Alcohol Distillation",
+   FIELD7: "5",
+   FIELD23: "5",
+   FIELD33: "10",
+   FIELD34: "5"
+ },
+ {
+   FIELD1: "Stone Altar",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD40: "1",
+   FIELD73: "4"
+ },
+ {
+   FIELD1: "Stone Altar",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD40: "5",
+   FIELD73: "20"
+ },
+ {
+   FIELD1: "Stone Ceramics Kiln",
+   FIELD60: "2",
+   FIELD73: "4"
+ },
+ {
+   FIELD1: "Stone Oven",
+   FIELD60: "2",
+   FIELD73: "4"
+ },
+ {
+   FIELD1: "Stone Pellet Ammo",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Ceramics Workbench",
+   FIELD7: "1",
+   FIELD73: "5"
+ },
+ {
+   FIELD1: "Stone Pellet Ammo",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD73: "25"
+ },
+ {
+   FIELD1: "Stone Plinth",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD7: "1",
+   FIELD22: "1"
+ },
+ {
+   FIELD1: "Stone Plinth",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD22: "5"
+ },
+ {
+   FIELD1: "Stone Smelting Crucible",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD60: "2",
+   FIELD73: "6"
+ },
+ {
+   FIELD1: "Stone Smelting Crucible",
+   FIELD2: "Ceramics Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "10",
+   FIELD73: "30"
+ },
+ {
+   FIELD1: "Sugarloaf",
+   FIELD2: "Kitchen",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "4",
+   FIELD74: "1"
+ },
+ {
+   FIELD1: "Sugarloaf",
+   FIELD2: "Kitchen",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "20",
+   FIELD74: "5"
+ },
+ {
+   FIELD1: "Sulphur Tonic",
+   FIELD2: "Chemical Works",
+   FIELD3: "Chemistry Workbench",
+   FIELD4: "Tonic Healing",
+   FIELD7: "1",
+   FIELD76: "1"
+ },
+ {
+   FIELD1: "Sulphur Tonic",
+   FIELD2: "Chemical Works",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Tonic Healing",
+   FIELD7: "5",
+   FIELD76: "5"
+ },
+ {
+   FIELD1: "Tin Exotic Caviar",
+   FIELD2: "Kitchen",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "4",
+   FIELD35: "1",
+   FIELD46: "1"
+ },
+ {
+   FIELD1: "Tin Exotic Caviar",
+   FIELD2: "Kitchen",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "20",
+   FIELD35: "5",
+   FIELD46: "5"
+ },
+ {
+   FIELD1: "Tinned Meat",
+   FIELD2: "Kitchen",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "2",
+   FIELD15: "1",
+   FIELD46: "1"
+ },
+ {
+   FIELD1: "Tinned Meat",
+   FIELD2: "Kitchen",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "10",
+   FIELD15: "5",
+   FIELD46: "5"
+ },
+ {
+   FIELD1: "Uranium Ingots",
+   FIELD2: "Metalworks",
+   FIELD3: "Stone Smelting Crucible",
+   FIELD4: "Event-only",
+   FIELD7: "1",
+   FIELD13: "1",
+   FIELD59: "1"
+ },
+ {
+   FIELD1: "Uranium Ingots",
+   FIELD2: "Metalworks",
+   FIELD3: "Iron Smelting Crucible",
+   FIELD4: "Event-only",
+   FIELD7: "5",
+   FIELD13: "5",
+   FIELD59: "5"
+ },
+ {
+   FIELD1: "Vacuum Chamber",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD4: "Steel Science",
+   FIELD7: "1",
+   FIELD20: "1",
+   FIELD39: "1",
+   FIELD71: "2"
+ },
+ {
+   FIELD1: "Vacuum Chamber",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Steel Science",
+   FIELD7: "5",
+   FIELD20: "5",
+   FIELD39: "5",
+   FIELD71: "10"
+ },
+ {
+   FIELD1: "Vent",
+   FIELD2: "Metalworks",
+   FIELD3: "Decor Workbench",
+   FIELD4: "Outdoor Decor",
+   FIELD7: "1",
+   FIELD22: "6"
+ },
+ {
+   FIELD1: "Vent",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Outdoor Decor",
+   FIELD7: "5",
+   FIELD22: "30"
+ },
+ {
+   FIELD1: "Ventilation Unit",
+   FIELD2: "Metalworks",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD33: "2",
+   FIELD48: "2"
+ },
+ {
+   FIELD1: "Ventilation Unit",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD33: "10",
+   FIELD48: "10"
+ },
+  {
+   FIELD1: "Wall-Mounted Aurochs Head",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD7: "1",
+   FIELD19B: "2",
+   FIELD25: "1",
+   FIELD39: "1",
+   FIELD50: "1",
+   FIELD63B: "2",
+   FIELD76: "1",
+ },
+ {
+   FIELD1: "Wall-Mounted Beetle Head",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD7: "1",
+   FIELD19B: "2",
+   FIELD25: "1",
+   FIELD39: "1",
+   FIELD50: "1",
+   FIELD63C: "2",
+   FIELD76: "1",
+ },
+ {
+   FIELD1: "Wall Lamp",
+   FIELD2: "Metalworks",
+   FIELD3: "Decor Workbench",
+   FIELD4: "Outdoor Decor",
+   FIELD7: "1",
+   FIELD22: "6"
+ },
+ {
+   FIELD1: "Wall Lamp",
+   FIELD2: "Metalworks",
+   FIELD3: "Advanced Workbench",
+   FIELD4: "Outdoor Decor",
+   FIELD7: "5",
+   FIELD22: "30"
+ },
+ {
+   FIELD1: "Whisky",
+   FIELD2: "Kitchen",
+   FIELD3: "Still",
+   FIELD5: "Temperate, Cold",
+   FIELD7: "1",
+   FIELD18: "1"
+ },
+ {
+   FIELD1: "Wine",
+   FIELD2: "Kitchen",
+   FIELD3: "Brewing Vat",
+   FIELD5: "Temperate",
+   FIELD7: "3",
+   FIELD42: "1"
+ },
+ {
+   FIELD1: "Wine",
+   FIELD2: "Kitchen",
+   FIELD3: "Mechanical Brewing Tank",
+   FIELD5: "Temperate",
+   FIELD7: "15",
+   FIELD42: "5"
+ },
+ {
+   FIELD1: "Wood Plinth",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Decor Workbench",
+   FIELD7: "1",
+   FIELD22: "1"
+ },
+ {
+   FIELD1: "Wood Plinth",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD22: "5"
+ },
+ {
+   FIELD1: "Wooden Altar",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD50: "4"
+ },
+ {
+   FIELD1: "Wooden Altar",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD50: "20"
+ },
+ {
+   FIELD1: "Wooden Brewing Vat",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Assembly Workbench",
+   FIELD7: "1",
+   FIELD60: "3"
+ },
+ {
+   FIELD1: "Wooden Brewing Vat",
+   FIELD2: "Carpentry Workshop",
+   FIELD3: "Advanced Workbench",
+   FIELD7: "5",
+   FIELD60: "15"
+ },
+ {
+   FIELD1: "Zinc Ingots",
+   FIELD2: "Metalworks",
+   FIELD3: "Stone Smelting Crucible",
+   FIELD7: "1",
+   FIELD13: "1",
+   FIELD68: "3"
+ },
+ {
+   FIELD1: "Zinc Ingots",
+   FIELD2: "Metalworks",
+   FIELD3: "Iron Smelting Crucible",
+   FIELD7: "5",
+   FIELD13: "5",
+   FIELD68: "15"
+ }
+];
+
+var searchTimer;
+var tempTimer;
+var foundItems = [];
+
+function findItems(product, workshop, module, research) {
+	foundItems = [];
+	//console.log("search occurred")
+	var i = 0;
+	
+	var p = new RegExp(product, 'i');
+	var w = new RegExp(workshop, 'i');
+	var m = new RegExp(module, 'i');
+	var r = new RegExp(research, 'i');
+	
+	for (i = 0; items.length > i; i++) {
+		if (p.test(items[i].FIELD1) && w.test(items[i].FIELD2) && m.test(items[i].FIELD3) && r.test(items[i].FIELD4)) {
+			foundItems.push(items[i]);
+		}
+	}
+	
+	//console.log(foundItems.length);
+	showItems();
+}
+
+function itemQuery() {
+	var outputDiv = document.getElementById('searchresults');
+	
+	var p = document.getElementById("product").value.trim();
+	var w = document.getElementById("workshop").value.trim();
+	var m = document.getElementById("module").value.trim();
+	var r = document.getElementById("research").value.trim();
+	
+	if (p == "" && w == "" && m == "" && r == "") {
+		outputDiv.innerHTML = "";
+	} else {
+		clearTimeout(tempTimer);
+		outputDiv.innerHTML = "<div><span class='biome'>Searching for recipes...</span></div>";
+		tempTimer = setTimeout(findItems, 600, p, w, m, r);
+	}
+}
+
+function itemsQueryTimer() {
+	clearTimeout(searchTimer); 
+	searchTimer = setTimeout(itemQuery, 300);
+}
+
+function clearSearch() {
+	var outputDiv = document.getElementById('searchresults');
+	outputDiv.innerHTML = "";
+	
+	document.getElementById("product").value = "";
+	document.getElementById("workshop").value = "";
+	document.getElementById("module").value = "";
+	document.getElementById("research").value = "";
+}
+
+function showItems() {
+	var output = "<div><span class='biome'>No items found. Try being a little less specific.</span></div>";
+	var outputDiv = document.getElementById('searchresults');
+	var outputAfter = "";
+	var i = 0;
+	
+	//console.log(items.length);
+	if (foundItems.length > 0) {
+		output = "<div id='searchtop'><span class='product'>Product</span><span class='materials'>Materials</span><span class='workshop'>Workshop</span><span class='module'>Module</span><span class='research'>Research</span><span class='biome'>Biome</span></div>\r\n";
+		
+		for (i = 0; foundItems.length > i; i++) {
+		
+			output += "\r\n<div>\r\n";
+			outputAfter = "";
+			
+			// product + yield
+			if (typeof foundItems[i].FIELD1 != "undefined") {
+				output += "<span class='product'><div></div>" + foundItems[i].FIELD1;
+				
+				if (typeof foundItems[i].FIELD7 != "undefined") {
+					output += " " + foundItems[i].FIELD7 + "x";
+				} else {
+					output += " 1x";
+				}
+				output += "</span>";
+			} else {
+				output += "<span class='product'>ERROR</span>";
+			}
+			
+			// workshop
+			if (typeof foundItems[i].FIELD2 != "undefined") {
+				outputAfter += "<span class='workshop'>" + foundItems[i].FIELD2  + "</span>";
+			} else {
+				outputAfter += "<span class='workshop'></span>";
+			}
+			
+			// module
+			if (typeof foundItems[i].FIELD3 != "undefined") {
+				outputAfter += "<span class='module'>" + foundItems[i].FIELD3 + "</span>";
+			} else {
+				outputAfter += "<span class='module'></span>";
+			}
+			
+			// research
+			if (typeof foundItems[i].FIELD4 != "undefined") {
+				outputAfter += "<span class='research'>" + foundItems[i].FIELD4 + "</span>";
+			} else {
+				outputAfter += "<span class='research'></span>";
+			}
+			
+			// biome
+			if (typeof foundItems[i].FIELD5 != "undefined") {
+				outputAfter += "<span class='biome'>" + foundItems[i].FIELD5 + "</span>";
+			} else {
+				outputAfter += "<span class='biome'>all</span>";
+			}
+			
+			// materials
+			output += "<span class='materials'>";
+			for (k in foundItems[i]) {
+				if (k == "FIELD1" || k == "FIELD2" || k == "FIELD3" || k == "FIELD4" || k == "FIELD5" || k == "FIELD7") {
+					// do nothing
+				} else {
+					output += foundItems[i][k] + "x " + labels[0][k] + "<br/>";
+				}
+			}
+			output += "</span>";
+			
+			output += outputAfter;
+			
+			output += "\r\n</div>\r\n";
+		}
+		
+	}
+	
+	outputDiv.innerHTML = output;
+}
+
+</script>
 	</body>
 </html>

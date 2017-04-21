@@ -1,0 +1,5 @@
+<skin name="New UI 01" texture="ui/newUI01.png">
+	<element name="image" scale="exact">
+		<state name="minimap_border" w="263" h="268" y="0" x="0" />
+	</element>
+</skin>

@@ -554,7 +554,7 @@ gameobject "citizen" inherit "ai_agent"
 		--tmEnter("character three second update")
 						
 		-- let's try doing spectres here instead
-		if SELF.tags.dead and not SELF.tags.last_rights_performed then
+		if SELF.tags.dead and not SELF.tags.last_rites_performed then
 		
 			if is_it_nighttime and not SELF.tags.did_spectre_check then
 				SELF.tags.did_spectre_check = true
@@ -568,10 +568,10 @@ gameobject "citizen" inherit "ai_agent"
 				
 				if not SELF.tags.buried or
 					SELF.tags.occult_mark_death then
-					ghostChance = ghostChance + 5
+					ghostChance = ghostChance + 10
 				end
 				
-				if rand(1,100) < ghostChance then  -- rand(1,100)
+				if rand(1,75) < ghostChance then  -- rand(1,100)
 						
 					-- maybe spawn a ghost.
 					-- ghostgoals
@@ -5862,6 +5862,7 @@ gameobject "citizen" inherit "ai_agent"
 
 	receive Nightfall()
 	<<
+		--[[ moved elsewhere
 		-- It's transitioning to nighttime! Do stuff you'd do at night.
 		if SELF.tags.dead and not SELF.tags.last_rites_performed then
 			local ghostChance = 2
@@ -5916,7 +5917,7 @@ gameobject "citizen" inherit "ai_agent"
 			end
 			return
 		end
-		
+		]]--
 		-- lose invulnerability upon night.
 		if SELF.tags.temp_hostiles_dont_target then
 			SELF.tags.temp_hostiles_dont_target = nil

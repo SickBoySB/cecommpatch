@@ -986,13 +986,13 @@ Entity
 	name = "Upper Class Chair",
 	displayname = "Ornate Chair",
 	type = "chair",
-	description = "A vertiable throne, used by Our Betters. Made in a Carpentry Workshop. Quality: 0",
+	description = "A vertiable throne, used by Our Betters. Made in a Carpentry Workshop. Quality: -1",
 	tags = { "upper_class_module", "chair" },
 	icon_skin = "ui//orderIcons.xml",
 	icon="uc_chair_icon",
 	tier=2,
 	repair_materials = { "planks", "ingot_of_gold" },
-	quality=0,
+	quality=-1,
 	upkeep_type=3,
 	upkeep_quantity=1
 }
@@ -1691,7 +1691,7 @@ Entity
 	icon="lc_table_icon",
 	tier=1,
 	repair_materials={"planks"},
-	quality=0,
+	quality=-1,
 	upkeep_type=1,
 	upkeep_quantity=1
 }
@@ -1708,7 +1708,7 @@ Entity
 	icon="uc_table_icon",
 	tier=2,
 	repair_materials = { "planks", "ingot_of_gold" },
-	quality=0,
+	quality=-1,
 	upkeep_type=3,
 	upkeep_quantity=1
 }
@@ -1737,7 +1737,7 @@ Entity
 	icon_skin = "ui//orderIcons.xml",
 	icon="lc_chair_icon",
 	tier=1,
-	quality=0,
+	quality=-1,
 	upkeep_type=-1,
 	upkeep_quantity=-1
 }
@@ -1752,7 +1752,7 @@ Entity
 	icon_skin = "ui//orderIcons.xml",
 	icon="mc_chair_icon",
 	tier=1,
-	quality=0,
+	quality=-1,
 	upkeep_type=1,
 	upkeep_quantity=1
 }
@@ -1760,7 +1760,7 @@ Entity
 Entity
 {
 	name = "Middle Class Table and Chair Set",
-	displayname = "Practical Tale and Chair Set",
+	displayname = "Practical Table and Chair Set",
 	type = "table",
 	description = "A practical, well-wrought table and chair. Made in a Carpentry Workshop.",
 	tags = { "middle_class_module", "table", "chair", "sittable" },
@@ -1768,7 +1768,7 @@ Entity
 	icon="mc_table_icon",
 	tier=2,
 	repair_materials={"planks"},
-	quality=0,
+	quality=-1,
 	upkeep_type=1,
 	upkeep_quantity=1
 }

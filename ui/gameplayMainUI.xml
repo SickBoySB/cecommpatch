@@ -414,6 +414,7 @@
 					<container type="vertbox" hsp="fixed" vsp="fixed" fixed_width="260" fixed_height="260" horizontal_margin="1" horizontal_padding="8" vertical_padding="2" vertical_margin="6" solidfill="1" solidfillname="miniPaper" skin="ui/styles/default.xml">
 						<canvas name="minimap_canvas" hsp="fixed" vsp="fixed" fixed_width="256" fixed_height="256"/>
 						<!-- <picture file="ui\\minimap_filler.png" hsp="minimum" vsp="minimum"/> -->
+						<image hsp="minimum" vap="top" vertical_margin="-263" horizontal_margin="-7" image="minimap_border" skin="ui/newUI01.xml" scale="100" />
 					</container>
 					
 					<!-- CECOMMPATCH - Fixes the UI being pushed off the screen at lower resolutions and/or when there are a lot of alerts -->

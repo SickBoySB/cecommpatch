@@ -1,0 +1,205 @@
+<!--
+
+  Beacons: tie-in code (C++ side) for anything that needs to create a beacon. So, for instance, "Explore Area", "Hunt for Beetles", "Send Patrol", that
+  sort of thing.
+  
+-->
+
+<beacons>
+	<element name="Explore" entityName="waypoint" ghost="models//ui//UIBeacon.upm" instant="1"  />
+	<!-- <element name="Rally Squad" entityName="beacon" ghost="models//ui//UIBeacon.upm" instant="1"  />-->
+	
+	<element name="Rally Squad" entityName="waypoint" ghost="models//ui//UIBeacon.upm" instant="1"  />
+	
+	<element name="Sound Test 1" entityName="waypoint" ghost="models//ui//UIBeacon.upm" instant="1"  />
+	<element name="Sound Test 2" entityName="waypoint" ghost="models//ui//UIBeacon.upm" instant="1"  />
+	<beacon name="Flatten" entityName="Flatten"/>
+	<beacon name="Clear Trees" entityName="Clear Trees"/>
+   
+	<element name="Airship Mast"
+			generate_dynamics="0"
+			entityName="airship_mast"
+			ghost="models\constructions\airshipMooringTower.upm"
+			job="Assemble Airship Mast"
+			use_assignment="1"
+			assignment_name="Construct Airship Mast"/>
+
+	<element name="Gabion (High)"
+			generate_dynamics="1"
+			entityName="gabion"
+			ghost="models\constructions\gabion.upm"
+			job="Assemble Gabion"
+			use_assignment="1"
+			assignment_name="Construct Gabion"/>
+	
+     <element name="Gabion (Low)"
+		    generate_dynamics="1"
+		    entityName="gabion"
+		    ghost="models\constructions\gabionHalfHeight.upm"
+		    job="Assemble Gabion (Half)"
+		    use_assignment="1"
+		    assignment_name="Construct Gabion"/>
+	
+	<element name="Lamp (Small)"
+		    generate_dynamics="0"
+		    entityName="lampFreestanding"
+		    ghost="models\constructions\lampPost00.upm"
+		    job="Assemble Lamp (Small)"
+		    use_assignment="1"
+		    assignment_name="Assemble Lamp"/>
+	
+	<element name="Lamp (Medium)"
+		    generate_dynamics="0"
+		    entityName="lampFreestanding"
+		    ghost="models\constructions\lampPost01.upm"
+		    job="Assemble Lamp (Medium)"
+		    use_assignment="1"
+		    assignment_name="Assemble Lamp"/>
+	
+	<element name="Lamp (Large)"
+		    generate_dynamics="0"
+		    entityName="lampFreestanding"
+		    ghost="models\constructions\lampPost02.upm"
+		    job="Assemble Lamp (Large)"
+		    use_assignment="1"
+		    assignment_name="Assemble Lamp"/>
+	
+	<element name="Plant Grass"
+		    generate_dynamics="0"
+		    entityName="placeable"
+		    ghost="models/nature/grass/grassLumpGreen00.upm"
+		    job="Plant Grass"
+		    use_assignment="1"
+		    assignment_name="Plant Grass"/>
+	
+	<element name="Plant Shrubbery"
+		    generate_dynamics="0"
+		    entityName="placeable"
+		    ghost="models/nature/shrubRoundLeaf00.upm"
+		    job="Plant Shrubbery"
+		    use_assignment="1"
+		    assignment_name="Plant Shrubbery"/>
+	
+	<element name="Plant Flowers"
+		    generate_dynamics="0"
+		    entityName="placeable"
+		    ghost="models\\nature\\flowersBlue00.upm"
+		    job="Plant Flowers"
+		    use_assignment="1"
+		    assignment_name="Plant Flowers"/>
+  
+     <element name="Landmine" entityName="landmine" ghost="models\\commodities\\landmineBuried.upm" job="Place Landmine"/>
+     <element name="Brick Wall" entityName="fence" ghost="models/constructions/fences/brickWall00Post.upm" job="Assemble Construction"/>
+		
+		<element name="Stakes" entityName="Stakes" ghost="models\constructions\stakes01.upm" job="Assemble Stakes"/>
+		<element name="Minum Gun Turret" entityName="minum_turret" ghost="models\modules\turretBase.upm" job="Assemble Construction" use_skeleton="1"/>
+		<element name="Bunker" entityName="bunker" ghost="models\modules\bunker.upm" job="Assemble Construction"/>
+		<element name="Steam Knight" entityName="steamknight" ghost="models\TEST_box.upm" instant="1"/> <!--job="Assemble Steam Knight"/> -->
+		<element name="Quaggaroth" entityName="Quaggaroth" ghost="models\TEST_box.upm" job="Assemble Maw of Quaggaroth" use_ghost="0"/>
+		<element name="Trench" entityName="Trench" ghost="models\TEST_box.upm" job="Dig Trench" use_ghost="0"/>
+		<element name="DEV Coordinate Marker" entityName="clearable" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="DEV Alarm Beacon" entityName="waypoint" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Obeliskian Ruins 00" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Obeliskian Ruins 01" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="crate" entityName="container" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Steam Knight Supplies" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+  
+		<element name="charred_meat" entityName="item" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="cult_juice" entityName="item" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="anger_juice" entityName="item" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="happy_juice" entityName="item" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Primed Grenade" entityName="clearable" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="fish_juice" entityName="item" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="obeliskian_seal" entityName="item" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="science_crate" entityName="item" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="bottle_of_whisky" entityName="item" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Herd of Aurochs" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Flock of Dodos" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Skulk of Foxes" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Mans o Wars" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+		
+		<element name="Module Crates" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+		
+		<element name="Office Supply Drop" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+		
+		
+		<element name="Random Commodities" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Construction Materials" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Bamboo Shipment" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Random Food" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Random Trade Food" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Fishperson" entityName="fishperson" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Mob of Fishpeople" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Fox" entityName="animal" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Capybara" entityName="animal" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Small Anemone" entityName="animal" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Tall Anemone" entityName="animal" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Huge Anemone" entityName="animal" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Deathwurm" entityName="animal" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Wooly Aurochs" entityName="animal" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Beetle" entityName="animal" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Desert Tortoise" entityName="animal" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Scrub Tortoise" entityName="animal" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Swamp Tortoise" entityName="animal" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Giant Horseshoe Crab" entityName="animal" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Horseshoe Crab" entityName="animal" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="frog" entityName="animal" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="trilobite" entityName="animal" ghost="models\TEST_box.upm" instant="1"/>
+		<element name="Land Dragon" entityName="animal" ghost="models\TEST_box.upm" instant="1"/>
+	
+	<element name="Spectre" entityName="spectre" ghost="models\TEST_box.upm" instant="1"/>
+     
+	<element name="Selenian" entityName="selenian" ghost="models\TEST_box.upm" instant="1"/>
+	
+	<element name="Geometer" entityName="geometer" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Geometer Mech" entityName="geometer_mech" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Geometer Portal" entityName="geometer_portal" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Geometer Obervator" entityName="geometer_observator" ghost="models\TEST_box.upm" instant="1"/>
+	
+	<element name="Quag'garoth" entityName="quaggaroth" ghost="models\TEST_box.upm" instant="1"/>
+	
+     <element name="Obeliskian Servitor" entityName="obeliskian" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Obeliskian Master" entityName="obeliskian" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Obeliskian Guardian" entityName="obeliskian" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Obeliskian Group" entityName="obeliskian_group" ghost="models\TEST_box.upm" instant="1"/>
+	
+     <element name="Gore Cluster" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+     <element name="Aspen Cluster" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Joshua Trees" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Mangroves" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Weeping Willows" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+  <element name="Fishpeople Group" entityName="fishpeople_group"  ghost="models\TEST_box.upm" instant="1"/>
+  <element name="citizen" entityName="citizen" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="lower_class" entityName="citizen" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="middle_class" entityName="citizen" ghost="models\TEST_box.upm" instant="1"/>
+  <element name="murderer" entityName="citizen" ghost="models\TEST_box.upm" instant="1"/>
+  <element name="Bandit" entityName="bandit" ghost="models\TEST_box.upm" instant="1"/>
+	
+	<element name="Novorus Levy" entityName="foreigner" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Novorus NCO" entityName="foreigner" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Novorus Unit" entityName="foreigner_group" ghost="models\TEST_box.upm" instant="1"/>
+	
+	<element name="Clockworkian Merchant" entityName="outsider" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Colonial Ministry Bureaucrat" entityName="outsider" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Frontier Doctor" entityName="outsider" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Occult Inspector" entityName="outsider" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Occult Sergeant" entityName="outsider" ghost="models\TEST_box.upm" instant="1"/>
+	
+	<element name="Republique Artist" entityName="foreigner" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Republique Conscript" entityName="foreigner" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Republique NCO" entityName="foreigner" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Republique Unit" entityName="foreigner_group" ghost="models\TEST_box.upm" instant="1"/>
+	
+	<element name="Stahlmark Trupp" entityName="foreigner" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Stahlmark NCO" entityName="foreigner" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Stahlmark Unit" entityName="foreigner_group" ghost="models\TEST_box.upm" instant="1"/>
+	
+	<element name="Bandit Unit" entityName="foreigner_group" ghost="models\TEST_box.upm" instant="1"/>
+	
+     <element name="Vermin Beetle Spawn" entityName="objectcluster" ghost="models\TEST_box.upm" instant="1"/>
+     <element name="Frog" entityName="animal" ghost="models\TEST_box.upm" instant="1"/>
+	<element name="Giant Beetle" entityName="animal" ghost="models\TEST_box.upm" instant="1"/>
+     <element name="Medium Explosion" entityName="explosion" ghost="models\TEST_box.upm" instant="1"/>
+     <element name="Urchin Grenade Explosion" entityName="explosion" ghost="models\TEST_box.upm" instant="1"/>
+     <element name="Airdrop Crate" entityName="airdropcrate" ghost="models\TEST_box.upm" instant="1"/>
+</beacons>
