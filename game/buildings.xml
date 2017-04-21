@@ -11796,8 +11796,9 @@ are already contained within other buildings. Consider those a placeholder for l
 		<addition type="module" name="Lower Class Door 00" required="1"/>
 		<addition type="module" name="Cot" required="1"/>
 		<!-- <addition type="module" name="Lower Class Window 00" required="0"/> -->
-		<addition type="module" name="Lower Class Table" required="0"/>
 		<addition type="module" name="Lower Class Chair" required="0"/>
+		<addition type="module" name="Lower Class Table and Chair Set" required="0"/>
+		<addition type="module" name="Lower Class Table" required="0"/>
 		<addition type="module" name="LC Cabinet" required="0"/>
 		<addition type="module" name="Lower Class Window 00" required="0"/>
 		<addition type="module" name="Lower Class Window 01" required="0"/>
