@@ -1082,6 +1082,8 @@
 		<label name="condition2todoIntLabel"  parentContainer="condition2todoContainerInt" officeStringAttrib="condition2todoInt" font="medium"  color="black"/>
 		<label name="condition3todoTextLabel" parentContainer="condition3todoContainerText" officeStringAttrib="condition3todoText" font="medium"  color="black"/>
 		<label name="condition3todoIntLabel"  parentContainer="condition3todoContainerInt" officeStringAttrib="condition3todoInt" font="medium"  color="black"/>
+		<label name="condition4todoTextLabel" parentContainer="condition4todoContainerText" officeStringAttrib="condition4todoText" font="medium"  color="black"/>
+		<label name="condition4todoIntLabel"  parentContainer="condition4todoContainerInt" officeStringAttrib="condition4todoInt" font="medium"  color="black"/>
 		
 		<label name="condition1DoneTextLabel" parentContainer="condition1doneContainerText" officeStringAttrib="condition1DoneText" font="medium" color="bone"/>
 		<label name="condition1DoneIntLabel"  parentContainer="condition1doneContainerInt" officeStringAttrib="condition1DoneInt" font="medium" color="bone"/>
@@ -1115,6 +1117,8 @@
 		<label name="condition2todoIntLabel"  parentContainer="condition2todoContainerInt" officeStringAttrib="condition2todoInt" font="medium"  color="black"/>
 		<label name="condition3todoTextLabel" parentContainer="condition3todoContainerText" officeStringAttrib="condition3todoText" font="medium"  color="black"/>
 		<label name="condition3todoIntLabel"  parentContainer="condition3todoContainerInt" officeStringAttrib="condition3todoInt" font="medium"  color="black"/>
+		<label name="condition4todoTextLabel" parentContainer="condition4todoContainerText" officeStringAttrib="condition4todoText" font="medium"  color="black"/>
+		<label name="condition4todoIntLabel"  parentContainer="condition4todoContainerInt" officeStringAttrib="condition4todoInt" font="medium"  color="black"/>
 		
 		<label name="condition1DoneTextLabel" parentContainer="condition1doneContainerText" officeStringAttrib="condition1DoneText" font="medium" color="bone"/>
 		<label name="condition1DoneIntLabel"  parentContainer="condition1doneContainerInt" officeStringAttrib="condition1DoneInt" font="medium" color="bone"/>
@@ -1148,6 +1152,8 @@
 		<label name="condition2todoIntLabel"  parentContainer="condition2todoContainerInt" officeStringAttrib="condition2todoInt" font="medium"  color="black"/>
 		<label name="condition3todoTextLabel" parentContainer="condition3todoContainerText" officeStringAttrib="condition3todoText" font="medium"  color="black"/>
 		<label name="condition3todoIntLabel"  parentContainer="condition3todoContainerInt" officeStringAttrib="condition3todoInt" font="medium"  color="black"/>
+		<label name="condition4todoTextLabel" parentContainer="condition4todoContainerText" officeStringAttrib="condition4todoText" font="medium"  color="black"/>
+		<label name="condition4todoIntLabel"  parentContainer="condition4todoContainerInt" officeStringAttrib="condition4todoInt" font="medium"  color="black"/>
 		
 		<label name="condition1DoneTextLabel" parentContainer="condition1doneContainerText" officeStringAttrib="condition1DoneText" font="medium" color="bone"/>
 		<label name="condition1DoneIntLabel"  parentContainer="condition1doneContainerInt" officeStringAttrib="condition1DoneInt" font="medium" color="bone"/>

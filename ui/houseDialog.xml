@@ -81,7 +81,6 @@
 						vertical_padding="0" />
 				
 					<container type="vertbox" hsp="expand" vsp="minimum" >
-						<label vertical_margin="2" horizontal_margin="2" text="To Do:" hap="left" state="text" />
 						<container type="horizbox" hsp="expand" vsp="minimum" horizontal_margin="10">
 							<container name="condition1todoContainerText" type="horizbox" hsp="minimum" vsp="minimum" hap="left" horizontal_margin="4"/>
 							<container name="condition1todoContainerInt" type="horizbox" hsp="minimum" vsp="minimum" hap="right" horizontal_margin="8"/>
@@ -97,6 +96,11 @@
 							<container name="condition3todoContainerInt" type="horizbox" hsp="minimum" vsp="minimum" hap="right" horizontal_margin="8"/>
 						</container>
 						
+						<container type="horizbox" hsp="expand" vsp="minimum" horizontal_margin="10">
+							<container name="condition4todoContainerText" type="horizbox" hsp="minimum" vsp="minimum" hap="left" horizontal_margin="4"/>
+							<container name="condition4todoContainerInt" type="horizbox" hsp="minimum" vsp="minimum" hap="right" horizontal_margin="8"/>
+						</container>
+						
 						<tooltip width="200" height="1" mouseRestDelay="0" followCursor="1" skin="ui/styles/styleTooltip.xml">
 							<container type="vertbox" hsp="fixed" fixed_width="200"
 									 horizontal_padding="5" vertical_padding="5"
@@ -107,7 +111,6 @@
 					</container>
 				
 					<container type="vertbox" hsp="expand" vsp="minimum" >
-						<label vertical_margin="2" horizontal_margin="2" text="Done:" hap="left" state="text_faded" />
 						<container type="horizbox" hsp="expand" vsp="minimum" horizontal_margin="10">
 							<container name="condition1doneContainerText" type="horizbox" hsp="minimum" vsp="minimum" hap="left" horizontal_margin="4"/>
 							<container name="condition1doneContainerInt" type="horizbox" hsp="minimum" vsp="minimum" hap="right" horizontal_margin="8"/>

@@ -134,15 +134,19 @@ gameobject "house" inherit "buildings"
 
 				if condition4 == true then
 					state.lc_pop_cap_increase = state.lc_pop_cap_increase + 2
-					send("rendUIManager", "SetOfficeString", SELF, "condition4DoneText", "Special Painting Decor")
+					send("rendUIManager", "SetOfficeString", SELF, "condition4todoText", "")
+					send("rendUIManager", "SetOfficeString", SELF, "condition4todoInt", "") 
+					send("rendUIManager", "SetOfficeString", SELF, "condition4DoneText", "1x Painting")
 					send("rendUIManager", "SetOfficeString", SELF, "condition4DoneInt", "DONE +2")
 				else
+					send("rendUIManager", "SetOfficeString", SELF, "condition4todoText", "1x Painting")
+					send("rendUIManager", "SetOfficeString", SELF, "condition4todoInt", "+2")
 					send("rendUIManager", "SetOfficeString", SELF, "condition4DoneText", "")
 					send("rendUIManager", "SetOfficeString", SELF, "condition4DoneInt", "")
 				end
 				
 				send("rendUIManager", "SetOfficeString", SELF, "popCapBonusText1", tostring(state.lc_pop_cap_increase) )
-				send("rendUIManager", "SetOfficeString", SELF, "popCapBonusText2", "5")
+				send("rendUIManager", "SetOfficeString", SELF, "popCapBonusText2", "7")
 				
 				send("gameSession", "incSessionInt", "LcPopulationAllowed", state.lc_pop_cap_increase )
 				send("gameSession", "incSessionInt", "totalPopulationAllowed", state.lc_pop_cap_increase )
@@ -190,15 +194,19 @@ gameobject "house" inherit "buildings"
 
 				if condition4 == true then
 					state.mc_pop_cap_increase = state.mc_pop_cap_increase + 1
-					send("rendUIManager", "SetOfficeString", SELF, "condition4DoneText", "Special Painting Decor")
-					send("rendUIManager", "SetOfficeString", SELF, "condition4DoneInt", "DONE +2")
+					send("rendUIManager", "SetOfficeString", SELF, "condition4todoText", "")
+					send("rendUIManager", "SetOfficeString", SELF, "condition4todoInt", "") 
+					send("rendUIManager", "SetOfficeString", SELF, "condition4DoneText", "1x Painting")
+					send("rendUIManager", "SetOfficeString", SELF, "condition4DoneInt", "DONE +1")
 				else
+					send("rendUIManager", "SetOfficeString", SELF, "condition4todoText", "1x Painting")
+					send("rendUIManager", "SetOfficeString", SELF, "condition4todoInt", "+1") 
 					send("rendUIManager", "SetOfficeString", SELF, "condition4DoneText", "")
 					send("rendUIManager", "SetOfficeString", SELF, "condition4DoneInt", "")
 				end
 				
 				send("rendUIManager", "SetOfficeString", SELF, "popCapBonusText1", tostring(state.mc_pop_cap_increase) )
-				send("rendUIManager", "SetOfficeString", SELF, "popCapBonusText2", "4")
+				send("rendUIManager", "SetOfficeString", SELF, "popCapBonusText2", "5")
 				
 				send("gameSession", "incSessionInt", "McPopulationAllowed", state.mc_pop_cap_increase )
 				send("gameSession", "incSessionInt", "totalPopulationAllowed", state.mc_pop_cap_increase )
@@ -346,6 +354,8 @@ gameobject "house" inherit "buildings"
 			send("rendUIManager", "SetOfficeString", SELF, "condition3todoInt", "") 
 			send("rendUIManager", "SetOfficeString", SELF, "condition3DoneText", "")
 			send("rendUIManager", "SetOfficeString", SELF, "condition3DoneInt", "")
+			send("rendUIManager", "SetOfficeString", SELF, "condition4todoText", "")
+			send("rendUIManager", "SetOfficeString", SELF, "condition4todoInt", "") 
 			send("rendUIManager", "SetOfficeString", SELF, "condition4DoneText", "")
 			send("rendUIManager", "SetOfficeString", SELF, "condition4DoneInt", "")
 		end
