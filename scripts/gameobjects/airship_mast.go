@@ -155,7 +155,7 @@ gameobject "airship_mast" inherit "object_damage" inherit "spatialobject"
 			"icon_airshiptower1", -- icon
 			"Airship Mast built", -- header text
 			"Airship signalling mast completed! Airdrops will be sent to this location.", -- text description
-			"Left-click to zoom. Right-click to dismiss.", -- action string
+			"Right-click to dismiss.", -- action string
 			"airshipMastComplete", -- alert type (for stacking)
 			"", -- imagename for bg
 			"low", -- importance: low / high / critical
